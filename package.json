@@ -9,6 +9,7 @@
     "autoprefixer": "latest",
     "grunt": "^1.0.4",
     "grunt-contrib-cssmin": "latest",
+    "grunt-contrib-jshint": "^2.1.0",
     "grunt-contrib-sass": "latest",
     "grunt-contrib-uglify": "latest",
     "grunt-contrib-watch": "latest",
