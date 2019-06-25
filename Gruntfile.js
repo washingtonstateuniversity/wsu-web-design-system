@@ -39,22 +39,33 @@ module.exports = function(grunt) {
 					event:['all']
 				},
 			},
+			templates: {
+				files: ['components/**/*.html'],
+				tasks: ['htmlbuild'],
+				options: {
+
+					spawn:false,
+					event:['all']
+				},
+			},
 		},
 		htmlbuild: {
 			fulldemo: {
-				/*cwd: 'demo-builds',*/
-				src: 'demo-builds/*.html',
-				dest: 'demos/',
+				src: 'demos/demo-templates/*.html',
+				dest: 'demos/builds/',
 				options: {
 					beautify: true,
 					relative: true,
 					basePath: false,
 					sections: {
 						head: {
-							default:'demo-parts/head-default.html',
+							default:'demos/demo-parts/head-default.html',
 						},
 						layout: {
 							wsu_global_header: 'components/headers/wsu-global-header/wsu-global-header.html',
+						},
+						footer: {
+							default:'demos/demo-parts/footer-default.html',
 						}
 					},
 					data: {
