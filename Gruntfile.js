@@ -29,6 +29,17 @@ module.exports = function(grunt) {
 				}]
 			},
 		},
+		watch: {
+			scss: {
+				files: ['components/**/*.scss'],
+				tasks: ['sass'],
+				options: {
+
+					spawn:false,
+					event:['all']
+				},
+			},
+		},
 		
 	})
 
@@ -39,6 +50,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-uglify')
 	grunt.loadNpmTasks('grunt-contrib-watch')
 	grunt.loadNpmTasks('grunt-contrib-jshint')
+	grunt.loadNpmTasks('grunt-html-build');
 
 	// Register Grunt tasks
 	grunt.registerTask('default', ['watch']);

@@ -7,6 +7,18 @@
     </head>
 
     <body>
-        <?php include 'wsu-global-header.html'; ?>
+        <header class="wsu-global-header" role="banner">
+            <a href="#" class="wsu-wordmark"></a>
+            <div class="wsu-header-title">
+                Washingtion State University
+            </div>
+            <nav class="wsu-global-nav">
+                <ul>
+                    <li><a href="#">link</a></li>
+                    <li><a href="#">link</a></li>
+                    <li><a href="#">link</a></li>
+                </ul>
+            </nav>
+        </header>
     </body>
 </html>
