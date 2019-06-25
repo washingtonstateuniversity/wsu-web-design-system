@@ -40,6 +40,31 @@ module.exports = function(grunt) {
 				},
 			},
 		},
+		htmlbuild: {
+			fulldemo: {
+				/*cwd: 'demo-builds',*/
+				src: 'demo-builds/*.html',
+				dest: 'demos/',
+				options: {
+					beautify: true,
+					relative: true,
+					basePath: false,
+					sections: {
+						head: {
+							default:'demo-parts/head-default.html',
+						},
+						layout: {
+							wsu_global_header: 'components/headers/wsu-global-header/wsu-global-header.html',
+						}
+					},
+					data: {
+						// Data to pass to templates
+						version: "0.0.1",
+						title: "test",
+					},
+				}
+			}
+		}
 		
 	})
 
