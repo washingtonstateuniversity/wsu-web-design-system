@@ -1,0 +1,51 @@
+.wsu-global-header {
+
+    background-color: #F7F7F7;
+
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 0;
+        left: 0; 
+        height: 4px;
+        background-color: #A60E2D;
+        z-index: 1;
+    }
+
+    .wsu-global-header-inner {
+        display: flex;
+        position: relative;
+        z-index: 2;
+    }
+
+    .wsu-wordmark {
+        display: block;
+        width: 60px;
+        height: 60px;
+        background-color: #CA1237;
+    }
+
+    .wsu-header-title {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .wsu-global-nav {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+    }
+
+    .nav-item {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        text-decoration: none;
+    }
+}

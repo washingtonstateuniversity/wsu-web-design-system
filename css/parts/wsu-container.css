@@ -1,0 +1,16 @@
+/*--------------------------------------------------------------
+>>> WSU CONTAINER TABLE OF CONTENTS:
+----------------------------------------------------------------
+
+# wsu-container
+--------------------------------------------------------------*/
+.wsu-container {
+  max-width: 1180px;
+  margin-left: auto !important;
+  margin-right: auto !important; }
+  .wsu-container.narrow-container {
+    max-width: 900px; }
+  .wsu-container.wide-container {
+    max-width: 1400px; }
+  .wsu-container.full-container {
+    max-width: none; }

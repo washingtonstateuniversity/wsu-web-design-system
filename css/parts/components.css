@@ -1,0 +1,43 @@
+/*--------------------------------------------------------------
+>>> COMPONENTS TABLE OF CONTENTS:
+----------------------------------------------------------------
+
+# wsu-global-header
+--------------------------------------------------------------*/
+.wsu-global-header {
+  background-color: #F7F7F7; }
+  .wsu-global-header:before {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: 4px;
+    background-color: #A60E2D;
+    z-index: 1; }
+  .wsu-global-header .wsu-global-header-inner {
+    display: flex;
+    position: relative;
+    z-index: 2; }
+  .wsu-global-header .wsu-wordmark {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: #CA1237; }
+  .wsu-global-header .wsu-header-title {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1; }
+  .wsu-global-header .wsu-global-nav {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex; }
+  .wsu-global-header .nav-item {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    text-decoration: none; }

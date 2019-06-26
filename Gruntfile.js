@@ -16,13 +16,13 @@ module.exports = function(grunt) {
 					ext: ".css",
 				}]
 			},
-			prod: {
+			dist: {
 				options: {
 					sourcemap: 'none',
 				},
 				files: [{
 					expand: true,
-					cwd: "css",
+					cwd: "sass",
 					src: ["**/*.scss"],
 					dest: "css",
 					ext: ".css",
@@ -32,6 +32,15 @@ module.exports = function(grunt) {
 		watch: {
 			scss: {
 				files: ['components/**/*.scss'],
+				tasks: ['sass'],
+				options: {
+
+					spawn:false,
+					event:['all']
+				},
+			},
+			scss_base: {
+				files: ['sass/**/*.scss'],
 				tasks: ['sass'],
 				options: {
 
