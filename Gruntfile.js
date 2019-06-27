@@ -22,7 +22,7 @@ module.exports = function(grunt) {
 				},
 				files: [{
 					expand: true,
-					cwd: "sass",
+					cwd: "sass/css",
 					src: ["**/*.scss"],
 					dest: "css",
 					ext: ".css",
@@ -72,6 +72,9 @@ module.exports = function(grunt) {
 						},
 						layout: {
 							wsu_global_header: 'components/headers/wsu-global-header/wsu-global-header.html',
+						},
+						navigation: {
+							wsu_vertical_navigation: 'components/navigation/wsu-vertical-navigation/wsu-vertical-navigation.html',
 						},
 						footer: {
 							default:'demos/demo-parts/footer-default.html',

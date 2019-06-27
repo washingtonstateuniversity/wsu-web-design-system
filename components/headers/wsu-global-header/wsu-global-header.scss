@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
 .wsu-global-header {
 
-    background-color: #F7F7F7;
+    $header-title-font-size: 0.75rem;
+    $text-color: #404040;
+
+    color: $text-color;
+    background-color: #e5e5e5;
+    font-family: 'Montserrat', sans-serif;
 
     &:before {
         content: "";
@@ -8,7 +15,7 @@
         position: absolute;
         right: 0;
         left: 0; 
-        height: 4px;
+        height: 5px;
         background-color: #A60E2D;
         z-index: 1;
     }
@@ -21,9 +28,13 @@
 
     .wsu-wordmark {
         display: block;
-        width: 60px;
+        width: 80px;
         height: 60px;
         background-color: #CA1237;
+        background-image: url('/wsu-web-design-system/images/logos/cougar-head-temp.png');
+        background-size: 30px auto;
+        background-position: center center;
+        background-repeat: no-repeat;
     }
 
     .wsu-header-title {
@@ -31,21 +42,43 @@
         justify-content: center;
         flex-direction: column;
         flex: 1;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: $header-title-font-size;
     }
 
     .wsu-global-nav {
-        margin: 0;
-        padding: 0;
+        padding-right: 1rem;
         list-style-type: none;
         display: flex;
     }
 
     .nav-item {
+
+        $nav-item-padding: 0.5rem;
+
         display: flex;
         justify-content: center;
         flex-direction: column;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
+        padding-left: $nav-item-padding;
+        padding-right: $nav-item-padding;
         text-decoration: none;
+        color: $text-color;
+        font-size: $header-title-font-size;
+        font-weight: 600;
+        position: relative; 
+
+        &:hover:after {
+            content: "";
+            display: block;
+            position: absolute;
+            right: $nav-item-padding;
+            left: $nav-item-padding;
+            bottom: 0;
+            height: 4px;
+            background-color: #A60E2D;
+        }
     }
 }

@@ -3,16 +3,21 @@
 ----------------------------------------------------------------
 
 # wsu-global-header
+# wsu-vertical-navigation
 --------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 .wsu-global-header {
-  background-color: #F7F7F7; }
+  color: #404040;
+  background-color: #e5e5e5;
+  font-family: 'Montserrat', sans-serif; }
   .wsu-global-header:before {
     content: "";
     display: block;
     position: absolute;
     right: 0;
     left: 0;
-    height: 4px;
+    height: 5px;
     background-color: #A60E2D;
     z-index: 1; }
   .wsu-global-header .wsu-global-header-inner {
@@ -21,17 +26,25 @@
     z-index: 2; }
   .wsu-global-header .wsu-wordmark {
     display: block;
-    width: 60px;
+    width: 80px;
     height: 60px;
-    background-color: #CA1237; }
+    background-color: #CA1237;
+    background-image: url("/wsu-web-design-system/images/logos/cougar-head-temp.png");
+    background-size: 30px auto;
+    background-position: center center;
+    background-repeat: no-repeat; }
   .wsu-global-header .wsu-header-title {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    flex: 1; }
+    flex: 1;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.75rem; }
   .wsu-global-header .wsu-global-nav {
-    margin: 0;
-    padding: 0;
+    padding-right: 1rem;
     list-style-type: none;
     display: flex; }
   .wsu-global-header .nav-item {
@@ -40,4 +53,55 @@
     flex-direction: column;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-    text-decoration: none; }
+    text-decoration: none;
+    color: #404040;
+    font-size: 0.75rem;
+    font-weight: 600;
+    position: relative; }
+    .wsu-global-header .nav-item:hover:after {
+      content: "";
+      display: block;
+      position: absolute;
+      right: 0.5rem;
+      left: 0.5rem;
+      bottom: 0;
+      height: 4px;
+      background-color: #A60E2D; }
+
+.wsu-vertical-navigation {
+  position: relative;
+  border-right: 1px solid #e5e5e5;
+  width: 250px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600; }
+  .wsu-vertical-navigation .nav-menu-group {
+    margin: 0;
+    padding: 0; }
+  .wsu-vertical-navigation .nav-submenu {
+    margin: 0;
+    padding: 0; }
+  .wsu-vertical-navigation .nav-item {
+    list-style-type: none;
+    position: relative; }
+    .wsu-vertical-navigation .nav-item a {
+      text-decoration: none;
+      font-size: 0.75rem;
+      display: block;
+      padding: 0.6rem 1.5rem;
+      color: #404040;
+      position: relative; }
+    .wsu-vertical-navigation .nav-item.has-children > a:after {
+      content: "";
+      display: block;
+      width: 30px;
+      background-color: #e5e5e5;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0; }
+    .wsu-vertical-navigation .nav-item.expanded {
+      background-color: #f8f8f8; }
+    .wsu-vertical-navigation .nav-item.expanded > a {
+      color: #ca1237; }
+    .wsu-vertical-navigation .nav-item.expanded .nav-item {
+      margin-left: 1.5rem; }

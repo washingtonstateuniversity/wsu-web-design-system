@@ -5,12 +5,6 @@
 # wsu-container
 --------------------------------------------------------------*/
 
-.wsu-site-wrapper {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-}
-
 .wsu-container {
     max-width: 1180px;
     margin-left: auto !important;
@@ -28,3 +22,15 @@
 .wsu-container.full-container {
     max-width: none;
 }
+
+.wsu-site-wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.wsu-layout-wrapper {
+    display: flex;
+    flex-grow: 1;
+}
+
