@@ -1,12 +1,14 @@
+@import "../../../sass/variables/_colors";
+
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 .wsu-global-header {
 
     $header-title-font-size: 0.75rem;
-    $text-color: #404040;
+    $text-color: $wsu-gray-darker;
 
     color: $text-color;
-    background-color: #e5e5e5;
+    background-color: $wsu-gray-lighter;
     font-family: 'Montserrat', sans-serif;
 
     &:before {
@@ -16,7 +18,7 @@
         right: 0;
         left: 0; 
         height: 5px;
-        background-color: #A60E2D;
+        background-color: $wsu-crimson;
         z-index: 1;
     }
 
@@ -30,7 +32,7 @@
         display: block;
         width: 80px;
         height: 60px;
-        background-color: #CA1237;
+        background-color: $wsu-crimson-bright;
         background-image: url('/wsu-web-design-system/images/logos/cougar-head-temp.png');
         background-size: 30px auto;
         background-position: center center;
@@ -78,7 +80,7 @@
             left: $nav-item-padding;
             bottom: 0;
             height: 4px;
-            background-color: #A60E2D;
+            background-color: $wsu-crimson-bright;
         }
     }
 }

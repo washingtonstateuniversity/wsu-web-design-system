@@ -1,3 +1,8 @@
+/* NS */
+/* NS */
+/* NS */
+/* NS */
+/* NS */
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 .wsu-global-header {
   color: #404040;
@@ -10,7 +15,7 @@
     right: 0;
     left: 0;
     height: 5px;
-    background-color: #A60E2D;
+    background-color: #a60f2d;
     z-index: 1; }
   .wsu-global-header .wsu-global-header-inner {
     display: flex;
@@ -20,7 +25,7 @@
     display: block;
     width: 80px;
     height: 60px;
-    background-color: #CA1237;
+    background-color: #ca1237;
     background-image: url("/wsu-web-design-system/images/logos/cougar-head-temp.png");
     background-size: 30px auto;
     background-position: center center;
@@ -58,4 +63,4 @@
       left: 0.5rem;
       bottom: 0;
       height: 4px;
-      background-color: #A60E2D; }
+      background-color: #ca1237; }

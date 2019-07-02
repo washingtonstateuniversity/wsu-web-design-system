@@ -43,20 +43,32 @@
             position: relative;
             font-weight: 700;
             letter-spacing: 1px;
+            line-height: 1.25rem;
         }
 
         &[aria-expanded="true"] > a {
             color: $wsu-crimson-bright;
         }
 
+        &.has-children > a {
+            padding-right: 40px;
+        }
+
         &.has-children > a:after {
             content: "";
-            width: 30px;
+            width: 40px;
             top: 0;
             bottom: 0;
             right: 0;
             position: absolute;
-            background: #eee;
+            background-image: url('/wsu-web-design-system/images/icons/nav-plus.png');
+            background-size: 12px;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        &[aria-expanded="true"].has-children > a:after {
+            background-image: url('/wsu-web-design-system/images/icons/nav-minus-inactive.png');
         }
 
     }

@@ -5,6 +5,11 @@
 # wsu-global-header
 # wsu-vertical-navigation
 --------------------------------------------------------------*/
+/* NS */
+/* NS */
+/* NS */
+/* NS */
+/* NS */
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 .wsu-global-header {
@@ -18,7 +23,7 @@
     right: 0;
     left: 0;
     height: 5px;
-    background-color: #A60E2D;
+    background-color: #a60f2d;
     z-index: 1; }
   .wsu-global-header .wsu-global-header-inner {
     display: flex;
@@ -28,7 +33,7 @@
     display: block;
     width: 80px;
     height: 60px;
-    background-color: #CA1237;
+    background-color: #ca1237;
     background-image: url("/wsu-web-design-system/images/logos/cougar-head-temp.png");
     background-size: 30px auto;
     background-position: center center;
@@ -66,7 +71,7 @@
       left: 0.5rem;
       bottom: 0;
       height: 4px;
-      background-color: #A60E2D; }
+      background-color: #ca1237; }
 
 /* NS */
 /* NS */
@@ -101,17 +106,25 @@
       color: #404040;
       position: relative;
       font-weight: 700;
-      letter-spacing: 1px; }
+      letter-spacing: 1px;
+      line-height: 1.25rem; }
     .wsu-vertical-navigation .wsu-nav-item[aria-expanded="true"] > a {
       color: #ca1237; }
+    .wsu-vertical-navigation .wsu-nav-item.has-children > a {
+      padding-right: 40px; }
     .wsu-vertical-navigation .wsu-nav-item.has-children > a:after {
       content: "";
-      width: 30px;
+      width: 40px;
       top: 0;
       bottom: 0;
       right: 0;
       position: absolute;
-      background: #eee; }
+      background-image: url("/wsu-web-design-system/images/icons/nav-plus.png");
+      background-size: 12px;
+      background-position: center;
+      background-repeat: no-repeat; }
+    .wsu-vertical-navigation .wsu-nav-item[aria-expanded="true"].has-children > a:after {
+      background-image: url("/wsu-web-design-system/images/icons/nav-minus-inactive.png"); }
   .wsu-vertical-navigation .wsu-submenu .wsu-nav-item a {
     padding-left: 3rem; }
   .wsu-vertical-navigation .wsu-submenu .wsu-submenu .wsu-nav-item a {
