@@ -16,7 +16,19 @@ module.exports = function(grunt) {
 					ext: ".css",
 				}]
 			},
-			dist: {
+			dev: {
+				options: {
+					sourcemap: 'none',
+				},
+				files: [{
+					expand: true,
+					cwd: "sass/css",
+					src: ["**/*.scss"],
+					dest: "css-dev",
+					ext: ".css",
+				}]
+			},
+			prod: {
 				options: {
 					sourcemap: 'none',
 				},
@@ -61,7 +73,7 @@ module.exports = function(grunt) {
 		htmlbuild: {
 			fulldemo: {
 				src: 'demos/demo-templates/*.html',
-				dest: 'demos/builds/',
+				dest: 'demos/',
 				options: {
 					beautify: true,
 					relative: true,
@@ -101,5 +113,5 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-html-build');
 
 	// Register Grunt tasks
-	grunt.registerTask('default', ['watch']);
+	grunt.registerTask('default', ['sass','htmlbuild']);
 };
