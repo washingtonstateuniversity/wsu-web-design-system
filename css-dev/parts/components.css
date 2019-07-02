@@ -48,30 +48,39 @@
     text-transform: uppercase;
     font-weight: 600;
     font-size: 0.75rem; }
+    .wsu-global-header .wsu-header-title a {
+      color: #404040;
+      text-decoration: none; }
   .wsu-global-header .wsu-global-nav {
     padding-right: 1rem;
-    list-style-type: none;
     display: flex; }
-  .wsu-global-header .nav-item {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    text-decoration: none;
-    color: #404040;
-    font-size: 0.75rem;
-    font-weight: 600;
-    position: relative; }
-    .wsu-global-header .nav-item:hover:after {
-      content: "";
-      display: block;
-      position: absolute;
-      right: 0.5rem;
-      left: 0.5rem;
-      bottom: 0;
-      height: 4px;
-      background-color: #ca1237; }
+    .wsu-global-header .wsu-global-nav .wsu-menu {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      display: flex; }
+    .wsu-global-header .wsu-global-nav .wsu-nav-item {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex; }
+      .wsu-global-header .wsu-global-nav .wsu-nav-item a {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        color: #404040;
+        font-size: 0.75rem;
+        text-decoration: none;
+        font-weight: 600; }
+      .wsu-global-header .wsu-global-nav .wsu-nav-item.wsu-search a {
+        background-image: url("/wsu-web-design-system/images/icons/search.png");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 22px auto;
+        font-size: 0;
+        min-width: 30px; }
 
 /* NS */
 /* NS */
