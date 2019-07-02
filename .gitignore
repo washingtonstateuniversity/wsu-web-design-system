@@ -14,4 +14,3 @@
 composer.lock
 node_modules/
 vendor/
-.sass-cache

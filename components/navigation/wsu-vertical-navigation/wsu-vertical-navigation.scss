@@ -7,20 +7,18 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
 
-    .nav-menu-group {
+    .wsu-menu,
+    .wsu-submenu {
         margin: 0;
         padding: 0;
-    }
-
-    .nav-submenu {
-        margin: 0;
-        padding: 0;
-    }
-
-    .nav-item {
-
         list-style-type: none;
-        position: relative;
+    }
+
+    .wsu-menu {
+        padding-top: 1rem;
+    }
+
+    .wsu-nav-item {
 
         a {
             text-decoration: none;
@@ -33,29 +31,24 @@
 
         &.has-children > a:after {
             content: "";
-            display: block;
             width: 30px;
-            background-color: #e5e5e5;
-            position: absolute;
-            right: 0;
             top: 0;
             bottom: 0;
-        }
-
-        &.expanded {
-            background-color: #f8f8f8;
-        }
-
-        &.expanded > a {
-            color: #ca1237;
-        }
-
-        &.expanded .nav-item {
-            margin-left: 1.5rem;
+            right: 0;
+            position: absolute;
+            background: #eee;
         }
 
     }
 
+    .wsu-submenu {
 
+        & .wsu-nav-item a {
+            padding-left: 3rem;
+        }
 
+        & .wsu-submenu .wsu-nav-item a {
+            padding-left: 4.5rem;
+        }
+    }
 }
