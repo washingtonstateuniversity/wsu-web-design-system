@@ -7,6 +7,7 @@ module.exports = function(grunt) {
 			components: {
 				options: {
 					sourcemap: 'none',
+					//style: 'compressed',
 				},
 				files: [{
 					expand: true,
@@ -19,6 +20,7 @@ module.exports = function(grunt) {
 			dev: {
 				options: {
 					sourcemap: 'none',
+					//style: 'compressed',
 				},
 				files: [{
 					expand: true,
@@ -31,6 +33,7 @@ module.exports = function(grunt) {
 			prod: {
 				options: {
 					sourcemap: 'none',
+					//style: 'compressed',
 				},
 				files: [{
 					expand: true,

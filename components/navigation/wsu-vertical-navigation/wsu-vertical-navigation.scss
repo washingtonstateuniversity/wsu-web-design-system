@@ -1,11 +1,10 @@
-@import "/sass/variables/colors";
+@import "../../../sass/variables/_colors";
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
-
 .wsu-vertical-navigation {
     position: relative;
-    border-right: 1px solid #e5e5e5;
+    border-right: 1px solid $wsu-gray-lighter;
     width: 260px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
@@ -18,10 +17,22 @@
     }
 
     .wsu-menu {
-        padding-top: 1rem;
+
+        & > .wsu-nav-item:first-child {
+            padding-top: 1rem;
+        }
     }
 
     .wsu-nav-item {
+
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+
+        &[aria-expanded="true"] {
+            background-color: $wsu-gray-lightest;
+            padding-bottom: 1rem;
+        }
 
         a {
             text-decoration: none;
@@ -30,6 +41,12 @@
             padding: 0.6rem 1.5rem;
             color: $wsu-gray-darker;
             position: relative;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        &[aria-expanded="true"] > a {
+            color: $wsu-crimson-bright;
         }
 
         &.has-children > a:after {
