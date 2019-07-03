@@ -85,10 +85,9 @@ module.exports = function(grunt) {
 						head: {
 							default:'demos/demo-parts/head-default.html',
 						},
-						layout: {
+						components: {
 							wsu_global_header: 'components/headers/wsu-global-header/wsu-global-header.html',
-						},
-						navigation: {
+							wsu_global_footer: 'components/headers/wsu-global-footer/wsu-global-footer.html',
 							wsu_vertical_navigation: 'components/navigation/wsu-vertical-navigation/wsu-vertical-navigation.html',
 						},
 						footer: {

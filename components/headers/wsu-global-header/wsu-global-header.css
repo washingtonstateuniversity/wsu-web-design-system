@@ -26,7 +26,7 @@
     width: 80px;
     height: 60px;
     background-color: #ca1237;
-    background-image: url("/wsu-web-design-system/images/logos/cougar-head-temp.png");
+    background-image: url("/wsu-web-design-system/src/logos/cougar-head-temp.png");
     background-size: 30px auto;
     background-position: center center;
     background-repeat: no-repeat; }
@@ -67,7 +67,7 @@
         text-decoration: none;
         font-weight: 600; }
       .wsu-global-header .wsu-global-nav .wsu-nav-item.wsu-search a {
-        background-image: url("/wsu-web-design-system/images/icons/search.png");
+        background-image: url("/wsu-web-design-system/src/icons/search.png");
         background-position: center center;
         background-repeat: no-repeat;
         background-size: 22px auto;

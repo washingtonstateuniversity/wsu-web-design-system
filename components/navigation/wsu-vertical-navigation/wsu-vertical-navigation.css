@@ -45,12 +45,12 @@
       bottom: 0;
       right: 0;
       position: absolute;
-      background-image: url("/wsu-web-design-system/images/icons/nav-plus.png");
+      background-image: url("/wsu-web-design-system/src/icons/nav-plus.png");
       background-size: 12px;
       background-position: center;
       background-repeat: no-repeat; }
     .wsu-vertical-navigation .wsu-nav-item[aria-expanded="true"].has-children > a:after {
-      background-image: url("/wsu-web-design-system/images/icons/nav-minus-inactive.png"); }
+      background-image: url("/wsu-web-design-system/src/icons/nav-minus-inactive.png"); }
   .wsu-vertical-navigation .wsu-submenu .wsu-nav-item a {
     padding-left: 3rem; }
   .wsu-vertical-navigation .wsu-submenu .wsu-submenu .wsu-nav-item a {

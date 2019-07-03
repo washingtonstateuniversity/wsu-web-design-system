@@ -12,6 +12,7 @@
 /* NS */
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 .wsu-global-header {
   color: #404040;
   background-color: #e5e5e5;
@@ -34,7 +35,7 @@
     width: 80px;
     height: 60px;
     background-color: #ca1237;
-    background-image: url("/wsu-web-design-system/images/logos/cougar-head-temp.png");
+    background-image: url("/wsu-web-design-system/src/logos/cougar-head-temp.png");
     background-size: 30px auto;
     background-position: center center;
     background-repeat: no-repeat; }
@@ -75,7 +76,7 @@
         text-decoration: none;
         font-weight: 600; }
       .wsu-global-header .wsu-global-nav .wsu-nav-item.wsu-search a {
-        background-image: url("/wsu-web-design-system/images/icons/search.png");
+        background-image: url("/wsu-web-design-system/src/icons/search.png");
         background-position: center center;
         background-repeat: no-repeat;
         background-size: 22px auto;
@@ -128,13 +129,21 @@
       bottom: 0;
       right: 0;
       position: absolute;
-      background-image: url("/wsu-web-design-system/images/icons/nav-plus.png");
+      background-image: url("/wsu-web-design-system/src/icons/nav-plus.png");
       background-size: 12px;
       background-position: center;
       background-repeat: no-repeat; }
     .wsu-vertical-navigation .wsu-nav-item[aria-expanded="true"].has-children > a:after {
-      background-image: url("/wsu-web-design-system/images/icons/nav-minus-inactive.png"); }
+      background-image: url("/wsu-web-design-system/src/icons/nav-minus-inactive.png"); }
   .wsu-vertical-navigation .wsu-submenu .wsu-nav-item a {
     padding-left: 3rem; }
   .wsu-vertical-navigation .wsu-submenu .wsu-submenu .wsu-nav-item a {
     padding-left: 4.5rem; }
+
+/* NS */
+/* NS */
+/* NS */
+/* NS */
+/* NS */
+.wsu-global-footer {
+  background-color: #404040; }
