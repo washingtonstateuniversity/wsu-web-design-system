@@ -1,0 +1,12 @@
+/* NS */
+/* NS */
+/* NS */
+/* NS */
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+.wsu-site-footer {
+  background-color: #404040;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif; }
+  .wsu-site-footer .wsu-site-footer-inner {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem; }

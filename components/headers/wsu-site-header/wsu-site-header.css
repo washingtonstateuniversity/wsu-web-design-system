@@ -2,7 +2,10 @@
 /* NS */
 /* NS */
 /* NS */
-/* NS */
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 .wsu-site-header {
-  flex-grow: 0; }
+  flex-grow: 0;
+  font-family: 'Montserrat', sans-serif; }
+  .wsu-site-header .wsu-site-header-inner {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem; }

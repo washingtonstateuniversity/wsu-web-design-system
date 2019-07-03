@@ -1,7 +1,14 @@
 @import "../../../sass/variables/_colors";
+@import "../../../sass/mixins/_content_formating";
+@import "../../../sass/mixins/_text";
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 .wsu-site-header {
     flex-grow: 0;
+    @include base_font;
+
+    .wsu-site-header-inner {
+        @include content-left-right-padding; 
+    }
 }

@@ -18,6 +18,7 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -380,7 +381,6 @@ body {
 /* NS */
 /* NS */
 /* NS */
-/* NS */
 .wsu-global-header {
   color: #404040;
   background-color: #e5e5e5;
@@ -455,11 +455,13 @@ body {
 /* NS */
 /* NS */
 /* NS */
-/* NS */
 .wsu-site-header {
-  flex-grow: 0; }
+  flex-grow: 0;
+  font-family: 'Montserrat', sans-serif; }
+  .wsu-site-header .wsu-site-header-inner {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem; }
 
-/* NS */
 /* NS */
 /* NS */
 /* NS */
@@ -520,7 +522,23 @@ body {
 /* NS */
 /* NS */
 /* NS */
-/* NS */
 .wsu-global-footer {
   flex-grow: 0;
-  background-color: #404040; }
+  background-color: #333333;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif; }
+  .wsu-global-footer .wsu-global-footer-inner {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem; }
+
+/* NS */
+/* NS */
+/* NS */
+/* NS */
+.wsu-site-footer {
+  background-color: #404040;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif; }
+  .wsu-site-footer .wsu-site-footer-inner {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem; }

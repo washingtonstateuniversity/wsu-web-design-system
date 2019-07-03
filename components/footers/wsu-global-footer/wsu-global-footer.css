@@ -2,8 +2,12 @@
 /* NS */
 /* NS */
 /* NS */
-/* NS */
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 .wsu-global-footer {
   flex-grow: 0;
-  background-color: #404040; }
+  background-color: #333333;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif; }
+  .wsu-global-footer .wsu-global-footer-inner {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem; }

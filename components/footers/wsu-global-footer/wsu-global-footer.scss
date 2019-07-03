@@ -1,8 +1,15 @@
 @import "../../../sass/variables/_colors";
+@import "../../../sass/mixins/_content_formating";
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 .wsu-global-footer {
     flex-grow: 0;
-    background-color: $wsu-gray-darker;
+    background-color: $wsu-gray-darkest;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+
+    .wsu-global-footer-inner {
+        @include content-left-right-padding; 
+    }
 }

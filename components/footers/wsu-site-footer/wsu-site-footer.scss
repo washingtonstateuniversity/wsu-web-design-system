@@ -1,0 +1,14 @@
+@import "../../../sass/variables/_colors";
+@import "../../../sass/mixins/_content_formating";
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+.wsu-site-footer {
+    background-color: $wsu-gray-darker;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+
+    .wsu-site-footer-inner {
+        @include content-left-right-padding; 
+    }
+}
