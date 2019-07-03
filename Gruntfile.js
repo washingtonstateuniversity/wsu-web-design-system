@@ -86,8 +86,10 @@ module.exports = function(grunt) {
 							default:'demos/demo-parts/head-default.html',
 						},
 						components: {
+							wsu_global_footer: 'components/footers/wsu-global-footer/wsu-global-footer.html',
 							wsu_global_header: 'components/headers/wsu-global-header/wsu-global-header.html',
-							wsu_global_footer: 'components/headers/wsu-global-footer/wsu-global-footer.html',
+							wsu_site_footer: 'components/footers/wsu-site-footer/wsu-site-footer.html',
+							wsu_site_header: 'components/headers/wsu-site-header/wsu-site-header.html',
 							wsu_vertical_navigation: 'components/navigation/wsu-vertical-navigation/wsu-vertical-navigation.html',
 						},
 						footer: {

@@ -4,6 +4,5 @@
 /* NS */
 /* NS */
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
-.wsu-global-footer {
-  flex-grow: 0;
-  background-color: #404040; }
+.wsu-site-header {
+  flex-grow: 0; }

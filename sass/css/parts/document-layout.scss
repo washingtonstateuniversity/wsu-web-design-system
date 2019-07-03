@@ -34,3 +34,13 @@
     flex-grow: 1;
 }
 
+.wsu-layout-wrapper {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+.wsu-content-wrapper {
+    flex-grow: 1;
+}
+

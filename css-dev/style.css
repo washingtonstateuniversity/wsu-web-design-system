@@ -17,6 +17,7 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -360,6 +361,14 @@ body {
   display: flex;
   flex-grow: 1; }
 
+.wsu-layout-wrapper {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column; }
+
+.wsu-content-wrapper {
+  flex-grow: 1; }
+
 /*--------------------------------------------------------------
 >>> COMPONENTS TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -447,6 +456,14 @@ body {
 /* NS */
 /* NS */
 /* NS */
+.wsu-site-header {
+  flex-grow: 0; }
+
+/* NS */
+/* NS */
+/* NS */
+/* NS */
+/* NS */
 .wsu-vertical-navigation {
   position: relative;
   border-right: 1px solid #e5e5e5;
@@ -505,4 +522,5 @@ body {
 /* NS */
 /* NS */
 .wsu-global-footer {
+  flex-grow: 0;
   background-color: #404040; }

@@ -13,6 +13,7 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 .wsu-global-header {
   color: #404040;
   background-color: #e5e5e5;
@@ -88,6 +89,14 @@
 /* NS */
 /* NS */
 /* NS */
+.wsu-site-header {
+  flex-grow: 0; }
+
+/* NS */
+/* NS */
+/* NS */
+/* NS */
+/* NS */
 .wsu-vertical-navigation {
   position: relative;
   border-right: 1px solid #e5e5e5;
@@ -146,4 +155,5 @@
 /* NS */
 /* NS */
 .wsu-global-footer {
+  flex-grow: 0;
   background-color: #404040; }
