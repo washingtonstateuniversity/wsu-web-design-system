@@ -18,11 +18,11 @@
 .wsu-container.full-container {
   max-width: none; }
 
-.wsu-site-wrapper {
+.wsu-document-wrapper {
   display: flex;
   min-height: 100vh;
   flex-direction: column; }
 
-.wsu-layout-wrapper {
+.wsu-site-wrapper {
   display: flex;
   flex-grow: 1; }
