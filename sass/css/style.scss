@@ -6,6 +6,8 @@
 # document
 # wsu-container
 # components
+# content
+# forms
 --------------------------------------------------------------*/
 
 @import 'parts/normalize.scss';
@@ -15,3 +17,7 @@
 @import 'parts/document-layout.scss';
 
 @import 'parts/components.scss';
+
+@import 'parts/wsu-content.scss';
+
+@import 'parts/wsu-content-forms.scss';

@@ -91,6 +91,7 @@ module.exports = function(grunt) {
 							wsu_site_footer: 'components/footers/wsu-site-footer/wsu-site-footer.html',
 							wsu_site_header: 'components/headers/wsu-site-header/wsu-site-header.html',
 							wsu_vertical_navigation: 'components/navigation/wsu-vertical-navigation/wsu-vertical-navigation.html',
+							wsu_vertical_navigation_split: 'components/navigation/wsu-vertical-navigation-split/wsu-vertical-navigation.html',
 						},
 						footer: {
 							default:'demos/demo-parts/footer-default.html',

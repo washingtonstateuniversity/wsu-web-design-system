@@ -6,6 +6,8 @@
 # document
 # wsu-container
 # components
+# content
+# forms
 --------------------------------------------------------------*/
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -14,6 +16,8 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
@@ -368,7 +372,9 @@ body {
   flex-direction: column; }
 
 .wsu-content-wrapper {
-  flex-grow: 1; }
+  flex-grow: 1;
+  padding-top: 2rem;
+  padding-bottom: 2rem; }
 
 /*--------------------------------------------------------------
 >>> COMPONENTS TABLE OF CONTENTS:
@@ -522,6 +528,76 @@ body {
 /* NS */
 /* NS */
 /* NS */
+.wsu-vertical-navigation-split {
+  position: relative;
+  border-right: 1px solid #e5e5e5;
+  width: 260px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600; }
+  .wsu-vertical-navigation-split .wsu-menu,
+  .wsu-vertical-navigation-split .wsu-submenu {
+    margin: 0;
+    padding: 0;
+    list-style-type: none; }
+  .wsu-vertical-navigation-split .wsu-submenu {
+    display: none; }
+  .wsu-vertical-navigation-split .wsu-menu > .wsu-nav-item:first-child {
+    padding-top: 1rem; }
+  .wsu-vertical-navigation-split .wsu-nav-item {
+    padding: 0;
+    margin: 0;
+    list-style-type: none; }
+    .wsu-vertical-navigation-split .wsu-nav-item[aria-expanded="true"] {
+      background-color: #f8f8f8;
+      padding-bottom: 1rem; }
+    .wsu-vertical-navigation-split .wsu-nav-item a {
+      text-decoration: none;
+      font-size: 0.75rem;
+      display: block;
+      padding: 0.6rem 1.5rem;
+      color: #404040;
+      position: relative;
+      font-weight: 700;
+      letter-spacing: 1px;
+      line-height: 1.25rem; }
+    .wsu-vertical-navigation-split .wsu-nav-item[aria-expanded="true"] > a {
+      color: #ca1237; }
+    .wsu-vertical-navigation-split .wsu-nav-item .wsu-split-button {
+      width: 40px;
+      font-size: 0;
+      flex-grow: 0;
+      border-left: 1px solid #e5e5e5;
+      background-image: url("/wsu-web-design-system/src/icons/nav-minus-inactive.png");
+      background-position: center;
+      background-size: 10px auto;
+      background-repeat: no-repeat;
+      background-color: transparent;
+      border-right: none;
+      border-bottom: none;
+      border-top: none;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden; }
+    .wsu-vertical-navigation-split .wsu-nav-item .wsu-split-button:hover + .wsu-submenu {
+      display: block; }
+    .wsu-vertical-navigation-split .wsu-nav-item.has-children {
+      display: flex;
+      flex-wrap: wrap; }
+      .wsu-vertical-navigation-split .wsu-nav-item.has-children > a {
+        flex-grow: 1; }
+      .wsu-vertical-navigation-split .wsu-nav-item.has-children > .wsu-submenu {
+        width: 100%; }
+    .wsu-vertical-navigation-split .wsu-nav-item[aria-expanded="true"].has-children > a:after {
+      background-image: url("/wsu-web-design-system/src/icons/nav-minus-inactive.png"); }
+  .wsu-vertical-navigation-split .wsu-submenu .wsu-nav-item a {
+    padding-left: 3rem; }
+  .wsu-vertical-navigation-split .wsu-submenu .wsu-submenu .wsu-nav-item a {
+    padding-left: 4.5rem; }
+
+/* NS */
+/* NS */
+/* NS */
+/* NS */
 .wsu-global-footer {
   flex-grow: 0;
   background-color: #333333;
@@ -542,3 +618,110 @@ body {
   .wsu-site-footer .wsu-site-footer-inner {
     padding-left: 1.5rem;
     padding-right: 1.5rem; }
+
+.wsu-content {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  box-sizing: border-box;
+  /*--------------------------------------------------------------
+  >>> CONTENT TABLE OF CONTENTS:
+  ----------------------------------------------------------------
+  
+  
+  --------------------------------------------------------------*/ }
+
+.wsu-content {
+  color: #404040;
+  font-family: 'Montserrat', sans-serif;
+  /*--------------------------------------------------------------
+  >>> FORMS TABLE OF CONTENTS:
+  ----------------------------------------------------------------
+  
+  --------------------------------------------------------------*/ }
+  .wsu-content form {
+    font-family: 'Montserrat', sans-serif; }
+  .wsu-content fieldset {
+    margin: 0;
+    padding: 0;
+    border: none; }
+  .wsu-content legend,
+  .wsu-content label {
+    display: block;
+    margin: 0 0 8px 0;
+    padding: 0;
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase; }
+  .wsu-content legend {
+    display: block;
+    margin: 0 0 8px 0;
+    padding: 0;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase; }
+  .wsu-content input[type=tel],
+  .wsu-content input[type=email],
+  .wsu-content input[type=text] {
+    margin-bottom: 1.5rem;
+    box-sizing: border-box;
+    height: 40px;
+    padding: 0 8px;
+    max-width: 100%;
+    border: 1px solid #ccc;
+    background: rgba(0, 0, 0, 0.01);
+    outline: 0;
+    border-radius: 2px; }
+  .wsu-content select {
+    margin-bottom: 1.5rem;
+    box-sizing: border-box;
+    height: 40px;
+    padding: 0 8px;
+    max-width: 100%;
+    border: 1px solid #ccc;
+    background: rgba(0, 0, 0, 0.01);
+    outline: 0;
+    border-radius: 2px;
+    max-width: 100%; }
+  .wsu-content textarea {
+    padding: 8px;
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    background: rgba(0, 0, 0, 0.01);
+    outline: 0;
+    border-radius: 2px;
+    max-width: 100%; }
+  .wsu-content input[type=radio] + label,
+  .wsu-content input[type=checkbox] + label {
+    display: inline-block;
+    margin-left: 8px;
+    vertical-align: middle; }
+  .wsu-content input[type="submit"] {
+    background: none;
+    border: 1px solid;
+    border-radius: 4px;
+    color: #ca1237;
+    margin-top: 1.5rem;
+    padding: .75rem 1.5rem;
+    text-transform: uppercase;
+    transition: all .3s ease;
+    font-weight: 600; }
+  .wsu-content input:hover, .wsu-content textarea:hover, .wsu-content input[type=text]:hover, .wsu-content select:hover {
+    color: #4c4c4c;
+    border: 1px solid #4c4c4c;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    background-color: #ffffff !important; }
+  .wsu-content input:focus, .wsu-content textarea:focus, .wsu-content input[type=text]:focus, .wsu-content select:focus {
+    color: #ca1237;
+    border: 1px solid #ca1237;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out; }
