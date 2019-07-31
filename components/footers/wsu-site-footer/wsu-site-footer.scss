@@ -8,7 +8,6 @@
     color: #fff;
     font-family: 'Montserrat', sans-serif;
     font-size: 0.70rem;
-    line-height: 1rem;
 
     h2 {
         font-size: 0.8rem;
@@ -41,15 +40,30 @@
             bottom: 40px;
             right: 40px;
         }
+
+        @media screen and (max-width:800px) {
+            padding-right: 20px;
+
+            &:after {
+                width: 50px;
+                height: 50px;
+                bottom: auto;
+                right: auto;
+                position: relative;
+                margin: 20px auto;
+            }
+        }
     }
 
     .wsu-footer-content {
         max-width: 500px;
         margin-bottom: 20px;
+        line-height: 1rem;
     }
 
     .wsu-deep-links {
         max-width: 800px;
+        line-height: 1rem;
 
         .wsu-menu {
             margin: 0;
@@ -92,17 +106,17 @@
         margin: 0;
         padding: 0;
         list-style-type: none;
-
-        .wsu-address-item {
-            margin: 0;
-            padding: 0 0.1rem 0 0;
-            list-style-type: none;
-            display: inline;
-
-            &:not(:last-child):after {
-                content:",";
-            }
-        }
-
     }
+
+    .wsu-address-item {
+        margin: 0;
+        padding: 0 0.25rem 0 0;
+        list-style-type: none;
+        display: inline;
+
+        &:not(:last-child):after {
+            content:",";
+        }
+    }
+
 }

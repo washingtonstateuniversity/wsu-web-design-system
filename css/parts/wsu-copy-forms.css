@@ -58,13 +58,14 @@
     background: rgba(0, 0, 0, 0.01);
     outline: 0;
     border-radius: 2px;
-    max-width: 100%; }
+    max-width: 100%;
+    margin-bottom: 1.5rem; }
   .wsu-copy input[type=radio] + label,
   .wsu-copy input[type=checkbox] + label {
     display: inline-block;
     margin-left: 8px;
     vertical-align: middle; }
-  .wsu-copy input[type="submit"] {
+  .wsu-copy input[type=submit] {
     background: none;
     border: 1px solid;
     border-radius: 4px;
@@ -74,6 +75,17 @@
     text-transform: uppercase;
     transition: all .3s ease;
     font-weight: 600; }
+  .wsu-copy button {
+    background: none;
+    border: 1px solid;
+    border-radius: 4px;
+    color: #ca1237;
+    margin-top: 1.5rem;
+    padding: .75rem 1.5rem;
+    text-transform: uppercase;
+    transition: all .3s ease;
+    font-weight: 600;
+    cursor: pointer; }
   .wsu-copy input:hover, .wsu-copy textarea:hover, .wsu-copy input[type=text]:hover, .wsu-copy select:hover {
     color: #4c4c4c;
     border: 1px solid #4c4c4c;

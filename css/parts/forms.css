@@ -62,7 +62,8 @@ textarea {
   background: rgba(0, 0, 0, 0.01);
   outline: 0;
   border-radius: 2px;
-  max-width: 100%; }
+  max-width: 100%;
+  margin-bottom: 1.5rem; }
 
 input[type=radio] + label,
 input[type=checkbox] + label {
@@ -70,7 +71,7 @@ input[type=checkbox] + label {
   margin-left: 8px;
   vertical-align: middle; }
 
-input[type="submit"] {
+input[type=submit] {
   background: none;
   border: 1px solid;
   border-radius: 4px;
@@ -80,6 +81,18 @@ input[type="submit"] {
   text-transform: uppercase;
   transition: all .3s ease;
   font-weight: 600; }
+
+button {
+  background: none;
+  border: 1px solid;
+  border-radius: 4px;
+  color: #ca1237;
+  margin-top: 1.5rem;
+  padding: .75rem 1.5rem;
+  text-transform: uppercase;
+  transition: all .3s ease;
+  font-weight: 600;
+  cursor: pointer; }
 
 input:hover, textarea:hover, input[type=text]:hover, select:hover {
   color: #4c4c4c;

@@ -7,7 +7,8 @@
   flex-grow: 0;
   background-color: #333333;
   color: #fff;
-  font-family: 'Montserrat', sans-serif; }
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box; }
   .wsu-global-footer a {
     color: #fff;
     text-decoration: none; }
@@ -15,7 +16,8 @@
       border-bottom: 1px solid #ccc; }
   .wsu-global-footer .wsu-global-footer-inner {
     padding-left: 20px;
-    padding-right: 20px; }
+    padding-right: 20px;
+    box-sizing: border-box; }
   .wsu-global-footer .wsu-menu {
     list-style-type: none;
     margin: 0;

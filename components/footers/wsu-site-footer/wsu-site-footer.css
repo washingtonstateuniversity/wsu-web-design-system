@@ -7,8 +7,7 @@
   background-color: #404040;
   color: #fff;
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.70rem;
-  line-height: 1rem; }
+  font-size: 0.70rem; }
   .wsu-site-footer h2 {
     font-size: 0.8rem;
     text-transform: uppercase; }
@@ -34,11 +33,23 @@
       position: absolute;
       bottom: 40px;
       right: 40px; }
+    @media screen and (max-width: 800px) {
+      .wsu-site-footer .wsu-site-footer-inner {
+        padding-right: 20px; }
+        .wsu-site-footer .wsu-site-footer-inner:after {
+          width: 50px;
+          height: 50px;
+          bottom: auto;
+          right: auto;
+          position: relative;
+          margin: 20px auto; } }
   .wsu-site-footer .wsu-footer-content {
     max-width: 500px;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    line-height: 1rem; }
   .wsu-site-footer .wsu-deep-links {
-    max-width: 800px; }
+    max-width: 800px;
+    line-height: 1rem; }
     .wsu-site-footer .wsu-deep-links .wsu-menu {
       margin: 0;
       padding: 0;
@@ -66,10 +77,10 @@
     margin: 0;
     padding: 0;
     list-style-type: none; }
-    .wsu-site-footer .wsu-address .wsu-address-item {
-      margin: 0;
-      padding: 0 0.1rem 0 0;
-      list-style-type: none;
-      display: inline; }
-      .wsu-site-footer .wsu-address .wsu-address-item:not(:last-child):after {
-        content: ","; }
+  .wsu-site-footer .wsu-address-item {
+    margin: 0;
+    padding: 0 0.25rem 0 0;
+    list-style-type: none;
+    display: inline; }
+    .wsu-site-footer .wsu-address-item:not(:last-child):after {
+      content: ","; }

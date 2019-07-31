@@ -8,6 +8,7 @@
     background-color: $wsu-gray-darkest;
     color: #fff;
     font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
 
     a {
         color: #fff;
@@ -19,7 +20,8 @@
     }
 
     .wsu-global-footer-inner {
-        @include content-left-right-padding; 
+        @include content-left-right-padding;
+        box-sizing: border-box;
     }
 
     .wsu-menu {
