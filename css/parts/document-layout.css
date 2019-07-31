@@ -36,3 +36,9 @@
   flex-grow: 1;
   padding-top: 2rem;
   padding-bottom: 2rem; }
+
+.wsu-content {
+  flex-grow: 1;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  box-sizing: border-box; }

@@ -23,6 +23,7 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -376,6 +377,12 @@ body {
   padding-top: 2rem;
   padding-bottom: 2rem; }
 
+.wsu-content {
+  flex-grow: 1;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  box-sizing: border-box; }
+
 /*--------------------------------------------------------------
 >>> COMPONENTS TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -390,7 +397,8 @@ body {
 .wsu-global-header {
   color: #404040;
   background-color: #e5e5e5;
-  font-family: 'Montserrat', sans-serif; }
+  font-family: 'Montserrat', sans-serif;
+  /* ---- Dark Theme ---- */ }
   .wsu-global-header:before {
     content: "";
     display: block;
@@ -406,7 +414,7 @@ body {
     z-index: 2; }
   .wsu-global-header .wsu-wordmark {
     display: block;
-    width: 80px;
+    width: 60px;
     height: 60px;
     background-color: #ca1237;
     background-image: url("/wsu-web-design-system/src/logos/cougar-head-temp.png");
@@ -418,14 +426,15 @@ body {
     justify-content: center;
     flex-direction: column;
     flex: 1;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: 20px;
+    padding-right: 20px;
     text-transform: uppercase;
     font-weight: 600;
     font-size: 0.75rem; }
     .wsu-global-header .wsu-header-title a {
       color: #404040;
-      text-decoration: none; }
+      text-decoration: none;
+      letter-spacing: 1px; }
   .wsu-global-header .wsu-global-nav {
     padding-right: 1rem;
     display: flex; }
@@ -434,28 +443,34 @@ body {
       padding: 0;
       list-style-type: none;
       display: flex; }
+    .wsu-global-header .wsu-global-nav a {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+      color: #404040;
+      font-size: 0.75rem;
+      text-decoration: none;
+      font-weight: 600; }
     .wsu-global-header .wsu-global-nav .wsu-nav-item {
       list-style-type: none;
       margin: 0;
       padding: 0;
       display: flex; }
-      .wsu-global-header .wsu-global-nav .wsu-nav-item a {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-        color: #404040;
-        font-size: 0.75rem;
-        text-decoration: none;
-        font-weight: 600; }
-      .wsu-global-header .wsu-global-nav .wsu-nav-item.wsu-search a {
-        background-image: url("/wsu-web-design-system/src/icons/search.png");
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: 22px auto;
-        font-size: 0;
-        min-width: 30px; }
+    .wsu-global-header .wsu-global-nav .wsu-search a {
+      background-image: url("/wsu-web-design-system/src/icons/search.png");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 22px auto;
+      font-size: 0;
+      min-width: 30px; }
+  .wsu-global-header.dark {
+    background-color: #404040; }
+    .wsu-global-header.dark .wsu-header-title a {
+      color: #fff; }
+    .wsu-global-header.dark .wsu-global-nav a {
+      color: #fff; }
 
 /* NS */
 /* NS */
@@ -465,8 +480,8 @@ body {
   flex-grow: 0;
   font-family: 'Montserrat', sans-serif; }
   .wsu-site-header .wsu-site-header-inner {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem; }
+    padding-left: 20px;
+    padding-right: 20px; }
 
 /* NS */
 /* NS */
@@ -603,9 +618,27 @@ body {
   background-color: #333333;
   color: #fff;
   font-family: 'Montserrat', sans-serif; }
+  .wsu-global-footer a {
+    color: #fff;
+    text-decoration: none; }
+    .wsu-global-footer a:hover {
+      border-bottom: 1px solid #ccc; }
   .wsu-global-footer .wsu-global-footer-inner {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem; }
+    padding-left: 20px;
+    padding-right: 20px; }
+  .wsu-global-footer .wsu-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; }
+  .wsu-global-footer .wsu-menu-item {
+    margin: 0;
+    padding: 0 12px;
+    font-size: 0.7rem;
+    min-height: 50px;
+    line-height: 50px; }
+    .wsu-global-footer .wsu-menu-item:first-child {
+      padding-left: 0; }
 
 /* NS */
 /* NS */
@@ -614,15 +647,77 @@ body {
 .wsu-site-footer {
   background-color: #404040;
   color: #fff;
-  font-family: 'Montserrat', sans-serif; }
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.70rem;
+  line-height: 1rem; }
+  .wsu-site-footer h2 {
+    font-size: 0.8rem;
+    text-transform: uppercase; }
+  .wsu-site-footer a {
+    color: #fff;
+    text-decoration: none; }
   .wsu-site-footer .wsu-site-footer-inner {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem; }
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 150px;
+    position: relative;
+    box-sizing: border-box; }
+    .wsu-site-footer .wsu-site-footer-inner:after {
+      content: "";
+      background-image: url("/wsu-web-design-system/src/logos/cougar-head-light-gray.png");
+      background-repeat: no-repeat;
+      background-position: bottom left;
+      background-size: cover;
+      display: block;
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      bottom: 40px;
+      right: 40px; }
+  .wsu-site-footer .wsu-footer-content {
+    max-width: 500px;
+    margin-bottom: 20px; }
+  .wsu-site-footer .wsu-deep-links {
+    max-width: 800px; }
+    .wsu-site-footer .wsu-deep-links .wsu-menu {
+      margin: 0;
+      padding: 0;
+      list-style-type: none; }
+      .wsu-site-footer .wsu-deep-links .wsu-menu a {
+        text-transform: uppercase;
+        font-weight: 600; }
+      .wsu-site-footer .wsu-deep-links .wsu-menu .wsu-menu-item {
+        margin: 0 0 0.25rem 0;
+        padding: 0;
+        list-style-type: none; }
+      .wsu-site-footer .wsu-deep-links .wsu-menu .wsu-submenu {
+        margin: 0.25rem 0 0;
+        padding: 0;
+        list-style-type: none; }
+        .wsu-site-footer .wsu-deep-links .wsu-menu .wsu-submenu a {
+          text-transform: none;
+          font-weight: normal; }
+      .wsu-site-footer .wsu-deep-links .wsu-menu > .wsu-menu-item {
+        display: inline-block;
+        vertical-align: top;
+        width: 175px;
+        margin-bottom: 20px; }
+  .wsu-site-footer .wsu-address {
+    margin: 0;
+    padding: 0;
+    list-style-type: none; }
+    .wsu-site-footer .wsu-address .wsu-address-item {
+      margin: 0;
+      padding: 0 0.1rem 0 0;
+      list-style-type: none;
+      display: inline; }
+      .wsu-site-footer .wsu-address .wsu-address-item:not(:last-child):after {
+        content: ","; }
 
-.wsu-content {
-  padding-left: 2rem;
-  padding-right: 2rem;
-  box-sizing: border-box;
+.wsu-copy {
+  color: #404040;
+  font-family: 'Montserrat', sans-serif;
   /*--------------------------------------------------------------
   >>> CONTENT TABLE OF CONTENTS:
   ----------------------------------------------------------------
@@ -630,38 +725,36 @@ body {
   
   --------------------------------------------------------------*/ }
 
-.wsu-content {
-  color: #404040;
-  font-family: 'Montserrat', sans-serif;
+.wsu-copy {
   /*--------------------------------------------------------------
   >>> FORMS TABLE OF CONTENTS:
   ----------------------------------------------------------------
   
   --------------------------------------------------------------*/ }
-  .wsu-content form {
+  .wsu-copy form {
+    color: #404040;
     font-family: 'Montserrat', sans-serif; }
-  .wsu-content fieldset {
+  .wsu-copy fieldset {
     margin: 0;
     padding: 0;
     border: none; }
-  .wsu-content legend,
-  .wsu-content label {
+  .wsu-copy label {
     display: block;
     margin: 0 0 8px 0;
     padding: 0;
     font-weight: 600;
     font-size: 0.75rem;
     text-transform: uppercase; }
-  .wsu-content legend {
+  .wsu-copy legend {
     display: block;
     margin: 0 0 8px 0;
     padding: 0;
     font-weight: 600;
     font-size: 1rem;
     text-transform: uppercase; }
-  .wsu-content input[type=tel],
-  .wsu-content input[type=email],
-  .wsu-content input[type=text] {
+  .wsu-copy input[type=tel],
+  .wsu-copy input[type=email],
+  .wsu-copy input[type=text] {
     margin-bottom: 1.5rem;
     box-sizing: border-box;
     height: 40px;
@@ -671,7 +764,7 @@ body {
     background: rgba(0, 0, 0, 0.01);
     outline: 0;
     border-radius: 2px; }
-  .wsu-content select {
+  .wsu-copy select {
     margin-bottom: 1.5rem;
     box-sizing: border-box;
     height: 40px;
@@ -682,7 +775,7 @@ body {
     outline: 0;
     border-radius: 2px;
     max-width: 100%; }
-  .wsu-content textarea {
+  .wsu-copy textarea {
     padding: 8px;
     max-width: 100%;
     margin-bottom: 1.5rem;
@@ -692,12 +785,12 @@ body {
     outline: 0;
     border-radius: 2px;
     max-width: 100%; }
-  .wsu-content input[type=radio] + label,
-  .wsu-content input[type=checkbox] + label {
+  .wsu-copy input[type=radio] + label,
+  .wsu-copy input[type=checkbox] + label {
     display: inline-block;
     margin-left: 8px;
     vertical-align: middle; }
-  .wsu-content input[type="submit"] {
+  .wsu-copy input[type="submit"] {
     background: none;
     border: 1px solid;
     border-radius: 4px;
@@ -707,7 +800,7 @@ body {
     text-transform: uppercase;
     transition: all .3s ease;
     font-weight: 600; }
-  .wsu-content input:hover, .wsu-content textarea:hover, .wsu-content input[type=text]:hover, .wsu-content select:hover {
+  .wsu-copy input:hover, .wsu-copy textarea:hover, .wsu-copy input[type=text]:hover, .wsu-copy select:hover {
     color: #4c4c4c;
     border: 1px solid #4c4c4c;
     -webkit-transition: all .3s ease-in-out;
@@ -715,7 +808,7 @@ body {
     -ms-transition: all .3s ease-in-out;
     -o-transition: all .3s ease-in-out;
     background-color: #ffffff !important; }
-  .wsu-content input:focus, .wsu-content textarea:focus, .wsu-content input[type=text]:focus, .wsu-content select:focus {
+  .wsu-copy input:focus, .wsu-copy textarea:focus, .wsu-copy input[type=text]:focus, .wsu-copy select:focus {
     color: #ca1237;
     border: 1px solid #ca1237;
     -moz-box-shadow: none;

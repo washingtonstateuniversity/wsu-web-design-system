@@ -31,7 +31,7 @@
 
     .wsu-wordmark {
         display: block;
-        width: 80px;
+        width: 60px;
         height: 60px;
         background-color: $wsu-crimson-bright;
         background-image: url('/wsu-web-design-system/src/logos/cougar-head-temp.png');
@@ -53,6 +53,7 @@
         a {
             color: $wsu-gray-darker;
             text-decoration: none;
+            letter-spacing: 1px;
         }
     }
 
@@ -67,31 +68,48 @@
             display: flex;
         }
 
+        a {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+            color: $wsu-gray-darker;
+            font-size: 0.75rem;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
         .wsu-nav-item {
             list-style-type: none;
             margin: 0;
             padding: 0;
             display: flex;
+        }
 
+        .wsu-search a {
+            background-image: url('/wsu-web-design-system/src/icons/search.png');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 22px auto;
+            font-size: 0;
+            min-width: 30px;
+        }
+    }
+
+    /* ---- Dark Theme ---- */
+    &.dark {
+        background-color: $wsu-gray-darker;
+
+        .wsu-header-title {
             a {
-                display: flex;
-                justify-content: center;
-                flex-direction: column;
-                padding-left: 0.5rem;
-                padding-right: 0.5rem;
-                color: $wsu-gray-darker;
-                font-size: 0.75rem;
-                text-decoration: none;
-                font-weight: 600;
+                color: #fff;
             }
+        } 
 
-            &.wsu-search a {
-                background-image: url('/wsu-web-design-system/src/icons/search.png');
-                background-position: center center;
-                background-repeat: no-repeat;
-                background-size: 22px auto;
-                font-size: 0;
-                min-width: 30px;
+        .wsu-global-nav {
+            a {
+                color: #fff;
             }
         }
     }

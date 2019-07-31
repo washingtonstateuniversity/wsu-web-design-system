@@ -4,6 +4,7 @@
 
 --------------------------------------------------------------*/
 form {
+  color: #404040;
   font-family: 'Montserrat', sans-serif; }
 
 fieldset {
@@ -11,7 +12,6 @@ fieldset {
   padding: 0;
   border: none; }
 
-legend,
 label {
   display: block;
   margin: 0 0 8px 0;

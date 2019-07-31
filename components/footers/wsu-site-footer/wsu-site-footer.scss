@@ -7,8 +7,102 @@
     background-color: $wsu-gray-darker;
     color: #fff;
     font-family: 'Montserrat', sans-serif;
+    font-size: 0.70rem;
+    line-height: 1rem;
+
+    h2 {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+    }
+
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
 
     .wsu-site-footer-inner {
-        @include content-left-right-padding; 
+        padding-left: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-right: 150px;
+        position: relative;
+        box-sizing: border-box;
+
+        &:after {
+            content: "";
+            background-image: url('/wsu-web-design-system/src/logos/cougar-head-light-gray.png');
+            background-repeat: no-repeat;
+            background-position: bottom left;
+            background-size: cover;
+            display: block;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            bottom: 40px;
+            right: 40px;
+        }
+    }
+
+    .wsu-footer-content {
+        max-width: 500px;
+        margin-bottom: 20px;
+    }
+
+    .wsu-deep-links {
+        max-width: 800px;
+
+        .wsu-menu {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+
+            a {
+                text-transform: uppercase;
+                font-weight: 600;
+            }
+
+            .wsu-menu-item {
+                margin: 0 0 0.25rem 0;
+                padding: 0;
+                list-style-type: none;
+            }
+
+            .wsu-submenu {
+                margin: 0.25rem 0 0;
+                padding: 0;
+                list-style-type: none;
+    
+                a {
+                    text-transform: none;
+                    font-weight: normal;
+                }
+            }
+
+            & > .wsu-menu-item {
+                display: inline-block;
+                vertical-align: top;
+                width: 175px;
+                margin-bottom: 20px;
+            }
+        }
+
+    }
+
+    .wsu-address {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+
+        .wsu-address-item {
+            margin: 0;
+            padding: 0 0.1rem 0 0;
+            list-style-type: none;
+            display: inline;
+
+            &:not(:last-child):after {
+                content:",";
+            }
+        }
+
     }
 }

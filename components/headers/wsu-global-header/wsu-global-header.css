@@ -6,7 +6,8 @@
 .wsu-global-header {
   color: #404040;
   background-color: #e5e5e5;
-  font-family: 'Montserrat', sans-serif; }
+  font-family: 'Montserrat', sans-serif;
+  /* ---- Dark Theme ---- */ }
   .wsu-global-header:before {
     content: "";
     display: block;
@@ -22,7 +23,7 @@
     z-index: 2; }
   .wsu-global-header .wsu-wordmark {
     display: block;
-    width: 80px;
+    width: 60px;
     height: 60px;
     background-color: #ca1237;
     background-image: url("/wsu-web-design-system/src/logos/cougar-head-temp.png");
@@ -34,14 +35,15 @@
     justify-content: center;
     flex-direction: column;
     flex: 1;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: 20px;
+    padding-right: 20px;
     text-transform: uppercase;
     font-weight: 600;
     font-size: 0.75rem; }
     .wsu-global-header .wsu-header-title a {
       color: #404040;
-      text-decoration: none; }
+      text-decoration: none;
+      letter-spacing: 1px; }
   .wsu-global-header .wsu-global-nav {
     padding-right: 1rem;
     display: flex; }
@@ -50,25 +52,31 @@
       padding: 0;
       list-style-type: none;
       display: flex; }
+    .wsu-global-header .wsu-global-nav a {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+      color: #404040;
+      font-size: 0.75rem;
+      text-decoration: none;
+      font-weight: 600; }
     .wsu-global-header .wsu-global-nav .wsu-nav-item {
       list-style-type: none;
       margin: 0;
       padding: 0;
       display: flex; }
-      .wsu-global-header .wsu-global-nav .wsu-nav-item a {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-        color: #404040;
-        font-size: 0.75rem;
-        text-decoration: none;
-        font-weight: 600; }
-      .wsu-global-header .wsu-global-nav .wsu-nav-item.wsu-search a {
-        background-image: url("/wsu-web-design-system/src/icons/search.png");
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: 22px auto;
-        font-size: 0;
-        min-width: 30px; }
+    .wsu-global-header .wsu-global-nav .wsu-search a {
+      background-image: url("/wsu-web-design-system/src/icons/search.png");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 22px auto;
+      font-size: 0;
+      min-width: 30px; }
+  .wsu-global-header.dark {
+    background-color: #404040; }
+    .wsu-global-header.dark .wsu-header-title a {
+      color: #fff; }
+    .wsu-global-header.dark .wsu-global-nav a {
+      color: #fff; }

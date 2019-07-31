@@ -1,35 +1,34 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
-.wsu-content {
-  color: #404040;
-  font-family: 'Montserrat', sans-serif;
+.wsu-copy {
   /*--------------------------------------------------------------
   >>> FORMS TABLE OF CONTENTS:
   ----------------------------------------------------------------
   
   --------------------------------------------------------------*/ }
-  .wsu-content form {
+  .wsu-copy form {
+    color: #404040;
     font-family: 'Montserrat', sans-serif; }
-  .wsu-content fieldset {
+  .wsu-copy fieldset {
     margin: 0;
     padding: 0;
     border: none; }
-  .wsu-content label {
+  .wsu-copy label {
     display: block;
     margin: 0 0 8px 0;
     padding: 0;
     font-weight: 600;
     font-size: 0.75rem;
     text-transform: uppercase; }
-  .wsu-content legend {
+  .wsu-copy legend {
     display: block;
     margin: 0 0 8px 0;
     padding: 0;
     font-weight: 600;
     font-size: 1rem;
     text-transform: uppercase; }
-  .wsu-content input[type=tel],
-  .wsu-content input[type=email],
-  .wsu-content input[type=text] {
+  .wsu-copy input[type=tel],
+  .wsu-copy input[type=email],
+  .wsu-copy input[type=text] {
     margin-bottom: 1.5rem;
     box-sizing: border-box;
     height: 40px;
@@ -39,7 +38,7 @@
     background: rgba(0, 0, 0, 0.01);
     outline: 0;
     border-radius: 2px; }
-  .wsu-content select {
+  .wsu-copy select {
     margin-bottom: 1.5rem;
     box-sizing: border-box;
     height: 40px;
@@ -50,7 +49,7 @@
     outline: 0;
     border-radius: 2px;
     max-width: 100%; }
-  .wsu-content textarea {
+  .wsu-copy textarea {
     padding: 8px;
     max-width: 100%;
     margin-bottom: 1.5rem;
@@ -60,12 +59,12 @@
     outline: 0;
     border-radius: 2px;
     max-width: 100%; }
-  .wsu-content input[type=radio] + label,
-  .wsu-content input[type=checkbox] + label {
+  .wsu-copy input[type=radio] + label,
+  .wsu-copy input[type=checkbox] + label {
     display: inline-block;
     margin-left: 8px;
     vertical-align: middle; }
-  .wsu-content input[type="submit"] {
+  .wsu-copy input[type="submit"] {
     background: none;
     border: 1px solid;
     border-radius: 4px;
@@ -75,7 +74,7 @@
     text-transform: uppercase;
     transition: all .3s ease;
     font-weight: 600; }
-  .wsu-content input:hover, .wsu-content textarea:hover, .wsu-content input[type=text]:hover, .wsu-content select:hover {
+  .wsu-copy input:hover, .wsu-copy textarea:hover, .wsu-copy input[type=text]:hover, .wsu-copy select:hover {
     color: #4c4c4c;
     border: 1px solid #4c4c4c;
     -webkit-transition: all .3s ease-in-out;
@@ -83,7 +82,7 @@
     -ms-transition: all .3s ease-in-out;
     -o-transition: all .3s ease-in-out;
     background-color: #ffffff !important; }
-  .wsu-content input:focus, .wsu-content textarea:focus, .wsu-content input[type=text]:focus, .wsu-content select:focus {
+  .wsu-copy input:focus, .wsu-copy textarea:focus, .wsu-copy input[type=text]:focus, .wsu-copy select:focus {
     color: #ca1237;
     border: 1px solid #ca1237;
     -moz-box-shadow: none;
