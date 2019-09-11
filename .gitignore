@@ -15,5 +15,8 @@ composer.lock
 node_modules/
 vendor/
 
+# Ignore package-lock
+package-lock.json
+
 # Ignore sass stuff
 .sass-cache
