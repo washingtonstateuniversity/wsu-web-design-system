@@ -19,7 +19,7 @@
         "webpack-cli": "^3.3.8"
     },
     "scripts": {
-        "build": "webpack --config webpack.config.js"
+        "build_dev": "webpack --config webpack.config.js"
     },
     "repository": {
         "type": "git",
