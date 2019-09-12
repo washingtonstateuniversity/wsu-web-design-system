@@ -1,0 +1,34 @@
+{
+    "name": "wsu-web-design-system",
+    "version": "0.0.1",
+    "description": "Web Design System for Washington State University.",
+    "private": true,
+    "main": "src/index.js",
+    "dependencies": {
+        "normalize.css": "^8.0.1",
+        "webpack": "^4.39.3",
+        "webpack-cli": "^3.3.8"
+    },
+    "devDependencies": {
+        "autoprefixer": "^9.6.1",
+        "css-loader": "^3.2.0",
+        "mini-css-extract-plugin": "^0.8.0",
+        "modularscale-sass": "^3.0.8",
+        "node-sass": "^4.12.0",
+        "postcss-loader": "^3.0.0",
+        "sass-loader": "^8.0.0"
+    },
+    "scripts": {
+        "dev": "webpack --watch"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/washingtonstateuniversity/wsu-web-design-system.git"
+    },
+    "author": "WSU University Communications",
+    "license": "GPL-2.0",
+    "bugs": {
+        "url": "https://github.com/washingtonstateuniversity/wsu-web-design-system/issues"
+    },
+    "homepage": "https://github.com/washingtonstateuniversity/wsu-web-design-system#readme"
+}
