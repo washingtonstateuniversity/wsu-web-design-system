@@ -19,7 +19,7 @@
         "sass-loader": "^8.0.0"
     },
     "scripts": {
-        "dev": "webpack --watch"
+        "build": "webpack --config webpack.config.js"
     },
     "repository": {
         "type": "git",
