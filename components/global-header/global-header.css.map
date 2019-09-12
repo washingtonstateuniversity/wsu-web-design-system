@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./components/global-header/build/global-header.scss"],"names":[],"mappings":"AAAA;AACA,iBAAiB","file":"components/global-header/global-header.css","sourcesContent":[".wsu-global-header-wrapper {\n  display: block; }\n"],"sourceRoot":""}

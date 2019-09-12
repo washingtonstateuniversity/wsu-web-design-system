@@ -20,3 +20,6 @@ package-lock.json
 
 # Ignore sass stuff
 .sass-cache
+
+# Ignore Webpack empty js files
+*_bundle.js*
