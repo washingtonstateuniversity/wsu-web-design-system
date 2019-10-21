@@ -6,6 +6,7 @@ module.exports = {
 	context: __dirname,
 	entry: {
 		'components/dist/global-header/global-header': './components/src/global-header/index.js',
+		'components/dist/global-footer/global-footer': './components/src/global-footer/index.js',
 	},
 	output: {
 		path: path.resolve(__dirname),
