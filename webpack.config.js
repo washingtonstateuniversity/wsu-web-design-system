@@ -5,11 +5,10 @@ const path = require('path');
 module.exports = {
 	context: __dirname,
 	entry: {
-		//scripts: './components/global-header/global-header.js',
-		'components/global-header/global-header': './components/global-header/index.js',
+		'components/dist/global-header/global-header': './components/src/global-header/index.js',
 	},
 	output: {
-		path: path.resolve(__dirname, 'dist'),
+		path: path.resolve(__dirname),
 		filename: '[name].js'
 	},
 	mode: 'development',
@@ -48,7 +47,7 @@ module.exports = {
 					{
 						loader: 'file-loader',
 						options: {
-							name: '[path]/[name].[ext]',
+							name: 'components/dist/[name]/[name].[ext]',
 						}
 					},
 				],

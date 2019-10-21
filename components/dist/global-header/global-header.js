@@ -81,38 +81,38 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./components/global-header/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./components/src/global-header/index.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./components/global-header/global-header.html":
-/*!*****************************************************!*\
-  !*** ./components/global-header/global-header.html ***!
-  \*****************************************************/
+/***/ "./components/src/global-header/global-header.html":
+/*!*********************************************************!*\
+  !*** ./components/src/global-header/global-header.html ***!
+  \*********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "components/global-header//global-header.html";
+module.exports = __webpack_require__.p + "components/dist/global-header/global-header.html";
 
 /***/ }),
 
-/***/ "./components/global-header/global-header.js":
-/*!***************************************************!*\
-  !*** ./components/global-header/global-header.js ***!
-  \***************************************************/
+/***/ "./components/src/global-header/global-header.js":
+/*!*******************************************************!*\
+  !*** ./components/src/global-header/global-header.js ***!
+  \*******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-console.log('working');
+console.log('Javascript loaded');
 
 
 /***/ }),
 
-/***/ "./components/global-header/global-header.scss":
-/*!*****************************************************!*\
-  !*** ./components/global-header/global-header.scss ***!
-  \*****************************************************/
+/***/ "./components/src/global-header/global-header.scss":
+/*!*********************************************************!*\
+  !*** ./components/src/global-header/global-header.scss ***!
+  \*********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -120,20 +120,20 @@ console.log('working');
 
 /***/ }),
 
-/***/ "./components/global-header/index.js":
-/*!*******************************************!*\
-  !*** ./components/global-header/index.js ***!
-  \*******************************************/
+/***/ "./components/src/global-header/index.js":
+/*!***********************************************!*\
+  !*** ./components/src/global-header/index.js ***!
+  \***********************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _global_header_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./global-header.js */ "./components/global-header/global-header.js");
+/* harmony import */ var _global_header_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./global-header.js */ "./components/src/global-header/global-header.js");
 /* harmony import */ var _global_header_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_global_header_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _global_header_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./global-header.scss */ "./components/global-header/global-header.scss");
+/* harmony import */ var _global_header_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./global-header.scss */ "./components/src/global-header/global-header.scss");
 /* harmony import */ var _global_header_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_global_header_scss__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _global_header_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./global-header.html */ "./components/global-header/global-header.html");
+/* harmony import */ var _global_header_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./global-header.html */ "./components/src/global-header/global-header.html");
 /* harmony import */ var _global_header_html__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_global_header_html__WEBPACK_IMPORTED_MODULE_2__);
 // JS
 
