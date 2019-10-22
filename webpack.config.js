@@ -5,6 +5,7 @@ const path = require('path');
 module.exports = {
 	context: __dirname,
 	entry: {
+			'components/dist/wsu-reset/wsu-reset': './components/src/wsu-reset/index.js',
 		'components/dist/global-header/global-header': './components/src/global-header/index.js',
 		'components/dist/global-footer/global-footer': './components/src/global-footer/index.js',
 	},
