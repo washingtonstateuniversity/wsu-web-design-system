@@ -2,10 +2,9 @@
   display: block; }
 
 body {
-  background-color: crimson; }
+  background-color: blue; }
+  body .test {
+    color: red; }
 
-.wsu-global-header-wrapper h1 {
-  color: red; }
 
-
-/*# sourceMappingURL=global-header.css.map*/
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9jb21wb25lbnRzL3NyYy9nbG9iYWwtaGVhZGVyL2dsb2JhbC1oZWFkZXIuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtBQUNBLGlCQUFpQjs7QUFFakI7QUFDQSx5QkFBeUI7QUFDekI7QUFDQSxlQUFlIiwiZmlsZSI6ImNvbXBvbmVudHMvZGlzdC9nbG9iYWwtaGVhZGVyL2dsb2JhbC1oZWFkZXIuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLndzdS1nbG9iYWwtaGVhZGVyLXdyYXBwZXIge1xuICBkaXNwbGF5OiBibG9jazsgfVxuXG5ib2R5IHtcbiAgYmFja2dyb3VuZC1jb2xvcjogYmx1ZTsgfVxuICBib2R5IC50ZXN0IHtcbiAgICBjb2xvcjogcmVkOyB9XG4iXSwic291cmNlUm9vdCI6IiJ9*/
