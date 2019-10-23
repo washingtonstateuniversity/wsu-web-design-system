@@ -11,7 +11,6 @@ module.exports = env => {
 	return {
 		context: __dirname,
 		entry: {
-			'components/dist/wsu-reset/wsu-reset': './components/src/wsu-reset/index.js',
 			'components/dist/global-footer/global-footer': './components/src/global-footer/index.js',
 			'components/dist/global-header/global-header': './components/src/global-header/index.js',
 		},
@@ -56,7 +55,7 @@ module.exports = env => {
 					],
 				},
 				{
-					test: /.html$/,
+					test: /.pug$/,
 					use: [
 						{
 							loader: 'file-loader',
@@ -64,6 +63,9 @@ module.exports = env => {
 								name: 'components/dist/[name]/[name].[ext]',
 							}
 						},
+						{
+							loader: 'pug-loader'
+						}
 					],
 				},
 			],
