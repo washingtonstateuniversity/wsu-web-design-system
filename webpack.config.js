@@ -55,7 +55,7 @@ module.exports = env => {
 					],
 				},
 				{
-					test: /.pug$/,
+					test: /.html$/,
 					use: [
 						{
 							loader: 'file-loader',
@@ -63,9 +63,6 @@ module.exports = env => {
 								name: 'components/dist/[name]/[name].[ext]',
 							}
 						},
-						{
-							loader: 'pug-loader'
-						}
 					],
 				},
 			],
