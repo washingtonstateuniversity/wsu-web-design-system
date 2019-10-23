@@ -1,12 +1,115 @@
 
-.wsu-global-header-wrapper {
-	display: block;
+@import '~@wsu/build-tools/scss/all-the-things';
+
+.wsu-g-header__wrapper {
+
 }
 
-body {
-	background-color: blue;
+.wsu-g-header {
+	display: flex;
+	align-items: center;
 
-	.test {
-		color: red;
+	border-top: 5px solid color(primary, base);
+}
+
+/* Logo
+======================= */
+.wsu-g-header__logo {
+	display: flex;
+	align-items: center;
+
+	padding-right: 30px;
+
+	&:hover .wsu-g-header__logo-svg {
+		width: 46px;
 	}
+}
+
+.wsu-g-header__logo-icon {
+	position: relative;
+
+	justify-content: center;
+
+	width: 60px;
+	height: 60px;
+	margin-right: 30px;
+
+	background-color: color(primary, light);
+}
+
+.wsu-g-header__logo-svg {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+	width: 38px;
+
+	transition: 500ms ease width;
+	transform: translate(-50%, -50%);
+
+	fill: white;
+}
+
+.wsu-g-header__logo-text {
+	text-transform: uppercase;
+}
+
+/* Navigation
+======================= */
+.wsu-g-header__nav {
+	flex: 1 1 auto;
+}
+
+.nav {
+
+}
+
+.wsu-g-header__nav-list {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.wsu-g-header__nav-link {
+	position: relative;
+
+	display: block;
+
+	padding: 10px;
+
+	transition: 300ms ease top, 300ms ease opacity;
+
+	&::after {
+		position: absolute;
+		z-index: -1;
+		top: calc(100% - 5px);
+		left: 50%;
+
+		width: 90%;
+		height: 5px;
+
+		content: " ";
+		transition: 300ms cubic-bezier(0, 0, 0.03, 1) all;
+		transform: translateX(-50%);
+
+		opacity: 0;
+		background-color: color(primary, base);
+	}
+
+	&:hover {
+		&::after {
+			top: 100%;
+
+			opacity: 1;
+		}
+	}
+}
+
+/* Search
+======================= */
+.wsu-g-header__search {
+
+}
+
+.wsu-g-header__search-icon {
+	padding: 10px 30px;
 }
