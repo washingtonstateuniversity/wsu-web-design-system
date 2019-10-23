@@ -22,7 +22,7 @@ module.exports = env => {
 		devtool: DEV ? 'inline-source-map' : 'source-map',
 		devServer: {
 			writeToDisk: true,
-			contentBase: path.join(__dirname, 'components/dist'),
+			contentBase: path.join(__dirname),
 			overlay: true,
 			quiet: true
 		},
