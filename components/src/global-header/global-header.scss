@@ -1,11 +1,9 @@
-
 @import '~@wsu/build-tools/scss/all-the-things';
 
-.wsu-g-header__wrapper {
-
-}
-
 .wsu-g-header {
+	font-family: $wsu-bt-primary-font-family;
+	font-weight: 700;
+
 	display: flex;
 	align-items: center;
 
@@ -14,11 +12,15 @@
 
 /* Logo
 ======================= */
-.wsu-g-header__logo {
+.wsu-g-header__logo-link {
 	display: flex;
 	align-items: center;
 
 	padding-right: 30px;
+
+	text-decoration: none;
+
+	color: color(grey, 70);
 
 	&:hover .wsu-g-header__logo-svg {
 		width: 46px;
@@ -77,6 +79,9 @@
 	padding: 10px;
 
 	transition: 300ms ease top, 300ms ease opacity;
+	text-decoration: none;
+
+	color: color(grey, 70);
 
 	&::after {
 		position: absolute;
@@ -92,7 +97,7 @@
 		transform: translateX(-50%);
 
 		opacity: 0;
-		background-color: color(primary, base);
+		background-color: color(primary, light);
 	}
 
 	&:hover {
@@ -106,10 +111,21 @@
 
 /* Search
 ======================= */
-.wsu-g-header__search {
+.wsu-g-header__search-icon-container {
 
 }
 
+.wsu-g-header__search-icon-link {
+	color: color(grey, 70);
+
+	@include icon-container();
+
+	&:hover .wsu-g-header__search-icon {
+		fill: color(primary, light);
+	}
+}
+
 .wsu-g-header__search-icon {
-	padding: 10px 30px;
+	fill: color(gray, 70);
+	@include icon(30px);
 }

@@ -13,6 +13,7 @@
         "autoprefixer": "^9.6.1",
         "css-loader": "^3.2.0",
         "file-loader": "^4.2.0",
+        "markup-inline-loader": "^0.2.3",
         "mini-css-extract-plugin": "^0.8.0",
         "modularscale-sass": "^3.0.8",
         "node-sass": "^4.12.0",
