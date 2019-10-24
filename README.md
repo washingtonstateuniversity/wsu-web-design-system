@@ -1,4 +1,4 @@
-# WSU-Web-Design-System
+# WSU Web Design System
 
 ## Getting Started
 All use-ready components are located in `components/dist/<component-name>`. Any development work on components should be done in `components/src/<component-name>`. 
