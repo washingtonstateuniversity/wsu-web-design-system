@@ -1,5 +1,24 @@
-.wsu-global-header-wrapper {
-  display: block; }
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap);
+/**
+ *
+ * WSU Build Tools
+ * 
+ */
+/* Units 
+======================= */
+/* Breakpoints 
+======================= */
+/* Color Variables for Mixin 
+======================= */
+/* Fonts
+======================= */
+/* Add required psuedo element properties
+======================= */
+.wsu-g-footer-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #1a1a1a; }
 
 
-/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9jb21wb25lbnRzL3NyYy9nbG9iYWwtZm9vdGVyL2dsb2JhbC1mb290ZXIuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtBQUNBLGlCQUFpQiIsImZpbGUiOiJjb21wb25lbnRzL2Rpc3QvZ2xvYmFsLWZvb3Rlci9nbG9iYWwtZm9vdGVyLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi53c3UtZ2xvYmFsLWhlYWRlci13cmFwcGVyIHtcbiAgZGlzcGxheTogYmxvY2s7IH1cbiJdLCJzb3VyY2VSb290IjoiIn0=*/
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9jb21wb25lbnRzL3NyYy9nbG9iYWwtZm9vdGVyL2dsb2JhbC1mb290ZXIuc2NzcyAoMSkiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsNEJBQTRCIiwiZmlsZSI6ImNvbXBvbmVudHMvZGlzdC9nbG9iYWwtZm9vdGVyL2dsb2JhbC1mb290ZXIuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLyoqXG4gKlxuICogV1NVIEJ1aWxkIFRvb2xzXG4gKiBcbiAqL1xuLyogVW5pdHMgXG49PT09PT09PT09PT09PT09PT09PT09PSAqL1xuLyogQnJlYWtwb2ludHMgXG49PT09PT09PT09PT09PT09PT09PT09PSAqL1xuLyogQ29sb3IgVmFyaWFibGVzIGZvciBNaXhpbiBcbj09PT09PT09PT09PT09PT09PT09PT09ICovXG4vKiBGb250c1xuPT09PT09PT09PT09PT09PT09PT09PT0gKi9cbi8qIEFkZCByZXF1aXJlZCBwc3VlZG8gZWxlbWVudCBwcm9wZXJ0aWVzXG49PT09PT09PT09PT09PT09PT09PT09PSAqL1xuLndzdS1nLWZvb3Rlci13cmFwcGVyIHtcbiAgZGlzcGxheTogLXdlYmtpdC1ib3g7XG4gIGRpc3BsYXk6IC1tcy1mbGV4Ym94O1xuICBkaXNwbGF5OiBmbGV4O1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMWExYTFhOyB9XG4iXSwic291cmNlUm9vdCI6IiJ9*/
