@@ -1,7 +1,30 @@
 @import '~@wsu/build-tools/scss/all-the-things';
 
 .wsu-g-footer-wrapper {
-	display: flex;
-
 	background-color: color(grey, 90);
+}
+
+.wsu-g-footer {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.wsu-g-footer__copyright {
+	padding: $unit;
+
+	color: color(grey, 0);
+}
+
+.wsu-g-footer__nav-list {
+	display: flex;
+}
+
+.wsu-g-footer__nav-link {
+	display: block;
+
+	padding: $unit;
+
+	color: color(grey, 0);
+
 }
