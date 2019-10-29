@@ -27,6 +27,8 @@
 
 	padding: $unit;
 
+	text-decoration: none;
+
 	@include border-bottom-hover($top-percentage: 93%);
 	@include font-size(14px, 600);
 
