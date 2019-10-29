@@ -14,6 +14,8 @@
 	padding: $unit;
 
 	color: color(grey, 0);
+
+	@include font-size(14px, 600);
 }
 
 .wsu-g-footer__nav-list {
@@ -25,6 +27,16 @@
 
 	padding: $unit;
 
-	color: color(grey, 0);
+	@include border-bottom-hover($top-percentage: 93%);
+	@include font-size(14px, 600);
 
+	&:link,
+	&:visited {
+		color: color(grey, 0);
+	}
+
+	&:hover,
+	&:active {
+		color: color(grey, 30);
+	}
 }

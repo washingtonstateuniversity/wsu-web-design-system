@@ -16,7 +16,7 @@
 	display: flex;
 	align-items: center;
 
-	padding-right: 30px;
+	padding-right: $unit-xl;
 
 	text-decoration: none;
 
@@ -34,7 +34,7 @@
 
 	width: 60px;
 	height: 60px;
-	margin-right: 30px;
+	margin-right: $unit-xl;
 
 	background-color: color(primary, light);
 }
@@ -83,30 +83,7 @@
 
 	color: color(grey, 70);
 
-	&::after {
-		position: absolute;
-		z-index: -1;
-		top: calc(100% - 5px);
-		left: 50%;
-
-		width: 90%;
-		height: 5px;
-
-		content: " ";
-		transition: 300ms cubic-bezier(0, 0, 0.03, 1) all;
-		transform: translateX(-50%);
-
-		opacity: 0;
-		background-color: color(primary, light);
-	}
-
-	&:hover {
-		&::after {
-			top: 100%;
-
-			opacity: 1;
-		}
-	}
+	@include border-bottom-hover(100%);
 }
 
 /* Search
@@ -127,5 +104,5 @@
 
 .wsu-g-header__search-icon {
 	fill: color(gray, 70);
-	@include icon(30px);
+	@include icon($unit-xl);
 }
