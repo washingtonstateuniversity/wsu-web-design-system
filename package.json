@@ -26,8 +26,7 @@
     "scripts": {
         "start": "webpack-dev-server --env.NODE_ENV=development --watch --config webpack.config.js",
         "start:open": "webpack-dev-server --open --env.NODE_ENV=development --watch --config webpack.config.js",
-        "build:partials": "webpack --env.NODE_ENV=production --config webpack.config.js",
-        "build:css": "node-sass assets/src/css -o assets/dist"
+        "build:partials": "webpack --env.NODE_ENV=production --config webpack.config.js"
     },
     "repository": {
         "type": "git",

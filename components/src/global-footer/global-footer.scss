@@ -8,6 +8,9 @@
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
+
+	max-width: 1200px;
+	margin: 0 auto;
 }
 
 .wsu-g-footer__copyright {
@@ -20,16 +23,30 @@
 
 .wsu-g-footer__nav-list {
 	display: flex;
+
+	padding: 0;
+}
+
+.wsu-g-footer__nav-item {
+	position: relative;
+
+	&--show-more {
+		@extend .wsu-g-footer__nav-item;
+		@include show-child-class-on-hover('.wsu-g-footer__social-list');
+	}
 }
 
 .wsu-g-footer__nav-link {
-	display: block;
+	display: flex;
+	align-items: center;
 
-	padding: $unit;
+	margin-right: $unit;
+	margin-left: $unit;
+	padding: $unit 0;
 
 	text-decoration: none;
 
-	@include border-bottom-hover($top-percentage: 93%);
+	@include border-bottom-hover($top-percentage: 93%, $width: 100%);
 	@include font-size(14px, 600);
 
 	&:link,
@@ -41,4 +58,50 @@
 	&:active {
 		color: color(grey, 30);
 	}
+}
+
+.wsu-g-footer__nav-arrow {
+	display: inline;
+	overflow: hidden;
+
+	width: $unit;
+	height: $unit;
+
+	fill: white;
+}
+
+.wsu-g-footer__social-list {
+	position: absolute;
+	right: $unit;
+	bottom: 100%;
+
+	padding: $unit-xs 0;
+
+	border-radius: 4px;
+}
+
+.wsu-g-footer__social-item {
+	background-color: color(grey, 90);
+}
+
+.wsu-g-footer__social-link {
+	display: block;
+
+	padding: $unit-xs $unit-l;
+
+	&--instagram,
+	&--twitter,
+	&--facebook,
+	&--more-social {
+		@extend .wsu-g-footer__social-link;
+	}
+
+	&:hover .wsu-g-footer__social-icon {
+		fill: color(grey, 0);
+	}
+}
+
+.wsu-g-footer__social-icon {
+	@include is-icon($unit);
+	fill: color(grey, 30);
 }
