@@ -95,7 +95,7 @@
 .wsu-g-header__search-icon-link {
 	color: color(grey, 70);
 
-	@include icon-container();
+	@include is-icon-centered-in-container($icon-size: $unit-xl);
 
 	&:hover .wsu-g-header__search-icon {
 		fill: color(primary, light);
@@ -104,5 +104,4 @@
 
 .wsu-g-header__search-icon {
 	fill: color(gray, 70);
-	@include icon($unit-xl);
 }
