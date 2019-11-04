@@ -1,3 +1,5 @@
+// TODO: nav item links on hover don't go crimson
+@import '../../../assets/scss/component-reset';
 @import '~@wsu/build-tools/scss/all-the-things';
 
 .wsu-g-footer-wrapper {
@@ -27,12 +29,12 @@
 	padding: 0;
 }
 
-.wsu-g-footer__nav-item {
+.wsu-g-footer__nav-link {
 	position: relative;
 
 	&--show-more {
-		@extend .wsu-g-footer__nav-item;
-		@include show-child-class-on-hover('.wsu-g-footer__social-list');
+		@extend .wsu-g-footer__nav-link;
+		@include show-sibling-class-on-hover('.wsu-g-footer__social-list-container');
 	}
 }
 
@@ -46,7 +48,7 @@
 
 	text-decoration: none;
 
-	@include border-bottom-hover($top-percentage: 93%, $width: 100%);
+	@include border-bottom-hover($top-percentage: 92%, $width: 100%);
 	@include font-size(14px, 600);
 
 	&:link,
@@ -61,40 +63,30 @@
 }
 
 .wsu-g-footer__nav-arrow {
-	display: inline;
-	overflow: hidden;
-
-	width: $unit;
-	height: $unit;
-
 	fill: white;
+	@include is-icon(16px);
 }
 
-.wsu-g-footer__social-list {
+.wsu-g-footer__social-list-container {
 	position: absolute;
 	right: $unit;
 	bottom: 100%;
 
 	padding: $unit-xs 0;
+}
 
-	border-radius: 4px;
+.wsu-g-footer__social-list {
+	border-radius: 3px;
+	background-color: color(grey, 90);
 }
 
 .wsu-g-footer__social-item {
-	background-color: color(grey, 90);
 }
 
 .wsu-g-footer__social-link {
 	display: block;
 
 	padding: $unit-xs $unit-l;
-
-	&--instagram,
-	&--twitter,
-	&--facebook,
-	&--more-social {
-		@extend .wsu-g-footer__social-link;
-	}
 
 	&:hover .wsu-g-footer__social-icon {
 		fill: color(grey, 0);
