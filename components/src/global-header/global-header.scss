@@ -1,9 +1,7 @@
 @import '~@wsu/build-tools/scss/all-the-things';
+@import '../../../assets/scss/component-reset';
 
 .wsu-g-header {
-	font-family: $wsu-bt-primary-font-family;
-	font-weight: 700;
-
 	display: flex;
 	align-items: center;
 
@@ -16,11 +14,13 @@
 	display: flex;
 	align-items: center;
 
-	padding-right: 30px;
+	padding-right: $unit-xl;
 
 	text-decoration: none;
 
 	color: color(grey, 70);
+
+	@include font-size(15px, 600);
 
 	&:hover .wsu-g-header__logo-svg {
 		width: 46px;
@@ -28,27 +28,16 @@
 }
 
 .wsu-g-header__logo-icon {
-	position: relative;
-
 	justify-content: center;
 
-	width: 60px;
-	height: 60px;
-	margin-right: 30px;
+	margin-right: $unit-xl;
 
 	background-color: color(primary, light);
+
+	@include is-icon--boxed($icon-size: 38px);
 }
 
 .wsu-g-header__logo-svg {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-
-	width: 38px;
-
-	transition: 500ms ease width;
-	transform: translate(-50%, -50%);
-
 	fill: white;
 }
 
@@ -76,37 +65,16 @@
 
 	display: block;
 
-	padding: 10px;
+	margin: 0 $unit-xs;
+	padding: $unit-xs 0;
 
 	transition: 300ms ease top, 300ms ease opacity;
 	text-decoration: none;
 
 	color: color(grey, 70);
 
-	&::after {
-		position: absolute;
-		z-index: -1;
-		top: calc(100% - 5px);
-		left: 50%;
-
-		width: 90%;
-		height: 5px;
-
-		content: " ";
-		transition: 300ms cubic-bezier(0, 0, 0.03, 1) all;
-		transform: translateX(-50%);
-
-		opacity: 0;
-		background-color: color(primary, light);
-	}
-
-	&:hover {
-		&::after {
-			top: 100%;
-
-			opacity: 1;
-		}
-	}
+	@include font-size(15px, 600);
+	@include border-bottom-hover(100%);
 }
 
 /* Search
@@ -118,7 +86,7 @@
 .wsu-g-header__search-icon-link {
 	color: color(grey, 70);
 
-	@include icon-container();
+	@include is-icon--boxed($icon-size: $unit-xl);
 
 	&:hover .wsu-g-header__search-icon {
 		fill: color(primary, light);
@@ -127,5 +95,4 @@
 
 .wsu-g-header__search-icon {
 	fill: color(gray, 70);
-	@include icon(30px);
 }
