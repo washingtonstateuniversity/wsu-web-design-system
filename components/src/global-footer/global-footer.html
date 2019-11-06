@@ -4,36 +4,65 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=EDGE">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Global Header | Component</title>
-	<link rel="stylesheet" href="global-header.css">
-	<script src="global-header.js"></script>
+	<title>Global Footer | Component</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+	<link rel="stylesheet" href="global-footer.css">
+	<script src="global-footer.js"></script>
 </head>
 
 <body>
+	<!-- START - Placeholder to Push to Bottom of Screen -->
+	<div style="height: calc(45vh); background-color: whitesmoke;"></div>
+	<!-- END - Placeholder -->
+
 	<!-- COMPONENT:START -->
-	<div class="wsu-global-header-wrapper">
-		<header class="wsu-global-header">
-			<a class="wsu-global-header__logo" href="#">
-				<span class="wsu-global-header__logo-icon"></span>
-				<span class="wsu-global-header__logo-text">Washingtons State University</span>
-			</a>
-			<nav class="wsu-global-header__nav">
-				<ul class="wsu-global-header__nav-list">
-					<li class="wsu-global-header__nav-item">
-						<a class="wsu-global-header__nav-link" href="#">Link</a>
+	<div class="wsu-g-footer-wrapper">
+		<footer class="wsu-g-footer">
+			<div class="wsu-g-footer__copyright">&copy; Washington State University 2019</div>
+			<nav class="wsu-g-footer__nav">
+				<ul class="wsu-g-footer__nav-list">
+					<li class="wsu-g-footer__nav-item">
+						<a class="wsu-g-footer__nav-link" href="#">Access</a>
 					</li>
-					<li class="wsu-global-header__nav-item">
-						<a class="wsu-global-header__nav-link" href="#">Link</a>
+					<li class="wsu-g-footer__nav-item">
+						<a class="wsu-g-footer__nav-link" href="#">Policies</a>
 					</li>
-					<li class="wsu-global-header__nav-item">
-						<a class="wsu-global-header__nav-link" href="#">Link</a>
+					<li class="wsu-g-footer__nav-item">
+						<a class="wsu-g-footer__nav-link" href="#">MyWSU</a>
+					</li>
+					<li class="wsu-g-footer__nav-item">
+						<a class="wsu-g-footer__nav-link--show-more" href="#">
+							Follow WSU
+							<img class="wsu-g-footer__nav-arrow" src="../../../assets/icons/noun_Arrow Down_114786.svg" alt="Down Arrow Icon" markup-inline>
+						</a>
+						<div class="wsu-g-footer__social-list-container">
+							<ul class="wsu-g-footer__social-list">
+								<li class="wsu-g-footer__social-item">
+									<a class="wsu-g-footer__social-link--instagram" href="#instagram" title="Follow WSU on Instagram">
+										<img class="wsu-g-footer__social-icon" src="../../../assets/icons/instagram.svg" alt="Instagram Icon" markup-inline>
+									</a>
+								</li>
+								<li class="wsu-g-footer__social-item">
+									<a class="wsu-g-footer__social-link--twitter" href="#twitter" title="Follow WSU on Twitter">
+										<img class="wsu-g-footer__social-icon" src="../../../assets/icons/twitter.svg" alt="Twitter Icon" markup-inline>
+									</a>
+								</li>
+								<li class="wsu-g-footer__social-item">
+									<a class="wsu-g-footer__social-link--facebook" href="#facebook" title="Follow WSU on Facebook">
+										<img class="wsu-g-footer__social-icon" src="../../../assets/icons/facebook-f.svg" alt="Facebook Icon" markup-inline>
+									</a>
+								</li>
+								<li class="wsu-g-footer__social-item">
+									<a class="wsu-g-footer__social-link--more-social" href="#all" title="See More Social Options">
+										<img class="wsu-g-footer__social-icon" src="../../../assets/icons/ellipsis-h.svg" alt="Horizontal Ellipsis Icon" markup-inline>
+									</a>
+								</li>
+							</ul>
+						</div>
 					</li>
 				</ul>
 			</nav>
-			<div class="wsu-global-header__search">
-				<a class="wsu-global-header__search-icon" href="http://search.wsu.edu">Search</a>
-			</div>
-		</header>
+		</footer>
 	</div>
 	<!-- COMPONENT:END -->
 </body>

@@ -5,7 +5,6 @@
     "private": true,
     "main": "src/index.js",
     "dependencies": {
-        "normalize.css": "^8.0.1",
         "webpack": "^4.39.3"
     },
     "devDependencies": {
@@ -24,9 +23,9 @@
         "webpack-dev-server": "^3.9.0"
     },
     "scripts": {
-        "start": "webpack-dev-server --open --env.NODE_ENV=development --watch --config webpack.config.js",
-        "build:partials": "webpack --env.NODE_ENV=production --config webpack.config.js",
-        "build:css": "node-sass assets/src/css -o assets/dist"
+        "start": "webpack-dev-server --env.NODE_ENV=development --watch --config webpack.config.js",
+        "start:open": "webpack-dev-server --open --env.NODE_ENV=development --watch --config webpack.config.js",
+        "build:partials": "webpack --env.NODE_ENV=production --config webpack.config.js"
     },
     "repository": {
         "type": "git",

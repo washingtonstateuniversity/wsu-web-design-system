@@ -1,0 +1,48 @@
+/**
+ *
+ * Component Reset
+ * Set's a baseline for all components, so we can have an expected starting point for development all components.
+ *
+ */
+
+/*----------  Remove default padding and bullets for ul/ol  ----------*/
+ul[class^="wsu-"],
+ol[class^="wsu-"] {
+	padding: 0;
+
+	list-style: none;
+}
+
+/*----------  Remove default margin  ----------*/
+h1[class^="wsu-"],
+h2[class^="wsu-"],
+h3[class^="wsu-"],
+h4[class^="wsu-"],
+h5[class^="wsu-"],
+h6[class^="wsu-"],
+p[class^="wsu-"],
+ul[class^="wsu-"],
+ol[class^="wsu-"],
+li[class^="wsu-"],
+figure[class^="wsu-"],
+figcaption[class^="wsu-"],
+blockquote[class^="wsu-"],
+dl[class^="wsu-"],
+dd[class^="wsu-"] {
+	margin: 0;
+}
+
+/*---------- Make images easier to work with  ----------*/
+img[class^="wsu-"] {
+	display: block;
+
+	max-width: 100%;
+}
+
+/*---------- Inherit fonts for inputs and buttons  ----------*/
+input[class^="wsu-"],
+button[class^="wsu-"],
+textarea[class^="wsu-"],
+select[class^="wsu-"] {
+	font: inherit;
+}

@@ -1,0 +1,62 @@
+@import '../../../assets/scss/component-reset';
+@import '~@wsu/build-tools/scss/all-the-things';
+
+.wsu-c-heading--1 {
+	@include font-size(ms(2));
+	@include mq('small') {
+		@include font-size(ms(4));
+	}
+	@include mq('medium') {
+		@include font-size(ms(6));
+	}
+}
+
+.wsu-c-heading--2 {
+	@include font-size(ms(1));
+	@include mq('small') {
+		@include font-size(ms(3));
+	}
+	@include mq('medium') {
+		@include font-size(ms(5));
+	}
+}
+
+.wsu-c-heading--3 {
+	@include font-size(ms(0));
+	@include mq('small') {
+		@include font-size(ms(2));
+	}
+	@include mq('medium') {
+		@include font-size(ms(4));
+	}
+}
+
+.wsu-c-heading--4 {
+	@include font-size(ms(-1));
+	@include mq('small') {
+		@include font-size(ms(1));
+	}
+	@include mq('medium') {
+		@include font-size(ms(3));
+	}
+}
+
+.wsu-c-heading--5 {
+	@include font-size(ms(-2));
+	@include mq('small') {
+		@include font-size(ms(0));
+	}
+	@include mq('medium') {
+		@include font-size(ms(2));
+	}
+}
+
+.wsu-c-heading--6 {
+	@include font-size(ms(-3));
+	@include mq('small') {
+		@include font-size(ms(-1));
+	}
+	@include mq('medium') {
+		@include font-size(ms(1));
+	}
+}
