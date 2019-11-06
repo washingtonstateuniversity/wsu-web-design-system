@@ -10,9 +10,10 @@ All use-ready components are located in `components/dist/<component-name>`. Any 
 ## Local Development
 - For local development of components: `npm run start`
 - For building component parts (html, css, js): `npm run build:partials`
-- TODO: Add ability to build for packages (global, site, content, etc.): `npm run build:packages`
+- TODO: Add ability to build for packages (global, site, content, prefixed baseline, not prefixed baseline, etc.): `npm run build:packages`
 - TODO: Add ability to build all (packages and parts): `npm run build:all`
 
 ## Components
 - [Global Header](https://washingtonstateuniversity.github.io/wsu-web-design-system/components/dist/global-header/global-header.html)
 - [Global Footer](https://washingtonstateuniversity.github.io/wsu-web-design-system/components/dist/global-footer/global-footer.html)
+- [Content Heading](https://washingtonstateuniversity.github.io/wsu-web-design-system/components/dist/content-heading/content-heading.html)
