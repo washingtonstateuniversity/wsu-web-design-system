@@ -34,7 +34,7 @@
 
 	&--show-more {
 		@extend .wsu-g-footer__nav-link;
-		@include show-sibling-class-on-hover('.wsu-g-footer__social-list-container');
+		@include show-adjacent-class-on-hover('.wsu-g-footer__social-list-container');
 	}
 }
 
