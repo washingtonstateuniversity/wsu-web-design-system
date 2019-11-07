@@ -13,6 +13,7 @@ module.exports = env => {
 		entry: {
 			'components/dist/global-footer/global-footer': './components/src/global-footer/index.js',
 			'components/dist/global-header/global-header': './components/src/global-header/index.js',
+			'components/dist/site-footer/site-footer': './components/src/site-footer/index.js',
 			'components/dist/content-heading/content-heading': './components/src/content-heading/index.js',
 		},
 		output: {

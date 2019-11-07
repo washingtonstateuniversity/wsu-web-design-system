@@ -16,4 +16,5 @@ All use-ready components are located in `components/dist/<component-name>`. Any 
 ## Components
 - [Global Header](https://washingtonstateuniversity.github.io/wsu-web-design-system/components/dist/global-header/global-header.html)
 - [Global Footer](https://washingtonstateuniversity.github.io/wsu-web-design-system/components/dist/global-footer/global-footer.html)
+- [Site Footer](https://washingtonstateuniversity.github.io/wsu-web-design-system/components/dist/site-footer/site-footer.html)
 - [Content Heading](https://washingtonstateuniversity.github.io/wsu-web-design-system/components/dist/content-heading/content-heading.html)

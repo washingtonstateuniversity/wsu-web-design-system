@@ -1,0 +1,30 @@
+@import '../../../assets/scss/component-reset';
+@import '~@wsu/build-tools/scss/all-the-things';
+
+/* Base Styles
+======================= */
+.wsu-s-footer__wrapper {
+	padding: 100px;
+
+	background: color(grey, 0);
+
+	.wsu-s-footer__overview-title {
+		color: color(primary, base);
+	}
+
+	.wsu-s-footer__overview-container {
+		max-width: 500px;
+	}
+}
+
+/* Dark Theme
+======================= */
+.wsu-s-footer__wrapper--dark {
+	background: color(grey, 90);
+
+	@extend .wsu-s-footer__wrapper;
+
+	.wsu-s-footer__overview-desc {
+		color: white;
+	}
+}
