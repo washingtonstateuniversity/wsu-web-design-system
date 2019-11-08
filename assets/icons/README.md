@@ -2,13 +2,15 @@
 
 ## Currently Supported
 
-- Ellipsis
-- Facebook F
-- Search
-- Instagram
-- Down Arrow
-- Twitter
-- WSU Coug Head
+- Ellipsis (ellipsis-h.svg)
+- Facebook F (facebook-f.svg)
+- Arrow Carrot Down (icon-arrow-carrot-down.svg)
+- Arrow Carrot Up (icon-arrow-carrot-up.svg)
+- Menu (icon-menu.svg)
+- Search (icon-search.svg)
+- Instagram (instagram.svg)
+- Twitter (twitter.svg)
+- WSU Coug Head (wsu-coug-head.svg)
 
 ## Future Releases
 
