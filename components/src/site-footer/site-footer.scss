@@ -147,25 +147,16 @@
 /* Dark Theme
 ======================= */
 .wsu-s-footer__wrapper--dark {
-	color: white;
+	color: color(grey, 0);
 	background: color(grey, 90);
 
 	@extend .wsu-s-footer__wrapper;
 
-	.wsu-s-footer__overview-desc {
-		color: white;
+	.wsu-s-footer__overview-title {
+		color: color(grey, 0);
 	}
-}
 
-/* Crimson Theme
-======================= */
-.wsu-s-footer__wrapper--crimson {
-	color: white;
-	background: color(grey, 90);
-
-	@extend .wsu-s-footer__wrapper;
-
-	.wsu-s-footer__overview-desc {
-		color: white;
+	.wsu-s-footer__nav-link {
+		color: color(grey, 20);
 	}
 }
