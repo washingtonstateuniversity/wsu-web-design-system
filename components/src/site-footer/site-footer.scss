@@ -6,7 +6,7 @@
 .wsu-s-footer__wrapper {
 	position: relative;
 
-	padding: $unit-3xl;
+	padding: $unit-2xl $unit-3xl;
 
 	background-color: color(grey, 0);
 
@@ -39,9 +39,22 @@
 
 	.wsu-s-footer_nav-list {
 		display: flex;
+		flex-direction: column;
+
+		@include mq('small') {
+			flex-flow: row wrap;
+		}
+		@include mq('large') {
+			max-width: $wsu-bt-breakpoint--large;
+		}
 
 		& > .wsu-s-footer__nav-item {
-			margin-right: $unit-3xl;
+			@include mq('small') {
+				width: 50%;
+			}
+			@include mq('medium') {
+				width: 25%;
+			}
 		}
 	}
 
@@ -54,13 +67,12 @@
 
 		color: color(grey, 75);
 
-		@include font-size(ms(-1));
+		@include font-size(14px);
 		@include border-bottom-hover(80%, 7px);
 	}
 
 	.wsu-s-footer__nav-item--has-children {
 		width: 100%;
-		max-width: 220px;
 
 		@extend .wsu-s-footer__nav-item;
 
@@ -76,7 +88,7 @@
 	.wsu-s-footer__contact-info {
 		margin-bottom: $unit-xs;
 
-		@include font-size(ms(0), $font-weight: 300);
+		@include font-size(16px, $font-weight: 300);
 	}
 
 	.wsu-s-footer__name {
