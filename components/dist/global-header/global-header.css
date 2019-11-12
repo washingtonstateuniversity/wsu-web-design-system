@@ -163,8 +163,6 @@ select[class^="wsu-"] {
   font-size: 0.9375rem;
   font-weight: 600;
   line-height: 1.5; }
-  .wsu-g-header__logo-link:hover .wsu-g-header__logo-svg {
-    width: 46px; }
 
 .wsu-g-header__logo-icon {
   -webkit-box-pack: center;

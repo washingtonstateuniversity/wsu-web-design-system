@@ -10,9 +10,6 @@
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
-
-	max-width: 1200px;
-	margin: 0 auto;
 }
 
 .wsu-g-footer__copyright {
@@ -29,12 +26,13 @@
 	padding: 0;
 }
 
-.wsu-g-footer__nav-link {
+.wsu-g-footer__nav-item {
 	position: relative;
 
+	@include show-child-class-on-hover('.wsu-g-footer__social-list-container');
+
 	&--show-more {
-		@extend .wsu-g-footer__nav-link;
-		@include show-adjacent-class-on-hover('.wsu-g-footer__social-list-container');
+		@extend .wsu-g-footer__nav-item;
 	}
 }
 
@@ -72,15 +70,19 @@
 	right: $unit;
 	bottom: 100%;
 
-	padding: $unit-xs 0;
+	padding: $unit-s 0;
 }
 
 .wsu-g-footer__social-list {
+	// TODO: Fix padding reset in _component-rest
+	padding: $unit-s 0 !important;
+
 	border-radius: 3px;
 	background-color: color(grey, 90);
 }
 
 .wsu-g-footer__social-item {
+	padding: $unit-xs $unit-l;
 }
 
 .wsu-g-footer__social-link {

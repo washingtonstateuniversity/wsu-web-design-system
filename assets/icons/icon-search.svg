@@ -1,1 +1,19 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16"><defs><style>.cls-1,.cls-4{fill:none;}.cls-2{clip-path:url(#clip-path);}.cls-3{fill:#404040;}.cls-4{stroke:#404040;stroke-linecap:round;stroke-width:2px;}</style><clipPath id="clip-path" transform="translate(0 0)"><rect class="cls-1" width="16" height="16"/></clipPath></defs><title>icon-search</title><g class="cls-2"><g id="search"><g id="Ellipse_123" data-name="Ellipse 123"><path class="cls-3" d="M6.5,2A4.5,4.5,0,1,1,2,6.5,4.51,4.51,0,0,1,6.5,2m0-2A6.51,6.51,0,1,0,13,6.5,6.5,6.5,0,0,0,6.5,0Z" transform="translate(0 0)"/></g><path id="Path_3400" data-name="Path 3400" class="cls-4" d="M15,15l-4.07-4.07" transform="translate(0 0)"/></g></g></svg>
+<svg id="Layer_1" data-name="Layer 1"
+	xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16">
+	<defs>
+		<style>.cls-1,.cls-4{fill:none;}.cls-2{clip-path:url(#clip-path);}.cls-3{fill:#404040;}.cls-4{stroke:#404040;stroke-linecap:round;stroke-width:2px;}</style>
+		<clipPath id="clip-path" transform="translate(0 0)">
+			<rect class="cls-1" width="16" height="16"/>
+		</clipPath>
+	</defs>
+	<title>icon-search</title>
+	<g class="cls-2">
+		<g id="search">
+			<g id="Ellipse_123" data-name="Ellipse 123">
+				<path class="cls-3" d="M6.5,2A4.5,4.5,0,1,1,2,6.5,4.51,4.51,0,0,1,6.5,2m0-2A6.51,6.51,0,1,0,13,6.5,6.5,6.5,0,0,0,6.5,0Z" transform="translate(0 0)"/>
+			</g>
+			<path id="Path_3400" data-name="Path 3400" class="cls-4" d="M15,15l-4.07-4.07" transform="translate(0 0)"/>
+		</g>
+	</g>
+</svg>
