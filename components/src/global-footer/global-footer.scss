@@ -74,7 +74,8 @@
 }
 
 .wsu-g-footer__social-list {
-	padding: $unit-s 0;
+	// TODO: Fix padding reset in _component-rest
+	padding: $unit-s 0 !important;
 
 	border-radius: 3px;
 	background-color: color(grey, 90);
