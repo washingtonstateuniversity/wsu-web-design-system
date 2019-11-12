@@ -8,8 +8,6 @@
 /*----------  Remove default padding and bullets for ul/ol  ----------*/
 ul[class^="wsu-"],
 ol[class^="wsu-"] {
-	padding: 0;
-
 	list-style: none;
 }
 
