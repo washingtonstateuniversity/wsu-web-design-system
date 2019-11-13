@@ -23,7 +23,8 @@
 	@include font-size(15px, 600);
 
 	&:hover .wsu-g-header__logo-svg {
-		width: 46px;
+		// TODO: Fix hover sizing
+		// @include is-icon--boxed($icon-size: 46px);
 	}
 }
 
@@ -86,7 +87,7 @@
 .wsu-g-header__search-icon-link {
 	color: color(grey, 70);
 
-	@include is-icon--boxed($icon-size: $unit-xl);
+	@include is-icon--boxed($icon-size: $unit);
 
 	&:hover .wsu-g-header__search-icon {
 		fill: color(primary, light);
