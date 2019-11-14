@@ -1,5 +1,6 @@
 @import '../../../assets/scss/component-reset';
 @import '~@wsu/build-tools/scss/all-the-things';
+@import '~priority-nav/dist/priority-nav-core';
 
 /* Start Base Styles
 ======================= */
@@ -7,7 +8,7 @@
 	background-color: color(grey, 0);
 
 	.wsu-s-nav-horizontal__nav-container {
-		display: flex;
+		display: inline-block;
 
 		@include font-size(16px, 600, 1);
 	}
