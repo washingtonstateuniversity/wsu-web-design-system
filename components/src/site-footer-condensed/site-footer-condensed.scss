@@ -6,9 +6,9 @@
 .wsu-s-footer__wrapper {
 	position: relative;
 
-	padding: $unit-3xl;
+	padding: $unit-2xl $unit-3xl;
 
-	background-color: color(primary, base);
+	background-color: color(grey, 0);
 
 	.wsu-s-footer__overview-title {
 		margin-bottom: $unit-xs;
@@ -24,7 +24,7 @@
 	.wsu-s-footer__overview-desc {
 		margin-bottom: $unit-xl;
 
-		@include font-size(16px, 300, $line-height: 1.3);
+		@include font-size(16px, 300, 1.5);
 	}
 
 	.wsu-s-footer__overview-container {
@@ -39,13 +39,28 @@
 
 	.wsu-s-footer_nav-list {
 		display: flex;
+		flex-direction: column;
+
+		@include mq('small') {
+			flex-flow: row wrap;
+		}
+		@include mq('large') {
+			max-width: $wsu-bt-breakpoint--large;
+		}
 
 		& > .wsu-s-footer__nav-item {
-			margin-right: $unit-3xl;
+			@include mq('small') {
+				width: 50%;
+			}
+			@include mq('medium') {
+				width: 25%;
+			}
 		}
 	}
 
 	.wsu-s-footer__nav-link {
+		font-weight: 300;
+
 		display: inline-block;
 
 		padding: $unit-xs 0;
@@ -54,13 +69,11 @@
 
 		color: color(grey, 75);
 
-		@include font-size(ms(-1));
 		@include border-bottom-hover(80%, 7px);
 	}
 
 	.wsu-s-footer__nav-item--has-children {
 		width: 100%;
-		max-width: 220px;
 
 		@extend .wsu-s-footer__nav-item;
 
@@ -76,7 +89,7 @@
 	.wsu-s-footer__contact-info {
 		margin-bottom: $unit-xs;
 
-		@include font-size(ms(0), $font-weight: 300);
+		@include font-size(12px, $font-weight: 300);
 	}
 
 	.wsu-s-footer__name {
@@ -108,7 +121,7 @@
 	.wsu-s-footer__social-icon {
 		transition: fill timing();
 
-		@include is-icon(25px);
+		@include is-icon(14px);
 		fill: color(grey, 40);
 
 		&:hover {
@@ -117,17 +130,18 @@
 	}
 
 	.wsu-s-footer__coug-watermark {
-		position: absolute;    right: $unit-3xl;
-		bottom: $unit-3xl;
-		}
+		position: absolute;    
+		right: $unit-3xl;
+
+		@include is-vertically-centered;
+	}
 
 
 	.wsu-s-footer__coug-head {
 		opacity: .10;
 
 		fill: color(grey, 50);
-		@include is-icon(150px);
-
+		@include is-icon(85px);
 	}
 }
 /* == End Base Styles == */
@@ -135,25 +149,35 @@
 /* Dark Theme
 ======================= */
 .wsu-s-footer__wrapper--dark {
-	color: white;
+	color: color(grey, 20);
 	background: color(grey, 90);
 
 	@extend .wsu-s-footer__wrapper;
 
-	.wsu-s-footer__overview-desc {
-		color: white;
+	.wsu-s-footer__overview-title {
+		color: color(grey, 0);
 	}
-}
 
-/* Crimson Theme
-======================= */
-.wsu-s-footer__wrapper--crimson {
-	color: white;
-	background: color(grey, 90);
+	.wsu-s-footer__nav-item--has-children {
+		@extend .wsu-s-footer__nav-item;
 
-	@extend .wsu-s-footer__wrapper;
+		& > .wsu-s-footer__nav-link {
+			color: color(grey, 0);
+		}
+	}
 
-	.wsu-s-footer__overview-desc {
-		color: white;
+	.wsu-s-footer__nav-link {
+		color: color(grey, 20);
+	}
+
+	.wsu-s-footer__name {
+		color: color(grey, 0);
+	}
+
+	.wsu-s-footer__social-item-link {
+
+		&:hover .wsu-s-footer__social-icon {
+			fill: color(grey, 0);
+		}
 	}
 }
