@@ -1,0 +1,38 @@
+@import '../../../assets/scss/component-reset';
+@import '~@wsu/build-tools/scss/all-the-things';
+
+/* Start Base Styles
+======================= */
+.wsu-s-nav-horizontal__wrapper {
+	background-color: color(grey, 0);
+
+	.wsu-s-nav-horizontal__nav-container {
+		display: flex;
+
+		@include font-size(16px, 600, 1);
+	}
+
+	.wsu-s-nav-horizontal__nav-link {
+		display: inline-block;
+
+		padding: $unit;
+
+		text-decoration: none;
+
+		color: color(grey, 100);
+
+		&:hover {
+			color: color(primary, base);
+		}
+	}
+}
+/* == End Base Styles == */
+
+/* Dark Theme
+======================= */
+.wsu-s-nav-horizontal__wrapper--dark {
+	color: color(grey, 0);
+	background: color(grey, 90);
+
+	@extend .wsu-s-nav-horizontal__wrapper;
+}
