@@ -7,29 +7,54 @@
 	<title>Site Footer | Component</title>
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 	<link rel="stylesheet" href="site-nav-horizontal.css">
-	<script src="site-nav-horizontal.js"></script>
+	<script src="site-nav-horizontal.js" defer></script>
 </head>
 
 <body>
 	<!-- COMPONENT:START -->
 	<div class="wsu-s-nav-horizontal__wrapper">
-		<nav role="navigation" aria-label="horizontal-site-navigation">
-			<ul class="wsu-s-nav-horizontal__nav-container">
-				<li class="wsu-s-nav-horizontal__nav-item">
-					<a href="" class="wsu-s-nav-horizontal__nav-link">Lorem Ipsum</a>
+		<nav role="navigation" aria-label="horizontal-site-navigation" class="wsu-s-nav-horizontal__nav-container">
+			<ul class="wsu-s-nav-horizontal__nav-list" aria-expanded="true">
+				<li class="wsu-s-nav-horizontal__nav-item--has-children">
+					<a href="#" class="wsu-s-nav-horizontal__nav-link">Lorem Ipsum</a>
+					<ul class="wsu-s-nav-horizontal__nav-list" aria-expanded="true">
+						<li><a href="#">Lorem Ipsum</a></li>
+						<li><a href="#">Dolor Sit Amet</a></li>
+						<li><a href="#">Consectetur</a></li>
+						<li><a href="#">Adipiscing Elit</a></li>
+						<li><a href="#">Sed Mollis Ipsum</a></li>
+					</ul>
 				</li>
 				<li class="wsu-s-nav-horizontal__nav-item">
-					<a href="" class="wsu-s-nav-horizontal__nav-link">Dolor</a>
+					<a href="#" class="wsu-s-nav-horizontal__nav-link">Dolor</a>
 				</li>
 				<li class="wsu-s-nav-horizontal__nav-item">
-					<a href="" class="wsu-s-nav-horizontal__nav-link">Sit Amet</a>
+					<a href="#" class="wsu-s-nav-horizontal__nav-link">Sit Amet</a>
 				</li>
 				<li class="wsu-s-nav-horizontal__nav-item">
-					<a href="" class="wsu-s-nav-horizontal__nav-link">Consectetur Adipiscing Elit</a>
+					<a href="#" class="wsu-s-nav-horizontal__nav-link">Consectetur Adipiscing Elit</a>
+				</li>
+				<li class="wsu-s-nav-horizontal__nav-item">
+					<a href="#" class="wsu-s-nav-horizontal__nav-link">Lorem Ipsum</a>
+				</li>
+				<li class="wsu-s-nav-horizontal__nav-item">
+					<a href="#" class="wsu-s-nav-horizontal__nav-link">Dolor</a>
+				</li>
+				<li class="wsu-s-nav-horizontal__nav-item">
+					<a href="#" class="wsu-s-nav-horizontal__nav-link">Sit Amet</a>
+				</li>
+				<li class="wsu-s-nav-horizontal__nav-item--has-children">
+					<a href="#" class="wsu-s-nav-horizontal__nav-link">Consectetur Adipiscing Elit</a>
+					<ul class="wsu-s-nav-horizontal__nav-list" aria-expanded="true">
+						<li><a href="#">Lorem Ipsum</a></li>
+						<li><a href="#">Dolor Sit Amet</a></li>
+						<li><a href="#">Consectetur</a></li>
+						<li><a href="#">Adipiscing Elit</a></li>
+						<li><a href="#">Sed Mollis Ipsum</a></li>
+					</ul>
 				</li>
 			</ul>
 		</nav>
-
 	</div>
 	<!-- COMPONENT:END -->
 
