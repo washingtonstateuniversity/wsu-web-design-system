@@ -1,8 +1,20 @@
+/**
+ * Imports
+ */
+import priorityNav from 'priority-nav';
+var MenubarItemLinks = require.resolve('@wsu/build-tools/js/wai-aria/MenubarItemLinks');
+var MenubarLinks = require.resolve('@wsu/build-tools/js/wai-aria/MenubarLinks');
+var PopupMenuItemLinks = require.resolve('@wsu/build-tools/js/wai-aria/PopupMenuItemLinks');
+var PopupMenuLinks = require.resolve('@wsu/build-tools/js/wai-aria/PopupMenuLinks');
+
+// Remove no-js class if js is present
 document.querySelector('.wsu-s-nav-horizontal__wrapper').classList.remove('wsu-u-no-js');
 
-// Priority Nav
-import priorityNav from 'priority-nav';
+// Initiate keyboard controls for accessibility support
+var menubar = new Menubar(document.getElementById('wsu-s-nav-horizontal'));
+menubar.init();
 
+// Priority Nav
 priorityNav.init({
 	mainNavWrapper: ".wsu-s-nav-horizontal__nav-container",
 	breakPoint: 0,
