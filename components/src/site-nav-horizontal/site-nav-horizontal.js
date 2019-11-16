@@ -2,10 +2,7 @@
  * Imports
  */
 import priorityNav from 'priority-nav';
-var MenubarItemLinks = require.resolve('@wsu/build-tools/js/wai-aria/MenubarItemLinks');
-var MenubarLinks = require.resolve('@wsu/build-tools/js/wai-aria/MenubarLinks');
-var PopupMenuItemLinks = require.resolve('@wsu/build-tools/js/wai-aria/PopupMenuItemLinks');
-var PopupMenuLinks = require.resolve('@wsu/build-tools/js/wai-aria/PopupMenuLinks');
+import { Menubar } from '@wsu/build-tools/js/wai-aria/MenubarLinks';
 
 // Remove no-js class if js is present
 document.querySelector('.wsu-s-nav-horizontal__wrapper').classList.remove('wsu-u-no-js');
