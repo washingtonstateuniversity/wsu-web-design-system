@@ -4,12 +4,13 @@
     "description": "Web Design System for Washington State University.",
     "private": true,
     "main": "src/index.js",
-    "dependencies": {
-        "webpack": "^4.39.3"
-    },
+    "dependencies": {},
     "devDependencies": {
+        "@babel/core": "^7.7.2",
+        "@babel/preset-env": "^7.7.1",
         "@wsu/build-tools": "git+https://github.com/washingtonstateuniversity/wsu-build-tools.git",
         "autoprefixer": "^9.6.1",
+        "babel-loader": "^8.0.6",
         "css-loader": "^3.2.0",
         "file-loader": "^4.2.0",
         "markup-inline-loader": "^0.2.3",
@@ -20,6 +21,7 @@
         "postcss-loader": "^3.0.0",
         "priority-nav": "^1.0.13",
         "sass-loader": "^8.0.0",
+        "webpack": "^4.41.2",
         "webpack-cli": "^3.3.8",
         "webpack-dev-server": "^3.9.0"
     },
