@@ -14,24 +14,14 @@
 	}
 
 	.wsu-s-nav-horizontal__nav-item {
-		&--has-children { // submenus
-			position: relative;
+		display: inline-block;
+		&--has-children {
+			position: relative; // submenus
+
+			@extend .wsu-s-nav-horizontal__nav-item;
 
 			& .wsu-s-nav-horizontal__nav-list {
 				transition: 300ms timing(cougar, standard);
-
-				&[aria-expanded="true"] {
-					display: block;
-
-					opacity: 1;
-				}
-
-				&[aria-expanded="false"] {
-					display: none;
-
-					opacity: 0;
-
-				}
 			}
 		}
 	}
@@ -48,6 +38,20 @@
 		&:hover {
 			color: color(primary, base);
 		}
+
+		&[aria-expanded="true"] ~ .wsu-s-nav-horizontal__nav-list {
+			display: block;
+
+			opacity: 1;
+		}
+
+		&[aria-expanded="false"] ~ .wsu-s-nav-horizontal__nav-list {
+			display: none;
+
+			opacity: 0;
+
+		}
+
 	}
 }
 /* == End Base Styles == */
