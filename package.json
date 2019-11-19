@@ -9,7 +9,7 @@
         "@babel/core": "^7.7.2",
         "@babel/preset-env": "^7.7.1",
         "@wsu/build-tools": "git+https://github.com/washingtonstateuniversity/wsu-build-tools.git",
-        "autoprefixer": "^9.6.1",
+        "autoprefixer": "^9.7.1",
         "babel-loader": "^8.0.6",
         "css-loader": "^3.2.0",
         "file-loader": "^4.2.0",
@@ -19,10 +19,9 @@
         "node-sass": "^4.12.0",
         "optimize-css-assets-webpack-plugin": "^5.0.3",
         "postcss-loader": "^3.0.0",
-        "priority-nav": "^1.0.13",
         "sass-loader": "^8.0.0",
         "webpack": "^4.41.2",
-        "webpack-cli": "^3.3.8",
+        "webpack-cli": "^3.3.10",
         "webpack-dev-server": "^3.9.0"
     },
     "scripts": {
