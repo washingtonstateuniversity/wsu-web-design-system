@@ -4,6 +4,8 @@
 /* Start Base Styles
 ======================= */
 .wsu-s-nav-horizontal__wrapper {
+	white-space: nowrap;
+
 	background-color: color(grey, 0);
 
 	.wsu-s-nav-horizontal__nav-list {
@@ -76,5 +78,13 @@
 .wsu-s-nav-horizontal__nav-item--more {
 	.wsu-s-nav-horizontal__nav-list--has-children {
 		display: none;
+	}
+}
+
+/* No js
+======================= */
+.wsu-u-no-js {
+	.wsu-s-nav-horizontal__nav-container {
+		white-space: initial;
 	}
 }
