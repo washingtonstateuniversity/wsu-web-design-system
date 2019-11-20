@@ -1,6 +1,6 @@
+// TODO: import from NPM once final version is ready
 import priorityNav from '../../../../wsu-build-tools/js/wsu-bt-priorityNav';
 import { Menubar } from '../../../../wsu-build-tools/js/wai-aria/MenubarLinks';
-// TODO: import from NPM once final version is ready
 
 // Remove no-js class if js is present
 document.querySelector('.wsu-s-nav-horizontal__wrapper').classList.remove('wsu-u-no-js');
@@ -11,10 +11,17 @@ collapsibleItems.forEach(element => {
 	element.setAttribute('aria-expanded', 'false');
 });
 
-// Initiate keyboard controls for accessibility support
-var menubar = new Menubar(document.getElementById('wsu-s-nav-horizontal'));
-menubar.init();
-
 // Initiate Priority Nav
-var horizontalNav = new priorityNav('.wsu-s-nav-horizontal__nav-list');
+var horizontalNav = new priorityNav({
+	mainNavSelector: '.wsu-s-nav-horizontal__nav-list',
+	priorityNavListItemClassName: 'wsu-s-nav-horizontal__nav-item--more',
+	priorityNavListItemLinkClassName: 'wsu-s-nav-horizontal__nav-link',
+	priorityNavListItemListClassName: 'wsu-s-nav-horizontal__nav-list--has-children'
+});
 horizontalNav.init();
+
+console.log(horizontalNav);
+
+// Initiate keyboard controls for accessibility support
+// var menubar = new Menubar(document.getElementById('wsu-s-nav-horizontal'));
+// menubar.init();
