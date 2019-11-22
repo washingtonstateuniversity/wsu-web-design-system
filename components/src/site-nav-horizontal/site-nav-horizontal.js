@@ -20,8 +20,18 @@ var horizontalNav = new priorityNav({
 });
 horizontalNav.init();
 
-console.log(horizontalNav);
-
 // Initiate keyboard controls for accessibility support
-// var menubar = new Menubar(document.getElementById('wsu-s-nav-horizontal'));
-// menubar.init();
+var menubar = new Menubar(document.getElementById('wsu-s-nav-horizontal'));
+menubar.init();
+
+collapsibleItems.forEach(element => {
+	element.addEventListener('click', function (e) {
+		e.preventDefault
+
+		if (this.getAttribute('aria-expanded') == 'true') {
+			this.setAttribute('aria-expanded', 'false');
+		} else {
+			this.setAttribute('aria-expanded', 'true');
+		}
+	})
+})

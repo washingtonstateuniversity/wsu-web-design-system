@@ -59,7 +59,17 @@
 			opacity: 0;
 
 		}
+	}
 
+	/* Priority Nav
+	======================= */
+	.wsu-s-nav-horizontal__nav-item--more {
+		.wsu-s-nav-horizontal__nav-list--has-children {
+			max-width: 300px;
+		}
+		.wsu-s-nav-horizontal__nav-item {
+			display: block;
+		}
 	}
 }
 /* == End Base Styles == */
