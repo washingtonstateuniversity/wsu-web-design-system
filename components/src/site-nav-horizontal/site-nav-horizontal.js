@@ -1,15 +1,16 @@
 // TODO: import from NPM once final version is ready
-import priorityNav from '../../../../wsu-build-tools/js/wsu-bt-priorityNav';
 import { Menubar } from '../../../../wsu-build-tools/js/wai-aria/MenubarLinks';
+import priorityNav from '../../../../wsu-build-tools/js/wsu-bt-priorityNav';
+import wsu_bt_aria_expanded from '../../../../wsu-build-tools/js/wsu_bt_aria_expanded';
 
 // Remove no-js class if js is present
 document.querySelector('.wsu-s-nav-horizontal__wrapper').classList.remove('wsu-u-no-js');
 
-// Set collapsible nav items to hidden
-var collapsibleItems = document.querySelectorAll('.wsu-s-nav-horizontal__nav-link[aria-expanded="true"]');
-collapsibleItems.forEach(element => {
-	element.setAttribute('aria-expanded', 'false');
+// Initiate collapsable aria-expanded items
+var expanded_aria_items = new wsu_bt_aria_expanded({
+	nav_item_selector: '.wsu-s-nav-horizontal__nav-link'
 });
+expanded_aria_items.init();
 
 // Initiate Priority Nav
 var horizontalNav = new priorityNav({
@@ -24,14 +25,4 @@ horizontalNav.init();
 var menubar = new Menubar(document.getElementById('wsu-s-nav-horizontal'));
 menubar.init();
 
-collapsibleItems.forEach(element => {
-	element.addEventListener('click', function (e) {
-		e.preventDefault
 
-		if (this.getAttribute('aria-expanded') == 'true') {
-			this.setAttribute('aria-expanded', 'false');
-		} else {
-			this.setAttribute('aria-expanded', 'true');
-		}
-	})
-})
