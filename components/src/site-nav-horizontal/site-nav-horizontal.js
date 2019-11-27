@@ -1,7 +1,7 @@
 // TODO: import from NPM once final version is ready
 import { Menubar } from '../../../../wsu-build-tools/js/wai-aria/MenubarLinks';
-import priorityNav from '../../../../wsu-build-tools/js/wsu-bt-priorityNav';
-import wsu_bt_aria_expanded from '../../../../wsu-build-tools/js/wsu_bt_aria_expanded';
+import priority_nav from '../../../../wsu-build-tools/js/wsu-bt-priority-nav';
+import wsu_bt_aria_expanded from '../../../../wsu-build-tools/js/wsu-bt-aria-expanded';
 
 // Remove no-js class if js is present
 document.querySelector('.wsu-s-nav-horizontal__wrapper').classList.remove('wsu-u-no-js');
@@ -13,13 +13,13 @@ var expanded_aria_items = new wsu_bt_aria_expanded({
 expanded_aria_items.init();
 
 // Initiate Priority Nav
-var horizontalNav = new priorityNav({
-	mainNavSelector: '.wsu-s-nav-horizontal__nav-list',
-	priorityNavListItemClassName: 'wsu-s-nav-horizontal__nav-item--more',
-	priorityNavListItemLinkClassName: 'wsu-s-nav-horizontal__nav-link',
-	priorityNavListItemListClassName: 'wsu-s-nav-horizontal__nav-list--has-children'
+var horizontal_nav = new priority_nav({
+	main_nav_selector: '.wsu-s-nav-horizontal__nav-list',
+	priority_nav_list_item_class_name: 'wsu-s-nav-horizontal__nav-item--more',
+	priority_nav_list_item_link_class_name: 'wsu-s-nav-horizontal__nav-link',
+	priority_nav_list_item_list_class_name: 'wsu-s-nav-horizontal__nav-list--has-children'
 });
-horizontalNav.init();
+horizontal_nav.init();
 
 // Initiate keyboard controls for accessibility support
 var menubar = new Menubar(document.getElementById('wsu-s-nav-horizontal'));
