@@ -63,6 +63,13 @@
 
 	/* Priority Nav
 	======================= */
+	.wsu-s-nav-horizontal__more-button {
+		width: 40px;
+		height: 16px;
+
+		fill: color(grey, 40);
+	}
+
 	.wsu-s-nav-horizontal__nav-item--more {
 		.wsu-s-nav-horizontal__nav-list--has-children {
 			max-width: 300px;
@@ -83,8 +90,6 @@
 	@extend .wsu-s-nav-horizontal__wrapper;
 }
 
-
-
 .wsu-s-nav-horizontal__nav-item--more {
 	.wsu-s-nav-horizontal__nav-list--has-children {
 		display: none;
@@ -97,4 +102,22 @@
 	.wsu-s-nav-horizontal__nav-container {
 		white-space: initial;
 	}
+}
+
+
+
+// TODO: Move to build tools:
+// Utility - Visually Hidden
+.wsu-u-visually-hidden {
+	position: absolute;
+
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+
+	clip-path: inset(50%);
 }
