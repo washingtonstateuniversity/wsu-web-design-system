@@ -100,7 +100,7 @@
 
 	&:hover,
 	&:active {
-		color: color(grey, 50);
+		color: color(grey, 100);
 	}
 
 
@@ -165,7 +165,7 @@
 		}
 
 		.wsu-s-nav-horizontal__nav-link:hover {
-			padding-left: $unit + $unit-xs;
+			padding-left: $unit + $unit-xs; // TODO: move over 5px using relative positioning instead of padding
 		}
 
 		.wsu-s-nav-horizontal__nav-link--active {
