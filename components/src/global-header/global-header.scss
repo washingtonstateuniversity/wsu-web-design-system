@@ -119,6 +119,7 @@
 	@include is-icon--boxed($icon-size: $unit);
 
 	&:hover .wsu-g-header__search-icon {
+		// TODO: Fix once new icons are available
 		fill: color(primary, light);
 	}
 }
