@@ -1,5 +1,5 @@
 // TODO: import from NPM once final version is ready
-import { Menubar } from '../../../../wsu-build-tools/js/wai-aria/MenubarLinks';
+
 import priority_nav from '../../../../wsu-build-tools/js/wsu-bt-priority-nav';
 
 // Remove no-js class if js is present
@@ -14,9 +14,4 @@ var horizontal_nav = new priority_nav({
 	more_inner_html: 'More'
 });
 horizontal_nav.init();
-
-// Initiate keyboard controls for accessibility support
-var menubar = new Menubar(document.getElementById('wsu-s-nav-horizontal'));
-menubar.init();
-
 
