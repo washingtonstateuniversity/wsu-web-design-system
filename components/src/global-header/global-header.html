@@ -7,12 +7,12 @@
 	<title>Global Header | Component</title>
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 	<link rel="stylesheet" href="global-header.css">
-	<script src="global-header.js"></script>
+	<script src="global-header.js" defer></script>
 </head>
 
 <body>
 	<!-- COMPONENT:START -->
-	<div class="wsu-g-header__wrapper">
+	<div class="wsu-g-header__wrapper wsu-u-no-js">
 		<header class="wsu-g-header">
 			<a class="wsu-g-header__logo-link" href="#">
 				<span class="wsu-g-header__logo-icon">
@@ -44,16 +44,18 @@
 				</ul>
 			</nav>
 			<div class="wsu-g-header__search-icon-container">
-				<a class="wsu-g-header__search-icon-link" href="#">
+				<a class="wsu-g-header__search-icon-link" href="#" aria-haspopup="true" aria-expanded="true">
 					<img src="../../../assets/icons/icon-search.svg" class="wsu-g-header__search-icon" markup-inline>
 				</a>
+				<div class="wsu-g-header_search-box">
+					<input type="text" class="wsu-g-header_search-input" placeholder="What can we help you find?">
+				</div>
 			</div>
 			<div class="wsu-g-header__menu-icon-container">
 				<a class="wsu-g-header__menu-icon-link" href="#">
 					<img src="../../../assets/icons/icon-menu.svg" class="wsu-g-header__menu-icon" markup-inline>
 				</a>
 			</div>
-
 		</header>
 	</div>
 	<!-- COMPONENT:END -->

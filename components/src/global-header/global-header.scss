@@ -36,6 +36,9 @@
 }
 
 .wsu-g-header__logo-icon {
+	position: relative;
+	z-index: z('site-header');
+
 	justify-content: center;
 
 	margin-right: $unit-xl;
@@ -118,14 +121,38 @@
 
 	@include is-icon--boxed($icon-size: $unit);
 
+
 	&:hover .wsu-g-header__search-icon {
 		// TODO: Fix once new icons are available
 		fill: color(primary, light);
+	}
+
+	&[aria-expanded="true"] ~ .wsu-g-header_search-box {
+		transition: 300ms ease all;
+
+		@include animate-element('fade-down');
 	}
 }
 
 .wsu-g-header__search-icon {
 	fill: color(grey, 70);
+}
+
+.wsu-g-header_search-box {
+	position: absolute;
+	right: 0;
+
+	width: 100%;
+
+	@include animate-element('is-hidden');
+}
+
+.wsu-g-header_search-input {
+	width: 100%;
+	padding: $unit $unit-xs;
+
+	border: none;
+	box-shadow: 0 0 5px color(gray, 30) inset;
 }
 
 /* Menu Icon
