@@ -15,6 +15,7 @@ module.exports = env => {
 			'components/dist/global-header/global-header': './components/src/global-header/index.js',
 			'components/dist/site-footer/site-footer': './components/src/site-footer/index.js',
 			'components/dist/content-heading/content-heading': './components/src/content-heading/index.js',
+			'components/dist/site-nav-vertical/site-nav-vertical': './components/src/site-nav-vertical/index.js',
 		},
 		output: {
 			path: path.resolve(__dirname),
