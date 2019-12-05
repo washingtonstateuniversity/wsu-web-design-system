@@ -9966,7 +9966,7 @@ module.exports.formatError = function(err) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\erik.solveson\Documents\repos\wsu-web-design-system\node_modules\webpack-dev-server\client\index.js?http://localhost:8080 */"./node_modules/webpack-dev-server/client/index.js?http://localhost:8080");
+__webpack_require__(/*! C:\Users\erik.solveson\vagrant-local\www\wsu-web-design-system\node_modules\webpack-dev-server\client\index.js?http://localhost:8080 */"./node_modules/webpack-dev-server/client/index.js?http://localhost:8080");
 module.exports = __webpack_require__(/*! ./components/src/site-footer-condensed/index.js */"./components/src/site-footer-condensed/index.js");
 
 
