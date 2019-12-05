@@ -1,99 +1,130 @@
 @import '~@wsu/build-tools/scss/all-the-things';
 @import '../../../assets/scss/component-reset';
 
-.wsu-g-header {
-	display: flex;
-	align-items: center;
-
-	border-top: 5px solid color(primary, base);
-}
-
-/* Logo
+/* Nav wrapper
 ======================= */
-.wsu-g-header__logo-link {
+.wsu-s-nav-vertical__wrapper {
+	position: fixed;
+
 	display: flex;
-	align-items: center;
 
-	padding-right: $unit-xl;
+	height: 100%;
 
-	text-decoration: none;
-
-	color: color(grey, 70);
-
-	@include font-size(15px, 600);
-
-	&:hover .wsu-g-header__logo-svg {
-		// TODO: Fix hover sizing
-		// @include is-icon--boxed($icon-size: 46px);
-	}
 }
 
-.wsu-g-header__logo-icon {
+/* Menu open/close button
+======================= */
+.wsu-s-nav-vertical__control-container {
+}
+
+.wsu-s-nav-vertical__menu-icon-link {
+	display: flex;
+	align-items: center;
+	flex-flow: column nowrap;
 	justify-content: center;
 
-	margin-right: $unit-xl;
+	width: $unit * 3;
+	height: 100%;
 
-	background-color: color(primary, light);
-
-	@include is-icon--boxed($icon-size: 38px);
-}
-
-.wsu-g-header__logo-svg {
-	fill: white;
-}
-
-.wsu-g-header__logo-text {
-	text-transform: uppercase;
-}
-
-/* Navigation
-======================= */
-.wsu-g-header__nav {
-	flex: 1 1 auto;
-}
-
-.nav {
-
-}
-
-.wsu-g-header__nav-list {
-	display: flex;
-	justify-content: flex-end;
-}
-
-.wsu-g-header__nav-link {
-	position: relative;
-
-	display: block;
-
-	margin: 0 $unit-xs;
-	padding: $unit-xs 0;
-
-	transition: 300ms ease top, 300ms ease opacity;
+	text-align: center;
 	text-decoration: none;
 
-	color: color(grey, 70);
+	color: color(grey, 80);
+	border-right: 1px solid color(grey, 10);
+	background-color: color(grey, 0);
 
-	@include font-size(15px, 600);
-	@include border-bottom-hover(100%);
-}
-
-/* Search
-======================= */
-.wsu-g-header__search-icon-container {
-
-}
-
-.wsu-g-header__search-icon-link {
-	color: color(grey, 70);
-
-	@include is-icon--boxed($icon-size: $unit);
-
-	&:hover .wsu-g-header__search-icon {
-		fill: color(primary, light);
+	&:hover,
+	&:visited {
+		color: color(grey, 80);
 	}
 }
 
-.wsu-g-header__search-icon {
-	fill: color(grey, 70);
+.wsu-s-nav-vertical__menu-icon {
+	@include is-icon($unit);
+}
+
+.wsu-s-nav-vertical__menu-label {
+	padding: $unit-2xs 0;
+
+	text-transform: uppercase;
+
+	@include font-size(10px);
+}
+
+/* Navigation container
+======================= */
+.wsu-s-nav-vertical__nav-container {
+	display: flex;
+	align-items: flex-end;
+	flex-flow: column nowrap;
+
+	width: 260px;
+
+	border-right: 1px solid color(grey, 10);
+	background-color: color(grey, 0);
+}
+
+// Close button
+.wsu-s-nav-vertical__nav-container-close-link {
+	display: flex;
+	align-items: center;
+	flex-flow: column nowrap;
+
+	padding: $unit;
+
+	text-decoration: none;
+
+	color: color(grey, 80);
+
+
+	&:hover,
+	&:visited {
+		color: color(grey, 80);
+	}
+}
+
+.wsu-s-nav-vertical__nav-container-close-icon {
+	@include is-icon($unit);
+
+}
+
+.wsu-s-nav-vertical__nav-container-close-label {
+	padding-top: $unit-2xs;
+
+	text-transform: uppercase;
+
+	@include font-size(10px);
+}
+
+// Nav list
+
+.wsu-s-nav-vertical__nav-list {
+	height: 100%;
+}
+
+.wsu-s-nav-vertical__nav-item {
+
+	&--has-children {
+
+		& > .wsu-s-nav-vertical__nav-link::after {
+			content: " >";
+		}
+	}
+}
+
+.wsu-s-nav-vertical__nav-link {
+	display: block;
+
+	padding: $unit-xs $unit;
+
+	text-decoration: none;
+
+	&--active {
+		padding-left: calc(#{$unit} - 5px);
+
+		border-left: 5px solid color(primary, light);
+		background-color: color(grey, 5);
+
+		@extend .wsu-s-nav-vertical__nav-link;
+	}
 }

@@ -13,7 +13,17 @@
 <body>
 	<!-- COMPONENT:START -->
 	<div class="wsu-s-nav-vertical__wrapper wsu-u-no-js">
+		<div class="wsu-s-nav-vertical__control-container">
+			<a class="wsu-s-nav-vertical__menu-icon-link" href="#" aria-haspopup="true" aria-expanded="true">
+				<img src="../../../assets/icons/icon-menu.svg" class="wsu-s-nav-vertical__menu-icon" markup-inline>
+				<span class="wsu-s-nav-vertical__menu-label">Menu</span>
+			</a>
+		</div>
 		<nav class="wsu-s-nav-vertical__nav-container" aria-label="Vertical Site Navigation">
+			<a href="#" class="wsu-s-nav-vertical__nav-container-close-link">
+				<img src="../../../assets/icons/icon-search.svg" class="wsu-s-nav-vertical__nav-container-close-icon" markup-inline>
+				<span class="wsu-s-nav-vertical__nav-container-close-label">Close</span>
+			</a>
 			<ul class="wsu-s-nav-vertical__nav-list" id="wsu-s-nav-vertical" role="menubar" aria-label="Vertical Site Navigation">
 				<li class="wsu-s-nav-vertical__nav-item--has-children" role="none">
 					<a href="#" class="wsu-s-nav-vertical__nav-link" role="menuitem" aria-haspopup="true" aria-expanded="true">Dolor</a>
@@ -83,6 +93,8 @@
 		</nav>
 	</div>
 	<!-- COMPONENT:END -->
+
+	<div style="height: 5000px;"></div>
 
 	<script src="../../../node_modules/@wsu/build-tools/js/wsu-bt-toolbar.js"></script>
 </body>
