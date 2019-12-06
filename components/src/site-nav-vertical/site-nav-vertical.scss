@@ -18,6 +18,9 @@
 }
 
 .wsu-s-nav-vertical__menu-icon-link {
+	position: relative;
+	z-index: z('modal');
+
 	display: flex;
 	align-items: center;
 	flex-flow: column nowrap;
@@ -29,9 +32,8 @@
 	text-align: center;
 	text-decoration: none;
 
-	color: color(grey, 80);
-	border-right: 1px solid color(grey, 10);
-	background-color: color(grey, 0);
+	border-right: 1px solid color(grey, 5);
+	background-color: color(white, base);
 
 	&:hover,
 	&:visited {
@@ -39,14 +41,84 @@
 	}
 }
 
-.wsu-s-nav-vertical__menu-icon {
-	@include is-icon($unit);
+/* == Start ==============
+ * Aria-expanded animations
+========================== */
+.wsu-s-nav-vertical__menu-icon-link[aria-expanded="true"] {
+
+	& + .wsu-s-nav-vertical__nav-container {
+		z-index: z('site-header');
+		left: 0;
+	}
+
+	& > .wsu-s-nav-vertical__menu-icon-container {
+		& .wsu-s-nav-vertical__menu-icon-bar:nth-child(1) {
+			top: 30%;
+			right: 0;
+
+			width: 10px;
+
+			transform: rotate(45deg);
+		}
+		& .wsu-s-nav-vertical__menu-icon-bar:nth-child(2) {
+			width: 100%;
+		}
+
+		& .wsu-s-nav-vertical__menu-icon-bar:nth-child(3) {
+			top: 77%;
+			right: 0;
+
+			width: 10px;
+
+			transform: rotate(-45deg);
+		}
+	}
+
 }
+/* == End ================ */
+
+// Start -- bars
+.wsu-s-nav-vertical__menu-icon-container {
+	position: relative;
+
+	width: 20px;
+	height: 18px;
+}
+
+.wsu-s-nav-vertical__menu-icon-bar {
+	position: absolute;
+
+	width: 100%;
+	height: 3px;
+
+	transition: 300ms ease all;
+	animation-direction: alternate;
+
+	border-radius: 6px;
+	background-color: color(grey, 70);
+}
+
+.wsu-s-nav-vertical__menu-icon-bar:nth-child(1) {
+	top: 0%;
+}
+
+.wsu-s-nav-vertical__menu-icon-bar:nth-child(2) {
+	top: 50%;
+}
+
+.wsu-s-nav-vertical__menu-icon-bar:nth-child(3) {
+	top: 100%;
+
+	transform: scaleX(.65) translateX(-5px);
+}
+// end -- bars
 
 .wsu-s-nav-vertical__menu-label {
 	padding: $unit-2xs 0;
 
 	text-transform: uppercase;
+
+	color: color(grey, 30);
 
 	@include font-size(10px);
 }
@@ -54,14 +126,19 @@
 /* Navigation container
 ======================= */
 .wsu-s-nav-vertical__nav-container {
+	position: relative;
+	left: -364px;
+
 	display: flex;
 	align-items: flex-end;
 	flex-flow: column nowrap;
 
-	width: 260px;
+	width: 364px;
 
-	border-right: 1px solid color(grey, 10);
-	background-color: color(grey, 0);
+	transition: left timing(husky, easy-does-it);
+
+	border-right: 1px solid color(grey, 5);
+	background-color: color(white, base);
 }
 
 // Close button
@@ -73,9 +150,6 @@
 	padding: $unit;
 
 	text-decoration: none;
-
-	color: color(grey, 80);
-
 
 	&:hover,
 	&:visited {
@@ -93,12 +167,15 @@
 
 	text-transform: uppercase;
 
+	color: color(grey, 30);
+
 	@include font-size(10px);
 }
 
 // Nav list
 
 .wsu-s-nav-vertical__nav-list {
+	width: 100%;
 	height: 100%;
 }
 
@@ -119,6 +196,10 @@
 
 	text-decoration: none;
 
+	color: color(grey, 90);
+
+	@include font-size(17px, 600);
+
 	&--active {
 		padding-left: calc(#{$unit} - 5px);
 
@@ -126,5 +207,9 @@
 		background-color: color(grey, 5);
 
 		@extend .wsu-s-nav-vertical__nav-link;
+	}
+
+	&:visited {
+		color: color(grey, 90);
 	}
 }

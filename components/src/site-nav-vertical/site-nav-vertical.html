@@ -7,18 +7,21 @@
 	<title>Site Navigation Vertical | Component</title>
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 	<link rel="stylesheet" href="site-nav-vertical.css">
+	<script src="../../../assets/js/wsu-design-system-base.js" defer></script>
 	<script src="site-nav-vertical.js" defer></script>
 </head>
 
 <body>
 	<!-- COMPONENT:START -->
 	<div class="wsu-s-nav-vertical__wrapper wsu-u-no-js">
-		<div class="wsu-s-nav-vertical__control-container">
-			<a class="wsu-s-nav-vertical__menu-icon-link" href="#" aria-haspopup="true" aria-expanded="true">
-				<img src="../../../assets/icons/icon-menu.svg" class="wsu-s-nav-vertical__menu-icon" markup-inline>
-				<span class="wsu-s-nav-vertical__menu-label">Menu</span>
-			</a>
-		</div>
+		<a class="wsu-s-nav-vertical__menu-icon-link" href="#" aria-haspopup="true" aria-expanded="true">
+			<div class="wsu-s-nav-vertical__menu-icon-container">
+				<div class="wsu-s-nav-vertical__menu-icon-bar"></div>
+				<div class="wsu-s-nav-vertical__menu-icon-bar"></div>
+				<div class="wsu-s-nav-vertical__menu-icon-bar"></div>
+			</div>
+			<span class="wsu-s-nav-vertical__menu-label">Menu</span>
+		</a>
 		<nav class="wsu-s-nav-vertical__nav-container" aria-label="Vertical Site Navigation">
 			<a href="#" class="wsu-s-nav-vertical__nav-container-close-link">
 				<img src="../../../assets/icons/icon-search.svg" class="wsu-s-nav-vertical__nav-container-close-icon" markup-inline>
