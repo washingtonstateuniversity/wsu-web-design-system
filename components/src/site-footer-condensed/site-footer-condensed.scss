@@ -10,86 +10,12 @@
 
 	background-color: color(grey, 0);
 
-	.wsu-s-footer-condensed__overview-title {
-		margin-bottom: $unit-xs;
-
-		text-transform: uppercase;
-
-		color: color(grey, 75);
-
-		@include font-size(18px, 600);
-
-	}
-
-	.wsu-s-footer-condensed__overview-desc {
-		margin-bottom: $unit-xl;
-
-		@include font-size(16px, 300, 1.5);
-	}
-
-	.wsu-s-footer-condensed__overview-container {
-		max-width: 525px;
-	}
-
-	/* Footer Nav
-	======================= */
-	.wsu-s-footer-condensed__nav {
-		margin-bottom: $wsu-bt-base-unit * 4;
-	}
-
-	.wsu-s-footer-condensed__nav-list {
-		display: flex;
-		flex-direction: column;
-
-		@include mq('small') {
-			flex-flow: row wrap;
-		}
-		@include mq('large') {
-			max-width: $wsu-bt-breakpoint--large;
-		}
-
-		& > .wsu-s-footer-condensed__nav-item {
-			@include mq('small') {
-				width: 50%;
-			}
-			@include mq('medium') {
-				width: 25%;
-			}
-		}
-	}
-
-	.wsu-s-footer-condensed__nav-link {
-		font-weight: 300;
-
-		display: inline-block;
-
-		padding: $unit-xs 0;
-
-		text-decoration: none;
-
-		color: color(grey, 75);
-
-		@include border-bottom-hover(80%, 7px);
-	}
-
-	.wsu-s-footer-condensed__nav-item--has-children {
-		width: 100%;
-
-		@extend .wsu-s-footer-condensed__nav-item;
-
-		& > .wsu-s-footer__nav-link {
-			font-weight: 600;
-
-			text-transform: uppercase;
-		}
-	}
-
 	/* Contact Container
 	======================= */
 	.wsu-s-footer-condensed__contact-info {
 		margin-bottom: $unit-xs;
 
-		@include font-size(12px, $font-weight: 300);
+		@include font-size(14px, $font-weight: 300);
 	}
 
 	.wsu-s-footer-condensed__name {
@@ -121,7 +47,7 @@
 	.wsu-s-footer-condensed__social-icon {
 		transition: fill timing();
 
-		@include is-icon(14px);
+		@include is-icon(20px);
 		fill: color(grey, 40);
 
 		&:hover {
@@ -153,26 +79,6 @@
 	background: color(grey, 90);
 
 	@extend .wsu-s-footer-condensed__wrapper;
-
-	.wsu-s-footer-condensed__overview-title {
-		color: color(grey, 0);
-	}
-
-	.wsu-s-footer-condensed__nav-item--has-children {
-		@extend .wsu-s-footer-condensed__nav-item;
-
-		&>.wsu-s-footer-condensed__nav-link {
-			color: color(grey, 0);
-		}
-	}
-
-	.wsu-s-footer-condensed__nav-link {
-		color: color(grey, 20);
-	}
-
-	.wsu-s-footer-condensed__name {
-		color: color(grey, 0);
-	}
 
 	.wsu-s-footer-condensed__social-item-link {
 
