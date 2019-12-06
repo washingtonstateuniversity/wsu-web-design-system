@@ -91,15 +91,15 @@
 	width: 100%;
 	height: 3px;
 
-	transition: 300ms ease all;
-	animation-direction: alternate;
+	transition: all timing();
+	animation-direction: alternate-reverse;
 
-	border-radius: 6px;
 	background-color: color(grey, 70);
 }
 
 .wsu-s-nav-vertical__menu-icon-bar:nth-child(1) {
 	top: 0%;
+	right: 0;
 }
 
 .wsu-s-nav-vertical__menu-icon-bar:nth-child(2) {
@@ -108,6 +108,7 @@
 
 .wsu-s-nav-vertical__menu-icon-bar:nth-child(3) {
 	top: 100%;
+	right: 0;
 
 	transform: scaleX(.65) translateX(-5px);
 }
