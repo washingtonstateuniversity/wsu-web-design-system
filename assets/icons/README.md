@@ -2,50 +2,64 @@
 
 ## Currently Supported
 
-- Ellipsis (ellipsis-h.svg)
-- Facebook F (facebook-f.svg)
-- Arrow Carrot Down (icon-arrow-carrot-down.svg)
-- Arrow Carrot Up (icon-arrow-carrot-up.svg)
-- Menu (icon-menu.svg)
-- Search (icon-search.svg)
-- Instagram (instagram.svg)
-- Twitter (twitter.svg)
-- WSU Coug Head (wsu-coug-head.svg)
-
-## Future Releases
-
-### Need
-- Facebook
-- Twitter
-- Instagram
-- YouTube
-- LinkedIn
-- Search
-- Ellipsis
-- Arrow
-- Hamburger Menu
-- Times (x)
-- Plus (+)
-- Minus (-)
-
-### Want
-- Tumblr
-- Pinterest
-- Marker
-- Clock
-
-### Probable
-- Ticket
-- Ban / Closed
-- Bookmark
-- Cart
-- Calendar
-- Check
-- Mail / Envelope
-- Heart
-- Hand/donate/support
-- Map
-- Map w/ Marker
-- Phone
-- Play
-- Play w/ Circle
+- icon-arrow-up
+- icon-linkedin
+- icon-instagram
+- icon-edit-write
+- icon-calendar
+- icon-time
+- icon-cart
+- icon-arrow-up-carrot
+- icon-phone
+- icon-link
+- icon-arrow-left-carrot
+- icon-location
+- icon-arrow-right
+- icon-info
+- icon-coug-head
+- icon-x
+- icon-pause
+- icon-attachment
+- icon-plus
+- icon-stop
+- icon-bookmark
+- icon-video-slideshow
+- icon-arrow-carrot-down
+- icon-minus
+- icon-alarm
+- icon-previous
+- icon-home
+- icon-arrow-right-carrot
+- icon-alert-notification
+- icon-facebook
+- icon-feedback
+- icon-search
+- icon-arrow-left
+- icon-favorite
+- icon-play-circle
+- icon-trash
+- icon-secure
+- icon-arrow-carrot-up
+- icon-settings
+- icon-comment
+- icon-rate
+- icon-twitter
+- icon-arrow-down
+- icon-discussion
+- icon-minus-circle
+- icon-profile
+- icon-map
+- icon-document
+- icon-basket
+- icon-menu
+- icon-email
+- icon-arrow-down-carrot
+- icon-check
+- icon-send
+- icon-play
+- icon-photos
+- icon-x-circle
+- icon-plus-circle
+- icon-youtube
+- icon-next
+- icon-more
