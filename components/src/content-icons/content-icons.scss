@@ -1,0 +1,22 @@
+@import '../../../assets/scss/component-reset';
+@import '~@wsu/build-tools/scss/all-the-things';
+
+.wsu-c-icon-container {
+	max-width: 800px;
+	margin: $unit-xl auto;
+}
+
+.wsu-c-icon {
+	margin: $unit-2xs;
+	padding: $unit;
+
+	transition: box-shadow timing();
+
+	background-color: color(grey, 10);
+
+	@include is-icon($unit-2xl);
+
+	&:hover {
+		box-shadow: 0 0 5px black;
+	}
+}
