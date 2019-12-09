@@ -1,0 +1,50 @@
+<html>
+
+<head lang="en-US">
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Components | WSU Design System</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="global-footer.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.1/axios.min.js"></script>
+</head>
+
+<body>
+    <h1>Components</h1>
+    <ul id="links"></ul>
+
+    <script>
+        // 08193b7e79482ae4f6b19aa470929524445e6fca
+        axios
+            .get(
+                "https://api.github.com/repos/washingtonstateuniversity/wsu-web-design-system/git/trees/99e490eeae291b8ab6476e6cadda0370a3b82134"
+            )
+            .then(function (response) {
+                const container = document.querySelector("#links");
+                let data = response.data.tree;
+                let item = "";
+                let itemText = "";
+                let itemSlug = "";
+                let itemNameNoDashes = "";
+                let itemLink = "";
+
+                data.forEach(function (item) {
+                    itemSlug = item.path;
+                    itemNameNoDashes = itemSlug.replace(/-/g, " ");
+                    item = document.createElement("li");
+                    itemLink = document.createElement("a");
+                    itemText = document.createTextNode(itemNameNoDashes);
+
+                    itemLink.setAttribute('href', 'https://washingtonstateuniversity.github.io/wsu-web-design-system/components/dist/' + itemSlug + '/' + itemSlug + '.html')
+
+                    // Append dom elements
+                    itemLink.appendChild(itemText); // Anchor
+                    item.appendChild(itemLink); // List item
+                    container.appendChild(item); // Container
+                });
+            });
+    </script>
+</body>
+
+</html>
