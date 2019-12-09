@@ -1,50 +1,72 @@
 <html>
 
 <head lang="en-US">
-    <meta http-equiv="X-UA-Compatible" content="IE=EDGE">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Components | WSU Design System</title>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="global-footer.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.1/axios.min.js"></script>
+	<meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Components | WSU Design System</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.0/css/bulma.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.1/axios.min.js"></script>
+
+	<style>
+		ul li a {
+			text-transform: capitalize;
+		}
+	</style>
 </head>
 
 <body>
-    <h1>Components</h1>
-    <ul id="links"></ul>
+	<div class="container is-fluid">
+		<h1 class="is-size-1">Components</h1>
+		<ul id="links"></ul>
+	</div>
 
-    <script>
-        // 08193b7e79482ae4f6b19aa470929524445e6fca
-        axios
-            .get(
-                "https://api.github.com/repos/washingtonstateuniversity/wsu-web-design-system/git/trees/99e490eeae291b8ab6476e6cadda0370a3b82134"
-            )
-            .then(function (response) {
-                const container = document.querySelector("#links");
-                let data = response.data.tree;
-                let item = "";
-                let itemText = "";
-                let itemSlug = "";
-                let itemNameNoDashes = "";
-                let itemLink = "";
+	<script>
+		const container = document.querySelector("#links");
 
-                data.forEach(function (item) {
-                    itemSlug = item.path;
-                    itemNameNoDashes = itemSlug.replace(/-/g, " ");
-                    item = document.createElement("li");
-                    itemLink = document.createElement("a");
-                    itemText = document.createTextNode(itemNameNoDashes);
+		axios
+			.get(
+				"https://api.github.com/repos/washingtonstateuniversity/wsu-web-design-system/git/trees/99e490eeae291b8ab6476e6cadda0370a3b82134"
+			)
+			.then(function (response) {
+				let data = response.data.tree;
+				let item = "";
+				let itemText = "";
+				let itemSlug = "";
+				let itemNameNoDashes = "";
+				let itemLink = "";
 
-                    itemLink.setAttribute('href', 'https://washingtonstateuniversity.github.io/wsu-web-design-system/components/dist/' + itemSlug + '/' + itemSlug + '.html')
+				data.forEach(function (item) {
+					itemSlug = item.path;
+					itemNameNoDashes = itemSlug.replace(/-/g, " ");
+					item = document.createElement("li");
+					item.classList.add('tile');
+					itemLink = document.createElement("a");
+					itemText = document.createTextNode(itemNameNoDashes);
 
-                    // Append dom elements
-                    itemLink.appendChild(itemText); // Anchor
-                    item.appendChild(itemLink); // List item
-                    container.appendChild(item); // Container
-                });
-            });
-    </script>
+					itemLink.setAttribute('href', 'https://washingtonstateuniversity.github.io/wsu-web-design-system/components/dist/' + itemSlug + '/' + itemSlug + '.html')
+
+					// Append dom elements
+					itemLink.appendChild(itemText); // Anchor
+					item.appendChild(itemLink); // List item
+					container.appendChild(item); // Container
+				});
+			})
+			.catch(function (err) {
+				console.log(err);
+
+				item = document.createElement("div");
+				item.style.color = "red";
+				item.style.fontStyle = "italic";
+				item.style.fontWeight = "bolder";
+				itemText = document.createTextNode(err.response.data.message);
+
+				item.appendChild(itemText); // List item
+				container.appendChild(item); // Container
+
+			});
+	</script>
 </body>
 
 </html>
