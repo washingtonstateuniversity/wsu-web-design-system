@@ -1,0 +1,89 @@
+@import '../../../assets/scss/component-reset';
+@import '~@wsu/build-tools/scss/all-the-things';
+
+/* Start Base Styles
+======================= */
+.wsu-s-footer-condensed__wrapper {
+	position: relative;
+
+	padding: $unit-2xl $unit-3xl;
+
+	background-color: color(grey, 0);
+
+	/* Contact Container
+	======================= */
+	.wsu-s-footer-condensed__contact-info {
+		margin-bottom: $unit-xs;
+
+		@include font-size(14px, $font-weight: 300);
+	}
+
+	.wsu-s-footer-condensed__name {
+		font-weight: 600;
+	}
+
+	.wsu-s-footer-condensed__contact-phone,
+	.wsu-s-footer-condensed__contact-fax {
+		transition: color timing();
+		text-decoration: none;
+
+		color: inherit;
+
+		&:hover {
+			color: color(primary, light);
+		}
+	}
+
+	.wsu-s-footer-condensed__social-list {
+		display: flex;
+	}
+
+	.wsu-s-footer-condensed__social-item-link {
+		display: block;
+
+		margin-right: $unit;
+	}
+
+	.wsu-s-footer-condensed__social-icon {
+		transition: fill timing();
+
+		@include is-icon(20px);
+		fill: color(grey, 40);
+
+		&:hover {
+			fill: color(grey, 70);
+		}
+	}
+
+	.wsu-s-footer-condensed__coug-watermark {
+		position: absolute;
+		right: $unit-3xl;
+
+		@include is-vertically-centered;
+	}
+
+
+	.wsu-s-footer-condensed__coug-head {
+		opacity: .10;
+
+		fill: color(grey, 50);
+		@include is-icon(85px);
+	}
+}
+/* == End Base Styles == */
+
+/* Dark Theme
+======================= */
+.wsu-s-footer-condensed__wrapper--dark {
+	color: color(grey, 20);
+	background: color(grey, 90);
+
+	@extend .wsu-s-footer-condensed__wrapper;
+
+	.wsu-s-footer-condensed__social-item-link {
+
+		&:hover .wsu-s-footer-condensed__social-icon {
+			fill: color(grey, 0);
+		}
+	}
+}

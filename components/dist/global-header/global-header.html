@@ -7,12 +7,12 @@
 	<title>Global Header | Component</title>
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 	<link rel="stylesheet" href="global-header.css">
-	<script src="global-header.js"></script>
+	<script src="global-header.js" defer></script>
 </head>
 
 <body>
 	<!-- COMPONENT:START -->
-	<div class="wsu-g-header__wrapper">
+	<div class="wsu-g-header__wrapper wsu-u-no-js">
 		<header class="wsu-g-header">
 			<a class="wsu-g-header__logo-link" href="#">
 				<span class="wsu-g-header__logo-icon">
@@ -30,6 +30,9 @@
 				<span class="wsu-g-header__logo-text">Washington State University</span>
 			</a>
 			<nav class="wsu-g-header__nav">
+				<a class="wsu-g-header__more-icon-link" href="#">
+					<svg  class="wsu-g-header__more-icon" markup-inline  id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><defs><style>.cls-1{fill:#404040;}.cls-2{fill:none;}</style></defs><title>more-drk</title><circle class="cls-1" cx="7.99" cy="8" r="1.5"/><circle class="cls-1" cx="2.5" cy="8" r="1.5"/><circle class="cls-1" cx="13.5" cy="8" r="1.5"/><rect class="cls-2" width="16" height="16"/></svg>
+				</a>
 				<ul class="wsu-g-header__nav-list">
 					<li class="wsu-g-header__nav-item">
 						<a class="wsu-g-header__nav-link" href="#">Lorem Ipsum</a>
@@ -49,34 +52,23 @@
 				</ul>
 			</nav>
 			<div class="wsu-g-header__search-icon-container">
-				<a class="wsu-g-header__search-icon-link" href="#">
-					<svg  class="wsu-g-header__search-icon" markup-inline  id="Layer_1" data-name="Layer 1"
-	xmlns="http://www.w3.org/2000/svg"
-	xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16">
-	<defs>
-		<style>.cls-1,.cls-4{fill:none;}.cls-2{clip-path:url(#clip-path);}.cls-3{fill:#404040;}.cls-4{stroke:#404040;stroke-linecap:round;stroke-width:2px;}</style>
-		<clipPath id="clip-path" transform="translate(0 0)">
-			<rect class="cls-1" width="16" height="16"/>
-		</clipPath>
-	</defs>
-	<title>icon-search</title>
-	<g class="cls-2">
-		<g id="search">
-			<g id="Ellipse_123" data-name="Ellipse 123">
-				<path class="cls-3" d="M6.5,2A4.5,4.5,0,1,1,2,6.5,4.51,4.51,0,0,1,6.5,2m0-2A6.51,6.51,0,1,0,13,6.5,6.5,6.5,0,0,0,6.5,0Z" transform="translate(0 0)"/>
-			</g>
-			<path id="Path_3400" data-name="Path 3400" class="cls-4" d="M15,15l-4.07-4.07" transform="translate(0 0)"/>
-		</g>
-	</g>
-</svg>
-
+				<a class="wsu-g-header__search-icon-link" href="#" aria-haspopup="true" aria-expanded="true">
+					<svg  class="wsu-g-header__search-icon" markup-inline  id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><defs><style>.cls-1{fill:#404040;}.cls-2{fill:none;}</style></defs><title>search-drk</title><path class="cls-1" d="M15.71,14.29l-4-4a6.52,6.52,0,1,0-1.41,1.41l4,4a1,1,0,0,0,1.42,0A1,1,0,0,0,15.71,14.29ZM2,6.5A4.5,4.5,0,1,1,6.5,11,4.51,4.51,0,0,1,2,6.5Z" transform="translate(0 0)"/><rect class="cls-2" width="16" height="16"/></svg>
+				</a>
+				<div class="wsu-g-header_search-box">
+					<input type="text" class="wsu-g-header_search-input" placeholder="What can we help you find?">
+				</div>
+			</div>
+			<div class="wsu-g-header__menu-icon-container">
+				<a class="wsu-g-header__menu-icon-link" href="#">
+					<svg  class="wsu-g-header__menu-icon" markup-inline  id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><defs><style>.cls-1{fill:#404040;}.cls-2{fill:none;}</style></defs><title>menu-drk</title><g id="Group_557" data-name="Group 557"><g id="Group_552" data-name="Group 552"><path class="cls-1" d="M15,3H1A1,1,0,0,1,1,1H15a1,1,0,0,1,0,2Z"/><path class="cls-1" d="M15,9H1A1,1,0,0,1,1,7H15a1,1,0,0,1,0,2Z"/><path class="cls-1" d="M9,15H1a1,1,0,0,1,0-2H9a1,1,0,0,1,0,2Z"/></g></g><rect class="cls-2" width="16" height="16"/></svg>
 				</a>
 			</div>
 		</header>
 	</div>
 	<!-- COMPONENT:END -->
 
-	<script src="../../../node_modules/@wsu/build-tools/js/toolbar.js"></script>
+	<script src="../../../node_modules/@wsu/build-tools/js/wsu-bt-toolbar.js"></script>
 </body>
 
 </html>

@@ -4,6 +4,7 @@
 .wsu-g-header {
 	display: flex;
 	align-items: center;
+	justify-content: flex-end;
 
 	border-top: 5px solid color(primary, base);
 }
@@ -13,22 +14,31 @@
 .wsu-g-header__logo-link {
 	display: flex;
 	align-items: center;
-
-	padding-right: $unit-xl;
+	flex: 1 1 auto;
 
 	text-decoration: none;
 
 	color: color(grey, 70);
 
 	@include font-size(15px, 600);
+	@include mq('small') {
+		padding-right: $unit-xl;
+	}
 
 	&:hover .wsu-g-header__logo-svg {
 		// TODO: Fix hover sizing
 		// @include is-icon--boxed($icon-size: 46px);
 	}
+
+	&:visited {
+		color: color(grey, 70);
+	}
 }
 
 .wsu-g-header__logo-icon {
+	position: relative;
+	z-index: z('site-header');
+
 	justify-content: center;
 
 	margin-right: $unit-xl;
@@ -36,6 +46,8 @@
 	background-color: color(primary, light);
 
 	@include is-icon--boxed($icon-size: 38px);
+	@include mq('small') {
+	}
 }
 
 .wsu-g-header__logo-svg {
@@ -43,22 +55,38 @@
 }
 
 .wsu-g-header__logo-text {
+	display: none;
+
 	text-transform: uppercase;
+
+	@include mq('xsmall') {
+		display: block;
+	}
 }
 
 /* Navigation
 ======================= */
 .wsu-g-header__nav {
-	flex: 1 1 auto;
+	@include mq('medium') {
+		flex: 1 1 auto;
+	}
 }
 
-.nav {
+.wsu-g-header__more-icon-link {
+	@include is-icon--boxed($icon-size: $unit);
+	@include mq('medium') {
+		display: none;
+	}
 
 }
 
 .wsu-g-header__nav-list {
-	display: flex;
-	justify-content: flex-end;
+	display: none;
+
+	@include mq('medium') {
+		display: flex;
+		justify-content: flex-end;
+	}
 }
 
 .wsu-g-header__nav-link {
@@ -76,6 +104,10 @@
 
 	@include font-size(15px, 600);
 	@include border-bottom-hover(100%);
+
+	&:visited {
+		color: color(grey, 70);
+	}
 }
 
 /* Search
@@ -89,11 +121,49 @@
 
 	@include is-icon--boxed($icon-size: $unit);
 
+
 	&:hover .wsu-g-header__search-icon {
+		// TODO: Fix once new icons are available
 		fill: color(primary, light);
+	}
+
+	&[aria-expanded="true"] ~ .wsu-g-header_search-box {
+		transition: 300ms ease all;
+
+		@include animate-element('fade-down');
 	}
 }
 
 .wsu-g-header__search-icon {
 	fill: color(grey, 70);
+}
+
+.wsu-g-header_search-box {
+	position: absolute;
+	right: 0;
+
+	width: 100%;
+
+	@include animate-element('is-hidden');
+}
+
+.wsu-g-header_search-input {
+	width: 100%;
+	padding: $unit $unit-xs;
+
+	border: none;
+	box-shadow: 0 0 5px color(gray, 30) inset;
+}
+
+/* Menu Icon
+======================= */
+.wsu-g-header__menu-icon-container {
+
+}
+
+.wsu-g-header__menu-icon-link {
+	@include is-icon--boxed($icon-size: $unit);
+	@include mq('small') {
+		display: none;
+	}
 }
