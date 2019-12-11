@@ -14,8 +14,10 @@ module.exports = env => {
 			'components/dist/global-footer/global-footer': './components/src/global-footer/index.js',
 			'components/dist/global-header/global-header': './components/src/global-header/index.js',
 			'components/dist/site-footer/site-footer': './components/src/site-footer/index.js',
+			'components/dist/site-nav-horizontal/site-nav-horizontal': './components/src/site-nav-horizontal/index.js',
 			'components/dist/content-heading/content-heading': './components/src/content-heading/index.js',
 			'components/dist/site-nav-vertical/site-nav-vertical': './components/src/site-nav-vertical/index.js',
+			'components/dist/site-footer-condensed/site-footer-condensed': './components/src/site-footer-condensed/index.js',
 		},
 		output: {
 			path: path.resolve(__dirname),
@@ -69,6 +71,16 @@ module.exports = env => {
 						"markup-inline-loader"
 					],
 				},
+				{
+					test: /\.m?js$/,
+					exclude: /(node_modules|bower_components)/,
+					use: {
+						loader: 'babel-loader',
+						options: {
+							presets: ['@babel/preset-env']
+						}
+					}
+				}
 			],
 		},
 		optimization: {
