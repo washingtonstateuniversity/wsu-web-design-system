@@ -65,7 +65,7 @@
 		}
 
 		& .wsu-s-nav-vertical__menu-icon-bar:nth-child(3) {
-			top: 77%;
+			top: 72%;
 			right: 0;
 
 			width: 10px;
@@ -94,6 +94,7 @@
 	transition: all timing();
 	animation-direction: alternate-reverse;
 
+	border-radius: 2px;
 	background-color: color(grey, 70);
 }
 
