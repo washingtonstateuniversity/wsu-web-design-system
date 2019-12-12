@@ -9,6 +9,7 @@
 		"@babel/core": "^7.7.2",
 		"@babel/preset-env": "^7.7.1",
 		"@wsu/build-tools": "git+https://github.com/washingtonstateuniversity/wsu-build-tools.git",
+		"@wsu/icons": "git+https://github.com/washingtonstateuniversity/wsu-icons.git",
 		"autoprefixer": "^9.7.1",
 		"babel-loader": "^8.0.6",
 		"css-loader": "^3.2.0",
