@@ -42,7 +42,7 @@
 }
 
 /* == Start ==============
- * Aria-expanded animations
+ * Aria-expanded animations for drawer
 ========================== */
 .wsu-s-nav-vertical__menu-icon-link[aria-expanded="true"] {
 
@@ -77,7 +77,9 @@
 }
 /* == End ================ */
 
-// Start -- bars
+/* == Start ==============
+ * Menu Icon Bars
+========================== */
 .wsu-s-nav-vertical__menu-icon-container {
 	position: relative;
 
@@ -91,7 +93,7 @@
 	width: 100%;
 	height: 3px;
 
-	transition: all timing();
+	transition: all timing(husky, easy-does-it);
 	animation-direction: alternate-reverse;
 
 	border-radius: 2px;
@@ -113,7 +115,7 @@
 
 	transform: scaleX(.65) translateX(-5px);
 }
-// end -- bars
+/* == End ================ */
 
 .wsu-s-nav-vertical__menu-label {
 	padding: $unit-2xs 0;
@@ -141,6 +143,10 @@
 
 	border-right: 1px solid color(grey, 5);
 	background-color: color(white, base);
+}
+
+.wsu-s-nav-vertical__nav-container > .wsu-s-nav-vertical__nav-list {
+	height: 100%;
 }
 
 // Close button
@@ -174,21 +180,45 @@
 	@include font-size(10px);
 }
 
-// Nav list
-
+/* == Start ==============
+ * Main Vertical Nav
+========================== */
 .wsu-s-nav-vertical__nav-list {
-	width: 100%;
-	height: 100%;
+	position: relative;
+
+	overflow: hidden;
+
+	width: inherit;
+
+	transition: all timing();
+}
+
+// Submenu aka ul ul
+.wsu-s-nav-vertical__nav-list .wsu-s-nav-vertical__nav-list {
+	padding-left: $unit;
+}
+
+.wsu-s-nav-vertical__nav-list .wsu-s-nav-vertical__nav-list .wsu-s-nav-vertical__nav-link--active {
+	position: relative;
+	left: -$unit;
+
+	width: calc(100% - 40px);
+	padding-left: 36px;
+
 }
 
 .wsu-s-nav-vertical__nav-item {
-
 	&--has-children {
 
 		& > .wsu-s-nav-vertical__nav-link::after {
 			content: " >";
 		}
 	}
+}
+
+.wsu-s-nav-vertical__nav-item--has-children .wsu-s-nav-vertical__nav-link[aria-expanded="true"],
+.wsu-s-nav-vertical__nav-item--has-children .wsu-s-nav-vertical__nav-link[aria-expanded="true"] ~ .wsu-s-nav-vertical__nav-list {
+	background-color: color(grey, 0);
 }
 
 .wsu-s-nav-vertical__nav-link {
@@ -214,4 +244,20 @@
 	&:visited {
 		color: color(grey, 90);
 	}
+}
+
+// Submenu Links
+.wsu-s-nav-vertical__nav-list .wsu-s-nav-vertical__nav-list .wsu-s-nav-vertical__nav-link {
+	@include font-size(15px);
+}
+
+/* ARIA-Expanded styles
+======================= */
+.wsu-s-nav-vertical__nav-link[aria-expanded="true"] ~ .wsu-s-nav-vertical__nav-list,
+.wsu-s-nav-vertical__nav-link[aria-expanded="true"] ~ .wsu-s-nav-vertical__nav-list--has-more-items {
+}
+
+.wsu-s-nav-vertical__nav-link[aria-expanded="false"] ~ .wsu-s-nav-vertical__nav-list,
+.wsu-s-nav-vertical__nav-link[aria-expanded="false"] ~ .wsu-s-nav-vertical__nav-list--has-more-items {
+	height: 0;
 }

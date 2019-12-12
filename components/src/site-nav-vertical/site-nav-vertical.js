@@ -1,6 +1,7 @@
-import wsu_bt_aria_expanded from '@wsu/build-tools/js/wsu-bt-aria-expanded';
+import wsu_bt_vertical_nav from '../../../../wsu-build-tools/js/vertical-nav/wsu-bt-vertical-nav';
 
-var expanded_aria_items = new wsu_bt_aria_expanded({
-	nav_item_selector: '.wsu-s-nav-vertical__menu-icon-link'
+const vertical_nav = new wsu_bt_vertical_nav({
+	nav_selector: '.wsu-s-nav-vertical__nav-link',
+	nav_panel_control_selector: '.wsu-s-nav-vertical__menu-icon-link'
 });
-expanded_aria_items.init();
+vertical_nav.init();
