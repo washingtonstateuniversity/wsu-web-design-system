@@ -1,23 +1,20 @@
 @import '../../../assets/scss/component-reset';
 @import '~@wsu/build-tools/scss/all-the-things';
-@import '~@wsu/icons/dist/wsu-icons.bundle.css';
+@import url('https://wsu-design-system.s3-us-west-2.amazonaws.com/wsu-icons-master/dist/wsu-icons.bundle.css');
 
 .wsu-c-icon-container {
 	max-width: 800px;
 	margin: $unit-xl auto;
 }
 
-.wsu-c-icon {
-	margin: $unit-2xs;
-	padding: $unit;
+.wsu-icon {
+	font-size: 28px;
 
-	transition: box-shadow timing();
+	display: inline-block;
 
-	background-color: color(grey, 10);
-
-	@include is-icon($unit-2xl);
+	padding: 20px;
 
 	&:hover {
-		box-shadow: 0 0 5px black;
+		color: color(primary, light);
 	}
 }
