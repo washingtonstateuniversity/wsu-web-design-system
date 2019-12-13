@@ -1,5 +1,7 @@
 @import '~@wsu/build-tools/scss/all-the-things';
 @import '../../../assets/scss/component-reset';
+@import url('https://wsu-design-system.s3-us-west-2.amazonaws.com/wsu-icons-master/dist/wsu-icons.bundle.css');
+
 
 /* Nav wrapper
 ======================= */
@@ -176,6 +178,8 @@
 	padding: $unit;
 
 	text-decoration: none;
+
+	@include font-size(24px);
 
 	&:hover,
 	&:visited {
