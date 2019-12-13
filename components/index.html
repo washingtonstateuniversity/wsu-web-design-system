@@ -13,6 +13,13 @@
 		ul li a {
 			text-transform: capitalize;
 		}
+
+		body {
+			max-width: 800px;
+			margin: 0 auto;
+		}
+
+		.dev-only {}
 	</style>
 </head>
 
@@ -20,6 +27,8 @@
 	<div class="container is-fluid">
 		<h1 class="is-size-1">Components</h1>
 		<ul id="links"></ul>
+
+		<a href="dist" class="dev-only">Dist Folder</a>
 	</div>
 
 	<script>
@@ -42,14 +51,21 @@
 					itemNameNoDashes = itemSlug.replace(/-/g, " ");
 					item = document.createElement("li");
 					item.classList.add('tile');
+
 					itemLink = document.createElement("a");
 					itemText = document.createTextNode(itemNameNoDashes);
-
 					itemLink.setAttribute('href', 'https://washingtonstateuniversity.github.io/wsu-web-design-system/components/dist/' + itemSlug + '/' + itemSlug + '.html')
+					itemLink.appendChild(itemText);
+					item.appendChild(itemLink);
 
-					// Append dom elements
-					itemLink.appendChild(itemText); // Anchor
-					item.appendChild(itemLink); // List item
+					itemLinkDist = document.createElement("a");
+					itemTextDist = document.createTextNode("(Local)");
+					itemLinkDist.setAttribute('href', 'dist/' + itemSlug + '/' + itemSlug + '.html');
+					itemLinkDist.classList.add('dev-only');
+					itemLinkDist.appendChild(itemTextDist);
+					item.appendChild(itemLinkDist);
+
+					// Append list item to container
 					container.appendChild(item); // Container
 				});
 			})
@@ -64,7 +80,6 @@
 
 				item.appendChild(itemText); // List item
 				container.appendChild(item); // Container
-
 			});
 	</script>
 </body>
