@@ -5,11 +5,17 @@
 ======================= */
 .wsu-s-nav-vertical__wrapper {
 	position: fixed;
+	left: -364px;
 
 	display: flex;
 
 	height: 100%;
 
+	transition: left timing(husky, easy-does-it);
+}
+
+.wsu-s-nav-vertical__wrapper--open {
+	left: 0;
 }
 
 /* Menu open/close button
@@ -19,7 +25,7 @@
 
 .wsu-s-nav-vertical__menu-icon-link {
 	position: relative;
-	z-index: z('modal');
+	z-index: z('page-wrapper');
 
 	display: flex;
 	align-items: center;
@@ -39,18 +45,29 @@
 	&:visited {
 		color: color(grey, 80);
 	}
+
+	&:hover .wsu-s-nav-vertical__menu-label::after {
+		content: "Open"
+	}
+}
+.wsu-s-nav-vertical__menu-icon-link[aria-expanded="true"] {
+	margin-left: -61px;
+
+	transition: opacity timing(), margin-left timing(husky);
+
+	opacity: 0;
+}
+
+.wsu-s-nav-vertical__menu-icon-link[aria-expanded="false"] {
+	margin-left: 0;
+
+	opacity: 1;
 }
 
 /* == Start ==============
- * Aria-expanded animations for drawer
+ * Menu Icon to Arrow Animation
 ========================== */
-.wsu-s-nav-vertical__menu-icon-link[aria-expanded="true"] {
-
-	& + .wsu-s-nav-vertical__nav-container {
-		z-index: z('site-header');
-		left: 0;
-	}
-
+.wsu-s-nav-vertical__menu-icon-link:hover {
 	& > .wsu-s-nav-vertical__menu-icon-container {
 		& .wsu-s-nav-vertical__menu-icon-bar:nth-child(1) {
 			top: 30%;
@@ -73,7 +90,6 @@
 			transform: rotate(-45deg);
 		}
 	}
-
 }
 /* == End ================ */
 
@@ -93,7 +109,7 @@
 	width: 100%;
 	height: 3px;
 
-	transition: all timing(husky, easy-does-it);
+	transition: all timing(cougar, easy-does-it);
 	animation-direction: alternate-reverse;
 
 	border-radius: 2px;
@@ -125,21 +141,23 @@
 	color: color(grey, 30);
 
 	@include font-size(10px);
+
+	&:after {
+		content: "Menu";
+	}
 }
 
 /* Navigation container
 ======================= */
 .wsu-s-nav-vertical__nav-container {
 	position: relative;
-	left: -364px;
+	z-index: z('site-header');
 
 	display: flex;
 	align-items: flex-end;
 	flex-flow: column nowrap;
 
 	width: 364px;
-
-	transition: left timing(husky, easy-does-it);
 
 	border-right: 1px solid color(grey, 5);
 	background-color: color(white, base);
@@ -207,13 +225,8 @@
 
 }
 
-.wsu-s-nav-vertical__nav-item {
-	&--has-children {
-
-		& > .wsu-s-nav-vertical__nav-link::after {
-			content: " >";
-		}
-	}
+.wsu-s-nav-vertical__nav-item--has-children > .wsu-s-nav-vertical__nav-link::after {
+	content: " >";
 }
 
 .wsu-s-nav-vertical__nav-item--has-children .wsu-s-nav-vertical__nav-link[aria-expanded="true"],
