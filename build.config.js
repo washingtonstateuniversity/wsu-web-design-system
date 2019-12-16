@@ -10,8 +10,11 @@ module.exports = env => {
 
 	return {
 		context: __dirname,
-		entry: './components/build.js',
-		output: './build',
+		entry: './build/wsu-design-system.build.js',
+		output: {
+			filename: 'wsu-design-system.bundle.dist.js',
+			path: path.resolve(__dirname, 'build')
+		},
 		mode: DEV ? 'development' : 'production',
 		devtool: DEV ? 'inline-source-map' : 'source-map',
 		devServer: {
@@ -46,18 +49,6 @@ module.exports = env => {
 							}
 						},
 						"sass-loader"
-					],
-				},
-				{
-					test: /.html$/,
-					use: [
-						{
-							loader: 'file-loader',
-							options: {
-								name: 'components/dist/[name]/[name].[ext]',
-							}
-						},
-						"markup-inline-loader"
 					],
 				},
 				{
@@ -98,7 +89,7 @@ module.exports = env => {
 		},
 		plugins: [
 			new MiniCssExtractPlugin({
-				filename: '[name].css'
+				filename: 'wsu-design-system.bundle.dist.css'
 			}),
 		]
 	}

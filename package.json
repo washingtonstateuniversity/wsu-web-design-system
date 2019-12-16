@@ -25,9 +25,9 @@
         "webpack-dev-server": "^3.9.0"
     },
     "scripts": {
-        "start": "webpack-dev-server --env.NODE_ENV=development --watch --config webpack.config.js",
-        "build": "webpack --env.NODE_ENV=production --config build.config.js",
-        "build:components": "webpack --env.NODE_ENV=production --config components.config.js"
+        "start": "webpack-dev-server --env.NODE_ENV=development --watch --config webpack.config.js --progress",
+        "build:all": "webpack --env.NODE_ENV=production --config build.config.js --progress",
+        "build:components": "webpack --env.NODE_ENV=production --config webpack.config.js --progress"
     },
     "repository": {
         "type": "git",
