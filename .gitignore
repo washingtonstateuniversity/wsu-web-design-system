@@ -24,3 +24,9 @@ package-lock.json
 # Ignore Webpack empty js files
 *_bundle.js*
 .vscode/settings.json
+
+# Ignore Parcel cache
+.cache
+
+# Temp solution to not publishing parcel mess
+/demo/dist
