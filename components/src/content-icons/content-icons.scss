@@ -8,11 +8,11 @@
 }
 
 .wsu-icon {
-	font-size: 28px;
-
 	display: inline-block;
 
 	padding: 20px;
+
+	transition: color timing();
 
 	&:hover {
 		color: color(primary, light);
