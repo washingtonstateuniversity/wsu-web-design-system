@@ -1,4 +1,4 @@
-@import '~@wsu/build-tools/scss/all-the-things';
+@import '../../../../wsu-build-tools/scss/all-the-things.scss';
 @import '../../../assets/scss/component-reset';
 @import url('https://wsu-design-system.s3-us-west-2.amazonaws.com/wsu-icons-master/dist/wsu-icons.bundle.css');
 
@@ -6,18 +6,30 @@
 /* Nav wrapper
 ======================= */
 .wsu-s-nav-vertical__wrapper {
-	position: fixed;
-	left: -364px;
-
 	display: flex;
 
 	height: 100%;
+	margin-left: -365px;
 
-	transition: left timing(husky, easy-does-it);
+	transition: margin-left timing(husky, easy-does-it);
+	transition-delay: 300ms;
 }
 
 .wsu-s-nav-vertical__wrapper--open {
-	left: 0;
+	margin-left: 0;
+
+	&::after {
+		position: absolute;
+
+		display: block;
+
+		width: 200%;
+		height: 100%;
+
+		content: " ";
+
+		background: rgba(0, 0, 0, 0.5);
+	}
 }
 
 /* Menu open/close button
@@ -55,15 +67,11 @@
 .wsu-s-nav-vertical__menu-icon-link[aria-expanded="true"] {
 	margin-left: -61px;
 
-	transition: opacity timing(), margin-left timing(husky);
-
-	opacity: 0;
+	transition: margin-left timing();
 }
 
 .wsu-s-nav-vertical__menu-icon-link[aria-expanded="false"] {
 	margin-left: 0;
-
-	opacity: 1;
 }
 
 /* == Start ==============
@@ -180,11 +188,16 @@
 	text-decoration: none;
 
 	@include font-size(24px);
+	@include fade-in-down();
 
 	&:hover,
 	&:visited {
 		color: color(grey, 80);
 	}
+}
+
+.wsu-s-nav-vertical__wrapper--open .wsu-s-nav-vertical__nav-container-close-link {
+	@include fade-in-down('end');
 }
 
 .wsu-s-nav-vertical__nav-container-close-icon {
@@ -213,6 +226,14 @@
 	width: inherit;
 
 	transition: all timing();
+}
+
+.wsu-s-nav-vertical__nav-list > .wsu-s-nav-vertical__nav-item {
+	@include fade-in-right();
+
+	&--has-children {
+		@include fade-in-right();
+	}
 }
 
 // Submenu aka ul ul
@@ -277,4 +298,31 @@
 .wsu-s-nav-vertical__nav-link[aria-expanded="false"] ~ .wsu-s-nav-vertical__nav-list,
 .wsu-s-nav-vertical__nav-link[aria-expanded="false"] ~ .wsu-s-nav-vertical__nav-list--has-more-items {
 	height: 0;
+}
+
+
+
+
+// Not component related
+
+.wsu-g-container {
+	display: flex;
+
+	width: 100%;
+	height: 100%;
+
+}
+
+
+.wsu-c-main__container {
+	max-width: 800px;
+	margin: 0 auto;
+}
+.wsu-content__wrapper {
+	// min-width: 500px;
+
+	// transition: min-width timing();
+}
+.wsu-s-nav-vertical__wrapper--open + .wsu-content__wrapper {
+	// min-width: 1200px;
 }
