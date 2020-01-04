@@ -1,6 +1,5 @@
 import wsu_bt_vertical_nav from '../../../../wsu-build-tools/js/vertical-nav/wsu-bt-vertical-nav';
 
-
 /**
  *
  * Init vertical nav
@@ -12,17 +11,6 @@ const vertical_nav = new wsu_bt_vertical_nav({
 	nav_list_container_selector: '.wsu-s-nav-vertical__nav-list-container'
 });
 vertical_nav.init();
-
-
-/**
- *
- * Add event listener to close button
- *
- */
-document.querySelector('.wsu-s-nav-vertical__nav-container-close-link').addEventListener('click', function (e) {
-	vertical_nav.close(e);
-});
-
 
 /**
  *
@@ -45,4 +33,3 @@ document.emitter.on('wsu-vertical-nav--after-open', function (e) {
 		})(i);
 	};
 });
-
