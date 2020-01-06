@@ -264,6 +264,7 @@
 
 	padding: $unit-xs $unit;
 
+	transition: background-color timing(), border-left timing();
 	text-decoration: none;
 
 	color: color(grey, 90);
@@ -273,7 +274,7 @@
 	&--active {
 		padding-left: calc(#{$unit} - 5px);
 
-		border-left: 5px solid color(primary, light);
+		border-left: 3px solid color(primary, light);
 		background-color: color(grey, 5);
 
 		@extend .wsu-s-nav-vertical__nav-link;
@@ -282,11 +283,18 @@
 	&:visited {
 		color: color(grey, 90);
 	}
+
+	&:hover {
+		border-left: 3px solid color(grey, 30);
+		background-color: color(grey, 5);
+	}
 }
 
 // Submenu Links
-.wsu-s-nav-vertical__nav-list .wsu-s-nav-vertical__nav-list .wsu-s-nav-vertical__nav-link {
-	@include font-size(15px);
+.wsu-s-nav-vertical__nav-item--has-children .wsu-s-nav-vertical__nav-list .wsu-s-nav-vertical__nav-link{
+	padding-left: $unit-2xl;
+
+	@include font-size(16px);
 }
 
 /* ARIA-Expanded styles
