@@ -291,18 +291,25 @@
 
 /* ARIA-Expanded styles
 ======================= */
-.wsu-s-nav-vertical__nav-link[aria-expanded="true"] ~ .wsu-s-nav-vertical__nav-list,
-.wsu-s-nav-vertical__nav-link[aria-expanded="true"] ~ .wsu-s-nav-vertical__nav-list--has-more-items {
+.wsu-s-nav-vertical__nav-link[aria-expanded="true"] ~ .wsu-s-nav-vertical__nav-list {
+	visibility: visible;
+
+	height: auto;
+
+	opacity: 1;
 }
 
-.wsu-s-nav-vertical__nav-link[aria-expanded="false"] ~ .wsu-s-nav-vertical__nav-list,
-.wsu-s-nav-vertical__nav-link[aria-expanded="false"] ~ .wsu-s-nav-vertical__nav-list--has-more-items {
+.wsu-s-nav-vertical__nav-link[aria-expanded="false"] ~ .wsu-s-nav-vertical__nav-list {
+	visibility: hidden;
+
 	height: 0;
+
+	opacity: 0;
 }
 
 
 .wsu-s-nav-vertical__nav-list {
-	opacity: 0; // @TODO: Fix this
+
 }
 
 
