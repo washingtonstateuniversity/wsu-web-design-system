@@ -250,8 +250,29 @@
 
 }
 
+.wsu-s-nav-vertical__nav-item--has-children > .wsu-s-nav-vertical__nav-link {
+	position: relative;
+}
+
 .wsu-s-nav-vertical__nav-item--has-children > .wsu-s-nav-vertical__nav-link::after {
-	content: " >";
+	font-family: wsu-icons !important;
+	font-weight: normal !important;
+	font-style: normal;
+	line-height: 1;
+
+	position: absolute;
+	top: 50%;
+	right: 0;
+
+	content: "\F131";
+	transform: translateY(-50%);
+	vertical-align: top;
+
+	color: color(grey, 40);
+}
+
+.wsu-s-nav-vertical__nav-item--has-children > .wsu-s-nav-vertical__nav-link[aria-expanded="true"]::after {
+	content: "\F129";
 }
 
 .wsu-s-nav-vertical__nav-item--has-children .wsu-s-nav-vertical__nav-link[aria-expanded="true"],
