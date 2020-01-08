@@ -21,22 +21,27 @@ body {
 }
 
 .wsu-c-list-item {
-	padding-left: $unit;
+	position: relative;
 
-	text-indent: -#{$unit};
+	padding-left: $unit;
 
 	@include font-size(16px, 300, 2.1);
 
 	&::before {
+		position: absolute;
+		top: .8em;
+		left: 0;
+
 		display: inline-block;
 
-		width: 10px;
-		height: 3px;
+		width: 6px;
+		height: 6px;
 		margin-right: $unit-xs;
 
 		content: " ";
 		vertical-align: middle;
 
+		border-radius: 100%;
 		background-color: color(primary, light);
 	}
 }
@@ -59,7 +64,6 @@ body {
 		padding-left: $unit-xl;
 
 		counter-increment: wsu-ordered-list;
-		text-indent: 0;
 
 		&::before {
 			font-weight: 600;
