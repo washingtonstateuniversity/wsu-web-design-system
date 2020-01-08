@@ -46,7 +46,7 @@ body {
  * Ordered List Styles
  *
  */
-.wsu-c-list--ordered {
+.wsu-c-list__ordered {
 	margin-left: 0;
 
 	counter-reset: wsu-ordered-list;
@@ -79,7 +79,17 @@ body {
 
 			color: color(primary, light);
 			background-color: unset;
-
 		}
+	}
+}
+
+/**
+ *
+ * Create counter reset helper classes 1 - 99
+ *
+ */
+@for $i from 1 through 99 {
+	.wsu-c-list__ordered-reset--#{$i} {
+		counter-reset: wsu-ordered-list #{$i};
 	}
 }
