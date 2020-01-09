@@ -1,34 +1,51 @@
-@import '~@wsu/build-tools/scss/all-the-things';
+@import '../../../../wsu-build-tools/scss/all-the-things.scss';
 @import '../../../assets/scss/component-reset';
+@import url('https://wsu-design-system.s3-us-west-2.amazonaws.com/wsu-icons-master/dist/wsu-icons.bundle.css');
+
 
 /* Nav wrapper
 ======================= */
 .wsu-s-nav-vertical__wrapper {
-	position: fixed;
+	height: 100%;
+}
 
-	display: flex;
+.wsu-s-nav-vertical__wrapper--open::after {
+	position: absolute;
+	top: 0;
+	left: 0;
 
+	width: 100%;
 	height: 100%;
 
+	content: " ";
+
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.wsu-s-nav-vertical__wrapper--open:hover::after {
+	cursor: pointer;
+}
+
+.wsu-s-nav-vertical__wrapper--open + .wsu-content__wrapper {
+	padding-left: 365px;
 }
 
 /* Menu open/close button
 ======================= */
-.wsu-s-nav-vertical__control-container {
-}
-
 .wsu-s-nav-vertical__menu-icon-link {
 	position: relative;
-	z-index: z('modal');
 
 	display: flex;
 	align-items: center;
 	flex-flow: column nowrap;
 	justify-content: center;
 
-	width: $unit * 3;
+	width: 60px;
 	height: 100%;
 
+	transition: transform timing(husky, ease);
+	transition-delay: 200ms;
+	transform: translateX(0);
 	text-align: center;
 	text-decoration: none;
 
@@ -39,18 +56,20 @@
 	&:visited {
 		color: color(grey, 80);
 	}
+
+	&:hover .wsu-s-nav-vertical__menu-label::after {
+		content: "Open"
+	}
+
+	&[aria-expanded="true"] {
+		transform: translate(-100px);
+	}
 }
 
 /* == Start ==============
- * Aria-expanded animations for drawer
+ * Menu Icon to Arrow Animation
 ========================== */
-.wsu-s-nav-vertical__menu-icon-link[aria-expanded="true"] {
-
-	& + .wsu-s-nav-vertical__nav-container {
-		z-index: z('site-header');
-		left: 0;
-	}
-
+.wsu-s-nav-vertical__menu-icon-link:hover {
 	& > .wsu-s-nav-vertical__menu-icon-container {
 		& .wsu-s-nav-vertical__menu-icon-bar:nth-child(1) {
 			top: 30%;
@@ -73,7 +92,6 @@
 			transform: rotate(-45deg);
 		}
 	}
-
 }
 /* == End ================ */
 
@@ -93,7 +111,7 @@
 	width: 100%;
 	height: 3px;
 
-	transition: all timing(husky, easy-does-it);
+	transition: all timing(cougar, easy-does-it);
 	animation-direction: alternate-reverse;
 
 	border-radius: 2px;
@@ -125,28 +143,36 @@
 	color: color(grey, 30);
 
 	@include font-size(10px);
+
+	&:after {
+		content: "Menu";
+	}
 }
 
 /* Navigation container
 ======================= */
 .wsu-s-nav-vertical__nav-container {
-	position: relative;
-	left: -364px;
+	position: fixed;
+	z-index: z('modal');
+	top: 65px;
+	left: 0;
 
 	display: flex;
 	align-items: flex-end;
 	flex-flow: column nowrap;
 
-	width: 364px;
+	width: 365px;
+	height: 100%;
 
-	transition: left timing(husky, easy-does-it);
+	transition: transform timing();
+	transform: translateX(-365px);
 
 	border-right: 1px solid color(grey, 5);
 	background-color: color(white, base);
 }
 
-.wsu-s-nav-vertical__nav-container > .wsu-s-nav-vertical__nav-list {
-	height: 100%;
+.wsu-s-nav-vertical__wrapper--open > .wsu-s-nav-vertical__nav-container {
+	transform: translateX(0);
 }
 
 // Close button
@@ -155,9 +181,15 @@
 	align-items: center;
 	flex-flow: column nowrap;
 
+	margin-top: -20px;
 	padding: $unit;
 
+	transition: opacity timing(), margin-top timing();
 	text-decoration: none;
+
+	opacity: 0;
+
+	@include font-size(24px);
 
 	&:hover,
 	&:visited {
@@ -167,7 +199,6 @@
 
 .wsu-s-nav-vertical__nav-container-close-icon {
 	@include is-icon($unit);
-
 }
 
 .wsu-s-nav-vertical__nav-container-close-label {
@@ -183,37 +214,55 @@
 /* == Start ==============
  * Main Vertical Nav
 ========================== */
-.wsu-s-nav-vertical__nav-list {
-	position: relative;
-
-	overflow: hidden;
-
-	width: inherit;
-
-	transition: all timing();
+.wsu-s-nav-vertical__nav-list-container {
+	width: 100%;
 }
 
-// Submenu aka ul ul
-.wsu-s-nav-vertical__nav-list .wsu-s-nav-vertical__nav-list {
-	padding-left: $unit;
-}
+.wsu-s-nav-vertical__nav-list-container > .wsu-s-nav-vertical__nav-item {
+	@include fade-in-right();
 
-.wsu-s-nav-vertical__nav-list .wsu-s-nav-vertical__nav-list .wsu-s-nav-vertical__nav-link--active {
-	position: relative;
-	left: -$unit;
-
-	width: calc(100% - 40px);
-	padding-left: 36px;
-
-}
-
-.wsu-s-nav-vertical__nav-item {
 	&--has-children {
-
-		& > .wsu-s-nav-vertical__nav-link::after {
-			content: " >";
-		}
+		@include fade-in-right();
 	}
+}
+
+// Nav Links
+.wsu-s-nav-vertical__nav-list > .wsu-s-nav-vertical__nav-item .wsu-s-nav-vertical__nav-link,
+.wsu-s-nav-vertical__nav-list > .wsu-s-nav-vertical__nav-item--has-children .wsu-s-nav-vertical__nav-link {
+	padding-left: $unit * 2;
+
+	color: color(grey, 60);
+}
+
+.wsu-s-nav-vertical__nav-list .wsu-s-nav-vertical__nav-list > .wsu-s-nav-vertical__nav-item .wsu-s-nav-vertical__nav-link,
+.wsu-s-nav-vertical__nav-list .wsu-s-nav-vertical__nav-list > .wsu-s-nav-vertical__nav-item .wsu-s-nav-vertical__nav-link--active {
+	padding-left: $unit * 3;
+}
+
+.wsu-s-nav-vertical__nav-item--has-children > .wsu-s-nav-vertical__nav-link {
+	position: relative;
+}
+
+.wsu-s-nav-vertical__nav-item--has-children > .wsu-s-nav-vertical__nav-link::after {
+	font-family: wsu-icons !important;
+	font-size: 14px;
+	font-weight: normal !important;
+	font-style: normal;
+	line-height: 1;
+
+	position: absolute;
+	top: 50%;
+	right: -$unit-2xl;
+
+	content: "\F131";
+	transform: translateY(-50%);
+	vertical-align: top;
+
+	color: color(grey, 40);
+}
+
+.wsu-s-nav-vertical__nav-item--has-children > .wsu-s-nav-vertical__nav-link[aria-expanded="true"]::after {
+	content: "\F129";
 }
 
 .wsu-s-nav-vertical__nav-item--has-children .wsu-s-nav-vertical__nav-link[aria-expanded="true"],
@@ -226,38 +275,116 @@
 
 	padding: $unit-xs $unit;
 
+	transition: background-color timing(), border-left timing();
 	text-decoration: none;
 
 	color: color(grey, 90);
 
-	@include font-size(17px, 600);
-
-	&--active {
-		padding-left: calc(#{$unit} - 5px);
-
-		border-left: 5px solid color(primary, light);
-		background-color: color(grey, 5);
-
-		@extend .wsu-s-nav-vertical__nav-link;
-	}
+	@include font-size(18px, 600);
 
 	&:visited {
 		color: color(grey, 90);
 	}
+
+	&:hover {
+		border-left: 3px solid color(grey, 30);
+		background-color: color(grey, 5);
+	}
+}
+
+.wsu-s-nav-vertical__nav-link--active {
+	padding-left: calc(#{$unit} - 5px);
+
+	border-left: 3px solid color(primary, light);
+	background-color: color(grey, 5);
+
+	@extend .wsu-s-nav-vertical__nav-link;
 }
 
 // Submenu Links
-.wsu-s-nav-vertical__nav-list .wsu-s-nav-vertical__nav-list .wsu-s-nav-vertical__nav-link {
-	@include font-size(15px);
+.wsu-s-nav-vertical__nav-item--has-children .wsu-s-nav-vertical__nav-list .wsu-s-nav-vertical__nav-link {
+	@include font-size(16px);
 }
 
 /* ARIA-Expanded styles
 ======================= */
-.wsu-s-nav-vertical__nav-link[aria-expanded="true"] ~ .wsu-s-nav-vertical__nav-list,
-.wsu-s-nav-vertical__nav-link[aria-expanded="true"] ~ .wsu-s-nav-vertical__nav-list--has-more-items {
+.wsu-s-nav-vertical__nav-link[aria-expanded="true"] ~ .wsu-s-nav-vertical__nav-list {
+	visibility: visible;
+
+	height: auto;
+
+	opacity: 1;
 }
 
-.wsu-s-nav-vertical__nav-link[aria-expanded="false"] ~ .wsu-s-nav-vertical__nav-list,
-.wsu-s-nav-vertical__nav-link[aria-expanded="false"] ~ .wsu-s-nav-vertical__nav-list--has-more-items {
+.wsu-s-nav-vertical__nav-link[aria-expanded="false"] ~ .wsu-s-nav-vertical__nav-list {
+	visibility: hidden;
+
 	height: 0;
+
+	opacity: 0;
 }
+
+
+/**
+ *
+ * No JS styles
+ *
+ */
+ .wsu-u-no-js {
+	.wsu-s-nav-vertical__nav-container {
+		transform: translate(0);
+	}
+
+	.wsu-s-nav-vertical__nav-list-container > .wsu-s-nav-vertical__nav-item,
+	.wsu-s-nav-vertical__nav-list-container > .wsu-s-nav-vertical__nav-item--has-children {
+		margin-left: 0;
+
+		opacity: 1;
+	}
+
+	.wsu-s-nav-vertical__nav-link::after {
+		display: none;
+	}
+
+	.wsu-s-nav-vertical__nav-container {
+		position: relative;
+	}
+}
+
+
+
+
+
+/**
+ *
+ * To delete later
+ *
+ */
+
+// Not component related
+.wsu-g-container {
+	display: flex;
+
+	width: 100%;
+	height: 100%;
+}
+
+.wsu-content__wrapper {
+	transition: all timing();
+}
+
+.wsu-c-main__container {
+	max-width: 1440px;
+	margin-right: $unit;
+	margin-left: $unit;
+
+	@include mq('large') {
+		margin-right: $unit-3xl;
+		margin-left: $unit-3xl;
+	}
+}
+
+.wsu-icon {
+	width: 24px;
+}
+
