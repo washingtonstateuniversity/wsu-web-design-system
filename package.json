@@ -27,6 +27,7 @@
     "scripts": {
         "start": "webpack-dev-server --env.NODE_ENV=development --watch --config webpack.config.js --progress",
         "build:all": "webpack --env.NODE_ENV=production --config build.config.js --progress",
+        "build:all--watch": "webpack --env.NODE_ENV=production --config build.config.js --progress --watch",
         "build:components": "webpack --env.NODE_ENV=production --config webpack.config.js --progress"
     },
     "repository": {
