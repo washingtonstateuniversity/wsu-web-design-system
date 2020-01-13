@@ -1,5 +1,6 @@
 // Content
 import '../components/src/content-heading/build';
+import '../components/src/content-list/build';
 
 // Global
 import '../components/src/global-footer/build';
