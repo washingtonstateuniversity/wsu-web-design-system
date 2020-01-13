@@ -1,3 +1,4 @@
+
 // Content
 import '../components/src/content-heading/build';
 import '../components/src/content-list/build';
@@ -10,3 +11,4 @@ import '../components/src/global-header/build';
 import '../components/src/site-footer/build';
 import '../components/src/site-footer-condensed/build';
 import '../components/src/site-nav-horizontal/build';
+import '../components/src/site-nav-vertical/build';
