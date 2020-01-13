@@ -83,10 +83,16 @@
 .wsu-g-header__nav-list {
 	display: none;
 
+	margin: 0;
+
 	@include mq('medium') {
 		display: flex;
 		justify-content: flex-end;
 	}
+}
+
+.wsu-g-header__nav-item {
+	list-style: none;
 }
 
 .wsu-g-header__nav-link {

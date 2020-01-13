@@ -214,8 +214,18 @@
 /* == Start ==============
  * Main Vertical Nav
 ========================== */
+.wsu-s-nav-vertical__nav-list {
+	padding: 0;
+}
+
 .wsu-s-nav-vertical__nav-list-container {
 	width: 100%;
+	margin: 0;
+}
+
+.wsu-s-nav-vertical__nav-item,
+.wsu-s-nav-vertical__nav-item--has-children {
+	list-style: none;
 }
 
 .wsu-s-nav-vertical__nav-list-container > .wsu-s-nav-vertical__nav-item {

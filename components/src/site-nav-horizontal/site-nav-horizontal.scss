@@ -4,6 +4,9 @@
 /* Start Base Styles
 ======================= */
 .wsu-s-nav-horizontal__wrapper {
+	position: relative;
+	z-index: z('site-header');
+
 	white-space: nowrap;
 
 	background-color: color(grey, 0);
@@ -15,6 +18,9 @@
 
 .wsu-s-nav-horizontal__nav-list {
 	display: inline-block;
+
+	margin: 0;
+	padding: 0;
 
 	@include font-size(16px, 600, 1);
 }
