@@ -7,6 +7,7 @@
 	justify-content: flex-end;
 
 	border-top: 5px solid color(primary, base);
+	background-color: color(grey, 0);
 }
 
 /* Logo
@@ -18,9 +19,9 @@
 
 	text-decoration: none;
 
-	color: color(grey, 70);
+	color: color(grey, 75);
 
-	@include font-size(15px, 600);
+	@include font-size(14px, 500);
 	@include mq('small') {
 		padding-right: $unit-xl;
 	}
@@ -31,7 +32,7 @@
 	}
 
 	&:visited {
-		color: color(grey, 70);
+		color: color(grey, 75);
 	}
 }
 
@@ -47,7 +48,7 @@
 
 	background-color: color(primary, light);
 
-	@include is-icon--boxed($icon-size: 38px);
+	@include is-icon--boxed($icon-size: 34px);
 }
 
 .wsu-g-header__logo-svg {
@@ -107,7 +108,7 @@
 
 	color: color(grey, 70);
 
-	@include font-size(15px, 600);
+	@include font-size(14px, 400);
 	@include border-bottom-hover(100%);
 
 	&:visited {

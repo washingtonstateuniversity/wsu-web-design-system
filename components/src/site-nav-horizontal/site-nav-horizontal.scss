@@ -8,8 +8,6 @@
 	z-index: z('site-header');
 
 	white-space: nowrap;
-
-	background-color: color(grey, 0);
 }
 
 .wsu-s-nav-horizontal__nav-container {
@@ -29,10 +27,6 @@
 .wsu-s-nav-horizontal__nav-item--has-children,
 .wsu-s-nav-horizontal__nav-item--more {
 	display: inline-block;
-}
-
-.wsu-s-nav-horizontal__nav-link {
-	@include font-size(14px, 600, 1);
 }
 
 // Is a submenu
@@ -89,19 +83,23 @@
 	}
 }
 
+
+/* Base link styles */
 .wsu-s-nav-horizontal__nav-link,
 .wsu-s-nav-horizontal__nav-link--active {
 	display: block;
 
-	padding: $unit;
+	padding: $unit-l $unit-xl;
 
 	transition: color timing();
 	text-decoration: none;
 
-	color: color(grey, 100);
+	color: color(grey, 75);
+
+	@include font-size(14px, 600, 1);
 
 	&:visited {
-		color: color(grey, 100);
+		color: color(grey, 75);
 	}
 
 	&:hover,
