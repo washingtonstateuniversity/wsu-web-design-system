@@ -6,15 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Design System Demo</title>
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-	<link rel="stylesheet" href="../build/wsu-design-system.bundle.dist.css">
-	<script src="./index.js"></script>
-
-	<style>
-		.wsu-g-content {
-			max-width: 1440px;
-			margin: 0 auto;
-		}
-	</style>
+	<link rel="stylesheet" href="../build/dist/wsu-design-system.bundle.dist.css">
+	<link rel="stylesheet" href="../assets/css/wsu-design-system-containers.css">
 </head>
 
 <body>
@@ -203,6 +196,12 @@
 
 		<div class="wsu-content__wrapper">
 			<div class="wsu-c-main__container">
+				<div class="wsu-s-header__wrapper">
+					<header class="wsu-s-header__container">
+						<h1 class="wsu-s-header__title">Sports Management</h1>
+						<h2 class="wsu-s-header__subtitle">College of Education</h2>
+					</header>
+				</div>
 				<div class="wsu-s-nav-horizontal__wrapper wsu-u-no-js">
 					<nav class="wsu-s-nav-horizontal__nav-container" aria-label="Horizontal Site Navigation">
 						<ul class="wsu-s-nav-horizontal__nav-list" id="wsu-s-nav-horizontal" role="menubar" aria-label="Horizontal Site Navigation">
@@ -241,13 +240,12 @@
 						</ul>
 					</nav>
 				</div>
-				<h1>Page Title</h1>
-				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A ducimus omnis facilis voluptates numquam iste, pariatur nisi dolores! Consequatur nemo quod excepturi quis quaerat molestiae neque vitae at, ducimus exercitationem.</p>
 			</div>
+			<img src="https://i.picsum.photos/id/1020/4288/2848.jpg" alt="Bears" width="100%">
 		</div>
 	</div>
 
-	<script src="../build/wsu-design-system.bundle.dist.js" defer></script>
+	<script src="../build/dist/wsu-design-system.bundle.dist.js"></script>
 </body>
 
 </html>
