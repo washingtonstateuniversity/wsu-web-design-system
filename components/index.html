@@ -13,13 +13,52 @@
 		ul li a {
 			text-transform: capitalize;
 		}
+
+		body {
+			max-width: 800px;
+			margin: 0 auto;
+		}
+
+		.tile {
+			justify-content: space-between;
+		}
+
+		.dev-only {
+			font-family: monospace;
+			font-size: 12px;
+
+			padding: 0 20px;
+
+			text-transform: uppercase;
+		}
+
+		.quick-links {
+			display: flex;
+		}
+
+		.quick-links a {
+			margin-right: 10px;
+			padding: 12px 20px;
+
+			background: whitesmoke;
+		}
+
+		.quick-links a:last-child {
+			margin-right: 0;
+		}
 	</style>
 </head>
 
 <body>
 	<div class="container is-fluid">
-		<h1 class="is-size-1">Components</h1>
+		<h1 class="is-size-1">WSU Design System</h1>
+		<h2 class="is-size-2">Components</h2>
 		<ul id="links"></ul>
+		<h2 class="is-size-2">Quick Links</h2>
+		<div class="quick-links">
+			<a href="dist" class="dist-folder">Dist Folder (for local development)</a>
+			<a href="https://washingtonstateuniversity.github.io/wsu-web-design-system/demo/" class="demo-page">Demo Page (multiple components together)</a>
+		</div>
 	</div>
 
 	<script>
@@ -42,14 +81,21 @@
 					itemNameNoDashes = itemSlug.replace(/-/g, " ");
 					item = document.createElement("li");
 					item.classList.add('tile');
+
 					itemLink = document.createElement("a");
 					itemText = document.createTextNode(itemNameNoDashes);
-
 					itemLink.setAttribute('href', 'https://washingtonstateuniversity.github.io/wsu-web-design-system/components/dist/' + itemSlug + '/' + itemSlug + '.html')
+					itemLink.appendChild(itemText);
+					item.appendChild(itemLink);
 
-					// Append dom elements
-					itemLink.appendChild(itemText); // Anchor
-					item.appendChild(itemLink); // List item
+					itemLinkDist = document.createElement("a");
+					itemTextDist = document.createTextNode("[Local]");
+					itemLinkDist.setAttribute('href', 'dist/' + itemSlug + '/' + itemSlug + '.html');
+					itemLinkDist.classList.add('dev-only');
+					itemLinkDist.appendChild(itemTextDist);
+					item.appendChild(itemLinkDist);
+
+					// Append list item to container
 					container.appendChild(item); // Container
 				});
 			})
@@ -64,7 +110,6 @@
 
 				item.appendChild(itemText); // List item
 				container.appendChild(item); // Container
-
 			});
 	</script>
 </body>

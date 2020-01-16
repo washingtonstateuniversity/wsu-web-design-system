@@ -1,0 +1,16 @@
+{
+    "name": "demo",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "demo": "parcel index.html"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {},
+    "devDependencies": {
+        "parcel-plugin-clean-dist": "0.0.6"
+    }
+}

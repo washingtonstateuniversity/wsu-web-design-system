@@ -1,5 +1,5 @@
 @import '../../../../wsu-build-tools/scss/all-the-things.scss';
-@import '../../../assets/scss/component-reset';
+
 @import url('https://wsu-design-system.s3-us-west-2.amazonaws.com/wsu-icons-master/dist/wsu-icons.bundle.css');
 
 
@@ -214,8 +214,18 @@
 /* == Start ==============
  * Main Vertical Nav
 ========================== */
+.wsu-s-nav-vertical__nav-list {
+	padding: 0;
+}
+
 .wsu-s-nav-vertical__nav-list-container {
 	width: 100%;
+	margin: 0;
+}
+
+.wsu-s-nav-vertical__nav-item,
+.wsu-s-nav-vertical__nav-item--has-children {
+	list-style: none;
 }
 
 .wsu-s-nav-vertical__nav-list-container > .wsu-s-nav-vertical__nav-item {
@@ -350,41 +360,3 @@
 		position: relative;
 	}
 }
-
-
-
-
-
-/**
- *
- * To delete later
- *
- */
-
-// Not component related
-.wsu-g-container {
-	display: flex;
-
-	width: 100%;
-	height: 100%;
-}
-
-.wsu-content__wrapper {
-	transition: all timing();
-}
-
-.wsu-c-main__container {
-	max-width: 1440px;
-	margin-right: $unit;
-	margin-left: $unit;
-
-	@include mq('large') {
-		margin-right: $unit-3xl;
-		margin-left: $unit-3xl;
-	}
-}
-
-.wsu-icon {
-	width: 24px;
-}
-

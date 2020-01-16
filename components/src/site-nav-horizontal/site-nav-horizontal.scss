@@ -1,12 +1,12 @@
-@import '../../../assets/scss/component-reset';
 @import '~@wsu/build-tools/scss/all-the-things';
 
 /* Start Base Styles
 ======================= */
 .wsu-s-nav-horizontal__wrapper {
-	white-space: nowrap;
+	position: relative;
+	z-index: z('site-header');
 
-	background-color: color(grey, 0);
+	white-space: nowrap;
 }
 
 .wsu-s-nav-horizontal__nav-container {
@@ -15,6 +15,11 @@
 
 .wsu-s-nav-horizontal__nav-list {
 	display: inline-block;
+
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
 
 	@include font-size(16px, 600, 1);
 }
@@ -25,18 +30,20 @@
 	display: inline-block;
 }
 
-.wsu-s-nav-horizontal__nav-link {
-	@include font-size(14px, 600, 1);
-}
-
 // Is a submenu
 .wsu-s-nav-horizontal__nav-item--has-children {
 	position: relative;
 
-	& > .wsu-s-nav-horizontal__nav-link:after {
-		padding-left: $unit-2xs;
+	& > .wsu-s-nav-horizontal__nav-link::after {
+		font-family: "wsu-icons";
+		font-size: 8px;
 
-		@include is-psuedo-element($content: ">", $display: inline-block);
+		width: 10px;
+		padding-left: $unit-xs;
+
+		color: color(grey, 30);
+
+		@include is-psuedo-element($content: "\F103", $display: inline-block);
 	}
 
 	& > .wsu-s-nav-horizontal__nav-list {
@@ -83,26 +90,29 @@
 	}
 }
 
+
+/* Base link styles */
 .wsu-s-nav-horizontal__nav-link,
 .wsu-s-nav-horizontal__nav-link--active {
 	display: block;
 
-	padding: $unit;
+	padding: $unit-l $unit-xl;
 
 	transition: color timing();
 	text-decoration: none;
 
-	color: color(grey, 100);
+	color: color(grey, 75);
+
+	@include font-size(14px, 600, 1);
 
 	&:visited {
-		color: color(grey, 100);
+		color: color(grey, 75);
 	}
 
 	&:hover,
 	&:active {
 		color: color(grey, 100);
 	}
-
 
 	&[aria-expanded="true"] ~ .wsu-s-nav-horizontal__nav-list,
 	&[aria-expanded="true"] ~ .wsu-s-nav-horizontal__nav-list--has-more-items {
