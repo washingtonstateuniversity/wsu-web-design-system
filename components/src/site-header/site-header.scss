@@ -7,9 +7,7 @@
 	align-items: flex-end;
 
 	min-height: 40px;
-	padding: $unit-xs $unit-xl;
-
-	background-color: color(grey, 0);
+	padding: $unit-l $unit-xl $unit-xs;
 }
 
 .wsu-s-header__container {
@@ -20,6 +18,8 @@
 .wsu-s-header__title {
 	margin-top: 0;
 	margin-bottom: 0;
+
+	color: color(grey, 75);
 
 	@include font-size(24px, 600);
 }

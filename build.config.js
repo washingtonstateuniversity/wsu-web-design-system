@@ -10,10 +10,10 @@ module.exports = env => {
 
 	return {
 		context: __dirname,
-		entry: './build/wsu-design-system.build.js',
+		entry: './build/src/wsu-design-system.build.js',
 		output: {
 			filename: 'wsu-design-system.bundle.dist.js',
-			path: path.resolve(__dirname, 'build')
+			path: path.resolve(__dirname, 'build/dist')
 		},
 		mode: DEV ? 'development' : 'production',
 		devtool: DEV ? 'inline-source-map' : 'source-map',
