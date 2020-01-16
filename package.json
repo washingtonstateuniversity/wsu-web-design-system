@@ -1,42 +1,44 @@
 {
-	"name": "wsu-web-design-system",
-	"version": "0.0.1",
-	"description": "Web Design System for Washington State University.",
-	"private": true,
-	"main": "src/index.js",
-	"dependencies": {},
-	"devDependencies": {
-		"@babel/core": "^7.7.2",
-		"@babel/preset-env": "^7.7.1",
-		"@wsu/build-tools": "git+https://github.com/washingtonstateuniversity/wsu-build-tools.git",
-		"autoprefixer": "^9.7.1",
-		"babel-loader": "^8.0.6",
-		"css-loader": "^3.2.0",
-		"file-loader": "^4.2.0",
-		"markup-inline-loader": "^0.2.3",
-		"mini-css-extract-plugin": "^0.8.0",
-		"modularscale-sass": "^3.0.8",
-		"node-sass": "^4.12.0",
-		"optimize-css-assets-webpack-plugin": "^5.0.3",
-		"postcss-loader": "^3.0.0",
-		"sass-loader": "^8.0.0",
-		"webpack": "^4.41.2",
-		"webpack-cli": "^3.3.10",
-		"webpack-dev-server": "^3.9.0"
-	},
-	"scripts": {
-		"start": "webpack-dev-server --env.NODE_ENV=development --watch --config webpack.config.js",
-		"start:open": "webpack-dev-server --open --env.NODE_ENV=development --watch --config webpack.config.js",
-		"build:partials": "webpack --env.NODE_ENV=production --config webpack.config.js"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/washingtonstateuniversity/wsu-web-design-system.git"
-	},
-	"author": "WSU University Communications",
-	"license": "GPL-2.0",
-	"bugs": {
-		"url": "https://github.com/washingtonstateuniversity/wsu-web-design-system/issues"
-	},
-	"homepage": "https://github.com/washingtonstateuniversity/wsu-web-design-system#readme"
+    "name": "wsu-web-design-system",
+    "version": "0.0.1",
+    "description": "Web Design System for Washington State University.",
+    "private": true,
+    "main": "src/index.js",
+    "dependencies": {},
+    "devDependencies": {
+        "@babel/core": "^7.7.2",
+        "@babel/preset-env": "^7.7.1",
+        "@wsu/build-tools": "git+https://github.com/washingtonstateuniversity/wsu-build-tools.git",
+        "autoprefixer": "^9.7.1",
+        "babel-loader": "^8.0.6",
+        "css-loader": "^3.2.0",
+        "file-loader": "^4.2.0",
+        "markup-inline-loader": "^0.2.3",
+        "mini-css-extract-plugin": "^0.8.0",
+        "modularscale-sass": "^3.0.8",
+        "node-sass": "^4.12.0",
+        "optimize-css-assets-webpack-plugin": "^5.0.3",
+        "postcss-loader": "^3.0.0",
+        "sass-loader": "^8.0.0",
+        "webpack": "^4.41.2",
+        "webpack-cli": "^3.3.10",
+        "webpack-dev-server": "^3.9.0"
+    },
+    "scripts": {
+        "start": "webpack-dev-server --env.NODE_ENV=development --watch --config webpack.config.js",
+        "start:all": "webpack-dev-server --env.NODE_ENV=development --watch --config webpack.config.js & webpack --env.NODE_ENV=development --config build.config.js --watch",
+        "build": "npm run build:system & npm run build:components",
+        "build:system": "webpack --env.NODE_ENV=production --config build.config.js --progress",
+        "build:components": "webpack --env.NODE_ENV=production --config webpack.config.js --progress"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/washingtonstateuniversity/wsu-web-design-system.git"
+    },
+    "author": "WSU University Communications",
+    "license": "GPL-2.0",
+    "bugs": {
+        "url": "https://github.com/washingtonstateuniversity/wsu-web-design-system/issues"
+    },
+    "homepage": "https://github.com/washingtonstateuniversity/wsu-web-design-system#readme"
 }

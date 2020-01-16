@@ -1,0 +1,98 @@
+@import '~@wsu/build-tools/scss/all-the-things';
+
+/**
+ *
+ * Base Styles
+ *
+ */
+.wsu-c-list {
+	margin: 0;
+	margin-left: $unit;
+	padding: 0;
+
+	list-style: none;
+}
+
+.wsu-c-list .wsu-c-list {
+	padding-left: $unit-l;
+}
+
+.wsu-c-list-item {
+	position: relative;
+
+	padding-left: $unit;
+
+	@include font-size(16px, 300, 2.1);
+
+	&::before {
+		position: absolute;
+		top: .8em;
+		left: 0;
+
+		display: inline-block;
+
+		width: 6px;
+		height: 6px;
+		margin-right: $unit-xs;
+
+		content: " ";
+		vertical-align: middle;
+
+		border-radius: 100%;
+		background-color: color(primary, light);
+	}
+}
+
+/**
+ *
+ * Ordered List Styles
+ *
+ */
+.wsu-c-list__ordered {
+	counter-reset: wsu-ordered-list;
+
+	@extend .wsu-c-list;
+
+	.wsu-c-list-item {
+		position: relative;
+
+		padding-left: $unit;
+
+		counter-increment: wsu-ordered-list;
+
+		&::before {
+			font-weight: 600;
+
+			position: absolute;
+			top: 0;
+			left: -15px;
+
+			width: $unit-l;
+			height: auto;
+			margin-right: 0;
+
+			content: counter(wsu-ordered-list) ".";
+			text-align: right;
+
+			color: color(primary, light);
+			background-color: unset;
+		}
+	}
+
+	/* Sub-ordered lists are letters
+	======================= */
+	& .wsu-c-list__ordered .wsu-c-list-item::before {
+		content: counter(wsu-ordered-list, lower-alpha) ". ";
+	}
+}
+
+/**
+ *
+ * Create counter reset helper classes 1 - 99
+ *
+ */
+@for $i from 1 through 99 {
+	.wsu-c-list__ordered-reset--#{$i} {
+		counter-reset: wsu-ordered-list #{$i};
+	}
+}

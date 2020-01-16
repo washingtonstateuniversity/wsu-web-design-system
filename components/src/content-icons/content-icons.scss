@@ -1,0 +1,20 @@
+@import '../../../assets/scss/component-reset';
+@import '~@wsu/build-tools/scss/all-the-things';
+@import url('https://wsu-design-system.s3-us-west-2.amazonaws.com/wsu-icons-master/dist/wsu-icons.bundle.css');
+
+.wsu-c-icon-container {
+	max-width: 800px;
+	margin: $unit-xl auto;
+}
+
+.wsu-icon {
+	display: inline-block;
+
+	padding: 20px;
+
+	transition: color timing();
+
+	&:hover {
+		color: color(primary, light);
+	}
+}
