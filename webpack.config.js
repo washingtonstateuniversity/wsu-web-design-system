@@ -15,10 +15,12 @@ module.exports = env => {
 			'components/dist/global-header/global-header': './components/src/global-header/index.js',
 			'components/dist/site-header/site-header': './components/src/site-header/index.js',
 			'components/dist/site-footer/site-footer': './components/src/site-footer/index.js',
+			'components/dist/site-footer-condensed/site-footer-condensed': './components/src/site-footer-condensed/index.js',
 			'components/dist/site-nav-horizontal/site-nav-horizontal': './components/src/site-nav-horizontal/index.js',
 			'components/dist/content-heading/content-heading': './components/src/content-heading/index.js',
 			'components/dist/content-list/content-list': './components/src/content-list/index.js',
 			'components/dist/site-footer-condensed/site-footer-condensed': './components/src/site-footer-condensed/index.js',
+			'components/dist/content-icons/content-icons': './components/src/content-icons/index.js',
 		},
 		output: {
 			path: path.resolve(__dirname),
