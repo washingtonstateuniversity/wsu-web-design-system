@@ -1,4 +1,4 @@
-@import '../../../../wsu-build-tools/scss/all-the-things.scss';
+@import '~@wsu/build-tools/scss/all-the-things';
 @import url('https://wsu-design-system.s3-us-west-2.amazonaws.com/wsu-icons-master/dist/wsu-icons.bundle.css');
 
 /* Nav wrapper
@@ -7,15 +7,20 @@
 	height: 100%;
 }
 
+// Overlay
+.wsu-s-nav-vertical__wrapper::after {
+	content: " ";
+	transition: background-color timing();
+}
+
 .wsu-s-nav-vertical__wrapper--open::after {
 	position: absolute;
+	z-index: z('header');
 	top: 0;
 	left: 0;
 
 	width: 100%;
 	height: 100%;
-
-	content: " ";
 
 	background-color: rgba(0, 0, 0, 0.5);
 }
@@ -24,7 +29,7 @@
 	cursor: pointer;
 }
 
-.wsu-s-nav-vertical__wrapper--open + .wsu-content__wrapper {
+.wsu-s-nav-vertical__wrapper--open + .wsu-s-wrapper {
 	padding-left: 365px;
 }
 
@@ -252,17 +257,13 @@
 }
 
 .wsu-s-nav-vertical__nav-item--has-children > .wsu-s-nav-vertical__nav-link::after {
-	font-family: wsu-icons !important;
-	font-size: 14px;
-	font-weight: normal !important;
-	font-style: normal;
-	line-height: 1;
+	font-family: "wsu-icons";
 
 	position: absolute;
 	top: 50%;
-	right: -$unit-2xl;
+	right: $unit;
 
-	content: "\F131";
+	content: "\F137";
 	transform: translateY(-50%);
 	vertical-align: top;
 
@@ -270,7 +271,7 @@
 }
 
 .wsu-s-nav-vertical__nav-item--has-children > .wsu-s-nav-vertical__nav-link[aria-expanded="true"]::after {
-	content: "\F129";
+	content: "\F12C";
 }
 
 .wsu-s-nav-vertical__nav-item--has-children .wsu-s-nav-vertical__nav-link[aria-expanded="true"],

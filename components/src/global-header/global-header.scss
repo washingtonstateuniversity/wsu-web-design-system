@@ -1,5 +1,9 @@
 @import '~@wsu/build-tools/scss/all-the-things';
 
+.wsu-g-header__wrapper {
+	position: relative;
+	z-index: z('modal');
+}
 
 .wsu-g-header {
 	display: flex;
