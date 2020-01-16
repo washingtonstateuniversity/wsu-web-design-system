@@ -1,4 +1,3 @@
-
 @import '~@wsu/build-tools/scss/all-the-things';
 
 /* Start Base Styles
@@ -20,6 +19,8 @@
 	margin: 0;
 	padding: 0;
 
+	list-style: none;
+
 	@include font-size(16px, 600, 1);
 }
 
@@ -33,10 +34,16 @@
 .wsu-s-nav-horizontal__nav-item--has-children {
 	position: relative;
 
-	& > .wsu-s-nav-horizontal__nav-link:after {
-		padding-left: $unit-2xs;
+	& > .wsu-s-nav-horizontal__nav-link::after {
+		font-family: "wsu-icons";
+		font-size: 8px;
 
-		@include is-psuedo-element($content: ">", $display: inline-block);
+		width: 10px;
+		padding-left: $unit-xs;
+
+		color: color(grey, 30);
+
+		@include is-psuedo-element($content: "\F103", $display: inline-block);
 	}
 
 	& > .wsu-s-nav-horizontal__nav-list {
@@ -106,7 +113,6 @@
 	&:active {
 		color: color(grey, 100);
 	}
-
 
 	&[aria-expanded="true"] ~ .wsu-s-nav-horizontal__nav-list,
 	&[aria-expanded="true"] ~ .wsu-s-nav-horizontal__nav-list--has-more-items {
