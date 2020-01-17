@@ -113,9 +113,9 @@ module.exports = __webpack_require__.p + "components/dist/content-icons/content-
   !*** ./components/src/content-icons/content-icons.scss ***!
   \*********************************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-// extracted by mini-css-extract-plugin
+throw new Error("Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nSassError: File to import not found or unreadable: ../../../assets/scss/component-reset.\n        on line 1 of /Users/nicdford/vagrant-local/www/wsu-web-design-system/components/src/content-icons/content-icons.scss\n>> @import '../../../assets/scss/component-reset';\n\n   ^\n\n    at runLoaders (/Users/nicdford/vagrant-local/www/wsu-web-design-system/node_modules/webpack/lib/NormalModule.js:316:20)\n    at /Users/nicdford/vagrant-local/www/wsu-web-design-system/node_modules/loader-runner/lib/LoaderRunner.js:367:11\n    at /Users/nicdford/vagrant-local/www/wsu-web-design-system/node_modules/loader-runner/lib/LoaderRunner.js:233:18\n    at context.callback (/Users/nicdford/vagrant-local/www/wsu-web-design-system/node_modules/loader-runner/lib/LoaderRunner.js:111:13)\n    at Object.render [as callback] (/Users/nicdford/vagrant-local/www/wsu-web-design-system/node_modules/sass-loader/dist/index.js:73:7)\n    at Object.done [as callback] (/Users/nicdford/vagrant-local/www/wsu-web-design-system/node_modules/neo-async/async.js:8067:18)\n    at options.error (/Users/nicdford/vagrant-local/www/wsu-web-design-system/node_modules/node-sass/lib/index.js:294:32)");
 
 /***/ }),
 

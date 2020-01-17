@@ -1,0 +1,51 @@
+@import '~@wsu/build-tools/scss/all-the-things';
+
+.content {
+	max-width: 800px;
+	margin: 2em auto;
+}
+
+.accordion-container {
+	border: 2px solid #7F7F7F;
+	border-radius: 3px;
+}
+
+.accordion-container--focused {
+	border-color: #D72216;
+}
+
+.accordion-title {
+	margin: 0;
+
+	border-bottom: 1px solid #7F7F7F;
+}
+
+.accordion-button {
+	position: relative;
+
+	width: 100%;
+
+	text-align: left;
+
+	border: none;
+	background: none;
+
+	&::after {
+		position: absolute;
+		z-index: -1;
+		top: 50%;
+		right: 20px;
+
+		content: "-";
+		transform: translateY(-50%);
+	}
+
+	&[aria-expanded="true"]::after {
+		content: "+";
+	}
+}
+
+.accordion-button,
+.accordion-panel {
+	padding: 20px;
+}
