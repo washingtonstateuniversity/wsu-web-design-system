@@ -4,9 +4,9 @@
 ======================= */
 .wsu-s-nav-horizontal__wrapper {
 	position: relative;
-	z-index: z('site-header');
+	z-index: z('header');
 
-	white-space: nowrap;
+	white-space: nowrap;;
 }
 
 .wsu-s-nav-horizontal__nav-container {
