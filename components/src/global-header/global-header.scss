@@ -53,6 +53,7 @@
 	background-color: color(primary, light);
 
 	@include is-icon--boxed($icon-size: 34px);
+	//TODO: add -3px vertical offset
 }
 
 .wsu-g-header__logo-svg {
