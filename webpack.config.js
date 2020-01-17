@@ -19,9 +19,10 @@ module.exports = env => {
 			'components/dist/site-nav-horizontal/site-nav-horizontal': './components/src/site-nav-horizontal/index.js',
 			'components/dist/site-nav-vertical/site-nav-vertical': './components/src/site-nav-vertical/index.js',
 			'components/dist/site-footer-condensed/site-footer-condensed': './components/src/site-footer-condensed/index.js',
+			'components/dist/content-accordion/content-accordion': './components/src/content-accordion/index.js',
 			'components/dist/content-heading/content-heading': './components/src/content-heading/index.js',
-			'components/dist/content-list/content-list': './components/src/content-list/index.js',
 			'components/dist/content-icons/content-icons': './components/src/content-icons/index.js',
+			'components/dist/content-list/content-list': './components/src/content-list/index.js',
 		},
 		output: {
 			path: path.resolve(__dirname),
