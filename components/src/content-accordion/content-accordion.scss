@@ -5,47 +5,136 @@
 	margin: 2em auto;
 }
 
-.accordion-container {
-	border: 2px solid #7F7F7F;
-	border-radius: 3px;
+.Accordion {
+	width: 20em;
+	margin: 0 auto;
+	padding: 0;
+
+	border: 2px solid hsl(0, 0%, 52%);
+	border-radius: 7px;
 }
 
-.accordion-container--focused {
-	border-color: #D72216;
-}
-
-.accordion-title {
+.Accordion h3 {
 	margin: 0;
-
-	border-bottom: 1px solid #7F7F7F;
+	padding: 0;
 }
 
-.accordion-button {
+.Accordion.focus {
+	border-color: hsl(216, 94%, 43%);
+}
+
+.Accordion.focus h3 {
+	background-color: hsl(0, 0%, 97%);
+}
+
+.Accordion > * + * {
+	border-top: 1px solid hsl(0, 0%, 52%);
+}
+
+.Accordion-trigger {
+	font-size: 1rem;
+	font-weight: normal;
+
 	position: relative;
 
+	display: block;
+
 	width: 100%;
+	margin: 0;
+	padding: 1em 1.5em;
 
 	text-align: left;
 
-	border: none;
+	color: hsl(0, 0%, 13%);
+	outline: none;
 	background: none;
-
-	&::after {
-		position: absolute;
-		z-index: -1;
-		top: 50%;
-		right: 20px;
-
-		content: "-";
-		transform: translateY(-50%);
-	}
-
-	&[aria-expanded="true"]::after {
-		content: "+";
-	}
 }
 
-.accordion-button,
-.accordion-panel {
-	padding: 20px;
+.Accordion-trigger:focus,
+.Accordion-trigger:hover {
+	background: hsl(216, 94%, 94%);
+}
+
+.Accordion-trigger:focus {
+	outline: 4px solid transparent;
+}
+
+.Accordion *:first-child .Accordion-trigger {
+	border-radius: 5px 5px 0 0;
+}
+
+button {
+	border-style: none;
+}
+
+.Accordion button::-moz-focus-inner {
+	border: 0;
+}
+
+.Accordion-title {
+	display: block;
+
+	padding: 0.25em;
+
+	pointer-events: none;
+
+	border: transparent 2px solid;
+	border-radius: 5px;
+	outline: none;
+}
+
+.Accordion-trigger:focus .Accordion-title {
+	border-color: hsl(216, 94%, 43%);
+}
+
+.Accordion-icon {
+	position: absolute;
+	top: 50%;
+	right: 2em;
+
+	width: 0.5rem;
+	height: 0.5rem;
+
+	transform: translateY(-60%) rotate(45deg);
+	pointer-events: none;
+
+	border: solid currentColor;
+	border-width: 0 2px 2px 0;
+}
+
+.Accordion-trigger:focus .Accordion-icon,
+.Accordion-trigger:hover .Accordion-icon {
+	border-color: hsl(216, 94%, 43%);
+}
+
+.Accordion-trigger[aria-expanded="true"] .Accordion-icon {
+	transform: translateY(-50%) rotate(-135deg);
+}
+
+.Accordion-panel {
+	margin: 0;
+	padding: 1em 1.5em;
+}
+
+/* For Edge bug https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/4806035/ */
+.Accordion-panel[hidden] {
+	display: none;
+}
+
+fieldset {
+	margin: 0;
+	padding: 0;
+
+	border: 0;
+}
+
+input {
+	font-size: inherit;
+
+	display: block;
+
+	padding: 0.3em 0.5em;
+
+	border: 1px solid hsl(0, 0%, 42%);
+	border-radius: 0.3em;
 }
