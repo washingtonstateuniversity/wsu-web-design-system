@@ -25,8 +25,9 @@
         "webpack-dev-server": "^3.9.0"
     },
     "scripts": {
-        "start": "webpack-dev-server --env.NODE_ENV=development --watch --config webpack.config.js",
-        "start:all": "webpack-dev-server --env.NODE_ENV=development --watch --config webpack.config.js & webpack --env.NODE_ENV=development --config build.config.js --watch & npm run demo",
+        "start": "npm run start:components & npm run start:build & npm run start:demo",
+        "start:components": "webpack-dev-server --env.NODE_ENV=development --watch --config webpack.config.js",
+        "start:build": "webpack --env.NODE_ENV=development --config build.config.js --watch",
         "start:demo": "cd demo/ && npm run demo",
         "build": "npm run build:system & npm run build:components",
         "build:system": "webpack --env.NODE_ENV=production --config build.config.js --progress",
