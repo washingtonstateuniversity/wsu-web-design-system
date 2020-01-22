@@ -16,14 +16,14 @@ if (typeof nav_vert_wrapper != "undefined" && nav_vert_wrapper != null) {
 	 * Init vertical nav
 	 *
 	 */
-	const vertical_nav = new wsu_bt_vertical_nav({
+	window.vertical_nav = new wsu_bt_vertical_nav({
 		nav_item_selector: '.wsu-s-nav-vertical__nav-link',
 		nav_panel_control_selector: '.wsu-s-nav-vertical__menu-icon-link',
 		nav_panel_selector: '.wsu-s-nav-vertical__wrapper',
 		nav_list_container_selector: '.wsu-s-nav-vertical__nav-list-container',
 	});
 
-	vertical_nav.init();
+	window.vertical_nav.init();
 
 	/**
 	 *
@@ -33,7 +33,7 @@ if (typeof nav_vert_wrapper != "undefined" && nav_vert_wrapper != null) {
 	const close_link = document.querySelector('.wsu-s-nav-vertical__nav-container-close-link');
 
 	close_link.addEventListener('click', function () {
-		vertical_nav.closePanel();
+		window.vertical_nav.closePanel();
 	});
 
 }
