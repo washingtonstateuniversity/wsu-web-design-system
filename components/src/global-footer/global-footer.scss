@@ -1,9 +1,7 @@
-// TODO: nav item links on hover don't go crimson
-
 @import '~@wsu/build-tools/scss/all-the-things';
 
 .wsu-g-footer-wrapper {
-	background-color: color(grey, 90);
+	background-color: color(grey, 80);
 }
 
 .wsu-g-footer {
@@ -17,7 +15,11 @@
 
 	color: color(grey, 0);
 
-	@include font-size(14px, 600);
+	@include font-size(14px);
+}
+
+.wsu-g-footer__nav {
+	margin-right: $unit;
 }
 
 .wsu-g-footer__nav-list {
@@ -33,10 +35,24 @@
 	position: relative;
 
 	@include show-child-class-on-hover('.wsu-g-footer__social-list-container');
+}
 
-	&--show-more {
-		@extend .wsu-g-footer__nav-item;
-	}
+.wsu-g-footer__nav-item--show-more {
+	@extend .wsu-g-footer__nav-item;
+}
+
+.wsu-g-footer__nav-item--show-more .wsu-g-footer__nav-link::before {
+	font-family: "wsu-icons";
+
+	position: absolute;
+	right: -$unit;
+
+	content: '\F109';
+	transition: transform timing();
+}
+
+.wsu-g-footer__nav-item--show-more:hover .wsu-g-footer__nav-link::before {
+	transform: rotate(180deg);
 }
 
 .wsu-g-footer__nav-link {
@@ -50,16 +66,11 @@
 	text-decoration: none;
 
 	@include border-bottom-hover($top-percentage: 92%, $width: 100%);
-	@include font-size(14px, 600);
+	@include font-size(14px);
 
 	&:link,
 	&:visited {
 		color: color(grey, 0);
-	}
-
-	&:hover,
-	&:active {
-		color: color(grey, 30);
 	}
 }
 
@@ -73,7 +84,7 @@
 	right: $unit;
 	bottom: 100%;
 
-	padding: $unit-s 0;
+	padding: $unit-xs 0;
 }
 
 .wsu-g-footer__social-list {
@@ -83,24 +94,24 @@
 	list-style: none;
 
 	border-radius: 3px;
-	background-color: color(grey, 90);
+	background-color: color(grey, 75);
 }
 
 .wsu-g-footer__social-item {
-	padding: $unit-xs $unit-l;
+	@include font-size(24px);
 }
 
 .wsu-g-footer__social-link {
 	display: block;
 
-	padding: $unit-xs $unit-l;
+	padding: $unit-xs $unit;
 
-	&:hover .wsu-g-footer__social-icon {
-		fill: color(grey, 0);
+	transition: color timing();
+	text-decoration: none;
+
+	color: color(grey, 30);
+
+	&:hover {
+		color: color(white, base);
 	}
-}
-
-.wsu-g-footer__social-icon {
-	@include is-icon($unit);
-	fill: color(grey, 30);
 }
