@@ -77,7 +77,10 @@
 }
 
 .wsu-g-footer__social-list {
+	margin: 0;
 	padding: $unit-s 0;
+
+	list-style: none;
 
 	border-radius: 3px;
 	background-color: color(grey, 90);
