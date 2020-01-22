@@ -65,11 +65,12 @@
 		const container = document.querySelector("#links");
 
 		// Get SHA https://gist.github.com/scottwb/374977
-		// 99e490eeae291b8ab6476e6cadda0370a3b82134
-		// f453f23220657d0cd09b2d9bc59c9e833f607195
+		// Master component dist - e42f4c56d4105bdd9e358a994be08d0624cbcd79
+		// Root - f453f23220657d0cd09b2d9bc59c9e833f607195
+
 		axios
 			.get(
-				"https://api.github.com/repos/washingtonstateuniversity/wsu-web-design-system/git/trees/f453f23220657d0cd09b2d9bc59c9e833f607195"
+				"https://api.github.com/repos/washingtonstateuniversity/wsu-web-design-system/git/trees/e42f4c56d4105bdd9e358a994be08d0624cbcd79"
 			)
 			.then(function (response) {
 				let data = response.data.tree;
