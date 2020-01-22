@@ -1,3 +1,5 @@
+/* Variables
+======================= */
 :root {
 	--unit-2xs: 5px;
 	--unit-xs: 10px;
@@ -9,8 +11,7 @@
 	--unit-3xl: 40px;
 }
 
-
-/* TODO: Cleanup/organize styles
+/* Global containers
 ======================= */
 .wsu-g-container {
 	display: flex;
@@ -19,6 +20,13 @@
 	height: 100%;
 }
 
+.wsu-g-content {
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+/* Site containers
+======================= */
 .wsu-s-wrapper {
 	width: 100%;
 
@@ -27,11 +35,4 @@
 
 .wsu-s-main-container {
 	max-width: 1440px;
-	/* margin-right: var(--unit-3xl); */
-	/* margin-left: var(--unit-3xl); */
-}
-
-.wsu-g-content {
-	max-width: 1440px;
-	margin: 0 auto;
 }
