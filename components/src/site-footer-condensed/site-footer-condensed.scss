@@ -36,6 +36,11 @@
 
 	.wsu-s-footer-condensed__social-list {
 		display: flex;
+
+		margin: 0;
+		padding: 0;
+
+		list-style: none;
 	}
 
 	.wsu-s-footer-condensed__social-item-link {

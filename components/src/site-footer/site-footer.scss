@@ -41,6 +41,11 @@
 		display: flex;
 		flex-direction: column;
 
+		margin: 0;
+		padding: 0;
+
+		list-style: none;
+
 		@include mq('small') {
 			flex-flow: row wrap;
 		}
@@ -84,6 +89,13 @@
 		}
 	}
 
+	.wsu-s-footer__sub-menu {
+		margin: 0;
+		padding: 0;
+
+		list-style: none;
+	}
+
 	/* Contact Container
 	======================= */
 	.wsu-s-footer__contact-info {
@@ -110,6 +122,11 @@
 
 	.wsu-s-footer__social-list {
 		display: flex;
+
+		margin: 0;
+		padding: 0;
+
+		list-style: none;
 	}
 
 	.wsu-s-footer__social-item-link {

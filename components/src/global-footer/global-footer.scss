@@ -23,7 +23,10 @@
 .wsu-g-footer__nav-list {
 	display: flex;
 
+	margin: 0;
 	padding: 0;
+
+	list-style: none;
 }
 
 .wsu-g-footer__nav-item {
@@ -74,8 +77,7 @@
 }
 
 .wsu-g-footer__social-list {
-	// TODO: Fix padding reset in _component-rest
-	padding: $unit-s 0 !important;
+	padding: $unit-s 0;
 
 	border-radius: 3px;
 	background-color: color(grey, 90);
