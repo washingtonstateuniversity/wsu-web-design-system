@@ -10328,9 +10328,9 @@ function (_BaseClient) {
 
 /***/ }),
 
-/***/ "./node_modules/webpack-dev-server/client/index.js?http://localhost:8082":
+/***/ "./node_modules/webpack-dev-server/client/index.js?http://localhost:8080":
 /*!*********************************************************!*\
-  !*** (webpack)-dev-server/client?http://localhost:8082 ***!
+  !*** (webpack)-dev-server/client?http://localhost:8080 ***!
   \*********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -10512,7 +10512,7 @@ var onSocketMessage = {
   }
 };
 socket(socketUrl, onSocketMessage);
-/* WEBPACK VAR INJECTION */}.call(this, "?http://localhost:8082"))
+/* WEBPACK VAR INJECTION */}.call(this, "?http://localhost:8080"))
 
 /***/ }),
 
@@ -11174,12 +11174,12 @@ module.exports.formatError = function(err) {
 
 /***/ 6:
 /*!***********************************************************************************************************!*\
-  !*** multi (webpack)-dev-server/client?http://localhost:8082 ./components/src/site-nav-vertical/index.js ***!
+  !*** multi (webpack)-dev-server/client?http://localhost:8080 ./components/src/site-nav-vertical/index.js ***!
   \***********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/nicdford/vagrant-local/www/wsu-web-design-system/node_modules/webpack-dev-server/client/index.js?http://localhost:8082 */"./node_modules/webpack-dev-server/client/index.js?http://localhost:8082");
+__webpack_require__(/*! /Users/nicdford/vagrant-local/www/wsu-web-design-system/node_modules/webpack-dev-server/client/index.js?http://localhost:8080 */"./node_modules/webpack-dev-server/client/index.js?http://localhost:8080");
 module.exports = __webpack_require__(/*! ./components/src/site-nav-vertical/index.js */"./components/src/site-nav-vertical/index.js");
 
 

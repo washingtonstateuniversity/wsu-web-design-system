@@ -17,12 +17,14 @@
 
 		color: color(grey, 75);
 
-		@include font-size(18px, 600);
+		@include font-size(18px, 500);
 
 	}
 
 	.wsu-s-footer__overview-desc {
 		margin-bottom: $unit-xl;
+
+		color: color(grey, 75);
 
 		@include font-size(16px, 300, 1.5);
 	}
@@ -40,6 +42,11 @@
 	.wsu-s-footer_nav-list {
 		display: flex;
 		flex-direction: column;
+
+		margin: 0;
+		padding: 0;
+
+		list-style: none;
 
 		@include mq('small') {
 			flex-flow: row wrap;
@@ -84,10 +91,19 @@
 		}
 	}
 
+	.wsu-s-footer__sub-menu {
+		margin: 0;
+		padding: 0;
+
+		list-style: none;
+	}
+
 	/* Contact Container
 	======================= */
 	.wsu-s-footer__contact-info {
 		margin-bottom: $unit-xs;
+
+		color: color(grey, 75);
 
 		@include font-size(16px, $font-weight: 300);
 	}
@@ -110,37 +126,40 @@
 
 	.wsu-s-footer__social-list {
 		display: flex;
+
+		margin: 0;
+		padding: 0;
+
+		list-style: none;
 	}
 
 	.wsu-s-footer__social-item-link {
 		display: block;
 
 		margin-right: $unit;
-	}
 
-	.wsu-s-footer__social-icon {
-		transition: fill timing();
+		transition: color timing();
+		text-decoration: none;
 
-		@include is-icon(25px);
-		fill: color(grey, 40);
+		color: color(grey, 30);
+
+		@include font-size(24px);
 
 		&:hover {
-			fill: color(grey, 70);
+			color: color(grey, 50);
 		}
 	}
 
 	.wsu-s-footer__coug-watermark {
-		position: absolute;    right: $unit-3xl;
-		bottom: $unit-3xl;
-		}
+		position: absolute;
+		right: 60px;
+		bottom: 55px;
 
+		width: 125px;
+	}
 
-	.wsu-s-footer__coug-head {
-		opacity: .10;
-
-		fill: color(grey, 50);
-		@include is-icon(150px);
-
+	.wsu-s-footer__logo-svg {
+		fill: color(grey, 10);
 	}
 }
 /* == End Base Styles == */
@@ -174,6 +193,7 @@
 	}
 
 	.wsu-s-footer__social-item-link {
+		color: grey,
 
 		&:hover .wsu-s-footer__social-icon {
 			fill: color(grey, 0);

@@ -1,3 +1,5 @@
+// TODO fix icons
+
 @import '~@wsu/build-tools/scss/all-the-things';
 
 .wsu-g-header__wrapper {
@@ -48,16 +50,13 @@
 
 	margin-right: $unit-xl;
 
-	transition: width timing(), height timing();
-
 	background-color: color(primary, light);
 
-	@include is-icon--boxed($icon-size: 34px);
-	//TODO: add -3px vertical offset
+	@include is-icon--boxed($icon-size: 34px, $icon-y-offset: -2px);
 }
 
 .wsu-g-header__logo-svg {
-	fill: white;
+	fill: color(white, base);
 }
 
 .wsu-g-header__logo-text {

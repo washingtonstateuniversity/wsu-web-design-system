@@ -15,11 +15,13 @@
 	.wsu-s-footer-condensed__contact-info {
 		margin-bottom: $unit-xs;
 
+		color: color(grey, 75);
+
 		@include font-size(14px, $font-weight: 300);
 	}
 
 	.wsu-s-footer-condensed__name {
-		font-weight: 600;
+		font-weight: 500;
 	}
 
 	.wsu-s-footer-condensed__contact-phone,
@@ -36,38 +38,42 @@
 
 	.wsu-s-footer-condensed__social-list {
 		display: flex;
+
+		margin: 0;
+		padding: 0;
+
+		list-style: none;
 	}
 
 	.wsu-s-footer-condensed__social-item-link {
 		display: block;
 
 		margin-right: $unit;
-	}
 
-	.wsu-s-footer-condensed__social-icon {
-		transition: fill timing();
+		transition: color timing();
+		text-decoration: none;
 
-		@include is-icon(20px);
-		fill: color(grey, 50);
+		color: color(grey, 30);
+
+		@include font-size(24px)
 
 		&:hover {
-			fill: color(grey, 70);
+			color: color(grey, 50);
 		}
 	}
 
 	.wsu-s-footer-condensed__coug-watermark {
 		position: absolute;
-		right: $unit-3xl;
+		top: calc(50% - 3px);
+		right: $unit;
 
-		@include is-vertically-centered;
+		width: 100px;
+
+		transform: translateY(-50%);
 	}
 
-
-	.wsu-s-footer-condensed__coug-head {
-		opacity: .10;
-
-		fill: color(grey, 50);
-		@include is-icon(85px);
+	.wsu-s-footer-condensed__logo-svg {
+		fill: color(grey, 10);
 	}
 }
 /* == End Base Styles == */
