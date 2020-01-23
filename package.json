@@ -28,7 +28,7 @@
         "start": "npm run start:components & npm run build:system-watch & npm run start:demo",
         "start:components": "webpack-dev-server --env.NODE_ENV=development --watch --config webpack.config.js",
         "start:demo": "cd demo/ && npm run demo",
-        "build": "npm run build:system & npm run build:components",
+        "build": "npm run build:system & npm run build:components & npm run build:demo",
         "build:system": "webpack --env.NODE_ENV=production --config build.config.js --progress",
         "build:system-watch": "webpack --env.NODE_ENV=production --config build.config.js --watch",
         "build:components": "webpack --env.NODE_ENV=production --config webpack.config.js --progress",
