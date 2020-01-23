@@ -142,7 +142,7 @@
 	& > .wsu-s-nav-horizontal__nav-link:after {
 		padding-left: $unit-2xs;
 
-		@include is-psuedo-element($content: ">", $display: inline-block);
+		@include is-psuedo-element($content: ">", $display: inline-block); // TODO replace with correct icon
 	}
 
 
