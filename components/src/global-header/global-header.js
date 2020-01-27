@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+	// TODO add sanity checks for items to make sure they exist before toggling
+
 	/**
 	 *
 	 * More links
