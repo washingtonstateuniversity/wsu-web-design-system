@@ -226,7 +226,11 @@ Array.prototype.slice.call(document.querySelectorAll('.Accordion')).forEach(func
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+<<<<<<< Updated upstream
 throw new Error("Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nError: ENOENT: no such file or directory, open '/Users/nicdford/vagrant-local/www/wsu-web-design-system/components/src/content-accordion/content-accordion.scss'\n    at runLoaders (/Users/nicdford/vagrant-local/www/wsu-web-design-system/node_modules/webpack/lib/NormalModule.js:316:20)\n    at /Users/nicdford/vagrant-local/www/wsu-web-design-system/node_modules/loader-runner/lib/LoaderRunner.js:367:11\n    at Array.<anonymous> (/Users/nicdford/vagrant-local/www/wsu-web-design-system/node_modules/loader-runner/lib/LoaderRunner.js:203:19)\n    at Storage.finished (/Users/nicdford/vagrant-local/www/wsu-web-design-system/node_modules/enhanced-resolve/lib/CachedInputFileSystem.js:55:16)\n    at ReadFileContext.provider (/Users/nicdford/vagrant-local/www/wsu-web-design-system/node_modules/enhanced-resolve/lib/CachedInputFileSystem.js:91:9)\n    at ReadFileContext.callback (/Users/nicdford/vagrant-local/www/wsu-web-design-system/node_modules/graceful-fs/graceful-fs.js:115:16)\n    at FSReqWrap.readFileAfterOpen [as oncomplete] (fs.js:237:13)");
+=======
+throw new Error("Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nError: ENOENT: no such file or directory, open '/Users/nicdford/vagrant-local/www/wsu-web-design-system/components/src/content-accordion/content-accordion.scss'\n    at runLoaders (/Users/nicdford/vagrant-local/www/wsu-web-design-system/node_modules/webpack/lib/NormalModule.js:316:20)\n    at /Users/nicdford/vagrant-local/www/wsu-web-design-system/node_modules/loader-runner/lib/LoaderRunner.js:367:11\n    at /Users/nicdford/vagrant-local/www/wsu-web-design-system/node_modules/loader-runner/lib/LoaderRunner.js:203:19\n    at process.nextTick (/Users/nicdford/vagrant-local/www/wsu-web-design-system/node_modules/enhanced-resolve/lib/CachedInputFileSystem.js:85:15)\n    at process._tickCallback (internal/process/next_tick.js:61:11)");
+>>>>>>> Stashed changes
 
 /***/ }),
 
@@ -9204,9 +9208,15 @@ function (_BaseClient) {
 
 /***/ }),
 
+<<<<<<< Updated upstream
 /***/ "./node_modules/webpack-dev-server/client/index.js?http://localhost:8082":
 /*!*********************************************************!*\
   !*** (webpack)-dev-server/client?http://localhost:8082 ***!
+=======
+/***/ "./node_modules/webpack-dev-server/client/index.js?http://localhost:8080":
+/*!*********************************************************!*\
+  !*** (webpack)-dev-server/client?http://localhost:8080 ***!
+>>>>>>> Stashed changes
   \*********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -9388,7 +9398,11 @@ var onSocketMessage = {
   }
 };
 socket(socketUrl, onSocketMessage);
+<<<<<<< Updated upstream
 /* WEBPACK VAR INJECTION */}.call(this, "?http://localhost:8082"))
+=======
+/* WEBPACK VAR INJECTION */}.call(this, "?http://localhost:8080"))
+>>>>>>> Stashed changes
 
 /***/ }),
 
@@ -10050,12 +10064,20 @@ module.exports.formatError = function(err) {
 
 /***/ 7:
 /*!***********************************************************************************************************!*\
+<<<<<<< Updated upstream
   !*** multi (webpack)-dev-server/client?http://localhost:8082 ./components/src/content-accordion/index.js ***!
+=======
+  !*** multi (webpack)-dev-server/client?http://localhost:8080 ./components/src/content-accordion/index.js ***!
+>>>>>>> Stashed changes
   \***********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< Updated upstream
 __webpack_require__(/*! /Users/nicdford/vagrant-local/www/wsu-web-design-system/node_modules/webpack-dev-server/client/index.js?http://localhost:8082 */"./node_modules/webpack-dev-server/client/index.js?http://localhost:8082");
+=======
+__webpack_require__(/*! /Users/nicdford/vagrant-local/www/wsu-web-design-system/node_modules/webpack-dev-server/client/index.js?http://localhost:8080 */"./node_modules/webpack-dev-server/client/index.js?http://localhost:8080");
+>>>>>>> Stashed changes
 module.exports = __webpack_require__(/*! ./components/src/content-accordion/index.js */"./components/src/content-accordion/index.js");
 
 
