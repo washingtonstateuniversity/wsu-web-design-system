@@ -1,8 +1,13 @@
 @import '~@wsu/build-tools/scss/all-the-things';
 
 .wsu-g-header__wrapper {
-	position: relative;
+	position: fixed;
 	z-index: z('modal');
+	top: 0;
+
+	width: 100%;
+
+	transition: top timing();
 }
 
 .wsu-g-header {
@@ -28,7 +33,7 @@
 
 	@include font-size(14px, 500);
 	@include mq('small') {
-		flex: 1 1 auto;
+		flex: 1 1 0;
 
 		padding-right: $unit-xl;
 	}
@@ -184,4 +189,15 @@
 	&:active {
 		color: color(primary, light);
 	}
+}
+
+/* Vertical nav is open
+======================= */
+
+body.wsu-s-nav-vertical__nav--is-open .wsu-g-header__wrapper {
+	top: 0;
+}
+
+body.wsu-g-header--is-hidden .wsu-g-header__wrapper {
+	top: -65px;
 }

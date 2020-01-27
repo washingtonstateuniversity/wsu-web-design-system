@@ -32,7 +32,8 @@ if (typeof nav_vert_wrapper != "undefined" && nav_vert_wrapper != null) {
 	 */
 	const close_link = document.querySelector('.wsu-s-nav-vertical__nav-container-close-link');
 
-	close_link.addEventListener('click', function () {
+	close_link.addEventListener('click', function (e) {
+		e.preventDefault();
 		window.vertical_nav.closePanel();
 	});
 
