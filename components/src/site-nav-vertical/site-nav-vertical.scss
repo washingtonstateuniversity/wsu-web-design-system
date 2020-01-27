@@ -14,7 +14,7 @@
 }
 
 .wsu-s-nav-vertical__wrapper--open::after {
-	position: absolute;
+	position: fixed;
 	z-index: z('header');
 	top: 0;
 	left: 0;
@@ -36,7 +36,10 @@
 /* Menu open/close button
 ======================= */
 .wsu-s-nav-vertical__menu-icon-link {
-	position: relative;
+	position: fixed;
+	z-index: z('dropdown');
+	top: 0;
+	left: 0;
 
 	display: flex;
 	align-items: center;
@@ -44,7 +47,7 @@
 	justify-content: center;
 
 	width: 60px;
-	height: 100%;
+	height: 100vh;
 
 	transition: transform timing(husky, ease);
 	transition-delay: 200ms;
@@ -161,6 +164,7 @@
 	left: 0;
 
 	display: flex;
+	overflow: auto;
 	align-items: flex-end;
 	flex-flow: column nowrap;
 
@@ -331,6 +335,12 @@
 	height: 0;
 
 	opacity: 0;
+}
+
+body.wsu-s-nav-vertical__nav--is-open {
+	overflow: hidden;
+
+	height: 100vh;
 }
 
 

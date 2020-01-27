@@ -7,9 +7,11 @@ document.addEventListener("DOMContentLoaded", function () {
 	 */
 	const global_header_links_toggle = document.querySelector('.wsu-g-header__more-icon-link');
 
-	global_header_links_toggle.addEventListener('click', function () {
-		console.log('Links toggle -- Coming soon!');
-	});
+	if (typeof global_header_links_toggle != "undefined" && global_header_links_toggle != null) {
+		global_header_links_toggle.addEventListener('click', function () {
+			console.log('Links toggle -- Coming soon!');
+		});
+	}
 
 	/**
 	 *
@@ -18,9 +20,11 @@ document.addEventListener("DOMContentLoaded", function () {
 	 */
 	const global_header_search_toggle = document.querySelector('.wsu-g-header__search-icon-link');
 
-	global_header_search_toggle.addEventListener('click', function () {
-		console.log('Search toggle -- Coming soon!');
-	});
+	if (typeof global_header_search_toggle != "undefined" && global_header_search_toggle != null) {
+		global_header_search_toggle.addEventListener('click', function () {
+			console.log('Search toggle -- Coming soon!');
+		});
+	}
 
 	/**
 	 *
@@ -29,8 +33,25 @@ document.addEventListener("DOMContentLoaded", function () {
 	 */
 	const global_header_menu_toggle = document.querySelector('.wsu-g-header__menu-icon-link');
 
-	global_header_menu_toggle.addEventListener('click', function () {
-		window.vertical_nav.togglePanel();
+	if (typeof global_header_menu_toggle != "undefined" && global_header_menu_toggle != null) {
+		global_header_menu_toggle.addEventListener('click', function () {
+			window.vertical_nav.togglePanel();
+		});
+	}
+
+	/**
+	 *
+	 * Hide on scroll
+	 *
+	 */
+	document.addEventListener('scroll', function () {
+		setTimeout(() => {
+			if (document.body.scrollTop > 30) {
+				document.body.classList.add('wsu-g-header--is-hidden');
+			} else {
+				document.body.classList.remove('wsu-g-header--is-hidden');
+			}
+		}, 100);
 	});
 
 });

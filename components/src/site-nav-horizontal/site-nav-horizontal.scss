@@ -130,21 +130,32 @@
 	}
 }
 
-// .wsu-s-nav-horizontal__more-button {
-// 	@include is-icon(16px);
-// 	fill: color(grey, 40);
-// }
+.wsu-s-nav-horizontal__nav-link--button {
+	display: block;
+
+	margin: $unit-2xs $unit;
+	padding: $unit $unit-2xs;
+
+	color: color(white, base) !important;
+	border-radius: 4px;
+	background-color: color(primary, light);
+
+	&:hover {
+		padding-left: $unit !important;
+	}
+}
 
 // More menu styles
 .wsu-s-nav-horizontal__nav-item--more {
 	position: relative;
 
-	& > .wsu-s-nav-horizontal__nav-link:after {
-		padding-left: $unit-2xs;
+	transform: translateY(-18px);
 
-		@include is-psuedo-element($content: ">", $display: inline-block); // TODO replace with correct icon
+	.wsu-s-nav-horizontal__nav-link {
+		font-size: 28px;
+
+		padding: $unit-s $unit;
 	}
-
 
 	& > .wsu-s-nav-horizontal__nav-list,
 	& > .wsu-s-nav-horizontal__nav-list--has-more-items {
@@ -175,7 +186,7 @@
 		}
 
 		.wsu-s-nav-horizontal__nav-link:hover {
-			padding-left: $unit + $unit-xs; // TODO: move over 5px using relative positioning instead of padding
+			padding-left: $unit + $unit-2xs;
 		}
 
 		.wsu-s-nav-horizontal__nav-link--active {
