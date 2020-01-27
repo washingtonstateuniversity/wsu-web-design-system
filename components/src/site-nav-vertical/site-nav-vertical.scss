@@ -159,8 +159,8 @@
 ======================= */
 .wsu-s-nav-vertical__nav-container {
 	position: fixed;
-	z-index: z('modal');
-	top: 65px;
+	z-index: z('modal') - 1;
+	top: 0;
 	left: 0;
 
 	display: flex;
@@ -170,6 +170,7 @@
 
 	width: 365px;
 	height: 100%;
+	padding-top: 65px;
 
 	transition: transform timing();
 	transform: translateX(-365px);
