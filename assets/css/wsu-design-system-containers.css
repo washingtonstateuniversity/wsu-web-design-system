@@ -40,4 +40,5 @@
 	max-width: 1440px;
 	position: relative;
 	z-index: 5000;
+	flex-grow: 1;
 }
