@@ -7,6 +7,10 @@
 	height: 100%;
 }
 
+.wsu-s-nav-vertical__wrapper ~ .wsu-s-wrapper {
+	padding-left: 61px;
+}
+
 // Overlay
 .wsu-s-nav-vertical__wrapper::after {
 	content: " ";
