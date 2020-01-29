@@ -334,6 +334,8 @@
 	height: auto;
 
 	opacity: 1;
+
+	overflow: hidden;
 }
 
 .wsu-s-nav-vertical__nav-link[aria-expanded="false"] ~ .wsu-s-nav-vertical__nav-list {
@@ -342,6 +344,8 @@
 	height: 0;
 
 	opacity: 0;
+
+	overflow: hidden;
 }
 
 body.wsu-s-nav-vertical__nav--is-open {
