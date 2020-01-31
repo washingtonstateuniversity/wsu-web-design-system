@@ -34,8 +34,8 @@ document.addEventListener("DOMContentLoaded", function () {
 	const global_header_menu_toggle = document.querySelector('.wsu-g-header__menu-icon-link');
 
 	if (typeof global_header_menu_toggle != "undefined" && global_header_menu_toggle != null) {
-		global_header_menu_toggle.addEventListener('click', function () {
-			window.vertical_nav.togglePanel();
+		global_header_menu_toggle.addEventListener('click', function ( e ) {
+			window.vertical_nav.togglePanel( e );
 		});
 	}
 

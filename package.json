@@ -4,7 +4,9 @@
     "description": "Web Design System for Washington State University.",
     "private": true,
     "main": "src/index.js",
-    "dependencies": {},
+    "dependencies": {
+        "mitt": "^1.2.0"
+    },
     "devDependencies": {
         "@babel/core": "^7.8.3",
         "@babel/preset-env": "^7.8.3",

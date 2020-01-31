@@ -7,6 +7,10 @@
 	height: 100%;
 }
 
+.wsu-s-nav-vertical__wrapper ~ .wsu-s-wrapper {
+	padding-left: 61px;
+}
+
 // Overlay
 .wsu-s-nav-vertical__wrapper::after {
 	content: " ";
@@ -202,6 +206,7 @@
 	&:hover,
 	&:visited {
 		color: color(grey, 80);
+		outline: none;
 	}
 }
 
@@ -300,6 +305,7 @@
 		color: color(grey, 90);
 	}
 
+	&:focus,
 	&:hover {
 		border-left: 3px solid color(grey, 30);
 		background-color: color(grey, 5);
@@ -328,6 +334,8 @@
 	height: auto;
 
 	opacity: 1;
+
+	overflow: hidden;
 }
 
 .wsu-s-nav-vertical__nav-link[aria-expanded="false"] ~ .wsu-s-nav-vertical__nav-list {
@@ -336,6 +344,8 @@
 	height: 0;
 
 	opacity: 0;
+
+	overflow: hidden;
 }
 
 body.wsu-s-nav-vertical__nav--is-open {
