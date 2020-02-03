@@ -1,2 +1,137 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,800,800i&display=swap);@import url(https://cdn.web.wsu.edu/designsystem/1.x/wsu-icons/dist/wsu-icons.bundle.css);html{font-family:Montserrat,sans-serif;font-size:16px}a{color:#a60f2d}a:active,a:hover{color:#ca1237}a:visited{color:#a60f2d}h1,h2,h3,h4,h5,h6{-webkit-transition:font-size .3s cubic-bezier(0,0,.03,1);-o-transition:font-size .3s cubic-bezier(0,0,.03,1);transition:font-size .3s cubic-bezier(0,0,.03,1)}.wsu-u-visually-hidden{position:absolute;overflow:hidden;clip:rect(1px,1px,1px,1px);width:1px;height:1px;margin:-1px;padding:0;-webkit-clip-path:inset(50%);clip-path:inset(50%)}.wsu-c-icon-container{max-width:800px;margin:30px auto}.wsu-icon{display:inline-block;padding:20px;-webkit-transition:color .3s cubic-bezier(0,0,.03,1);-o-transition:color .3s cubic-bezier(0,0,.03,1);transition:color .3s cubic-bezier(0,0,.03,1)}.wsu-icon:hover{color:#ca1237}
-/*# sourceMappingURL=content-icons.css.map */
+@import url(https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,800,800i&display=swap);
+@import url(https://cdn.web.wsu.edu/designsystem/1.x/wsu-icons/dist/wsu-icons.bundle.css);
+/**
+                        // //
+                       // //
+                      // //   -   _-^^
+                    (cCCCCCCCCCCC) _-^^
+             (CC)  (CCCCCCCCCCCCCC)_-^^
+          (CCCC)  (CCC^^    ^CCCC)
+         (CCCCCC CC CCCC^^^  \C|
+       (Cc c^CCC CCCCCC)      \/
+      (CCC^  CCC CCCCC)
+     (CCCCCc CCCC CCCCC)
+       ccCCCCCCCC CCCCC)           
+    (CCc  CCCCCCC CCCC)\\       /|
+   (CCCx (CCCCCCCC CCCC)\\     /C|
+  (CCCCCc_CCCCCCCC CCCC) \CCccc/CC|
+ (CCCCCCCCCC/\CCCC CCCCc) CCCCCCC|
+(cCC^^^CCCCC  CCCC CCCCC)  CCCCCC
+    (CCCCC C^ CCC  CCCCCC) ^^^^^^
+    cCCC  CCC____CCCCCCCC
+   (CC  CCCCCCCCCCCCCCCC /\
+      ^^^^^^^^^CCCCCCC^ /C|
+
+    WSU Build Tools
+*/
+/* Units
+======================= */
+/* Modularscale
+======================= */
+/* Breakpoints
+======================= */
+/* Color Variables for Mixin
+======================= */
+/* Typography
+======================= */
+/* Sizing Units
+======================= */
+/* Transition Variables
+======================= */
+/* Elevation Variables
+======================= */
+/* Is pixel value check
+======================= */
+/* Is rem value check
+======================= */
+/* Get font size of value
+======================= */
+/* Border Bottom Hover
+======================= */
+/* Show Adjacent Sibling on Hover
+======================= */
+/* Show Adjacent Sibling on Hover
+======================= */
+/* Animate Element
+======================= */
+/* Fade in down
+======================= */
+/* Fade in right
+======================= */
+/* Font size 
+ * Example usage: @include font-size(ms(6), 700, 1.8);
+ * @params $size, $font-weight, $line-height
+======================= */
+/* Is Icon
+======================= */
+/* Is Icon Centered in Container
+======================= */
+/* Is a psuedo element
+======================= */
+/* Is visually hidden
+======================= */
+/* Is vertically centered
+======================= */
+/* Is horizontally centered
+======================= */
+/**
+* function for setting transition-duration and transition-timing-function
+*
+* Example:
+* transition: background-color timing(cougar, standard);
+*/
+/* Document Styles
+======================= */
+html {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px; }
+
+/* Link Styles
+======================= */
+a {
+  color: #A60F2D; }
+  a:active {
+    color: #CA1237; }
+  a:hover {
+    color: #CA1237; }
+  a:visited {
+    color: #A60F2D; }
+
+/* Heading Styles
+======================= */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  -webkit-transition: font-size 300ms cubic-bezier(0, 0, 0.03, 1);
+  -o-transition: font-size 300ms cubic-bezier(0, 0, 0.03, 1);
+  transition: font-size 300ms cubic-bezier(0, 0, 0.03, 1); }
+
+.wsu-u-visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%); }
+
+.wsu-c-icon-container {
+  max-width: 800px;
+  margin: 30px auto; }
+
+.wsu-icon {
+  display: inline-block;
+  padding: 20px;
+  -webkit-transition: color 300ms cubic-bezier(0, 0, 0.03, 1);
+  -o-transition: color 300ms cubic-bezier(0, 0, 0.03, 1);
+  transition: color 300ms cubic-bezier(0, 0, 0.03, 1); }
+  .wsu-icon:hover {
+    color: #CA1237; }
+
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9jb21wb25lbnRzL3NyYy9jb250ZW50LWljb25zL2NvbnRlbnQtaWNvbnMuc2NzcyAoMikiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLGtCQUFrQjs7QUFFbEI7QUFDQTtBQUNBO0FBQ0EsaUJBQWlCO0FBQ2pCO0FBQ0EsbUJBQW1CO0FBQ25CO0FBQ0EsbUJBQW1CO0FBQ25CO0FBQ0EsbUJBQW1COztBQUVuQjtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLDBEQUEwRDs7QUFFMUQ7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsZ0NBQWdDOztBQUVoQztBQUNBO0FBQ0Esb0JBQW9COztBQUVwQjtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0Esc0RBQXNEO0FBQ3REO0FBQ0EsbUJBQW1CIiwiZmlsZSI6ImNvbXBvbmVudHMvZGlzdC9jb250ZW50LWljb25zL2NvbnRlbnQtaWNvbnMuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLyoqXHJcbiAgICAgICAgICAgICAgICAgICAgICAgIC8vIC8vXHJcbiAgICAgICAgICAgICAgICAgICAgICAgLy8gLy9cclxuICAgICAgICAgICAgICAgICAgICAgIC8vIC8vICAgLSAgIF8tXl5cclxuICAgICAgICAgICAgICAgICAgICAoY0NDQ0NDQ0NDQ0NDKSBfLV5eXHJcbiAgICAgICAgICAgICAoQ0MpICAoQ0NDQ0NDQ0NDQ0NDQ0MpXy1eXlxyXG4gICAgICAgICAgKENDQ0MpICAoQ0NDXl4gICAgXkNDQ0MpXHJcbiAgICAgICAgIChDQ0NDQ0MgQ0MgQ0NDQ15eXiAgXFxDfFxyXG4gICAgICAgKENjIGNeQ0NDIENDQ0NDQykgICAgICBcXC9cclxuICAgICAgKENDQ14gIENDQyBDQ0NDQylcclxuICAgICAoQ0NDQ0NjIENDQ0MgQ0NDQ0MpXHJcbiAgICAgICBjY0NDQ0NDQ0NDIENDQ0NDKSAgICAgICAgICAgXHJcbiAgICAoQ0NjICBDQ0NDQ0NDIENDQ0MpXFxcXCAgICAgICAvfFxyXG4gICAoQ0NDeCAoQ0NDQ0NDQ0MgQ0NDQylcXFxcICAgICAvQ3xcclxuICAoQ0NDQ0NjX0NDQ0NDQ0NDIENDQ0MpIFxcQ0NjY2MvQ0N8XHJcbiAoQ0NDQ0NDQ0NDQy9cXENDQ0MgQ0NDQ2MpIENDQ0NDQ0N8XHJcbihjQ0NeXl5DQ0NDQyAgQ0NDQyBDQ0NDQykgIENDQ0NDQ1xyXG4gICAgKENDQ0NDIENeIENDQyAgQ0NDQ0NDKSBeXl5eXl5cclxuICAgIGNDQ0MgIENDQ19fX19DQ0NDQ0NDQ1xyXG4gICAoQ0MgIENDQ0NDQ0NDQ0NDQ0NDQ0MgL1xcXHJcbiAgICAgIF5eXl5eXl5eXkNDQ0NDQ0NeIC9DfFxyXG5cclxuICAgIFdTVSBCdWlsZCBUb29sc1xyXG4qL1xuLyogVW5pdHNcclxuPT09PT09PT09PT09PT09PT09PT09PT0gKi9cbi8qIE1vZHVsYXJzY2FsZVxyXG49PT09PT09PT09PT09PT09PT09PT09PSAqL1xuLyogQnJlYWtwb2ludHNcclxuPT09PT09PT09PT09PT09PT09PT09PT0gKi9cbi8qIENvbG9yIFZhcmlhYmxlcyBmb3IgTWl4aW5cclxuPT09PT09PT09PT09PT09PT09PT09PT0gKi9cbi8qIFR5cG9ncmFwaHlcclxuPT09PT09PT09PT09PT09PT09PT09PT0gKi9cbi8qIFNpemluZyBVbml0c1xyXG49PT09PT09PT09PT09PT09PT09PT09PSAqL1xuLyogVHJhbnNpdGlvbiBWYXJpYWJsZXNcclxuPT09PT09PT09PT09PT09PT09PT09PT0gKi9cbi8qIEVsZXZhdGlvbiBWYXJpYWJsZXNcclxuPT09PT09PT09PT09PT09PT09PT09PT0gKi9cbi8qIElzIHBpeGVsIHZhbHVlIGNoZWNrXHJcbj09PT09PT09PT09PT09PT09PT09PT09ICovXG4vKiBJcyByZW0gdmFsdWUgY2hlY2tcclxuPT09PT09PT09PT09PT09PT09PT09PT0gKi9cbi8qIEdldCBmb250IHNpemUgb2YgdmFsdWVcclxuPT09PT09PT09PT09PT09PT09PT09PT0gKi9cbi8qIEJvcmRlciBCb3R0b20gSG92ZXJcclxuPT09PT09PT09PT09PT09PT09PT09PT0gKi9cbi8qIFNob3cgQWRqYWNlbnQgU2libGluZyBvbiBIb3ZlclxyXG49PT09PT09PT09PT09PT09PT09PT09PSAqL1xuLyogU2hvdyBBZGphY2VudCBTaWJsaW5nIG9uIEhvdmVyXHJcbj09PT09PT09PT09PT09PT09PT09PT09ICovXG4vKiBBbmltYXRlIEVsZW1lbnRcclxuPT09PT09PT09PT09PT09PT09PT09PT0gKi9cbi8qIEZhZGUgaW4gZG93blxyXG49PT09PT09PT09PT09PT09PT09PT09PSAqL1xuLyogRmFkZSBpbiByaWdodFxyXG49PT09PT09PT09PT09PT09PT09PT09PSAqL1xuLyogRm9udCBzaXplIFxyXG4gKiBFeGFtcGxlIHVzYWdlOiBAaW5jbHVkZSBmb250LXNpemUobXMoNiksIDcwMCwgMS44KTtcclxuICogQHBhcmFtcyAkc2l6ZSwgJGZvbnQtd2VpZ2h0LCAkbGluZS1oZWlnaHRcclxuPT09PT09PT09PT09PT09PT09PT09PT0gKi9cbi8qIElzIEljb25cclxuPT09PT09PT09PT09PT09PT09PT09PT0gKi9cbi8qIElzIEljb24gQ2VudGVyZWQgaW4gQ29udGFpbmVyXHJcbj09PT09PT09PT09PT09PT09PT09PT09ICovXG4vKiBJcyBhIHBzdWVkbyBlbGVtZW50XHJcbj09PT09PT09PT09PT09PT09PT09PT09ICovXG4vKiBJcyB2aXN1YWxseSBoaWRkZW5cclxuPT09PT09PT09PT09PT09PT09PT09PT0gKi9cbi8qIElzIHZlcnRpY2FsbHkgY2VudGVyZWRcclxuPT09PT09PT09PT09PT09PT09PT09PT0gKi9cbi8qIElzIGhvcml6b250YWxseSBjZW50ZXJlZFxyXG49PT09PT09PT09PT09PT09PT09PT09PSAqL1xuLyoqXHJcbiogZnVuY3Rpb24gZm9yIHNldHRpbmcgdHJhbnNpdGlvbi1kdXJhdGlvbiBhbmQgdHJhbnNpdGlvbi10aW1pbmctZnVuY3Rpb25cclxuKlxyXG4qIEV4YW1wbGU6XHJcbiogdHJhbnNpdGlvbjogYmFja2dyb3VuZC1jb2xvciB0aW1pbmcoY291Z2FyLCBzdGFuZGFyZCk7XHJcbiovXG4vKiBEb2N1bWVudCBTdHlsZXNcclxuPT09PT09PT09PT09PT09PT09PT09PT0gKi9cbmh0bWwge1xuICBmb250LWZhbWlseTogXCJNb250c2VycmF0XCIsIHNhbnMtc2VyaWY7XG4gIGZvbnQtc2l6ZTogMTZweDsgfVxuXG4vKiBMaW5rIFN0eWxlc1xyXG49PT09PT09PT09PT09PT09PT09PT09PSAqL1xuYSB7XG4gIGNvbG9yOiAjQTYwRjJEOyB9XG4gIGE6YWN0aXZlIHtcbiAgICBjb2xvcjogI0NBMTIzNzsgfVxuICBhOmhvdmVyIHtcbiAgICBjb2xvcjogI0NBMTIzNzsgfVxuICBhOnZpc2l0ZWQge1xuICAgIGNvbG9yOiAjQTYwRjJEOyB9XG5cbi8qIEhlYWRpbmcgU3R5bGVzXHJcbj09PT09PT09PT09PT09PT09PT09PT09ICovXG5oMSxcbmgyLFxuaDMsXG5oNCxcbmg1LFxuaDYge1xuICAtd2Via2l0LXRyYW5zaXRpb246IGZvbnQtc2l6ZSAzMDBtcyBjdWJpYy1iZXppZXIoMCwgMCwgMC4wMywgMSk7XG4gIC1vLXRyYW5zaXRpb246IGZvbnQtc2l6ZSAzMDBtcyBjdWJpYy1iZXppZXIoMCwgMCwgMC4wMywgMSk7XG4gIHRyYW5zaXRpb246IGZvbnQtc2l6ZSAzMDBtcyBjdWJpYy1iZXppZXIoMCwgMCwgMC4wMywgMSk7IH1cblxuLndzdS11LXZpc3VhbGx5LWhpZGRlbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgY2xpcDogcmVjdCgxcHgsIDFweCwgMXB4LCAxcHgpO1xuICB3aWR0aDogMXB4O1xuICBoZWlnaHQ6IDFweDtcbiAgbWFyZ2luOiAtMXB4O1xuICBwYWRkaW5nOiAwO1xuICAtd2Via2l0LWNsaXAtcGF0aDogaW5zZXQoNTAlKTtcbiAgICAgICAgICBjbGlwLXBhdGg6IGluc2V0KDUwJSk7IH1cblxuLndzdS1jLWljb24tY29udGFpbmVyIHtcbiAgbWF4LXdpZHRoOiA4MDBweDtcbiAgbWFyZ2luOiAzMHB4IGF1dG87IH1cblxuLndzdS1pY29uIHtcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICBwYWRkaW5nOiAyMHB4O1xuICAtd2Via2l0LXRyYW5zaXRpb246IGNvbG9yIDMwMG1zIGN1YmljLWJlemllcigwLCAwLCAwLjAzLCAxKTtcbiAgLW8tdHJhbnNpdGlvbjogY29sb3IgMzAwbXMgY3ViaWMtYmV6aWVyKDAsIDAsIDAuMDMsIDEpO1xuICB0cmFuc2l0aW9uOiBjb2xvciAzMDBtcyBjdWJpYy1iZXppZXIoMCwgMCwgMC4wMywgMSk7IH1cbiAgLndzdS1pY29uOmhvdmVyIHtcbiAgICBjb2xvcjogI0NBMTIzNzsgfVxuIl0sInNvdXJjZVJvb3QiOiIifQ==*/
