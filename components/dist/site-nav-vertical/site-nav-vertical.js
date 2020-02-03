@@ -97,6 +97,7 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MenubarItem", function() { return MenubarItem; });
 /* harmony import */ var _PopupMenuLinks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PopupMenuLinks */ "../wsu-build-tools/js/keyboard-nav-accessibility/PopupMenuLinks.js");
+
 /*
 *   This content is licensed according to the W3C Software License at
 *   https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
@@ -253,6 +254,7 @@ var MenubarItem;
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Menubar", function() { return Menubar; });
 /* harmony import */ var _MenubarItemLinks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MenubarItemLinks */ "../wsu-build-tools/js/keyboard-nav-accessibility/MenubarItemLinks.js");
+
 /*
 *   This content is licensed according to the W3C Software License at
 *   https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
@@ -299,6 +301,7 @@ var Menubar = function Menubar(domNode) {
 
   this.hasHover = false; // See Menubar handleMouseover, handleMouseout
 };
+
 /*
 *   @method Menubar.prototype.init
 *
@@ -454,6 +457,7 @@ var Menubar;
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MenuItem", function() { return MenuItem; });
 /* harmony import */ var _PopupMenuLinks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PopupMenuLinks */ "../wsu-build-tools/js/keyboard-nav-accessibility/PopupMenuLinks.js");
+
 /*
 *   This content is licensed according to the W3C Software License at
 *   https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
@@ -657,6 +661,7 @@ var MenuItem;
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PopupMenu", function() { return PopupMenu; });
 /* harmony import */ var _PopupMenuItemLinks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PopupMenuItemLinks */ "../wsu-build-tools/js/keyboard-nav-accessibility/PopupMenuItemLinks.js");
+
 /*
 *   This content is licensed according to the W3C Software License at
 *   https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
@@ -704,6 +709,7 @@ var PopupMenu = function PopupMenu(domNode, controllerObj) {
 
   this.hasHover = false; // See PopupMenu handleMouseover, handleMouseout
 };
+
 /*
 *   @method PopupMenu.prototype.init
 *
@@ -1357,6 +1363,7 @@ module.exports = __webpack_require__.p + "components/dist/site-nav-vertical/site
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+
 /* harmony import */ var _wsu_build_tools_js_vertical_nav_wsu_bt_vertical_nav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../wsu-build-tools/js/vertical-nav/wsu-bt-vertical-nav */ "../wsu-build-tools/js/vertical-nav/wsu-bt-vertical-nav.js");
 
 var nav_vert_wrapper = document.querySelector('.wsu-s-nav-vertical__wrapper');
@@ -1687,6 +1694,7 @@ EventEmitter.prototype._maxListeners = undefined;
 // added to it. This is a useful default which helps finding memory leaks.
 var defaultMaxListeners = 10;
 
+
 function checkListener(listener) {
   if (typeof listener !== 'function') {
     throw new TypeError('The "listener" argument must be of type Function. Received type ' + typeof listener);
@@ -1891,7 +1899,6 @@ EventEmitter.prototype.removeListener =
       var list, events, position, i, originalListener;
 
       checkListener(listener);
-
       events = this._events;
       if (events === undefined)
         return this;
@@ -2680,7 +2687,6 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
         }
         if (console.trace) console.trace();
     }
-
     // Build the best logging method possible for this env
     // Wherever possible we want to bind, not wrap, to preserve stack traces
     function realMethod(methodName) {
@@ -10815,14 +10821,12 @@ function getSocketUrl(urlParts, loc) {
   // hostname n/a for file protocol (example, when using electron, ionic)
   // see: https://github.com/webpack/webpack-dev-server/pull/384
 
-
   if ((hostname === '0.0.0.0' || hostname === '::') && loc.hostname && loc.protocol.indexOf('http') === 0) {
     hostname = loc.hostname;
   } // `hostname` can be empty when the script path is relative. In that case, specifying
   // a protocol would result in an invalid URL.
   // When https is used in the app, secure websockets are always necessary
   // because the browser doesn't accept non-secure websockets.
-
 
   if (hostname && hostname !== '127.0.0.1' && (loc.protocol === 'https:' || urlParts.hostname === '0.0.0.0')) {
     protocol = loc.protocol;
@@ -11226,7 +11230,9 @@ module.exports.formatError = function(err) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+
 __webpack_require__(/*! C:\Users\danial.bleile\VVV\www\wsu-dev-test\public_html\wsu-web-design-system\node_modules\webpack-dev-server\client\index.js?http://localhost:8080 */"./node_modules/webpack-dev-server/client/index.js?http://localhost:8080");
+
 module.exports = __webpack_require__(/*! ./components/src/site-nav-vertical/index.js */"./components/src/site-nav-vertical/index.js");
 
 
