@@ -40,4 +40,5 @@
 	position: relative;
 	z-index: 5000;
 	flex-grow: 1;
+	border-top: 1px solid #f2f2f2;
 }

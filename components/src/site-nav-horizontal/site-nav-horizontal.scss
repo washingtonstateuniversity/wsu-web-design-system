@@ -7,11 +7,6 @@
 	z-index: z('header');
 
 	white-space: nowrap;
-	border-bottom: 1px solid #f2f2f2;
-}
-
-.wsu-s-nav-horizontal__wrapper~.wsu-s-header__wrapper {
-	border-bottom: none;
 }
 
 .wsu-s-nav-horizontal__nav-container {
@@ -22,7 +17,7 @@
 	display: inline-block;
 
 	margin: 0;
-	padding: 0;
+	padding: 0; 
 
 	list-style: none;
 
@@ -33,6 +28,7 @@
 .wsu-s-nav-horizontal__nav-item--has-children,
 .wsu-s-nav-horizontal__nav-item--more {
 	display: inline-block;
+	vertical-align: bottom;
 }
 
 // Is a submenu
@@ -66,6 +62,7 @@
 
 		border-radius: $wsu-bt-base-border-radius-size;
 		background: color(grey, 0);
+		box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.3);
 
 		& .wsu-s-nav-horizontal__nav-link,
 		& .wsu-s-nav-horizontal__nav-link--active {
@@ -119,6 +116,10 @@
 		color: color(grey, 100);
 	}
 
+	&:focus {
+		outline: none;
+	}
+
 	&[aria-expanded="true"] ~ .wsu-s-nav-horizontal__nav-list,
 	&[aria-expanded="true"] ~ .wsu-s-nav-horizontal__nav-list--has-more-items {
 		display: block;
@@ -154,7 +155,7 @@
 .wsu-s-nav-horizontal__nav-item--more {
 	position: relative;
 
-	transform: translateY(-18px);
+	/*transform: translateY(-18px);*/
 
 	.wsu-s-nav-horizontal__nav-link {
 		font-size: 28px;
