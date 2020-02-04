@@ -22,6 +22,7 @@ module.exports = env => {
 			'components/dist/content-heading/content-heading': './components/src/content-heading/index.js',
 			'components/dist/content-list/content-list': './components/src/content-list/index.js',
 			'components/dist/content-icons/content-icons': './components/src/content-icons/index.js',
+			'components/dist/content-column/content-column': './components/src/content-column/index.js',
 		},
 		output: {
 			path: path.resolve(__dirname),

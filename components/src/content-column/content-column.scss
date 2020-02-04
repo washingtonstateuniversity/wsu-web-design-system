@@ -1,2 +1,78 @@
 
 @import '~@wsu/build-tools/scss/all-the-things';
+
+$grid-columns: 12;
+
+.wsu-c-column__wrapper {
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+
+	&--xsmall {
+		@extend .wsu-c-column__wrapper;
+		max-width: 600px;
+	}
+	
+	&--small {
+		@extend .wsu-c-column__wrapper;
+		max-width: 800px;
+	}
+	
+	&--medium {
+		@extend .wsu-c-column__wrapper;
+		max-width: 1000px;
+	}
+	
+	&--large {
+		@extend .wsu-c-column__wrapper;
+		max-width: 1200px;
+	}
+	
+	&--xlarge {
+		@extend .wsu-c-column__wrapper;
+		max-width: 1400px;
+	}
+	
+	&--full {
+		@extend .wsu-c-column__wrapper;
+		max-width: auto;
+	}
+
+
+}
+
+.wsu-c-column {
+
+	padding-left: 1rem;
+	padding-right: 1rem;
+	padding-top: 1rem;
+	padding-bottom: 2rem;
+
+	@for $i from 1 through $grid-columns {
+		&__grid--#{$i} {
+			@extend .wsu-c-column;
+			width: calc( ( 100% / #{$grid-columns} ) * #{$i} );
+		}
+	}
+
+	&--two-third {
+		@extend .wsu-c-column;
+		width: 66.66%;
+	}
+
+	&--half {
+		@extend .wsu-c-column;
+		width: 66.66%;
+	}
+
+	&--third {
+		@extend .wsu-c-column;
+		width: 33.33%;
+	}
+
+	&--quarter {
+		@extend .wsu-c-column;
+		width: 25%;
+	}
+
+}
