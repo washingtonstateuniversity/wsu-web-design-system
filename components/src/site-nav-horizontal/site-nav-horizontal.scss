@@ -1,4 +1,4 @@
-@import '~@wsu/build-tools/scss/all-the-things';
+@import '../../../node_modules/@wsu/build-tools/scss/all-the-things.scss';
 
 /* Start Base Styles
 ======================= */
@@ -17,7 +17,7 @@
 	display: inline-block;
 
 	margin: 0;
-	padding: 0; 
+	padding: 0;
 
 	list-style: none;
 
