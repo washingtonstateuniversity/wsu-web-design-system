@@ -1,18 +1,20 @@
 @import '../../../../wsu-build-tools/scss/all-the-things.scss';
 
-.wsu-c-button {
-	background-color: color(primary, light);
-	color: color(white, base);
-	text-decoration: none;
-	border: none;
-	@include font-size(12px, 600);
+.wsu-c-button > a {
+	display: inline-table;
 
 	margin: 0;
 	padding: $unit-s $unit-xl;
-	border-radius: $wsu-bt-base-border-radius-size;
 
 	transition: background-color timing();
-	display: inline-table;
+	text-decoration: none;
+
+	color: color(white, base);
+	border: none;
+	border-radius: $wsu-bt-base-border-radius-size;
+	background-color: color(primary, light);
+
+	@include font-size(12px, 600);
 
 	&:visited {
 		@extend .wsu-c-button;
@@ -21,6 +23,7 @@
 	&:hover,
 	&:active {
 		cursor: pointer;
+
 		color: color(white, base);
 		background-color: color(primary, base);
 	}
