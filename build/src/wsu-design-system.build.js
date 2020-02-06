@@ -16,6 +16,7 @@ import '../../components/src/site-nav-vertical/build';
 import '../../components/src/site-header/build';
 
 /* Content components */
+import '../../components/src/content-button/build';
 import '../../components/src/content-heading/build';
 import '../../components/src/content-list/build';
 import '../../components/src/content-column/build';
