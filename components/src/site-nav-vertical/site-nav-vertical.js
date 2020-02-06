@@ -24,6 +24,7 @@ if (typeof nav_vert_wrapper != "undefined" && nav_vert_wrapper != null) {
 	});
 
 	window.vertical_nav.init();
+	window.vertical_nav.openPanel();
 
 	/**
 	 *
