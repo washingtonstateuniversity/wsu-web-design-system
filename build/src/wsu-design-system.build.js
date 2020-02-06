@@ -18,3 +18,4 @@ import '../../components/src/site-header/build';
 /* Content components */
 import '../../components/src/content-heading/build';
 import '../../components/src/content-list/build';
+import '../../components/src/content-column/build';
