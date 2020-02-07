@@ -1,0 +1,106 @@
+@import '../../../../wsu-build-tools/scss/all-the-things.scss';
+
+.wsu-c-hero__container {
+	position: relative;
+
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+
+	&::after {
+		position: absolute;
+		z-index: z('contentbackground');
+		top: 0;
+		left: 0;
+
+		width: 100%;
+		height: 100%;
+
+		content: "";
+
+		background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5));
+	}
+}
+
+.wsu-c-hero__content {
+	position: relative;
+	z-index: z('content');
+
+	display: flex;
+	align-items: flex-start;
+	flex-flow: column nowrap;
+
+	max-width: 600px;
+	padding: 200px $unit $unit;
+
+	@include mq('small') {
+		padding: 100px $unit-3xl;
+	}
+	@include mq('medium') {
+		padding: 200px 100px;
+	}
+	@include mq('large') {
+		padding: 250px 100px;
+	}
+}
+
+.wsu-c-hero__title {
+	margin: 0;
+	margin-bottom: $unit-l;
+
+	color: color(white, base);
+
+	@include font-size(ms(5), 900, 1);
+	@include mq('small') {
+		@include font-size(ms(6), 900, 1);
+	}
+}
+
+.wsu-c-hero__subtitle {
+	order: -1;
+
+	text-transform: uppercase;
+
+	color: color(white, base);
+
+	@include font-size(14px);
+}
+
+.wsu-c-hero__button {
+	@include button();
+}
+
+.wsu-c-hero__image-caption {
+	font-style: italic;
+
+	position: relative;
+	z-index: z('content');
+
+	margin-bottom: 0;
+	padding-bottom: $unit-s;
+
+	text-align: center;
+
+	color: color(white, base);
+
+	@include font-size(12px);
+	@include mq('small') {
+		position: absolute;
+		right: 60px;
+		bottom: 30px;
+	}
+
+	&::after {
+		position: absolute;
+		top: calc(100% - #{$unit-s});
+		left: 50%;
+
+		width: 33.33%;
+		height: 2px;
+
+		content: "";
+		transform: translateX(-50%);
+
+		background-color: color(primary, light);
+	}
+}
