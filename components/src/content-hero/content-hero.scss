@@ -3,9 +3,36 @@
 .wsu-c-hero__container {
 	position: relative;
 
+	background-color: color(grey, 90);
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	background-size: cover;
+
+	&--full-height {
+		display: flex;
+		align-items: center;
+
+		height: 100vh;
+
+		@extend .wsu-c-hero__container;
+	}
+
+	&--no-overlay {
+		@extend .wsu-c-hero__container;
+
+		.wsu-c-hero__button {
+			@include elevate(0);
+		}
+
+		.wsu-c-hero__title {
+			text-shadow: none;
+		}
+
+		&::before,
+		&::after {
+			display: none;
+		}
+	}
 
 	&::after {
 		position: absolute;
@@ -18,7 +45,21 @@
 
 		content: "";
 
-		background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5));
+		background: linear-gradient(15deg, rgba(0,0,0,0.60), rgba(0,0,0,0));
+	}
+
+	&::before {
+		position: absolute;
+		z-index: z('contentbackground');
+		top: 0;
+		left: 0;
+
+		width: 100%;
+		height: 100%;
+
+		content: "";
+
+		background: radial-gradient(at bottom left,rgba(0,0,0,0.60),rgba(0,0,0,0));
 	}
 }
 
@@ -49,6 +90,7 @@
 	margin-bottom: $unit-l;
 
 	color: color(white, base);
+	text-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 
 	@include font-size(ms(5), 900, 1);
 	@include mq('small') {
@@ -67,6 +109,7 @@
 }
 
 .wsu-c-hero__button {
+	@include elevate(2);
 	@include button();
 }
 
