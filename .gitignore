@@ -27,3 +27,5 @@ package-lock.json
 
 # Ignore Parcel cache
 .cache
+
+build/dist/

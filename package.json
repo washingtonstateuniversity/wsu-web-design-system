@@ -1,5 +1,5 @@
 {
-    "name": "wsu-web-design-system",
+    "name": "@wsu/web-design-system",
     "version": "0.0.1",
     "description": "Web Design System for Washington State University.",
     "private": true,
