@@ -25,3 +25,68 @@
 		background-color: color(primary, base);
 	}
 }
+
+.wsu-c-button_light a {
+	display: inline-table;
+
+	margin: 0;
+	padding: $unit-s $unit-xl;
+
+	transition: border-color timing();
+	text-decoration: none;
+
+	color: color(grey, 50);
+	border: 1px solid color(grey, 10);
+	border-radius: $wsu-bt-base-border-radius-size;
+	background-color: color(white, base);
+
+	@include font-size(12px, 600);
+
+	&:visited {
+		@extend .wsu-c-button;
+	}
+
+	&:hover,
+	&:active {
+		cursor: pointer;
+
+		color: color(primary, base);
+		border-color: color(primary, base);
+	}
+}
+
+.wsu-c-button--round {
+	@extend .wsu-c-button;
+
+	a {
+		border-radius: 25px;
+	}
+
+	&.wsu-button-lg a {
+		border-radius: 50px;
+	}
+}
+
+.wsu-c-button_light--round {
+	@extend .wsu-c-button_light;
+
+	a {
+		border-radius: 25px;
+	}
+
+	&.wsu-button-lg a {
+		border-radius: 50px;
+	}
+}
+
+/* Modifier Classes
+======================= */
+.wsu-button-sm a {
+	padding: $unit-xs $unit-l;
+	@include font-size(10px, 600);
+}
+
+.wsu-button-lg a {
+	padding: $unit $unit-3xl;
+	@include font-size(14px, 600);
+}
