@@ -46,7 +46,7 @@
 	@include font-size(12px, 600);
 
 	&:visited {
-		@extend .wsu-c-button;
+		@extend .wsu-c-button_light;
 	}
 
 	&:hover,
@@ -86,10 +86,12 @@
 ======================= */
 .wsu-button-sm a {
 	padding: $unit-xs $unit-l;
+
 	@include font-size(10px, 600);
 }
 
 .wsu-button-lg a {
 	padding: $unit $unit-3xl;
+
 	@include font-size(14px, 600);
 }
