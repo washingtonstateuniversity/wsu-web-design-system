@@ -19,8 +19,18 @@
 			margin: 0 auto;
 		}
 
-		.tile {
+		#links {
+			display: flex;
+			flex-flow: row wrap;
+		}
+
+		.card {
+			display: flex;
 			justify-content: space-between;
+
+			width: calc(50% - 20px);
+			margin: 10px;
+			padding: 10px;
 		}
 
 		.dev-only {
@@ -46,6 +56,10 @@
 		.quick-links a:last-child {
 			margin-right: 0;
 		}
+
+		.hidden {
+			display: none;
+		}
 	</style>
 </head>
 
@@ -56,8 +70,8 @@
 		<ul id="links"></ul>
 		<h2 class="is-size-2">Quick Links</h2>
 		<div class="quick-links">
-			<a href="dist" class="dist-folder">Dist Folder (for local development)</a>
-			<a href="https://washingtonstateuniversity.github.io/wsu-web-design-system/demo/" class="demo-page">Demo Page (multiple components together)</a>
+			<a href="dist" class="dist-folder hidden">Dist Folder</a>
+			<a href="https://stage.web.wsu.edu/web-design-system/" class="demo-page">Design System Demo</a>
 		</div>
 	</div>
 
@@ -83,7 +97,7 @@
 					itemSlug = item.path;
 					itemNameNoDashes = itemSlug.replace(/-/g, " ");
 					item = document.createElement("li");
-					item.classList.add('tile');
+					item.classList.add('card');
 
 					itemLink = document.createElement("a");
 					itemText = document.createTextNode(itemNameNoDashes);
@@ -94,7 +108,11 @@
 					itemLinkDist = document.createElement("a");
 					itemTextDist = document.createTextNode("[Local]");
 					itemLinkDist.setAttribute('href', 'dist/' + itemSlug + '/' + itemSlug + '.html');
-					itemLinkDist.classList.add('dev-only');
+
+					if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
+						itemLinkDist.classList.add('dev-only');
+					}
+
 					itemLinkDist.appendChild(itemTextDist);
 					item.appendChild(itemLinkDist);
 
@@ -114,6 +132,10 @@
 				item.appendChild(itemText); // List item
 				container.appendChild(item); // Container
 			});
+
+		if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
+			document.querySelector('.dist-folder').classList.remove('hidden');
+		}
 	</script>
 </body>
 
