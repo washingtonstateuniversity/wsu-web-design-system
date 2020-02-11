@@ -7,6 +7,7 @@
 	<title>Components | WSU Design System</title>
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.0/css/bulma.css" />
+	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.1/axios.min.js"></script>
 
 	<style>
@@ -15,12 +16,27 @@
 		}
 
 		body {
+			font-family: 'Montserrat', sans-serif;
+
 			max-width: 800px;
 			margin: 0 auto;
+
 		}
 
-		.tile {
+		#links {
+			display: flex;
+			flex-flow: row wrap;
+
+			margin-top: 20px;
+		}
+
+		.card {
+			display: flex;
 			justify-content: space-between;
+
+			width: calc(50% - 20px);
+			margin: 10px;
+			padding: 10px;
 		}
 
 		.dev-only {
@@ -34,6 +50,9 @@
 
 		.quick-links {
 			display: flex;
+			justify-content: center;
+
+			margin-top: 40px;
 		}
 
 		.quick-links a {
@@ -46,33 +65,33 @@
 		.quick-links a:last-child {
 			margin-right: 0;
 		}
+
+		.hidden {
+			display: none;
+		}
 	</style>
 </head>
 
 <body>
 	<div class="container is-fluid">
 		<h1 class="is-size-1">WSU Design System</h1>
-		<h2 class="is-size-2">Components</h2>
 		<ul id="links"></ul>
-		<h2 class="is-size-2">Quick Links</h2>
 		<div class="quick-links">
-			<a href="dist" class="dist-folder">Dist Folder (for local development)</a>
-			<a href="https://washingtonstateuniversity.github.io/wsu-web-design-system/demo/" class="demo-page">Demo Page (multiple components together)</a>
+			<a href="dist" class="dist-folder hidden">Dist Folder</a>
+			<a href="https://stage.web.wsu.edu/web-design-system/" class="demo-page">Design System Staging Site</a>
 		</div>
 	</div>
 
 	<script>
 		const container = document.querySelector("#links");
 
-		// SHA1 has to be updated whenever new values want to be accessed via the api
-		// Get SHA https://gist.github.com/scottwb/374977
-
 		axios
 			.get(
-				"https://api.github.com/repos/washingtonstateuniversity/wsu-web-design-system/git/trees/c8b87ab615dfb4b483c783a3852d8ba326b9947e"
+				'https://api.github.com/repos/washingtonstateuniversity/wsu-web-design-system/contents/components/dist'
 			)
 			.then(function (response) {
-				let data = response.data.tree;
+
+				let data = response.data;
 				let item = "";
 				let itemText = "";
 				let itemSlug = "";
@@ -80,10 +99,11 @@
 				let itemLink = "";
 
 				data.forEach(function (item) {
-					itemSlug = item.path;
+
+					itemSlug = item.name;
 					itemNameNoDashes = itemSlug.replace(/-/g, " ");
 					item = document.createElement("li");
-					item.classList.add('tile');
+					item.classList.add('card');
 
 					itemLink = document.createElement("a");
 					itemText = document.createTextNode(itemNameNoDashes);
@@ -94,7 +114,11 @@
 					itemLinkDist = document.createElement("a");
 					itemTextDist = document.createTextNode("[Local]");
 					itemLinkDist.setAttribute('href', 'dist/' + itemSlug + '/' + itemSlug + '.html');
-					itemLinkDist.classList.add('dev-only');
+
+					if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
+						itemLinkDist.classList.add('dev-only');
+					}
+
 					itemLinkDist.appendChild(itemTextDist);
 					item.appendChild(itemLinkDist);
 
@@ -114,6 +138,10 @@
 				item.appendChild(itemText); // List item
 				container.appendChild(item); // Container
 			});
+
+		if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
+			document.querySelector('.dist-folder').classList.remove('hidden');
+		}
 	</script>
 </body>
 
