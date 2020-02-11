@@ -112,14 +112,14 @@
 					item.appendChild(itemLink);
 
 					itemLinkDist = document.createElement("a");
-					itemTextDist = document.createTextNode("[Local]");
 					itemLinkDist.setAttribute('href', 'dist/' + itemSlug + '/' + itemSlug + '.html');
 
 					if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
+						itemTextDist = document.createTextNode("[Local]");
 						itemLinkDist.classList.add('dev-only');
+						itemLinkDist.appendChild(itemTextDist);
 					}
 
-					itemLinkDist.appendChild(itemTextDist);
 					item.appendChild(itemLinkDist);
 
 					// Append list item to container
