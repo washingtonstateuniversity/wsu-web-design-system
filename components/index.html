@@ -22,6 +22,8 @@
 		#links {
 			display: flex;
 			flex-flow: row wrap;
+
+			margin-top: 20px;
 		}
 
 		.card {
@@ -44,6 +46,9 @@
 
 		.quick-links {
 			display: flex;
+			justify-content: center;
+
+			margin-top: 40px;
 		}
 
 		.quick-links a {
@@ -66,27 +71,23 @@
 <body>
 	<div class="container is-fluid">
 		<h1 class="is-size-1">WSU Design System</h1>
-		<h2 class="is-size-2">Components</h2>
 		<ul id="links"></ul>
-		<h2 class="is-size-2">Quick Links</h2>
 		<div class="quick-links">
 			<a href="dist" class="dist-folder hidden">Dist Folder</a>
-			<a href="https://stage.web.wsu.edu/web-design-system/" class="demo-page">Design System Demo</a>
+			<a href="https://stage.web.wsu.edu/web-design-system/" class="demo-page">Design System Staging Site</a>
 		</div>
 	</div>
 
 	<script>
 		const container = document.querySelector("#links");
 
-		// SHA1 has to be updated whenever new values want to be accessed via the api
-		// Get SHA https://gist.github.com/scottwb/374977
-
 		axios
 			.get(
-				"https://api.github.com/repos/washingtonstateuniversity/wsu-web-design-system/git/trees/c8b87ab615dfb4b483c783a3852d8ba326b9947e"
+				'https://api.github.com/repos/washingtonstateuniversity/wsu-web-design-system/contents/components/dist'
 			)
 			.then(function (response) {
-				let data = response.data.tree;
+
+				let data = response.data;
 				let item = "";
 				let itemText = "";
 				let itemSlug = "";
@@ -94,7 +95,8 @@
 				let itemLink = "";
 
 				data.forEach(function (item) {
-					itemSlug = item.path;
+
+					itemSlug = item.name;
 					itemNameNoDashes = itemSlug.replace(/-/g, " ");
 					item = document.createElement("li");
 					item.classList.add('card');
