@@ -46,7 +46,7 @@
 	@include font-size(12px, 600);
 
 	&:visited {
-		@extend .wsu-c-button;
+		@extend .wsu-c-button_light;
 	}
 
 	&:hover,
