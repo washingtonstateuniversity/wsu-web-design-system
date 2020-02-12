@@ -17,7 +17,7 @@
 	@include font-size(12px, 600);
 
 	&:visited {
-		@extend .wsu-c-button;
+		color: color(white, base);
 	}
 
 	&:hover,
@@ -46,7 +46,7 @@
 	@include font-size(12px, 600);
 
 	&:visited {
-		@extend .wsu-c-button_light;
+		color: color(grey, 50);
 	}
 
 	&:hover,
