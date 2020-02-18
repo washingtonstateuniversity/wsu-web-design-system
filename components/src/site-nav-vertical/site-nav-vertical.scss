@@ -72,8 +72,8 @@
 	width: 60px;
 	height: 100vh;
 
-	transition: transform timing(husky, ease);
-	transition-delay: 200ms;
+	transition: transform timing(300, ease);
+	transition-delay: 50ms;
 	transform: translateX(0);
 	text-align: center;
 	text-decoration: none;
@@ -199,7 +199,7 @@
 	height: 100%;
 	padding-top: 65px;
 
-	transition: transform timing();
+	transition: transform timing(300, ease-out);
 	transform: translateX(-365px);
 
 	border-right: 1px solid color(grey, 5);
@@ -262,13 +262,15 @@
 .wsu-s-nav-vertical__nav-item,
 .wsu-s-nav-vertical__nav-item--has-children {
 	list-style: none;
+
+	animation-duration: 350ms;
 }
 
 .wsu-s-nav-vertical__nav-list-container > .wsu-s-nav-vertical__nav-item {
-	@include fade-in-right();
+	opacity: 0;
 
 	&--has-children {
-		@include fade-in-right();
+		opacity: 0;
 	}
 }
 
