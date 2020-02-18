@@ -31,7 +31,7 @@
 
 	color: color(grey, 75);
 
-	@include font-size(14px, 500);
+	@include font-size(0.75rem, 500);
 	@include mq('small') {
 		flex: 1 1 0;
 
@@ -113,9 +113,9 @@
 
 	text-decoration: none;
 
-	color: color(grey, 70);
+	color: color(grey_fill, medium);
 
-	@include font-size(14px, 400);
+	@include font-size(0.75rem, 400);
 	@include border-bottom-hover(100%);
 
 	&:visited {
