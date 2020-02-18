@@ -45,15 +45,6 @@ body {
 	left: 0;
 }
 
-
-/*.wsu-s-wrapper--content-small .wsu-c-container,
-.wsu-s-wrapper--content-medium .wsu-c-container,
-.wsu-s-wrapper--content-large .wsu-c-container,
-.wsu-s-wrapper--content-xlarge .wsu-c-container,
-.wsu-s-wrapper--content-full .wsu-c-container {
-	
-}*/
-
 .wsu-s-wrapper--content-small .wsu-c-container {
 	max-width: 990px;
 }
@@ -87,7 +78,7 @@ body {
 
 @media screen and (min-width:1300px) {
 	.wsu-c-container {
-		max-width: calc( 100vw - 365px );
+		max-width: calc( 100vw - 260px );
 	}
 }
 
