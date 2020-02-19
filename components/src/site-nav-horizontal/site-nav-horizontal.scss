@@ -1,4 +1,5 @@
 @import '../../../../wsu-build-tools/scss/all-the-things.scss';
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css');
 
 /* Start Base Styles
 ======================= */
@@ -28,7 +29,13 @@
 .wsu-s-nav-horizontal__nav-item--has-children,
 .wsu-s-nav-horizontal__nav-item--more {
 	display: inline-block;
+
+	animation-duration: 250ms;
 	vertical-align: bottom;
+}
+
+.wsu-s-nav-horizontal__nav-link[aria-expanded] + .wsu-s-nav-horizontal__nav-list > .wsu-s-nav-horizontal__nav-item {
+	opacity: 0;
 }
 
 // Is a submenu
@@ -62,7 +69,8 @@
 
 		border-radius: $wsu-bt-base-border-radius-size;
 		background: color(grey, 0);
-		box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.3);
+
+		@include elevate(1);
 
 		& .wsu-s-nav-horizontal__nav-link,
 		& .wsu-s-nav-horizontal__nav-link--active {
@@ -96,6 +104,9 @@
 /* Base link styles */
 .wsu-s-nav-horizontal__nav-link,
 .wsu-s-nav-horizontal__nav-link--active {
+	position: relative;
+	z-index: z('header') - 1;
+
 	display: block;
 
 	padding: $unit-l $unit-xl;
@@ -122,17 +133,18 @@
 
 	&[aria-expanded="true"] ~ .wsu-s-nav-horizontal__nav-list,
 	&[aria-expanded="true"] ~ .wsu-s-nav-horizontal__nav-list--has-more-items {
-		display: block;
+		animation-duration: 350ms;
 
 		opacity: 1;
 	}
 
 	&[aria-expanded="false"] ~ .wsu-s-nav-horizontal__nav-list,
 	&[aria-expanded="false"] ~ .wsu-s-nav-horizontal__nav-list--has-more-items {
-		display: none;
+		z-index: z('header') - 2;
+
+		animation-duration: 350ms;
 
 		opacity: 0;
-
 	}
 }
 
