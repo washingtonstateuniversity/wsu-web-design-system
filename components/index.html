@@ -6,125 +6,92 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Components | WSU Design System</title>
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.0/css/bulma.css" />
+	<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.1/axios.min.js"></script>
 
 	<style>
-		ul li a {
-			text-transform: capitalize;
-		}
-
 		body {
 			font-family: 'Montserrat', sans-serif;
-
-			max-width: 800px;
-			margin: 0 auto;
-
-		}
-
-		#links {
-			display: flex;
-			flex-flow: row wrap;
-
-			margin-top: 20px;
-		}
-
-		.card {
-			display: flex;
-			justify-content: space-between;
-
-			width: calc(50% - 20px);
-			margin: 10px;
-			padding: 10px;
-		}
-
-		.dev-only {
-			font-family: monospace;
-			font-size: 12px;
-
-			padding: 0 20px;
-
-			text-transform: uppercase;
-		}
-
-		.quick-links {
-			display: flex;
-			justify-content: center;
-
-			margin-top: 40px;
-		}
-
-		.quick-links a {
-			margin-right: 10px;
-			padding: 12px 20px;
-
-			background: whitesmoke;
-		}
-
-		.quick-links a:last-child {
-			margin-right: 0;
-		}
-
-		.hidden {
-			display: none;
 		}
 	</style>
 </head>
 
-<body>
-	<div class="container is-fluid">
-		<h1 class="is-size-1">WSU Design System</h1>
-		<ul id="links"></ul>
-		<div class="quick-links">
-			<a href="dist" class="dist-folder hidden">Dist Folder</a>
-			<a href="https://stage.web.wsu.edu/web-design-system/demo-nav-start-open/" class="demo-page">Design System Staging Site</a>
+<body class="bg-gray-300 m-auto max-w-4xl">
+	<div class="p-10">
+		<h1 class="text-3xl">WSU Design System</h1>
+		<h2 class="text-2xl mb-10">Component List</h2>
+		<ul id="links" class="grid gap-4 md:grid-cols-2"></ul>
+		<div class="mt-5 pt-5 border-t border-gray-200 flex text-sm">
+			<a href="dist" class="dist-folder hidden px-5 py-2 bg-white rounded mr-1 hover:bg-gray-100">Dist Folder</a>
+			<a href="https://stage.web.wsu.edu/web-design-system/demo-nav-start-open/" class="demo-page px-5 py-2 bg-white rounded mr-1 hover:bg-gray-100">Design System Staging Site</a>
+			<button id="clearCache" class="px-5 py-2 bg-white rounded mr-1 hover:bg-gray-100">Clear Query Cache</button>
 		</div>
 	</div>
 
 	<script>
+		// Create github api query and store data locally
 		const container = document.querySelector("#links");
+		const localStoreKey = 'wds-github-api-query';
+		let localStoreRef = localStorage.getItem(localStoreKey);
 
-		axios
-			.get(
+		var hours = 24; // Reset when storage is more than 24hours
+		var now = new Date().getTime();
+		var setupTime = localStorage.getItem('setupTime');
+		if (setupTime == null) {
+			localStorage.setItem('setupTime', now);
+
+			if (localStoreRef == null) {
+				queryGithubApi();
+			} else {
+				renderDataToDom();
+			}
+		} else {
+			if (now - setupTime > hours * 60 * 60 * 1000) {
+				localStorage.clear()
+				localStorage.setItem('setupTime', now);
+
+				if (localStoreRef == null) {
+					queryGithubApi();
+				} else {
+					renderDataToDom();
+				}
+			}
+		}
+
+		if (localStoreRef == null) {
+			queryGithubApi();
+		} else {
+			renderDataToDom();
+		}
+
+		// Clear Local Cache
+		document.getElementById('clearCache').addEventListener('click', function (e) {
+			console.log('Cache cleared');
+
+			let localStoreRef = localStorage.getItem(localStoreKey);
+
+			localStorage.setItem('setupTime', now);
+
+			if (localStoreRef !== null) {
+				queryGithubApi();
+			}
+		});
+
+		// Only show certain items when connected locally
+		if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
+			document.querySelector('.dist-folder').classList.remove('hidden');
+		}
+
+		function queryGithubApi() {
+			axios.get(
 				'https://api.github.com/repos/washingtonstateuniversity/wsu-web-design-system/contents/components/dist'
-			)
-			.then(function (response) {
-
-				let data = response.data;
-				let item = "";
-				let itemText = "";
-				let itemSlug = "";
-				let itemNameNoDashes = "";
-				let itemLink = "";
-
-				data.forEach(function (item) {
-
-					itemSlug = item.name;
-					itemNameNoDashes = itemSlug.replace(/-/g, " ");
-					item = document.createElement("li");
-					item.classList.add('card');
-
-					itemLink = document.createElement("a");
-					itemText = document.createTextNode(itemNameNoDashes);
-					itemLink.setAttribute('href', 'https://washingtonstateuniversity.github.io/wsu-web-design-system/components/dist/' + itemSlug + '/' + itemSlug + '.html')
-					itemLink.appendChild(itemText);
-					item.appendChild(itemLink);
-
-					if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
-						itemLinkDist = document.createElement("a");
-						itemLinkDist.setAttribute('href', 'dist/' + itemSlug + '/' + itemSlug + '.html');
-						itemTextDist = document.createTextNode("[Local]");
-						itemLinkDist.classList.add('dev-only');
-						itemLinkDist.appendChild(itemTextDist);
-						item.appendChild(itemLinkDist);
-					}
-
-					// Append list item to container
-					container.appendChild(item); // Container
-				});
-			})
-			.catch(function (err) {
+			).then(function (response) {
+				localStorage.removeItem(localStoreKey);
+				container.innerHTML = '';
+				localStorage.setItem(localStoreKey, JSON.stringify(response));
+				renderDataToDom();
+			}).catch(function (err) {
 				console.log(err);
 
 				item = document.createElement("div");
@@ -136,9 +103,45 @@
 				item.appendChild(itemText); // List item
 				container.appendChild(item); // Container
 			});
+		}
 
-		if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
-			document.querySelector('.dist-folder').classList.remove('hidden');
+		function renderDataToDom() {
+			const getResponse = localStorage.getItem(localStoreKey);
+			const parsedResponse = JSON.parse(getResponse);
+			const data = parsedResponse.data;
+			let item = "";
+			let itemText = "";
+			let itemSlug = "";
+			let itemNameNoDashes = "";
+			let itemLink = "";
+
+			data.forEach(function (item) {
+
+				itemSlug = item.name;
+				itemNameNoDashes = itemSlug.replace(/-/g, " ");
+				item = document.createElement("li");
+				item.classList.add('text-blue-600', 'capitalize', 'border', 'rounded-lg', 'flex', 'justify-between', 'items-center', 'shadow-lg', 'hover:shadow-2xl', 'transition', 'duration-200', 'ease-in-out', 'bg-white');
+
+
+				itemLink = document.createElement("a");
+				itemText = document.createTextNode(itemNameNoDashes);
+				itemLink.setAttribute('href', 'https://washingtonstateuniversity.github.io/wsu-web-design-system/components/dist/' + itemSlug + '/' + itemSlug + '.html');
+				itemLink.classList.add('p-5', 'w-full', 'hover:bg-gray-200', 'transition', 'duration-200', 'ease-in-out', 'rounded-lg', 'rounded-r-none');
+				itemLink.appendChild(itemText);
+				item.appendChild(itemLink);
+
+				if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
+					itemLinkDist = document.createElement("a");
+					itemLinkDist.setAttribute('href', 'dist/' + itemSlug + '/' + itemSlug + '.html');
+					itemTextDist = document.createTextNode("[Local]");
+					itemLinkDist.classList.add('dev-only', 'p-5', 'hover:bg-gray-200', 'transition', 'duration-200', 'ease-in-out', 'rounded-lg', 'rounded-l-none');
+					itemLinkDist.appendChild(itemTextDist);
+					item.appendChild(itemLinkDist);
+				}
+
+				// Append list item to container
+				container.appendChild(item); // Container
+			});
 		}
 	</script>
 </body>
