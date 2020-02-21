@@ -30,12 +30,12 @@
 .wsu-s-nav-horizontal__nav-item--more {
 	display: inline-block;
 
-	animation-duration: 250ms;
+	animation-duration: 350ms;
 	vertical-align: bottom;
-}
 
-.wsu-s-nav-horizontal__nav-link[aria-expanded] + .wsu-s-nav-horizontal__nav-list > .wsu-s-nav-horizontal__nav-item {
-	opacity: 0;
+	&.animated {
+		opacity: 0;
+	}
 }
 
 // Is a submenu
