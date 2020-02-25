@@ -36,7 +36,7 @@ if (typeof nav_vert_wrapper != "undefined" && nav_vert_wrapper != null) {
 
 	close_link.addEventListener('click', function (e) {
 		e.preventDefault();
-		wsu_bt_wds.vertical_nav.closePanel();
+		wsu_bt_wds.vertical_nav.close_panel();
 	});
 
 }
