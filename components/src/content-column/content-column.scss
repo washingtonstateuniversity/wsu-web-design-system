@@ -2,8 +2,17 @@
 
 $grid-columns: 12;
 
+@mixin columns-props {
+	padding-top: 1rem;
+	padding-right: 1rem;
+	padding-bottom: 2rem;
+	padding-left: 1rem;
+	box-sizing: border-box;
+}
+
 .wsu-c-column__wrapper {
 	display: flex;
+	flex-wrap: wrap;
 
 	margin-right: auto;
 	margin-left: auto;
@@ -44,45 +53,170 @@ $grid-columns: 12;
 		@extend .wsu-c-column__wrapper;
 	}
 
+}
+
+.wsu-c-columns {
+
+	&--single {
+
+		& > .wsu-c-column {
+			width: 100%;
+		}
+
+	}
+
+	&--halves {
+
+		& > .wsu-c-column {
+			width: 50%;
+
+			@include mq('small', 'max' ) {
+				width: 100%;
+			}
+		}
+	
+	}
+
+	&--thirds {
+
+		& > .wsu-c-column {
+			width: 33.33%;
+
+			@include mq('small', 'max' ) {
+				width: 100%;
+			}
+		}
+	
+	}
+
+	&--quarters {
+
+		& > .wsu-c-column {
+			width: 25%;
+
+			@include mq('medium', 'max' ) {
+				width: 50%;
+			}
+
+			@include mq('xsmall', 'max' ) {
+				width: 100%;
+			}
+		}
+	
+	}
+
+	&--sidebar-right {
+
+		& > .wsu-c-column:first-child {
+			width: 66.66%;
+		}
+
+		& > .wsu-c-column:last-child {
+			width: 33.33%;
+		}
+
+	}
+
+	&--sidebar-left {
+
+		& > .wsu-c-column:first-child {
+			width: 33.33%;
+		}
+
+		& > .wsu-c-column:last-child {
+			width: 66.66%;
+		}
+
+	}
 
 }
 
 .wsu-c-column {
-	padding-top: 1rem;
-	padding-right: 1rem;
-	padding-bottom: 2rem;
-	padding-left: 1rem;
+	@include columns-props;
 
 	@for $i from 1 through $grid-columns {
 		&__grid--#{$i} {
 			width: calc( ( 100% / #{$grid-columns} ) * #{$i} );
-
-			@extend .wsu-c-column;
+			@include columns-props;
 		}
 	}
 
-	&--two-third {
-		width: 66.66%;
+	@for $i from 1 through $grid-columns {
 
-		@extend .wsu-c-column;
+		&__break--xl-#{$i} {
+			@include mq('xlarge', 'max' ) {
+				width: calc( ( 100% / #{$grid-columns} ) * #{$i} );
+			}
+		}
 	}
 
-	&--half {
-		width: 50%;
+	@for $i from 1 through $grid-columns {
 
-		@extend .wsu-c-column;
+		&__break--l-#{$i} {
+			@include mq('large', 'max' ) {
+				width: calc( ( 100% / #{$grid-columns} ) * #{$i} );
+			}
+		}
+
 	}
 
-	&--third {
-		width: 33.33%;
+	@for $i from 1 through $grid-columns {
 
-		@extend .wsu-c-column;
+		&__break--m-#{$i} {
+			@include mq('medium', 'max' ) {
+				width: calc( ( 100% / #{$grid-columns} ) * #{$i} );
+			}
+		}
 	}
 
-	&--quarter {
-		width: 25%;
+	@for $i from 1 through $grid-columns {
 
-		@extend .wsu-c-column;
+		&__break--s-#{$i} {
+			@include mq('small', 'max' ) {
+				width: calc( ( 100% / #{$grid-columns} ) * #{$i} );
+			}
+		}
 	}
+
+	@for $i from 1 through $grid-columns {
+
+		&__break--xs-#{$i} {
+			@include mq('xsmall', 'max' ) {
+				width: calc( ( 100% / #{$grid-columns} ) * #{$i} );
+			}
+		}
+	}
+
+	&__break--first-xs {
+		@include mq('xsmall', 'max' ) {
+			order: -1;
+		}
+	}
+
+	&__break--first-s {
+		@include mq('small', 'max' ) {
+			order: -1;
+		}
+	}
+
+	&__break--first-m {
+		@include mq('medium', 'max' ) {
+			order: -1;
+		}
+	}
+
+	&__break--first-l {
+		@include mq('large', 'max' ) {
+			order: -1;
+		}
+	}
+
+	&__break--first-xl {
+		@include mq('xlarge', 'max' ) {
+			order: -1;
+		}
+	}
+
+	
 
 }
