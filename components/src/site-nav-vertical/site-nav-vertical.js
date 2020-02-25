@@ -1,4 +1,5 @@
 import wsu_bt_vertical_nav from '../../../../wsu-build-tools/js/vertical-nav/wsu-bt-vertical-nav';
+import wsu_bt_wds from '../../../../wsu-build-tools/js/wsu-bt-wds';
 
 const nav_vert_wrapper = document.querySelector('.wsu-s-nav-vertical__wrapper');
 
@@ -16,14 +17,15 @@ if (typeof nav_vert_wrapper != "undefined" && nav_vert_wrapper != null) {
 	 * Init vertical nav
 	 *
 	 */
-	window.vertical_nav = new wsu_bt_vertical_nav({
+	wsu_bt_wds.vertical_nav = new wsu_bt_vertical_nav({
 		nav_item_selector: '.wsu-s-nav-vertical__nav-link',
 		nav_panel_control_selector: '.wsu-s-nav-vertical__menu-icon-link',
 		nav_panel_selector: '.wsu-s-nav-vertical__wrapper',
-		nav_list_container_selector: '.wsu-s-nav-vertical__nav-list-container',
+		nav_list_container_selector: '.wsu-s-nav-vertical__nav-list',
+		show_logs: true
 	});
 
-	window.vertical_nav.init();
+	wsu_bt_wds.vertical_nav.init();
 
 	/**
 	 *
@@ -34,7 +36,7 @@ if (typeof nav_vert_wrapper != "undefined" && nav_vert_wrapper != null) {
 
 	close_link.addEventListener('click', function (e) {
 		e.preventDefault();
-		window.vertical_nav.closePanel();
+		wsu_bt_wds.vertical_nav.closePanel();
 	});
 
 }
