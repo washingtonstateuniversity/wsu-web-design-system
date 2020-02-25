@@ -109,10 +109,26 @@ $grid-columns: 12;
 
 		& > .wsu-c-column:first-child {
 			width: 66.66%;
+
+			@include mq('medium', 'max' ) {
+				width: 60%;
+			}
+
+			@include mq('small', 'max' ) {
+				width: 100%;
+			}
 		}
 
 		& > .wsu-c-column:last-child {
 			width: 33.33%;
+
+			@include mq('medium', 'max' ) {
+				width: 40%;
+			}
+
+			@include mq('small', 'max' ) {
+				width: 100%;
+			}
 		}
 
 	}
@@ -121,10 +137,26 @@ $grid-columns: 12;
 
 		& > .wsu-c-column:first-child {
 			width: 33.33%;
+
+			@include mq('medium', 'max' ) {
+				width: 40%;
+			}
+
+			@include mq('small', 'max' ) {
+				width: 100%;
+			}
 		}
 
 		& > .wsu-c-column:last-child {
 			width: 66.66%;
+
+			@include mq('medium', 'max' ) {
+				width: 60%;
+			}
+
+			@include mq('small', 'max' ) {
+				width: 100%;
+			}
 		}
 
 	}
