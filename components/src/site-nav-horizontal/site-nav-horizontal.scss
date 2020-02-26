@@ -1,4 +1,5 @@
 @import '../../../../wsu-build-tools/scss/all-the-things.scss';
+@import '../../../../wsu-build-tools/scss/animate.css/animate.min.css';
 
 /* Start Base Styles
 ======================= */
@@ -28,10 +29,20 @@
 .wsu-s-nav-horizontal__nav-item--has-children,
 .wsu-s-nav-horizontal__nav-item--more {
 	display: inline-block;
+
+	animation-duration: 350ms;
 	vertical-align: bottom;
+
+	&.animated {
+		opacity: 0;
+	}
 }
 
-// Is a submenu
+/**
+ *
+ * Is a submenu
+ *
+ */
 .wsu-s-nav-horizontal__nav-item--has-children {
 	position: relative;
 
@@ -39,12 +50,19 @@
 		font-family: "wsu-icons";
 		font-size: 8px;
 
-		width: 10px;
-		padding-left: $unit-xs;
+		top: 50%;
+		right: $unit-s;
+
+		transition: transform timing();
+		transform: translateY(-50%);
 
 		color: color(grey, 30);
 
-		@include is-psuedo-element($content: "\F103", $display: inline-block);
+		@include is-psuedo-element($content: "\F103", $display: inline-block, $position: absolute);
+	}
+
+	& > .wsu-s-nav-horizontal__nav-link[aria-expanded="true"]::after {
+		transform: translateY(-50%) rotate(-180deg);
 	}
 
 	& > .wsu-s-nav-horizontal__nav-list {
@@ -62,7 +80,8 @@
 
 		border-radius: $wsu-bt-base-border-radius-size;
 		background: color(grey, 0);
-		box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.3);
+
+		@include elevate(1);
 
 		& .wsu-s-nav-horizontal__nav-link,
 		& .wsu-s-nav-horizontal__nav-link--active {
@@ -93,9 +112,16 @@
 }
 
 
-/* Base link styles */
+/**
+ *
+ * Base Link Styles
+ *
+ */
 .wsu-s-nav-horizontal__nav-link,
 .wsu-s-nav-horizontal__nav-link--active {
+	position: relative;
+	z-index: z('header') - 1;
+
 	display: block;
 
 	padding: $unit-l $unit-xl;
@@ -116,23 +142,24 @@
 		color: color(grey, 100);
 	}
 
-	&:focus {
-		outline: none;
-	}
+	// &:focus {
+	// 	outline: none;
+	// }
 
 	&[aria-expanded="true"] ~ .wsu-s-nav-horizontal__nav-list,
 	&[aria-expanded="true"] ~ .wsu-s-nav-horizontal__nav-list--has-more-items {
-		display: block;
+		animation-duration: 350ms;
 
 		opacity: 1;
 	}
 
 	&[aria-expanded="false"] ~ .wsu-s-nav-horizontal__nav-list,
 	&[aria-expanded="false"] ~ .wsu-s-nav-horizontal__nav-list--has-more-items {
-		display: none;
+		z-index: z('header') - 2;
+
+		animation-duration: 350ms;
 
 		opacity: 0;
-
 	}
 }
 
@@ -151,18 +178,23 @@
 	}
 }
 
-// More menu styles
+
+/**
+ *
+ * Priority Nav - More Menu Items
+ *
+ */
 .wsu-s-nav-horizontal__nav-item--more {
 	position: relative;
 
-	/*transform: translateY(-18px);*/
-
+	// More link in main nav
 	.wsu-s-nav-horizontal__nav-link {
 		font-size: 28px;
 
 		padding: $unit-s $unit;
 	}
 
+	// Submenu that is in the more menu
 	& > .wsu-s-nav-horizontal__nav-list,
 	& > .wsu-s-nav-horizontal__nav-list--has-more-items {
 		position: absolute;
@@ -180,15 +212,27 @@
 		border-radius: $wsu-bt-base-border-radius-size;
 		background: color(grey, 0);
 
+		@include elevate(1);
+
 		.wsu-s-nav-horizontal__nav-link,
 		.wsu-s-nav-horizontal__nav-link--active {
-			padding: $unit-xs $unit;
+			padding: $unit-2xs $unit-l $unit-2xs $unit;
 
 			transition: padding-left timing(husky);
 
 			color: color(grey, 60);
 
-			@include font-size(13px, 600, 1);
+			@include font-size(13px, 600);
+
+			&[aria-expanded="true"] ~ .wsu-s-nav-horizontal__nav-list,
+			&[aria-expanded="true"] ~ .wsu-s-nav-horizontal__nav-list--has-more-items {
+				display: block;
+			}
+
+			&[aria-expanded="false"] ~ .wsu-s-nav-horizontal__nav-list,
+			&[aria-expanded="false"] ~ .wsu-s-nav-horizontal__nav-list--has-more-items {
+				display: none;
+			}
 		}
 
 		.wsu-s-nav-horizontal__nav-link:hover {
@@ -202,9 +246,33 @@
 		}
 	}
 
+	// More items sub menu styles
+	.wsu-s-nav-horizontal__nav-list--has-more-items {
+		.wsu-s-nav-horizontal__nav-list {
+			& .wsu-s-nav-horizontal__nav-link {
+				padding-left: $unit-2xl;
+
+
+				&:hover {
+					padding-left: $unit-3xl;
+				}
+			}
+		}
+	}
+
 	.wsu-s-nav-horizontal__nav-item {
 		display: block;
+
+		&--has-children {
+			.wsu-s-nav-horizontal__nav-list {
+				padding: 0;
+
+				@include elevate(0);
+			}
+		}
 	}
+
+
 }
 
 // Submenus in the Priority Navigation
