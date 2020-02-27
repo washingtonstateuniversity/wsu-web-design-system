@@ -1,0 +1,27 @@
+@import '../../../../wsu-build-tools/scss/all-the-things.scss';
+
+.wsu-c-card {
+	overflow: hidden;
+
+	padding-bottom: $unit-s;
+
+	border-radius: 5px;
+
+	@include elevate(2);
+}
+
+.wsu-c-card__photo {
+	overflow: hidden;
+
+	width: 200px;
+	height: 200px;
+}
+
+.wsu-c-card__heading,
+.wsu-c-card__description,
+.wsu-c-card__address,
+.wsu-c-card__phone,
+.wsu-c-card__email,
+.wsu-c-card__website {
+	padding: $unit-2xs $unit-s;
+}
