@@ -17,6 +17,7 @@ import '../../components/src/site-header/build';
 
 /* Content components */
 import '../../components/src/content-button/build';
+import '../../components/src/content-card/build';
 import '../../components/src/content-heading/build'
 import '../../components/src/content-hero/build';
 import '../../components/src/content-list/build';
