@@ -10,7 +10,12 @@
 	color: color(grey, 75);
 	border-radius: $wsu-bt-base-border-radius-size;
 
+	transiton: box-shadow timing();
 	@include elevate(3);
+
+	&:hover {
+		@include elevate(6);
+	}
 }
 
 .wsu-c-card__photo-frame {
@@ -51,7 +56,7 @@
 	margin: 0 $unit-xs;
 	padding: $unit-xs $unit-2xl;
 
-	@include font-size(13px);
+	@include font-size(13px, 300);
 
 	&::before {
 		position: absolute;
@@ -88,10 +93,10 @@
 	@include font-size(13px, 300);
 
 	&:hover {
-		text-decoration: underline;
-
 		border-radius: $wsu-bt-base-border-radius-size;
 		background-color: color(grey, 0);
+
+		@include font-size(13px, 400);
 	}
 
 	&:active,
