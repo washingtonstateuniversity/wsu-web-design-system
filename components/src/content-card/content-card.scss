@@ -3,25 +3,121 @@
 .wsu-c-card {
 	overflow: hidden;
 
+	max-width: 600px;
+	margin: $unit auto;
 	padding-bottom: $unit-s;
 
-	border-radius: 5px;
+	border-radius: $wsu-bt-base-border-radius-size;
 
-	@include elevate(2);
+	@include elevate(3);
+}
+
+.wsu-c-card__photo-frame {
+	width: 100%;
 }
 
 .wsu-c-card__photo {
-	overflow: hidden;
+	width: 100%;
+	height: 225px;
 
-	width: 200px;
-	height: 200px;
+	object-fit: cover;
+	object-position: center;
 }
 
-.wsu-c-card__heading,
-.wsu-c-card__description,
-.wsu-c-card__address,
-.wsu-c-card__phone,
-.wsu-c-card__email,
-.wsu-c-card__website {
-	padding: $unit-2xs $unit-s;
+.wsu-c-card__heading {
+	margin: 0;
+	margin-top: $unit-3xl;
+	padding: 0 $unit-2xl;
+
+	@include font-size(14px, 500);
+}
+
+.wsu-c-card__description {
+	margin: 0;
+	margin-bottom: $unit-xs;
+	padding: 0 $unit-2xl;
+
+	@include font-size(12px, 400);
+}
+
+/* Address
+======================= */
+.wsu-c-card__address {
+	position: relative;
+
+	margin: 0 $unit;
+	padding: $unit-xs $unit-2xl;
+
+	@include font-size(12px);
+
+	&::before {
+		position: absolute;
+		top: 50%;
+		left: $unit-xs;
+
+		transform: translateY(-50%);
+
+		color: color(primary, light);
+
+		@include wsu-icon("\F127");
+	}
+}
+
+.wsu-c-card__address-line-1,
+.wsu-c-card__city-state-zip {
+	display: block;
+}
+
+/* Links
+======================= */
+.wsu-c-card__phone-link,
+.wsu-c-card__email-link,
+.wsu-c-card__website-link {
+	position: relative;
+
+	display: block;
+
+	margin: 0 $unit;
+	padding: $unit-xs $unit-2xl;
+
+	transition: background-color timing('husky', 'ease');
+
+	color: color(primary, light);
+
+	@include font-size(12px);
+
+	&:hover {
+		border-radius: $wsu-bt-base-border-radius-size;
+		background-color: color(grey, 0);
+	}
+
+	&:active,
+	&:visited {
+		color: color(primary, light);
+	}
+
+	&::before {
+		position: absolute;
+		top: 50%;
+		left: $unit-xs;
+
+		transform: translateY(-50%);
+	}
+}
+/* Phone
+======================= */
+.wsu-c-card__phone-link::before {
+	@include wsu-icon("\F133");
+}
+
+/* Email
+======================= */
+.wsu-c-card__email-link::before {
+	@include wsu-icon("\F11A");
+}
+
+/* Website
+======================= */
+.wsu-c-card__website-link::before {
+	@include wsu-icon("\F10D");
 }
