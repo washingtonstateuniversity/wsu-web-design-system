@@ -7,6 +7,7 @@
 	margin: $unit auto;
 	padding-bottom: $unit-s;
 
+	color: color(grey, 75);
 	border-radius: $wsu-bt-base-border-radius-size;
 
 	@include elevate(3);
@@ -33,11 +34,13 @@
 }
 
 .wsu-c-card__description {
+	font-style: italic;
+
 	margin: 0;
 	margin-bottom: $unit-xs;
 	padding: 0 $unit-2xl;
 
-	@include font-size(12px, 400);
+	@include font-size(14px, 400);
 }
 
 /* Address
@@ -45,17 +48,14 @@
 .wsu-c-card__address {
 	position: relative;
 
-	margin: 0 $unit;
+	margin: 0 $unit-xs;
 	padding: $unit-xs $unit-2xl;
 
-	@include font-size(12px);
+	@include font-size(13px);
 
 	&::before {
 		position: absolute;
-		top: 50%;
 		left: $unit-xs;
-
-		transform: translateY(-50%);
 
 		color: color(primary, light);
 
@@ -77,16 +77,19 @@
 
 	display: block;
 
-	margin: 0 $unit;
+	margin: 0 $unit-xs;
 	padding: $unit-xs $unit-2xl;
 
 	transition: background-color timing('husky', 'ease');
+	text-decoration: none;
 
 	color: color(primary, light);
 
-	@include font-size(12px);
+	@include font-size(13px, 300);
 
 	&:hover {
+		text-decoration: underline;
+
 		border-radius: $wsu-bt-base-border-radius-size;
 		background-color: color(grey, 0);
 	}
