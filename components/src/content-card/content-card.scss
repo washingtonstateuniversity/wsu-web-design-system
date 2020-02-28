@@ -7,10 +7,11 @@
 	margin: $unit auto;
 	padding-bottom: $unit-s;
 
+	transition: box-shadow timing();
+
 	color: color(grey, 75);
 	border-radius: $wsu-bt-base-border-radius-size;
 
-	transiton: box-shadow timing();
 	@include elevate(3);
 
 	&:hover {
@@ -30,10 +31,16 @@
 	object-position: center;
 }
 
-.wsu-c-card__heading {
+/* Heading / Description
+======================= */
+.wsu-c-card__heading,
+.wsu-c-card__description {
 	margin: 0;
-	margin-top: $unit-3xl;
-	padding: 0 $unit-2xl;
+	padding: 0 $unit;
+}
+
+.wsu-c-card__heading {
+	margin-top: $unit;
 
 	@include font-size(14px, 500);
 }
@@ -41,9 +48,7 @@
 .wsu-c-card__description {
 	font-style: italic;
 
-	margin: 0;
 	margin-bottom: $unit-xs;
-	padding: 0 $unit-2xl;
 
 	@include font-size(14px, 400);
 }
