@@ -138,7 +138,7 @@
 	display: block;
 
 	margin: 0 $unit-xs;
-	padding: $unit-xs $unit-2xl;
+	padding: $unit-xs $unit-l $unit-xs $unit-2xl;
 
 	transition: background-color timing('husky', 'ease');
 	text-decoration: none;
@@ -161,10 +161,7 @@
 
 	&::before {
 		position: absolute;
-		top: 50%;
 		left: $unit-xs;
-
-		transform: translateY(-50%);
 	}
 }
 /* Phone
