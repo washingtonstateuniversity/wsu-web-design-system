@@ -75,8 +75,7 @@ module.exports = env => {
 							options: {
 								name: 'components/dist/[name]/[name].[ext]',
 							}
-						},
-						"markup-inline-loader"
+						}
 					],
 				},
 				{
