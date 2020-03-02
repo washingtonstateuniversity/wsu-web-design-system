@@ -1,16 +1,58 @@
 @import '../../../../wsu-build-tools/scss/all-the-things.scss';
 
-.wsu-c-card {
+/* Cards Container / Wrapper / Helpers
+======================= */
+.wsu-c-cards__wrapper {
+	display: flex;
+	flex-flow: row wrap;
+
+	padding: 0 $unit-xs;
+
+	&.wsu-c-cards__items-per-row {
+		&--1 .wsu-c-card__container,
+		&--2 .wsu-c-card__container,
+		&--3 .wsu-c-card__container,
+		&--4 .wsu-c-card__container,
+		&--5 .wsu-c-card__container {
+			padding: $unit-xs $unit;
+		}
+
+		&--1 .wsu-c-card__wrapper {
+			width: 100%;
+		}
+
+		&--2 .wsu-c-card__wrapper {
+			width: 100%;
+		}
+
+		&--3 .wsu-c-card__wrapper {
+			width: 100%;
+		}
+
+		&--4 .wsu-c-card__wrapper {
+			width: 100%;
+		}
+
+		&--5 .wsu-c-card__wrapper {
+			width: 100%;
+		}
+	}
+}
+
+/* WSU Card Styles
+======================= */
+.wsu-c-card__content {
 	overflow: hidden;
 
 	max-width: 600px;
-	margin: $unit auto;
+	margin: 0 auto;
 	padding-bottom: $unit-s;
+
+	transition: box-shadow timing();
 
 	color: color(grey, 75);
 	border-radius: $wsu-bt-base-border-radius-size;
 
-	transiton: box-shadow timing();
 	@include elevate(3);
 
 	&:hover {
@@ -30,10 +72,16 @@
 	object-position: center;
 }
 
-.wsu-c-card__heading {
+/* Heading / Description
+======================= */
+.wsu-c-card__heading,
+.wsu-c-card__description {
 	margin: 0;
-	margin-top: $unit-3xl;
-	padding: 0 $unit-2xl;
+	padding: 0 $unit;
+}
+
+.wsu-c-card__heading {
+	margin-top: $unit;
 
 	@include font-size(14px, 500);
 }
@@ -41,9 +89,7 @@
 .wsu-c-card__description {
 	font-style: italic;
 
-	margin: 0;
 	margin-bottom: $unit-xs;
-	padding: 0 $unit-2xl;
 
 	@include font-size(14px, 400);
 }
@@ -128,4 +174,54 @@
 ======================= */
 .wsu-c-card__website-link::before {
 	@include wsu-icon("\F10D");
+}
+
+/* Media Queries
+======================= */
+@include mq('xsmall') {
+	.wsu-c-cards__wrapper {
+		padding: 0 $unit-xs;
+
+		&.wsu-c-cards__items-per-row {
+			&--1 .wsu-c-card__container,
+			&--2 .wsu-c-card__container,
+			&--3 .wsu-c-card__container,
+			&--4 .wsu-c-card__container,
+			&--5 .wsu-c-card__container {
+				padding: $unit-xs;
+			}
+
+			&--2 .wsu-c-card__wrapper {
+				width: 50%;
+			}
+
+			&--3 .wsu-c-card__wrapper,
+			&--4 .wsu-c-card__wrapper,
+			&--5 .wsu-c-card__wrapper {
+				width: 50%;
+			}
+		}
+	}
+}
+
+@include mq('small') {
+	.wsu-c-cards__wrapper.wsu-c-cards__items-per-row {
+		&--3 .wsu-c-card__wrapper,
+		&--4 .wsu-c-card__wrapper,
+		&--5 .wsu-c-card__wrapper {
+			width: 33.33%;
+		}
+	}
+}
+
+@include mq('medium') {
+	.wsu-c-cards__wrapper.wsu-c-cards__items-per-row {
+		&--4 .wsu-c-card__wrapper {
+			width: 25%;
+		}
+
+		&--5 .wsu-c-card__wrapper {
+			width: 20%;
+		}
+	}
 }
