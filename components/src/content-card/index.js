@@ -5,4 +5,4 @@ import './content-card.js';
 import './content-card.scss';
 
 // HTML
-import './content-card.html';
+import './content-card.html'; 

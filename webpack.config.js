@@ -26,6 +26,7 @@ module.exports = env => {
 			'components/dist/content-list/content-list': './components/src/content-list/index.js',
 			'components/dist/content-icons/content-icons': './components/src/content-icons/index.js',
 			'components/dist/content-column/content-column': './components/src/content-column/index.js',
+			'components/dist/containers/containers': './components/src/containers/index.js',
 		},
 		output: {
 			path: path.resolve(__dirname),
@@ -75,8 +76,7 @@ module.exports = env => {
 							options: {
 								name: 'components/dist/[name]/[name].[ext]',
 							}
-						},
-						"markup-inline-loader"
+						}
 					],
 				},
 				{
