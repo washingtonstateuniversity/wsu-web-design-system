@@ -164,6 +164,7 @@
 		left: $unit-xs;
 	}
 }
+
 /* Phone
 ======================= */
 .wsu-c-card__phone-link::before {
@@ -172,8 +173,12 @@
 
 /* Email
 ======================= */
-.wsu-c-card__email-link::before {
-	@include wsu-icon("\F11A");
+.wsu-c-card__email-link {
+	word-break: break-word;
+
+	&::before {
+		@include wsu-icon("\F11A");
+	}
 }
 
 /* Website
