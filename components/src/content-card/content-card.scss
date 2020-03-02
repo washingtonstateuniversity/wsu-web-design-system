@@ -5,38 +5,37 @@
 .wsu-c-cards__wrapper {
 	display: flex;
 	flex-flow: row wrap;
-}
 
-.wsu-c-cards__items-per-row {
-	&--1 .wsu-c-card__container,
-	&--2 .wsu-c-card__container,
-	&--3 .wsu-c-card__container,
-	&--4 .wsu-c-card__container {
-		padding: $unit-s;
-	}
+	padding: 0 $unit-xs;
 
-	&--1 .wsu-c-card__wrapper {
-		width: 100%;
-	}
+	&.wsu-c-cards__items-per-row {
+		&--1 .wsu-c-card__container,
+		&--2 .wsu-c-card__container,
+		&--3 .wsu-c-card__container,
+		&--4 .wsu-c-card__container,
+		&--5 .wsu-c-card__container {
+			padding: $unit-xs $unit;
+		}
 
-	&--2 .wsu-c-card__wrapper {
-		width: 50%;
-	}
+		&--1 .wsu-c-card__wrapper {
+			width: 100%;
+		}
 
-	&--3 .wsu-c-card__wrapper {
-		width: 33.33%;
-	}
+		&--2 .wsu-c-card__wrapper {
+			width: 100%;
+		}
 
-	&--4 .wsu-c-card__wrapper {
-		width: 25%;
-	}
+		&--3 .wsu-c-card__wrapper {
+			width: 100%;
+		}
 
-	&--5 .wsu-c-card__wrapper {
-		width: 20%;
-	}
+		&--4 .wsu-c-card__wrapper {
+			width: 100%;
+		}
 
-	&--5 .wsu-c-card__container {
-		padding: $unit-xs;
+		&--5 .wsu-c-card__wrapper {
+			width: 100%;
+		}
 	}
 }
 
@@ -177,4 +176,52 @@
 	@include wsu-icon("\F10D");
 }
 
+/* Media Queries
+======================= */
+@include mq('xsmall') {
+	.wsu-c-cards__wrapper {
+		padding: 0 $unit-xs;
 
+		&.wsu-c-cards__items-per-row {
+			&--1 .wsu-c-card__container,
+			&--2 .wsu-c-card__container,
+			&--3 .wsu-c-card__container,
+			&--4 .wsu-c-card__container,
+			&--5 .wsu-c-card__container {
+				padding: $unit-xs;
+			}
+
+			&--2 .wsu-c-card__wrapper {
+				width: 50%;
+			}
+
+			&--3 .wsu-c-card__wrapper,
+			&--4 .wsu-c-card__wrapper,
+			&--5 .wsu-c-card__wrapper {
+				width: 50%;
+			}
+		}
+	}
+}
+
+@include mq('small') {
+	.wsu-c-cards__wrapper.wsu-c-cards__items-per-row {
+		&--3 .wsu-c-card__wrapper,
+		&--4 .wsu-c-card__wrapper,
+		&--5 .wsu-c-card__wrapper {
+			width: 33.33%;
+		}
+	}
+}
+
+@include mq('medium') {
+	.wsu-c-cards__wrapper.wsu-c-cards__items-per-row {
+		&--4 .wsu-c-card__wrapper {
+			width: 25%;
+		}
+
+		&--5 .wsu-c-card__wrapper {
+			width: 20%;
+		}
+	}
+}
