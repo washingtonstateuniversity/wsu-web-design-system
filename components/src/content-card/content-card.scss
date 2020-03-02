@@ -1,10 +1,52 @@
 @import '../../../../wsu-build-tools/scss/all-the-things.scss';
 
-.wsu-c-card {
+/* Cards Container / Wrapper / Helpers
+======================= */
+.wsu-c-cards__wrapper {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.wsu-c-cards__items-per-row {
+	&--1 .wsu-c-card__container,
+	&--2 .wsu-c-card__container,
+	&--3 .wsu-c-card__container,
+	&--4 .wsu-c-card__container {
+		padding: $unit-s;
+	}
+
+	&--1 .wsu-c-card__wrapper {
+		width: 100%;
+	}
+
+	&--2 .wsu-c-card__wrapper {
+		width: 50%;
+	}
+
+	&--3 .wsu-c-card__wrapper {
+		width: 33.33%;
+	}
+
+	&--4 .wsu-c-card__wrapper {
+		width: 25%;
+	}
+
+	&--5 .wsu-c-card__wrapper {
+		width: 20%;
+	}
+
+	&--5 .wsu-c-card__container {
+		padding: $unit-xs;
+	}
+}
+
+/* WSU Card Styles
+======================= */
+.wsu-c-card__content {
 	overflow: hidden;
 
 	max-width: 600px;
-	margin: $unit auto;
+	margin: 0 auto;
 	padding-bottom: $unit-s;
 
 	transition: box-shadow timing();
@@ -134,3 +176,5 @@
 .wsu-c-card__website-link::before {
 	@include wsu-icon("\F10D");
 }
+
+
