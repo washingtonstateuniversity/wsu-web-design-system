@@ -41,6 +41,14 @@
 
 /* WSU Card Styles
 ======================= */
+.wsu-c-card__wrapper {
+	display: flex;
+}
+
+.wsu-c-card__container {
+	display: flex;
+}
+
 .wsu-c-card__content {
 	overflow: hidden;
 
