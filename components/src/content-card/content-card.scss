@@ -47,11 +47,13 @@
 
 .wsu-c-card__container {
 	display: flex;
+	flex: 1 1 auto;
 }
 
 .wsu-c-card__content {
 	overflow: hidden;
 
+	width: 100%;
 	max-width: 600px;
 	margin: 0 auto;
 	padding-bottom: $unit-s;
@@ -235,5 +237,11 @@
 				width: 20%;
 			}
 		}
+	}
+}
+
+@include mq('large') {
+	.wsu-c-cards__wrapper {
+		padding: 0;
 	}
 }
