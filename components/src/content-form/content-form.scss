@@ -1,0 +1,32 @@
+@import '../../../../wsu-build-tools/scss/all-the-things.scss';
+
+.wsu-c-form__field-container {
+	margin: $unit 0;
+}
+
+
+.wsu-c-form__container {
+	button,
+	input,
+	optgroup,
+	select,
+	textarea {
+		font-family: inherit;
+		font-size: inherit;
+		line-height: inherit;
+
+		margin: 0;
+	}
+
+	label {
+		color: red;
+	}
+
+	input,
+	textarea {
+		// &:focus {
+		// 	border: 1px solid color(primary, light);
+		// 	// outline: none;
+		// }
+	}
+}

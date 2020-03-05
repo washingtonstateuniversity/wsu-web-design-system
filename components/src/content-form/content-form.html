@@ -1,0 +1,114 @@
+<html>
+
+<head lang="en-US">
+	<meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Content Form | Component</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+	<link rel="stylesheet" href="https://cdn.web.wsu.edu/designsystem/1.x/wsu-icons/dist/wsu-icons.bundle.css">
+	<link rel="stylesheet" href="content-form.css">
+
+</head>
+
+<body>
+	<div style="max-width: 1200px; margin: 0 auto;">
+		<div class="wsu-u-spacer">
+			<h1 class="wsu-u-title">Content Form</h1>
+		</div>
+
+		<!-- COMPONENT:START -->
+		<div class="wsu-c-form__wrapper">
+			<form action="#" class="wsu-c-form__container">
+
+				<h2 class="wsu-u-title wsu-u-textalign--left">Input</h2>
+				<div class="wsu-c-form__field-container">
+					<label id="companyNameLabel" for="companyName">Company Name</label>
+					<input type="text" name="companyName" id="companyName" aria-labelledby="companyNameLabel">
+				</div>
+
+				<h2 class="wsu-u-title wsu-u-textalign--left">Text Area</h2>
+				<div class="wsu-c-form__field-container">
+					<label id="textAreaLabel" for="textArea">Text Area</label>
+					<textarea id="textArea" aria-labelledby="textAreaLabel" rows="4" cols="50"></textarea>
+				</div>
+
+				<h2 class="wsu-u-title wsu-u-textalign--left">Fieldset</h2>
+				<div class="wsu-c-form__field-container">
+					<fieldset>
+						<legend>Personalia:</legend>
+						<div class="wsu-c-form__field-container">
+							<label id="firstNameLabel" for="firstName">First Name</label>
+							<input type="text" name="firstName" id="firstName" aria-labelledby="firstNameLabel">
+						</div>
+						<div class="wsu-c-form__field-container">
+							<label id="lastNameLabel" for="lastName">Last Name</label>
+							<input type="text" name="lastName" id="lastName" aria-labelledby="lastNameLabel">
+						</div>
+						<div class="wsu-c-form__field-container">
+							<label id="phoneNumberLabel" for="phoneNumber">Phone Number</label>
+							<input type="phone" name="phoneNumber" id="phoneNumber" aria-labelledby="phoneNumberLabel">
+						</div>
+						<div class="wsu-c-form__field-container">
+							<label id="emailLabel" for="email">Email</label>
+							<input type="email" name="email" id="email" aria-labelledby="emailLabel">
+						</div>
+					</fieldset>
+				</div>
+
+				<div class="wsu-c-form__field-container">
+					<h2 class="wsu-u-title wsu-u-textalign--left">Select w/ Optgroup</h2>
+					<select id="cars">
+						<optgroup label="Swedish Cars">
+							<option value="volvo">Volvo</option>
+							<option value="saab">Saab</option>
+						</optgroup>
+						<optgroup label="German Cars">
+							<option value="mercedes">Mercedes</option>
+							<option value="audi">Audi</option>
+						</optgroup>
+					</select>
+				</div>
+				<div class="wsu-c-form__field-container">
+					<h2 class="wsu-u-title wsu-u-textalign--left">Select</h2>
+					<select id="cars">
+						<option value="volvo">Volvo</option>
+						<option value="saab">Saab</option>
+						<option value="mercedes">Mercedes</option>
+						<option value="audi">Audi</option>
+					</select>
+				</div>
+				<div class="wsu-c-form__field-container">
+					<h2 class="wsu-u-title wsu-u-textalign--left">Radio</h2>
+					<input type="radio" id="huey" name="drone" value="huey" checked>
+					<label for="huey">Huey</label>
+
+					<input type="radio" id="dewey" name="drone" value="dewey">
+					<label for="dewey">Dewey</label>
+
+					<input type="radio" id="louie" name="drone" value="louie">
+					<label for="louie">Louie</label>
+				</div>
+				<div class="wsu-c-form__field-container">
+					<h2 class="wsu-u-title wsu-u-textalign--left">Checkboxes</h2>
+
+					<input type="checkbox" id="scales" name="scales" checked>
+					<label for="scales">Scales</label>
+
+					<input type="checkbox" id="horns" name="horns">
+					<label for="horns">Horns</label>
+				</div>
+
+
+				<button type="submit">Submit</button>
+				<button type="reset">Reset</button>
+			</form>
+		</div>
+	</div>
+	<!-- COMPONENT:END -->
+
+	<script src="content-form.js" defer></script>
+	<script src="../../../node_modules/@wsu/build-tools/js/wsu-bt-toolbar.js"></script>
+</body>
+
+</html>

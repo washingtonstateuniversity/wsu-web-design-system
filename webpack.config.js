@@ -21,6 +21,7 @@ module.exports = env => {
 			'components/dist/site-footer-condensed/site-footer-condensed': './components/src/site-footer-condensed/index.js',
 			'components/dist/content-button/content-button': './components/src/content-button/index.js',
 			'components/dist/content-card/content-card': './components/src/content-card/index.js',
+			'components/dist/content-form/content-form': './components/src/content-form/index.js',
 			'components/dist/content-heading/content-heading': './components/src/content-heading/index.js',
 			'components/dist/content-hero/content-hero': './components/src/content-hero/index.js',
 			'components/dist/content-list/content-list': './components/src/content-list/index.js',
