@@ -12,7 +12,7 @@
 </head>
 
 <body>
-	<div style="max-width: 1200px; margin: 0 auto;">
+	<div style="max-width: 1200px; margin: 0 auto;" class="wsu-c-content">
 		<div class="wsu-u-spacer">
 			<h1 class="wsu-u-title">Content Form</h1>
 		</div>
@@ -20,38 +20,47 @@
 		<!-- COMPONENT:START -->
 		<div class="wsu-c-form__wrapper">
 			<form action="#" class="wsu-c-form__container">
-
 				<h2 class="wsu-u-title wsu-u-textalign--left">Input</h2>
 				<div class="wsu-c-form__field-container">
+					<input type="text" name="companyName" id="companyName" aria-labelledby="companyNameLabel" placeholder="Type something...">
 					<label id="companyNameLabel" for="companyName">Company Name</label>
-					<input type="text" name="companyName" id="companyName" aria-labelledby="companyNameLabel">
+				</div>
+
+				<div class="wsu-c-form__field-container">
+					<input type="password" name="password" id="password" aria-labelledby="passwordLabel" placeholder="Type something...">
+					<label id="passwordLabel" for="password">Password</label>
+				</div>
+
+				<div class="wsu-c-form__field-container">
+					<input type="search" name="search" id="search" aria-labelledby="searchLabel" placeholder="Type something...">
+					<label id="searchLabel" for="search">Search</label>
 				</div>
 
 				<h2 class="wsu-u-title wsu-u-textalign--left">Text Area</h2>
 				<div class="wsu-c-form__field-container">
+					<textarea id="textArea" aria-labelledby="textAreaLabel" rows="4" cols="50" placeholder="Type something..."></textarea>
 					<label id="textAreaLabel" for="textArea">Text Area</label>
-					<textarea id="textArea" aria-labelledby="textAreaLabel" rows="4" cols="50"></textarea>
 				</div>
 
 				<h2 class="wsu-u-title wsu-u-textalign--left">Fieldset</h2>
 				<div class="wsu-c-form__field-container">
 					<fieldset>
-						<legend>Personalia:</legend>
+						<legend>Fieldset legend:</legend>
 						<div class="wsu-c-form__field-container">
+							<input type="text" name="firstName" id="firstName" aria-labelledby="firstNameLabel" placeholder="Type something...">
 							<label id="firstNameLabel" for="firstName">First Name</label>
-							<input type="text" name="firstName" id="firstName" aria-labelledby="firstNameLabel">
 						</div>
 						<div class="wsu-c-form__field-container">
+							<input type="text" name="lastName" id="lastName" aria-labelledby="lastNameLabel" placeholder="Type something...">
 							<label id="lastNameLabel" for="lastName">Last Name</label>
-							<input type="text" name="lastName" id="lastName" aria-labelledby="lastNameLabel">
 						</div>
 						<div class="wsu-c-form__field-container">
+							<input type="tel" name="phoneNumber" id="phoneNumber" aria-labelledby="phoneNumberLabel" placeholder="Type something...">
 							<label id="phoneNumberLabel" for="phoneNumber">Phone Number</label>
-							<input type="phone" name="phoneNumber" id="phoneNumber" aria-labelledby="phoneNumberLabel">
 						</div>
 						<div class="wsu-c-form__field-container">
+							<input type="email" name="email" id="email" aria-labelledby="emailLabel" placeholder="Type something...">
 							<label id="emailLabel" for="email">Email</label>
-							<input type="email" name="email" id="email" aria-labelledby="emailLabel">
 						</div>
 					</fieldset>
 				</div>
@@ -80,32 +89,50 @@
 				</div>
 				<div class="wsu-c-form__field-container">
 					<h2 class="wsu-u-title wsu-u-textalign--left">Radio</h2>
-					<input type="radio" id="huey" name="drone" value="huey" checked>
-					<label for="huey">Huey</label>
 
-					<input type="radio" id="dewey" name="drone" value="dewey">
-					<label for="dewey">Dewey</label>
+					<div class="wsu-c-form__input--radio">
+						<input type="radio" id="pullmanRadio" name="city" value="pullmanRadio" checked>
+						<label for="pullmanRadio">Pullman</label>
+						<span class="wsu-c-form__input"></span>
+					</div>
 
-					<input type="radio" id="louie" name="drone" value="louie">
-					<label for="louie">Louie</label>
+					<div class="wsu-c-form__input--radio">
+						<input type="radio" id="spokaneRadio" name="city" value="spokaneRadio">
+						<label for="spokaneRadio">Spokane</label>
+						<span class="wsu-c-form__input"></span>
+					</div>
+
+					<div class="wsu-c-form__input--radio">
+						<input type="radio" id="tricitiesRadio" name="city" value="tricitiesRadio">
+						<label for="tricitiesRadio">Tri-Cities</label>
+						<span class="wsu-c-form__input"></span>
+					</div>
 				</div>
-				<div class="wsu-c-form__field-container">
-					<h2 class="wsu-u-title wsu-u-textalign--left">Checkboxes</h2>
-
-					<input type="checkbox" id="scales" name="scales" checked>
-					<label for="scales">Scales</label>
-
-					<input type="checkbox" id="horns" name="horns">
-					<label for="horns">Horns</label>
-				</div>
-
-
-				<button type="submit">Submit</button>
-				<button type="reset">Reset</button>
-			</form>
 		</div>
+		<div class="wsu-c-form__field-container">
+			<h2 class="wsu-u-title wsu-u-textalign--left">Checkboxes</h2>
+
+			<div class="wsu-c-form__input--checkbox">
+				<input type="checkbox" id="moscowCheckbox" name="moscowCheckbox" checked>
+				<label for="moscowCheckbox">Moscow</label>
+				<span class="wsu-c-form__input"></span>
+			</div>
+			<div class="wsu-c-form__input--checkbox">
+				<input type="checkbox" id="pullmanCheckbox" name="pullmanCheckbox">
+				<label for="pullmanCheckbox">Pullman</label>
+				<span class="wsu-c-form__input"></span>
+			</div>
+		</div>
+
+
+		<button type="submit">Submit</button>
+		<button type="reset">Reset</button>
+		</form>
+	</div>
 	</div>
 	<!-- COMPONENT:END -->
+	<div class="wsu-u-spacer">
+	</div>
 
 	<script src="content-form.js" defer></script>
 	<script src="../../../node_modules/@wsu/build-tools/js/wsu-bt-toolbar.js"></script>

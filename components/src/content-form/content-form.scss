@@ -1,11 +1,11 @@
 @import '../../../../wsu-build-tools/scss/all-the-things.scss';
 
 .wsu-c-form__field-container {
-	margin: $unit 0;
+	margin: $unit-l 0 $unit;
 }
 
 
-.wsu-c-form__container {
+.wsu-c-content {
 	button,
 	input,
 	optgroup,
@@ -16,17 +16,266 @@
 		line-height: inherit;
 
 		margin: 0;
+
+		transition: border timing();
+
+		border: 1px solid color(grey, 20);
+		border-radius: $wsu-bt-base-border-radius-size;
+
+		@include font-size(14px);
 	}
 
-	label {
-		color: red;
-	}
 
 	input,
 	textarea {
-		// &:focus {
-		// 	border: 1px solid color(primary, light);
-		// 	// outline: none;
+
+		label {
+			display: block;
+
+			margin-bottom: $unit-xs;
+			margin-left: $unit;
+
+			@include font-size(14px);
+		}
+	}
+
+
+	input,
+	textarea,
+	select {
+		width: 100%;
+		min-height: 50px;
+		padding: 13px $unit;
+
+		color: color(grey, 100);
+
+		@include elevate(0);
+
+		&:focus {
+			outline: none;
+
+			@include elevate(2);
+		}
+
+		&::-webkit-input-placeholder {
+			color: color(grey, 60);
+		}
+	}
+
+	/* Radio Button / Checkboxes
+	======================= */
+
+	// Default styles, no fancy markup
+	input[type="radio"],
+	input[type="checkbox"] {
+		display: inline;
+
+		width: initial;
+		margin-right: $unit-2xs;
+
+		& + label {
+			margin-right: $unit-s;
+
+			@include font-size(14px);
+		}
+	}
+
+	// Checkbox fancy styles
+	.wsu-c-form__input--checkbox {
+		position: relative;
+
+		margin: $unit-xs 0;
+
+		.wsu-c-form__input {
+			position: absolute;
+			z-index: z('content') - 1;
+			top: 0;
+			left: 0;
+
+			display: block;
+
+			width: 20px;
+			height: 20px;
+
+			transition: background-color timing('eagle');
+
+			border: 1px solid color(grey, 20);
+			border-radius: $wsu-bt-base-border-radius-size;
+			background-color: color(white, base);
+
+			&::before {
+				font-family: "wsu-icons";
+				font-size: 0;
+
+				content: "\F110";
+				transition: font-size timing('eagle', 'ease');
+
+				color: color(white, base);
+
+				@include is-centered();
+			}
+		}
+
+		& > input:checked ~ .wsu-c-form__input {
+			border-color: color(primary, light);
+			background-color: color(primary, light);
+
+			&::before {
+				font-size: 12px;
+			}
+		}
+
+		& > input[type="checkbox"] {
+			@include is-visually-hidden();
+
+			& + label {
+				position: relative;
+				z-index: z('content');
+
+				padding-right: $unit;
+				padding-left: $unit-2xl;
+
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+	}
+
+	// Radio fancy styles
+	.wsu-c-form__input--radio {
+		position: relative;
+
+		margin: $unit-xs 0;
+
+		.wsu-c-form__input {
+			position: absolute;
+			z-index: z('content') - 1;
+			top: 0;
+			left: 0;
+
+			display: block;
+
+			width: 20px;
+			height: 20px;
+
+			transition: background-color timing('eagle');
+
+			border: 1px solid color(grey, 20);
+			border-radius: 100%;
+			background-color: color(white, base);
+
+			&:before {
+				width: 0%;
+				height: 0%;
+
+				content: "";
+				transition: width timing('eagle', 'ease'), height timing('eagle', 'ease');
+			}
+		}
+
+		& > input:checked ~ .wsu-c-form__input {
+			border-color: color(primary, light);
+			background-color: color(primary, light);
+
+			&:before {
+				display: block;
+
+				width: 38%;
+				height: 38%;
+
+				border-radius: 100%;
+				background-color: color(white, base);
+
+				@include is-centered();
+			}
+		}
+
+		& > input[type="radio"] {
+			@include is-visually-hidden();
+
+			& + label {
+				position: relative;
+				z-index: z('content');
+
+				padding-right: $unit;
+				padding-left: $unit-2xl;
+
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+	}
+
+
+
+
+	fieldset {
+		padding: 0 $unit-xl $unit-xs;
+
+		border: 1px solid color(grey, 10);
+
+		@include font-size(14px);
+	}
+
+	// Background size and position values control arrow size
+	// Background position multipliers control the horizontal offset from the right edge
+	select {
+		position: relative;
+
+		background-color: color(white, base);
+		background-image:
+			linear-gradient(-135deg, color(grey, 50) 50%, transparent 50%),
+			linear-gradient(135deg, color(grey, 50) 50%, transparent 50%);
+		background-repeat: no-repeat;
+		background-position:
+			calc(100% - calc(7px * 3)) 50%,
+			calc(100% - calc(7px * 2)) 50%;
+		background-size:
+			7px 7px,
+			7px 7px;
+
+		appearance: none;;
+	}
+}
+
+.wsu-c-form__field-container {
+	position: relative;
+
+	input[type="text"],
+	input[type="tel"],
+	input[type="email"],
+	input[type="password"],
+	input[type="search"],
+	textarea {
+
+
+		// & + label {
+		// 	// position: absolute;
+		// 	// top: 0;
+		// 	// left: 5px;
+		// 	transition: top timing(), font-size timing();
 		// }
+
+		// &:focus {
+		// 	border: 1px solid #CA1237;
+		// 	outline: none;
+
+		// 	& + label {
+		// 		// top: -#{$unit};
+		// 		@include font-size(12px);
+		// 	}
+		// }
+	}
+}
+
+.wsu-c-form__field-input--text {
+	&:focus {
+		label {
+			font-weight: bold;
+
+			color: red;
+		}
 	}
 }
