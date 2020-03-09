@@ -125,10 +125,10 @@
 			&:before {
 				display: block;
 
-				width: 38%;
-				height: 38%;
+				width: 6.67px;
+				height: 6.67px;
 
-				border-radius: 100%;
+				border-radius: 6.67px;
 				background-color: color(white, base);
 
 				@include is-centered();
