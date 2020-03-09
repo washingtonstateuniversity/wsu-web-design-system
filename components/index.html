@@ -85,7 +85,7 @@
 
 		function queryGithubApi() {
 			axios.get(
-				'https://api.github.com/repos/washingtonstateuniversity/wsu-web-design-system/contents/components/dist'
+				'https://api.github.com/repos/washingtonstateuniversity/wsu-web-design-system/contents/components/dist?ref=gh-pages'
 			).then(function (response) {
 				localStorage.removeItem(localStoreKey);
 				container.innerHTML = '';
