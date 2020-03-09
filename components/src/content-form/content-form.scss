@@ -1,0 +1,154 @@
+@import '../../../../wsu-build-tools/scss/all-the-things.scss';
+
+// Import base form styles
+@import './content-form-base-styles';
+
+/* Extend/Modify forms assuming we can affect markup
+======================= */
+.wsu-c-form__field-container,
+.wsu-c-form__field-container--text,
+.wsu-c-form__field-container--password,
+.wsu-c-form__field-container--search,
+.wsu-c-form__field-container--textarea,
+.wsu-c-form__field-container--fieldset,
+.wsu-c-form__field-container--select,
+.wsu-c-form__field-container--select,
+.wsu-c-form__field-container--radio,
+.wsu-c-form__field-container--checkbox {
+	// margin: $unit 0 $unit;
+}
+
+/* Checkbox containers
+======================= */
+.wsu-c-form__field-container--checkbox {
+	margin: $unit 0;
+
+	.wsu-c-form__input-item {
+		position: relative;
+
+		.wsu-c-form__input {
+			z-index: z('content') - 1;
+			left: 0;
+
+			display: block;
+
+			width: 20px;
+			height: 20px;
+
+			transition: background-color timing('eagle');
+
+			border: 1px solid color(grey, 20);
+			border-radius: $wsu-bt-base-border-radius-size;
+			background-color: color(white, base);
+
+			@include is-vertically-centered();
+
+			&::before {
+				font-family: "wsu-icons";
+				font-size: 0;
+
+				content: "\F110";
+				transition: font-size timing('eagle', 'ease');
+
+				color: color(white, base);
+
+				@include is-centered();
+			}
+		}
+
+		& > input:checked ~ .wsu-c-form__input {
+			border-color: color(primary, light);
+			background-color: color(primary, light);
+
+			&::before {
+				font-size: 12px;
+			}
+		}
+
+		& > input[type="checkbox"] {
+			@include is-visually-hidden();
+
+			& + label {
+				position: relative;
+				z-index: z('content');
+
+				padding-right: $unit;
+				padding-left: $unit-2xl;
+
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
+
+/* Radio button styles
+======================= */
+.wsu-c-form__field-container--radio {
+	margin: $unit 0;
+
+	.wsu-c-form__input {
+		position: relative;
+
+		.wsu-c-form__input {
+			position: absolute;
+			z-index: z('content') - 1;
+			left: 0;
+
+			display: block;
+
+			width: 20px;
+			height: 20px;
+
+			transition: background-color timing('eagle');
+
+			border: 1px solid color(grey, 20);
+			border-radius: 100%;
+			background-color: color(white, base);
+
+			@include is-vertically-centered();
+
+			&:before {
+				width: 0%;
+				height: 0%;
+
+				content: "";
+				transition: width timing('eagle', 'ease'), height timing('eagle', 'ease');
+			}
+		}
+
+		& > input:checked ~ .wsu-c-form__input {
+			border-color: color(primary, light);
+			background-color: color(primary, light);
+
+			&:before {
+				display: block;
+
+				width: 38%;
+				height: 38%;
+
+				border-radius: 100%;
+				background-color: color(white, base);
+
+				@include is-centered();
+			}
+		}
+
+		& > input[type="radio"] {
+			@include is-visually-hidden();
+
+			& + label {
+				position: relative;
+				z-index: z('content');
+
+				padding-right: $unit;
+				padding-left: $unit-2xl;
+
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}

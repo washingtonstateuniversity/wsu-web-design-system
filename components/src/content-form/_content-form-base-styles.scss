@@ -1,0 +1,105 @@
+/* Set baseline styles for forms
+ * This assumes you're unable to make any markup changes
+======================= */
+.wsu-c-content {
+	button,
+	input,
+	optgroup,
+	select,
+	textarea {
+		font-family: inherit;
+		font-size: inherit;
+		line-height: inherit;
+
+		margin: 0;
+
+		transition: border timing();
+
+		border: 1px solid color(grey, 20);
+		border-radius: $wsu-bt-base-border-radius-size;
+
+		@include font-size(14px);
+	}
+
+	input,
+	textarea,
+	select {
+		width: 100%;
+		min-height: 50px;
+		padding: $unit $unit;
+
+		color: color(grey, 100);
+
+		@include elevate(0);
+
+		&:focus {
+			outline: none;
+
+			@include elevate(2);
+		}
+
+		&::input-placeholder {
+			color: color(grey, 60);
+		}
+	}
+
+	/* Input / Textarea Styles
+	======================= */
+	label {
+		display: inline-block;
+
+		margin: $unit $unit $unit-2xs;
+
+		@include font-size(14px);
+	}
+
+	/* Fieldset Styles
+	======================= */
+	fieldset {
+		margin: $unit-l 0 0;
+		padding: 0 $unit-xl $unit-xl;
+
+		border: 1px solid color(grey, 20);
+
+		@include font-size(14px);
+	}
+
+	/* Select Styles
+	======================= */
+	select {
+		position: relative;
+
+		background-color: color(white, base);
+		background-image:
+			linear-gradient(-135deg, color(grey, 50) 50%, transparent 50%),
+			linear-gradient(135deg, color(grey, 50) 50%, transparent 50%);
+		background-repeat: no-repeat;
+		background-position:
+			calc(100% - calc(7px * 3)) 50%,
+			calc(100% - calc(7px * 2)) 50%; // Background position multipliers control the horizontal offset from the right edge
+		background-size:
+			7px 7px,
+			7px 7px; // Background size and position values control arrow size
+
+		appearance: none;
+	}
+
+	/* Radio / Checkbox styles
+	======================= */
+	input[type="radio"],
+	input[type="checkbox"] {
+		width: initial;
+
+		& + label {
+			margin-top: $unit-2xs;
+			margin-left: $unit-2xs;
+		}
+	}
+
+	/* Button styles
+	======================= */
+	button[type="submit"],
+	button[type="reset"] {
+		@include button();
+	}
+}
