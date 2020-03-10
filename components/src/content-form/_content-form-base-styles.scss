@@ -32,6 +32,7 @@
 		@include elevate(0);
 
 		&:focus {
+			border-color: color(grey, 40);
 			outline: none;
 
 			@include elevate(2);
@@ -88,6 +89,14 @@
 	input[type="radio"],
 	input[type="checkbox"] {
 		width: initial;
+
+		&:focus {
+			box-shadow: 
+				2px 2px 0px color(primary, light), 
+				-2px -2px 0px color(primary, light),
+				2px -2px 0px color(primary, light),
+				-2px 2px 0px color(primary, light)
+		}
 
 		& + label {
 			margin-top: $unit-2xs;
