@@ -119,7 +119,7 @@
 		position: absolute;
 		left: $unit-xs;
 
-		color: color(primary, light);
+		color: color(primary, light); // TODO play around with grey, red sort of implies linkage
 
 		@include wsu-icon("\F127");
 	}
