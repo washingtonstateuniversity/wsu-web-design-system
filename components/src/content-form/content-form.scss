@@ -35,7 +35,7 @@
 			width: 20px;
 			height: 20px;
 
-			transition: background-color timing('eagle');
+			transition: background-color timing('eagle'), border-color timing('eagle');
 
 			border: 1px solid color(grey, 20);
 			border-radius: $wsu-bt-base-border-radius-size;
@@ -79,6 +79,16 @@
 					cursor: pointer;
 				}
 			}
+
+			&:focus ~ .wsu-c-form__input,
+			&:hover ~ .wsu-c-form__input {
+				border-color: color(primary, light);
+			}
+
+			&:focus:checked ~ .wsu-c-form__input {
+				border-width: 2px;
+				border-color: color(grey, 80);
+			}
 		}
 	}
 }
@@ -88,7 +98,7 @@
 .wsu-c-form__field-container--radio {
 	margin: $unit 0;
 
-	.wsu-c-form__input {
+	.wsu-c-form__input-item {
 		position: relative;
 
 		.wsu-c-form__input {
@@ -116,6 +126,11 @@
 				content: "";
 				transition: width timing('eagle', 'ease'), height timing('eagle', 'ease');
 			}
+		}
+		
+		& > input:focus:checked ~ .wsu-c-form__input {
+			border-width: 2px;
+			border-color: color(grey, 80);
 		}
 
 		& > input:checked ~ .wsu-c-form__input {
@@ -149,6 +164,8 @@
 					cursor: pointer;
 				}
 			}
+
+			
 		}
 	}
 }
