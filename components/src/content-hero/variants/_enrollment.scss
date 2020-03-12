@@ -1,0 +1,91 @@
+/* Enrollment Management Styles 
+======================= */
+.wsu-c-hero__container--enrollment {
+	overflow: hidden;
+
+	@extend .wsu-c-hero__container;
+	
+	&::before {
+		display: none;
+	}
+
+	&::after {
+		top: initial;
+		right: calc(-300px / 2);
+		bottom: calc(-300px / 2);
+		left: initial;
+
+		width: 300px;
+		height: 300px;
+
+		transform: rotate(-45deg);
+
+		background: color(white, base);
+	}
+
+	/* Children Elements 
+	======================= */
+	.wsu-c-hero__content {
+		@include mq('small') {
+			padding: 120px $unit;
+		}
+		@include mq('medium') {
+			padding: 110px $unit;
+		}
+		@include mq('large') {
+			padding: 160px 0;
+		}
+	}
+
+	.wsu-c-hero__title-container {
+		margin-bottom: $unit-xl;
+	}
+	
+	.wsu-c-hero__title, 
+	.wsu-c-hero__subtitle {
+		display: inline;
+
+		white-space: pre-wrap;
+
+		color: color(grey, 75);
+		background: color(white, base);
+		box-shadow: -#{$unit} 0 0 color(white, base);
+		text-shadow: none;
+	}
+	
+	.wsu-c-hero__title {
+		padding-right: $unit;
+		// padding: 0 $unit;
+		padding-bottom: $unit-s;
+
+		@include font-size(64px, 700, 1.2);
+	}
+
+	.wsu-c-hero__subtitle {
+		padding: $unit-s $unit-2xl $unit-s 0;
+
+		@include font-size(12px, 700, 1.2);
+	}
+
+	.wsu-c-hero__button {
+		display: inline;
+	}
+
+	.wsu-c-hero__image-caption {
+		top: $unit-2xl;
+		right: 0;
+		bottom: initial;
+
+		padding: $unit 60px;
+
+		color: color(grey, 75);
+		background: white;
+
+		@include font-size(12px, 600, 1.2);
+
+		&:after {
+			display: none;
+		}
+	}
+
+}
