@@ -1,4 +1,5 @@
 @import '../../../../wsu-build-tools/scss/all-the-things.scss';
+@import '../content-button/content-button.scss';
 
 /* Cards Container / Wrapper / Helpers
 ======================= */
@@ -187,6 +188,16 @@
 ======================= */
 .wsu-c-card__website-link::before {
 	@include wsu-icon("\F10D");
+}
+
+/* Actions Container 
+======================= */
+.wsu-c-card__actions-container {
+	background-color: color(grey, 0);
+}
+
+.wsu-c-card__action-primary {
+	
 }
 
 /* Media Queries
