@@ -1,0 +1,57 @@
+<html lang="en-US">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Content Links | Component</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+	<link rel="stylesheet" href="content-links.css">
+	<script src="content-links.js" defer></script>
+
+	<style>
+		a {
+			text-decoration: none;
+
+			color: grey;
+			border-bottom: 1px solid red;
+		}
+
+		a:hover {
+			color: black;
+			border-bottom: 2px solid red;
+		}
+
+
+		h2>a {
+			text-decoration: underline;
+
+			border-bottom: none;
+		}
+
+		h2>a:after {
+			content: "link icon here";
+		}
+
+		h2>a:hover {
+			border-bottom: none;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- COMPONENT:START -->
+	<h2><a href="#">Multiword</a></h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum architecto fuga velit sint, reprehenderit <a href="#">quos dicta quaerat debitis</a> aliquid non commodi saepe omnis ipsa sunt, laudantium aliquam, libero illo aperiam.</p>
+
+	<h2><a href="#">Multiline</a></h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum architecto fuga velit sint, reprehenderit <a href="#">quos dicta quaerat debitis aliquid non commodi saepe omnis ipsa sunt, laudantium aliquam, libero illo aperiam.</a></p>
+
+	<h2><a href="#">Single Word</a></h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum architecto fuga velit sint, reprehenderit <a href="#">quos</a> dicta quaerat debitis aliquid non commodi saepe omnis ipsa sunt, laudantium aliquam, libero illo aperiam.</p>
+	<!-- COMPONENT:END -->
+
+	<script src="../../../node_modules/@wsu/build-tools/js/wsu-bt-toolbar.js"></script>
+</body>
+
+</html>
