@@ -1,0 +1,30 @@
+@import '../../../../wsu-build-tools/scss/all-the-things.scss';
+
+a {
+	text-decoration: none;
+
+	color: grey;
+	border-bottom: 1px solid red;
+}
+
+a:hover {
+	color: black;
+	border-bottom: 2px solid red;
+}
+
+
+h2>a {
+	text-decoration: underline;
+
+	border-bottom: none;
+
+	text-decoration-color: red;
+}
+
+h2>a:after {
+	content: "link icon here";
+}
+
+h2>a:hover {
+	border-bottom: none;
+}
