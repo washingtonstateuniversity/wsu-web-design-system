@@ -1,118 +1,225 @@
+/* Dependencies 
+======================= */
 @import '../../../../wsu-build-tools/scss/all-the-things.scss';
 @import '../content-column/content-column.scss';
 @import '../content-icons/content-icons.scss';
 @import '../content-button/content-button.scss';
 
-a.default {
-	transition: 
-		border-bottom timing('gazelle', 'ease'),
-		color timing('gazelle', 'ease'),
-		padding timing('gazelle', 'ease');
-	text-decoration: none;
+/* Styles 
+======================= */
+@import './styles/default';
+@import './styles/default-1.1';
+@import './styles/heading-is-link';
+@import './styles/image-is-link';
 
-	color: color(black, base);
-	border-bottom: 1px solid color(primary, light);
+/* To move to own components 
+======================= */
+.wsu-c-colors {
+	display: flex;
+	
+	& .box {
+		font-size: 14px;
 
-	&:hover,
-	&:focus {
-		color: color(black, base);
-		border-bottom-width: 4px;
-		border-bottom-color: color(primary, base);
-	}
-
-	&:focus {
-		padding: 2px 4px;
-
-		outline: 1px solid color(primary, base);
-	}
-
-	&:visited {
-		color: color(black, base);
-	}
-}
-
-h2 {
-	& > a {
 		position: relative;
 
-		transition: 300ms ease all;
-		text-decoration: none;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 
-		color: color(grey, 100);
-		border-bottom: none;
+		width: 200px;
+		height: 100px;
+		padding: $unit-xs $unit-2xs;
 
-		text-decoration-color: color(primary, light);
+		text-align: center;
 
-		&[target="_blank"]::after {
-			content: "\F142";
-		}
-
-		
-
+		&::before,
 		&::after {
-			font-family: "wsu-icons";
+			font-family: monospace;
 
-			position: absolute;
-			bottom: 3px;
-			left: calc(100% + 5px);
+			letter-spacing: -0.05em;
+		}
+		
+		&:nth-child(1) {
+			color: color(grey, 100);
+			background-color: color(grey, 0);
 
-			display: block;
-
-			content: "\F126";
-			transition: 300ms ease all;
-			transform: scale(.85);
-			vertical-align: text-bottom;
-			text-decoration: none;
-
-			@include font-size(14px);
+			&::before {
+				content: "0% Blk (1.07:1)";
+			}
 		}
 
-		&:hover::after,
-		&:focus::after {
-			transform: scale(1);
+		&:nth-child(2) {
+			color: color(grey, 100);
+			background-color: color(grey, 5);
+			
+			&::before {
+				content: "5% Blk (1.11:1)";
+			}
 		}
 
-		&:hover,
-		&:focus,
-		&:visited {
-			text-decoration: underline;
+		&:nth-child(3) {
+			color: color(grey, 100);
+			background-color: color(grey, 10);
 
-			color: inherit;
-			outline: none;
-
-			text-decoration-color: color(primary, light);
+			&::before {
+				content: "10% Blk (1.24:1)";
+			}
 		}
 
-		&:focus {
-			text-decoration: none;
+		&:nth-child(4) {
+			color: color(grey, 100);
+			background-color: color(grey, 20);
 
-			outline: 1px solid color(primary, light);
+			&::before {
+				content: "20% Blk (1.6:1)";
+			}
+		}
+
+		&:nth-child(5) {
+			color: color(grey, 100);
+			background-color: color(grey, 30);
+
+			&::before {
+				content: "30% Blk (2.09:1)";
+			}
+		}
+
+		&:nth-child(6) {
+			color: color(grey, 100);
+			background-color: color(grey, 40);
+
+			&::before {
+				content: "40% Blk (2.84:1)";
+			}
+		}
+
+		&:nth-child(7) {
+			color: color(grey, 100);
+			background-color: color(grey, 45);
+
+			&::before {
+				content: "45% Blk (3.36:1)";
+			}
+
+			&::after {
+				position: absolute;
+				bottom: 100%;
+				left: $unit-xs;
+
+				content: "AA SAFE UI >";
+
+				color: color(grey, 100);
+			}
+		}
+
+		&:nth-child(8) {
+			color: color(grey, 100);
+			background-color: color(grey, 50);
+
+			&::before {
+				content: "50% Blk (3.94:1)";
+			}
+		}
+
+		&:nth-child(9) {
+			color: color(grey, 0);
+			background-color: color(grey, 55);
+
+			&::before {
+				content: "55% Blk (4.74:1)";
+			}
+
+			&::after {
+				position: absolute;
+				bottom: 100%;
+				left: $unit-xs;
+
+				content: "AA SAFE >";
+
+				color: color(grey, 100);
+			}
+		}
+
+		&:nth-child(10) {
+			color: color(grey, 0);
+			background-color: color(grey, 60);
+
+			&::before {
+				content: "60% Blk (5.74:1)";
+			}
+		}
+
+		&:nth-child(11) {
+			color: color(grey, 0);
+			background-color: color(grey, 65);
+
+			&::before {
+				content: "65% Blk (7:1)";
+			}
+
+			&::after {
+				position: absolute;
+				bottom: 100%;
+				left: $unit-xs;
+
+				content: "AAA SAFE >";
+
+				color: color(grey, 100);
+			}
+		}
+
+		&:nth-child(12) {
+			color: color(grey, 0);
+			background-color: color(grey, 70);
+
+			&::before {
+				content: "70% Blk (8.45:1)";
+			}
+		}
+
+		&:nth-child(13) {
+			color: color(grey, 0);
+			background-color: color(grey, 75);
+
+			&::before {
+				content: "75% Blk (10.36:1)";
+			}
+		}
+
+		&:nth-child(14) {
+			color: color(grey, 0);
+			background-color: color(grey, 80);
+
+			&::before {
+				content: "80% Blk (12.63:1)";
+			}
+		}
+
+		&:nth-child(15) {
+			color: color(grey, 0);
+			background-color: color(grey, 85);
+
+			&::before {
+				content: "85% Blk (15.13:1)";
+			}
+		}
+
+		&:nth-child(16) {
+			color: color(grey, 0);
+			background-color: color(grey, 90);
+
+			&::before {
+				content: "90% Blk (17.4:1)";
+			}
+		}
+
+		&:nth-child(17) {
+			color: color(grey, 0);
+			background-color: color(grey, 100);
+
+			&::before {
+				content: "100% Blk (20.02:1)";
+			}
 		}
 	}
-}
-
-.wsu-c-image-container {
-	display: block;
-	overflow: hidden;
-
-	width: 100%;
-	margin: 0;
-
-	img {
-		width: 100%;
-		height: 225px;
-
-		transition: 
-			width timing('cougar', 'ease-in-out'), 
-			margin-left timing('cougar', 'ease-in-out');
-
-		object-fit: cover;
-		object-position: center center;
-
-		&:hover {
-			width: calc(100% + 10px);
-			margin-left: calc(-10px / 2);
-		}
-	}
-
 }

@@ -1,0 +1,27 @@
+a.default {
+	transition: 
+		border-bottom timing('gazelle', 'ease'),
+		color timing('gazelle', 'ease'),
+		padding timing('gazelle', 'ease');
+	text-decoration: none;
+
+	color: color(black, base);
+	border-bottom: 1px solid color(primary, light);
+
+	&:hover,
+	&:focus {
+		color: color(black, base);
+		border-bottom-width: 4px;
+		border-bottom-color: color(primary, base);
+	}
+
+	&:focus {
+		padding: 2px 4px;
+
+		outline: 1px solid color(primary, base);
+	}
+
+	&:visited {
+		color: color(black, base);
+	}
+}
