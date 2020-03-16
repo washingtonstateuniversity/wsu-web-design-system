@@ -1,30 +1,118 @@
 @import '../../../../wsu-build-tools/scss/all-the-things.scss';
+@import '../content-column/content-column.scss';
+@import '../content-icons/content-icons.scss';
+@import '../content-button/content-button.scss';
 
-a {
+a.default {
+	transition: 
+		border-bottom timing('gazelle', 'ease'),
+		color timing('gazelle', 'ease'),
+		padding timing('gazelle', 'ease');
 	text-decoration: none;
 
-	color: grey;
-	border-bottom: 1px solid red;
+	color: color(black, base);
+	border-bottom: 1px solid color(primary, light);
+
+	&:hover,
+	&:focus {
+		color: color(black, base);
+		border-bottom-width: 4px;
+		border-bottom-color: color(primary, base);
+	}
+
+	&:focus {
+		padding: 2px 4px;
+
+		outline: 1px solid color(primary, base);
+	}
+
+	&:visited {
+		color: color(black, base);
+	}
 }
 
-a:hover {
-	color: black;
-	border-bottom: 2px solid red;
+h2 {
+	& > a {
+		position: relative;
+
+		transition: 300ms ease all;
+		text-decoration: none;
+
+		color: color(grey, 100);
+		border-bottom: none;
+
+		text-decoration-color: color(primary, light);
+
+		&[target="_blank"]::after {
+			content: "\F142";
+		}
+
+		
+
+		&::after {
+			font-family: "wsu-icons";
+
+			position: absolute;
+			bottom: 3px;
+			left: calc(100% + 5px);
+
+			display: block;
+
+			content: "\F126";
+			transition: 300ms ease all;
+			transform: scale(.85);
+			vertical-align: text-bottom;
+			text-decoration: none;
+
+			@include font-size(14px);
+		}
+
+		&:hover::after,
+		&:focus::after {
+			transform: scale(1);
+		}
+
+		&:hover,
+		&:focus,
+		&:visited {
+			text-decoration: underline;
+
+			color: inherit;
+			outline: none;
+
+			text-decoration-color: color(primary, light);
+		}
+
+		&:focus {
+			text-decoration: none;
+
+			outline: 1px solid color(primary, light);
+		}
+	}
 }
 
+.wsu-c-image-container {
+	display: block;
+	overflow: hidden;
 
-h2>a {
-	text-decoration: underline;
+	width: 100%;
+	margin: 0;
 
-	border-bottom: none;
+	img {
+		width: 100%;
+		height: 225px;
 
-	text-decoration-color: red;
-}
+		transition: 
+			width timing('cougar', 'ease-in-out'), 
+			margin-left timing('cougar', 'ease-in-out');
 
-h2>a:after {
-	content: "link icon here";
-}
+		object-fit: cover;
+		object-position: center center;
 
-h2>a:hover {
-	border-bottom: none;
+		&:hover {
+			width: calc(100% + 10px);
+			margin-left: calc(-10px / 2);
+		}
+	}
+
 }

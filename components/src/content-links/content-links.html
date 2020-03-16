@@ -11,16 +11,76 @@
 </head>
 
 <body>
-	<!-- COMPONENT:START -->
-	<h2><a href="#">Multiword</a></h2>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum architecto fuga velit sint, reprehenderit <a href="#">quos dicta quaerat debitis</a> aliquid non commodi saepe omnis ipsa sunt, laudantium aliquam, libero illo aperiam.</p>
 
-	<h2><a href="#">Multiline</a></h2>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum architecto fuga velit sint, reprehenderit <a href="#">quos dicta quaerat debitis aliquid non commodi saepe omnis ipsa sunt, laudantium aliquam, libero illo aperiam.</a></p>
+	<div class="wsu-u-spacer">
+		<div class="wsu-u-title">Pattern 1 (Default content link style) <span class="wsu-icon wsu-i-arrow-down-carrot"></span></div>
+		<div class="wsu-u-requirements" style="font-size: 14px;">
+			<ul>
+				<li>Default link style to be applied to anchor tags</li>
+			</ul>
+		</div>
+	</div>
 
-	<h2><a href="#">Single Word</a></h2>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum architecto fuga velit sint, reprehenderit <a href="#">quos</a> dicta quaerat debitis aliquid non commodi saepe omnis ipsa sunt, laudantium aliquam, libero illo aperiam.</p>
-	<!-- COMPONENT:END -->
+	<div class="wsu-c-column__wrapper wsu-c-columns--thirds" style="margin: 0 auto; max-width: 1200px;">
+		<div class="wsu-c-column">
+			<!-- COMPONENT:START -->
+			<h2>Multiword</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum architecto fuga velit sint, reprehenderit <a href="#default" class="default">quos dicta quaerat debitis</a> aliquid non commodi saepe omnis ipsa sunt, laudantium aliquam, libero illo aperiam.</p>
+		</div>
+		<div class="wsu-c-column">
+			<h2>Multiline</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum architecto fuga velit sint, reprehenderit <a href="#default" class="default">quos dicta quaerat debitis aliquid non commodi saepe omnis ipsa sunt, laudantium aliquam, libero illo aperiam.</a></p>
+		</div>
+		<div class="wsu-c-column">
+			<h2>Single Word</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum architecto fuga velit sint, reprehenderit <a href="#default" class="default">quos</a> dicta quaerat debitis aliquid non commodi saepe omnis ipsa sunt, laudantium aliquam, libero illo aperiam.</p>
+			<!-- COMPONENT:END -->
+		</div>
+	</div>
+
+	<div class="wsu-u-spacer">
+		<div class="wsu-u-title">Pattern 2 (Link w/ Icon & Button) <span class="wsu-icon wsu-i-arrow-down-carrot"></span></div>
+		<div class="wsu-u-requirements" style="font-size: 14px;">
+			<ul>
+				<li>Can only be used on text sizes larger than 18px</li>
+				<li>Can only be used on font-weights larger than 600</li>
+				<li>Cannot be used without a button secondary action</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="wsu-c-column__wrapper wsu-c-columns--thirds" style="margin: 0 auto; max-width: 1200px;">
+		<div class="wsu-c-column">
+			<a href="#" class="wsu-c-image-container">
+				<img src="https://source.unsplash.com/600x400" alt="Placeholder image" />
+			</a>
+			<h2><a href="#" target="_blank">Headline</a></h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum architecto fuga velit sint, reprehenderit quos dicta quaerat debitis aliquid non commodi saepe omnis ipsa sunt, laudantium aliquam, libero illo aperiam.</p>
+			<div class="wsu-c-button--round">
+				<a href="#" class="wsu-c-button_link">Read More</a>
+			</div>
+		</div>
+		<div class="wsu-c-column">
+			<a href="#" class="wsu-c-image-container">
+				<img src="https://source.unsplash.com/600x400" alt="Placeholder image" />
+			</a>
+			<h2><a href="#">Headline Multiword</a></h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum architecto fuga velit sint, reprehenderit quos dicta quaerat debitis aliquid non commodi saepe omnis ipsa sunt, laudantium aliquam, libero illo aperiam.</p>
+			<div class="wsu-c-button--round">
+				<a href="#" class="wsu-c-button_link">Read More</a>
+			</div>
+		</div>
+		<div class="wsu-c-column">
+			<a href="#" class="wsu-c-image-container">
+				<img src="https://source.unsplash.com/600x400" alt="Placeholder image" />
+			</a>
+			<h2><a href="#">Headline that is a bit longer than the others</a></h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum architecto fuga velit sint, reprehenderit quos dicta quaerat debitis aliquid non commodi saepe omnis ipsa sunt, laudantium aliquam, libero illo aperiam.</p>
+			<div class="wsu-c-button--round">
+				<a href="#" class="wsu-c-button_link">Read More</a>
+			</div>
+		</div>
+	</div>
 
 	<script src="../../../node_modules/@wsu/build-tools/js/wsu-bt-toolbar.js"></script>
 </body>
