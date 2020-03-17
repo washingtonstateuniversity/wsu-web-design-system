@@ -8,7 +8,7 @@
 /* Styles 
 ======================= */
 @import './styles/default';
-@import './styles/default-1.1';
+@import './styles/default-1.x';
 @import './styles/heading-is-link';
 @import './styles/image-is-link';
 
@@ -134,7 +134,7 @@
 				bottom: 100%;
 				left: $unit-xs;
 
-				content: "AA SAFE >";
+				content: "AA SAFE ALL >";
 
 				color: color(grey, 100);
 			}
@@ -162,7 +162,7 @@
 				bottom: 100%;
 				left: $unit-xs;
 
-				content: "AAA SAFE >";
+				content: "AAA SAFE ALL >";
 
 				color: color(grey, 100);
 			}

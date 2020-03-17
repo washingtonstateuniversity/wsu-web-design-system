@@ -12,13 +12,13 @@ a.default {
 	&:focus {
 		color: color(black, base);
 		border-bottom-width: 4px;
-		border-bottom-color: color(primary, base);
+		border-bottom-color: color(primary, light);
 	}
 
 	&:focus {
 		padding: 2px 4px;
 
-		outline: 1px solid color(primary, base);
+		outline: 1px solid color(primary, light);
 	}
 
 	&:visited {
