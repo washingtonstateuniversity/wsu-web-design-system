@@ -23,5 +23,6 @@ import '../../components/src/content-card/build';
 import '../../components/src/content-form/build';
 import '../../components/src/content-heading/build';
 import '../../components/src/content-hero/build';
+import '../../components/src/content-links/build';
 import '../../components/src/content-list/build';
 import '../../components/src/content-column/build';
