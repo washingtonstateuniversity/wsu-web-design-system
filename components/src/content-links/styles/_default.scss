@@ -1,8 +1,8 @@
 a.default {
 	transition: 
-		border-bottom timing('gazelle', 'ease'),
-		color timing('gazelle', 'ease'),
-		padding timing('gazelle', 'ease');
+		border-bottom timing(100, 'ease-in-out'),
+		color timing(100, 'ease-in-out'),
+		padding timing(100, 'ease-in-out');
 	text-decoration: none;
 
 	color: color(black, base);
@@ -11,7 +11,7 @@ a.default {
 	&:hover,
 	&:focus {
 		color: color(black, base);
-		border-bottom-width: 4px;
+		border-bottom-width: 3px;
 		border-bottom-color: color(primary, light);
 	}
 
@@ -23,5 +23,26 @@ a.default {
 
 	&:visited {
 		color: color(black, base);
+	}
+}
+
+a.default-2 {
+	transition: box-shadow timing();
+	text-decoration: none;
+
+	color: color(black, base);
+	box-shadow: 
+		inset 0 -2px 0 color(white, base),
+		inset 0 -3px 0 color(primary, light);
+	text-shadow:
+		1px 1px color(white, base),
+		1px -1px color(white, base),
+		-1px 1px color(white, base),
+		-1px -1px color(white, base);
+
+	&:hover {
+		box-shadow: 
+			inset 0 0px 0 color(white, base),
+			inset 0 -3px 0 color(primary, light);
 	}
 }
