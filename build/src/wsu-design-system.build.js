@@ -9,6 +9,7 @@ import '../../components/src/containers/build';
 /* Global components */
 import '../../components/src/global-footer/build';
 import '../../components/src/global-header/build';
+import '../../components/src/global-colors/build';
 
 /* Site components */
 import '../../components/src/site-footer/build';
