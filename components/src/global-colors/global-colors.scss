@@ -1,18 +1,8 @@
 /* Dependencies 
 ======================= */
 @import '../../../../wsu-build-tools/scss/all-the-things.scss';
-@import '../content-column/content-column.scss';
-@import '../content-icons/content-icons.scss';
-@import '../content-button/content-button.scss';
 
-/* Styles 
-======================= */
-@import './styles/default';
-@import './styles/default-1.x';
-@import './styles/heading-is-link';
-@import './styles/image-is-link';
-
-/* To move to own components 
+/* WSU Colors 
 ======================= */
 .wsu-c-colors {
 	display: flex;
