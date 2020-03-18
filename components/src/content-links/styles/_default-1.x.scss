@@ -1,10 +1,15 @@
 .default_1-1 {
+	transition: color timing();
+
 	color: color(black, base);
 
 	text-decoration-color: color(primary, base);
 
 	&:hover {
+		color: color(primary, base);
+
 		text-decoration-thickness: 2px;
+
 	}
 
 	&:focus {
