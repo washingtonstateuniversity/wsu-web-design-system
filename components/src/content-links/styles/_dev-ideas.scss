@@ -1,4 +1,6 @@
-.default_1-1 {
+/* For development only (do not use) 
+======================= */
+.dev_1-1 {
 	transition: color timing();
 
 	color: color(black, base);
@@ -19,7 +21,7 @@
 	}
 }
 
-.default_1-2 {
+.dev_1-2 {
 	transition: color timing();
 	transition: background timing();
 	text-decoration: none;
@@ -43,7 +45,7 @@
 	}
 }
 
-.default_1-3 {
+.dev_1-3 {
 	transition: color timing();
 	text-decoration: none;
 
@@ -84,5 +86,54 @@
 
 	&[target="_blank"]::after {
 		content: "\F14D";
+	}
+}
+
+.dev {
+	transition: 
+		border-bottom timing(100, 'ease-in-out'),
+		color timing(100, 'ease-in-out'),
+		padding timing(100, 'ease-in-out');
+	text-decoration: none;
+
+	color: color(black, base);
+	border-bottom: 1px solid color(primary, light);
+
+	&:hover,
+	&:focus {
+		color: color(black, base);
+		border-bottom-width: 3px;
+		border-bottom-color: color(primary, light);
+	}
+
+	&:focus {
+		padding: 2px 4px;
+
+		outline: 1px solid color(primary, light);
+	}
+
+	&:visited {
+		color: color(black, base);
+	}
+}
+
+.dev-2 {
+	transition: box-shadow timing();
+	text-decoration: none;
+
+	color: color(black, base);
+	box-shadow: 
+		inset 0 -2px 0 color(white, base),
+		inset 0 -3px 0 color(primary, light);
+	text-shadow:
+		1px 1px color(white, base),
+		1px -1px color(white, base),
+		-1px 1px color(white, base),
+		-1px -1px color(white, base);
+
+	&:hover {
+		box-shadow: 
+			inset 0 0px 0 color(white, base),
+			inset 0 -3px 0 color(primary, light);
 	}
 }
