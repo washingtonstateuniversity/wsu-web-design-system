@@ -1,12 +1,10 @@
 .default_1-1 {
-	transition: color timing();
-
 	color: color(black, base);
 
 	text-decoration-color: color(primary, base);
 
 	&:hover {
-		text-decoration: none;
+		text-decoration-thickness: 2px;
 	}
 
 	&:focus {
@@ -41,12 +39,10 @@
 }
 
 .default_1-3 {
-	font-weight: 500;
-
 	transition: color timing();
 	text-decoration: none;
 
-	color: color(black, base);
+	color: color(grey, 65);
 
 	&:hover {
 		color: color(primary, base);
