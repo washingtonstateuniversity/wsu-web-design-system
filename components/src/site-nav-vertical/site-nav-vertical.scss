@@ -248,7 +248,7 @@
 
 	text-transform: uppercase;
 
-	color: color(grey_fill, medium);
+	color: color(grey, 75);
 
 	@include font-size(0.5rem);
 }
@@ -285,7 +285,7 @@
 .wsu-s-nav-vertical__nav-list > .wsu-s-nav-vertical__nav-item--has-children .wsu-s-nav-vertical__nav-link {
 	padding-left: $unit * 2;
 
-	color: color(grey_fill, medium);;
+	color: color(grey, 75);
 }
 
 .wsu-s-nav-vertical__nav-list .wsu-s-nav-vertical__nav-list > .wsu-s-nav-vertical__nav-item .wsu-s-nav-vertical__nav-link,
@@ -328,13 +328,13 @@
 	transition: background-color timing(), border-left timing();
 	text-decoration: none;
 
-	color: color(grey_fill, medium);
+	color: color(grey, 75);
 	outline: none;
 
 	@include font-size(0.9rem, 600);
 
 	&:visited {
-		color: color(grey_fill, medium);
+		color: color(grey, 75);
 	}
 
 	&:focus,

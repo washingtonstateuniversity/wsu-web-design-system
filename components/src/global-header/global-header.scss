@@ -113,7 +113,7 @@
 
 	text-decoration: none;
 
-	color: color(grey_fill, medium);
+	color: color(grey, 75);
 
 	@include font-size(0.75rem, 400);
 	@include border-bottom-hover(100%);
