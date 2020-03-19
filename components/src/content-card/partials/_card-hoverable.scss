@@ -1,0 +1,65 @@
+a.wsu-c-card__container {
+	position: relative;
+
+	display: block;
+
+	text-decoration: none;
+
+	&::after {
+		font-family: "wsu-icons";
+		font-size: 12px;
+		line-height: 30px;
+
+		position: absolute;
+		top: 10px;
+		right: 10px;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		min-width: 30px;
+		min-height: 30px;
+
+		content: "\F126";
+
+		color: color(white, base);
+		border-radius: 30px;
+		background: rgba(color(grey, 100), .7);
+	}
+
+	&:hover {
+		img {
+			opacity: 1;
+		}
+
+		[class^="wsu-c-heading"] { 
+			text-decoration: underline;
+
+			text-decoration-color: color(primary, light);
+		}
+	}
+
+	// Children elements
+	img {
+		transition: opacity timing();
+
+		opacity: 0.9;
+	}
+
+	[class^="wsu-c-heading"] {
+		margin-bottom: $unit-xs;
+		padding-right: $unit-3xl;
+		padding-left: $unit-l;
+
+		text-decoration-color: color(primary, base);
+	}
+
+	.wsu-c-card__description {
+		font-style: inherit;
+
+		padding-right: $unit-3xl;
+		padding-left: $unit-l;
+	}
+
+}
