@@ -38,15 +38,15 @@
 	transition: border-color timing();
 	text-decoration: none;
 
-	color: color(grey, 50);
-	border: 1px solid color(grey, 10);
+	color: color(gray, 50);
+	border: 1px solid color(gray, 10);
 	border-radius: $wsu-bt-base-border-radius-size;
 	background-color: color(white, base);
 
 	@include font-size(12px, 600);
 
 	&:visited {
-		color: color(grey, 50);
+		color: color(gray, 50);
 	}
 
 	&:hover,

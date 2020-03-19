@@ -1,0 +1,25 @@
+/* Content link styles 
+======================= */
+a {
+	transition: color timing();
+
+	color: color(gray, 75);
+
+	text-decoration-color: color(primary, base);
+
+	&:visited {
+		@extend a;
+	}
+
+	&:hover {
+		color: color(black, base);
+
+		text-decoration-thickness: 2px;
+	}
+
+	&:focus {
+		text-decoration: none;
+
+		outline: 1px solid color(primary, base);
+	}
+}

@@ -7,20 +7,21 @@
 	width: 100%;
 	margin: 0;
 
+	background: color(gray, 100);
+
 	& > img {
 		width: 100%;
 		height: 225px;
 
-		transition: 
-			width timing('cougar', 'ease-in-out'), 
-			margin-left timing('cougar', 'ease-in-out');
+		transition: opacity timing();
+
+		opacity: 1;
 
 		object-fit: cover;
 		object-position: center center;
 
 		&:hover {
-			width: calc(100% + 10px);
-			margin-left: calc(-10px / 2);
+			opacity: 0.85;
 		}
 	}
 }

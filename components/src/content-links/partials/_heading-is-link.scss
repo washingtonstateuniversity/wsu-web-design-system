@@ -2,30 +2,22 @@
 ======================= */
 .wsu-c-heading_is-link {
 	& > a {
-		position: relative;
-
 		transition: 300ms ease all;
 		text-decoration: none;
 
-		color: color(grey, 100);
 		border-bottom: none;
 
 		text-decoration-color: color(primary, light);
 
-		&[target="_blank"]::after {
-			content: "\F142";
-		}
-
-		
-
+		// Handles icon
 		&::after {
 			font-family: "wsu-icons";
 
-			position: absolute;
-			bottom: 3px;
 			left: calc(100% + 5px);
 
-			display: block;
+			display: inline-block;
+
+			padding-left: 5px;
 
 			content: "\F126";
 			transition: 300ms ease all;
@@ -41,9 +33,15 @@
 			transform: scale(1);
 		}
 
+		// Handles different icon types
+		&[target="_blank"]::after {
+			// TODO: update to external link icon
+			content: "\F142"; // External link
+		}
+
+		// Handles hover, focus state
 		&:hover,
-		&:focus,
-		&:visited {
+		&:focus {
 			text-decoration: underline;
 
 			color: inherit;
