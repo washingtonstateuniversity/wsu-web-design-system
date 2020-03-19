@@ -56,92 +56,92 @@
 			text-align: left;
 
 			border-top-left-radius: $wsu-bt-base-border-radius-size;
-			background: linear-gradient(45deg, color(grey, 10) 0%, color(white, base) 50%);
+			background: linear-gradient(45deg, color(gray, 10) 0%, color(white, base) 50%);
 		}
 	}
 }
 
-.wsu-c-colors_grey {
+.wsu-c-colors_gray {
 	@extend .wsu-c-colors;
 
 	& .box {
 		&:nth-child(1) {
-			background-color: color(grey, 0);
+			background-color: color(gray, 0);
 
 			&::before {
-				content: "Grey 0%";
+				content: "gray 0%";
 			}
 		}
 
 		&:nth-child(2) {
-			background-color: color(grey, 5);
+			background-color: color(gray, 5);
 			
 			&::before {
-				content: "Grey 5%";
+				content: "gray 5%";
 			}
 		}
 
 		&:nth-child(3) {
-			background-color: color(grey, 10);
+			background-color: color(gray, 10);
 
 			&::before {
-				content: "Grey 10%";
+				content: "gray 10%";
 			}
 		}
 
 		&:nth-child(4) {
-			background-color: color(grey, 15);
+			background-color: color(gray, 15);
 
 			&::before {
-				content: "Grey 15%";
+				content: "gray 15%";
 			}
 		}
 
 		&:nth-child(5) {
-			background-color: color(grey, 20);
+			background-color: color(gray, 20);
 
 			&::before {
-				content: "Grey 20%";
+				content: "gray 20%";
 			}
 		}
 
 		&:nth-child(6) {
-			background-color: color(grey, 25);
+			background-color: color(gray, 25);
 
 			&::before {
-				content: "Grey 25%";
+				content: "gray 25%";
 			}
 		}
 
 		&:nth-child(7) {
-			background-color: color(grey, 30);
+			background-color: color(gray, 30);
 
 			&::before {
-				content: "Grey 30%";
+				content: "gray 30%";
 			}
 		}
 
 		&:nth-child(8) {
-			background-color: color(grey, 35);
+			background-color: color(gray, 35);
 
 			&::before {
-				content: "Grey 35%";
+				content: "gray 35%";
 			}
 		}
 
 		&:nth-child(9) {
-			background-color: color(grey, 40);
+			background-color: color(gray, 40);
 
 			&::before {
-				content: "Grey 40%";
+				content: "gray 40%";
 			}
 		}
 
 		&:nth-child(10) {
-			background-color: color(grey, 45);
+			background-color: color(gray, 45);
 
 			&::before {
-				content: "Grey 45%";
+				content: "gray 45%";
 			}
 
 			&::after {
@@ -150,18 +150,18 @@
 		}
 
 		&:nth-child(11) {
-			background-color: color(grey, 50);
+			background-color: color(gray, 50);
 
 			&::before {
-				content: "Grey 50%";
+				content: "gray 50%";
 			}
 		}
 
 		&:nth-child(12) {
-			background-color: color(grey, 55);
+			background-color: color(gray, 55);
 
 			&::before {
-				content: "Grey 55%";
+				content: "gray 55%";
 			}
 
 			&::after {
@@ -170,18 +170,18 @@
 		}
 
 		&:nth-child(13) {
-			background-color: color(grey, 60);
+			background-color: color(gray, 60);
 
 			&::before {
-				content: "Grey 60%";
+				content: "gray 60%";
 			}
 		}
 
 		&:nth-child(14) {
-			background-color: color(grey, 65);
+			background-color: color(gray, 65);
 
 			&::before {
-				content: "Grey 65%";
+				content: "gray 65%";
 			}
 
 			&::after {
@@ -190,58 +190,58 @@
 		}
 
 		&:nth-child(15) {
-			background-color: color(grey, 70);
+			background-color: color(gray, 70);
 
 			&::before {
-				content: "Grey 70%";
+				content: "gray 70%";
 			}
 		}
 
 		&:nth-child(16) {
-			background-color: color(grey, 75);
+			background-color: color(gray, 75);
 
 			&::before {
-				content: "Grey 75%";
+				content: "gray 75%";
 			}
 		}
 
 		&:nth-child(17) {
-			background-color: color(grey, 80);
+			background-color: color(gray, 80);
 
 			&::before {
-				content: "Grey 80%";
+				content: "gray 80%";
 			}
 		}
 
 		&:nth-child(18) {
-			background-color: color(grey, 85);
+			background-color: color(gray, 85);
 
 			&::before {
-				content: "Grey 85%";
+				content: "gray 85%";
 			}
 		}
 
 		&:nth-child(19) {
-			background-color: color(grey, 90);
+			background-color: color(gray, 90);
 
 			&::before {
-				content: "Grey 90%";
+				content: "gray 90%";
 			}
 		}
 
 		&:nth-child(20) {
-			background-color: color(grey, 95);
+			background-color: color(gray, 95);
 
 			&::before {
-				content: "Grey 95%";
+				content: "gray 95%";
 			}
 		}
 
 		&:nth-child(21) {
-			background-color: color(grey, 100);
+			background-color: color(gray, 100);
 
 			&::before {
-				content: "Grey 100%";
+				content: "gray 100%";
 			}
 		}
 	}

@@ -7,14 +7,14 @@
 
 	padding: $unit-2xl $unit-3xl;
 
-	background-color: color(grey, 0);
+	background-color: color(gray, 0);
 
 	.wsu-s-footer__overview-title {
 		margin-bottom: $unit-xs;
 
 		text-transform: uppercase;
 
-		color: color(grey, 75);
+		color: color(gray, 75);
 
 		@include font-size(18px, 500);
 
@@ -23,7 +23,7 @@
 	.wsu-s-footer__overview-desc {
 		margin-bottom: $unit-xl;
 
-		color: color(grey, 75);
+		color: color(gray, 75);
 
 		@include font-size(16px, 300, 1.5);
 	}
@@ -73,7 +73,7 @@
 
 		text-decoration: none;
 
-		color: color(grey, 75);
+		color: color(gray, 75);
 
 		@include border-bottom-hover(80%, 7px);
 	}
@@ -102,7 +102,7 @@
 	.wsu-s-footer__contact-info {
 		margin-bottom: $unit-xs;
 
-		color: color(grey, 75);
+		color: color(gray, 75);
 
 		@include font-size(16px, $font-weight: 300);
 	}
@@ -140,12 +140,12 @@
 		transition: color timing();
 		text-decoration: none;
 
-		color: color(grey, 30);
+		color: color(gray, 30);
 
 		@include font-size(24px);
 
 		&:hover {
-			color: color(grey, 50);
+			color: color(gray, 50);
 		}
 	}
 
@@ -158,7 +158,7 @@
 	}
 
 	.wsu-s-footer__logo-svg {
-		fill: color(grey, 10);
+		fill: color(gray, 10);
 	}
 }
 /* == End Base Styles == */
@@ -166,36 +166,36 @@
 /* Dark Theme
 ======================= */
 .wsu-s-footer__wrapper--dark {
-	color: color(grey, 20);
-	background: color(grey, 90);
+	color: color(gray, 20);
+	background: color(gray, 90);
 
 	@extend .wsu-s-footer__wrapper;
 
 	.wsu-s-footer__overview-title {
-		color: color(grey, 0);
+		color: color(gray, 0);
 	}
 
 	.wsu-s-footer__nav-item--has-children {
 		@extend .wsu-s-footer__nav-item;
 
 		& > .wsu-s-footer__nav-link {
-			color: color(grey, 0);
+			color: color(gray, 0);
 		}
 	}
 
 	.wsu-s-footer__nav-link {
-		color: color(grey, 20);
+		color: color(gray, 20);
 	}
 
 	.wsu-s-footer__name {
-		color: color(grey, 0);
+		color: color(gray, 0);
 	}
 
 	.wsu-s-footer__social-item-link {
-		color: grey,
+		color: gray,
 
 		&:hover .wsu-s-footer__social-icon {
-			fill: color(grey, 0);
+			fill: color(gray, 0);
 		}
 	}
 }

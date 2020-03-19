@@ -19,7 +19,7 @@
 	margin-top: 0;
 	margin-bottom: 0;
 
-	color: color(grey, 75);
+	color: color(gray, 75);
 
 	@include font-size(24px, 600);
 }
@@ -36,7 +36,7 @@
 ======================= */
 .wsu-s-header__wrapper--dark {
 	color: color(white, base);
-	background: color(grey, 80);
+	background: color(gray, 80);
 
 	@extend .wsu-s-header__wrapper;
 }

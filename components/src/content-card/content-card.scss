@@ -60,7 +60,7 @@
 
 	transition: box-shadow timing();
 
-	color: color(grey, 75);
+	color: color(gray, 75);
 	border-radius: $wsu-bt-base-border-radius-size;
 
 	@include elevate(3);
@@ -119,7 +119,7 @@
 		position: absolute;
 		left: $unit-xs;
 
-		color: color(primary, light); // TODO play around with grey, red sort of implies linkage
+		color: color(primary, light); // TODO play around with gray, red sort of implies linkage
 
 		@include wsu-icon("\F127");
 	}
@@ -151,7 +151,7 @@
 
 	&:hover {
 		border-radius: $wsu-bt-base-border-radius-size;
-		background-color: color(grey, 0);
+		background-color: color(gray, 0);
 
 		@include font-size(13px, 400);
 	}
