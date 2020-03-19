@@ -230,6 +230,14 @@
 		}
 
 		&:nth-child(20) {
+			background-color: color(grey, 95);
+
+			&::before {
+				content: "Grey 95%";
+			}
+		}
+
+		&:nth-child(21) {
 			background-color: color(grey, 100);
 
 			&::before {
