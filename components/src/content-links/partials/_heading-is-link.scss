@@ -1,60 +1,55 @@
 /* Heading is also a link styles 
 ======================= */
-.wsu-c-heading_is-link {
-	& > a {
-		transition: 300ms ease all;
-		text-decoration: none;
-
-		border-bottom: none;
-
-		text-decoration-color: color(primary, light);
-
-		// Handles icon
-		&::after {
-			font-family: "wsu-icons";
-
-			left: calc(100% + 5px);
-
-			display: inline-block;
-
-			padding-left: 5px;
-
-			content: "\F126";
+.wsu-c-content {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		& > a {
+			color: color(gray, 90 );
 			transition: 300ms ease all;
-			transform: scale(.85);
-			vertical-align: text-bottom;
 			text-decoration: none;
 
-			@include font-size(14px);
-		}
+			border-bottom-style: solid;
+			border-bottom-color: color(primary, light); 
+			border-bottom-width: 0;
 
-		&:hover::after,
-		&:focus::after {
-			transform: scale(1);
-		}
+			// Handles icon
+			&::after {
+				font-family: "wsu-icons";
 
-		// Handles different icon types
-		&[target="_blank"]::after {
-			// TODO: update to external link icon
-			content: "\F142"; // External link
-		}
+				left: calc(100% + 5px);
 
-		// Handles hover, focus state
-		&:hover,
-		&:focus {
-			text-decoration: underline;
+				display: inline-block;
 
-			color: inherit;
-			outline: none;
+				padding-left: 5px;
 
-			text-decoration-thickness: .1em;
-			text-decoration-color: color(primary, light);
-		}
+				content: "\F126";
+				transition: 300ms ease all;
+				transform: scale(.85);
+				text-decoration: none;
 
-		&:focus {
-			text-decoration: none;
+				@include font-size(16px);
+			}
 
-			outline: 1px solid color(primary, light);
+			// Handles hover, focus state
+			&:hover,
+			&:focus {
+
+				color: inherit;
+				outline: none;
+
+				border-bottom-width: 3px;
+
+			}
+
+			&:focus {
+				text-decoration: none;
+
+				outline: 1px solid color(primary, light);
+			}
 		}
 	}
 }

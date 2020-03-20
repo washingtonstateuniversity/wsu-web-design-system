@@ -1,20 +1,25 @@
 /* Content link styles 
 ======================= */
-a {
-	transition: color timing();
+.wsu-c-content a {
+	transition: border-bottom-width timing( 100 );
 
-	color: color(gray, 75);
+	color: color(primary, base);
 
-	text-decoration-color: color(primary, base);
+	text-decoration: none;
+
+	border-bottom-color: color(primary, light); 
+
+	border-bottom-width: 1px; 
+
+	border-bottom-style: solid; 
 
 	&:visited {
 		@extend a;
 	}
 
 	&:hover {
-		color: color(black, base);
 
-		text-decoration-thickness: 2px;
+		border-bottom-width: 3px; 
 	}
 
 	&:focus {
