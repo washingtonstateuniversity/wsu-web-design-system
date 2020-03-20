@@ -13,6 +13,7 @@ module.exports = env => {
 		entry: {
 			'components/dist/global-footer/global-footer': './components/src/global-footer/index.js',
 			'components/dist/global-header/global-header': './components/src/global-header/index.js',
+			'components/dist/global-colors/global-colors': './components/src/global-colors/index.js',
 			'components/dist/site-header/site-header': './components/src/site-header/index.js',
 			'components/dist/site-footer/site-footer': './components/src/site-footer/index.js',
 			'components/dist/site-footer-condensed/site-footer-condensed': './components/src/site-footer-condensed/index.js',
@@ -24,6 +25,7 @@ module.exports = env => {
 			'components/dist/content-form/content-form': './components/src/content-form/index.js',
 			'components/dist/content-heading/content-heading': './components/src/content-heading/index.js',
 			'components/dist/content-hero/content-hero': './components/src/content-hero/index.js',
+			'components/dist/content-links/content-links': './components/src/content-links/index.js',
 			'components/dist/content-list/content-list': './components/src/content-list/index.js',
 			'components/dist/content-icons/content-icons': './components/src/content-icons/index.js',
 			'components/dist/content-column/content-column': './components/src/content-column/index.js',

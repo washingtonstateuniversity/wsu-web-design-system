@@ -1,4 +1,4 @@
-@import '../../../../wsu-build-tools/scss/all-the-things.scss';
+@import '~@wsu/build-tools/scss/all-the-things.scss';
 
 /* Start Base Styles
 ======================= */
@@ -7,14 +7,14 @@
 
 	padding: $unit-2xl $unit-3xl;
 
-	background-color: color(grey, 0);
+	background-color: color(gray, 0);
 
 	/* Contact Container
 	======================= */
 	.wsu-s-footer-condensed__contact-info {
 		margin-bottom: $unit-xs;
 
-		color: color(grey, 75);
+		color: color(gray, 75);
 
 		@include font-size(14px, $font-weight: 300);
 	}
@@ -52,12 +52,12 @@
 		transition: color timing();
 		text-decoration: none;
 
-		color: color(grey, 30);
+		color: color(gray, 30);
 
 		@include font-size(24px)
 
 		&:hover {
-			color: color(grey, 50);
+			color: color(gray, 50);
 		}
 	}
 
@@ -72,7 +72,7 @@
 	}
 
 	.wsu-s-footer-condensed__logo-svg {
-		fill: color(grey, 10);
+		fill: color(gray, 10);
 	}
 }
 /* == End Base Styles == */
@@ -80,15 +80,15 @@
 /* Dark Theme
 ======================= */
 .wsu-s-footer-condensed__wrapper--dark {
-	color: color(grey, 20);
-	background: color(grey, 90);
+	color: color(gray, 20);
+	background: color(gray, 90);
 
 	@extend .wsu-s-footer-condensed__wrapper;
 
 	.wsu-s-footer-condensed__social-item-link {
 
 		&:hover .wsu-s-footer-condensed__social-icon {
-			fill: color(grey, 0);
+			fill: color(gray, 0);
 		}
 	}
 }

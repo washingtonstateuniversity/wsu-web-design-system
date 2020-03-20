@@ -38,6 +38,22 @@
 		var hours = 24; // Reset when storage is more than 24hours
 		var now = new Date().getTime();
 		var setupTime = localStorage.getItem('setupTime');
+
+
+		// Clear Local Cache
+		document.getElementById('clearCache').addEventListener('click', function (e) {
+			console.log('Cache cleared');
+
+			let localStoreRef = localStorage.getItem(localStoreKey);
+
+			localStorage.setItem('setupTime', now);
+
+			if (localStoreRef !== null) {
+				queryGithubApi();
+			}
+		});
+
+
 		if (setupTime == null) {
 			localStorage.setItem('setupTime', now);
 
@@ -65,19 +81,6 @@
 			renderDataToDom();
 		}
 
-		// Clear Local Cache
-		document.getElementById('clearCache').addEventListener('click', function (e) {
-			console.log('Cache cleared');
-
-			let localStoreRef = localStorage.getItem(localStoreKey);
-
-			localStorage.setItem('setupTime', now);
-
-			if (localStoreRef !== null) {
-				queryGithubApi();
-			}
-		});
-
 		// Only show certain items when connected locally
 		if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
 			document.querySelector('.dist-folder').classList.remove('hidden');
@@ -86,11 +89,26 @@
 		function queryGithubApi() {
 			axios.get(
 				'https://api.github.com/repos/washingtonstateuniversity/wsu-web-design-system/contents/components/dist?ref=gh-pages'
+				// "https://api.github.com/repos/washingtonstateuniversity/wsu-web-design-system/git/trees/aa9e71cac50201887ff6e3310f1fa55d38cd3142"
 			).then(function (response) {
+
+				// Remove the current item from local storage
 				localStorage.removeItem(localStoreKey);
+
+				// Empty the DOM
 				container.innerHTML = '';
+
+				// Stringify response
+				response = JSON.stringify(response);
+
+				// TODO Order the json response based on date last modified
+
+				// Set the new local storage item with the json response
 				localStorage.setItem(localStoreKey, JSON.stringify(response));
+
+				// Render that data to the DOM
 				renderDataToDom();
+
 			}).catch(function (err) {
 				console.log(err);
 
@@ -114,6 +132,10 @@
 			let itemSlug = "";
 			let itemNameNoDashes = "";
 			let itemLink = "";
+
+			// console.log(parsedResponse);
+
+			console.log('Last Modified: ' + parsedResponse.headers['last-modified']);
 
 			data.forEach(function (item) {
 

@@ -1,4 +1,4 @@
-@import '../../../../wsu-build-tools/scss/all-the-things.scss';
+@import '~@wsu/build-tools/scss/all-the-things.scss';
 
 .wsu-g-header__wrapper {
 	position: fixed;
@@ -18,7 +18,7 @@
 	padding-right: $unit-xs;
 
 	border-top: 5px solid color(primary, base);
-	background-color: color(grey, 0);
+	background-color: color(gray, 0);
 }
 
 /* Logo
@@ -29,7 +29,7 @@
 
 	text-decoration: none;
 
-	color: color(grey, 75);
+	color: color(gray, 75);
 
 	@include font-size(0.75rem, 500);
 	@include mq('small') {
@@ -44,7 +44,7 @@
 	}
 
 	&:visited {
-		color: color(grey, 75);
+		color: color(gray, 75);
 	}
 }
 
@@ -113,13 +113,13 @@
 
 	text-decoration: none;
 
-	color: color(grey_fill, medium);
+	color: color(gray, 75);
 
 	@include font-size(0.75rem, 400);
 	@include border-bottom-hover(100%);
 
 	&:visited {
-		color: color(grey, 70);
+		color: color(gray, 70);
 	}
 }
 
@@ -131,14 +131,14 @@
 	transition: color timing();
 	text-decoration: none;
 
-	color: color(grey, 75);
+	color: color(gray, 75);
 
 	@include mq('medium') {
 		display: none;
 	}
 
 	&:visited {
-		color: color(grey, 75);
+		color: color(gray, 75);
 	}
 
 	&:hover,
@@ -155,10 +155,10 @@
 	transition: color timing();
 	text-decoration: none;
 
-	color: color(grey, 75);
+	color: color(gray, 75);
 
 	&:visited {
-		color: color(grey, 75);
+		color: color(gray, 75);
 	}
 
 	&:hover,
@@ -175,14 +175,14 @@
 	transition: color timing();
 	text-decoration: none;
 
-	color: color(grey, 75);
+	color: color(gray, 75);
 
 	@include mq('small') {
 		display: none;
 	}
 
 	&:visited {
-		color: color(grey, 75);
+		color: color(gray, 75);
 	}
 
 	&:hover,

@@ -1,5 +1,5 @@
-@import '../../../../wsu-build-tools/scss/all-the-things.scss';
-@import '../../../../wsu-build-tools/scss/animate.css/animate.min.css';
+@import '~@wsu/build-tools/scss/all-the-things.scss';
+@import '~@wsu/build-tools/scss/animate.css/animate.min.css';
 
 /* Start Base Styles
 ======================= */
@@ -56,7 +56,7 @@
 		transition: transform timing();
 		transform: translateY(-50%);
 
-		color: color(grey, 30);
+		color: color(gray, 30);
 
 		@include is-psuedo-element($content: "\F103", $display: inline-block, $position: absolute);
 	}
@@ -79,7 +79,7 @@
 		white-space: normal;
 
 		border-radius: $wsu-bt-base-border-radius-size;
-		background: color(grey, 0);
+		background: color(gray, 0);
 
 		@include elevate(1);
 
@@ -89,7 +89,7 @@
 
 			transition: padding-left timing(husky);
 
-			color: color(grey, 60);
+			color: color(gray, 60);
 
 			@include font-size(13px, 600, 1);
 		}
@@ -129,17 +129,17 @@
 	transition: color timing();
 	text-decoration: none;
 
-	color: color(grey, 75);
+	color: color(gray, 75);
 
 	@include font-size(14px, 600, 1);
 
 	&:visited {
-		color: color(grey, 75);
+		color: color(gray, 75);
 	}
 
 	&:hover,
 	&:active {
-		color: color(grey, 100);
+		color: color(gray, 100);
 	}
 
 	// &:focus {
@@ -210,7 +210,7 @@
 		white-space: normal;
 
 		border-radius: $wsu-bt-base-border-radius-size;
-		background: color(grey, 0);
+		background: color(gray, 0);
 
 		@include elevate(1);
 
@@ -220,7 +220,7 @@
 
 			transition: padding-left timing(husky);
 
-			color: color(grey, 60);
+			color: color(gray, 60);
 
 			@include font-size(13px, 600);
 
@@ -287,8 +287,8 @@
 /* Dark Theme
 ======================= */
 .wsu-s-nav-horizontal__wrapper--dark {
-	color: color(grey, 0);
-	background: color(grey, 90);
+	color: color(gray, 0);
+	background: color(gray, 90);
 
 	@extend .wsu-s-nav-horizontal__wrapper;
 }
