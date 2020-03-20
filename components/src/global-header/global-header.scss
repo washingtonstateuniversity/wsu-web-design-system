@@ -1,4 +1,4 @@
-@import '../../../../wsu-build-tools/scss/all-the-things.scss';
+@import '~@wsu/build-tools/scss/all-the-things.scss';
 
 .wsu-g-header__wrapper {
 	position: fixed;
@@ -113,7 +113,7 @@
 
 	text-decoration: none;
 
-	color: color(grey_fill, medium);
+	color: color(grey, 80);
 
 	@include font-size(0.75rem, 400);
 	@include border-bottom-hover(100%);
