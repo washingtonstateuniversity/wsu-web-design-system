@@ -15,7 +15,7 @@
 
 		transition: border timing();
 
-		border: 1px solid color(grey, 20);
+		border: 1px solid color(gray, 20);
 		border-radius: $wsu-bt-base-border-radius-size;
 
 		@include font-size(14px);
@@ -27,19 +27,19 @@
 		width: 100%;
 		padding: $unit $unit;
 
-		color: color(grey, 100);
+		color: color(gray, 100);
 
 		@include elevate(0);
 
 		&:focus {
-			border-color: color(grey, 40);
+			border-color: color(gray, 40);
 			outline: none;
 
 			@include elevate(2);
 		}
 
 		&::input-placeholder {
-			color: color(grey, 60);
+			color: color(gray, 60);
 		}
 	}
 
@@ -59,7 +59,7 @@
 		margin: $unit-l 0 0;
 		padding: 0 $unit-xl $unit-xl;
 
-		border: 1px solid color(grey, 20);
+		border: 1px solid color(gray, 20);
 
 		@include font-size(14px);
 	}
@@ -71,8 +71,8 @@
 
 		background-color: color(white, base);
 		background-image:
-			linear-gradient(-135deg, color(grey, 50) 50%, transparent 50%),
-			linear-gradient(135deg, color(grey, 50) 50%, transparent 50%);
+			linear-gradient(-135deg, color(gray, 50) 50%, transparent 50%),
+			linear-gradient(135deg, color(gray, 50) 50%, transparent 50%);
 		background-repeat: no-repeat;
 		background-position:
 			calc(100% - calc(7px * 3)) 50%,

@@ -1,0 +1,28 @@
+/* Image is also a link styles 
+======================= */
+.wsu-c-image_is-link {
+	display: block;
+	overflow: hidden;
+
+	width: 100%;
+	margin: 0;
+
+	background: color(gray, 100);
+
+	& > img {
+		width: 100%;
+		height: 225px;
+
+		transition: opacity timing();
+
+		opacity: 1;
+
+		object-fit: cover;
+		object-position: center center;
+
+		&:hover {
+			opacity: 0.85;
+		}
+	}
+}
+

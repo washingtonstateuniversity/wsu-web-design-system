@@ -37,7 +37,7 @@
 
 			transition: background-color timing('eagle'), border-color timing('eagle');
 
-			border: 1px solid color(grey, 20);
+			border: 1px solid color(gray, 20);
 			border-radius: $wsu-bt-base-border-radius-size;
 			background-color: color(white, base);
 
@@ -87,7 +87,7 @@
 
 			&:focus:checked ~ .wsu-c-form__input {
 				border-width: 2px;
-				border-color: color(grey, 80);
+				border-color: color(gray, 80);
 			}
 		}
 	}
@@ -113,7 +113,7 @@
 
 			transition: background-color timing('eagle');
 
-			border: 1px solid color(grey, 20);
+			border: 1px solid color(gray, 20);
 			border-radius: 100%;
 			background-color: color(white, base);
 
@@ -130,7 +130,7 @@
 		
 		& > input:focus:checked ~ .wsu-c-form__input {
 			border-width: 2px;
-			border-color: color(grey, 80);
+			border-color: color(gray, 80);
 		}
 
 		& > input:checked ~ .wsu-c-form__input {

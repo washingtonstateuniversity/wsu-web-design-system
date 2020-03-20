@@ -1,0 +1,60 @@
+/* Heading is also a link styles 
+======================= */
+.wsu-c-heading_is-link {
+	& > a {
+		transition: 300ms ease all;
+		text-decoration: none;
+
+		border-bottom: none;
+
+		text-decoration-color: color(primary, light);
+
+		// Handles icon
+		&::after {
+			font-family: "wsu-icons";
+
+			left: calc(100% + 5px);
+
+			display: inline-block;
+
+			padding-left: 5px;
+
+			content: "\F126";
+			transition: 300ms ease all;
+			transform: scale(.85);
+			vertical-align: text-bottom;
+			text-decoration: none;
+
+			@include font-size(14px);
+		}
+
+		&:hover::after,
+		&:focus::after {
+			transform: scale(1);
+		}
+
+		// Handles different icon types
+		&[target="_blank"]::after {
+			// TODO: update to external link icon
+			content: "\F142"; // External link
+		}
+
+		// Handles hover, focus state
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+
+			color: inherit;
+			outline: none;
+
+			text-decoration-thickness: .1em;
+			text-decoration-color: color(primary, light);
+		}
+
+		&:focus {
+			text-decoration: none;
+
+			outline: 1px solid color(primary, light);
+		}
+	}
+}
