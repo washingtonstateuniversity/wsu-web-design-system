@@ -25,4 +25,5 @@
 ## Usage
 The current development branch of the design system is 1.x.
 
-- The entire design system is available via cdn here: `https://cdn-web-wsu.s3-us-west-2.amazonaws.com/designsystem/1.x/build/dist/wsu-design-system.bundle.dist.css`
+- The entire design system is available via cdn here
+`https://cdn-web-wsu.s3-us-west-2.amazonaws.com/designsystem/1.x/build/dist/wsu-design-system.bundle.dist.css`
