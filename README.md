@@ -21,3 +21,8 @@
 |                       | Site Nav Vertical      | 75%             | [Issue #16](https://github.com/washingtonstateuniversity/wsu-web-design-system/issues/16) | [Demo](https://washingtonstateuniversity.github.io/wsu-web-design-system/components/dist/site-nav-vertical/site-nav-vertical.html)            |
 
 [View a comprehensive list of available components here](https://washingtonstateuniversity.github.io/wsu-web-design-system/components/)
+
+## Usage
+The current development branch of the design system is 1.x.
+
+- The entire design system is available via cdn here: `https://cdn-web-wsu.s3-us-west-2.amazonaws.com/designsystem/1.x/build/dist/wsu-design-system.bundle.dist.css`
