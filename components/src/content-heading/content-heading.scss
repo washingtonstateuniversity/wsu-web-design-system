@@ -1,61 +1,219 @@
 @import '~@wsu/build-tools/scss/all-the-things.scss';
 
+.wsu-c-content {
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		padding-top: $wsu-bt-spacing-medium;
+		margin-top: 0;
+		transition: font-size timing(cougar, standard);
+		color: color(gray, 75);
+		font-family: $wsu-bt-primary-font-family;
+
+		& + p {
+			margin-top: 0;
+		}
+
+		& > a {
+			color: inherit;
+			transition: 300ms ease all;
+			text-decoration: none;
+
+			border-bottom-style: solid;
+			border-bottom-color: color(primary, light); 
+			border-bottom-width: 0;
+
+			// Handles icon
+			&::after {
+				font-family: "wsu-icons";
+
+				left: calc(100% + 5px);
+
+				display: inline-block;
+
+				padding-left: 5px;
+
+				content: "\F126";
+				transition: 300ms ease all;
+				transform: scale(.85);
+				text-decoration: none;
+
+				@include font-size(16px);
+			}
+
+			// Handles hover, focus state
+			&:hover,
+			&:focus {
+
+				color: inherit;
+				outline: none;
+
+				border-bottom-width: 3px;
+
+			}
+
+			&:focus {
+				text-decoration: none;
+
+				outline: 1px solid color(primary, light);
+			}
+		}
+	}
+
+	.wsu-c-column {
+		& > h1:first-child,
+		& > h2:first-child,
+		& > h3:first-child,
+		& > h4:first-child,
+		& > h5:first-child,
+		& > h6:first-child {
+			padding-top: $wsu-bt-spacing-none;
+		}
+	}
+
+	h1 {
+		font-size: 3rem;
+		line-height: 1.25em;
+		font-weight: $wsu-bt-font-extra-bold;
+		margin-bottom: $wsu-bt-spacing-medium;
+		padding-bottom: $wsu-bt-spacing-small;
+		position: relative;
+
+		@include mq('medium','max') {
+			font-size: 2.5rem;
+		}
+		@include mq('small','max') {
+			font-size: 2rem;
+		}
+
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			bottom: -4px;
+			left: 0;
+			width: 124px;
+			height: 3px;
+			background-color: color('primary','light');
+		}
+
+	}
+
+	h2 {
+		font-size: 2.25rem;
+		line-height: 1.3em;
+		font-weight: $wsu-bt-font-bold;
+		margin-bottom: $wsu-bt-spacing-small;
+
+		@include mq('medium','max') {
+			font-size: 1.75rem;
+		}
+	}
+
+	h3 {
+		font-size: 2rem;
+		line-height: 1.35em;
+		font-weight: $wsu-bt-font-semi-bold;
+		margin-bottom: $wsu-bt-spacing-xsmall;
+
+		@include mq('medium','max') {
+			font-size: 1.5rem;
+		}
+	}
+
+	h4 {
+		font-size: 1.5rem;
+		line-height: 1.4em;
+		font-weight: $wsu-bt-font-semi-bold;
+		margin-bottom: $wsu-bt-spacing-tight;
+
+		@include mq('medium','max') {
+			font-size: 1.25rem;
+		}
+	}
+
+	h5 {
+		font-size: 1.25rem;
+		line-height: 1.5em;
+		font-weight: $wsu-bt-font-medium;
+		margin-bottom: $wsu-bt-spacing-tight;
+
+		@include mq('medium','max') {
+			font-size: 1.1rem;
+		}
+	}
+
+	h6 {
+		font-size: 1rem;
+		line-height: 1.5em;
+		font-weight: $wsu-bt-font-medium;
+		margin-bottom: $wsu-bt-spacing-tight;
+
+	}
+
+
+}
+
 .wsu-c-heading--1 {
 	@include font-size(ms(2));
-	@include mq('small') {
+	@include mq('small','max') {
 		@include font-size(ms(4));
 	}
-	@include mq('medium') {
+	@include mq('medium','max') {
 		@include font-size(ms(6));
 	}
 }
 
 .wsu-c-heading--2 {
 	@include font-size(ms(1));
-	@include mq('small') {
+	@include mq('small','max') {
 		@include font-size(ms(3));
 	}
-	@include mq('medium') {
+	@include mq('medium','max') {
 		@include font-size(ms(5));
 	}
 }
 
 .wsu-c-heading--3 {
 	@include font-size(ms(0));
-	@include mq('small') {
+	@include mq('small','max') {
 		@include font-size(ms(2));
 	}
-	@include mq('medium') {
+	@include mq('medium','max') {
 		@include font-size(ms(4));
 	}
 }
 
 .wsu-c-heading--4 {
 	@include font-size(ms(-1));
-	@include mq('small') {
+	@include mq('small','max') {
 		@include font-size(ms(1));
 	}
-	@include mq('medium') {
+	@include mq('medium','max') {
 		@include font-size(ms(3));
 	}
 }
 
 .wsu-c-heading--5 {
 	@include font-size(ms(-2));
-	@include mq('small') {
+	@include mq('small','max') {
 		@include font-size(ms(0));
 	}
-	@include mq('medium') {
+	@include mq('medium','max') {
 		@include font-size(ms(2));
 	}
 }
 
 .wsu-c-heading--6 {
 	@include font-size(ms(-3));
-	@include mq('small') {
+	@include mq('small','max') {
 		@include font-size(ms(-1));
 	}
-	@include mq('medium') {
+	@include mq('medium','max') {
 		@include font-size(ms(1));
 	}
 }
