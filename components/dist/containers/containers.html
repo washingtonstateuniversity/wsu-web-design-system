@@ -98,6 +98,14 @@
 			margin-right: 1rem;
 		}
 
+		.wsu-c-container__main {
+			position: relative;
+		}
+
+		.wsu-c-container__aside {
+			position: relative;
+		}
+
 		.wsu-d-component__global-header {
 			position: absolute;
 			top: 2rem;
@@ -169,6 +177,27 @@
 			</div>
 			<div class="wsu-d-component wsu-d-component__site-footer">Site Footer</div>
 			<div class="wsu-d-component wsu-d-component__global-footer">Global Footer</div>
+		</div>
+	</div>
+	<div class="wsu-d-component__layout"><span>Sidebar Right</span></div>
+	<div class="wsu-g-container">
+		<div class="wsu-d-component wsu-d-component__global-header">Global Header</div>
+		<div class="wsu-s-wrapper">
+			<div class="wsu-d-component wsu-d-component__site-header">Site Header</div>
+			<div class="wsu-d-component wsu-d-component__site-nav-horizontal">Site Navigation Horizontal</div>
+			<main class="wsu-s-main-container">
+				<div class="wsu-c-container wsu-c-container--sidebar-right">
+					<div class="wsu-c-container__main">
+						<div class="wsu-d-component">Content</div>
+					</div>
+					<aside class="wsu-c-container__aside">
+						<div class="wsu-d-component">Global Header</div>
+					</aside>
+					<!-- COMPONENT: Content Components -->
+				</div>
+			</main>
+			<div class="wsu-d-component">Site Footer</div>
+			<div class="wsu-d-component">Global Footer</div> 
 		</div>
 	</div>
 </body>
