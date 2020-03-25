@@ -79,6 +79,39 @@ body {
 	padding-left: $wsu-bt-spacing-medium;
 	padding-right: $wsu-bt-spacing-medium;
 
+	&--sidebar-right {
+		display: flex;
+		padding-left: $wsu-bt-spacing-none;
+		padding-right: $wsu-bt-spacing-none;
+
+		@include mq('medium-large','max') {
+			flex-wrap: wrap;
+		}
+
+		.wsu-c-container__main {
+			width: 70%;
+			padding-left: $wsu-bt-spacing-medium;
+			padding-right: $wsu-bt-spacing-medium;
+			box-sizing: border-box;
+
+			@include mq('medium-large','max') {
+				width: 100%;
+			}
+		}
+
+		.wsu-c-container__aside {
+			width: 30%;
+			padding-left: $wsu-bt-spacing-medium;
+			padding-right: $wsu-bt-spacing-medium;
+
+			
+			@include mq('medium-large','max') {
+				width: 100%;
+			}
+		}
+
+	}
+
 	@include mq('medium-large') {
 		max-width: calc( 100vw - 260px );
 	}
