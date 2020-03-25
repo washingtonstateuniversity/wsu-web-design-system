@@ -1,0 +1,87 @@
+<html lang="en-US">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Content Links | Component</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+	<link rel="stylesheet" href="content-links.css">
+	<script src="content-links.js" defer></script>
+</head>
+
+<body>
+
+	<h1 class="wsu-u-title">Link Patterns</h1>
+
+	<div class="wsu-u-spacer">
+		<div class="wsu-u-title">Content Links <span class="wsu-icon wsu-i-arrow-down-carrot"></span></div>
+		<div class="wsu-u-requirements" style="font-size: 14px;">
+			<ul>
+				<li>Meet's AAA contrast requirements</li>
+				<li>Works well with all color-blindness types</li>
+				<li>Read's well for individuals with dyslexia</li>
+			</ul>
+		</div>
+	</div>
+	<div class="wsu-c-container wsu-c-content">
+		<div class="wsu-c-column__wrapper wsu-c-columns--thirds" style="margin: 0 auto; max-width: 1200px;">
+			<div class="wsu-c-column">
+				<h2>Multiword</h2>
+				<p>How it is I know not; but <a href="#default" class="default_1-1">there is no place like a bed</a> for confidential disclosures between friends. Man and wife, they say, there open the very bottom of their souls to each other; and some old couples often lie and chat over old times till nearly morning. Thus, then, in our hearts’ honeymoon, lay I and Queequeg—a cosy, loving pair.</p>
+			</div>
+			<div class="wsu-c-column">
+				<h2>Multiline</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum architecto fuga velit sint, reprehenderit <a href="#default" class="default_1-1">quos dicta quaerat debitis aliquid non commodi saepe omnis ipsa sunt, laudantium aliquam, libero illo aperiam.</a></p>
+			</div>
+			<div class="wsu-c-column">
+				<h2>Single Word</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum architecto fuga velit sint, reprehenderit <a href="#default" class="default_1-1">quos</a> dicta quaerat debitis aliquid non commodi saepe omnis ipsa sunt, laudantium aliquam, libero illo aperiam.</p>
+			</div>
+		</div>
+	</div>
+	<div class="wsu-u-spacer">
+		<div class="wsu-u-title">Heading Links <span class="wsu-icon wsu-i-arrow-down-carrot"></span></div>
+		<div class="wsu-u-requirements" style="font-size: 14px;">
+			<ul>
+				<li>Meets AAA contrast requirements</li>
+				<li>Could support different link types (mime/types, external links, etc)</li>
+			</ul>
+		</div>
+	</div>
+	<div class="wsu-c-container wsu-c-content">
+		<div class="wsu-c-column__wrapper wsu-c-columns--thirds" style="margin: 0 auto; max-width: 1200px;">
+			<div class="wsu-c-column">
+				<a href="#" class="wsu-c-image_is-link"><img src="https://source.unsplash.com/600x400" alt="Placeholder image" /></a>
+				<h2 class="wsu-c-heading_is-link"><a href="#" target="_blank">Headline</a></h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum architecto fuga velit sint, reprehenderit quos dicta quaerat debitis aliquid non commodi saepe omnis ipsa sunt, laudantium aliquam, libero illo aperiam.</p>
+				<div class="wsu-c-button--round">
+					<a href="#" class="wsu-c-button_link">Read More</a>
+				</div>
+			</div>
+			<div class="wsu-c-column">
+				<a href="#" class="wsu-c-image_is-link"><img src="https://source.unsplash.com/600x400" alt="Placeholder image" /></a>
+				<h2 class="wsu-c-heading_is-link"><a href="#">Headline Multiword</a></h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum architecto fuga velit sint, reprehenderit quos dicta quaerat debitis aliquid non commodi saepe omnis ipsa sunt, laudantium aliquam, libero illo aperiam.</p>
+				<div class="wsu-c-button--round">
+					<a href="#" class="wsu-c-button_link">Read More</a>
+				</div>
+			</div>
+			<div class="wsu-c-column">
+				<a href="#" class="wsu-c-image_is-link"><img src="https://source.unsplash.com/600x400" alt="Placeholder image" /></a>
+				<h2 class="wsu-c-heading_is-link"><a href="#">Headline that is a bit longer than the others</a></h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum architecto fuga velit sint, reprehenderit quos dicta quaerat debitis aliquid non commodi saepe omnis ipsa sunt, laudantium aliquam, libero illo aperiam.</p>
+				<div class="wsu-c-button--round">
+					<a href="#" class="wsu-c-button_link">Read More</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="wsu-u-spacer"></div>
+
+	<!-- TODO: Build items with whole card being clickable -->
+
+	<script src="../../../node_modules/@wsu/build-tools/js/wsu-bt-toolbar.js"></script>
+</body>
+
+</html>
