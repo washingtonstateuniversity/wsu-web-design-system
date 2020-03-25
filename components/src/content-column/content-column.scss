@@ -3,10 +3,10 @@
 $grid-columns: 12;
 
 @mixin columns-props {
-	padding-top: 1rem;
-	padding-right: 1rem;
-	padding-bottom: 2rem;
-	padding-left: 1rem;
+	padding-top: $wsu-bt-spacing-small;
+	padding-right: $wsu-bt-spacing-medium;
+	padding-bottom: $wsu-bt-spacing-medium;
+	padding-left: $wsu-bt-spacing-medium;
 	box-sizing: border-box;
 }
 
