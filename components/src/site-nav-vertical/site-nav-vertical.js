@@ -23,7 +23,7 @@ if (typeof nav_vert_wrapper != "undefined" && nav_vert_wrapper != null) {
 		nav_panel_selector: '.wsu-s-nav-vertical__wrapper',
 		nav_list_container_selector: '.wsu-s-nav-vertical__nav-list',
 		show_logs: true,
-		start_collapsed_width: 1160
+		start_collapsed_width: 1360
 	});
 
 	wsu_bt_wds.vertical_nav.init();
