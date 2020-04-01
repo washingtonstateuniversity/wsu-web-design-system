@@ -30,6 +30,7 @@ module.exports = env => {
 			'components/dist/content-icons/content-icons': './components/src/content-icons/index.js',
 			'components/dist/content-column/content-column': './components/src/content-column/index.js',
 			'components/dist/containers/containers': './components/src/containers/index.js',
+			'components/dist/content-paragraph/content-paragraph': './components/src/content-paragraph/index.js',
 		},
 		output: {
 			path: path.resolve(__dirname),
