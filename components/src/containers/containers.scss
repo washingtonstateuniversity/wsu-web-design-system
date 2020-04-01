@@ -87,8 +87,10 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	box-sizing: border-box;
-	padding-left: $wsu-bt-spacing-content;
-	padding-right: $wsu-bt-spacing-content;
+	padding-left: space( 'content' );
+	padding-right: space( 'content' );
+	padding-top: space( 'content-top' );
+	padding-bottom: space( 'content-bottom' );
 
 	@include mq('tablet') {
 		max-width: calc( 100vw - 260px );
@@ -96,8 +98,6 @@ body {
 
 	@include mq('tablet','max') {
 		width: auto;
-		margin-left: 1rem;
-		margin-right: 1rem;
 	}
 
 	&--sidebar-right {
@@ -134,8 +134,10 @@ body {
 	}
 
 	.wsu-c-column__wrapper {
-		margin-right: -$wsu-bt-spacing-medium;
-		margin-left: -$wsu-bt-spacing-medium;
+		margin-right: calc( #{space( 'content' )} * -1 );
+		margin-left: calc( #{space( 'content' )} * -1 );
+		padding-left: 0.75rem;
+		padding-right: 0.75rem;
 	}
 
 	.wsu-c-full-width--wrapper {
