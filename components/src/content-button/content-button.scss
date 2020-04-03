@@ -1,5 +1,10 @@
 @import '~@wsu/build-tools/scss/all-the-things.scss';
 
+.wsu-c-button {
+	margin-top: space( 'component' );
+	margin-bottom: space( 'component' );
+}
+
 .wsu-c-button a {
 	display: inline-table;
 
