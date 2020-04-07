@@ -31,6 +31,9 @@ module.exports = env => {
 			'components/dist/content-column/content-column': './components/src/content-column/index.js',
 			'components/dist/containers/containers': './components/src/containers/index.js',
 			'components/dist/content-paragraph/content-paragraph': './components/src/content-paragraph/index.js',
+			'components/dist/content-article-copy/content-article-copy': './components/src/content-article-copy/index.js',
+			'components/dist/content-article-footer/content-article-footer': './components/src/content-article-footer/index.js',
+			'components/dist/content-article-header/content-article-header': './components/src/content-article-header/index.js',
 		},
 		output: {
 			path: path.resolve(__dirname),
