@@ -6,3 +6,5 @@ import './site-header.scss';
 
 // HTML
 import './site-header.html';
+
+import './site-header-dark.html';

@@ -14,6 +14,8 @@
 		"css-loader": "^3.4.2",
 		"fibers": "^3.1.0",
 		"file-loader": "^4.3.0",
+		"html-loader": "^1.1.0",
+		"html-webpack-plugin": "^4.0.4",
 		"mini-css-extract-plugin": "^0.8.2",
 		"mitt": "^1.2.0",
 		"modularscale-sass": "^3.0.8",
@@ -34,6 +36,7 @@
 		"build": "npm run clean && npm run build:bundle && npm run build:components",
 		"build:bundle": "webpack --env.NODE_ENV=production --config build.config.js",
 		"build:components": "webpack --env.NODE_ENV=production --config webpack.config.js",
+		"build:demo": "webpack --env.NODE_ENV=development --config build-demo.config.js",
 		"clean": "rimraf ./components/dist & rimraf ./build/dist"
 	},
 	"repository": {
