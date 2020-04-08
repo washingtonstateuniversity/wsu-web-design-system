@@ -86,6 +86,7 @@
 	height: 100vh;
 
 	transition: transform timing(300, ease);
+	transition: background-color timing();
 	transition-delay: 50ms;
 	transform: translateX(0);
 	text-align: center;
@@ -96,6 +97,11 @@
 
 	@include mq('small', 'max') {
 		display: none;
+	}
+
+	&:hover {
+		border-right-color: color(grey, 10);
+		background-color: color(grey, 0);
 	}
 
 	&:hover,
