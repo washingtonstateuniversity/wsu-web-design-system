@@ -10,10 +10,14 @@ module.exports = env => {
 
 	return {
 		context: __dirname,
-		entry: './build/src/wsu-design-system.build.js',
+		entry: {
+			'build/dist/wsu-design-system': './build/src/wsu-design-system.js',
+			'build/dist/wsu-design-system.content': './build/src/wsu-design-system.content.js',
+		},
 		output: {
-			filename: 'wsu-design-system.bundle.dist.js',
-			path: path.resolve(__dirname, 'build/dist')
+			filename: '[name].bundle.dist.js',
+			path: path.resolve(__dirname),
+			//path: path.resolve(__dirname, 'build/dist')
 		},
 		mode: DEV ? 'development' : 'production',
 		devtool: DEV ? 'inline-source-map' : 'source-map',
@@ -89,7 +93,7 @@ module.exports = env => {
 		},
 		plugins: [
 			new MiniCssExtractPlugin({
-				filename: 'wsu-design-system.bundle.dist.css'
+				filename: '[name].bundle.dist.css'
 			}),
 		]
 	}
