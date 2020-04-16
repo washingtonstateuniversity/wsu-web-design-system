@@ -10,7 +10,7 @@ module.exports = env => {
 		context: __dirname,
 		entry: './demo/src/index.js',
 		output: {
-			path: path.resolve(__dirname, 'demo/'),
+			path: path.resolve(__dirname, 'demo/dist/'),
 			filename: '[name].js'
 		},
 		mode: DEV ? 'development' : 'production',
