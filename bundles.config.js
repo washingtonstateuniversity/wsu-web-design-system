@@ -11,13 +11,12 @@ module.exports = env => {
 	return {
 		context: __dirname,
 		entry: {
-			'build/dist/wsu-design-system': './build/src/wsu-design-system.js',
-			'build/dist/wsu-design-system.content': './build/src/wsu-design-system.content.js',
+			'bundles/dist/wsu-design-system': './bundles/src/wsu-design-system.js',
+			'bundles/dist/wsu-design-system.content': './bundles/src/wsu-design-system.content.js',
 		},
 		output: {
 			filename: '[name].bundle.dist.js',
-			path: path.resolve(__dirname),
-			//path: path.resolve(__dirname, 'build/dist')
+			path: path.resolve(__dirname)
 		},
 		mode: DEV ? 'development' : 'production',
 		devtool: DEV ? 'inline-source-map' : 'source-map',
