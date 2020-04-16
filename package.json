@@ -37,7 +37,7 @@
 		"build:bundle": "webpack --env.NODE_ENV=production --config builds.config.js",
 		"build:components": "webpack --env.NODE_ENV=production --config components.config.js",
 		"build:demo": "webpack --env.NODE_ENV=development --config demo.config.js",
-		"clean": "rimraf ./components/dist & rimraf ./builds/dist & rimraf ./demo/dist/"
+		"clean": "rimraf ./components/dist & rimraf ./builds/dist & rimraf ./demo/dist"
 	},
 	"repository": {
 		"type": "git",
