@@ -31,7 +31,7 @@
 		"webpack-dev-server": "^3.10.1"
 	},
 	"scripts": {
-		"start": "npm run start:demo && npm run start:bundles && npm run start:components",
+		"start": "npm run start:demo & npm run start:bundles & npm run start:components",
 		"start:bundles": "webpack --env.NODE_ENV=development --silent --quiet --watch --config bundles.config.js",
 		"start:components": "webpack --env.NODE_ENV=development --silent --quiet --watch --config components.config.js",
 		"start:demo": "webpack-dev-server --env.NODE_ENV=development --silent --quiet --watch --config demo.config.js",
