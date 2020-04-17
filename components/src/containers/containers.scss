@@ -10,19 +10,6 @@
 	margin-left: space_content( $wsu-bt-nav-vertical-width-collapse );
 }
 
-/* Variables
-======================= */
-:root {
-	--unit-2xs: 5px;
-	--unit-xs: 10px;
-	--unit-s: 15px;
-	--unit: 20px;
-	--unit-l: 25px;
-	--unit-xl: 30px;
-	--unit-2xl: 35px;
-	--unit-3xl: 40px;
-}
-
 body {
 	overflow-x: hidden;
 }
@@ -31,10 +18,11 @@ body {
 ======================= */
 .wsu-g-container {
 	display: flex;
+
+	box-sizing: border-box;
 	width: 100%;
 	min-height: 100vh;
-	padding-top: 65px;
-	box-sizing: border-box;
+	padding-top: 63px;
 }
 
 .wsu-g-content {
@@ -48,14 +36,17 @@ body {
 .wsu-s-wrapper--content-large,
 .wsu-s-wrapper--content-xlarge,
 .wsu-s-wrapper {
-	width: 100%;
-	transition: all 300ms cubic-bezier(0, 0, 0.03, 1);
-	display: flex;
-	flex-direction: column;
-	box-sizing: border-box;
 	position: relative;
 	left: 0;
+
+	display: flex;
 	overflow-x: hidden;
+	flex-direction: column;
+
+	box-sizing: border-box;
+	width: 100%;
+
+	transition: all 300ms cubic-bezier(0, 0, 0.03, 1);
 }
 
 .wsu-s-wrapper--content-small .wsu-c-container {
@@ -77,43 +68,43 @@ body {
 .wsu-s-main-container {
 	position: relative;
 	z-index: 5000;
+
 	flex-grow: 1;
-	border-top: 1px solid #f2f2f2;
 }
 
 .wsu-c-container {
+	box-sizing: border-box;
 	width: 1100px;
 	max-width: 100%;
-	margin-left: auto;
 	margin-right: auto;
-	box-sizing: border-box;
-	padding-left: space( 'content' );
-	padding-right: space( 'content' );
+	margin-left: auto;
 	padding-top: space( 'content-top' );
+	padding-right: space( 'content' );
 	padding-bottom: space( 'content-bottom' );
+	padding-left: space( 'content' );
 
 	@include mq('tablet') {
 		max-width: calc( 100vw - 260px );
 	}
-
 	@include mq('tablet','max') {
 		width: auto;
 	}
 
 	&--sidebar-right {
 		display: flex;
-		padding-left: $wsu-bt-spacing-none;
+
 		padding-right: $wsu-bt-spacing-none;
+		padding-left: $wsu-bt-spacing-none;
 
 		@include mq('medium-large','max') {
 			flex-wrap: wrap;
 		}
 
 		.wsu-c-container__main {
-			width: 70%;
-			padding-left: $wsu-bt-spacing-medium;
-			padding-right: $wsu-bt-spacing-medium;
 			box-sizing: border-box;
+			width: 70%;
+			padding-right: $wsu-bt-spacing-medium;
+			padding-left: $wsu-bt-spacing-medium;
 
 			@include mq('medium-large','max') {
 				width: 100%;
@@ -122,10 +113,9 @@ body {
 
 		.wsu-c-container__aside {
 			width: 30%;
-			padding-left: $wsu-bt-spacing-medium;
 			padding-right: $wsu-bt-spacing-medium;
+			padding-left: $wsu-bt-spacing-medium;
 
-			
 			@include mq('medium-large','max') {
 				width: 100%;
 			}
@@ -136,21 +126,23 @@ body {
 	.wsu-c-column__wrapper {
 		margin-right: calc( #{space( 'content' )} * -1 );
 		margin-left: calc( #{space( 'content' )} * -1 );
-		padding-left: 0.75rem;
 		padding-right: 0.75rem;
+		padding-left: 0.75rem;
 	}
 
 	.wsu-c-full-width--wrapper {
 		margin-right: space_content();
 		margin-left: space_content();
-		padding-left: space_content(0, 1, $wsu-bt-spacing-content );
 		padding-right: space_content(0, 1, $wsu-bt-spacing-content );
+		padding-left: space_content(0, 1, $wsu-bt-spacing-content );
+
 		transition: all 300ms cubic-bezier(0, 0, 0.03, 1);
 	}
 	
 	.wsu-c-full-width {
 		margin-right: space_content();
 		margin-left: space_content();
+
 		transition: all 300ms cubic-bezier(0, 0, 0.03, 1);
 	}
 
@@ -161,7 +153,6 @@ body {
 	.wsu-s-nav-vertical__wrapper + .wsu-s-wrapper {
 
 		.wsu-c-container  {
-
 			@include mq('mobile','min') {
 
 				.wsu-c-full-width {
@@ -171,11 +162,11 @@ body {
 			}
 
 			.wsu-c-full-width--wrapper {
-
 				@include mq('mobile','min') {
-					@include space_nav_closed;
-					padding-left: space_content( $wsu-bt-nav-vertical-width-collapse, 1, $wsu-bt-spacing-content );
 					padding-right: space_content( $wsu-bt-nav-vertical-width-collapse, 1, $wsu-bt-spacing-content );
+					padding-left: space_content( $wsu-bt-nav-vertical-width-collapse, 1, $wsu-bt-spacing-content );
+
+					@include space_nav_closed;
 				}
 
 			}
@@ -193,9 +184,10 @@ body {
 		}
 
 		.wsu-c-full-width--wrapper {
-			@include space_nav_open;
-			padding-left: space_content( $wsu-bt-nav-vertical-width-full, 1, $wsu-bt-spacing-content );
 			padding-right: space_content( $wsu-bt-nav-vertical-width-full, 1, $wsu-bt-spacing-content );
+			padding-left: space_content( $wsu-bt-nav-vertical-width-full, 1, $wsu-bt-spacing-content );
+
+			@include space_nav_open;
 		}
 
 	}
