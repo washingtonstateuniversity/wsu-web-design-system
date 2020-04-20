@@ -25,7 +25,7 @@ module.exports = env => {
 			'components/dist/content-form/content-form': './components/src/content-form/index.js',
 			'components/dist/content-heading/content-heading': './components/src/content-heading/index.js',
 			'components/dist/content-hero/content-hero': './components/src/content-hero/index.js',
-			'components/dist/content-links/content-links': './components/src/content-links/index.js',
+			'components/dist/content-link/content-link': './components/src/content-link/index.js',
 			'components/dist/content-list/content-list': './components/src/content-list/index.js',
 			'components/dist/content-icons/content-icons': './components/src/content-icons/index.js',
 			'components/dist/content-column/content-column': './components/src/content-column/index.js',
