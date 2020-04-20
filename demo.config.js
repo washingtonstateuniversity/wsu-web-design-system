@@ -65,6 +65,13 @@ module.exports = env => {
 			}
 			),
 			new HtmlWebpackPlugin({
+				filename: 'component-content-link.html',
+				template: 'demo/src/components/content-link.html',
+				inject: false,
+				minify: false,
+			}
+			),
+			new HtmlWebpackPlugin({
 				filename: 'component-content-column.html',
 				template: 'demo/src/components/content-column.html',
 				inject: false,
