@@ -86,6 +86,7 @@
 	height: 100vh;
 
 	transition: transform timing(300, ease);
+	transition: background-color timing();
 	transition-delay: 50ms;
 	transform: translateX(0);
 	text-align: center;
@@ -96,6 +97,11 @@
 
 	@include mq('small', 'max') {
 		display: none;
+	}
+
+	&:hover {
+		border-right-color: color(grey, 10);
+		background-color: color(grey, 0);
 	}
 
 	&:hover,
@@ -311,6 +317,7 @@
 	right: $unit;
 
 	content: "\F137";
+	transition: color timing();
 	transform: translateY(-50%);
 	vertical-align: top;
 
@@ -326,6 +333,10 @@
 	background-color: color(gray, 0);
 }
 
+.wsu-s-nav-vertical__nav-item--has-children .wsu-s-nav-vertical__nav-link[aria-expanded="true"]:hover {
+	background-color: color(grey, 5);
+}
+
 .wsu-s-nav-vertical__nav-link {
 	display: block;
 
@@ -335,6 +346,7 @@
 	text-decoration: none;
 
 	color: color(gray, 75);
+	border-left: 5px solid transparent;
 	outline: none;
 
 	@include font-size(0.9rem, 600);
@@ -345,9 +357,13 @@
 
 	&:focus,
 	&:hover {
-		border-left: 3px solid color(gray, 30);
+		border-left: 5px solid color(gray, 30);
 		outline: none;
 		background-color: color(gray, 5);
+	}
+
+	&:hover::after {
+		color: color(gray, 80);
 	}
 }
 
@@ -355,7 +371,7 @@
 	padding-left: calc(#{$unit} - 5px);
 
 	border-left: 5px solid color(primary, light);
-	background-color: color(gray, 5);
+	background-color: color(gray, 10);
 
 	@extend .wsu-s-nav-vertical__nav-link;
 

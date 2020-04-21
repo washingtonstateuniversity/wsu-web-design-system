@@ -31,13 +31,15 @@
 		"webpack-dev-server": "^3.10.1"
 	},
 	"scripts": {
-		"start": "npm run start:components",
-		"start:components": "webpack-dev-server --env.NODE_ENV=development --watch --config webpack.config.js",
-		"build": "npm run clean && npm run build:bundle && npm run build:components",
-		"build:bundle": "webpack --env.NODE_ENV=production --config build.config.js",
-		"build:components": "webpack --env.NODE_ENV=production --config webpack.config.js",
-		"build:demo": "webpack --env.NODE_ENV=development --config build-demo.config.js",
-		"clean": "rimraf ./components/dist & rimraf ./build/dist"
+		"start": "npm run start:demo & npm run start:bundles & npm run start:components",
+		"start:bundles": "webpack --env.NODE_ENV=development --silent --quiet --watch --config bundles.config.js",
+		"start:components": "webpack --env.NODE_ENV=development --silent --quiet --watch --config components.config.js",
+		"start:demo": "webpack-dev-server --env.NODE_ENV=development --silent --quiet --watch --config demo.config.js",
+		"build": "npm run clean && npm run build:components && npm run build:bundles && npm run build:demo",
+		"build:bundles": "webpack --env.NODE_ENV=production --config bundles.config.js",
+		"build:components": "webpack --env.NODE_ENV=production --config components.config.js",
+		"build:demo": "webpack --env.NODE_ENV=production --config demo.config.js",
+		"clean": "rimraf ./components/dist & rimraf ./builds/dist & rimraf ./demo/dist"
 	},
 	"repository": {
 		"type": "git",
