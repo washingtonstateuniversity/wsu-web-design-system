@@ -13,6 +13,7 @@ module.exports = env => {
 		entry: {
 			'bundles/dist/wsu-design-system': './bundles/src/wsu-design-system.js',
 			'bundles/dist/wsu-design-system.content': './bundles/src/wsu-design-system.content.js',
+			'bundles/dist/wsu-design-system.wordpress.gutenberg': './bundles/src/wsu-design-system.wordpress.gutenberg.js',
 		},
 		output: {
 			filename: '[name].bundle.dist.js',
