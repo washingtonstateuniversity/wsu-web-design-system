@@ -1,8 +1,9 @@
+const path = require('path');
 const autoprefixer = require('autoprefixer');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
-const path = require('path');
+const MiniFilesToDeleteAfterCompilation = require('./webpack/mini-files-to-delete-after-compilation');
 
 module.exports = env => {
 
@@ -95,6 +96,9 @@ module.exports = env => {
 			new MiniCssExtractPlugin({
 				filename: '[name].bundle.dist.css'
 			}),
+			new MiniFilesToDeleteAfterCompilation({
+				filenames: ['bundles/dist/wsu-design-system.wordpress.gutenberg.bundle.dist.js']
+			})
 		]
 	}
 };
