@@ -1,6 +1,6 @@
 {
 	"name": "@wsu/web-design-system",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Web Design System for Washington State University.",
 	"private": true,
 	"main": "src/index.js",
