@@ -14,7 +14,10 @@ module.exports = env => {
 		entry: {
 			'bundles/dist/wsu-design-system': './bundles/src/wsu-design-system.js',
 			'bundles/dist/wsu-design-system.content': './bundles/src/wsu-design-system.content.js',
-			'bundles/dist/wsu-design-system.wordpress.gutenberg': './bundles/src/wsu-design-system.wordpress.gutenberg.js',
+			'bundles/dist/platforms/wsu-design-system.wordpress': './bundles/src/wsu-design-system.wordpress.js',
+			'bundles/dist/platforms/wsu-design-system.wordpress.gutenberg': './bundles/src/wsu-design-system.wordpress.gutenberg.js',
+			'bundles/dist/platforms/wsu-design-system.wordpress.gravity-forms': './bundles/src/wsu-design-system.wordpress.gravity-forms.js',
+			'bundles/dist/platforms/wsu-design-system.umbraco': './bundles/src/wsu-design-system.umbraco.js'
 		},
 		output: {
 			filename: '[name].bundle.dist.js',
@@ -97,7 +100,16 @@ module.exports = env => {
 				filename: '[name].bundle.dist.css'
 			}),
 			new MiniFilesToDeleteAfterCompilation({
-				filenames: ['bundles/dist/wsu-design-system.wordpress.gutenberg.bundle.dist.js']
+				filenames: [
+					'bundles/dist/platforms/wsu-design-system.wordpress.bundle.dist.js',
+					'bundles/dist/platforms/wsu-design-system.wordpress.bundle.dist.js.map',
+					'bundles/dist/platforms/wsu-design-system.wordpress.gutenberg.bundle.dist.js',
+					'bundles/dist/platforms/wsu-design-system.wordpress.gutenberg.bundle.dist.js.map',
+					'bundles/dist/platforms/wsu-design-system.wordpress.gravity-forms.bundle.dist.js',
+					'bundles/dist/platforms/wsu-design-system.wordpress.gravity-forms.bundle.dist.js.map',
+					'bundles/dist/platforms/wsu-design-system.umbraco.bundle.dist.js',
+					'bundles/dist/platforms/wsu-design-system.umbraco.bundle.dist.js.map'
+				]
 			})
 		]
 	}
