@@ -2,42 +2,8 @@ const autoprefixer = require('autoprefixer');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const glob = require('glob')
 const path = require('path');
-
-const globby = require('globby');
-
-let niciscool = 'testing';
-
-async function getPaths(pattern) {
-	let paths = await globby(pattern);
-
-	let entry_paths = {};
-
-	paths.forEach((path, i, arr) => {
-		// Format Dist Path
-		// Expected output: components/dist/containers/containers
-		let distPath = arr[i].replace('./', '').replace('src', 'dist').replace('/index.js', '');
-		const componentName = distPath.split("/").pop();
-		distPath = distPath + '/' + componentName;
-
-		// Push key/value pair into entry_paths object 
-		entry_paths[distPath] = path;
-	});
-
-	return Promise.resolve(entry_paths);
-};
-
-getPaths(['./components/src/*/index.js']).then((values) => {
-	niciscool = values;
-	niciscool = 'testing2';
-});
-
-
-setTimeout(function () { console.log(niciscool); }, 3000);
-
-
-
-
 
 module.exports = (env) => {
 
@@ -45,7 +11,17 @@ module.exports = (env) => {
 
 	return {
 		context: __dirname,
-		entry: 'paths',
+		entry: glob.sync('./components/src/*/index.js').reduce((acc, path) => {
+			// Format key in way that we want
+			let distPath = path.replace('./', '').replace('src', 'dist').replace('/index.js', '');
+			const componentName = distPath.split("/").pop();
+			distPath = distPath + '/' + componentName;
+
+			// Push key/value pair into entry_paths object 
+			acc[distPath] = path;
+
+			return acc
+		}, {}),
 		output: {
 			path: path.resolve(__dirname),
 			filename: '[name].js'
