@@ -1,4 +1,4 @@
-import wsu_wds from '../../../../wsu-build-tools/js/wsu-bt-wds';
+import wsu_wds from '@wsu/build-tools/js/wsu-bt-wds';
 
 /**
  *

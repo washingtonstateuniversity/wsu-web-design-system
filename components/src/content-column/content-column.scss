@@ -3,10 +3,8 @@
 $grid-columns: 12;
 
 @mixin columns-props {
-	padding-top: $wsu-bt-spacing-small;
-	padding-right: $wsu-bt-spacing-medium;
-	padding-bottom: $wsu-bt-spacing-medium;
-	padding-left: $wsu-bt-spacing-medium;
+	padding-right: $wsu-bt-spacing-content;
+	padding-left: $wsu-bt-spacing-content;
 	box-sizing: border-box;
 }
 
@@ -51,6 +49,13 @@ $grid-columns: 12;
 		max-width: auto;
 
 		@extend .wsu-c-column__wrapper;
+	}
+
+	&[class*="wsu-u-background-"] {
+		margin-top: space('medium');
+		margin-bottom: space('medium');
+		padding-top: space('small');
+		padding-bottom: space('small');
 	}
 
 }
@@ -100,9 +105,10 @@ $grid-columns: 12;
 
 			@include mq('xsmall', 'max' ) {
 				width: 100%;
+
 			}
 		}
-	
+
 	}
 
 	&--sidebar-right {
@@ -247,8 +253,6 @@ $grid-columns: 12;
 		@include mq('xlarge', 'max' ) {
 			order: -1;
 		}
-	}
-
-	
+	}	
 
 }

@@ -1,0 +1,37 @@
+@import '~@wsu/build-tools/scss/all-the-things.scss';
+
+.wsu-c-article-header {
+	margin-bottom: space( 'component' );
+
+	&__meta {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+
+		&__item {
+			display: inline-block;
+			font-size: $wsu-bt-font-xsmall;
+			padding-right: 1rem;
+			vertical-align: bottom;
+
+			&__date:before {
+				content: "\F14E";
+				font-family: wsu-icons;
+				display: inline-block;
+				padding-right: 5px;
+				font-size: $wsu-bt-font-small;
+				font-weight: 400;
+			}
+
+			&__author:before {
+				content: "\F13C";
+				font-family: wsu-icons;
+				display: inline-block;
+				padding-right: 5px;
+				font-size: $wsu-bt-font-small;
+				font-weight: 400;
+			}
+		}
+	}
+
+}

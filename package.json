@@ -1,6 +1,6 @@
 {
 	"name": "@wsu/web-design-system",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Web Design System for Washington State University.",
 	"private": true,
 	"main": "src/index.js",
@@ -14,6 +14,8 @@
 		"css-loader": "^3.4.2",
 		"fibers": "^3.1.0",
 		"file-loader": "^4.3.0",
+		"html-loader": "^1.1.0",
+		"html-webpack-plugin": "^4.0.4",
 		"mini-css-extract-plugin": "^0.8.2",
 		"mitt": "^1.2.0",
 		"modularscale-sass": "^3.0.8",
@@ -29,12 +31,15 @@
 		"webpack-dev-server": "^3.10.1"
 	},
 	"scripts": {
-		"start": "npm run start:components",
-		"start:components": "webpack-dev-server --env.NODE_ENV=development --watch --config webpack.config.js",
-		"build": "npm run clean && npm run build:bundle && npm run build:components",
-		"build:bundle": "webpack --env.NODE_ENV=production --config build.config.js",
-		"build:components": "webpack --env.NODE_ENV=production --config webpack.config.js",
-		"clean": "rimraf ./components/dist & rimraf ./build/dist"
+		"start": "npm run start:demo & npm run start:bundles & npm run start:components",
+		"start:bundles": "webpack --env.NODE_ENV=development --silent --watch --config bundles.config.js",
+		"start:components": "webpack --env.NODE_ENV=development --silent --watch --config components.config.js",
+		"start:demo": "webpack-dev-server --env.NODE_ENV=development --silent --watch --config demo.config.js",
+		"build": "npm run clean && npm run build:components && npm run build:bundles && npm run build:demo",
+		"build:bundles": "webpack --env.NODE_ENV=production --config bundles.config.js",
+		"build:components": "webpack --env.NODE_ENV=production --config components.config.js",
+		"build:demo": "webpack --env.NODE_ENV=production --config demo.config.js",
+		"clean": "rimraf ./components/dist & rimraf ./builds/dist & rimraf ./demo/dist"
 	},
 	"repository": {
 		"type": "git",

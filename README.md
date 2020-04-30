@@ -25,4 +25,5 @@
 ## Usage
 The current development branch of the design system is 1.x.
 
-- [Bundle CDN](https://cdn-web-wsu.s3-us-west-2.amazonaws.com/designsystem/1.x/build/dist/wsu-design-system.bundle.dist.css)
+- [CSS Bundle CDN](https://cdn-web-wsu.s3-us-west-2.amazonaws.com/designsystem/1.x/build/dist/wsu-design-system.bundle.dist.css)
+- [JS Bundle CDN](https://cdn-web-wsu.s3-us-west-2.amazonaws.com/designsystem/1.x/build/dist/wsu-design-system.bundle.dist.js)
