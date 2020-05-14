@@ -95,7 +95,7 @@
 
 	@include font-size(5rem, 800, 1);
 	@include mq('small') {
-		@include font-size(4.5rem);
+		@include font-size(4.5rem, 800, 1);
 	}
 }
 
