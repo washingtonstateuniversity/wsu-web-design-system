@@ -71,7 +71,7 @@
 	align-items: flex-start;
 	flex-flow: column nowrap;
 
-	max-width: 600px;
+	max-width: 800px;
 	padding: 200px space('content') $unit;
 
 	@include mq('small') {
