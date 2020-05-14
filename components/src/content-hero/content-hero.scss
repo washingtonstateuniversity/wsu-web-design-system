@@ -93,9 +93,9 @@
 	color: color(white, base);
 	text-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 
-	@include font-size(5rem, 900, 1);
+	@include font-size(5rem, 800, 1);
 	@include mq('small') {
-		@include font-size(6rem, 900, 1);
+		@include font-size(4.5rem);
 	}
 }
 
