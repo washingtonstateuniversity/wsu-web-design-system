@@ -21,6 +21,10 @@
 	&:focus {
 		text-decoration: none;
 
+		border-bottom: 2px solid #ca1237;
 		outline: 1px solid color(primary, base);
+		outline-width: 3px;
+		outline-style: solid;
+		outline-color: #797979;
 	}
 }
