@@ -1,4 +1,4 @@
-@import '~@wsu/build-tools/scss/all-the-things.scss';
+@import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
 
 .wsu-c-content {
 
@@ -8,12 +8,15 @@
 	h4,
 	h5,
 	h6 {
-		padding-top: space( 'component' );
+		font-family: $wsu-bt-primary-font-family;
+
 		margin-top: 0;
 		margin-bottom: 0;
+		padding-top: space( 'component' );
+
 		transition: font-size timing(cougar, standard);
+
 		color: color(gray, 75);
-		font-family: $wsu-bt-primary-font-family;
 
 		& + p,
 		& + .wsu-c-column__wrapper,
@@ -25,14 +28,12 @@
 		}
 
 		& > a {
-			color: inherit;
 			transition: 300ms ease all;
 			text-decoration: none;
 
+			color: inherit; border-bottom-width: 0;
 			border-bottom-style: solid;
 			border-bottom-color: color(primary, light); 
-			border-bottom-width: 0;
-
 			// Handles icon
 			&::after {
 				font-family: "wsu-icons";
@@ -54,11 +55,9 @@
 			// Handles hover, focus state
 			&:hover,
 			&:focus {
-
 				color: inherit;
-				outline: none;
-
 				border-bottom-width: 3px;
+				outline: none;
 
 			}
 
@@ -72,11 +71,13 @@
 
 	h1 {
 		font-size: 3rem;
-		line-height: 1.25em;
 		font-weight: $wsu-bt-font-extra-bold;
+		line-height: 1.25em;
+
+		position: relative;
+
 		margin-bottom: space( 'medium' );
 		padding-bottom: space( 'small' );
-		position: relative;
 
 		@include mq('medium','max') {
 			font-size: 2.5rem;
@@ -86,13 +87,17 @@
 		}
 
 		&::before {
-			content: "";
-			display: block;
 			position: absolute;
 			bottom: -4px;
 			left: 0;
+
+			display: block;
+
 			width: 124px;
 			height: 3px;
+
+			content: "";
+
 			background-color: color('primary','light');
 		}
 
@@ -100,8 +105,9 @@
 
 	h2 {
 		font-size: 2.25rem;
-		line-height: 1.3em;
 		font-weight: $wsu-bt-font-bold;
+		line-height: 1.3em;
+
 		margin-bottom: space( 'small' );
 
 		@include mq('medium','max') {
@@ -111,8 +117,9 @@
 
 	h3 {
 		font-size: 2rem;
-		line-height: 1.35em;
 		font-weight: $wsu-bt-font-semi-bold;
+		line-height: 1.35em;
+
 		margin-bottom: space( 'xsmall' );
 
 		@include mq('medium','max') {
@@ -122,8 +129,9 @@
 
 	h4 {
 		font-size: 1.5rem;
-		line-height: 1.4em;
 		font-weight: $wsu-bt-font-semi-bold;
+		line-height: 1.4em;
+
 		margin-bottom: space( 'tight' );
 
 		@include mq('medium','max') {
@@ -133,8 +141,9 @@
 
 	h5 {
 		font-size: 1.25rem;
-		line-height: 1.5em;
 		font-weight: $wsu-bt-font-medium;
+		line-height: 1.5em;
+
 		margin-bottom: space( 'tight' );
 
 		@include mq('medium','max') {
@@ -144,8 +153,9 @@
 
 	h6 {
 		font-size: 1rem;
-		line-height: 1.5em;
 		font-weight: $wsu-bt-font-medium;
+		line-height: 1.5em;
+
 		margin-bottom: space( 'tight' );
 
 	}
