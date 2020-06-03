@@ -29,6 +29,6 @@ The current development branch of the design system is 1.x.
 - [JS Bundle CDN](https://cdn-web-wsu.s3-us-west-2.amazonaws.com/designsystem/1.x/build/dist/wsu-design-system.bundle.dist.js)
 
 ## Branches
-- Master, current working version of the Design System
-- 1.x, current development version of the Design System
-- gh-pages, public site for staging for 1.x branch
+- `Master` current working version of the Design System
+- `1.x` current development version of the Design System
+- `gh-pages` public site for staging for 1.x branch
