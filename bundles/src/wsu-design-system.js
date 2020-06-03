@@ -28,6 +28,6 @@ import '../../components/src/content-link/build';
 import '../../components/src/content-list/build';
 import '../../components/src/content-column/build';
 import '../../components/src/content-paragraph/build';
-import '../../components/src/content-article-copy/build';
+import '../../components/src/content-slider/build';
 import '../../components/src/content-article-header/build';
 import '../../components/src/content-article-footer/build';
