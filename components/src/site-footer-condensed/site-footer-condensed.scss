@@ -54,7 +54,7 @@
 
 		color: color(gray, 30);
 
-		@include font-size(24px)
+		@include font-size(24px);
 
 		&:hover {
 			color: color(gray, 50);

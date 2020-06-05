@@ -1,7 +1,15 @@
 const path = require('path');
 
 module.exports = {
-  stories: ['../components/src/**/**/*.stories.js'],
+  stories: ['../components/src/**/**/*.stories.(js|mdx)'],
+  addons: [
+    '@storybook/addon-actions', 
+    '@storybook/addon-links', 
+    '@storybook/addon-viewport/register', 
+    '@storybook/addon-a11y/register', 
+    '@storybook/addon-docs',
+    '@storybook/addon-knobs/register'
+  ],
   webpackFinal: async (config, { configType }) => {
     // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
     // You can change the configuration based on that.

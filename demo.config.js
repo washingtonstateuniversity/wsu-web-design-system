@@ -113,13 +113,6 @@ module.exports = env => {
 				minify: false,
 			}
 			),
-			new HtmlWebpackPlugin({
-				filename: 'content-slider.html',
-				template: 'demo/src/components/content-slider.html',
-				inject: false,
-				minify: false,
-			}
-			),
 		]
 	}
 }

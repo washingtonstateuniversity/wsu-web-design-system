@@ -1,0 +1,24 @@
+.wsu-c-slider {
+	position: relative;
+}
+
+.wsu-c-slider-slide_background {
+	width: 100%;
+	max-height: 400px;
+	object-fit: cover;
+	object-position: 50% 50%;
+}
+
+.swiper-container {
+	height: 300px;
+}
+
+button {
+	background-color: red;
+	color: crimson;
+}
+
+h3 {
+	position: absolute;
+	color: white;
+}
