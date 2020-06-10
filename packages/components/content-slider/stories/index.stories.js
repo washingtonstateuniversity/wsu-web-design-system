@@ -12,25 +12,28 @@ export default {
 	decorators: [
 		withA11y,
 		withKnobs
-	],
-	component: ContentSlider,
-	parameters: {
-		componentSubtitle: 'Handy status label',
-		description: 'This is a description.'
-	},
+	]
 };
 
-const options = {
-   range: true,
-   min: 1,
-   max: 12,
-   step: 1,
+const slidesPerViewOptions = {
+	range: true,
+	min: 1,
+	max: 12,
+	step: 1,
 };
 
-export const DefaultSlider = () => <ContentSlider slidesPerView={number('Slides Per View', 1, options)} />;
+const spaceBetweenOptions = {
+	range: true,
+	min: 0,
+	max: 100,
+	step: 20,
+};
 
-export const DefaultSlider2 = () => <ContentSlider slidesPerView={number('Slides Per View', 2, options)} />;
+const autoplayDelayOptions = {
+	range: true,
+	min: 0,
+	max: 9000,
+	step: 500,
+};
 
-export const DefaultSlider3 = () => <ContentSlider slidesPerView={number('Slides Per View', 3, options)} />;
-
-export const DefaultSlider4 = () => <ContentSlider slidesPerView={number('Slides Per View', 4, options)} />;
+export const DefaultSlider = () => <ContentSlider slidesPerView={number("slidesPerView", 4, slidesPerViewOptions)} spaceBetween={number("spaceBetween", 60, spaceBetweenOptions)} autoplayEnabled={boolean("autoplayEnabled", true)} autoplayDelay={number("autoplayDelay", 3000, autoplayDelayOptions)} />;
