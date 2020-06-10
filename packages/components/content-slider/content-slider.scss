@@ -1,0 +1,170 @@
+@import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
+@import '~@wsuwebteam/wsu-icons/dist/wsu-icons.bundle.css';
+@import '../../../components/src/content-link/partials/default';
+
+:root {
+	--swiper-theme-color: #CA1237 !important;
+}
+
+.wsu-c-slider {
+	position: relative;
+	margin-left: 20px;
+	margin-right: 20px;
+
+	@include mq('desktop') { 
+		margin-left: 100px;
+		margin-right: 100px;
+	}
+
+	& .swiper-container {
+		padding: $unit-3xl;
+	}
+	
+	& .swiper-slide:not(.swiper-slide-visible) {
+		opacity: 0;
+	}
+
+	& .wsu-c-slider_slide-container {
+		border-radius: $wsu-bt-base-border-radius-size;
+		background: color(white, base);
+		transition: 300ms ease all;
+		overflow: hidden;
+		display: block;
+		text-decoration: none;
+		transform: translateY(0px);
+
+		@include shadow();
+
+		&:hover {
+			@include shadow('hover');
+			transform: translateY(-5px);
+
+			& .wsu-c-slider_footer-wrapper {
+				background: color(gray, 0);
+			}
+		}
+	}
+
+	& .wsu-c-slider_image-container {
+		position: relative;
+		overflow: hidden;
+	}
+
+	& .wsu-c-slider_image {
+		width: 100%;
+		max-height: 135px;
+		min-height: 135px;
+		object-fit: cover;
+		background: color(gray, 10);
+		display: block;
+		position: relative;
+		
+		overflow: hidden;
+
+		&:not(.swiper-lazy-loaded) {
+			filter: blur(10px);
+			transform: scale(1.2);
+		}
+
+		&::before {
+			content: "\F134";
+			font-family: "wsu-icons";
+			color: color(gray, 30);
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			@include font-size(12px);
+		}
+	}
+
+	& .wsu-c-slider_title {
+		@include font-size(1.2rem, 600);
+		margin: $unit $unit $unit-2xs;
+		color: color(gray, 80);
+		text-decoration: none;
+	}
+
+	& .wsu-c-slider_footer-wrapper {
+		@include font-size(14px);
+		padding: $unit-s $unit-3xl;
+		transition: timing() background-color;
+		position: relative;
+		color: color(gray,  60);
+
+		&::after {
+			content: "\F126";
+			font-family: "wsu-icons";
+			position: absolute;
+			top: 50%;
+			right: $unit;
+			transform: translateY(-50%);
+			color: color(gray, 60);
+		}
+	}
+
+	& .wsu-c-slider_date {
+		position: relative;
+
+		&::before {
+			content: "\F10E";
+			font-family: "wsu-icons";
+			font-size: .8em;
+			margin-right: $unit-2xs;
+			position: absolute;
+			left: -$unit;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+
+	// Swiper Controls
+	& .swiper-button-prev,
+	& .swiper-button-next {
+
+		&::after {
+			font-family: "wsu-icons";
+		}
+	}
+
+	& .swiper-button-prev {
+		left: -10px;
+		
+		@include mq('desktop') {
+			left: -50px;
+		}
+		
+		&::after {
+			content: "\F105";
+		}
+	}
+
+	& .swiper-button-next {
+		right: -10px;
+		
+		@include mq('desktop') {
+			right: -50px;
+		}
+
+		&::after {
+			content: "\F107";
+		}
+	}
+
+	& .swiper-pagination {
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	& .swiper-pagination-bullet {
+		margin: 0 2px;
+	}
+
+	& .swiper-pagination-progressbar {
+		height: 10px;
+		width: 100%;
+		border-radius: $wsu-bt-base-border-radius-size;
+		overflow: hidden;
+		background-color: color(gray, 10);
+	}
+}
