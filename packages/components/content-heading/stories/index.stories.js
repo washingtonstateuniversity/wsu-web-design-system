@@ -61,7 +61,7 @@ const getHeadingLength = ( headingLength ) => {
 
 }
 
-export const DefaultHeading = () => {
+export const Heading = () => {
 
 	let applyContentClass = boolean('Apply wsu-c-content class', false, contentGroupID );
 
@@ -82,7 +82,7 @@ export const DefaultHeading = () => {
 	)
 }
 
-export const AllHeadings = () => {
+export const DefaultHeadings = () => {
 
 	let headingLength = select( 'Heading Length', headingLengthOptions,'short', contentGroupID );
 	let style         = select( 'style', headingStyleOptions, 'default', optionsGroupID );
@@ -96,6 +96,23 @@ export const AllHeadings = () => {
 			<ContentHeading tag="h4" style={style} width={width} >Heading Level 4 {getHeadingLength( headingLength ) }</ContentHeading>
 			<ContentHeading tag="h5" style={style} width={width} >Heading Level 5 {getHeadingLength( headingLength ) }</ContentHeading>
 			<ContentHeading tag="h6" style={style} width={width} >Heading Level 6 {getHeadingLength( headingLength ) }</ContentHeading>
+		</ContentContainer>
+	)
+};
+
+export const CalloutHeadings = () => {
+
+	let headingLength = select( 'Heading Length', headingLengthOptions,'short', contentGroupID );
+	let width         = select( 'width', headingWidthOptions, 'full', optionsGroupID );
+
+	return(
+		<ContentContainer className={'wsu-c-content'}>
+			<ContentHeading tag="h1" style={'callout'} width={width} >Heading Level 1 {getHeadingLength( headingLength ) }</ContentHeading>
+			<ContentHeading tag="h2" style={'callout'} width={width} >Heading Level 2 {getHeadingLength( headingLength ) }</ContentHeading>
+			<ContentHeading tag="h3" style={'callout'} width={width} >Heading Level 3 {getHeadingLength( headingLength ) }</ContentHeading>
+			<ContentHeading tag="h4" style={'callout'} width={width} >Heading Level 4 {getHeadingLength( headingLength ) }</ContentHeading>
+			<ContentHeading tag="h5" style={'callout'} width={width} >Heading Level 5 {getHeadingLength( headingLength ) }</ContentHeading>
+			<ContentHeading tag="h6" style={'callout'} width={width} >Heading Level 6 {getHeadingLength( headingLength ) }</ContentHeading>
 		</ContentContainer>
 	)
 };
