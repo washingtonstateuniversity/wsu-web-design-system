@@ -15,6 +15,9 @@ export default {
 	]
 };
 
+const contentGroupID = 'Preview';
+const optionsGroupID = 'Options';
+
 const headingTagOptions = {
 	h1:'h1',
 	h2:'h2',
@@ -24,40 +27,88 @@ const headingTagOptions = {
 	h6:'h6',
 };
 
+const headingLengthOptions = {
+	short:'short', 
+	medium:'medium',
+	long:'long',
+	extraLong:'extra long',
+}
+
+const headingStyleOptions = {
+	default:'default', 
+	callout:'callout',
+}
+
+const headingWidthOptions = ['default','full','wide','medium','narrow','xnarrow'];
+
+const getHeadingLength = ( headingLength ) => {
+
+	let heading = '';
+
+	switch ( headingLength ) {
+		case 'extra long':
+			heading = 'Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Donec ut Lacinia turpis. Nam commodo elit eget varius ultricies. Nunc bibendum in libero nec egestas';
+			break;
+		case 'long':
+			heading = 'Lorem Ipsum Dolor sit Amet, Consectetur Adipiscing Elit.';
+			break;
+		case 'medium':
+			heading ='Lorem Ipsum Dolor sit Amet';
+			break;
+	}
+
+	return heading;
+
+}
+
 export const DefaultHeading = () => {
 
-	let classes = ( boolean('Apply wsu-c-content class', false ) ) ? ['wsu-c-content'] : '';
+	let applyContentClass = boolean('Apply wsu-c-content class', false, contentGroupID );
+
+	let classes = ( boolean('Apply wsu-c-content class', false, contentGroupID ) ) ? ['wsu-c-content'] : '';
 
 	return(
 		<ContentContainer className={classes}>
 			<ContentHeading 
-				tag={ select('tag', headingTagOptions, 'h1' ) }
-				name={ text( 'name','' ) }
-				link={ text( 'link','' ) }
+				tag={ select('tag', headingTagOptions, 'h1', optionsGroupID ) }
+				name={ text( 'name','', optionsGroupID ) }
+				link={ text( 'link','', optionsGroupID ) }
+				style={ select('style', headingStyleOptions, 'default', optionsGroupID )  }
+				width={ select('width', headingWidthOptions, 'full', optionsGroupID )  }
 				>
-				Heading Text
+				Heading Text {getHeadingLength( select('Heading Length', headingLengthOptions,'short', contentGroupID ) )}
 			</ContentHeading>
 		</ContentContainer>
 	)
 }
 
 export const AllHeadings = () => {
+
+	let headingLength = select( 'Heading Length', headingLengthOptions,'short', contentGroupID );
+	let style         = select( 'style', headingStyleOptions, 'default', optionsGroupID );
+	let width         = select( 'width', headingWidthOptions, 'full', optionsGroupID );
+
 	return(
 		<ContentContainer className={'wsu-c-content'}>
-			<ContentHeading tag="h1" >Heading Level 1</ContentHeading>
-			<ContentHeading tag="h2" >Heading Level 2</ContentHeading>
-			<ContentHeading tag="h3" >Heading Level 3</ContentHeading>
-			<ContentHeading tag="h4" >Heading Level 4</ContentHeading>
-			<ContentHeading tag="h5" >Heading Level 5</ContentHeading>
-			<ContentHeading tag="h6" >Heading Level 6</ContentHeading>
+			<ContentHeading tag="h1" style={style} width={width} >Heading Level 1 {getHeadingLength( headingLength ) }</ContentHeading>
+			<ContentHeading tag="h2" style={style} width={width} >Heading Level 2 {getHeadingLength( headingLength ) }</ContentHeading>
+			<ContentHeading tag="h3" style={style} width={width} >Heading Level 3 {getHeadingLength( headingLength ) }</ContentHeading>
+			<ContentHeading tag="h4" style={style} width={width} >Heading Level 4 {getHeadingLength( headingLength ) }</ContentHeading>
+			<ContentHeading tag="h5" style={style} width={width} >Heading Level 5 {getHeadingLength( headingLength ) }</ContentHeading>
+			<ContentHeading tag="h6" style={style} width={width} >Heading Level 6 {getHeadingLength( headingLength ) }</ContentHeading>
 		</ContentContainer>
 	)
 };
 
 export const WithParagraphs = () => {
+
+	let headingLength = select('Heading Length', headingLengthOptions,'short', contentGroupID );
+	let style         = select( 'style', headingStyleOptions, 'default', optionsGroupID );
+	let width         = select( 'width', headingWidthOptions, 'full', optionsGroupID );
+
 	return(
 		<ContentContainer className={'wsu-c-content'}>
-			<ContentHeading tag="h1" >Heading Level 1</ContentHeading>
+			<ContentHeading tag="h1" width={width} style={style}>Heading Level 1 {getHeadingLength( headingLength ) }</ContentHeading>
 			<P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
 				varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
 				platea dictumst. Suspendisse blandit, leo ac lacinia viverra, magna massa ornare nulla, eu rutrum 
@@ -66,7 +117,7 @@ export const WithParagraphs = () => {
 				suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
 				arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
 				eleifend et suscipit vel, faucibus vitae lorem.</P>
-			<ContentHeading tag="h2" >Heading Level 2</ContentHeading>
+			<ContentHeading tag="h2" width={width} style={style}>Heading Level 2 {getHeadingLength( headingLength ) }</ContentHeading>
 			<P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
 				varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
 				platea dictumst. Suspendisse blandit, leo ac lacinia viverra, magna massa ornare nulla, eu rutrum 
@@ -75,7 +126,7 @@ export const WithParagraphs = () => {
 				suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
 				arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
 				eleifend et suscipit vel, faucibus vitae lorem.</P>
-			<ContentHeading tag="h3" >Heading Level 3</ContentHeading>
+			<ContentHeading tag="h3" width={width} style={style} >Heading Level 3 {getHeadingLength( headingLength ) }</ContentHeading>
 			<P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
 				varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
 				platea dictumst. Suspendisse blandit, leo ac lacinia viverra, magna massa ornare nulla, eu rutrum 
@@ -84,7 +135,7 @@ export const WithParagraphs = () => {
 				suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
 				arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
 				eleifend et suscipit vel, faucibus vitae lorem.</P>
-			<ContentHeading tag="h4" >Heading Level 4</ContentHeading>
+			<ContentHeading tag="h4" width={width} style={style}>Heading Level 4 {getHeadingLength( headingLength ) }</ContentHeading>
 			<P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
 				varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
 				platea dictumst. Suspendisse blandit, leo ac lacinia viverra, magna massa ornare nulla, eu rutrum 
@@ -93,7 +144,7 @@ export const WithParagraphs = () => {
 				suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
 				arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
 				eleifend et suscipit vel, faucibus vitae lorem.</P>
-			<ContentHeading tag="h5" >Heading Level 5</ContentHeading>
+			<ContentHeading tag="h5" width={width} style={style} >Heading Level 5 {getHeadingLength( headingLength ) }</ContentHeading>
 			<P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
 				varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
 				platea dictumst. Suspendisse blandit, leo ac lacinia viverra, magna massa ornare nulla, eu rutrum 
@@ -102,7 +153,7 @@ export const WithParagraphs = () => {
 				suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
 				arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
 				eleifend et suscipit vel, faucibus vitae lorem.</P>
-			<ContentHeading tag="h6" >Heading Level 6</ContentHeading>
+			<ContentHeading tag="h6" width={width} style={style} >Heading Level 6 {getHeadingLength( headingLength ) }</ContentHeading>
 			<P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
 				varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
 				platea dictumst. Suspendisse blandit, leo ac lacinia viverra, magna massa ornare nulla, eu rutrum 

@@ -4,13 +4,32 @@ import React, { Component } from 'react';
 import './content-heading.scss';
 
 class ContentHeading extends Component {
+
+
+	getClasses() {
+
+		let classes = ['wsu-c-heading'];
+
+		if ( this.props.style && 'default' !== this.props.style ) {
+			classes.push( 'wsu-c-heading--' + this.props.style );
+		}
+
+		if ( this.props.width && 'full' != this.props.width ) {
+			classes.push( 'wsu-c-heading--' + this.props.width );
+		}
+
+		return classes;
+
+	}
 	
 	render() {
 
-		let Tag = this.props.tag;
+		let Tag     = this.props.tag;
+		
+		let classes = this.getClasses();
 
 		return (
-			<Tag name={this.props.name} className="wsu-c-heading">
+			<Tag name={this.props.name} className={classes.join(' ')}>
 				{(() => {
 					if ( this.props.link ) {
 						return (
@@ -30,6 +49,8 @@ class ContentHeading extends Component {
 		tag: 'h1',
 		name: false,
 		link: false,
+		style: 'default',
+		width: 'full',
 	}
 }
 

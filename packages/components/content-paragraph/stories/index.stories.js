@@ -14,12 +14,18 @@ export default {
 	]
 };
 
+const widthOptions = ['default','full','wide','medium','narrow','xnarrow'];
+
+const contentGroupID = 'Preview';
+const optionsGroupID = 'Options';
 
 export const DefaultParagraph = () => {
 
+	let widthOption = select('width', widthOptions, 'full', optionsGroupID );
+
 	return(
 		<ContentContainer className={'wsu-c-content'}>
-			<P>
+			<P width={ widthOption  } >
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
 				varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
 				platea dictumst. Suspendisse blandit, leo ac lacinia viverra, magna massa ornare nulla, eu rutrum 
@@ -29,7 +35,7 @@ export const DefaultParagraph = () => {
 				arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
 				eleifend et suscipit vel, faucibus vitae lorem.
 			</P>
-			<P>
+			<P width={ widthOption  } >
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
 				varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
 				platea dictumst. Suspendisse blandit, leo ac lacinia viverra, magna massa ornare nulla, eu rutrum 
@@ -39,7 +45,7 @@ export const DefaultParagraph = () => {
 				arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
 				eleifend et suscipit vel, faucibus vitae lorem.
 			</P>
-			<P>
+			<P width={ widthOption  } >
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
 				varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
 				platea dictumst. Suspendisse blandit, leo ac lacinia viverra, magna massa ornare nulla, eu rutrum 
