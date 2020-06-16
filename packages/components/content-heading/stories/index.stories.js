@@ -39,7 +39,7 @@ const headingStyleOptions = {
 	callout:'callout',
 }
 
-const headingWidthOptions = ['full','wide','medium','narrow'];
+const headingWidthOptions = ['default','full','wide','medium','narrow','xnarrow'];
 
 const getHeadingLength = ( headingLength ) => {
 
