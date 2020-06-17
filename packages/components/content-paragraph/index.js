@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './content-paragraph.scss';
+import './component.scss';
 
 
 const P = ( props ) => {
