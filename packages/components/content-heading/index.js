@@ -1,7 +1,7 @@
 // External Deps
 import React, { Component } from 'react';
 
-import './content-heading.scss';
+import './component.scss';
 
 class ContentHeading extends Component {
 
