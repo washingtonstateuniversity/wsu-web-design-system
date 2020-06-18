@@ -1,0 +1,77 @@
+@import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
+@import '~@wsuwebteam/wsu-icons/dist/wsu-icons.bundle.css';
+
+.wsu-c-accordion {
+	margin-top: 1.5rem;
+	border-bottom: 1px solid #E5E5E5;
+
+	& + .wsu-c-accordion {
+		margin-top: 0;
+	}
+
+	&:last-child {
+		margin-bottom: 2.1em;
+	}
+
+	.wsu-c-accordion__title,
+	h1.wsu-c-accordion__title,
+	h2.wsu-c-accordion__title, 
+	h3.wsu-c-accordion__title, 
+	h4.wsu-c-accordion__title, 
+	h5.wsu-c-accordion__title, 
+	h6.wsu-c-accordion__title {
+		position: relative;
+		text-transform: inherit;
+		font-weight: 100;
+		font-size: 1.6em;
+		margin-top: 0;
+		margin-bottom: 0;
+		padding-top: 0.7em;
+    	padding-bottom: 0.7em;
+		cursor: pointer;
+		transition: 250ms ease-in-out all;
+		line-height: 1.3em;
+		padding-right: 3em;
+		padding-left:0.3em;
+
+		&:focus,
+		&:hover {
+			background-color: whitesmoke;
+		}
+
+		&:focus {
+			border: 1px solid color(gray,80);
+			border-top: 1px solid color(gray,80);
+			border-bottom: 1px solid color(gray,80);
+		} 
+
+		&::after {
+			content: "\F137";
+			font-family: "wsu-icons";
+			position: absolute;
+			top: 50%;
+			right: 2em;
+			transform: translatey(-50%);
+			font-size: 0.6em;
+		}
+	}
+
+	.wsu-c-accordion__content {
+		height: 0;
+		overflow: hidden;
+	}
+
+	&--active {
+
+		.wsu-c-accordion__content {
+			height: auto;
+			overflow: hidden;
+			padding-bottom: 2rem;
+		}
+
+		.wsu-c-accordion__title::after {
+			content: "\F12C" !important;
+		}
+
+	}
+}
