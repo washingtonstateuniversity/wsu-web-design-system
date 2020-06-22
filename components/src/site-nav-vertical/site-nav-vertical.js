@@ -1,5 +1,5 @@
-import wsu_bt_vertical_nav from '@wsu/build-tools/js/vertical-nav/wsu-bt-vertical-nav';
-import wsu_bt_wds from '@wsu/build-tools/js/wsu-bt-wds';
+import wsu_bt_vertical_nav from '@wsuwebteam/build-tools/js/vertical-nav/wsu-bt-vertical-nav';
+import wsu_bt_wds from '@wsuwebteam/build-tools/js/wsu-bt-wds';
 
 const nav_vert_wrapper = document.querySelector('.wsu-s-nav-vertical__wrapper');
 

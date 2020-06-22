@@ -1,4 +1,4 @@
-@import '~@wsu/build-tools/scss/all-the-things.scss';
+@import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
 
 /* Start Base Styles
 ======================= */
@@ -152,6 +152,7 @@
 
 	.wsu-s-footer__coug-watermark {
 		position: absolute;
+		z-index: z('decorative');
 		right: 60px;
 		bottom: 55px;
 

@@ -1,5 +1,5 @@
-import wsu_wds from '@wsu/build-tools/js/wsu-bt-wds';
-import priority_nav from '@wsu/build-tools/js/wsu-bt-priority-nav';
+import wsu_wds from '@wsuwebteam/build-tools/js/wsu-bt-wds';
+import priority_nav from '@wsuwebteam/build-tools/js/wsu-bt-priority-nav';
 
 const nav_horz_wrapper = document.querySelector('.wsu-s-nav-horizontal__wrapper');
 
