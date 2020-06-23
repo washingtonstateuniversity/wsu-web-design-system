@@ -22,19 +22,19 @@ $column-spacing: (
 .wsu-u {
 	@each $space, $value in $column-spacing {
 
-		&-margin-before-#{$space} {
+		&-margin-before--#{$space} {
 		margin-top: $value !important;
 		}
 
-		&-margin-after-#{$space} {
+		&-margin-after--#{$space} {
 			margin-bottom: $value !important;
 		}
 
-		&-padding-after-#{$space} {
+		&-padding-after--#{$space} {
 			padding-bottom: $value !important;
 		}
 
-		&-padding-before-#{$space} {
+		&-padding-before--#{$space} {
 			padding-top: $value !important;
 		}
 	}
