@@ -65,19 +65,19 @@ class ContentColumn extends Component {
 		}
 
 		if ( this.props.marginBefore && 'default' !== this.props.marginBefore ) {
-			classes.push( 'wsu-u-margin-before-' + this.props.marginBefore );
+			classes.push( 'wsu-u-margin-before--' + this.props.marginBefore );
 		}
 
 		if ( this.props.marginAfter && 'default' !== this.props.marginAfter ) {
-			classes.push( 'wsu-u-margin-after-' + this.props.marginAfter );
+			classes.push( 'wsu-u-margin-after--' + this.props.marginAfter );
 		}
 
 		if ( this.props.paddingAfter && 'default' !== this.props.paddingAfter ) {
-			classes.push( 'wsu-u-padding-after-' + this.props.paddingAfter );
+			classes.push( 'wsu-u-padding-after--' + this.props.paddingAfter );
 		}
 
 		if ( this.props.paddingBefore && 'default' !== this.props.paddingBefore ) {
-			classes.push( 'wsu-u-padding-before-' + this.props.paddingBefore );
+			classes.push( 'wsu-u-padding-before--' + this.props.paddingBefore );
 		}
 
 		return classes;
