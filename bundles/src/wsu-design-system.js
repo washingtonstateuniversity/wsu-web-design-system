@@ -32,6 +32,7 @@ import '../../components/src/content-list/build';
 import '../../packages/components/content-paragraph/component.scss';
 import '../../packages/components/content-column/component.scss';
 import '../../packages/components/content-heading/component.scss';
+import '../../packages/components/content-hero/style.scss';
 
 
 
