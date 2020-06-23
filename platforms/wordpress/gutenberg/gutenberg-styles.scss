@@ -1,0 +1,17 @@
+@import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
+
+#editor {
+	.wp-block {
+		max-width: 1200px;
+	}
+
+	.editor-styles-wrapper,
+	.editor-post-title__block .editor-post-title__input {
+		font-family: $wsu-bt-primary-font-family;
+	}
+
+	.block-editor-block-list__layout .block-editor-block-list__block {
+		padding-right: .75rem;
+		padding-left: .75rem;
+	}
+}

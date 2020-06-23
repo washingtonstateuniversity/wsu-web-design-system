@@ -1,6 +1,7 @@
-@import '~@wsu/build-tools/scss/all-the-things.scss';
+@import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
 
-.wsu-c-hero__container {
+.wsu-c-hero__container,
+#editor .wsu-c-hero__container {
 	position: relative;
 
 	background-color: color(gray, 90);
@@ -61,7 +62,8 @@
 	}
 }
 
-.wsu-c-hero__content {
+.wsu-c-hero__content,
+#editor .wsu-c-hero__content {
 	position: relative;
 	z-index: z('content');
 
@@ -69,7 +71,7 @@
 	align-items: flex-start;
 	flex-flow: column nowrap;
 
-	max-width: 600px;
+	max-width: 800px;
 	padding: 200px space('content') $unit;
 
 	@include mq('small') {
@@ -83,20 +85,22 @@
 	}
 }
 
-.wsu-c-hero__title {
+.wsu-c-hero__title,
+#editor .wsu-c-hero__title {
 	margin: 0;
 	margin-bottom: $unit-l;
 
 	color: color(white, base);
 	text-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 
-	@include font-size(ms(5), 900, 1);
+	@include font-size(5rem, 800, 1);
 	@include mq('small') {
-		@include font-size(ms(6), 900, 1);
+		@include font-size(4.5rem, 800, 1);
 	}
 }
 
-.wsu-c-hero__subtitle {
+.wsu-c-hero__subtitle,
+#editor .wsu-c-hero__subtitle {
 	order: -1;
 
 	text-transform: uppercase;
@@ -106,12 +110,14 @@
 	@include font-size(14px);
 }
 
-.wsu-c-hero__button {
+.wsu-c-hero__button,
+#editor .wsu-c-hero__button {
 	@include elevate(2);
 	@include button();
 }
 
-.wsu-c-hero__image-caption {
+.wsu-c-hero__image-caption,
+#editor .wsu-c-hero__image-caption {
 	font-style: italic;
 
 	position: relative;
@@ -147,7 +153,8 @@
 
 }
 
-.wsu-c-container .wsu-c-hero__wrapper:first-child {
+.wsu-c-container .wsu-c-hero__wrapper:first-child,
+#editor .wsu-c-container .wsu-c-hero__wrapper:first-child {
 	margin-top: calc( #{space( 'content-top')} * -1 );
 	padding-bottom: space( 'content-top');
 }

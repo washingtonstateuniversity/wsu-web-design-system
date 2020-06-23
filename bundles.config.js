@@ -1,8 +1,9 @@
+const path = require('path');
 const autoprefixer = require('autoprefixer');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
-const path = require('path');
+const MiniFilesToDeleteAfterCompilation = require('./webpack/mini-files-to-delete-after-compilation');
 
 module.exports = env => {
 
@@ -13,6 +14,10 @@ module.exports = env => {
 		entry: {
 			'bundles/dist/wsu-design-system': './bundles/src/wsu-design-system.js',
 			'bundles/dist/wsu-design-system.content': './bundles/src/wsu-design-system.content.js',
+			'bundles/dist/platforms/wsu-design-system.wordpress': './bundles/src/wsu-design-system.wordpress.js',
+			'bundles/dist/platforms/wsu-design-system.wordpress.gutenberg': './bundles/src/wsu-design-system.wordpress.gutenberg.js',
+			'bundles/dist/platforms/wsu-design-system.wordpress.gravity-forms': './bundles/src/wsu-design-system.wordpress.gravity-forms.js',
+			'bundles/dist/platforms/wsu-design-system.umbraco': './bundles/src/wsu-design-system.umbraco.js'
 		},
 		output: {
 			filename: '[name].bundle.dist.js',
@@ -94,6 +99,18 @@ module.exports = env => {
 			new MiniCssExtractPlugin({
 				filename: '[name].bundle.dist.css'
 			}),
+			new MiniFilesToDeleteAfterCompilation({
+				filenames: [
+					'bundles/dist/platforms/wsu-design-system.wordpress.bundle.dist.js',
+					'bundles/dist/platforms/wsu-design-system.wordpress.bundle.dist.js.map',
+					'bundles/dist/platforms/wsu-design-system.wordpress.gutenberg.bundle.dist.js',
+					'bundles/dist/platforms/wsu-design-system.wordpress.gutenberg.bundle.dist.js.map',
+					'bundles/dist/platforms/wsu-design-system.wordpress.gravity-forms.bundle.dist.js',
+					'bundles/dist/platforms/wsu-design-system.wordpress.gravity-forms.bundle.dist.js.map',
+					'bundles/dist/platforms/wsu-design-system.umbraco.bundle.dist.js',
+					'bundles/dist/platforms/wsu-design-system.umbraco.bundle.dist.js.map'
+				]
+			})
 		]
 	}
 };

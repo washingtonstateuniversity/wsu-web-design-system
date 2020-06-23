@@ -1,11 +1,14 @@
-@import '~@wsu/build-tools/scss/all-the-things.scss';
+@import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
 
-.wsu-c-button {
+.wsu-c-button,
+#editor .wsu-c-button {
 	margin-top: space( 'component' );
 	margin-bottom: space( 'component' );
 }
 
-.wsu-c-button a {
+// TODO: add focus state with black box and/or match hover state
+.wsu-c-button a,
+#editor .wsu-c-button a {
 	display: inline-table;
 
 	margin: 0;
@@ -34,7 +37,8 @@
 	}
 }
 
-.wsu-c-button_light a {
+.wsu-c-button_light a,
+#editor .wsu-c-button_light a {
 	display: inline-table;
 
 	margin: 0;
@@ -63,7 +67,8 @@
 	}
 }
 
-.wsu-c-button--round {
+.wsu-c-button--round,
+#editor .wsu-c-button--round {
 	@extend .wsu-c-button;
 
 	a {
@@ -75,7 +80,8 @@
 	}
 }
 
-.wsu-c-button_light--round {
+.wsu-c-button_light--round,
+#editor .wsu-c-button_light--round {
 	@extend .wsu-c-button_light;
 
 	a {
@@ -89,13 +95,15 @@
 
 /* Modifier Classes
 ======================= */
-.wsu-button-sm a {
+.wsu-button-sm a,
+#editor .wsu-button-sm a {
 	padding: $unit-xs $unit-l;
 
 	@include font-size(10px, 600);
 }
 
-.wsu-button-lg a {
+.wsu-button-lg a,
+#editor .wsu-button-lg a {
 	padding: $unit $unit-3xl;
 
 	@include font-size(14px, 600);
