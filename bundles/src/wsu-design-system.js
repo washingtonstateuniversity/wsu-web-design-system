@@ -4,12 +4,12 @@
  *
  */
 
-import '../../components/src/containers/build';
-
 /* Global components */
 import '../../components/src/global-footer/build';
 import '../../components/src/global-header/build';
 import '../../components/src/global-colors/build';
+
+import '../../packages/components/containers/component.scss';
 
 /* Site components */
 import '../../components/src/site-footer/build';
@@ -24,10 +24,16 @@ import '../../components/src/content-article-header/build';
 import '../../components/src/content-article-footer/build';
 import '../../components/src/content-button/build';
 import '../../components/src/content-card/build';
-import '../../components/src/content-column/build';
 import '../../components/src/content-form/build';
-import '../../components/src/content-heading/build';
 import '../../components/src/content-hero/build';
 import '../../components/src/content-link/build';
 import '../../components/src/content-list/build';
-import '../../components/src/content-paragraph/build';
+
+import '../../packages/components/content-paragraph/component.scss';
+import '../../packages/components/content-column/component.scss';
+import '../../packages/components/content-heading/component.scss';
+import '../../packages/components/content-hero/style.scss';
+
+
+
+
