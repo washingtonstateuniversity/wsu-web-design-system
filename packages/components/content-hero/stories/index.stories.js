@@ -5,6 +5,8 @@ import { previewGroupID, optionsGroupID } from '@wsuwebteam/build-tools/js/helpe
 
 import ContentHero from '../index';
 
+const spacingOptions = ['default','none','xsmall','small','medium','medium-large','large','xlarge'];
+
 // Story Time
 export default {
 	title: 'Content Hero Banner',
@@ -26,6 +28,8 @@ export const DefaultBanner = () => {
 		imageCaption={ text( 'imageCaption','By consectetur adipiscing elit donec fringilla', optionsGroupID ) }
 		imageCaptionUrl={ text( 'imageCaptionUrl','#', optionsGroupID ) }
 		verticalSpacing={ select( 'verticalSpacing',['default','xsmall','small','medium','large','full'],'default', optionsGroupID )  }
+		marginBefore={ select( 'marginBefore',spacingOptions,'default', optionsGroupID )  }
+		marginAfter={ select( 'marginAfter',spacingOptions,'default', optionsGroupID )  }
 		style=""
 	/>
 }
