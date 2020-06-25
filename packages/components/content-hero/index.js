@@ -1,7 +1,7 @@
 // External Deps
 import React, { Component } from 'react';
 
-import {getVerticalSpacingClasses} from '@wsuwebteam/build-tools/js/helpers/utilityClasses';
+import {getVerticalSpacingClasses,getMarginSpacingClasses} from '@wsuwebteam/build-tools/js/helpers/spacingUtilityClasses';
 
 
 import './style.scss';
@@ -14,8 +14,8 @@ class ContentHero extends Component {
 
 		let TitleTag             = ( 'default' != this.props.titleTag ) ? this.props.titleTag : 'div';
 		let containerBaseClasses = ['wsu-c-hero__container'];
-		let wrapperBaseClasses   = ['wsu-c-hero__wrapper','wsu-u-no-js','wsu-c-full-width'];
-		let wrapperClasses       = wrapperBaseClasses.concat( [] ); // leaving empty for now
+		let wrapperBaseClasses   = ['wsu-c-hero__wrapper','wsu-u-no-js','wsu-c-full-width',this.props.className];
+		let wrapperClasses       = wrapperBaseClasses.concat( getMarginSpacingClasses( this.props ) ); // leaving empty for now
 		let containerClasses     = containerBaseClasses.concat( getVerticalSpacingClasses( this.props ) );
 
 		return (
@@ -32,7 +32,7 @@ class ContentHero extends Component {
 						{this.props.imageCaptionUrl ? <a href={this.props.imageCaptionUrl}>{this.props.imageCaption}</a> : this.props.imageCaption }
 					</p>}
 				</div>
-			</div>
+			</div> 
 		);
 	}
 
@@ -40,13 +40,16 @@ class ContentHero extends Component {
 		title: '',
 		titleTag: 'div',
 		subtitle: '',
-		caption: '',
+		caption: '', 
 		buttonText: '',
 		buttonUrl: '',
 		imageCaption: '',
 		imageCaptionUrl: '',
 		style: 'default',
 		verticalSpacing: 'default',
+		marginBefore: 'default',
+		marginAfter: 'default',
+		className:''
 	}
 }
 
