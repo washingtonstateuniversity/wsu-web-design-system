@@ -3,16 +3,17 @@
 ## File Structure
 
 <pre>
-|- Packages
-   |- Components
-      |-[component-name]
-	    |- index.js
-		|- style.scss
-		|- styles
-		   |- default.scss
-		   |- [style-name.scss]
-		|- stories
-		   |- index.stories.js
+|-- packages
+    |-- components
+        |--[component-name]
+	       |-- index.js | Component
+		   |-- style.scss | Component style or imported list of component styles from styles directory 
+		   |-- script.js | Component JS
+		   |-- styles | Optional. If more than one style exists they should be separated and independent.
+		       |-- default.scss | Default style
+		       |-- [style-name.scss] | Alternate style
+		   |-- stories | For use in StoryBook
+		       |-- index.stories.js
 </pre>
 
 ## Code Standards
