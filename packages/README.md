@@ -2,6 +2,7 @@
 
 ## File Structure
 
+<pre>
 |- Packages
    |- Components
       |-[component-name]
@@ -12,6 +13,7 @@
 		   |- [style-name.scss]
 		|- stories
 		   |- index.stories.js
+</pre>
 
 ## Code Standards
 
