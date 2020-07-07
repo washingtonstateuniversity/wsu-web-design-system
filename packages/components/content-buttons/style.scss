@@ -2,7 +2,6 @@
 
 .wsu-c-button a,
 .wsu-c-content button,
-.wsu-c-button--square,
 .wsu-c-button {
 
 	display: inline;
@@ -58,8 +57,6 @@
 }
 
 .wsu-c-button--round {
-
-	@extend .wsu-c-button;
 
 	border-radius: 25px;
 
