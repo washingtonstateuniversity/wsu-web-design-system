@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 // Component Deps
-// import './content-icons.scss';
+import './content-card.scss';
 
 // Component Starts
 class ContentCard extends Component {
@@ -18,7 +18,7 @@ class ContentCard extends Component {
 						<h3 className="wsu-c-card__heading">{this.props.title}</h3>
 						<p className="wsu-c-card__description">{this.props.description}</p>
 						<div className="wsu-c-card__address">
-							<span className="wsu-c-card__address-line-1">1{this.props.addressLine1}</span>
+							<span className="wsu-c-card__address-line-1">{this.props.addressLine1}</span>
 							<span className="wsu-c-card__city-state-zip">{this.props.addressLine2}</span>
 						</div>
 						<div className="wsu-c-card__phone">
@@ -35,6 +35,26 @@ class ContentCard extends Component {
 			</div>
 		);
 	}
+}
+
+ContentCard.propTypes = {
+	title: PropTypes.string.isRequired,
+	description: PropTypes.string.isRequired,
+	addressLine1: PropTypes.string.isRequired,
+	addressLine2: PropTypes.string.isRequired,
+	phoneNumber: PropTypes.string.isRequired,
+	email: PropTypes.string.isRequired,
+	website: PropTypes.string.isRequired,
+};
+
+ContentCard.defaultProps = {
+	title: 'Pellentesque Habitant',
+	description: 'Morbi tristique senectus et netus et malesuada.',
+	addressLine1: '12345 Etiam rutrum lectus',
+	addressLine2: 'Pullman, WA 99163',
+	phoneNumber: '123-456-7890',
+	email: 'info@wsu.edu',
+	website: 'https://wsu.edu/',
 }
 
 export default ContentCard;

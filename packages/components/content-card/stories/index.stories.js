@@ -14,7 +14,7 @@ export default {
 	]
 };
 
-export const DefaultCard = () => {
+export const defaultCard = () => {
 	return(
 		<ContentCard 
 			title={text('title', 'Pellentesque Habitant', previewGroupID)}
@@ -23,7 +23,7 @@ export const DefaultCard = () => {
 			addressLine2={text('addressLine2', 'Pullman, WA 99163', previewGroupID)}
 			phoneNumber={text('phoneNumber', '123-456-7890', previewGroupID)}
 			email={text('email', 'info@wsu.edu', previewGroupID)}
-			website={text('website', 'https://wsu.edu', previewGroupID)}
+			website={text('website', 'https://wsu.edu/', previewGroupID)}
 		/>
 	)
 }
