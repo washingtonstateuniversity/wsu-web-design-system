@@ -1,12 +1,35 @@
-.icon-container {
-	display: flex;
-	flex-flow: row wrap;
-	max-width: 800px;
-	align-items: center;
+.icon-cheatsheet-container {
+	display: grid;
+	max-width: 1200px;
 	margin: 2em auto;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
 
 	& i {
 		padding: 1em;
 		font-size: 24px;
+		position: relative;
+		background-color: whitesmoke;
+		margin: .3em;
+		display: flex;
+		align-items: center;
 	}
+
+	& i:before {
+		margin-right: 10px;
+	}
+
+	& i > span {
+		font-size: 11px;
+		font-style: normal;
+		flex-grow: 1;
+		text-align: right;
+		line-height: 2;
+	}
+}
+
+#root {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
