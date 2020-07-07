@@ -38,6 +38,10 @@
 
 		}
 
+		&:visited {
+			@extend a;
+		}
+
 		&:focus {
 			text-decoration: none;
 			outline: 1px solid color(primary, light);
