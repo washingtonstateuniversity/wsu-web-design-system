@@ -22,7 +22,7 @@ ContentButton.defaultProps = {
 	buttonUrl: '',
 	buttonSize: 'default',
 	className: '',
-	style: 'default',
+	shape: 'default',
 	color: 'default',
 	size: 'default',
 	tag: 'a',
@@ -30,10 +30,7 @@ ContentButton.defaultProps = {
 
 const getContentButtonClasses = ( props ) => {
 
-	let classes   = [];
-	let styleClass = ( props.style && 'default' != props.style ) ? 'wsu-c-button--' + props.style : 'wsu-c-button';
-
-	classes.push( styleClass );
+	let classes   = ['wsu-c-button'];
 
 	if ( props.color && 'default' != props.color ) {
 		classes.push( 'wsu-c-button--' + props.color );
@@ -43,9 +40,11 @@ const getContentButtonClasses = ( props ) => {
 		classes.push( 'wsu-c-button--' + props.size );
 	}
 
-	classes = classes.concat( getMarginSpacingClasses( props ) )
+	if ( props.shape && 'default' != props.shape ) {
+		classes.push( 'wsu-c-button--' + props.shape );
+	} 
 
-	classes.push( styleClass );
+	classes = classes.concat( getMarginSpacingClasses( props ) )
 
 	return classes;
 

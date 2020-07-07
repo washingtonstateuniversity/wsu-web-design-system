@@ -24,7 +24,7 @@ export const DefaultButton = () => {
 		buttonUrl={ text( 'buttonUrl','#', optionsGroupID ) }
 		marginBefore={ select( 'marginBefore',spacingOptions,'default', optionsGroupID )  }
 		marginAfter={ select( 'marginAfter',spacingOptions,'default', optionsGroupID )  }
-		style={ select( 'style',['default','square','round'],'default', optionsGroupID )  }
+		shape={ select( 'shape',['default','square','round'],'default', optionsGroupID )  }
 		color={ select( 'color',['default','crimson','white'],'default', optionsGroupID )  }
 		size={ select( 'size',['default','small','medium','large'],'default', optionsGroupID )  }
 	/>
