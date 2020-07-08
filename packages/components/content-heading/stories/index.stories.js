@@ -5,6 +5,7 @@ import { withKnobs, text, boolean, number, select } from "@storybook/addon-knobs
 import ContentHeading from '../index';
 import {ContentContainer} from '../../containers/index';
 import P from '../../content-paragraph/index';
+import ComponentWrapper from '../../../storybook-components/content-wrapper/index';
 
 // Story Time
 export default {
@@ -65,10 +66,10 @@ export const Heading = () => {
 
 	let applyContentClass = boolean('Apply wsu-c-content class', false, contentGroupID );
 
-	let classes = ( boolean('Apply wsu-c-content class', false, contentGroupID ) ) ? ['wsu-c-content'] : '';
+	let classes = ( boolean('Apply wsu-c-content class', false, contentGroupID ) ) ? ['wsu-c-content'] : false;
 
 	return(
-		<ContentContainer className={classes}>
+		<ComponentWrapper layout="centered" className={ classes }>
 			<ContentHeading 
 				tag={ select('tag', headingTagOptions, 'h1', optionsGroupID ) }
 				name={ text( 'name','', optionsGroupID ) }
@@ -78,7 +79,7 @@ export const Heading = () => {
 				>
 				Heading Text {getHeadingLength( select('Heading Length', headingLengthOptions,'short', contentGroupID ) )}
 			</ContentHeading>
-		</ContentContainer>
+		</ComponentWrapper>
 	)
 }
 
@@ -89,14 +90,14 @@ export const DefaultHeadings = () => {
 	let width         = select( 'width', headingWidthOptions, 'full', optionsGroupID );
 
 	return(
-		<ContentContainer className={'wsu-c-content'}>
+		<ComponentWrapper layout="content" className="wsu-c-content">
 			<ContentHeading tag="h1" style={style} width={width} >Heading Level 1 {getHeadingLength( headingLength ) }</ContentHeading>
 			<ContentHeading tag="h2" style={style} width={width} >Heading Level 2 {getHeadingLength( headingLength ) }</ContentHeading>
 			<ContentHeading tag="h3" style={style} width={width} >Heading Level 3 {getHeadingLength( headingLength ) }</ContentHeading>
 			<ContentHeading tag="h4" style={style} width={width} >Heading Level 4 {getHeadingLength( headingLength ) }</ContentHeading>
 			<ContentHeading tag="h5" style={style} width={width} >Heading Level 5 {getHeadingLength( headingLength ) }</ContentHeading>
 			<ContentHeading tag="h6" style={style} width={width} >Heading Level 6 {getHeadingLength( headingLength ) }</ContentHeading>
-		</ContentContainer>
+		</ComponentWrapper>
 	)
 };
 
@@ -106,14 +107,14 @@ export const CalloutHeadings = () => {
 	let width         = select( 'width', headingWidthOptions, 'full', optionsGroupID );
 
 	return(
-		<ContentContainer className={'wsu-c-content'}>
+		<ComponentWrapper layout="content" className="wsu-c-content">
 			<ContentHeading tag="h1" style={'callout'} width={width} >Heading Level 1 {getHeadingLength( headingLength ) }</ContentHeading>
 			<ContentHeading tag="h2" style={'callout'} width={width} >Heading Level 2 {getHeadingLength( headingLength ) }</ContentHeading>
 			<ContentHeading tag="h3" style={'callout'} width={width} >Heading Level 3 {getHeadingLength( headingLength ) }</ContentHeading>
 			<ContentHeading tag="h4" style={'callout'} width={width} >Heading Level 4 {getHeadingLength( headingLength ) }</ContentHeading>
 			<ContentHeading tag="h5" style={'callout'} width={width} >Heading Level 5 {getHeadingLength( headingLength ) }</ContentHeading>
 			<ContentHeading tag="h6" style={'callout'} width={width} >Heading Level 6 {getHeadingLength( headingLength ) }</ContentHeading>
-		</ContentContainer>
+		</ComponentWrapper>
 	)
 };
 
@@ -124,7 +125,7 @@ export const WithParagraphs = () => {
 	let width         = select( 'width', headingWidthOptions, 'full', optionsGroupID );
 
 	return(
-		<ContentContainer className={'wsu-c-content'}>
+		<ComponentWrapper width="narrow">
 			<ContentHeading tag="h1" width={width} style={style}>Heading Level 1 {getHeadingLength( headingLength ) }</ContentHeading>
 			<P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
 				varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
@@ -179,6 +180,6 @@ export const WithParagraphs = () => {
 				suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
 				arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
 				eleifend et suscipit vel, faucibus vitae lorem.</P>
-		</ContentContainer>
+		</ComponentWrapper>
 	)
 };

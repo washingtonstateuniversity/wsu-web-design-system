@@ -1,0 +1,40 @@
+.wsu-storybook-component__wrapper {
+
+	&--centered {
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&--content {
+		margin: 50px;
+	}
+
+
+}
+
+[class^="wsu-storybook-component__wrapper--"],
+[class*=" wsu-storybook-component__wrapper--"] {
+
+	&.wsu-u-width {
+		
+		&--narrow {
+			max-width: 750px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		&--wide {
+			max-width: 1200px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		&--xwide {
+			max-width: 1400px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}
