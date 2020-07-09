@@ -2,12 +2,14 @@ import React from 'react';
 import { withA11y } from '@storybook/addon-a11y';
 import { withKnobs, text, boolean, number, select } from "@storybook/addon-knobs";
 import { previewGroupID, optionsGroupID } from '@wsuwebteam/build-tools/js/helpers/storybook';
-import {ContentContainer} from '../../containers/index';
 
-import {A} from '../index';
-import P from '../../content-paragraph/index';
-import ContentHeading from '../../content-heading/index';
-import ComponentWrapper from '../../../storybook-components/content-wrapper/index';
+
+// Storybook Imports
+import ComponentWrapper from '../../packages/storybook-components/content-wrapper/index'
+
+import {A} from '../../packages/components/content-links/index';
+import P from '../../packages/components/content-paragraph/index';
+import ContentHeading from '../../packages/components/content-heading/index';
 
 // Story Time
 export default {
