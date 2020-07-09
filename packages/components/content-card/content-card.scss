@@ -48,6 +48,7 @@
 .wsu-c-card__container {
 	display: flex;
 	flex: 1 1 auto;
+	flex-direction: column;
 }
 
 .wsu-c-card__content {
@@ -81,6 +82,23 @@
 
 	object-fit: cover;
 	object-position: center;
+}
+
+.wsu-c-card__content-footer {
+	border-top: 2px solid color(gray, 10);
+	margin: $unit-2xs $unit;
+	font-size: 75%;
+}
+
+.wsu-c-card__categories {
+	& .wsu-c-card__category-item {
+		
+	}
+}
+
+.wsu-c-card__categories-label {
+	text-transform: uppercase;
+	font-weight: 500;
 }
 
 /* Heading / Description
