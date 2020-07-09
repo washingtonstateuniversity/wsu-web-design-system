@@ -1,4 +1,6 @@
+import { addDecorator } from '@storybook/react';
 import { addParameters } from '@storybook/client-api';
+import { withHTML } from '@whitespace/storybook-addon-html/react';
 
 const customViewports = {
 	mobile: {
@@ -28,3 +30,4 @@ addParameters({
 	viewport: { viewports: customViewports },
 });
 
+addDecorator(withHTML);

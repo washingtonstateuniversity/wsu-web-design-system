@@ -21,6 +21,7 @@
     "@storybook/addons": "^5.3.19",
     "@storybook/html": "^5.3.19",
     "@storybook/react": "^5.3.19",
+    "@whitespace/storybook-addon-html": "^1.2.1",
     "@wsuwebteam/build-tools": "^1.4.1",
     "@wsuwebteam/wsu-icons": "^2.0.3",
     "autoprefixer": "^9.8.4",
