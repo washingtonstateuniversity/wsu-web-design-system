@@ -6,7 +6,7 @@ import './style.scss';
 
 const ContentButton = ( props ) => {
 
-	let Tag = props.tag;
+	let Tag = ('default' == props.tag ) ? 'button' : props.tag;
 	let containerClasses = getContentButtonClasses( props );
 
 	return (
@@ -25,7 +25,7 @@ ContentButton.defaultProps = {
 	shape: 'default',
 	color: 'default',
 	size: 'default',
-	tag: 'a',
+	tag: 'default',
 }
 
 const getContentButtonClasses = ( props ) => {

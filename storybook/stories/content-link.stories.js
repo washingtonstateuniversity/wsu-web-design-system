@@ -7,7 +7,7 @@ import { previewGroupID, optionsGroupID } from '@wsuwebteam/build-tools/js/helpe
 // Storybook Imports
 import ComponentWrapper from '../../packages/storybook-components/content-wrapper/index'
 
-import {A} from '../../packages/components/content-links/index';
+import ContentLink from '../../packages/components/content-link/index';
 import P from '../../packages/components/content-paragraph/index';
 import ContentHeading from '../../packages/components/content-heading/index';
 
@@ -24,7 +24,7 @@ export const DefaultLink = () => {
 
 	return (
 		<ComponentWrapper layout="centered" className={'wsu-c-content'}>
-			<A href="#">Lorem ipsum dolor sit amet</A>
+			<ContentLink href="#">Lorem ipsum dolor sit amet</ContentLink>
 		</ComponentWrapper>
 	)
 }
@@ -36,10 +36,10 @@ export const ParagraphLink = () => {
 			<P>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
 				varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
-				platea dictumst. <A href="#">Lorem ipsum dolor sit amet</A>, magna massa ornare nulla, eu rutrum 
+				platea dictumst. <ContentLink href="#">Lorem ipsum dolor sit amet</ContentLink>, magna massa ornare nulla, eu rutrum 
 				purus nunc at odio. Phasellus aliquam leo sed vulputate facilisis. Phasellus turpis dui, euismod ultrices 
-				rutrum et, ultrices ut quam. <A href="#">Sed euismod tincidunt eros eu venenatis. Nunc accumsan, felis ac cursus 
-				suscipit, tortor erat scelerisque libero</A>, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
+				rutrum et, ultrices ut quam. <ContentLink href="#">Sed euismod tincidunt eros eu venenatis. Nunc accumsan, felis ac cursus 
+				suscipit, tortor erat scelerisque libero</ContentLink>, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
 				arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
 				eleifend et suscipit vel, faucibus vitae lorem.
 			</P>
@@ -55,10 +55,10 @@ export const HeadingLink = () => {
 			<P>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
 				varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
-				platea dictumst. <A href="#">Lorem ipsum dolor sit amet</A>, magna massa ornare nulla, eu rutrum 
+				platea dictumst. <ContentLink href="#">Lorem ipsum dolor sit amet</ContentLink>, magna massa ornare nulla, eu rutrum 
 				purus nunc at odio. Phasellus aliquam leo sed vulputate facilisis. Phasellus turpis dui, euismod ultrices 
-				rutrum et, ultrices ut quam. <A href="#">Sed euismod tincidunt eros eu venenatis. Nunc accumsan, felis ac cursus 
-				suscipit, tortor erat scelerisque libero</A>, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
+				rutrum et, ultrices ut quam. <ContentLink href="#">Sed euismod tincidunt eros eu venenatis. Nunc accumsan, felis ac cursus 
+				suscipit, tortor erat scelerisque libero</ContentLink>, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
 				arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
 				eleifend et suscipit vel, faucibus vitae lorem.
 			</P>

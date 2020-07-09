@@ -16,14 +16,14 @@ export default {
 	title: 'Content Button',
 	decorators: [
 		withA11y,
-		withKnobs
+		withKnobs,
+		storyFn => <ComponentWrapper layout="centered">{storyFn()}</ComponentWrapper>
 	]
 };
 
 export const DefaultButton = () => {
  
 	return (
-		<ComponentWrapper layout="centered" >
 			<ContentButton
 				tag={ select( 'tag',['default','a','button','div'],'default', optionsGroupID )  }
 				buttonText={ text( 'buttonText','Lorem Ipsum', optionsGroupID ) }
@@ -34,6 +34,5 @@ export const DefaultButton = () => {
 				color={ select( 'color',['default','crimson','white'],'default', optionsGroupID )  }
 				size={ select( 'size',['default','small','medium','large'],'default', optionsGroupID )  }
 			/> 
-		</ComponentWrapper>
 	)
 }
