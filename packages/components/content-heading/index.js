@@ -38,7 +38,7 @@ class ContentHeading extends Component {
 							</a>
 						)
 					} else {
-						return this.props.children
+						return this.props.children 
 					}
 				})()}
 			</Tag>
