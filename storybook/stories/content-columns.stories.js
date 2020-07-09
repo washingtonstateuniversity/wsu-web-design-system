@@ -2,9 +2,11 @@ import React from 'react';
 import { withA11y } from '@storybook/addon-a11y';
 import { withKnobs, text, boolean, number, select } from "@storybook/addon-knobs";
 
-import {ContentContainer} from '../../containers/index';
-import {ContentColumnWrapper,ContentColumn} from '../index';
-import P from '../../content-paragraph/index';
+// Storybook Imports
+import ComponentWrapper from '../../packages/storybook-components/content-wrapper/index'
+
+import {ContentColumnWrapper,ContentColumn} from '../../packages/components/content-column/index';
+import P from '../../packages/components/content-paragraph/index';
 
 // Story Time
 export default {
@@ -114,7 +116,7 @@ export const Columns = () => {
 	let paddingAfter  = select( 'paddingAfter', spacingOptions, 'default', 'Column Options' );
 
 	return(
-		<ContentContainer className="wsu-c-content">
+		<ComponentWrapper layout="full" className="wsu-c-content">
 			<ContentColumnWrapper 
 				layout={'single'} 
 				backgroundColor={ bgColor } 
@@ -426,6 +428,6 @@ export const Columns = () => {
 						eleifend et suscipit vel, faucibus vitae lorem.</P>
 				</ContentColumn>
 			</ContentColumnWrapper>
-		</ContentContainer>
+		</ComponentWrapper>
 	);
 }
