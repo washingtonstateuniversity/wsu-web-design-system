@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 // Component Deps
 import './content-card.scss';
+import ContentLink from '../content-link';
 
 // Component Starts
 class ContentCard extends Component {
@@ -22,14 +23,18 @@ class ContentCard extends Component {
 							<span className="wsu-c-card__city-state-zip">{this.props.addressLine2}</span>
 						</div>
 						<div className="wsu-c-card__phone">
-							<a href="tel:123-456-7890" className="wsu-c-card__phone-link">{this.props.phoneNumber}</a>
+							<a href={"tel:" + this.props.phoneNumber} className="wsu-c-card__phone-link">{this.props.phoneNumber}</a>
 						</div>
 						<div className="wsu-c-card__email">
-							<a href="mailto:info@wsu.edu" className="wsu-c-card__email-link">{this.props.email}</a>
+							<a href={"mailto:" + this.props.email} className="wsu-c-card__email-link">{this.props.email}</a>
 						</div>
 						<div className="wsu-c-card__website">
 							<a href={this.props.website} className="wsu-c-card__website-link">Website</a>
 						</div>
+						<footer className="wsu-c-card__content-footer">
+							<p className="wsu-c-card__categories"><span className="wsu-c-card__categories-label">More on:</span> <ContentLink>Sed Category</ContentLink>, <ContentLink>Sed Category</ContentLink>, <ContentLink>Sed Category</ContentLink></p>
+
+						</footer>
 					</div>
 				</div>
 			</div>
@@ -45,7 +50,10 @@ ContentCard.propTypes = {
 	phoneNumber: PropTypes.string.isRequired,
 	email: PropTypes.string.isRequired,
 	website: PropTypes.string.isRequired,
-};
+	tags: PropTypes.object,
+	categories: PropTypes.object,
+	date: PropTypes.string
+}
 
 ContentCard.defaultProps = {
 	title: 'Pellentesque Habitant',
@@ -55,6 +63,11 @@ ContentCard.defaultProps = {
 	phoneNumber: '123-456-7890',
 	email: 'info@wsu.edu',
 	website: 'https://wsu.edu/',
+	tags: {},
+	categories: {},
+	date: '',
+	author: {}
+
 }
 
 export default ContentCard;
