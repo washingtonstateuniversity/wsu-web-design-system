@@ -15,9 +15,9 @@ class ContentAccordion extends Component {
 	render() {
 
 		return (
-			<div class="wsu-c-accordion">
-				<h2 class="wsu-c-accordion__title" >{this.props.title}</h2>
-				<div class="wsu-c-accordion__content">
+			<div className="wsu-c-accordion">
+				<h2 className="wsu-c-accordion__title" >{this.props.title}</h2>
+				<div className="wsu-c-accordion__content">
 					{this.props.children}
 				</div>
 			</div>

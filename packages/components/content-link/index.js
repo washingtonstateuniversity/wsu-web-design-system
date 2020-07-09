@@ -11,7 +11,7 @@ class ContentLink extends Component {
 		return (
 			<a 
 				href={this.props.href} 
-				class={'wsu-c-link ' + this.props.classNames}
+				className={'wsu-c-link ' + this.props.classNames}
 				target={this.props.target}
 			>
 				{this.props.children}
