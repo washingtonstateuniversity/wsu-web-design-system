@@ -1,0 +1,265 @@
+@import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
+
+/* Cards Container / Wrapper / Helpers
+======================= */
+.wsu-c-cards__wrapper {
+	display: flex;
+	flex-flow: row wrap;
+
+	padding: 0 $unit-xs;
+
+	&.wsu-c-cards__items-per-row {
+		&--1 .wsu-c-card__container,
+		&--2 .wsu-c-card__container,
+		&--3 .wsu-c-card__container,
+		&--4 .wsu-c-card__container,
+		&--5 .wsu-c-card__container {
+			padding: $unit-xs $unit;
+		}
+
+		&--1 .wsu-c-card__wrapper {
+			width: 100%;
+		}
+
+		&--2 .wsu-c-card__wrapper {
+			width: 100%;
+		}
+
+		&--3 .wsu-c-card__wrapper {
+			width: 100%;
+		}
+
+		&--4 .wsu-c-card__wrapper {
+			width: 100%;
+		}
+
+		&--5 .wsu-c-card__wrapper {
+			width: 100%;
+		}
+	}
+}
+
+/* WSU Card Styles
+======================= */
+.wsu-c-card__wrapper {
+	display: flex;
+}
+
+.wsu-c-card__container {
+	display: flex;
+	flex: 1 1 auto;
+	flex-direction: column;
+}
+
+.wsu-c-card__content {
+	overflow: hidden;
+
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+	padding-bottom: $unit-s;
+
+	transition: box-shadow timing();
+
+	color: color(gray, 75);
+	border-radius: $wsu-bt-base-border-radius-size;
+
+	@include elevate(3);
+
+	&:hover {
+		@include elevate(6);
+	}
+}
+
+.wsu-c-card__photo-frame {
+	width: 100%;
+	margin: 0;
+}
+
+.wsu-c-card__photo {
+	width: 100%;
+	height: 225px;
+
+	object-fit: cover;
+	object-position: center;
+}
+
+.wsu-c-card__content-footer {
+	border-top: 2px solid color(gray, 10);
+	margin: $unit-2xs $unit;
+	font-size: 75%;
+}
+
+.wsu-c-card__categories {
+	& .wsu-c-card__category-item {
+		
+	}
+}
+
+.wsu-c-card__categories-label {
+	text-transform: uppercase;
+	font-weight: 500;
+}
+
+/* Heading / Description
+======================= */
+.wsu-c-card__heading,
+.wsu-c-card__description {
+	margin: 0;
+	padding: 0 $unit;
+}
+
+.wsu-c-card__heading {
+	margin-top: $unit;
+
+	@include font-size(14px, 500);
+}
+
+.wsu-c-card__description {
+	font-style: italic;
+
+	margin-bottom: $unit-xs;
+
+	@include font-size(14px, 400);
+}
+
+/* Address
+======================= */
+.wsu-c-card__address {
+	position: relative;
+
+	margin: 0 $unit-xs;
+	padding: $unit-xs $unit-2xl;
+
+	@include font-size(13px, 300);
+
+	&::before {
+		position: absolute;
+		left: $unit-xs;
+
+		color: color(primary, light); // TODO play around with gray, red sort of implies linkage
+
+		@include wsu-icon("\F127");
+	}
+}
+
+.wsu-c-card__address-line-1,
+.wsu-c-card__city-state-zip {
+	display: block;
+}
+
+/* Links
+======================= */
+.wsu-c-card__phone-link,
+.wsu-c-card__email-link,
+.wsu-c-card__website-link {
+	position: relative;
+
+	display: block;
+
+	margin: 0 $unit-xs;
+	padding: $unit-xs $unit-l $unit-xs $unit-2xl;
+
+	transition: background-color timing('husky', 'ease');
+	text-decoration: none;
+
+	color: color(primary, light);
+
+	@include font-size(13px, 300);
+
+	&:hover {
+		border-radius: $wsu-bt-base-border-radius-size;
+		background-color: color(gray, 0);
+
+		@include font-size(13px, 400);
+	}
+
+	&:active,
+	&:visited {
+		color: color(primary, light);
+	}
+
+	&::before {
+		position: absolute;
+		left: $unit-xs;
+	}
+}
+
+/* Phone
+======================= */
+.wsu-c-card__phone-link::before {
+	@include wsu-icon("\F133");
+}
+
+/* Email
+======================= */
+.wsu-c-card__email-link {
+	word-break: break-word;
+
+	&::before {
+		@include wsu-icon("\F11A");
+	}
+}
+
+/* Website
+======================= */
+.wsu-c-card__website-link::before {
+	@include wsu-icon("\F10D");
+}
+
+/* Media Queries
+======================= */
+@include mq('xsmall') {
+	.wsu-c-cards__wrapper {
+		&.wsu-c-cards__items-per-row {
+			&--1 .wsu-c-card__container,
+			&--2 .wsu-c-card__container,
+			&--3 .wsu-c-card__container,
+			&--4 .wsu-c-card__container,
+			&--5 .wsu-c-card__container {
+				padding: $unit-xs;
+			}
+
+			&--2 .wsu-c-card__wrapper {
+				width: 50%;
+			}
+
+			&--3 .wsu-c-card__wrapper,
+			&--4 .wsu-c-card__wrapper,
+			&--5 .wsu-c-card__wrapper {
+				width: 50%;
+			}
+		}
+	}
+}
+
+@include mq('small') {
+	.wsu-c-cards__wrapper.wsu-c-cards__items-per-row {
+		&--3 .wsu-c-card__wrapper,
+		&--4 .wsu-c-card__wrapper,
+		&--5 .wsu-c-card__wrapper {
+			width: 33.33%;
+		}
+	}
+}
+
+@include mq('medium') {
+	.wsu-c-cards__wrapper {
+		padding: 0;
+		& .wsu-c-cards__items-per-row {
+			&--4 .wsu-c-card__wrapper {
+				width: 25%;
+			}
+
+			&--5 .wsu-c-card__wrapper {
+				width: 20%;
+			}
+		}
+	}
+}
+
+@include mq('large') {
+	.wsu-c-cards__wrapper {
+		padding: 0;
+	}
+}
