@@ -21,6 +21,7 @@ const contentGroupID = 'Preview';
 const optionsGroupID = 'Options';
 const bgColorOptions = ['default','gray-0','gray-5','gray-10','gray-90','gray-95'];
 const spacingOptions = ['default','none','xsmall','small','medium','medium-large','large','xlarge'];
+const columnLayouts = ['single','halves','sidebar-right','sidebar-left','thirds','quarters'];
 
 const Paragraph = ( props ) => {
 
@@ -40,7 +41,7 @@ const Paragraph = ( props ) => {
 }
 
 export const DefaultColumn = () => {
-	let layout               = select( 'layout', ['single','halves'], 'single', 'Columns Wrapper' );
+	let layout               = select( 'layout', columnLayouts, 'single', 'Columns Wrapper' );
 	let bgColor              = select( 'backgroundColor', bgColorOptions, '', 'Columns Wrapper' );
 	let wrapperMarginBefore  = select( 'marginBefore', spacingOptions, 'default', 'Columns Wrapper' );
 	let wrapperMarginAfter   = select( 'marginAfter', spacingOptions, 'default', 'Columns Wrapper' );
@@ -78,10 +79,111 @@ export const DefaultColumn = () => {
 			</ContentColumnWrapper>
 		)
 
+	} else if ( 'sidebar-right' === layout ) {
+		return ( 
+			<ContentColumnWrapper
+				layout={layout}
+				backgroundColor={ bgColor } 
+				marginBefore={wrapperMarginBefore}
+				marginAfter={wrapperMarginAfter}
+				paddingBefore={wrapperPaddingBefore}
+				paddingAfter={wrapperPaddingAfter}
+				>
+				<ContentColumn>
+					<Paragraph />
+				</ContentColumn>
+				<ContentColumn
+					backgroundColor={ columnBgColor } 
+					marginBefore={marginBefore}
+					marginAfter={marginAfter}
+					paddingBefore={paddingBefore}
+					paddingAfter={paddingAfter}
+					><Paragraph />
+				</ContentColumn>
+			</ContentColumnWrapper>
+		)
+	} else if ( 'sidebar-left' === layout ) {
+		return ( 
+			<ContentColumnWrapper
+				layout={layout}
+				backgroundColor={ bgColor } 
+				marginBefore={wrapperMarginBefore}
+				marginAfter={wrapperMarginAfter}
+				paddingBefore={wrapperPaddingBefore}
+				paddingAfter={wrapperPaddingAfter}
+				>
+					<ContentColumn
+					backgroundColor={ columnBgColor } 
+					marginBefore={marginBefore}
+					marginAfter={marginAfter}
+					paddingBefore={paddingBefore}
+					paddingAfter={paddingAfter}
+					><Paragraph />
+				</ContentColumn>
+				<ContentColumn>
+					<Paragraph />
+				</ContentColumn>
+			</ContentColumnWrapper>
+		)
+	} else if ( 'thirds' === layout ) {
+		return ( 
+			<ContentColumnWrapper
+				layout={layout}
+				backgroundColor={ bgColor } 
+				marginBefore={wrapperMarginBefore}
+				marginAfter={wrapperMarginAfter}
+				paddingBefore={wrapperPaddingBefore}
+				paddingAfter={wrapperPaddingAfter}
+				>
+				<ContentColumn
+					backgroundColor={ columnBgColor } 
+					marginBefore={marginBefore}
+					marginAfter={marginAfter}
+					paddingBefore={paddingBefore}
+					paddingAfter={paddingAfter}
+					><Paragraph />
+				</ContentColumn>
+				<ContentColumn>
+					<Paragraph />
+				</ContentColumn>
+				<ContentColumn>
+					<Paragraph />
+				</ContentColumn>
+			</ContentColumnWrapper>
+		)
+	} else if ( 'quarters' === layout ) {
+		return ( 
+			<ContentColumnWrapper
+				layout={layout}
+				backgroundColor={ bgColor } 
+				marginBefore={wrapperMarginBefore}
+				marginAfter={wrapperMarginAfter}
+				paddingBefore={wrapperPaddingBefore}
+				paddingAfter={wrapperPaddingAfter}
+				>
+				<ContentColumn
+					backgroundColor={ columnBgColor } 
+					marginBefore={marginBefore}
+					marginAfter={marginAfter}
+					paddingBefore={paddingBefore}
+					paddingAfter={paddingAfter}
+					><Paragraph />
+				</ContentColumn>
+				<ContentColumn>
+					<Paragraph />
+				</ContentColumn>
+				<ContentColumn>
+					<Paragraph />
+				</ContentColumn>
+				<ContentColumn>
+					<Paragraph />
+				</ContentColumn>
+			</ContentColumnWrapper>
+		)
 	} else {
 		return ( 
 			<ContentColumnWrapper
-				layout={layout} 
+				layout="single"
 				backgroundColor={ bgColor } 
 				marginBefore={wrapperMarginBefore}
 				marginAfter={wrapperMarginAfter}

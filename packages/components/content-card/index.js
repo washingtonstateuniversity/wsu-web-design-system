@@ -14,7 +14,9 @@ class ContentCard extends Component {
 				<div className="wsu-c-card__container">
 					<div className="wsu-c-card__content">
 						<div className="wsu-c-card__photo-frame">
-							<img className="wsu-c-card__photo" src="https://source.unsplash.com/collection/895539" alt="#" data-object-fit="" />
+							<div className="wsu-c-card__photo-wrapper">
+								<img className="wsu-c-card__photo" src="https://source.unsplash.com/collection/895539" alt="#" data-object-fit="" />
+							</div>
 						</div>
 						<h3 className="wsu-c-card__heading">{this.props.title}</h3>
 						<p className="wsu-c-card__description">{this.props.description}</p>
