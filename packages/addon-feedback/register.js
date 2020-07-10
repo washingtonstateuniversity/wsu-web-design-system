@@ -22,7 +22,7 @@ addons.register(ADDON_ID, api => {
 		</AddonPanel>
 	);
 	
-	const title = 'Component Feedback';
+	const title = 'Feedback';
 
 	addons.add(PANEL_ID, {
 		type: types.PANEL,
