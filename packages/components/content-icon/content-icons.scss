@@ -4,6 +4,12 @@
 	margin: 2em auto;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 
+	& .label {
+		display: block;
+		font-weight: 500;
+		line-height: 1;
+	}
+
 	& i {
 		padding: 1em;
 		font-size: 24px;
@@ -18,11 +24,16 @@
 		margin-right: 10px;
 	}
 
-	& i > span {
+	& i > .icon-spec-container {
 		font-size: 11px;
 		font-style: normal;
 		flex-grow: 1;
 		text-align: right;
 		line-height: 2;
+	}
+
+	& .icon-spec-container_item {
+		line-height: 1.7;
+		margin-bottom: .8em;
 	}
 }

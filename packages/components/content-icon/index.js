@@ -28,520 +28,691 @@ class IconCheatsheet extends Component {
 		return (
 			<div className="icon-cheatsheet-container">
 				<i className="wsu-icon wsu-i-alarm">
-					<span>
-						wsu-i-alarm<br />
-						F101
-					</span>
+					<div class="icon-spec-container">
+						<div className="icon-spec-container_item"><span className="label">Name</span> alarm</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-alarm</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F101</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-alert-notification">
-					<span>
-						wsu-i-alert-notification<br />
-						F102
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> alert-notification</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-alert-notification</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F102</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-arrow-down-carrot">
-					<span>
-						wsu-i-arrow-down-carrot<br />
-						F103
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> arrow-down-carrot</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-arrow-down-carrot</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F103</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-arrow-down">
-					<span>
-						wsu-i-arrow-down<br />
-						F104
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> arrow-down</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-arrow-down</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F104</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-arrow-left-carrot">
-					<span>
-						wsu-i-arrow-left-carrot<br />
-						F105
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> arrow-left-carrot</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-arrow-left-carrot</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F105</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-arrow-left">
-					<span>
-						wsu-i-arrow-left<br />
-						F106
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> arrow-left</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-arrow-left</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F106</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-arrow-right-carrot">
-					<span>
-						wsu-i-arrow-right-carrot<br />
-						F107
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> arrow-right-carrot</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-arrow-right-carrot</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F107</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-arrow-right">
-					<span>
-						wsu-i-arrow-right<br />
-						F108
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> arrow-right</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-arrow-right</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F108</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-arrow-up-carrot">
-					<span>
-						wsu-i-arrow-up-carrot<br />
-						F109
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> arrow-up-carrot</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-arrow-up-carrot</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F109</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-arrow-up">
-					<span>
-						wsu-i-arrow-up<br />
-						F10A
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> arrow-up</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-arrow-up</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F10A</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-attachment">
-					<span>
-						wsu-i-attachment<br />
-						F10B
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> attachment</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-attachment</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F10B</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-basket">
-					<span>
-						wsu-i-basket<br />
-						F10C
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> basket</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-basket</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F10C</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-bookmark">
-					<span>
-						wsu-i-bookmark<br />
-						F10D
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> bookmark</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-bookmark</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F10D</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-calendar">
-					<span>
-						wsu-i-calendar<br />
-						F10E
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> calendar</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-calendar</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F10E</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-cart">
-					<span>
-						wsu-i-cart<br />
-						F10F
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> cart</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-cart</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F10F</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-check">
-					<span>
-						wsu-i-check<br />
-						F110
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> check</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-check</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F110</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-collapse">
-					<span>
-						wsu-i-collapse<br />
-						F111
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> collapse</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-collapse</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F111</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-comment">
-					<span>
-						wsu-i-comment<br />
-						F112
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> comment</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-comment</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F112</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-contrast">
-					<span>
-						wsu-i-contrast<br />
-						F113
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> contrast</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-contrast</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F113</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-credit-card">
-					<span>
-						wsu-i-credit-card<br />
-						F114
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> credit-card</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-credit-card</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F114</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-cut">
-					<span>
-						wsu-i-cut<br />
-						F115
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> cut</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-cut</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F115</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-discussion">
-					<span>
-						wsu-i-discussion<br />
-						F116
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> discussion</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-discussion</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F116</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-document">
-					<span>
-						wsu-i-document<br />
-						F117
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> document</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-document</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F117</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-download">
-					<span>
-						wsu-i-download<br />
-						F118
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> download</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-download</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F118</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-edit">
-					<span>
-						wsu-i-edit<br />
-						F119
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> edit</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-edit</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F119</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-email">
-					<span>
-						wsu-i-email<br />
-						F11A
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> email</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-email</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F11A</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-expand">
-					<span>
-						wsu-i-expand<br />
-						F11B
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> expand</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-expand</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F11B</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-favorite">
-					<span>
-						wsu-i-favorite<br />
-						F11C
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> favorite</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-favorite</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F11C</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-feedback">
-					<span>
-						wsu-i-feedback<br />
-						F11D
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> feedback</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-feedback</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F11D</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-filter">
-					<span>
-						wsu-i-filter<br />
-						F11E
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> filter</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-filter</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F11E</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-flag">
-					<span>
-						wsu-i-flag<br />
-						F11F
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> flag</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-flag</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F11F</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-gallery">
-					<span>
-						wsu-i-gallery<br />
-						F120
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> gallery</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-gallery</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F120</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-graph">
-					<span>
-						wsu-i-graph<br />
-						F121
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> graph</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-graph</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F121</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-home">
-					<span>
-						wsu-i-home<br />
-						F122
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> home</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-home</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F122</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-info">
-					<span>
-						wsu-i-info<br />
-						F123
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> info</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-info</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F123</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-key">
-					<span>
-						wsu-i-key<br />
-						F124
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> key</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-key</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F124</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-light-bulb">
-					<span>
-						wsu-i-light-bulb<br />
-						F125
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> light-bulb</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-light-bulb</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F125</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-link">
-					<span>
-						wsu-i-link<br />
-						F126
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> link</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-link</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F126</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-location">
-					<span>
-						wsu-i-location<br />
-						F127
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> location</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-location</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F127</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-map-location">
-					<span>
-						wsu-i-map-location<br />
-						F128
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> map-location</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-map-location</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F128</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-map">
-					<span>
-						wsu-i-map<br />
-						F129
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> map</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-map</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F129</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-menu">
-					<span>
-						wsu-i-menu<br />
-						F12A
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> menu</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-menu</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F12A</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-minus-circle">
-					<span>
-						wsu-i-minus-circle<br />
-						F12B
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> minus-circle</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-minus-circle</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F12B</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-minus">
-					<span>
-						wsu-i-minus<br />
-						F12C
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> minus</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-minus</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F12C</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-mobile">
-					<span>
-						wsu-i-mobile<br />
-						F12D
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> mobile</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-mobile</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F12D</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-monitor">
-					<span>
-						wsu-i-monitor<br />
-						F12E
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> monitor</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-monitor</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F12E</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-more-vertical">
-					<span>
-						wsu-i-more-vertical<br />
-						F12F
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> more-vertical</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-more-vertical</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F12F</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-more">
-					<span>
-						wsu-i-more<br />
-						F130
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> more</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-more</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F130</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-next">
-					<span>
-						wsu-i-next<br />
-						F131
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> next</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-next</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F131</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-pause">
-					<span>
-						wsu-i-pause<br />
-						F132
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> pause</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-pause</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F132</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-phone">
-					<span>
-						wsu-i-phone<br />
-						F133
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> phone</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-phone</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F133</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-photos">
-					<span>
-						wsu-i-photos<br />
-						F134
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> photos</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-photos</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F134</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-play-circle">
-					<span>
-						wsu-i-play-circle<br />
-						F135
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> play-circle</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-play-circle</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F135</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-play">
-					<span>
-						wsu-i-play<br />
-						F136
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> play</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-play</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F136</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-plus">
-					<span>
-						wsu-i-plus<br />
-						F137
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> plus</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-plus</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F137</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-pluse-circle">
-					<span>
-						wsu-i-pluse-circle<br />
-						F138
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> pluse-circle</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-pluse-circle</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F138</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-previous">
-					<span>
-						wsu-i-previous<br />
-						F139
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> previous</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-previous</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F139</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-print">
-					<span>
-						wsu-i-print<br />
-						F13A
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> print</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-print</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F13A</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-profile-circle">
-					<span>
-						wsu-i-profile-circle<br />
-						F13B
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> profile-circle</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-profile-circle</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F13B</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-profile">
-					<span>
-						wsu-i-profile<br />
-						F13C
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> profile</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-profile</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F13C</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-rate">
-					<span>
-						wsu-i-rate<br />
-						F13D
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> rate</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-rate</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F13D</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-refresh">
-					<span>
-						wsu-i-refresh<br />
-						F13E
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> refresh</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-refresh</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F13E</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-save">
-					<span>
-						wsu-i-save<br />
-						F13F
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> save</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-save</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F13F</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-search">
-					<span>
-						wsu-i-search<br />
-						F140
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> search</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-search</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F140</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-secure">
-					<span>
-						wsu-i-secure<br />
-						F141
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> secure</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-secure</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F141</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-send">
-					<span>
-						wsu-i-send<br />
-						F142
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> send</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-send</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F142</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-settings">
-					<span>
-						wsu-i-settings<br />
-						F143
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> settings</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-settings</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F143</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-share">
-					<span>
-						wsu-i-share<br />
-						F144
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> share</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-share</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F144</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-social-facebook">
-					<span>
-						wsu-i-social-facebook<br />
-						F145
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> social-facebook</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-social-facebook</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F145</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-social-instagram">
-					<span>
-						wsu-i-social-instagram<br />
-						F146
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> social-instagram</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-social-instagram</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F146</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-social-linkedin">
-					<span>
-						wsu-i-social-linkedin<br />
-						F147
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> social-linkedin</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-social-linkedin</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F147</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-social-twitter">
-					<span>
-						wsu-i-social-twitter<br />
-						F148
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> social-twitter</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-social-twitter</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F148</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-social-youtube">
-					<span>
-						wsu-i-social-youtube<br />
-						F149
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> social-youtube</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-social-youtube</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F149</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-stop-circle">
-					<span>
-						wsu-i-stop-circle<br />
-						F14A
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> stop-circle</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-stop-circle</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F14A</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-stop">
-					<span>
-						wsu-i-stop<br />
-						F14B
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> stop</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-stop</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F14B</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-tag">
-					<span>
-						wsu-i-tag<br />
-						F14C
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> tag</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-tag</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F14C</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-tent">
-					<span>
-						wsu-i-tent<br />
-						F14D
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> tent</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-tent</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F14D</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-time">
-					<span>
-						wsu-i-time<br />
-						F14E
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> time</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-time</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F14E</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-trash">
-					<span>
-						wsu-i-trash<br />
-						F14F
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> trash</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-trash</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F14F</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-upload">
-					<span>
-						wsu-i-upload<br />
-						F150
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> upload</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-upload</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F150</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-video-slideshow">
-					<span>
-						wsu-i-video-slideshow<br />
-						F151
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> video-slideshow</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-video-slideshow</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F151</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-warning-caution">
-					<span>
-						wsu-i-warning-caution<br />
-						F152
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> warning-caution</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-warning-caution</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F152</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-warning-stop">
-					<span>
-						wsu-i-warning-stop<br />
-						F153
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> warning-stop</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-warning-stop</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F153</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-x-close">
-					<span>
-						wsu-i-x-close<br />
-						F154
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> x-close</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-x-close</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F154</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-zoom-in">
-					<span>
-						wsu-i-zoom-in<br />
-						F155
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> zoom-in</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-zoom-in</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F155</div>
+					</div>
 				</i>
 				<i className="wsu-icon wsu-i-zoom-out">
-					<span>
-						wsu-i-zoom-out<br />
-						F156
-					</span>
+					<div class="icon-spec-container">
+						
+						<div className="icon-spec-container_item"><span className="label">Name</span> zoom-out</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-zoom-out</div>
+						<div className="icon-spec-container_item"><span className="label">Content Code</span> F156</div>
+					</div>
 				</i>
 			</div>
 		);
