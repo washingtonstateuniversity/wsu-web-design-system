@@ -1,0 +1,73 @@
+@import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
+@import '~@wsuwebteam/build-tools/scss/animate.css/animate.min.css';
+@import url('https://cdn.web.wsu.edu/designsystem/1.x/wsu-icons/dist/wsu-icons.bundle.css');
+
+.wsu-s-nav-vertical {
+
+	&__nav-container {
+		position: fixed;
+		width: $wsu-bt-nav-vertical-width-full;
+
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+
+	&__wrapper ul,
+	&__nav-list-container {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+	}
+
+	&__wrapper li,
+	&__nav-item {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		color: color(gray, 75);
+		text-decoration: none;
+	}
+
+	&__wrapper li > a,
+	&__nav-link {
+		color: color(gray, 75);
+		text-decoration: none;
+		padding: 10px 20px;
+		display: block;
+		border-left: 5px solid transparent;
+		@include font-size(0.9rem, 600);
+		position: relative;
+
+		&:visited {
+			@extend .wsu-s-nav-vertical__nav-link;
+		}
+
+		&:hover {
+			border-color: color(gray, 30);
+			outline: none;
+			background-color: rgba(0,0,0,0.05)
+		}
+	}
+
+	&__nav-item--has-children {
+
+		& > .wsu-s-nav-vertical__nav-link:after,
+		& > a::after  {
+			font-family: "wsu-icons";
+
+			position: absolute;
+			top: 50%;
+			right: $unit;
+
+			content: "\F137";
+			transition: color timing();
+			transform: translateY(-50%);
+			vertical-align: top;
+			font-size: 0.8rem;
+
+			color: color(gray, 40);
+		}
+
+	}
+
+}
