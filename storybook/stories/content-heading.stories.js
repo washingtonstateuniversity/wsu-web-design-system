@@ -2,10 +2,11 @@ import React from 'react';
 import { withA11y } from '@storybook/addon-a11y';
 import { withKnobs, text, boolean, number, select } from "@storybook/addon-knobs";
 
-import ContentHeading from '../index';
-import {ContentContainer} from '../../containers/index';
-import P from '../../content-paragraph/index';
-import ComponentWrapper from '../../../storybook-components/content-wrapper/index';
+import ContentHeading from '../../packages/components/content-heading/index';
+import P from '../../packages/components/content-paragraph/index';
+
+// Storybook Imports
+import ComponentWrapper from '../../packages/storybook-components/content-wrapper/index'
 
 // Story Time
 export default {

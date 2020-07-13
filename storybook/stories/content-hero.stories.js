@@ -3,7 +3,7 @@ import { withA11y } from '@storybook/addon-a11y';
 import { withKnobs, text, boolean, number, select } from "@storybook/addon-knobs";
 import { previewGroupID, optionsGroupID } from '@wsuwebteam/build-tools/js/helpers/storybook';
 
-import ContentHero from '../index';
+import ContentHero from '../../packages/components/content-hero/index';
 
 const spacingOptions = ['default','none','xsmall','small','medium','medium-large','large','xlarge'];
 

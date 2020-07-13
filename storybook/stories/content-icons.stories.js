@@ -4,8 +4,10 @@ import { withA11y } from '@storybook/addon-a11y';
 import { withKnobs, text, boolean, number, select } from "@storybook/addon-knobs";
 
 // Component Deps
-import Icon, { IconCheatsheet } from '../';
-import ComponentWrapper from '../../../storybook-components/content-wrapper/index';
+import Icon, { IconCheatsheet } from '../../packages/components/content-icon/index';
+
+// Storybook Imports
+import ComponentWrapper from '../../packages/storybook-components/content-wrapper/index'
 
 
 // Story Time
