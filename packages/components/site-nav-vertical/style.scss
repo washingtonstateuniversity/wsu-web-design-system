@@ -6,68 +6,101 @@
 
 	&__nav-container {
 		position: fixed;
+		z-index: z('modal') - 1;
+		top: 0;
+		left: 0;		
 		width: $wsu-bt-nav-vertical-width-full;
-
 		overflow-x: hidden;
 		overflow-y: auto;
+		height: 100vh;
 	}
 
-	&__wrapper ul,
-	&__nav-list-container {
+	& ul,
+	&__nav-list {
 		margin: 0;
 		padding: 0;
-		list-style-type: none;
 	}
 
-	&__wrapper li,
+	&__nav-list-container,
+	& li,
 	&__nav-item {
+		list-style-type: none;
 		margin: 0;
 		padding: 0;
-		list-style-type: none;
-		color: color(gray, 75);
-		text-decoration: none;
 	}
 
-	&__wrapper li > a,
+	& li > a,
 	&__nav-link {
-		color: color(gray, 75);
-		text-decoration: none;
-		padding: 10px 20px;
 		display: block;
+
+		padding: 10px 20px;
+
+		transition: background-color timing(), border-left timing();
+		text-decoration: none;
+
+		color: color(gray, 75);
 		border-left: 5px solid transparent;
-		@include font-size(0.9rem, 600);
+		outline: none;
 		position: relative;
 
-		&:visited {
-			@extend .wsu-s-nav-vertical__nav-link;
+		@include font-size(0.9rem, 600);
+
+		&:focus,
+		&:hover {
+			border-left: 5px solid color(gray, 30);
+			outline: none;
+			background-color: color(gray, 5);
 		}
 
-		&:hover {
-			border-color: color(gray, 30);
-			outline: none;
-			background-color: rgba(0,0,0,0.05)
+	}
+
+	/* Second Level submenu */
+	& li ul,
+	&__nav-item &__nav-list {
+
+		a {
+			padding-left: 30px;
+			font-size: .85rem;
+			font-weight: 400;
+			
+			&:hover {
+				background-color: color(gray, 10);
+			}
 		}
+
+		/* Thrid Level submenu */
+		ul,
+		.wsu-s-nav-vertical {
+
+			a {
+				padding-left: 50px;
+			}
+
+		}
+		
 	}
 
 	&__nav-item--has-children {
 
-		& > .wsu-s-nav-vertical__nav-link:after,
-		& > a::after  {
-			font-family: "wsu-icons";
+		background-color: color(gray, 5);
 
-			position: absolute;
-			top: 50%;
-			right: $unit;
-
-			content: "\F137";
-			transition: color timing();
-			transform: translateY(-50%);
-			vertical-align: top;
-			font-size: 0.8rem;
-
-			color: color(gray, 40);
+		> a {
+			&::after {
+				font-family: wsu-icons;
+				position: absolute;
+				top: 50%;
+				right: 20px;
+				content: "\F137";
+				-webkit-transition: color .3s cubic-bezier(0,0,.03,1);
+				-o-transition: color .3s cubic-bezier(0,0,.03,1);
+				transition: color .3s cubic-bezier(0,0,.03,1);
+				-webkit-transform: translateY(-50%);
+				-ms-transform: translateY(-50%);
+				transform: translateY(-50%);
+				vertical-align: top;
+				color: #999;
+			}
 		}
-
 	}
 
 }
