@@ -1,6 +1,8 @@
 // External Deps
 import React, { Component } from 'react';
 
+import './style.scss';
+
 const getContainerClasses = ( baseClass, classes  ) => {
 
 	if ( Array.isArray( classes ) ) {
