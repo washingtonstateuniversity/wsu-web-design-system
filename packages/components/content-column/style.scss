@@ -15,6 +15,7 @@ $column-spacing: (
 
 @mixin columns-props {
 	box-sizing: border-box;
+	padding-top: 1.5rem;
 	padding-right: 2.5rem;
 	padding-left: 2.5rem;
 }
@@ -74,6 +75,7 @@ $column-spacing: (
 	&[class*="wsu-u-background-"]  {
 
 		margin-top: 1.5rem;
+		padding-top: 1rem;
 
 		& + .wsu-c-column__wrapper .wsu-c-column {
 			padding-top: 1rem;
@@ -84,8 +86,8 @@ $column-spacing: (
 		}
 
 		.wsu-c-column {
-			padding-top: 1rem;
-			padding-bottom: 1rem;
+			/*padding-top: 1rem;
+			padding-bottom: 1rem;*/ 
 		}
 	}
 
@@ -218,7 +220,6 @@ $column-spacing: (
 	@include columns-props;
 
 	&[class*="wsu-u-background-"]  {
-		padding-top: 1rem;
 		padding-bottom: 1rem;
 	}
 
