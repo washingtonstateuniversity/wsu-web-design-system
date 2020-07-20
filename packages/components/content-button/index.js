@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import {getMarginSpacingClasses} from '@wsuwebteam/build-tools/js/helpers/spacingUtilityClasses';
 
@@ -12,23 +13,14 @@ const ContentButton = ( props ) => {
 
 	wrapperClasses.push('wsu-c-button__wrapper');
 
+
+
 	return (
 		<div class={ wrapperClasses.join(' ') }>
 			<Tag className={ containerClasses.join(' ') }>{props.buttonText}</Tag>
 		</div>
 	);
 
-}
-
-ContentButton.defaultProps = {
-    buttonText: '',
-	buttonUrl: '',
-	buttonSize: 'default',
-	className: '',
-	shape: 'default',
-	color: 'default',
-	size: 'default',
-	tag: 'default',
 }
 
 const getContentButtonClasses = ( props ) => {
@@ -51,6 +43,30 @@ const getContentButtonClasses = ( props ) => {
 
 	return classes;
 
+}
+
+ContentButton.propTypes = {
+	buttonText: PropTypes.string,
+	buttonUrl: PropTypes.string,
+	buttonSize: PropTypes.string,
+	className: PropTypes.string,
+	shape: PropTypes.string,
+	color: PropTypes.string,
+	size: PropTypes.string,
+	tag: PropTypes.string,
+	onClick: PropTypes.func
+}
+
+ContentButton.defaultProps = {
+	buttonText: '',
+	buttonUrl: '',
+	buttonSize: 'default',
+	className: '',
+	shape: 'default',
+	color: 'default',
+	size: 'default',
+	tag: 'default',
+	onClick: null
 }
 
 export default ContentButton;
