@@ -10,17 +10,17 @@ import './content-icons.scss';
 class Icon extends Component {
 	render() {
 		return (
-			<i className={'wsu-icon wsu-i-' + this.props.iconName}></i>
+			<i className={'wsu-icon wsu-i-' + this.props.name}></i>
 		);
 	}
 }
 
 Icon.propTypes = {
-	iconName: PropTypes.string
+	name: PropTypes.string
 };
 
 Icon.defaultProps = {
-	iconName: 'alarm'
+	name: 'alarm'
 };
 
 class IconCheatsheet extends Component {
