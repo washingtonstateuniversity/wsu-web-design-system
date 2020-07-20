@@ -69,7 +69,7 @@ class ContentCardFooterByline extends Component {
 				{this.props.date && <p className="wsu-c-card__byline-meta">
 					<Icon iconName='calendar' /> Published on {this.props.date}
 				</p>}
-				{this.props.author && <a className="wsu-c-card__author" rel="author" href={this.props.author.url}>{this.props.author.name}</a>}
+				{this.props.author && <p className="wsu-c-card__author">By <ContentLink isSecondary rel="author" href={this.props.author.url}>{this.props.author.name}</ContentLink></p>}
 			</div>
 		)
 	}

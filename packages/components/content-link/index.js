@@ -26,6 +26,7 @@ class ContentLink extends Component {
 						href={this.props.href} 
 						className={classes}
 						target={this.props.target}
+						rel={this.props.rel}
 					>
 						{this.props.children}
 					</a>
@@ -39,6 +40,7 @@ class ContentLink extends Component {
 						href={this.props.href} 
 						className={classes}
 						target={this.props.target}
+						rel={this.props.rel}
 					>
 						{this.props.children}
 					</a>
@@ -56,7 +58,8 @@ ContentLink.propTypes = {
 	isAnimated: PropTypes.bool,
 	isHighlyAccessible: PropTypes.bool,
 	isList: PropTypes.bool,
-	maxTagCount: PropTypes.number
+	maxTagCount: PropTypes.number,
+	rel: PropTypes.string
 }
 
 ContentLink.defaultProps = {
@@ -68,7 +71,8 @@ ContentLink.defaultProps = {
 	isHighlyAccessible: false,
 	isList: false,
 	isLast: true,
-	maxTagCount: 5
+	maxTagCount: 5,
+	rel: ''
 }
 
 export default ContentLink;

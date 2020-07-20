@@ -29,6 +29,35 @@ export const defaultCard = () => {
 				email={text('email', 'info@wsu.edu', previewGroupID)}
 				website={text('website', 'https://wsu.edu/', previewGroupID)}
 				image={{'src': 'https://source.unsplash.com/collection/895539', 'alt': 'alt text for image'}}
+				categories={[
+					{
+						'name': 'Sed category',
+						'url': '#' 
+					},
+					{
+						'name': 'Sed category',
+						'url': '#' 
+					}
+				]}
+				tags={[
+					{
+						'name': 'Fames',
+						'url': '#'
+					},
+					{
+						'name': 'Tristique',
+						'url': '#'
+					},
+					{
+						'name': 'Malesuada',
+						'url': '#'
+					}
+				]}
+				author={{
+					'name': 'John Doe', 
+					'url': 'https//wsu.edu'
+				}}
+				date={'7/17/2020'}
 			/>
 		</ComponentWrapper>
 	)
@@ -45,6 +74,7 @@ export const personCard = () => {
 				phoneNumber={text('phoneNumber', '123-456-7890', previewGroupID)}
 				email={text('email', 'info@wsu.edu', previewGroupID)}
 				website={text('website', 'https://wsu.edu/', previewGroupID)}
+				image={{'src': 'https://source.unsplash.com/collection/895539', 'alt': 'alt text for image'}}
 			/>
 		</ComponentWrapper>
 	)
@@ -56,6 +86,7 @@ export const newsCard = () => {
 			<ContentCard 
 				title={'Sed bibendum efficitur tellus non tristique'}
 				description={'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam rutrum lectus in metus pulvinar, quis gravida nulla pellentesque. Praesent dignissim et mi nec faucibus. Ut luctus, justo blandit suscipit placerat, purus velit ornare leo, ac lobortis nisi arcu consectetur erat. Integer in sapien augue. '}
+				image={{'src': 'https://source.unsplash.com/collection/895539', 'alt': 'alt text for image'}}
 				categories={[
 					{
 						'name': 'Sed category',
@@ -63,26 +94,6 @@ export const newsCard = () => {
 					},
 					{
 						'name': 'Sed category',
-						'url': '#' 
-					},
-					{
-						'name': 'Sed category',
-						'url': '#' 
-					},
-					{
-						'name': 'Sed category',
-						'url': '#' 
-					},
-					{
-						'name': 'Sed category',
-						'url': '#' 
-					},
-					{
-						'name': 'Sed category',
-						'url': '#' 
-					},
-					{
-						'name': 'Etiam rutrum',
 						'url': '#' 
 					}
 				]}
