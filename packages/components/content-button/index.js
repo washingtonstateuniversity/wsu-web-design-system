@@ -8,11 +8,14 @@ const ContentButton = ( props ) => {
 
 	let Tag = ('default' == props.tag ) ? 'button' : props.tag;
 	let containerClasses = getContentButtonClasses( props );
+	let wrapperClasses = getMarginSpacingClasses( props );
+
+	wrapperClasses.push('wsu-c-button__wrapper');
 
 	return (
-		<>
+		<div class={ wrapperClasses.join(' ') }>
 			<Tag className={ containerClasses.join(' ') }>{props.buttonText}</Tag>
-		</>
+		</div>
 	);
 
 }

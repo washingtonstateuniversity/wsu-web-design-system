@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './component.scss';
+import './style.scss';
 
 import WsuAccordions from './component.js';
 
