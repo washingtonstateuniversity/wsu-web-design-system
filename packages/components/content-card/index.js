@@ -4,39 +4,51 @@ import PropTypes from 'prop-types';
 
 // Component Deps
 import './content-card.scss';
-import ContentLink from '../content-link';
+
+import ContentCardPhoto from './component-parts/content-card-photo.js';
+import ContentCardTitle from './component-parts/content-card-title.js';
+import ContentCardDescription from './component-parts/content-card-description.js';
+import ContentCardAddress from './component-parts/content-card-address.js';
+import ContentCardPhoneNumber from './component-parts/content-card-phone.js';
+import ContentCardEmail from './component-parts/content-card-email.js';
+import ContentCardWebsite from './component-parts/content-card-website.js';
+import { 
+	ContentCardFooter,
+	ContentCardFooterTaxonomies,
+	ContentCardFooterByline
+} from './component-parts/content-card-footer';
 
 // Component Starts
 class ContentCard extends Component {
 	render() {
+
 		return (
 			<div className="wsu-c-card__wrapper">
 				<div className="wsu-c-card__container">
 					<div className="wsu-c-card__content">
-						<div className="wsu-c-card__photo-frame">
-							<div className="wsu-c-card__photo-wrapper">
-								<img className="wsu-c-card__photo" src="https://source.unsplash.com/collection/895539" alt="#" data-object-fit="" />
-							</div>
-						</div>
-						<h3 className="wsu-c-card__heading">{this.props.title}</h3>
-						<p className="wsu-c-card__description">{this.props.description}</p>
-						<div className="wsu-c-card__address">
-							<span className="wsu-c-card__address-line-1">{this.props.addressLine1}</span>
-							<span className="wsu-c-card__city-state-zip">{this.props.addressLine2}</span>
-						</div>
-						<div className="wsu-c-card__phone">
-							<a href={"tel:" + this.props.phoneNumber} className="wsu-c-card__phone-link">{this.props.phoneNumber}</a>
-						</div>
-						<div className="wsu-c-card__email">
-							<a href={"mailto:" + this.props.email} className="wsu-c-card__email-link">{this.props.email}</a>
-						</div>
-						<div className="wsu-c-card__website">
-							<a href={this.props.website} className="wsu-c-card__website-link">Website</a>
-						</div>
-						<footer className="wsu-c-card__content-footer">
-							<p className="wsu-c-card__categories"><span className="wsu-c-card__categories-label">More on:</span> <ContentLink>Sed Category</ContentLink>, <ContentLink>Sed Category</ContentLink>, <ContentLink>Sed Category</ContentLink></p>
 
-						</footer>
+						<ContentCardPhoto src={this.props.image.src} alt={this.props.image.alt} />
+
+						<ContentCardTitle title={this.props.title} />
+
+						<ContentCardDescription description={this.props.description} />
+
+						<ContentCardAddress addressLine1={this.props.addressLine1} addressLine2={this.props.addressLine2} />
+
+						<ContentCardPhoneNumber phoneNumber={this.props.phoneNumber} />
+
+						<ContentCardEmail email={this.props.email} />
+
+						<ContentCardWebsite website={this.props.website} />
+
+						<ContentCardFooter>
+
+							<ContentCardFooterTaxonomies categories={this.props.categories} tags={this.props.tags} />
+
+							<ContentCardFooterByline author={this.props.author} date={this.props.date} />
+
+						</ContentCardFooter>
+						
 					</div>
 				</div>
 			</div>
@@ -45,31 +57,33 @@ class ContentCard extends Component {
 }
 
 ContentCard.propTypes = {
-	title: PropTypes.string.isRequired,
-	description: PropTypes.string.isRequired,
-	addressLine1: PropTypes.string.isRequired,
-	addressLine2: PropTypes.string.isRequired,
-	phoneNumber: PropTypes.string.isRequired,
-	email: PropTypes.string.isRequired,
-	website: PropTypes.string.isRequired,
-	tags: PropTypes.object,
-	categories: PropTypes.object,
-	date: PropTypes.string
+	title: PropTypes.string,
+	description: PropTypes.string,
+	addressLine1: PropTypes.string,
+	addressLine2: PropTypes.string,
+	phoneNumber: PropTypes.string,
+	email: PropTypes.string,
+	website: PropTypes.string,
+	tags: PropTypes.array,
+	categories: PropTypes.array,
+	date: PropTypes.string,
+	author: PropTypes.object,
+	image: PropTypes.object
 }
 
 ContentCard.defaultProps = {
-	title: 'Pellentesque Habitant',
-	description: 'Morbi tristique senectus et netus et malesuada.',
-	addressLine1: '12345 Etiam rutrum lectus',
-	addressLine2: 'Pullman, WA 99163',
-	phoneNumber: '123-456-7890',
-	email: 'info@wsu.edu',
-	website: 'https://wsu.edu/',
-	tags: {},
-	categories: {},
+	title: '',
+	description: '',
+	addressLine1: '',
+	addressLine2: '',
+	phoneNumber: '',
+	email: '',
+	website: '',
+	tags: [],
+	categories: [],
 	date: '',
-	author: {}
-
+	author: {},
+	image: {}
 }
 
 export default ContentCard;

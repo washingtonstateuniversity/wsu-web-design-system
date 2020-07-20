@@ -57,7 +57,6 @@
 	width: 100%;
 	max-width: 600px;
 	margin: 0 auto;
-	padding-bottom: $unit-s;
 
 	transition: box-shadow timing();
 
@@ -68,6 +67,15 @@
 
 	&:hover {
 		@include elevate(6);
+
+		// TODO: Only change the bg color if the whole card is clickable
+		& .wsu-c-card__byline-container {
+			background-color: color(gray, 0);
+
+			&::after {
+				color: color(gray, 40);
+			}
+		}
 	}
 }
 
@@ -95,21 +103,74 @@
 	object-position: center;
 }
 
+/* News Card Styles
+======================= */
 .wsu-c-card__content-footer {
 	border-top: 2px solid color(gray, 10);
-	margin: $unit-2xs $unit;
+	margin: $unit-s $unit 0;
 	font-size: 75%;
 }
 
 .wsu-c-card__categories {
-	& .wsu-c-card__category-item {
-		
-	}
+	margin: $unit 0 0 0;
 }
 
 .wsu-c-card__categories-label {
 	text-transform: uppercase;
 	font-weight: 500;
+}
+
+.wsu-c-card__tags {
+	line-height: 1;
+	vertical-align: bottom;
+	margin: $unit-2xs 0 $unit-xs 0;
+}
+
+.wsu-c-card__tags-label .wsu-icon::before {
+	vertical-align: middle;
+}
+
+.wsu-c-card__tags-more {
+	color: inherit;
+	text-decoration: none;
+	font-size: 200%;
+	padding-left: 5px;
+	padding-right: 5px;
+
+	& .wsu-icon::before {
+		display: inline-block;
+		margin-top: 4px;
+	}
+}
+
+.wsu-c-card__byline-container {
+	background-color: color(white, primary);
+	margin: 0 -#{$unit};
+	padding: $unit-2xs $unit;
+	position: relative;
+	transition: timing() background-color;
+
+	// TODO: Only display the chain icon if the whole card is clickable
+	&::after {
+		content: "\F126"; 
+		font-family: "wsu-icons";
+		position: absolute;
+		top: 50%;
+		right: $unit-xl;
+		transform: translateY(-50%);
+		color: color(gray, 20);
+		transition: timing() color;
+		font-size: 24px;
+	}
+}
+
+.wsu-c-card__byline-meta {
+	margin: $unit-s 0 0;
+}
+
+.wsu-c-card__author {
+	display: inline-block;
+	margin-bottom: $unit-s;
 }
 
 /* Heading / Description
@@ -155,7 +216,7 @@
 }
 
 .wsu-c-card__address-line-1,
-.wsu-c-card__city-state-zip {
+.wsu-c-card__address-line-2 {
 	display: block;
 }
 
