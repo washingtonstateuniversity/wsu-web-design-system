@@ -9,6 +9,7 @@ import './content-link.scss';
 // Component Starts
 class ContentLink extends Component {
 	render() {
+
 		const classes = classnames(
 			'wsu-c-link', 
 			{
@@ -18,15 +19,32 @@ class ContentLink extends Component {
 			}
 		)
 
-		return (
-			<a 
-				href={this.props.href} 
-				className={classes}
-				target={this.props.target}
-			>
-				{this.props.children}
-			</a>
-		);
+		if ( this.props.isList && !this.props.isLast ) {
+			return (
+				<>
+					<a 
+						href={this.props.href} 
+						className={classes}
+						target={this.props.target}
+					>
+						{this.props.children}
+					</a>
+					{', '} 
+				</>
+			);	
+		} else {
+			return (
+				<>
+					<a 
+						href={this.props.href} 
+						className={classes}
+						target={this.props.target}
+					>
+						{this.props.children}
+					</a>
+				</>
+			);
+		}
 	}
 }
 
@@ -36,7 +54,9 @@ ContentLink.propTypes = {
 	target: PropTypes.string,
 	isSecondary: PropTypes.bool,
 	isAnimated: PropTypes.bool,
-	isHighlyAccessible: PropTypes.bool
+	isHighlyAccessible: PropTypes.bool,
+	isList: PropTypes.bool,
+	maxTagCount: PropTypes.number
 }
 
 ContentLink.defaultProps = {
@@ -45,7 +65,10 @@ ContentLink.defaultProps = {
 	target: '_self',
 	isSecondary: false,
 	isAnimated: false,
-	isHighlyAccessible: false
+	isHighlyAccessible: false,
+	isList: false,
+	isLast: true,
+	maxTagCount: 5
 }
 
 export default ContentLink;

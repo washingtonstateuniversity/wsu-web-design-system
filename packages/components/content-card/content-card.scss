@@ -68,6 +68,7 @@
 	&:hover {
 		@include elevate(6);
 
+		// TODO: Only change the bg color if the whole card is clickable
 		& .wsu-c-card__byline-container {
 			background-color: color(gray, 0);
 
@@ -149,8 +150,9 @@
 	position: relative;
 	transition: timing() background-color;
 
+	// TODO: Only display the chain icon if the whole card is clickable
 	&::after {
-		content: "\F126";
+		content: "\F126"; 
 		font-family: "wsu-icons";
 		position: absolute;
 		top: 50%;

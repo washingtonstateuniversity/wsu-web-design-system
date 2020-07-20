@@ -28,6 +28,7 @@ export const defaultCard = () => {
 				phoneNumber={text('phoneNumber', '123-456-7890', previewGroupID)}
 				email={text('email', 'info@wsu.edu', previewGroupID)}
 				website={text('website', 'https://wsu.edu/', previewGroupID)}
+				image={{'src': 'https://source.unsplash.com/collection/895539', 'alt': 'alt text for image'}}
 			/>
 		</ComponentWrapper>
 	)
@@ -61,6 +62,26 @@ export const newsCard = () => {
 						'url': '#' 
 					},
 					{
+						'name': 'Sed category',
+						'url': '#' 
+					},
+					{
+						'name': 'Sed category',
+						'url': '#' 
+					},
+					{
+						'name': 'Sed category',
+						'url': '#' 
+					},
+					{
+						'name': 'Sed category',
+						'url': '#' 
+					},
+					{
+						'name': 'Sed category',
+						'url': '#' 
+					},
+					{
 						'name': 'Etiam rutrum',
 						'url': '#' 
 					}
@@ -79,6 +100,11 @@ export const newsCard = () => {
 						'url': '#'
 					}
 				]}
+				author={{
+					'name': 'John Doe', 
+					'url': 'https//wsu.edu'
+				}}
+				date={'7/17/2020'}
 			/>
 		</ComponentWrapper>
 	)
