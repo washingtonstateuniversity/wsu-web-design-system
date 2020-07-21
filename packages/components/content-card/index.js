@@ -64,11 +64,23 @@ ContentCard.propTypes = {
 	phoneNumber: PropTypes.string,
 	email: PropTypes.string,
 	website: PropTypes.string,
-	tags: PropTypes.array,
-	categories: PropTypes.array,
+	tags: PropTypes.shape({
+		name: PropTypes.string,
+		url: PropTypes.string
+	}),
+	categories: PropTypes.shape({
+		name: PropTypes.string,
+		url: PropTypes.string
+	}),
 	date: PropTypes.string,
-	author: PropTypes.object,
-	image: PropTypes.object
+	author: PropTypes.shape({
+		name: PropTypes.string,
+		url: PropTypes.string
+	}),
+	image: PropTypes.shape({
+		url: PropTypes.string,
+		alt: PropTypes.string
+	}),
 }
 
 ContentCard.defaultProps = {

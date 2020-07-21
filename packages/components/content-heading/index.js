@@ -1,6 +1,8 @@
 // External Deps
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
+// Component Deps
 import './style.scss';
 
 class ContentHeading extends Component {
@@ -44,14 +46,22 @@ class ContentHeading extends Component {
 			</Tag>
 		);
 	}
+}
 
-	static defaultProps = {
-		tag: 'h1',
-		name: false,
-		link: false,
-		style: 'default',
-		width: 'full',
-	}
+ContentHeading.propTypes = {
+	tag: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
+	name: PropTypes.string,
+	link: PropTypes.string,
+	style: PropTypes.string,
+	width: PropTypes.string
+}
+
+ContentHeading.defaultProps = {
+	tag: 'h1',
+	name: '',
+	link: '#',
+	style: 'default',
+	width: 'full',
 }
 
 export default ContentHeading;
