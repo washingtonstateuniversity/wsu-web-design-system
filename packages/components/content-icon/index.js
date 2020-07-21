@@ -474,11 +474,11 @@ class IconCheatsheet extends Component {
 						<div className="icon-spec-container_item"><span className="label">Content Code</span> <code>\F138</code></div>
 					</div>
 				</i>
-				<i className="wsu-icon wsu-i-codevious">
+				<i className="wsu-icon wsu-i-previous">
 					<div class="icon-spec-container">
 						
-						<div className="icon-spec-container_item"><span className="label">Name</span> codevious</div>
-						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-codevious</div>
+						<div className="icon-spec-container_item"><span className="label">Name</span> previous</div>
+						<div className="icon-spec-container_item"><span className="label">Class Name</span> wsu-i-previous</div>
 						<div className="icon-spec-container_item"><span className="label">Content Code</span> <code>\F139</code></div>
 					</div>
 				</i>
