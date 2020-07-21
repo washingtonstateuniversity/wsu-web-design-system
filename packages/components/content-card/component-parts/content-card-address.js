@@ -7,9 +7,9 @@ class ContentCardAddress extends Component {
 
 		if ( !empty(this.props.addressLine1) || !empty(this.props.addressLine2)) {
 			return (
-				<div class="wsu-c-card__address">
-					{this.props.addressLine1 && <span class="wsu-c-card__address-line-1">{this.props.addressLine1}</span>}
-					{this.props.addressLine2 && <span class="wsu-c-card__address-line-2">{this.props.addressLine2}</span>}
+				<div className="wsu-c-card__address">
+					{this.props.addressLine1 && <span className="wsu-c-card__address-line-1">{this.props.addressLine1}</span>}
+					{this.props.addressLine2 && <span className="wsu-c-card__address-line-2">{this.props.addressLine2}</span>}
 				</div>
 			)
 		}

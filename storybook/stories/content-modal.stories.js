@@ -13,7 +13,7 @@ import '../../packages/components/content-modal/content-modal.scss';
 
 // Story Time
 export default {
-	title: 'Content Modal',
+	title: 'Components/Content/Modal',
 	decorators: [
 		withA11y,
 		withKnobs,

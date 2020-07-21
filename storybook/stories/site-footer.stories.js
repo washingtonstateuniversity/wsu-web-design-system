@@ -12,7 +12,7 @@ import SiteFooter from '../../packages/components/site-footer/index';
 
 // Story Time
 export default {
-	title: 'Site Footer',
+	title: 'Components/Site/Footer',
 	decorators: [
 		withA11y,
 		withKnobs

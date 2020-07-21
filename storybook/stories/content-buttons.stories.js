@@ -14,7 +14,7 @@ const spacingOptions = ['default','none','xsmall','small','medium','medium-large
 
 // Story Time
 export default {
-	title: 'Content Button',
+	title: 'Components/Content/Button',
 	decorators: [
 		withA11y,
 		withKnobs,

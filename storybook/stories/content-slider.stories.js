@@ -12,7 +12,7 @@ import ContentSlider from '../../packages/components/content-slider/index';
 
 // Story Time
 export default {
-	title: 'Content Slider',
+	title: 'Components/Content/Slider',
 	decorators: [
 		withA11y,
 		withKnobs

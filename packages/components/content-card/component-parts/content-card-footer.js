@@ -47,10 +47,10 @@ class ContentCardFooterTaxonomies extends Component {
 					<span className="wsu-c-card__tags-label"><Icon iconName='tag' /></span>
 					{/* TODO: This currently displays all tags, this might be an issue if a post/item has a ton of tags. We need to add some sort of mechanism to cap tags at a certain point and display the "more" ellipsis icon instead */}
 					{
-						this.props.tags.map( (category, i) => {
+						this.props.tags.map( (tag, i) => {
 							let isLast = ((this.props.tags.length - 1) == i) ? true : false;
 
-							return <ContentLink url={category.url} isSecondary isList={true} isLast={isLast}>{category.name}</ContentLink>;
+							return <ContentLink url={tag.url} isSecondary isList={true} isLast={isLast}>{tag.name}</ContentLink>;
 						})
 					}
 				</p> }
