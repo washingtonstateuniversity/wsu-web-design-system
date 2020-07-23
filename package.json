@@ -5,6 +5,7 @@
   "private": true,
   "main": "src/index.js",
   "dependencies": {
+    "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
@@ -23,9 +24,10 @@
     "@storybook/react": "^5.3.19",
     "@whitespace/storybook-addon-html": "^1.2.1",
     "@wsuwebteam/build-tools": "^1.4.5",
-    "@wsuwebteam/wsu-icons": "^2.0.3",
-    "autoprefixer": "^9.8.4",
+    "@wsuwebteam/wsu-icons": "^2.0.5",
+    "autoprefixer": "^9.8.5",
     "babel-loader": "^8.1.0",
+    "classnames": "^2.2.6",
     "css-loader": "^3.6.0",
     "file-loader": "^4.3.0",
     "html-loader": "^1.1.0",

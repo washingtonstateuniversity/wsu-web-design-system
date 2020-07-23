@@ -57,7 +57,7 @@
 	width: 100%;
 	max-width: 600px;
 	margin: 0 auto;
-	padding-bottom: $unit-s;
+	padding: 0;
 
 	transition: box-shadow timing();
 
@@ -68,6 +68,19 @@
 
 	&:hover {
 		@include elevate(6);
+
+		// TODO: Only change the bg color if the whole card is clickable
+		& .wsu-c-card__byline-container {
+			// background-color: color(gray, 0);
+
+			&::after {
+				// color: color(gray, 40);
+			}
+		}
+	}
+
+	& > *:last-child {
+		margin-bottom: $unit-xs;
 	}
 }
 
@@ -75,6 +88,7 @@
 	width: 100%;
 	padding-bottom: 56.25%;
 	position: relative;
+	margin-bottom: $unit;
 }
 
 .wsu-c-card__photo-wrapper {
@@ -95,29 +109,87 @@
 	object-position: center;
 }
 
+/* News Card Styles
+======================= */
 .wsu-c-card__content-footer {
-	border-top: 2px solid color(gray, 10);
-	margin: $unit-2xs $unit;
-	font-size: 75%;
+	border-top: 2px solid color(gray, 0);
+	margin: $unit $unit 0;
+	@include font-size(12px, 400);
+
+	& > *:last-child {
+		margin-bottom: $unit-s;
+	}
 }
 
 .wsu-c-card__categories {
-	& .wsu-c-card__category-item {
-		
-	}
+	margin: $unit-xs 0 $unit-xs 0;
 }
 
 .wsu-c-card__categories-label {
 	text-transform: uppercase;
-	font-weight: 500;
+	// @include font-size(12px, 400);
+	transform: scale(.85) translate(-5px, 1px);
+	display: inline-block;
+
+}
+
+.wsu-c-card__tags {
+	line-height: 1;
+	vertical-align: bottom;
+	margin: $unit-xs 0 $unit-xs 0;
+}
+
+.wsu-c-card__tags-label .wsu-icon {
+	margin-right: $unit-xs;
+}
+
+.wsu-c-card__tags-more {
+	color: inherit;
+	text-decoration: none;
+	padding-left: 5px;
+	padding-right: 5px;
+
+	& .wsu-icon::before {
+		display: inline-block;
+		margin-top: 4px;
+	}
+}
+
+.wsu-c-card__byline-container {
+	background-color: color(white, primary);
+	margin: $unit 0 $unit-xs 0;
+	position: relative;
+	transition: timing() background-color;
+
+	// TODO: Only display the chain icon if the whole card is clickable
+	// &::after {
+	// 	content: "\F126"; 
+	// 	font-family: "wsu-icons";
+	// 	position: absolute;
+	// 	top: 50%;
+	// 	right: $unit-xl;
+	// 	transform: translateY(-50%);
+	// 	color: color(gray, 20);
+	// 	transition: timing() color;
+	// 	font-size: 24px;
+	// }
+}
+
+.wsu-c-card__byline-meta {
+	margin: 0;
+}
+
+.wsu-c-card__author {
+	margin: 0;
+	margin-left: $unit;
 }
 
 /* Heading / Description
 ======================= */
 .wsu-c-card__heading,
 .wsu-c-card__description {
-	margin: 0;
-	padding: 0 $unit;
+	margin: 0 $unit;
+	padding: 0;
 }
 
 .wsu-c-card__heading {
@@ -155,7 +227,7 @@
 }
 
 .wsu-c-card__address-line-1,
-.wsu-c-card__city-state-zip {
+.wsu-c-card__address-line-2 {
 	display: block;
 }
 

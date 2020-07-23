@@ -7,23 +7,26 @@ import { previewGroupID, optionsGroupID } from '@wsuwebteam/build-tools/js/helpe
 import ComponentWrapper from '../../packages/storybook-components/content-wrapper/index'
 
 // Component Imports
-import ContentButton from '../../packages/components/content-buttons/index';
+import ContentButton from '../../packages/components/content-button/index';
+import '../../packages/components/content-link/content-link.scss';
 
 const spacingOptions = ['default','none','xsmall','small','medium','medium-large','large','xlarge'];
 
 // Story Time
 export default {
-	title: 'Content Button',
+	title: 'Components/Content/Button',
 	decorators: [
 		withA11y,
 		withKnobs,
-		storyFn => <ComponentWrapper layout="centered">{storyFn()}</ComponentWrapper>
 	]
 };
 
 export const DefaultButton = () => {
+
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : false;
  
 	return (
+		<ComponentWrapper layout="centered" className={classes}>
 			<ContentButton
 				tag={ select( 'tag',['default','a','button','div'],'default', optionsGroupID )  }
 				buttonText={ text( 'buttonText','Lorem Ipsum', optionsGroupID ) }
@@ -33,6 +36,7 @@ export const DefaultButton = () => {
 				shape={ select( 'shape',['default','square','round'],'default', optionsGroupID )  }
 				color={ select( 'color',['default','crimson','white'],'default', optionsGroupID )  }
 				size={ select( 'size',['default','small','medium','large'],'default', optionsGroupID )  }
-			/> 
+			/>
+		</ComponentWrapper>
 	)
 }
