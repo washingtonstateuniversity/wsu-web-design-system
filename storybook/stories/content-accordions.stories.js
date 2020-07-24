@@ -10,7 +10,7 @@ import P from '../../packages/components/content-paragraph/index';
 
 // Story Time
 export default {
-	title: 'Content Accordion',
+	title: 'Components/Content/Accordion',
 	decorators: [
 		withA11y,
 		withKnobs

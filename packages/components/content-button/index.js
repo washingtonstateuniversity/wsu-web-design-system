@@ -16,7 +16,7 @@ const ContentButton = ( props ) => {
 
 
 	return (
-		<div class={ wrapperClasses.join(' ') }>
+		<div className={ wrapperClasses.join(' ') }>
 			<Tag className={ containerClasses.join(' ') }>{props.buttonText}</Tag>
 		</div>
 	);

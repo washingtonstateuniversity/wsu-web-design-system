@@ -10,7 +10,7 @@ import P from '../../packages/components/content-paragraph/index';
 
 // Story Time
 export default {
-	title: 'Content Columns',
+	title: 'Components/Content/Columns',
 	decorators: [
 		withA11y,
 		withKnobs
