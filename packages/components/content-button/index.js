@@ -5,19 +5,34 @@ import {getMarginSpacingClasses} from '@wsuwebteam/build-tools/js/helpers/spacin
 
 import './style.scss';
 
-const ContentButton = ( props ) => {
+const ContentButton = ( props, ref ) => {
+	console.log(props);
 
 	let Tag = ('default' == props.tag ) ? 'button' : props.tag;
 	let containerClasses = getContentButtonClasses( props );
 	let wrapperClasses = getMarginSpacingClasses( props );
 
+
+	const {
+		url,
+		className,
+		shape,
+		color,
+		size,
+		tag,
+		...additionalProps
+	} = props;
+
 	wrapperClasses.push('wsu-c-button__wrapper');
-
-
 
 	return (
 		<div className={ wrapperClasses.join(' ') }>
-			<Tag className={ containerClasses.join(' ') }>{props.buttonText}</Tag>
+			<Tag 
+				{ ...additionalProps }
+				className={ containerClasses.join(' ') }
+			>
+				{props.children}
+			</Tag>
 		</div>
 	);
 
@@ -46,27 +61,21 @@ const getContentButtonClasses = ( props ) => {
 }
 
 ContentButton.propTypes = {
-	buttonText: PropTypes.string,
-	buttonUrl: PropTypes.string,
-	buttonSize: PropTypes.string,
+	url: PropTypes.string,
+	size: PropTypes.string,
 	className: PropTypes.string,
 	shape: PropTypes.string,
 	color: PropTypes.string,
-	size: PropTypes.string,
 	tag: PropTypes.string,
-	onClick: PropTypes.func
 }
 
 ContentButton.defaultProps = {
-	buttonText: '',
-	buttonUrl: '',
-	buttonSize: 'default',
+	url: '',
+	size: 'default',
 	className: '',
 	shape: 'default',
 	color: 'default',
-	size: 'default',
 	tag: 'default',
-	onClick: null
 }
 
 export default ContentButton;

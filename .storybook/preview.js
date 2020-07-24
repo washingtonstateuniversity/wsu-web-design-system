@@ -1,6 +1,10 @@
 import { addDecorator } from '@storybook/react';
 import { addParameters } from '@storybook/client-api';
 import { withHTML } from '@whitespace/storybook-addon-html/react';
+import '@storybook/addon-console';
+import { setConsoleOptions } from '@storybook/addon-console';
+import { withConsole } from '@storybook/addon-console';
+
 
 const customViewports = {
 	mobile: {
@@ -31,3 +35,10 @@ addParameters({
 });
 
 addDecorator(withHTML);
+
+setConsoleOptions({
+	panelExclude: [],
+	});
+
+
+addDecorator((storyFn, context) => withConsole()(storyFn)(context));

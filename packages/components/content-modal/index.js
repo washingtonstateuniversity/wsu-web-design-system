@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import wsu_wds from '@wsuwebteam/build-tools/js/wsu-bt-wds';
 
 // Component Deps
 import './content-modal.scss';
@@ -9,8 +10,70 @@ import Icon from '../content-icon';
 
 // Component Starts
 class ContentModal extends Component {
-	render() {
 
+	constructor(){
+		super();
+
+		console.log('constructor');
+
+		
+		wsu_wds.modal = {
+			toggleModal: this.toggleModal()
+		};
+
+		console.log(wsu_wds);
+	}
+
+	getModal(modalName) {
+		const modal = document.querySelectorAll(modalName);
+		return modal;
+	}
+
+	openModal() {
+
+		console.log('openModal working');
+
+		return 'test';
+
+
+		// this.getModal(modalName);
+
+		// console.log(modal);
+		// modal.setAttribute('class', this.params['priority_nav_list_item_list_class_name']);
+	}
+
+	closeModal(modalName) {
+		return null;
+	}
+
+	toggleModal(modalName) {
+
+		console.log('toggle that modal');
+		// if toggle is open
+		// if ()
+			// close
+		// if closed 
+			// open
+	}
+
+	componentDidMount() {
+		console.log('componentDidMount');
+		// wsu_wds.modal = {
+		// 	openModal: this.openModal(),
+		// 	closeModal: this.closeModal(),
+		// 	toggleModal: this.toggleModal()
+		// };
+		
+		// console.log(wsu_wds);
+
+		const element = '';
+
+		// if element with attribute exists
+			// Add event listener
+			// element.addEventListener('onClick', this.toggle_modal.bind(this));
+	}
+
+	render() {
 		const classes = classnames(
 			'wsu-c-modal__wrapper', 
 			{
@@ -29,7 +92,7 @@ class ContentModal extends Component {
 					aria-modal="true"
 					className={classes}
 				>
-						<button class="wsu-c-modal__close-button">Close <Icon name="x-close" /></button>
+						<button className="wsu-c-modal__close-button">Close <Icon name="x-close" /></button>
 						{this.props.children}
 				</div>
 				<div className="wsu-c-modal__overlay"></div>
