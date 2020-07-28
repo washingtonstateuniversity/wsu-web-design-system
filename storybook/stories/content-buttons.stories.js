@@ -36,6 +36,7 @@ export const DefaultButton = () => {
 				shape={ select( 'shape',['default','square','round'],'default', optionsGroupID )  }
 				color={ select( 'color',['default','crimson','white'],'default', optionsGroupID )  }
 				size={ select( 'size',['default','small','medium','large'],'default', optionsGroupID )  }
+				buttonAlign={ select( 'buttonAlign',['left','rigt','center'],'default', optionsGroupID )  }
 			/>
 		</ComponentWrapper>
 	)
