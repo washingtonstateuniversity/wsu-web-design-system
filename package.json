@@ -40,6 +40,7 @@
     "objectFitPolyfill": "^2.3.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "postcss-loader": "^3.0.0",
+    "react-countup": "^4.3.3",
     "rimraf": "^3.0.2",
     "sass": "^1.26.9",
     "sass-loader": "^8.0.2",
