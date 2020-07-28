@@ -12,7 +12,7 @@ import GlobalFooter from '../../packages/components/global-footer/index';
 
 // Story Time
 export default {
-	title: 'Global Footer',
+	title: 'Components/Global/Footer',
 	decorators: [
 		withA11y,
 		withKnobs

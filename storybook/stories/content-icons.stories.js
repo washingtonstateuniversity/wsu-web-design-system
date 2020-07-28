@@ -12,7 +12,7 @@ import ComponentWrapper from '../../packages/storybook-components/content-wrappe
 
 // Story Time
 export default {
-	title: 'Content Icons',
+	title: 'Components/Content/Icons',
 	decorators: [
 		withA11y,
 		withKnobs

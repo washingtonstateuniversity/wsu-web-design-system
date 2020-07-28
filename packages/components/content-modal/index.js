@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import wsu_wds from '@wsuwebteam/build-tools/js/wsu-bt-wds';
 
 // Component Deps
 import './content-modal.scss';
@@ -9,8 +10,22 @@ import Icon from '../content-icon';
 
 // Component Starts
 class ContentModal extends Component {
-	render() {
 
+	componentDidMount(){ 
+		if (this.props.isOpen) {
+			document.addEventListener('keyup', this.handleEscape.bind(this));
+		}
+	}
+
+	handleEscape(event) {
+		const escapeKeyCode = 27;
+
+		if (event.keyCode == escapeKeyCode) {
+			this.props.closeModal();
+		}
+	}
+
+	render() {
 		const classes = classnames(
 			'wsu-c-modal__wrapper', 
 			{
@@ -29,10 +44,10 @@ class ContentModal extends Component {
 					aria-modal="true"
 					className={classes}
 				>
-						<button class="wsu-c-modal__close-button">Close <Icon name="x-close" /></button>
+						<button className="wsu-c-modal__close-button" onClick={this.props.closeModal}>Close <Icon name="x-close" /></button>
 						{this.props.children}
 				</div>
-				<div className="wsu-c-modal__overlay"></div>
+				<div className="wsu-c-modal__overlay" onClick={this.props.closeModal}></div>
 			</>
 		);
 	}

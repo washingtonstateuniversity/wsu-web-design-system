@@ -12,7 +12,7 @@ import GlobalHeader from '../../packages/components/global-header/index';
 
 // Story Time
 export default {
-	title: 'Global Header',
+	title: 'Components/Global/Header',
 	decorators: [
 		withA11y,
 		withKnobs

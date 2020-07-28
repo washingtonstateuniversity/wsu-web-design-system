@@ -4,17 +4,17 @@ import { withKnobs, text, boolean, number, select } from "@storybook/addon-knobs
 import { previewGroupID, optionsGroupID } from '@wsuwebteam/build-tools/js/helpers/storybook';
 
 // Storybook Imports
-import ComponentWrapper from '../../packages/storybook-components/content-wrapper/index'
-
+import ComponentWrapper from '../../packages/storybook-components/content-wrapper/index';
 import ContentCard from '../../packages/components/content-card/index';
 
 // Story Time
 export default {
-	title: 'Content Card',
+	title: 'Components/Content/Card',
 	decorators: [
 		withA11y,
 		withKnobs
-	]
+	],
+	component: ContentCard
 };
 
 export const defaultCard = () => {

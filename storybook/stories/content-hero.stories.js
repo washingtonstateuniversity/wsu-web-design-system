@@ -9,7 +9,7 @@ const spacingOptions = ['default','none','xsmall','small','medium','medium-large
 
 // Story Time
 export default {
-	title: 'Content Hero Banner',
+	title: 'Components/Content/Hero Banner',
 	decorators: [
 		withA11y,
 		withKnobs

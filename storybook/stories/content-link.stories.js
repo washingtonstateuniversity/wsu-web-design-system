@@ -13,7 +13,7 @@ import ContentHeading from '../../packages/components/content-heading/index';
 
 // Story Time
 export default {
-	title: 'Content Link',
+	title: 'Components/Content/Link',
 	decorators: [
 		withA11y,
 		withKnobs

@@ -10,11 +10,12 @@ import ComponentWrapper from '../../packages/storybook-components/content-wrappe
 
 // Story Time
 export default {
-	title: 'Content Heading',
+	title: 'Components/Content/Heading',
 	decorators: [
 		withA11y,
 		withKnobs
-	]
+	],
+	component: ContentHeading
 };
 
 const contentGroupID = 'Preview';
