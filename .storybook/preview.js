@@ -5,7 +5,7 @@ import '@storybook/addon-console';
 import { setConsoleOptions } from '@storybook/addon-console';
 import { withConsole } from '@storybook/addon-console';
 
-
+// Add Custom viewports
 const customViewports = {
 	mobile: {
 		name: 'Mobile',
@@ -34,11 +34,20 @@ addParameters({
 	viewport: { viewports: customViewports },
 });
 
+// Add HTML output Panel
 addDecorator(withHTML);
 
+// Add Console to Actions Panel
 setConsoleOptions({
 	panelExclude: [],
 	});
 
 
 addDecorator((storyFn, context) => withConsole()(storyFn)(context));
+
+// Sort stories
+addParameters({
+	options: {
+	storySort: (a, b) => {}
+	},
+});

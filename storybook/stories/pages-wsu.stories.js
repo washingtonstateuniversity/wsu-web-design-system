@@ -15,7 +15,7 @@ import ContentHero from '../../packages/components/content-hero';
 
 // Story Time
 export default {
-	title: 'Pages/WSU',
+	title: 'Page Templates/WSU',
 	decorators: [
 		withA11y,
 		withKnobs
