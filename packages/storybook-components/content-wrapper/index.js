@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import './style.scss';
 
@@ -23,11 +24,18 @@ const ComponentWrapper = ( props ) => {
 	);
 }
 
+ComponentWrapper.propTypes = {
+	layout: PropTypes.oneOf(['full', 'content', 'centered']),
+	className: PropTypes.bool,
+	width: PropTypes.string,
+	showEnds: PropTypes.bool,
+}
+
 ComponentWrapper.defaultProps = {
-	layout:'full', // supported options full,content,centered
-	className:false,
-	width:'full',
-	showEnds:false,
+	layout: 'full',
+	className: false,
+	width: 'full',
+	showEnds: false,
 }
 
 export default ComponentWrapper;
