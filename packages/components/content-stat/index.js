@@ -18,9 +18,9 @@ class ContentStat extends Component {
 
 		return (
 			<div className={classes}>
-				<div className="wsu-c-stat__label">{this.props.label}</div>
-				<CountUp end={this.props.value} prefix={this.props.prefix} suffix={this.props.suffix} separator={this.props.separator} className="wsu-c-stat__value" />
-				<p className="wsu-c-stat__description">{this.props.description}</p>
+				{this.props.label && <div className="wsu-c-stat__label">{this.props.label}</div>}
+				<CountUp end={this.props.value}  duration={this.props.duration} prefix={this.props.prefix} suffix={this.props.suffix} separator={this.props.separator} className="wsu-c-stat__value" />
+				{this.props.description && <p className="wsu-c-stat__description">{this.props.description}</p>}
 			</div>
 		);
 	}
@@ -33,6 +33,7 @@ ContentStat.propTypes = {
 	prefix: PropTypes.string,
 	suffix: PropTypes.string,
 	separator: PropTypes.string,
+	duration: PropTypes.number
 }
 
 ContentStat.defaultProps = {
@@ -42,6 +43,7 @@ ContentStat.defaultProps = {
 	prefix: '',
 	suffix: '',
 	separator: ',',
+	duration: 1.5
 }
 
 export default ContentStat;
