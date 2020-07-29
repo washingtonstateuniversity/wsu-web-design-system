@@ -7,7 +7,6 @@ import { previewGroupID, optionsGroupID } from '@wsuwebteam/build-tools/js/helpe
 import ComponentWrapper from '../../../packages/storybook-components/content-wrapper/';
 import './global-colors.scss';
 
-
 // Story Time
 export default {
 	title: 'Elements/Colors',
