@@ -10,7 +10,7 @@ import './global-colors.scss';
 
 // Story Time
 export default {
-	title: 'Design Tokens/Colors',
+	title: 'Elements/Colors',
 	decorators: [
 		withA11y,
 		withKnobs,
@@ -24,25 +24,14 @@ export const AllColors = () => {
 	return (
 		<ComponentWrapper layout="content" className={classes}>
 			<h2>Crimson</h2>
-			<div className="wsu-u-requirements">
-				<p>Mixin usage example:
-					<pre>color: color(primary, base);</pre>
-					<pre>color: color(primary, light);</pre>
-				</p>
-			</div>
-
 			<div className="wsu-c-colors_crimson">
 				<div className="box"></div>
 				<div className="box"></div>
 			</div>
 
-			<h2>Gray</h2>
-			<div className="wsu-u-requirements">
-				<p>Mixin usage example:
-					<pre>color: color(gray, 50);</pre>
-				</p>
-			</div>
+			<hr />
 
+			<h2>Gray</h2>
 			<div className="wsu-c-colors_gray">
 				<div className="box"></div>
 				<div className="box"></div>
