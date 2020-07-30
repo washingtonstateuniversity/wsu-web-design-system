@@ -46,8 +46,8 @@
 .wsu-c-content .wsu-c-button--white,
 .wsu-c-button--white {
 	background-color: color( white, base );
-	color: #7F7F7F;
-	border: 1px solid #E5E5E5;
+	color: color(gray,60);
+	border: 1px solid color(gray,30);
 
 	&:hover {
 		color: color(primary, light );
