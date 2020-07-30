@@ -7,9 +7,13 @@ import {getUtilityClasses} from '@wsuwebteam/build-tools/js/helpers/utilityClass
 import './style.scss';
 
 const ContentButton = ( props, ref ) => {
-	console.log(props);
+	
 
-	let Tag = ('default' == props.tag ) ? 'button' : props.tag;
+	if ( ! props.buttonText ) {
+		return null;
+	}
+
+	let Tag = ('default' == props.tag ) ? 'a' : props.tag;
 
 	let containerClasses = getUtilityClasses(
 		[
@@ -33,8 +37,6 @@ const ContentButton = ( props, ref ) => {
 		['wsu-c-button__wrapper']
 	)
 
-	wrapperClasses.push('wsu-c-button__wrapper');
-
 	return (
 		<div class={ wrapperClasses }>
 			<Tag className={ containerClasses }>{props.buttonText}</Tag>
@@ -45,7 +47,8 @@ const ContentButton = ( props, ref ) => {
 
 
 ContentButton.propTypes = {
-	url: PropTypes.string,
+	buttonText:PropTypes.string,
+	buttonUrl: PropTypes.string,
 	size: PropTypes.string,
 	className: PropTypes.string,
 	shape: PropTypes.string,
@@ -55,7 +58,8 @@ ContentButton.propTypes = {
 }
 
 ContentButton.defaultProps = {
-	url: '',
+	buttonText:'',
+	buttonUrl: '',
 	size: 'default',
 	className: '',
 	shape: 'default',

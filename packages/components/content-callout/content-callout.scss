@@ -1,0 +1,284 @@
+@import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
+
+@mixin layout-vertical {
+
+	.wsu-c-callout {
+
+		&__container {
+			display: flex;
+			flex-direction: column;
+		}
+	
+		&__image-frame {
+			width: 100%;
+			max-width: none;
+			min-width: none;
+			margin-bottom: 0.5rem;
+		}
+	
+		&__content {
+			width: 100%;
+			padding-left: 0;
+		}
+
+		&__title {
+			font-size: 1rem;
+		}
+
+	}
+
+}
+
+.wsu-c-callout {
+
+	font-family: "Montserrat", sans-serif;
+
+	&__container {
+		display: flex;
+
+		.wsu-c-button__wrapper {
+			margin-top: 1.5rem;
+			margin-bottom: 0;
+		}
+	}
+
+	&__image-frame {
+		width: 200px;
+		flex: 0 0 auto;
+
+		& + .wsu-c-callout__content {
+			padding-left: 30px;
+		}
+	}
+
+	&__image-wrapper {
+		position: relative;
+		padding-top: 100%;
+		overflow: hidden;
+	}
+
+	&__content {
+		flex: 1 1 auto;
+	}
+
+	&__title {
+		font-size: 1.2rem;
+		font-weight: 600;
+		line-height: 1.35em;
+		margin-top: 0.5em;
+		margin-bottom: 1em;
+    	padding-bottom: 0.5em;
+		color: color(gray, 90 );
+		position: relative;
+
+		&::after {
+			content:'';
+			background-color: color(gray,10);
+			width: 25px;
+			height: 5px;
+			display: block;
+			position: absolute;
+			bottom:-5px;
+			left: 0;
+		}
+
+		&-link {
+			text-decoration: none;
+			color: inherit;
+			transition: 300ms ease all;
+			text-decoration: none;
+			border-bottom-width: 0;
+			border-bottom-style: solid;
+			border-bottom-color: #CA1237;
+
+			&::after {
+				font-family: "wsu-icons";
+				left: calc(100% + 5px);
+				display: inline-block;
+				padding-left: 5px;
+				content: "\F126";
+				transition: 300ms ease all;
+				transform: scale(0.85);
+				text-decoration: none;
+				font-size: 0.7em;
+				font-weight: 400;
+				line-height: 1.5;
+			}
+
+			&:hover {
+				color: inherit;
+				border-bottom-width: 3px;
+				outline: none;
+			}
+		}
+	}
+
+	&__description {
+		font-weight: 300;
+		margin-top: 0;
+		font-size: 0.95rem;
+	}
+
+	&__wrapper {
+		margin-bottom: 2em;
+
+		@media screen and (max-width: 600px) {
+			@include layout-vertical;
+		}
+	}
+
+	&__image {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		object-fit: cover;
+		object-position: center center;
+		width: 100%;
+		height: 100%;
+
+		&--small {
+			.wsu-c-callout__image-frame {
+				width: 200px;
+				flex: 0 0 auto;
+			}
+
+			@media screen and (max-width: 600px) {
+				@include layout-vertical;
+			}
+		}
+
+		&--xsmall {
+			.wsu-c-callout__image-frame {
+				width: 125px;
+				min-width: 125px;
+				flex: 0 0 auto;
+			}
+
+			@media screen and (max-width: 600px) {
+				@include layout-vertical;
+			}
+		}
+
+		&--medium {
+			.wsu-c-callout__image-frame {
+				width: 300px;
+				max-width: 300px;
+				flex: 0 0 auto;
+			}
+
+			@media screen and (max-width: 650px) {
+				@include layout-vertical;
+			}
+		}
+
+		&--large {
+			.wsu-c-callout__image-frame {
+				width: 50%;
+				max-width: none;
+				flex: 1 1 auto;
+
+				& + .wsu-c-callout__content {
+					width: 50%;
+					max-width: none;
+					flex: 1 1 auto;
+					padding-left: 40px;
+				}
+			}
+
+			
+
+			@media screen and (max-width: 700px) {
+				@include layout-vertical;
+			}
+		}
+
+		&--portrait {
+
+			.wsu-c-callout__image-wrapper {
+				padding-top: 115%;
+			}
+
+		}
+
+		&--square {
+
+			.wsu-c-callout__image-wrapper {
+				padding-top: 100%;
+			}
+
+		}
+
+		&--landscape {
+
+			.wsu-c-callout__image-wrapper {
+				padding-top: 65%;
+			}
+
+		}
+
+		&--video {
+
+			.wsu-c-callout__image-wrapper {
+				padding-top: 56.25%;
+			}
+
+		}
+
+		&--circle {
+			.wsu-c-callout__image-wrapper {
+				padding-top: 100%;
+				border-radius: 50%;
+			}
+		}
+
+		&--notched {
+			.wsu-c-callout__image {
+				clip-path: polygon(100% 0, 100% calc(100% - 45px), calc(100% - 45px) 100%, 0 100%, 0 0);
+			}
+		}
+	}
+
+
+	&__layout {
+
+		&--vertical {
+
+			@include layout-vertical;
+
+		}
+
+		&--horizontal {
+
+			.wsu-c-callout {
+
+				&__container {
+					display: flex;
+					flex-direction: row;
+				}
+			
+			}
+
+		}
+	}
+
+	&__vertical-align {
+
+		&--center {
+
+			.wsu-c-callout {
+
+				&__content {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+				}
+			
+			}
+
+		}
+
+	}
+
+}
