@@ -6,7 +6,7 @@ import ContentHeading from '../../packages/components/content-heading/index';
 import P from '../../packages/components/content-paragraph/index';
 
 // Storybook Imports
-import ComponentWrapper from '../../packages/storybook-components/content-wrapper/index'
+import ComponentWrapper from '../../packages/storybook-components/content-wrapper';
 
 // Story Time
 export default {
