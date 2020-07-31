@@ -56,7 +56,7 @@ ContentHeading.propTypes = {
 ContentHeading.defaultProps = {
 	tag: 'h1',
 	name: '',
-	link: '#',
+	link: '',
 	style: 'default',
 	width: 'full',
 }

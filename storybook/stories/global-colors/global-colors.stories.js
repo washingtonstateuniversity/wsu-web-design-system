@@ -9,7 +9,7 @@ import './global-colors.scss';
 
 // Story Time
 export default {
-	title: 'Elements/Colors',
+	title: 'Elements/Color',
 	decorators: [
 		withA11y,
 		withKnobs,

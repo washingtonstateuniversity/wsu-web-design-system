@@ -35,8 +35,12 @@
 /* Dark Theme
 ======================= */
 .wsu-s-header__wrapper--dark {
-	color: color(white, base);
 	background: color(gray, 80);
+
+	.wsu-s-header__title,
+	.wsu-s-header__subtitle {
+		color: color(white, base);
+	}
 
 	@extend .wsu-s-header__wrapper;
 }

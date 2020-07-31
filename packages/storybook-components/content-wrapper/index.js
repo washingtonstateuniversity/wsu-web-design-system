@@ -26,14 +26,14 @@ const ComponentWrapper = ( props ) => {
 
 ComponentWrapper.propTypes = {
 	layout: PropTypes.oneOf(['full', 'content', 'centered']),
-	className: PropTypes.bool,
+	className: PropTypes.string,
 	width: PropTypes.string,
 	showEnds: PropTypes.bool,
 }
 
 ComponentWrapper.defaultProps = {
 	layout: 'full',
-	className: false,
+	className: '',
 	width: 'full',
 	showEnds: false,
 }

@@ -1,4 +1,3 @@
-// External Deps
 import React from 'react';
 import { withA11y } from '@storybook/addon-a11y';
 import { withKnobs, text, boolean, number, select } from "@storybook/addon-knobs";
@@ -7,28 +6,36 @@ import { previewGroupID, optionsGroupID } from '@wsuwebteam/build-tools/js/helpe
 // Storybook Imports
 import ComponentWrapper from '../../packages/storybook-components/content-wrapper';
 
-// Component Deps
-import { SiteFooter, SiteFooterCondensed } from '../../packages/components';
+import { SiteHeader } from '../../packages/components';
 
 // Story Time
 export default {
-	title: 'Components/Site/Footer',
+	title: 'Components/Site/Header',
 	decorators: [
 		withA11y,
 		withKnobs
-	]
+	],
+	component: SiteHeader
 };
 
-export const DefaultFooter = () => {
+export const DefaultHeader = () => {
 
 	return (
-		<SiteFooter />
+		<ComponentWrapper layout="full">
+
+			<SiteHeader />
+			
+		</ComponentWrapper>
 	)
 }
 
-export const CondensedFooter = () => {
+export const DarkHeader = () => {
 
 	return (
-		<SiteFooterCondensed />
+		<ComponentWrapper layout="full">
+
+			<SiteHeader isDark/>
+			
+		</ComponentWrapper>
 	)
 }
