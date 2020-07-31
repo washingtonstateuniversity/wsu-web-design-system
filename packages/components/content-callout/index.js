@@ -5,7 +5,8 @@ import {getUtilityClasses} from '@wsuwebteam/build-tools/js/helpers/utilityClass
 import {
 	ContentCalloutImg,
 	ContentCalloutTitle,
-	ContentCalloutDescription
+	ContentCalloutDescription,
+	ContentCalloutVideo
 } from './component-parts.js';
 
 import ContentButton from '../content-button/index';
@@ -33,6 +34,9 @@ const ContentCallout = ( props ) => {
 					imageSrc={props.imageSrc}
 					imageAlt={props.imageAlt}
 					link={props.link}
+					videoSrc={props.videoSrc}
+					/>
+				<ContentCalloutVideo
 					videoSrc={props.videoSrc}
 					/>
 				<div className="wsu-c-callout__content">

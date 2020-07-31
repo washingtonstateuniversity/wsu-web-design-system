@@ -2,7 +2,7 @@
 
 /* Default content link styles
 ============================== */
-.wsu-c-content a,
+.wsu-c-content a:not([class^="wsu-c"]):not([class*=" wsu-c"]),
 a.wsu-c-link {
 	transition: border-bottom-width timing( 100 );
 	text-decoration: none;
