@@ -1,0 +1,348 @@
+@import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
+
+/* Cards Container / Wrapper / Helpers
+======================= */
+.wsu-c-cards__wrapper {
+	display: flex;
+	flex-flow: row wrap;
+
+	padding: 0 $unit-xs;
+
+	&.wsu-c-cards__items-per-row {
+		&--1 .wsu-c-card__container,
+		&--2 .wsu-c-card__container,
+		&--3 .wsu-c-card__container,
+		&--4 .wsu-c-card__container,
+		&--5 .wsu-c-card__container {
+			padding: $unit-xs $unit;
+		}
+
+		&--1 .wsu-c-card__wrapper {
+			width: 100%;
+		}
+
+		&--2 .wsu-c-card__wrapper {
+			width: 100%;
+		}
+
+		&--3 .wsu-c-card__wrapper {
+			width: 100%;
+		}
+
+		&--4 .wsu-c-card__wrapper {
+			width: 100%;
+		}
+
+		&--5 .wsu-c-card__wrapper {
+			width: 100%;
+		}
+	}
+}
+
+/* WSU Card Styles
+======================= */
+.wsu-c-card__wrapper {
+	display: flex;
+}
+
+.wsu-c-card__container {
+	display: flex;
+	flex: 1 1 auto;
+	flex-direction: column;
+}
+
+.wsu-c-card__content {
+	overflow: hidden;
+
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 0;
+
+	transition: box-shadow timing();
+
+	color: color(gray, 75);
+	border-radius: $wsu-bt-base-border-radius-size;
+
+	@include elevate(3);
+
+	&:hover {
+		@include elevate(6);
+
+		// TODO: Only change the bg color if the whole card is clickable
+		& .wsu-c-card__byline-container {
+			// background-color: color(gray, 0);
+
+			&::after {
+				// color: color(gray, 40);
+			}
+		}
+	}
+
+	& > *:last-child {
+		margin-bottom: $unit-xs;
+	}
+}
+
+.wsu-c-card__photo-frame {
+	width: 100%;
+	padding-bottom: 56.25%;
+	position: relative;
+	margin-bottom: $unit;
+}
+
+.wsu-c-card__photo-wrapper {
+	width: auto;
+	height: auto;
+	margin: 0;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.wsu-c-card__photo {
+	width: 100%;
+    height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+/* News Card Styles
+======================= */
+.wsu-c-card__content-footer {
+	border-top: 2px solid color(gray, 0);
+	margin: $unit $unit 0;
+	@include font-size(12px, 400);
+
+	& > *:last-child {
+		margin-bottom: $unit-s;
+	}
+}
+
+.wsu-c-card__categories {
+	margin: $unit-xs 0 $unit-xs 0;
+}
+
+.wsu-c-card__categories-label {
+	text-transform: uppercase;
+	// @include font-size(12px, 400);
+	transform: scale(.85) translate(-5px, 1px);
+	display: inline-block;
+
+}
+
+.wsu-c-card__tags {
+	line-height: 1;
+	vertical-align: bottom;
+	margin: $unit-xs 0 $unit-xs 0;
+}
+
+.wsu-c-card__tags-label .wsu-icon {
+	margin-right: $unit-xs;
+}
+
+.wsu-c-card__tags-more {
+	color: inherit;
+	text-decoration: none;
+	padding-left: 5px;
+	padding-right: 5px;
+
+	& .wsu-icon::before {
+		display: inline-block;
+		margin-top: 4px;
+	}
+}
+
+.wsu-c-card__byline-container {
+	background-color: color(white, primary);
+	margin: $unit 0 $unit-xs 0;
+	position: relative;
+	transition: timing() background-color;
+
+	// TODO: Only display the chain icon if the whole card is clickable
+	// &::after {
+	// 	content: "\F126"; 
+	// 	font-family: "wsu-icons";
+	// 	position: absolute;
+	// 	top: 50%;
+	// 	right: $unit-xl;
+	// 	transform: translateY(-50%);
+	// 	color: color(gray, 20);
+	// 	transition: timing() color;
+	// 	font-size: 24px;
+	// }
+}
+
+.wsu-c-card__byline-meta {
+	margin: 0;
+}
+
+.wsu-c-card__author {
+	margin: 0;
+	margin-left: $unit;
+}
+
+/* Heading / Description
+======================= */
+.wsu-c-card__heading,
+.wsu-c-card__description {
+	margin: 0 $unit;
+	padding: 0;
+}
+
+.wsu-c-card__heading {
+	margin-top: $unit;
+
+	@include font-size(14px, 500);
+}
+
+.wsu-c-card__description {
+	font-style: italic;
+
+	margin-bottom: $unit-xs;
+
+	@include font-size(14px, 400);
+}
+
+/* Address
+======================= */
+.wsu-c-card__address {
+	position: relative;
+
+	margin: 0 $unit-xs;
+	padding: $unit-xs $unit-2xl;
+
+	@include font-size(13px, 300);
+
+	&::before {
+		position: absolute;
+		left: $unit-xs;
+
+		color: color(primary, light); // TODO play around with gray, red sort of implies linkage
+
+		@include wsu-icon("\F127");
+	}
+}
+
+.wsu-c-card__address-line-1,
+.wsu-c-card__address-line-2 {
+	display: block;
+}
+
+/* Links
+======================= */
+.wsu-c-card__phone-link,
+.wsu-c-card__email-link,
+.wsu-c-card__website-link {
+	position: relative;
+
+	display: block;
+
+	margin: 0 $unit-xs;
+	padding: $unit-xs $unit-l $unit-xs $unit-2xl;
+
+	transition: background-color timing('husky', 'ease');
+	text-decoration: none;
+
+	color: color(primary, light);
+
+	@include font-size(13px, 300);
+
+	&:hover {
+		border-radius: $wsu-bt-base-border-radius-size;
+		background-color: color(gray, 0);
+
+		@include font-size(13px, 400);
+	}
+
+	&:active,
+	&:visited {
+		color: color(primary, light);
+	}
+
+	&::before {
+		position: absolute;
+		left: $unit-xs;
+	}
+}
+
+/* Phone
+======================= */
+.wsu-c-card__phone-link::before {
+	@include wsu-icon("\F133");
+}
+
+/* Email
+======================= */
+.wsu-c-card__email-link {
+	word-break: break-word;
+
+	&::before {
+		@include wsu-icon("\F11A");
+	}
+}
+
+/* Website
+======================= */
+.wsu-c-card__website-link::before {
+	@include wsu-icon("\F10D");
+}
+
+/* Media Queries
+======================= */
+@include mq('xsmall') {
+	.wsu-c-cards__wrapper {
+		&.wsu-c-cards__items-per-row {
+			&--1 .wsu-c-card__container,
+			&--2 .wsu-c-card__container,
+			&--3 .wsu-c-card__container,
+			&--4 .wsu-c-card__container,
+			&--5 .wsu-c-card__container {
+				padding: $unit-xs;
+			}
+
+			&--2 .wsu-c-card__wrapper {
+				width: 50%;
+			}
+
+			&--3 .wsu-c-card__wrapper,
+			&--4 .wsu-c-card__wrapper,
+			&--5 .wsu-c-card__wrapper {
+				width: 50%;
+			}
+		}
+	}
+}
+
+@include mq('small') {
+	.wsu-c-cards__wrapper.wsu-c-cards__items-per-row {
+		&--3 .wsu-c-card__wrapper,
+		&--4 .wsu-c-card__wrapper,
+		&--5 .wsu-c-card__wrapper {
+			width: 33.33%;
+		}
+	}
+}
+
+@include mq('medium') {
+	.wsu-c-cards__wrapper {
+		padding: 0;
+		& .wsu-c-cards__items-per-row {
+			&--4 .wsu-c-card__wrapper {
+				width: 25%;
+			}
+
+			&--5 .wsu-c-card__wrapper {
+				width: 20%;
+			}
+		}
+	}
+}
+
+@include mq('large') {
+	.wsu-c-cards__wrapper {
+		padding: 0;
+	}
+}

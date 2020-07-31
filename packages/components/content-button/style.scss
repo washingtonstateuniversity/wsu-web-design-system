@@ -1,0 +1,75 @@
+@import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
+
+.wsu-c-button__wrapper {
+	margin-bottom: 2em;
+}
+
+.wsu-c-button a,
+.wsu-c-content button,
+.wsu-c-content .wsu-c-button,
+.wsu-c-button {
+
+	display: inline-block;
+
+	border-radius: 8px;
+	border: none;
+
+	color: color(white, base );
+	background-color: color(primary, light);
+
+	@include font-size(1rem, 600);
+
+	padding: 1em 3em;
+
+	transition: box-shadow timing(cougar, standard);
+
+	cursor: pointer;
+
+	&:hover {
+		color: color(white, base);
+		background-color: color(primary, base);
+		box-shadow: 0 5px 18px rgba(0, 0, 0, 0.4);
+	}
+
+	&:visited {
+		color: color(white, base );
+	}
+
+}
+
+
+.wsu-c-button a {
+	display: block;
+	text-decoration: none;
+}
+
+.wsu-c-content .wsu-c-button--white,
+.wsu-c-button--white {
+	background-color: color( white, base );
+	color: color(gray,60);
+	border: 1px solid color(gray,30);
+
+	&:hover {
+		color: color(primary, light );
+		background-color: color( white, base );
+		border: 1px solid color(primary, light );
+	}
+}
+
+.wsu-c-content .wsu-c-button--small,
+.wsu-c-button--small {
+	@include font-size(0.8rem, 600);
+}
+
+.wsu-c-content .wsu-c-button--large,
+.wsu-c-button--large {
+	@include font-size(1.25rem, 600);
+}
+
+.wsu-c-content .wsu-c-button--round,
+.wsu-c-button--round {
+
+	border-radius: 25px;
+
+}
+

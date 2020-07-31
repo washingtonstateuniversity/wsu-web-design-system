@@ -1,0 +1,117 @@
+@import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
+
+.wsu-g-footer-wrapper {
+	background-color: color(gray, 80);
+}
+
+.wsu-g-footer {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.wsu-g-footer__copyright {
+	padding: $unit;
+
+	color: color(gray, 0);
+
+	@include font-size(14px);
+}
+
+.wsu-g-footer__nav {
+	margin-right: $unit;
+}
+
+.wsu-g-footer__nav-list {
+	display: flex;
+
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
+}
+
+.wsu-g-footer__nav-item {
+	position: relative;
+
+	@include show-child-class-on-hover('.wsu-g-footer__social-list-container');
+}
+
+.wsu-g-footer__nav-item--show-more {
+	@extend .wsu-g-footer__nav-item;
+}
+
+.wsu-g-footer__nav-item--show-more .wsu-g-footer__nav-link::before {
+	font-family: "wsu-icons";
+
+	position: absolute;
+	right: -$unit;
+
+	content: '\F109';
+	transition: transform timing();
+}
+
+.wsu-g-footer__nav-item--show-more:hover .wsu-g-footer__nav-link::before {
+	transform: rotate(180deg);
+}
+
+.wsu-g-footer__nav-link {
+	display: flex;
+	align-items: center;
+
+	margin-right: $unit;
+	margin-left: $unit;
+	padding: $unit 0;
+
+	text-decoration: none;
+
+	@include border-bottom-hover($top-percentage: 92%, $width: 100%);
+	@include font-size(14px);
+
+	&:link,
+	&:visited {
+		color: color(gray, 0);
+	}
+}
+
+.wsu-g-footer__nav-arrow {
+	fill: white;
+	@include is-icon(16px);
+}
+
+.wsu-g-footer__social-list-container {
+	position: absolute;
+	right: $unit;
+	bottom: 100%;
+
+	padding: $unit-xs 0;
+}
+
+.wsu-g-footer__social-list {
+	margin: 0;
+	padding: $unit-s 0;
+
+	list-style: none;
+
+	border-radius: 3px;
+	background-color: color(gray, 75);
+}
+
+.wsu-g-footer__social-item {
+	@include font-size(24px);
+}
+
+.wsu-g-footer__social-link {
+	display: block;
+
+	padding: $unit-xs $unit;
+
+	transition: color timing();
+	text-decoration: none;
+
+	color: color(gray, 30);
+
+	&:hover {
+		color: color(white, base);
+	}
+}
