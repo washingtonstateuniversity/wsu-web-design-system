@@ -54,6 +54,10 @@
 		background-color: color( white, base );
 		border: 1px solid color(primary, light );
 	}
+
+	&:visited {
+		color: color(gray,60);
+	}
 }
 
 .wsu-c-content .wsu-c-button--small,
