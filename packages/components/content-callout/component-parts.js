@@ -22,41 +22,45 @@ const ContentCalloutLink = ( props ) => {
 // Component Starts
 const ContentCalloutImg = ( props ) => {
 
-	if ( empty( props.imageSrc ) ) {
+	if ( empty( props.imageSrc ) || ! empty( props.videoSrc ) ) {
 		return null;
-	} else if ( ! empty( props.videoSrc ) ) {
+	} 
 
-	    let videoSrc = props.videoSrc + '?&byline=0&title=0&portrait=0';
-
-		return (
-			<div className="wsu-c-callout__image-frame">
-				<div className="wsu-c-callout__image-wrapper">
-					{ props.imageSrc && <img className="wsu-c-callout__image" src={props.imageSrc} alt={props.imageAlt} /> }
-					<iframe
-						className="wsu-c-callout__video"
-						src={videoSrc}
-						frameborder="0" 
-						allow="autoplay; fullscreen" 
-						allowfullscreen>
-					</iframe>
-					<span className="wsu-c-callout__video-play"></span>
-				</div>
+	return (
+		<div className="wsu-c-callout__image-frame">
+			<div className="wsu-c-callout__image-wrapper">
+				<ContentCalloutLink link={props.link} className="wsu-c-callout__image-link" >
+				<img className="wsu-c-callout__image" src={props.imageSrc} alt={props.imageAlt} />
+				</ContentCalloutLink>
 			</div>
-		);
+		</div>
+	);
 
-	} else {
 
-		return (
-			<div className="wsu-c-callout__image-frame">
-				<div className="wsu-c-callout__image-wrapper">
-					<ContentCalloutLink link={props.link} className="wsu-c-callout__image-link" >
-					<img className="wsu-c-callout__image" src={props.imageSrc} alt={props.imageAlt} />
-					</ContentCalloutLink>
-				</div>
+}
+
+// Component Starts
+const ContentCalloutVideo= ( props ) => {
+
+	if ( empty( props.videoSrc  ) ) {
+		return null;
+	} 
+
+	let videoSrc = props.videoSrc + '?&byline=0&title=0&portrait=0';
+
+	return (
+		<div className="wsu-c-callout__image-frame">
+			<div className="wsu-c-callout__image-wrapper">
+				<iframe
+					className="wsu-c-callout__video"
+					src={videoSrc}
+					frameborder="0" 
+					allow="autoplay; fullscreen" 
+					allowfullscreen>
+				</iframe>
 			</div>
-		);
-
-	}
+		</div>
+	);
 
 }
 
@@ -102,4 +106,4 @@ ContentCalloutDescription.defaultProps = {
 
 
 
-export { ContentCalloutImg, ContentCalloutTitle, ContentCalloutDescription };
+export { ContentCalloutImg, ContentCalloutVideo, ContentCalloutTitle, ContentCalloutDescription };

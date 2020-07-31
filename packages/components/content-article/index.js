@@ -5,7 +5,7 @@ import {
 	ArticleCopy,
 	ArticleFooter,
 	ArticleHeader
-} from './component-parts';
+} from './component-parts/components';
 
 const ContentArticle = ( props, ref ) => {
 	return(
