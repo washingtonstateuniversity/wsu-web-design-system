@@ -2,7 +2,6 @@
 @import '~@wsuwebteam/wsu-icons/dist/wsu-icons.bundle.css';
 
 @mixin default-heading-link {
-
 	a {
 		transition: 300ms ease all;
 		text-decoration: none;
@@ -59,6 +58,7 @@
 	font-family: $wsu-bt-primary-font-family;
 	margin-top: 0;
 	margin-bottom: 0.5em;
+	color: color(gray, 85);
 
 	@include default-heading-link;
 

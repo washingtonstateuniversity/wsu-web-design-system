@@ -24,7 +24,7 @@ class ContentHeading extends Component {
 				{ key:'textAlign', classSlug:'textalign' },
 			],
 			this.props,
-			['wsu-c-heading']
+			'wsu-c-heading'
 		)
 
 		return (
