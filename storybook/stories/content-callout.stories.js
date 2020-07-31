@@ -40,6 +40,7 @@ export const DefaultCallout = () => {
 				isNotched={ boolean('isNotched', false, optionsGroupID ) }
 				buttonText={ text( 'buttonText','Learn More', optionsGroupID ) }
 				buttonUrl={ text( 'buttonUrl','#', optionsGroupID ) }
+				videoSrc={text( 'videoSrc','', optionsGroupID )}
 				/>
 		</ComponentWrapper>
 	)

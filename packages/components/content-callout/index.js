@@ -33,6 +33,7 @@ const ContentCallout = ( props ) => {
 					imageSrc={props.imageSrc}
 					imageAlt={props.imageAlt}
 					link={props.link}
+					videoSrc={props.videoSrc}
 					/>
 				<div className="wsu-c-callout__content">
 				<ContentCalloutTitle
@@ -73,6 +74,7 @@ ContentCallout.propTypes = {
 	isNotched:PropTypes.bool,
 	buttonText: PropTypes.string,
 	buttonUrl: PropTypes.string,
+	videoSrc: PropTypes.string,
 }
 
 ContentCallout.defaultProps = {
@@ -89,6 +91,7 @@ ContentCallout.defaultProps = {
 	isNotched:false,
 	buttonText: '',
 	buttonUrl: '',
+	videoSrc:'',
 }
 
 export default ContentCallout;
