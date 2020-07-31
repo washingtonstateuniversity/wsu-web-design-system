@@ -40,6 +40,7 @@ import '../../packages/components/content-card/content-card.scss';
 import '../../packages/components/global-header/style.scss';
 import '../../packages/components/global-footer/style.scss';
 import '../../packages/components/site-footer/style.scss';
+import '../../packages/components/content-callout/content-callout.scss';
 
 
 
