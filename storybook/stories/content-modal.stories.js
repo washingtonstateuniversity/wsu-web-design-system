@@ -20,8 +20,7 @@ export default {
 
 export const DefaultModal = () => {
 
-	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : false;
-	const [ isOpen, setOpen ] = useState( false );
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';	const [ isOpen, setOpen ] = useState( false );
 
 	const openModal = () => setOpen( true );
 	const closeModal = () => setOpen( false );
@@ -52,8 +51,7 @@ export const DefaultModal = () => {
 
 export const fullScreenModal = () => {
 
-	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : false;
-	const [ isOpen, setOpen ] = useState( false );
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';	const [ isOpen, setOpen ] = useState( false );
 
 	const openModal = () => setOpen( true );
 	const closeModal = () => setOpen( false );

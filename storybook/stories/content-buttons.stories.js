@@ -22,8 +22,7 @@ export default {
 
 export const DefaultButton = () => {
 
-	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : false;
- 
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : ''; 
 	return (
 		<ComponentWrapper layout="centered" className={classes}>
 			<Button
@@ -37,8 +36,6 @@ export const DefaultButton = () => {
 				size={ select( 'size',['default','small','medium','large'],'default', optionsGroupID )  }
 				buttonAlign={ select( 'buttonAlign',['left','rigt','center'],'default', optionsGroupID )  }
 			/>
-
-			<Button buttonText="Learn More" />
 		</ComponentWrapper>
 	)
 }

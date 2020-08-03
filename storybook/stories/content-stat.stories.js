@@ -20,8 +20,7 @@ export default {
 
 export const DefaultStat = () => {
 
-	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : false;
- 
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : ''; 
 	return (
 		<ComponentWrapper layout="content" className={classes}>
 			<Stat value={100000} prefix="$" suffix="+" label="Total Money Saved" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit"/>
@@ -33,8 +32,7 @@ export const DefaultStat = () => {
 
 export const DarkStat = () => {
 
-	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : false;
- 
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : ''; 
 	return (
 		<ComponentWrapper layout="content" className={classes}>
 			<Stat isDark value={100000} prefix="$" suffix="+" label="Total Money Saved" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit"/>

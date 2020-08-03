@@ -36,7 +36,7 @@ const ContentButton = ( props, ref ) => {
 		props,
 		['wsu-c-button__wrapper']
 	)
-
+	
 	return (
 		<div className={ wrapperClasses }>
 			<Tag className={ containerClasses }>{props.buttonText}</Tag>
@@ -47,7 +47,7 @@ const ContentButton = ( props, ref ) => {
 
 
 ContentButton.propTypes = {
-	buttonText:PropTypes.string,
+	buttonText: PropTypes.string,
 	buttonUrl: PropTypes.string,
 	size: PropTypes.string,
 	className: PropTypes.string,
@@ -58,7 +58,7 @@ ContentButton.propTypes = {
 }
 
 ContentButton.defaultProps = {
-	buttonText:'',
+	buttonText: '',
 	buttonUrl: '',
 	size: 'default',
 	className: '',
