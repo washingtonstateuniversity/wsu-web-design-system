@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 // Component Deps
-import './content-link.scss';
+import './style.scss';
 
 // Component Starts
 class ContentLink extends Component {

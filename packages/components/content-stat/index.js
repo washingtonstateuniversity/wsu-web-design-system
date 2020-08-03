@@ -4,7 +4,7 @@ import classnames from 'classnames';
 
 import CountUp from 'react-countup';
 
-import './content-stat.scss';
+import './style.scss';
 
 class ContentStat extends Component {
 	render() {
@@ -13,13 +13,14 @@ class ContentStat extends Component {
 			{
 				'wsu-c-stat__wrapper--align-left': this.props.alignLeft,
 				'wsu-c-stat__wrapper--align-right': this.props.alignRight,
+				'wsu-c-stat__wrapper--is-dark': this.props.isDark,
 			}
 		)
 
 		return (
 			<div className={classes}>
 				{this.props.label && <div className="wsu-c-stat__label">{this.props.label}</div>}
-				<CountUp end={this.props.value}  duration={this.props.duration} prefix={this.props.prefix} suffix={this.props.suffix} separator={this.props.separator} className="wsu-c-stat__value" />
+				<CountUp end={this.props.value}  duration={this.props.duration} prefix={this.props.prefix && '<span class="wsu-c-stat__prefix">' + this.props.prefix + '</span>'} suffix={this.props.suffix && '<span class="wsu-c-stat__suffix">' + this.props.suffix + '</span>'} separator={this.props.separator} className="wsu-c-stat__value" />
 				{this.props.description && <p className="wsu-c-stat__description">{this.props.description}</p>}
 			</div>
 		);
@@ -33,7 +34,10 @@ ContentStat.propTypes = {
 	prefix: PropTypes.string,
 	suffix: PropTypes.string,
 	separator: PropTypes.string,
-	duration: PropTypes.number
+	duration: PropTypes.number,
+	alignLeft: PropTypes.bool,
+	alignRight: PropTypes.bool,
+	isDark: PropTypes.bool,
 }
 
 ContentStat.defaultProps = {
@@ -43,7 +47,10 @@ ContentStat.defaultProps = {
 	prefix: '',
 	suffix: '',
 	separator: ',',
-	duration: 1.5
+	duration: 1.5,
+	alignLeft: false,
+	alignRight: false,
+	isDark: false,
 }
 
 export default ContentStat;

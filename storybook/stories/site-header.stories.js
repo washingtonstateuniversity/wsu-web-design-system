@@ -6,24 +6,36 @@ import { previewGroupID, optionsGroupID } from '@wsuwebteam/build-tools/js/helpe
 // Storybook Imports
 import ComponentWrapper from '../../packages/storybook-components/content-wrapper';
 
-// Component Imports
-import { Article } from '../../packages/components';
+import { SiteHeader } from '../../packages/components';
 
 // Story Time
 export default {
-	title: 'Components/Content/Article',
+	title: 'Components/Site/Header',
 	decorators: [
 		withA11y,
-		withKnobs,
-	]
+		withKnobs
+	],
+	component: SiteHeader
 };
 
-export const DefaultArticle = () => {
+export const DefaultHeader = () => {
 
-	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : ''; 
 	return (
-		<ComponentWrapper layout="content" className={classes}>
-			<Article/>
+		<ComponentWrapper layout="full">
+
+			<SiteHeader />
+			
+		</ComponentWrapper>
+	)
+}
+
+export const DarkHeader = () => {
+
+	return (
+		<ComponentWrapper layout="full">
+
+			<SiteHeader isDark/>
+			
 		</ComponentWrapper>
 	)
 }

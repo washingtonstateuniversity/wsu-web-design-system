@@ -7,8 +7,7 @@ import { previewGroupID, optionsGroupID } from '@wsuwebteam/build-tools/js/helpe
 import ComponentWrapper from '../../packages/storybook-components/content-wrapper';
 
 // Component Imports
-import ContentButton from '../../packages/components/content-button/index';
-import '../../packages/components/content-link/content-link.scss';
+import { Button } from '../../packages/components';
 
 const spacingOptions = ['default','none','xsmall','small','medium','medium-large','large','xlarge'];
 
@@ -23,11 +22,10 @@ export default {
 
 export const DefaultButton = () => {
 
-	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : false;
- 
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : ''; 
 	return (
 		<ComponentWrapper layout="centered" className={classes}>
-			<ContentButton
+			<Button
 				tag={ select( 'tag',['default','a','button','div'],'default', optionsGroupID )  }
 				buttonText={ text( 'buttonText','Lorem Ipsum', optionsGroupID ) }
 				buttonUrl={ text( 'buttonUrl','#', optionsGroupID ) }

@@ -24,7 +24,7 @@ class ContentHeading extends Component {
 				{ key:'textAlign', classSlug:'textalign' },
 			],
 			this.props,
-			['wsu-c-heading']
+			'wsu-c-heading'
 		)
 
 		return (
@@ -56,7 +56,7 @@ ContentHeading.propTypes = {
 ContentHeading.defaultProps = {
 	tag: 'h1',
 	name: '',
-	link: '#',
+	link: '',
 	style: 'default',
 	width: 'full',
 }
