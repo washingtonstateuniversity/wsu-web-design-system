@@ -1,4 +1,10 @@
-// Components
+/* 
+ * Components
+ * 
+ * Handle the exporting of components in a single place for easier consumption.
+ * Example: `import { Heading, P, Button } from '../../packages/components';`
+ */
+
 export { default as Accordion } from './content-accordion';
 export { default as Article } from './content-article';
 export { default as Button } from './content-button';
@@ -12,7 +18,7 @@ export { default as Link } from './content-link';
 export { default as List } from './content-list';
 export { ContentListCheatsheet as ListCheatsheet } from './content-list';
 export { default as Modal } from './content-modal';
-export { default as Paragraph } from './content-paragraph';
+export { default as P } from './content-paragraph';
 export { default as Slider } from './content-slider';
 export { default as Stat } from './content-stat';
 export { default as GlobalFooter } from './global-footer';
