@@ -5,7 +5,12 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	margin-bottom: $unit;
+	padding: $unit-xl;
+
+	&--is-dark {
+		background-color: color(gray, 80);
+		color: color(white, base);
+	}
 }
 
 .wsu-c-stat__label {
@@ -34,16 +39,19 @@
 	& .wsu-c-stat__prefix {
 		vertical-align: super;
 		right: $unit-s;
+		margin-left: 14px;
 	}
 
 	& .wsu-c-stat__suffix {
 		left: $unit-xs;
 		top: -3px;
+		margin-right: 8px;
 	}
 }
 
 .wsu-c-stat__description {
 	margin-top: 0;
+	margin-bottom: 0;
 	text-align: center;
 }
 

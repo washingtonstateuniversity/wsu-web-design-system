@@ -13,6 +13,7 @@ class ContentStat extends Component {
 			{
 				'wsu-c-stat__wrapper--align-left': this.props.alignLeft,
 				'wsu-c-stat__wrapper--align-right': this.props.alignRight,
+				'wsu-c-stat__wrapper--is-dark': this.props.isDark,
 			}
 		)
 
