@@ -10,7 +10,7 @@ import {
 
 import ContentButton from '../content-button/index';
 
-import './content-callout.scss';
+import './style.scss';
 
 const ContentCallout = ( props ) => { 
 

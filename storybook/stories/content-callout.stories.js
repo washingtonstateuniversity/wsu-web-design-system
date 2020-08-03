@@ -8,7 +8,6 @@ import ComponentWrapper from '../../packages/storybook-components/content-wrappe
 
 // Component Imports
 import ContentCallout from '../../packages/components/content-callout/index';
-import '../../packages/components/content-link/content-link.scss';
 
 const spacingOptions = ['default','none','xsmall','small','medium','medium-large','large','xlarge'];
 

@@ -38,7 +38,7 @@ const ContentButton = ( props, ref ) => {
 	)
 
 	return (
-		<div class={ wrapperClasses }>
+		<div className={ wrapperClasses }>
 			<Tag className={ containerClasses }>{props.buttonText}</Tag>
 		</div>
 	);

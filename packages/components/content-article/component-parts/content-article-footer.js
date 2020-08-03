@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const ContentArticleFooter = ( props, ref ) => {
 	return (
 		<>
-			<footer>This is a article footer</footer>
+			<footer></footer>
 		</>
 	)
 }

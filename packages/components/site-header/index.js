@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-import './site-header.scss';
+import './style.scss';
 
 const SiteHeader = (props) => {
 	const classes = classnames(
@@ -13,10 +13,10 @@ const SiteHeader = (props) => {
 	)
 
 	return (
-		<section class={classes}>
-			<header class="wsu-s-header__container">
-				<h1 class="wsu-s-header__title">Sports Management</h1>
-				<h2 class="wsu-s-header__subtitle">College of Education</h2>
+		<section className={classes}>
+			<header className="wsu-s-header__container">
+				<h1 className="wsu-s-header__title">Sports Management</h1>
+				<h2 className="wsu-s-header__subtitle">College of Education</h2>
 			</header>
 		</section>
 	)

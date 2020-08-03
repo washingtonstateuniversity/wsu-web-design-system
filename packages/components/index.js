@@ -20,4 +20,5 @@ export { default as GlobalHeader } from './global-header';
 export { default as SiteFooter } from './site-footer';
 export { SiteFooterCondensed } from './site-footer';
 export { default as SiteHeader } from './site-header';
+export { default as SiteNavHorizontal } from './site-nav-horizontal';
 export { default as SiteNavVertical } from './site-nav-vertical';

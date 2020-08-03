@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './style.scss';
+
 const ContentForm = () => {
 	console.log('No Content Form components at this time.');
 	return null;

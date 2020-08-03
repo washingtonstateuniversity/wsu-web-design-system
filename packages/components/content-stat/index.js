@@ -4,7 +4,7 @@ import classnames from 'classnames';
 
 import CountUp from 'react-countup';
 
-import './content-stat.scss';
+import './style.scss';
 
 class ContentStat extends Component {
 	render() {
@@ -34,7 +34,10 @@ ContentStat.propTypes = {
 	prefix: PropTypes.string,
 	suffix: PropTypes.string,
 	separator: PropTypes.string,
-	duration: PropTypes.number
+	duration: PropTypes.number,
+	alignLeft: PropTypes.bool,
+	alignRight: PropTypes.bool,
+	isDark: PropTypes.bool,
 }
 
 ContentStat.defaultProps = {
@@ -44,7 +47,10 @@ ContentStat.defaultProps = {
 	prefix: '',
 	suffix: '',
 	separator: ',',
-	duration: 1.5
+	duration: 1.5,
+	alignLeft: false,
+	alignRight: false,
+	isDark: false,
 }
 
 export default ContentStat;

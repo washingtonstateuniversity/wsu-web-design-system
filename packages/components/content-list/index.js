@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Heading } from '../../components';
-import './content-list.scss';
+import './style.scss';
 
 const ContentList = () => {
 	console.log('No Content List component at this time.');

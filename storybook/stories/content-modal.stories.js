@@ -7,9 +7,7 @@ import { previewGroupID, optionsGroupID } from '@wsuwebteam/build-tools/js/helpe
 import ComponentWrapper from '../../packages/storybook-components/content-wrapper';
 
 // Component Imports
-import Button from '../../packages/components/content-button'
-import Modal from '../../packages/components/content-modal';
-import '../../packages/components/content-modal/content-modal.scss';
+import { Button, Modal } from '../../packages/components';
 
 // Story Time
 export default {

@@ -7,8 +7,7 @@ import { previewGroupID, optionsGroupID } from '@wsuwebteam/build-tools/js/helpe
 import ComponentWrapper from '../../packages/storybook-components/content-wrapper';
 
 // Component Imports
-import ContentButton from '../../packages/components/content-button/index';
-import '../../packages/components/content-link/content-link.scss';
+import { Button } from '../../packages/components';
 
 const spacingOptions = ['default','none','xsmall','small','medium','medium-large','large','xlarge'];
 
@@ -27,7 +26,7 @@ export const DefaultButton = () => {
  
 	return (
 		<ComponentWrapper layout="centered" className={classes}>
-			<ContentButton
+			<Button
 				tag={ select( 'tag',['default','a','button','div'],'default', optionsGroupID )  }
 				buttonText={ text( 'buttonText','Lorem Ipsum', optionsGroupID ) }
 				buttonUrl={ text( 'buttonUrl','#', optionsGroupID ) }
@@ -38,6 +37,8 @@ export const DefaultButton = () => {
 				size={ select( 'size',['default','small','medium','large'],'default', optionsGroupID )  }
 				buttonAlign={ select( 'buttonAlign',['left','rigt','center'],'default', optionsGroupID )  }
 			/>
+
+			<Button buttonText="Learn More" />
 		</ComponentWrapper>
 	)
 }
