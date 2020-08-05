@@ -18,7 +18,7 @@ export default {
 	]
 };
 
-export const DefaultSeperator = () => {
+export const DefaultSeparator = () => {
 
 	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : ''; 
 
