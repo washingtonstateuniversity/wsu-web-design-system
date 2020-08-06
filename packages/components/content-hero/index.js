@@ -3,9 +3,7 @@ import React, { Component } from 'react';
 
 import {getVerticalSpacingClasses,getMarginSpacingClasses} from '@wsuwebteam/build-tools/js/helpers/spacingUtilityClasses';
 
-
 import './style.scss';
-
 
 class ContentHero extends Component {
 

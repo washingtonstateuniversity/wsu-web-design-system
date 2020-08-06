@@ -2,7 +2,6 @@
 @import '~@wsuwebteam/wsu-icons/dist/wsu-icons.bundle.css';
 
 @mixin default-heading-link {
-
 	a {
 		transition: 300ms ease all;
 		text-decoration: none;
@@ -50,15 +49,16 @@
 }
 
 .wsu-c-heading,
-.wsu-c-content h1,
-.wsu-c-content h2,
-.wsu-c-content h3,
-.wsu-c-content h4,
-.wsu-c-content h5,
-.wsu-c-content h6 {
+.wsu-c-content h1:not([class^="wsu-c"]):not([class*=" wsu-c"]),
+.wsu-c-content h2:not([class^="wsu-c"]):not([class*=" wsu-c"]),
+.wsu-c-content h3:not([class^="wsu-c"]):not([class*=" wsu-c"]),
+.wsu-c-content h4:not([class^="wsu-c"]):not([class*=" wsu-c"]),
+.wsu-c-content h5:not([class^="wsu-c"]):not([class*=" wsu-c"]),
+.wsu-c-content h6:not([class^="wsu-c"]):not([class*=" wsu-c"]) {
 	font-family: $wsu-bt-primary-font-family;
-	margin-top: 1.5rem;
+	margin-top: 0;
 	margin-bottom: 0.5em;
+	color: color(gray, 85);
 
 	@include default-heading-link;
 
@@ -68,7 +68,7 @@
 }
 
 h1.wsu-c-heading,
-.wsu-c-content h1 {
+.wsu-c-content h1:not([class^="wsu-c"]):not([class*=" wsu-c"]) {
 	font-size: 3rem;
 	font-weight: $wsu-bt-font-extra-bold;
 	line-height: 1.25em;
@@ -102,7 +102,7 @@ h1.wsu-c-heading,
 }
 
 h2.wsu-c-heading,
-.wsu-c-content h2 {
+.wsu-c-content h2:not([class^="wsu-c"]):not([class*=" wsu-c"]) {
 	font-size: 2.1rem;
 	font-weight: $wsu-bt-font-bold;
 	line-height: 1.3em;
@@ -113,7 +113,7 @@ h2.wsu-c-heading,
 }
 
 h3.wsu-c-heading,
-.wsu-c-content h3 {
+.wsu-c-content h3:not([class^="wsu-c"]):not([class*=" wsu-c"]) {
 	font-size: 1.8rem;
 	font-weight: $wsu-bt-font-semi-bold;
 	line-height: 1.35em;
@@ -124,7 +124,7 @@ h3.wsu-c-heading,
 }
 
 h4.wsu-c-heading,
-.wsu-c-content h4 {
+.wsu-c-content h4:not([class^="wsu-c"]):not([class*=" wsu-c"]) {
 	font-size: 1.5rem;
 	font-weight: $wsu-bt-font-semi-bold;
 	line-height: 1.4em;
@@ -135,7 +135,7 @@ h4.wsu-c-heading,
 }
 
 h5.wsu-c-heading,
-.wsu-c-content h5 {
+.wsu-c-content h5:not([class^="wsu-c"]):not([class*=" wsu-c"]) {
 	font-size: 1.25rem;
 	font-weight: $wsu-bt-font-semi-bold;
 	line-height: 1.5em;
@@ -146,7 +146,7 @@ h5.wsu-c-heading,
 }
 
 h6.wsu-c-heading,
-.wsu-c-content h6 {
+.wsu-c-content h6:not([class^="wsu-c"]):not([class*=" wsu-c"]) {
 	font-size: 1rem;
 	font-weight: $wsu-bt-font-semi-bold;
 	line-height: 1.5em;

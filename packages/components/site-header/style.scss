@@ -1,0 +1,46 @@
+@import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
+
+/* Start Base Styles
+======================= */
+.wsu-s-header__wrapper {
+	display: flex;
+	align-items: flex-end;
+
+	min-height: 40px;
+	padding: $unit-l $unit-xl $unit-xs;
+}
+
+.wsu-s-header__container {
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+.wsu-s-header__title {
+	margin-top: 0;
+	margin-bottom: 0;
+
+	color: color(gray, 75);
+
+	@include font-size(24px, 600);
+}
+
+.wsu-s-header__subtitle {
+	margin-top: $unit-2xs;
+	margin-bottom: 0;
+
+	@include font-size(11px, 400);
+}
+/* == End Base Styles == */
+
+/* Dark Theme
+======================= */
+.wsu-s-header__wrapper--dark {
+	background: color(gray, 80);
+
+	.wsu-s-header__title,
+	.wsu-s-header__subtitle {
+		color: color(white, base);
+	}
+
+	@extend .wsu-s-header__wrapper;
+}

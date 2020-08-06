@@ -3,13 +3,13 @@ import { withA11y } from '@storybook/addon-a11y';
 import { withKnobs, text, boolean, number, select } from "@storybook/addon-knobs";
 
 // Storybook Imports
-import ComponentWrapper from '../../packages/storybook-components/content-wrapper/index'
+import ComponentWrapper from '../../packages/storybook-components/content-wrapper';
 
 import P from '../../packages/components/content-paragraph/index';
 
 // Story Time
 export default {
-	title: 'Content Paragraph',
+	title: 'Components/Content/Paragraph',
 	decorators: [
 		withA11y,
 		withKnobs
