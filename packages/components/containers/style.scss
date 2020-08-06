@@ -91,12 +91,13 @@ body {
 	padding-right: space( 'content' );
 	padding-bottom: space( 'content-bottom' );
 	padding-left: space( 'content' );
+	flex-grow: 1;
 
 	@include mq('tablet') {
 		max-width: calc( 100vw - 260px );
 	}
 	@include mq('tablet','max') {
-		width: auto;
+		width: 100%;
 	}
 
 	&--sidebar-right {
