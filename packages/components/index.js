@@ -19,6 +19,8 @@ export { default as List } from './content-list';
 export { ContentListCheatsheet as ListCheatsheet } from './content-list';
 export { default as Modal } from './content-modal';
 export { default as P } from './content-paragraph';
+export { default as Hr } from './content-separator';
+export { default as Separator } from './content-separator';
 export { default as Slider } from './content-slider';
 export { default as Stat } from './content-stat';
 export { default as GlobalFooter } from './global-footer';

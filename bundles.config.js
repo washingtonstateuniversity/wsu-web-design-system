@@ -3,7 +3,7 @@ const autoprefixer = require('autoprefixer');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
-const MiniFilesToDeleteAfterCompilation = require('./webpack/mini-files-to-delete-after-compilation');
+const MiniFilesToDeleteAfterCompilation = require('./packages/webpack-plugins/mini-files-to-delete-after-compilation');
 
 module.exports = env => {
 

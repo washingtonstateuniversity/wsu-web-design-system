@@ -51,11 +51,12 @@
     "webpack-dev-server": "^3.11.0"
   },
   "scripts": {
-    "build": "npm run clean && npm run build:bundles",
+    "start": "npm run storybook",
+    "build": "npm run clean && npm run build:bundles && npm run build:storybook",
     "build:bundles": "webpack --env.NODE_ENV=production --config bundles.config.js",
-    "clean": "rimraf ./bundles/dist",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build:storybook": "build-storybook -o ./storybook/public",
+    "clean": "rimraf ./bundles/dist && rimraf ./storybook/public",
+    "storybook": "start-storybook -p 6006"
   },
   "repository": {
     "type": "git",
