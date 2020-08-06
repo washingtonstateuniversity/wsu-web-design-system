@@ -40,6 +40,8 @@ const headingLengthOptions = {
 const headingStyleOptions = {
 	default:'default', 
 	callout:'callout',
+	EM:'em',
+	EmHero:'em-hero',
 }
 
 const headingWidthOptions = ['default','full','wide','medium','narrow','xnarrow'];
@@ -64,7 +66,7 @@ const getHeadingLength = ( headingLength ) => {
 
 }
 
-export const Heading = () => {
+export const Default = () => {
 
 	let applyContentClass = boolean('Apply wsu-c-content class', false, contentGroupID );
 
@@ -86,7 +88,7 @@ export const Heading = () => {
 	)
 }
 
-export const DefaultHeadings = () => {
+export const Defaults = () => {
 
 	let headingLength = select( 'Heading Length', headingLengthOptions,'short', contentGroupID );
 	let style         = select( 'style', headingStyleOptions, 'default', optionsGroupID );
@@ -104,7 +106,7 @@ export const DefaultHeadings = () => {
 	)
 };
 
-export const CalloutHeadings = () => {
+export const Callout = () => {
 
 	let headingLength = select( 'Heading Length', headingLengthOptions,'short', contentGroupID );
 	let width         = select( 'width', headingWidthOptions, 'full', optionsGroupID );
@@ -117,6 +119,24 @@ export const CalloutHeadings = () => {
 			<ContentHeading tag="h4" style={'callout'} width={width} >Heading Level 4 {getHeadingLength( headingLength ) }</ContentHeading>
 			<ContentHeading tag="h5" style={'callout'} width={width} >Heading Level 5 {getHeadingLength( headingLength ) }</ContentHeading>
 			<ContentHeading tag="h6" style={'callout'} width={width} >Heading Level 6 {getHeadingLength( headingLength ) }</ContentHeading>
+		</ComponentWrapper>
+	)
+};
+
+export const Em = () => {
+
+	let headingLength = select( 'Heading Length', headingLengthOptions,'short', contentGroupID );
+	let width         = select( 'width', headingWidthOptions, 'full', optionsGroupID );
+
+	return(
+		<ComponentWrapper layout="content" className="wsu-c-content">
+			<ContentHeading tag="h1" style={'em-hero'} width={width} >HERO - Heading Level 1 {getHeadingLength( headingLength ) }</ContentHeading>
+			<ContentHeading tag="h1" style={'em'} width={width} >Heading Level 1 {getHeadingLength( headingLength ) }</ContentHeading>
+			<ContentHeading tag="h2" style={'em'} width={width} >Heading Level 2 {getHeadingLength( headingLength ) }</ContentHeading>
+			<ContentHeading tag="h3" style={'em'} width={width} >Heading Level 3 {getHeadingLength( headingLength ) }</ContentHeading>
+			<ContentHeading tag="h4" style={'em'} width={width} >Heading Level 4 {getHeadingLength( headingLength ) }</ContentHeading>
+			<ContentHeading tag="h5" style={'em'} width={width} >Heading Level 5 {getHeadingLength( headingLength ) }</ContentHeading>
+			<ContentHeading tag="h6" style={'em'} width={width} >Heading Level 6 {getHeadingLength( headingLength ) }</ContentHeading>
 		</ComponentWrapper>
 	)
 };
