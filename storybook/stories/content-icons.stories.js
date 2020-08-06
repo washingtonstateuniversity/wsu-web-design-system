@@ -7,7 +7,7 @@ import { withKnobs, text, boolean, number, select } from "@storybook/addon-knobs
 import Icon, { IconCheatsheet } from '../../packages/components/content-icon/index';
 
 // Storybook Imports
-import ComponentWrapper from '../../packages/storybook-components/content-wrapper/index'
+import ComponentWrapper from '../../packages/storybook-components/content-wrapper';
 
 
 // Story Time

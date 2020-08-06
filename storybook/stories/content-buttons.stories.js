@@ -4,11 +4,10 @@ import { withKnobs, text, boolean, number, select } from "@storybook/addon-knobs
 import { previewGroupID, optionsGroupID } from '@wsuwebteam/build-tools/js/helpers/storybook';
 
 // Storybook Imports
-import ComponentWrapper from '../../packages/storybook-components/content-wrapper/index'
+import ComponentWrapper from '../../packages/storybook-components/content-wrapper';
 
 // Component Imports
-import ContentButton from '../../packages/components/content-button/index';
-import '../../packages/components/content-link/content-link.scss';
+import { Button } from '../../packages/components';
 
 const spacingOptions = ['default','none','xsmall','small','medium','medium-large','large','xlarge'];
 
@@ -23,11 +22,10 @@ export default {
 
 export const DefaultButton = () => {
 
-	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : false;
- 
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : ''; 
 	return (
 		<ComponentWrapper layout="centered" className={classes}>
-			<ContentButton
+			<Button
 				tag={ select( 'tag',['default','a','button','div'],'default', optionsGroupID )  }
 				buttonText={ text( 'buttonText','Lorem Ipsum', optionsGroupID ) }
 				buttonUrl={ text( 'buttonUrl','#', optionsGroupID ) }
@@ -36,6 +34,7 @@ export const DefaultButton = () => {
 				shape={ select( 'shape',['default','square','round'],'default', optionsGroupID )  }
 				color={ select( 'color',['default','crimson','white'],'default', optionsGroupID )  }
 				size={ select( 'size',['default','small','medium','large'],'default', optionsGroupID )  }
+				buttonAlign={ select( 'buttonAlign',['left','rigt','center'],'default', optionsGroupID )  }
 			/>
 		</ComponentWrapper>
 	)

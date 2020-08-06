@@ -2,10 +2,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import wsu_wds from '@wsuwebteam/build-tools/js/wsu-bt-wds';
 
 // Component Deps
-import './content-modal.scss';
+import './style.scss';
 import Icon from '../content-icon';
 
 // Component Starts

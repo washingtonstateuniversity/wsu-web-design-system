@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 // Component Deps
-import './content-link.scss';
+import './style.scss';
 
 // Component Starts
 class ContentLink extends Component {
@@ -51,19 +51,28 @@ class ContentLink extends Component {
 }
 
 ContentLink.propTypes = {
+	/** Specifies the URL of the page the link goes to. */
 	href: PropTypes.string.isRequired,
+	/** Any custom class names to be passed to the link. */
 	className: PropTypes.string,
+	/** The target attribute specifies where to open the linked document. */
 	target: PropTypes.string,
+	/** For Limited use, in specific use cases. For example a list of clickable tags or categories. */
 	isSecondary: PropTypes.bool,
+	/** Changes the display to a more highly animated link version. */
 	isAnimated: PropTypes.bool,
+	/** Changes the display to a more highly accessible link version. */
 	isHighlyAccessible: PropTypes.bool,
+	/** If using in a list and would like a comma separated list of values. */
 	isList: PropTypes.bool,
-	maxTagCount: PropTypes.number,
+	// TODO: implement max tag count
+	// maxTagCount: PropTypes.number,
+	/** The required rel attribute specifies the relationship between the current document and the linked document/resource. */
 	rel: PropTypes.string
 }
 
 ContentLink.defaultProps = {
-	href: '#',
+	href: '',
 	classNames: '',
 	target: '_self',
 	isSecondary: false,
@@ -71,7 +80,7 @@ ContentLink.defaultProps = {
 	isHighlyAccessible: false,
 	isList: false,
 	isLast: true,
-	maxTagCount: 5,
+	// maxTagCount: 5,
 	rel: ''
 }
 

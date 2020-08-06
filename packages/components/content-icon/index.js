@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 // Component Deps
 import '@wsuwebteam/wsu-icons';
-import './content-icons.scss';
+import './style.scss';
 
 // Component Starts
 class Icon extends Component {

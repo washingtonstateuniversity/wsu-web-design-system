@@ -2,36 +2,33 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-// Component Deps
+import {getUtilityClasses} from '@wsuwebteam/build-tools/js/helpers/utilityClasses';
+
 import './style.scss';
 
 class ContentHeading extends Component {
 
-
-	getClasses() {
-
-		let classes = ['wsu-c-heading'];
-
-		if ( this.props.style && 'default' !== this.props.style ) {
-			classes.push( 'wsu-c-heading--' + this.props.style );
-		}
-
-		if ( this.props.width && 'full' != this.props.width ) {
-			classes.push( 'wsu-c-heading--' + this.props.width );
-		}
-
-		return classes;
-
-	}
 	
 	render() {
 
 		let Tag     = this.props.tag;
 		
-		let classes = this.getClasses();
+		let classes = getUtilityClasses(
+			[
+				{ key:'style', prefix:'wsu-c-heading--' },
+				{ key:'width', prefix:'wsu-c-heading--' },
+				{ key:'marginBefore', classSlug:'margin-before' },
+				{ key:'marginAfter', classSlug:'margin-after' },
+				{ key:'marginLeft', classSlug:'margin-left' },
+				{ key:'marginRight', classSlug:'margin-right' },
+				{ key:'textAlign', classSlug:'textalign' },
+			],
+			this.props,
+			'wsu-c-heading'
+		)
 
 		return (
-			<Tag name={this.props.name} className={classes.join(' ')}>
+			<Tag name={this.props.name} className={classes} >
 				{(() => {
 					if ( this.props.link ) {
 						return (
@@ -59,7 +56,7 @@ ContentHeading.propTypes = {
 ContentHeading.defaultProps = {
 	tag: 'h1',
 	name: '',
-	link: '#',
+	link: '',
 	style: 'default',
 	width: 'full',
 }

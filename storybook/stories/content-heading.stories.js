@@ -6,7 +6,7 @@ import ContentHeading from '../../packages/components/content-heading/index';
 import P from '../../packages/components/content-paragraph/index';
 
 // Storybook Imports
-import ComponentWrapper from '../../packages/storybook-components/content-wrapper/index'
+import ComponentWrapper from '../../packages/storybook-components/content-wrapper';
 
 // Story Time
 export default {
@@ -77,7 +77,8 @@ export const Heading = () => {
 				name={ text( 'name','', optionsGroupID ) }
 				link={ text( 'link','', optionsGroupID ) }
 				style={ select('style', headingStyleOptions, 'default', optionsGroupID )  }
-				width={ select('width', headingWidthOptions, 'full', optionsGroupID )  }
+				width={ select('width', ['default','full','wide','medium','narrow','xnarrow'], 'default', optionsGroupID )  }
+				textAlign={ select('textAlign', ['default','left','center','right'], 'default', optionsGroupID )  }
 				>
 				Heading Text {getHeadingLength( select('Heading Length', headingLengthOptions,'short', contentGroupID ) )}
 			</ContentHeading>

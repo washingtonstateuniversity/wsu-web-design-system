@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import empty from '../../../storybook-components/field-checker';
 
-
 class ContentCardAddress extends Component {
 	render() {
 

@@ -4,12 +4,10 @@ import { withKnobs, text, boolean, number, select } from "@storybook/addon-knobs
 import { previewGroupID, optionsGroupID } from '@wsuwebteam/build-tools/js/helpers/storybook';
 
 // Storybook Imports
-import ComponentWrapper from '../../packages/storybook-components/content-wrapper/index'
+import ComponentWrapper from '../../packages/storybook-components/content-wrapper';
 
 // Component Imports
-import Button from '../../packages/components/content-button'
-import Modal from '../../packages/components/content-modal';
-import '../../packages/components/content-modal/content-modal.scss';
+import { Button, Modal } from '../../packages/components';
 
 // Story Time
 export default {
@@ -22,8 +20,7 @@ export default {
 
 export const DefaultModal = () => {
 
-	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : false;
-	const [ isOpen, setOpen ] = useState( false );
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';	const [ isOpen, setOpen ] = useState( false );
 
 	const openModal = () => setOpen( true );
 	const closeModal = () => setOpen( false );
@@ -54,8 +51,7 @@ export const DefaultModal = () => {
 
 export const fullScreenModal = () => {
 
-	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : false;
-	const [ isOpen, setOpen ] = useState( false );
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';	const [ isOpen, setOpen ] = useState( false );
 
 	const openModal = () => setOpen( true );
 	const closeModal = () => setOpen( false );

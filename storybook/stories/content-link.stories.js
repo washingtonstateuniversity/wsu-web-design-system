@@ -5,7 +5,7 @@ import { previewGroupID, optionsGroupID } from '@wsuwebteam/build-tools/js/helpe
 
 
 // Storybook Imports
-import ComponentWrapper from '../../packages/storybook-components/content-wrapper/index'
+import ComponentWrapper from '../../packages/storybook-components/content-wrapper';
 
 import ContentLink from '../../packages/components/content-link/index';
 import P from '../../packages/components/content-paragraph/index';
@@ -17,7 +17,8 @@ export default {
 	decorators: [
 		withA11y,
 		withKnobs
-	]
+	],
+	component: ContentLink
 };
 
 export const DefaultLink = () => {
@@ -44,27 +45,19 @@ export const DefaultLink = () => {
 	)
 }
 
-export const SecondaryLink = () => {
+export const Secondary = () => {
 
 	return (
 		<ComponentWrapper layout="content" className={'wsu-c-content'}>
 			<P>
-				<strong>Content Link <code>isSecondary</code> style in paragraphs.</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
-				varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
-				platea dictumst. <ContentLink isSecondary>Lorem ipsum dolor sit amet</ContentLink>, magna massa ornare nulla, eu rutrum 
-				purus nunc at odio. Phasellus aliquam leo sed vulputate facilisis. Phasellus turpis dui, euismod ultrices 
-				rutrum et, ultrices ut quam. <ContentLink isSecondary>Sed euismod tincidunt eros eu venenatis. Nunc accumsan, felis ac cursus 
-				suscipit, tortor erat scelerisque libero</ContentLink>, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
-				arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
-				eleifend et suscipit vel, faucibus vitae lorem.
+				<strong>Content Link <code>isSecondary</code> for limited use, primarily in lists of tags or categories.</strong>
 			</P>
-
-			<ContentLink isSecondary>Content Link Secondary Style</ContentLink>
+			<ContentLink isSecondary>Lorem</ContentLink>, <ContentLink isSecondary>Ipsum</ContentLink>, <ContentLink isSecondary>Dolor</ContentLink>
 		</ComponentWrapper>
 	)
 }
 
-export const AnimatedLink = () => {
+export const Animated = () => {
 	
 	return (
 		<ComponentWrapper layout="content" className={'wsu-c-content'}>
@@ -85,7 +78,7 @@ export const AnimatedLink = () => {
 	)
 }
 
-export const HighlyAccessibleLink = () => {
+export const HighlyAccessible = () => {
 	
 	return (
 		<ComponentWrapper layout="content" className={'wsu-c-content'}>

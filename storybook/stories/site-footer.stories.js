@@ -5,10 +5,10 @@ import { withKnobs, text, boolean, number, select } from "@storybook/addon-knobs
 import { previewGroupID, optionsGroupID } from '@wsuwebteam/build-tools/js/helpers/storybook';
 
 // Storybook Imports
-import ComponentWrapper from '../../packages/storybook-components/content-wrapper/index'
+import ComponentWrapper from '../../packages/storybook-components/content-wrapper';
 
 // Component Deps
-import SiteFooter from '../../packages/components/site-footer/index';
+import { SiteFooter, SiteFooterCondensed } from '../../packages/components';
 
 // Story Time
 export default {
@@ -23,5 +23,12 @@ export const DefaultFooter = () => {
 
 	return (
 		<SiteFooter />
+	)
+}
+
+export const CondensedFooter = () => {
+
+	return (
+		<SiteFooterCondensed />
 	)
 }
