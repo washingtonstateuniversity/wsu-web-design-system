@@ -83,20 +83,21 @@ body {
 
 .wsu-c-container {
 	box-sizing: border-box;
-	width: 1100px;
-	max-width: 100%;
+	width: 100%;
+	max-width: 1100px;
 	margin-right: auto;
 	margin-left: auto;
 	padding-top: space( 'content-top' );
 	padding-right: space( 'content' );
 	padding-bottom: space( 'content-bottom' );
 	padding-left: space( 'content' );
+	flex-grow: 1;
 
 	@include mq('tablet') {
 		max-width: calc( 100vw - 260px );
 	}
 	@include mq('tablet','max') {
-		width: auto;
+		width: 100%;
 	}
 
 	&--sidebar-right {
