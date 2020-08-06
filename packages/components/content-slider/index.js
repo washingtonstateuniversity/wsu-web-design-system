@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 // Component Deps
 import Swiper from 'swiper';
 import 'swiper/css/swiper.css';
-import './content-slider.scss';
+import './style.scss';
 import { Repeater } from '@wsuwebteam/build-tools/js/wsu-bt-helpers';
 
 class ContentSlider extends Component {
@@ -81,7 +81,7 @@ class ContentSlider extends Component {
 										<img className="wsu-c-slider_image swiper-lazy" data-src="https://source.unsplash.com/WLUHO9A_xik/1920x1280" src="https://source.unsplash.com/WLUHO9A_xik/208x117" alt="#" style={{objectPosition: "50% 50%"}} />
 									</div>
 									<div className="wsu-c-slider_content-container">
-										<h3 className="wsu-c-slider_title">Regents announce completion of comprehensive review of the president</h3>
+										<h3 className="wsu-c-slider_title">{this.props.slideTitle}</h3>
 										<p></p>
 										<div className="wsu-c-slider_footer-wrapper">
 											<div className="wsu-c-slider_date">Published on 6/8/20</div>
@@ -113,7 +113,8 @@ ContentSlider.propTypes = {
 	spaceBetween: PropTypes.number,
 	autoplayEnabled: PropTypes.bool,
 	autoplayDelay: PropTypes.number,
-	paginationType: PropTypes.string
+	paginationType: PropTypes.string,
+	slideTitle: PropTypes.string
 
 };
 
@@ -122,7 +123,8 @@ ContentSlider.defaultProps = {
 	spaceBetween: 20,
 	autoplayEnabled: true,
 	autoplayDelay: 3000,
-	paginationType: 'bullets'
+	paginationType: 'bullets',
+	slideTitle: 'Lorem Ipsum Dolor sit Amet'
 }
 
 export default ContentSlider;

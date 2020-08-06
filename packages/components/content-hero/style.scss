@@ -1,0 +1,188 @@
+@import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
+
+.wsu-c-hero__container,
+#editor .wsu-c-hero__container {
+	position: relative;
+
+	background-color: color(gray, 90);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;  background-size: cover;
+
+	padding: 75px 75px;
+	min-height: 650px;
+	box-sizing: border-box;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	&--no-overlay {
+		@extend .wsu-c-hero__container;
+
+		.wsu-c-hero__button {
+			@include elevate(0);
+		}
+
+		.wsu-c-hero__title {
+			text-shadow: none;
+		}
+
+		&::before,
+		&::after {
+			display: none;
+		}
+	}
+
+	&::after {
+		position: absolute;
+		z-index: z('contentbackground');
+		top: 0;
+		left: 0;
+
+		width: 100%;
+		height: 100%;
+
+		content: "";
+
+		background: linear-gradient(15deg, rgba(0,0,0,0.60), rgba(0,0,0,0));
+	}
+
+	&::before {
+		position: absolute;
+		z-index: z('contentbackground');
+		top: 0;
+		left: 0;
+
+		width: 100%;
+		height: 100%;
+
+		content: "";
+
+		background: radial-gradient(at bottom left,rgba(0,0,0,0.60),rgba(0,0,0,0));
+	}
+
+	&.wsu-u-space-vertical {
+		&--xsmall {
+			min-height: auto;
+		}
+		&--small {
+			min-height: 400px;
+		}
+		&--medium {
+			min-height: 600px;
+		}
+		&--large {
+			min-height: 800px;
+		}
+		&--full {
+			min-height: 100vh;
+		}
+	}
+}
+
+.wsu-c-hero__content,
+#editor .wsu-c-hero__content {
+	position: relative;
+	z-index: z('content');
+
+	display: flex;
+	align-items: flex-start;
+	flex-flow: column nowrap;
+
+	max-width: 800px;
+}
+
+.wsu-c-hero__title,
+#editor .wsu-c-hero__title {
+	margin: 0;
+	margin-bottom: $unit-l;
+
+	color: color(white, base);
+	text-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+
+	@include font-size(5rem, 800, 1);
+	@include mq('small') {
+		@include font-size(4.5rem, 800, 1);
+	}
+}
+
+.wsu-c-hero__subtitle,
+#editor .wsu-c-hero__subtitle {
+	order: -1;
+
+	text-transform: uppercase;
+
+	color: color(white, base);
+
+	@include font-size(14px);
+}
+
+.wsu-c-hero__caption {
+	color: color(white, base);
+	text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	max-width: 700px;
+
+	@include font-size(1.5rem);
+	margin-bottom: 1em;
+
+	@include mq('small','max') {
+		@include font-size(1.1rem);
+	}
+
+}
+
+.wsu-c-hero__button,
+#editor .wsu-c-hero__button {
+	@include elevate(2);
+	@include button();
+}
+
+.wsu-c-hero__image-caption,
+#editor .wsu-c-hero__image-caption {
+	font-style: italic;
+
+	position: relative;
+	z-index: z('content');
+
+	margin-bottom: 0;
+	padding-bottom: $unit-s;
+
+	text-align: center;
+
+	color: color(white, base);
+
+	@include font-size(12px);
+	@include mq('small') {
+		position: absolute;
+		right: 60px;
+		bottom: 30px;
+	}
+
+	&::after {
+		position: absolute;
+		top: calc(100% - #{$unit-s});
+		left: 50%;
+
+		width: 33.33%;
+		height: 2px;
+
+		content: "";
+		transform: translateX(-50%);
+
+		background-color: color(primary, light);
+	}
+
+	a:visited,
+	a:hover,
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+
+}
+
+.wsu-c-container .wsu-c-hero__wrapper:first-child,
+#editor .wsu-c-container .wsu-c-hero__wrapper:first-child {
+	margin-top: calc( #{space( 'content-top')} * -1 );
+	padding-bottom: space( 'content-top');
+}

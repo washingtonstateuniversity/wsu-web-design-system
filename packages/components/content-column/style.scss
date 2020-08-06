@@ -1,0 +1,310 @@
+@import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
+
+$grid-columns: 12;
+
+$column-spacing: (
+	'none': 0,
+	'xsmall': 0.5rem,
+	'small': 1rem,
+	'medium': 2rem,
+	'medium-large': 2.5rem,
+	'large': 3rem,
+	'xlarge': 4rem
+);
+
+
+@mixin columns-props {
+	box-sizing: border-box;
+	padding-top: 1.5rem;
+	padding-right: 2.5rem;
+	padding-left: 2.5rem;
+}
+
+.wsu-u {
+	@each $space, $value in $column-spacing {
+
+		&-margin-before--#{$space} {
+		margin-top: $value !important;
+		}
+
+		&-margin-after--#{$space} {
+			margin-bottom: $value !important;
+		}
+
+		&-padding-after--#{$space} {
+			padding-bottom: $value !important;
+		}
+
+		&-padding-before--#{$space} {
+			padding-top: $value !important;
+		}
+	}
+}
+
+.wsu-c-column__wrapper {
+	display: flex;
+	flex-wrap: wrap;
+
+	margin-right: auto;
+	margin-left: auto;
+
+	&.wsu-u-width--xnarrow {
+		max-width: 600px;
+	}
+
+	&.wsu-u-width--narrow {
+		max-width: 800px;
+	}
+
+	&.wsu-u-width--medium {
+		max-width: 1000px;
+	}
+
+	&.wsu-u-width--wide {
+		max-width: 1200px;
+	}
+
+	&.wsu-u-width--xwide {
+		max-width: 1400px;
+	}
+
+	&.wsu-u-width--full {
+		max-width: auto;
+	}
+
+	&[class*="wsu-u-background-"]  {
+
+		margin-top: 1.5rem;
+		padding-top: 1rem;
+
+		& + .wsu-c-column__wrapper .wsu-c-column {
+			padding-top: 1rem;
+		}
+
+		& + .wsu-c-column__wrapper[class*="wsu-u-background-"] {
+			margin-top: 0;
+		}
+
+		.wsu-c-column {
+			/*padding-top: 1rem;
+			padding-bottom: 1rem;*/ 
+		}
+	}
+
+}
+
+.wsu-c-columns {
+
+	&--single {
+
+		& > .wsu-c-column {
+			width: 100%;
+		}
+
+	}
+
+	&--halves {
+
+		& > .wsu-c-column {
+			width: 50%;
+
+			@include mq('small', 'max' ) {
+				width: 100%;
+			}
+		}
+	
+	}
+
+	&--thirds {
+
+		& > .wsu-c-column {
+			width: 33.33%;
+
+			@include mq('small', 'max' ) {
+				width: 100%;
+			}
+		}
+	
+	}
+
+	&--quarters {
+
+		& > .wsu-c-column {
+			width: 25%;
+
+			@include mq('medium', 'max' ) {
+				width: 50%;
+			}
+			@include mq('xsmall', 'max' ) {
+				width: 100%;
+
+			}
+		}
+
+	}
+
+	&--sidebar-right {
+
+		& > .wsu-c-column:first-child {
+			width: 66.66%;
+
+			@include mq('medium', 'max' ) {
+				width: 60%;
+			}
+			@include mq('small', 'max' ) {
+				width: 100%;
+			}
+		}
+
+		& > .wsu-c-column:last-child {
+			width: 33.33%;
+
+			@include mq('medium', 'max' ) {
+				width: 40%;
+			}
+			@include mq('small', 'max' ) {
+				width: 100%;
+			}
+		}
+
+	}
+
+	&--sidebar-left {
+
+		& > .wsu-c-column:first-child {
+			width: 33.33%;
+
+			@include mq('medium', 'max' ) {
+				width: 40%;
+			}
+			@include mq('small', 'max' ) {
+				width: 100%;
+			}
+		}
+
+		& > .wsu-c-column:last-child {
+			width: 66.66%;
+
+			@include mq('medium', 'max' ) {
+				width: 60%;
+			}
+			@include mq('small', 'max' ) {
+				width: 100%;
+			}
+		}
+
+	}
+
+	@each $space, $value in $column-spacing {
+
+		&--margin-before-#{$space} {
+		  margin-top: $value !important;
+		}
+
+		&--margin-after-#{$space} {
+			margin-bottom: $value !important;
+		}
+
+		&--padding-after-#{$space} {
+			padding-bottom: $value !important;
+		}
+
+		&--padding-before-#{$space} {
+			padding-top: $value !important;
+		}
+	}
+
+}
+
+.wsu-c-column {
+	@include columns-props;
+
+	&[class*="wsu-u-background-"]  {
+		padding-bottom: 1rem;
+	}
+
+	@for $i from 1 through $grid-columns {
+		&__grid--#{$i} {
+			width: calc( ( 100% / #{$grid-columns} ) * #{$i} );
+
+			@include columns-props;
+		}
+	}
+
+	@for $i from 1 through $grid-columns {
+
+		&__break--xl-#{$i} {
+			@include mq('xlarge', 'max' ) {
+				width: calc( ( 100% / #{$grid-columns} ) * #{$i} );
+			}
+		}
+	}
+
+	@for $i from 1 through $grid-columns {
+
+		&__break--l-#{$i} {
+			@include mq('large', 'max' ) {
+				width: calc( ( 100% / #{$grid-columns} ) * #{$i} );
+			}
+		}
+
+	}
+
+	@for $i from 1 through $grid-columns {
+
+		&__break--m-#{$i} {
+			@include mq('medium', 'max' ) {
+				width: calc( ( 100% / #{$grid-columns} ) * #{$i} );
+			}
+		}
+	}
+
+	@for $i from 1 through $grid-columns {
+
+		&__break--s-#{$i} {
+			@include mq('small', 'max' ) {
+				width: calc( ( 100% / #{$grid-columns} ) * #{$i} );
+			}
+		}
+	}
+
+	@for $i from 1 through $grid-columns {
+
+		&__break--xs-#{$i} {
+			@include mq('xsmall', 'max' ) {
+				width: calc( ( 100% / #{$grid-columns} ) * #{$i} );
+			}
+		}
+	}
+
+	&__break--first-xs {
+		@include mq('xsmall', 'max' ) {
+			order: -1;
+		}
+	}
+
+	&__break--first-s {
+		@include mq('small', 'max' ) {
+			order: -1;
+		}
+	}
+
+	&__break--first-m {
+		@include mq('medium', 'max' ) {
+			order: -1;
+		}
+	}
+
+	&__break--first-l {
+		@include mq('large', 'max' ) {
+			order: -1;
+		}
+	}
+
+	&__break--first-xl {
+		@include mq('xlarge', 'max' ) {
+			order: -1;
+		}
+	}	
+
+}

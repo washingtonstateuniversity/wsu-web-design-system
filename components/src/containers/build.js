@@ -1,2 +1,0 @@
-// SCSS
-import './containers.scss';

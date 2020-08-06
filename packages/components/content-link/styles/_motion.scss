@@ -1,0 +1,19 @@
+/* More "fun" & "hip" link style with more motion
+======================= */
+.wsu-c-content a.wsu-c-link--motion,
+a.wsu-c-link--motion {
+	transition: box-shadow .3s cubic-bezier(.55, .085, 0, .99);
+	text-decoration: none;
+
+	color: color(primary, base);
+	box-shadow: inset 0 -1px 0 0 color(primary, base);
+
+	&:visited {
+		@extend a;
+	}
+
+	&:hover,
+	&:focus {
+		box-shadow: inset 0 -.5em 0 0 #FAE6EA;
+	}
+}
