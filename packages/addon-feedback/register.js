@@ -1,3 +1,10 @@
+/* 
+ * Addon Feedback
+ * 
+ * Creates and adds a feedback button to the top bar which directs users to a Qualtrics form and passes the current story ID as embedded data
+ * 
+ */
+
 import React from 'react';
 import { addons, types } from '@storybook/addons';
 import { useStorybookState } from '@storybook/api';

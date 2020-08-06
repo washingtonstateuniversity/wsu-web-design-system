@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 // Component Deps
-import './content-card.scss';
+import './style.scss';
 
 import ContentCardPhoto from './component-parts/content-card-photo.js';
 import ContentCardTitle from './component-parts/content-card-title.js';

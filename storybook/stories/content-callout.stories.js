@@ -8,7 +8,6 @@ import ComponentWrapper from '../../packages/storybook-components/content-wrappe
 
 // Component Imports
 import ContentCallout from '../../packages/components/content-callout/index';
-import '../../packages/components/content-link/content-link.scss';
 
 const spacingOptions = ['default','none','xsmall','small','medium','medium-large','large','xlarge'];
 
@@ -23,8 +22,7 @@ export default {
 
 export const DefaultCallout = () => {
 
-	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : false;
- 
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : ''; 
 	return (
 		<ComponentWrapper layout="content" className={classes}>
 			<ContentCallout
@@ -48,8 +46,7 @@ export const DefaultCallout = () => {
 
 export const CalloutList = () => {
 
-	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : false;
- 
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : ''; 
 	return (
 		<ComponentWrapper layout="content" className={classes}>
 			<ContentCallout

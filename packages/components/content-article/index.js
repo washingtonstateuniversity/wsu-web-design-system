@@ -7,6 +7,8 @@ import {
 	ArticleHeader
 } from './component-parts/components';
 
+import './style.scss';
+
 const ContentArticle = ( props, ref ) => {
 	return(
 		<>
