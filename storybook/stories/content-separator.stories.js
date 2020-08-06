@@ -15,7 +15,8 @@ export default {
 	decorators: [
 		withA11y,
 		withKnobs
-	]
+	],
+	component: Hr
 };
 
 export const DefaultSeparator = () => {
@@ -24,7 +25,18 @@ export const DefaultSeparator = () => {
 
 	return(
 		<ComponentWrapper layout="centered" className={classes}>
-			<Hr isHatched showMoreIndicator />
+			<Hr />
+		</ComponentWrapper>
+	)
+}
+
+export const EMSeparator = () => {
+
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : ''; 
+
+	return(
+		<ComponentWrapper layout="centered" className={classes}>
+			<Hr isHatched showMoreIndicator/>
 		</ComponentWrapper>
 	)
 }

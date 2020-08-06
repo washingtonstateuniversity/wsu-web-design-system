@@ -9,7 +9,8 @@
 	margin: 0;
 
 	&--isHatched {
-		background: color(gray, 10);
+		@include pattern();
+		background-color: red;
 		height: 60px;
 	}
 
@@ -23,11 +24,10 @@
 			background-color: color(primary, base);
 			position: absolute;
 			left: 50%;
-			top: 50%;
+			top: 0%;
 			transform: translate(-50%, -50%);
 
-			animation: slide 2s ease-in-out;
-			animation-direction: alternate;
+			animation: slide 5s ease-in-out;
 			animation-iteration-count: infinite;
 			z-index: z('content');
 		}
@@ -35,11 +35,19 @@
 }
 
 @keyframes slide {
-	from { 
+	0% { 
 		top: 0;
 	}
 
-	to {
+	33% {
 		top: 100%;
+	}
+
+	66% {
+		top: 100%;
+	}
+
+	100% {
+		top: 0%;
 	}
 }
