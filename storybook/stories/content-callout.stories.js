@@ -35,6 +35,7 @@ export const DefaultCallout = () => {
 				shape={select( 'shape',['default','square','portrait','landscape','video','circle'],'default', optionsGroupID )}
 				layout={select( 'layout',['default','horizontal','vertical'],'default', optionsGroupID )}
 				verticalAlign={select( 'verticalAlign',['default','top','center','bottom'],'default', optionsGroupID )}
+				style={select( 'style',['default','em'],'default', optionsGroupID )}
 				isNotched={ boolean('isNotched', false, optionsGroupID ) }
 				buttonText={ text( 'buttonText','Learn More', optionsGroupID ) }
 				buttonUrl={ text( 'buttonUrl','#', optionsGroupID ) }
