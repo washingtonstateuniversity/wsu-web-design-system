@@ -15,6 +15,8 @@ import './style.scss';
 
 const ContentCallout = ( props ) => { 
 
+	let baseClass = ( props.style && 'default' != props.style ) ? 'wsu-c-callout--' + props.style : 'wsu-c-callout';
+
 	let wrapperClasses = getUtilityClasses(
 		[
 			{ key:'imageSize', prefix:'wsu-c-callout__image--' },
@@ -24,7 +26,7 @@ const ContentCallout = ( props ) => {
 			{ key:'isNotched', prefix:'wsu-c-callout__image--', isBool:true, value:'notched' },
 		],
 		props,
-		['wsu-c-callout__wrapper']
+		baseClass
 	)
 
 	return (
@@ -40,21 +42,23 @@ const ContentCallout = ( props ) => {
 					videoSrc={props.videoSrc}
 					/>
 				<div className="wsu-c-callout__content">
-				<ContentCalloutTitle
-					title={props.title}
-					tag={props.tag}
-					link={props.link}
-					/>
-				<ContentCalloutDescription
-					description={props.description}
-					/>
-				<ContentButton
-					buttonUrl={props.buttonUrl}
-					buttonText={props.buttonText} 
-					size='small'
-					color='white'
-					shape='round'
-					/>
+					<div className="wsu-c-callout__content-inner">
+						<ContentCalloutTitle
+							title={props.title}
+							tag={props.tag}
+							link={props.link}
+							/>
+						<ContentCalloutDescription
+							description={props.description}
+							/>
+						<ContentButton
+							buttonUrl={props.buttonUrl}
+							buttonText={props.buttonText} 
+							size='small'
+							color='white'
+							shape='round'
+							/>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -63,6 +67,7 @@ const ContentCallout = ( props ) => {
 }
 
 ContentCallout.propTypes = {
+	style: PropTypes.string,
 	imageSrc: PropTypes.string,
 	imageAlt: PropTypes.string,
 	className: PropTypes.string,
@@ -82,6 +87,7 @@ ContentCallout.propTypes = {
 }
 
 ContentCallout.defaultProps = {
+	style:'default',
 	imageSrc:'',
 	imageAlt:'',
 	imageSize:'default',
