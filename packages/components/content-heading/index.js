@@ -12,10 +12,11 @@ class ContentHeading extends Component {
 	render() {
 
 		let Tag     = this.props.tag;
+
+		let baseClass = ( this.props.style && 'default' != this.props.style ) ? 'wsu-c-heading--' + this.props.style : 'wsu-c-heading';
 		
 		let classes = getUtilityClasses(
 			[
-				{ key:'style', prefix:'wsu-c-heading--' },
 				{ key:'width', prefix:'wsu-c-heading--' },
 				{ key:'marginBefore', classSlug:'margin-before' },
 				{ key:'marginAfter', classSlug:'margin-after' },
@@ -24,7 +25,7 @@ class ContentHeading extends Component {
 				{ key:'textAlign', classSlug:'textalign' },
 			],
 			this.props,
-			'wsu-c-heading'
+			baseClass
 		)
 
 		return (
