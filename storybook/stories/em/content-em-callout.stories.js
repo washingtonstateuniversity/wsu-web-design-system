@@ -13,14 +13,14 @@ const spacingOptions = ['default','none','xsmall','small','medium','medium-large
 
 // Story Time
 export default {
-	title: 'EM/Components/Content/Callout',
+	title: 'EM/Components/Callout',
 	decorators: [
 		withA11y,
 		withKnobs,
 	]
 };
 
-export const DefaultCallout = () => {
+export const Default = () => {
 
 
 	return (
@@ -38,11 +38,10 @@ export const DefaultCallout = () => {
 				shape={select( 'shape',['default','square','portrait','landscape','video','circle'],'default', optionsGroupID )}
 				layout={select( 'layout',['default','horizontal','vertical','image-right','image-left'],'default', optionsGroupID )}
 				verticalAlign={select( 'verticalAlign',['default','top','center','bottom'],'default', optionsGroupID )}
-				style={select( 'style',['default','em'],'default', optionsGroupID )}
 				isNotched={ boolean('isNotched', false, optionsGroupID ) }
 				buttonText={ text( 'buttonText','Learn More', optionsGroupID ) }
 				buttonUrl={ text( 'buttonUrl','#', optionsGroupID ) }
-				videoSrc={text( 'videoSrc','', optionsGroupID )}
+				borderColor={select( 'borderColor',['default','black','crimson'],'default', optionsGroupID )}
 				/>
 		</ComponentWrapper>
 	)

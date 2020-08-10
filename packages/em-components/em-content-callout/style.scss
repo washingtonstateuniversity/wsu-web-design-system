@@ -91,6 +91,7 @@
 		background-color: #fff;
 		padding: 2.5rem 2.5rem 2.5rem 3.25rem;
 		margin-top: 15%;
+		border-bottom: 7px solid #1A1A1A;
 	}
 
 	&__link-wrapper {
@@ -119,6 +120,12 @@
 				border-bottom-width: 3px;
 				outline: none; 
 			}
+		}
+	}
+
+	&.wsu-c-em-callout__border-color--crimson {
+		.wsu-c-em-callout__content-inner {
+			border-bottom: 7px solid #CA1237;
 		}
 	}
 

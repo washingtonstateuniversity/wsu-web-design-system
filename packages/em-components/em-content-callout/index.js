@@ -25,6 +25,7 @@ const EmContentCallout = ( props ) => {
 			{ key:'layout', prefix:'wsu-c-em-callout__layout--' },
 			{ key:'verticalAlign', prefix:'wsu-c-em-callout__vertical-align--' },
 			{ key:'imageSize', prefix:'wsu-c-em-callout__image-size--' },
+			{ key:'borderColor', prefix:'wsu-c-em-callout__border-color--' },
 		],
 		props,
 		'wsu-c-em-callout'
@@ -89,7 +90,6 @@ const EmContentCallout = ( props ) => {
 }
 
 EmContentCallout.propTypes = {
-	style: PropTypes.string,
 	imageSrc: PropTypes.string,
 	imageAlt: PropTypes.string,
 	className: PropTypes.string,
@@ -107,11 +107,10 @@ EmContentCallout.propTypes = {
 	isNotched:PropTypes.bool,
 	buttonText: PropTypes.string,
 	buttonUrl: PropTypes.string,
-	videoSrc: PropTypes.string,
+	borderColor:PropTypes.string,
 }
 
 EmContentCallout.defaultProps = {
-	style:'default',
 	imageSrc:'',
 	imageAlt:'',
 	imageSize:'default',
@@ -126,8 +125,8 @@ EmContentCallout.defaultProps = {
 	isNotched:true,
 	buttonText: '',
 	buttonUrl: '',
-	videoSrc:'',
 	titleSize:'default',
+	borderColor:'default',
 }
 
 export default EmContentCallout;
