@@ -37,6 +37,41 @@
 
 }
 
+@mixin wsu-c-callout__title-size( $prefix ) {
+
+	#{$prefix}.wsu-c-callout__title--xlarge {
+		.wsu-c-callout__title {
+			font-size: 3rem;
+			line-height: 1.3;
+			font-weight: 800;
+		}
+	}
+
+	#{$prefix}.wsu-c-callout__title--large {
+		.wsu-c-callout__title {
+			font-size: 1.75rem;
+			line-height: 1.3;
+			font-weight: 600;
+		}
+	}
+
+	#{$prefix}.wsu-c-callout__title--medium {
+		.wsu-c-callout__title {
+			font-size: 1rem;
+			line-height: 1.3;
+			font-weight: 500;
+		}
+	}
+
+	#{$prefix}.wsu-c-callout__title--small {
+		.wsu-c-callout__title {
+			font-size: 0.875rem;
+			line-height: 1.3;
+		}
+	}
+
+}
+
 .wsu-c-callout {
 
 	margin-bottom: 2em;
@@ -330,6 +365,31 @@
 		margin-bottom: 10%;
 	}
 
+	.wsu-c-callout__eyebrow-title {
+		font-size: 0.875rem;
+		text-transform: uppercase;
+		font-weight: 600;
+		color: #7F7F7F;
+
+		strong {
+			color: #262626;
+			font-weight: 600;
+		}
+	}
+
+	.wsu-c-callout__title-link {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	.wsu-c-callout__title-link::after {
+		content: "\F108";
+		font-family: wsu-icons;
+		color: color(primary,base);
+		margin-left: 0.5em;
+		font-size: 0.8em;
+	}
+
 	.wsu-c-callout__image {
 		object-fit: cover;
 		object-fit: cover;
@@ -365,7 +425,7 @@
 
 			.wsu-c-callout__content-inner {
 				padding: 2.5rem 2.5rem 2.5rem 3.25rem;
-				margin-left: -20%;
+				margin-left: -40%;
 				position: relative;
 			}
 
@@ -417,7 +477,57 @@
 			.wsu-c-callout__content {
 				justify-content: flex-end;
 			}
+
+			.wsu-c-callout__content-inner {
+				margin-top: auto;
+				margin-bottom: 15%;
+			}
+		}
+
+		&--top {
+			.wsu-c-callout__content {
+				justify-content: flex-start;
+			}
+
+			.wsu-c-callout__content-inner {
+				margin-top: 15%;
+				margin-bottom: auto;
+			}
+		}
+
+		&--center {
+			.wsu-c-callout__content {
+				justify-content: center;
+			}
+
 		}
 	}
 
+	.wsu-c-button {
+		border: none !important;
+		display: inline-block !important;
+		border-radius: 0 !important;
+		color: #262626 !important;
+		font-size: 1rem !important;
+		font-weight: 600 !important;
+		line-height: 1.5 !important;
+		padding: 0 !important;
+		box-shadow: none !important;
+		cursor: pointer;
+	}
+
+	.wsu-c-button::after {
+		content: "\F108";
+		font-family: wsu-icons;
+		color: color(primary,base);
+		margin-left: 0.5em;
+		font-size: 0.8em;
+	}
+
+	.wsu-c-button__wrapper {
+		text-align: right;
+	}
+
 }
+
+@include wsu-c-callout__title-size( ".wsu-c-callout--em"  ); 

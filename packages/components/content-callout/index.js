@@ -6,7 +6,8 @@ import {
 	ContentCalloutImg,
 	ContentCalloutTitle,
 	ContentCalloutDescription,
-	ContentCalloutVideo
+	ContentCalloutVideo,
+	ContentCalloutEyebrowTitle,
 } from './component-parts.js';
 
 import ContentButton from '../content-button/index';
@@ -20,6 +21,7 @@ const ContentCallout = ( props ) => {
 	let wrapperClasses = getUtilityClasses(
 		[
 			{ key:'imageSize', prefix:'wsu-c-callout__image--' },
+			{ key:'titleSize', prefix:'wsu-c-callout__title--' },
 			{ key:'shape', prefix:'wsu-c-callout__image--' },
 			{ key:'layout', prefix:'wsu-c-callout__layout--' },
 			{ key:'verticalAlign', prefix:'wsu-c-callout__vertical-align--' },
@@ -43,6 +45,9 @@ const ContentCallout = ( props ) => {
 					/>
 				<div className="wsu-c-callout__content">
 					<div className="wsu-c-callout__content-inner">
+						<ContentCalloutEyebrowTitle
+							eyebrowTitle={props.eyebrowTitle}
+						 	/>
 						<ContentCalloutTitle
 							title={props.title}
 							tag={props.tag}
@@ -72,7 +77,9 @@ ContentCallout.propTypes = {
 	imageAlt: PropTypes.string,
 	className: PropTypes.string,
 	link: PropTypes.string,
+	eyebrowTitle: PropTypes.string,
 	title: PropTypes.string,
+	titleSize: PropTypes.string,
 	imageSize: PropTypes.string,
 	shape: PropTypes.string,
 	description: PropTypes.string,
@@ -93,6 +100,7 @@ ContentCallout.defaultProps = {
 	imageSize:'default',
 	shape:'default',
 	link:'',
+	eyebrowTitle:'',
 	title:'',
 	tag:'h3',
 	description:'',
@@ -102,6 +110,7 @@ ContentCallout.defaultProps = {
 	buttonText: '',
 	buttonUrl: '',
 	videoSrc:'',
+	titleSize:'default',
 }
 
 export default ContentCallout;

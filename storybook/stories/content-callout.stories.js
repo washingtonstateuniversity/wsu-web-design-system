@@ -28,7 +28,10 @@ export const DefaultCallout = () => {
 			<ContentCallout
 				imageSrc='https://source.unsplash.com/collection/895539'
 				imageAlt={ text( 'imageAlt','Alt Text', optionsGroupID ) }
+				eyebrowTitle={text( 'eyebrowTitle','', optionsGroupID )}
 				title='Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+				titleSize={select( 'titleSize',['default','small','medium','large','xlarge'],'default', optionsGroupID )}
+				tag={select( 'tag',['h2','h3','h4','h5','div'],'h3', optionsGroupID )}
 				link={ text( 'link','#', optionsGroupID ) }
 				description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget massa ut erat ultrices consectetur vitae a enim. Pellentesque risus diam, posuere ac nulla mattis, pulvinar efficitur massa. Nullam a nisl pretium leo pretium tincidunt quis at velit. Pellentesque posuere tincidunt fringilla. Curabitur ullamcorper pharetra ligula eget imperdiet.'
 				imageSize={select( 'imageSize',['default','xsmall','small','medium','large'],'default', optionsGroupID )}
@@ -54,6 +57,7 @@ export const CalloutList = () => {
 				imageSrc='https://source.unsplash.com/collection/895539'
 				imageAlt={ text( 'imageAlt','Alt Text', optionsGroupID ) }
 				title='Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+				titleSize={select( 'titleSize',['default','small','medium','large','xlarge'],'default', optionsGroupID )}
 				link={ text( 'link','#', optionsGroupID ) }
 				description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget massa ut erat ultrices consectetur vitae a enim. Pellentesque risus diam, posuere ac nulla mattis, pulvinar efficitur massa. Nullam a nisl pretium leo pretium tincidunt quis at velit. Pellentesque posuere tincidunt fringilla. Curabitur ullamcorper pharetra ligula eget imperdiet.'
 				imageSize={select( 'imageSize',['default','xsmall','small','medium','half'],'default', optionsGroupID )}
@@ -68,6 +72,7 @@ export const CalloutList = () => {
 				imageSrc='https://source.unsplash.com/collection/895539'
 				imageAlt={ text( 'imageAlt','Alt Text', optionsGroupID ) }
 				title='Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+				titleSize={select( 'titleSize',['default','small','medium','large','xlarge'],'default', optionsGroupID )}
 				link={ text( 'link','#', optionsGroupID ) }
 				description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget massa ut erat ultrices consectetur vitae a enim. Pellentesque risus diam, posuere ac nulla mattis, pulvinar efficitur massa. Nullam a nisl pretium leo pretium tincidunt quis at velit. Pellentesque posuere tincidunt fringilla. Curabitur ullamcorper pharetra ligula eget imperdiet.'
 				imageSize={select( 'imageSize',['default','xsmall','small','medium','half'],'default', optionsGroupID )}
@@ -82,6 +87,7 @@ export const CalloutList = () => {
 				imageSrc='https://source.unsplash.com/collection/895539'
 				imageAlt={ text( 'imageAlt','Alt Text', optionsGroupID ) }
 				title='Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+				titleSize={select( 'titleSize',['default','small','medium','large','xlarge'],'default', optionsGroupID )}
 				link={ text( 'link','#', optionsGroupID ) }
 				description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget massa ut erat ultrices consectetur vitae a enim. Pellentesque risus diam, posuere ac nulla mattis, pulvinar efficitur massa. Nullam a nisl pretium leo pretium tincidunt quis at velit. Pellentesque posuere tincidunt fringilla. Curabitur ullamcorper pharetra ligula eget imperdiet.'
 				imageSize={select( 'imageSize',['default','xsmall','small','medium','half'],'default', optionsGroupID )}
