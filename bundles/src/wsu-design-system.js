@@ -30,7 +30,13 @@ import '../../packages/components/content-stat/style.scss';
 import '../../packages/components/content-separator/style.scss';
 import '../../packages/components/content-page-banner/style.scss';
 
+// EM Components
 import '../../packages/em-components/em-content-callout/style.scss';
 import '../../packages/em-components/em-content-header/style.scss';
 
+// Component Parts
+import '../../packages/component-parts/pattern/style.scss';
+
+
+// Javascripts
 import '../../packages/components/site-nav-vertical/script.js';

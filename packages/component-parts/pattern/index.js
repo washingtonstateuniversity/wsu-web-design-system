@@ -20,12 +20,12 @@ const Pattern = ( props ) => {
 	return (
 		<div 
 			className={classes}
-			style={{
-				top: props.top,
-				left: props.left,
-				width: props.width,
-				height: props.height
-			}}
+			// style={{
+			// 	top: props.top,
+			// 	left: props.left,
+			// 	width: props.width,
+			// 	height: props.height
+			// }}
 		></div>
 	);
 
