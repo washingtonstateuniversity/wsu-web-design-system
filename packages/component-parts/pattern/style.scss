@@ -1,0 +1,29 @@
+@import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
+
+.wsu-c-pattern {
+	position: absolute;
+
+	&--angled-lines {
+		@include pattern('angled');
+	}
+
+	&--angled-lines-gray {
+		@include pattern('angled', 'gray');
+	}
+
+	&--angled-lines-crimson {
+		@include pattern('angled', 'crimson');
+	}
+
+	&--plus {
+		@include pattern('plus');
+	}
+
+	&--plus-gray {
+		@include pattern('plus', 'gray');
+	}
+
+	&--plus-crimson {
+		@include pattern('plus', 'crimson');
+	}
+}

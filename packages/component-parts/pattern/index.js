@@ -15,6 +15,8 @@ const Pattern = ( props ) => {
 		'wsu-c-pattern'
 	)
 
+	
+
 	return (
 		<div 
 			className={classes}
