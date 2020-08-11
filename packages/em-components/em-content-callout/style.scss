@@ -1,0 +1,323 @@
+@import '../../component-parts/mixins';
+@import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
+
+
+@mixin content-styles {
+
+	.wsu-c-title {
+		font-size: 1.2rem;
+		font-weight: 600;
+		line-height: 1.35em;
+		margin-top: 0.5em;
+		margin-bottom: 1em;
+		padding-bottom: 0.5em;
+		color: color(gray, 90 );
+		position: relative;
+
+		.wsu-c-wrapper-link {
+			text-decoration: none;
+			color: inherit;
+			transition: 300ms ease all;
+			text-decoration: none;
+			border-bottom-width: 0;
+			border-bottom-style: solid;
+			border-bottom-color: #CA1237;
+
+			&::after {
+				content: "\F108";
+				font-family: wsu-icons;
+				color: color(primary,base);
+				margin-left: 0.5em;
+				font-size: 0.7em;
+			}
+
+			&:hover {
+				color: inherit;
+				border-bottom-width: 3px;
+				outline: none; 
+			}
+		}
+		
+	}
+
+	.wsu-c-eyebrow-header {
+		font-size: 0.875rem;
+		text-transform: uppercase;
+		font-weight: 600;
+		color: #7F7F7F;
+
+		strong {
+			color: #262626;
+			font-weight: 600;
+		}
+	}
+
+	@include wsu-c-title-size; 
+}
+
+
+.wsu-c-em-callout {
+
+	@include image-frame;
+
+	@include content-styles;
+
+	&__container {
+		display: flex;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+
+	&__content-inner {
+		position: relative;
+		background-color: #fff;
+		padding: 2.5rem 2.5rem 2.5rem 3.25rem;
+		border-bottom: 7px solid #1A1A1A;
+	}
+
+	&__layout--image-right {
+		.wsu-c-em-callout__content-inner {
+			padding: 2.5rem 3.25rem 2.5rem 2.5rem;
+		}
+	}
+
+	&__link-wrapper {
+		text-align: right;
+
+		.wsu-c-wrapper-link {
+			text-decoration: none;
+			color: #262626;
+			transition: 300ms ease all;
+			text-decoration: none;
+			border-bottom-width: 0;
+			border-bottom-style: solid;
+			border-bottom-color: #CA1237;
+			font-size: 1.125rem;
+
+			&::after {
+				content: "\F108";
+				font-family: wsu-icons;
+				color: color(primary,base);
+				margin-left: 0.5em;
+				font-size: 0.7em;
+			}
+
+			&:hover {
+				color: inherit;
+				border-bottom-width: 3px;
+				outline: none; 
+			}
+		}
+	}
+
+	&--bleed-image {
+		margin-left: calc( ( (100vw - 100%) / 2 ) * -1 );
+	}
+
+	&__layout--image-right.wsu-c-em-callout--bleed-image {
+		margin-left: auto;
+		margin-right: calc( ( (100vw - 100%) / 2 ) * -1 );
+	}
+
+	&.wsu-c-em-callout__image-size--large {
+
+		.wsu-c-image-frame{
+			width: 50%;
+		}
+
+	}
+
+	&.wsu-c-em-callout__image-size--medium-large {
+
+		.wsu-c-image-frame{
+			width: 40%;
+		}
+	}
+
+	&.wsu-c-em-callout__image-size--medium {
+
+		.wsu-c-image-frame{
+			width: 300;
+		}
+	}
+
+	&.wsu-c-em-callout__image-size--small {
+
+		.wsu-c-image-frame{
+			width: 200px;
+		}
+	}
+}
+
+.wsu-c-em-callout__border-color--crimson {
+	.wsu-c-em-callout__content-inner {
+		border-bottom: 7px solid #CA1237;
+	}
+}
+
+.wsu-c-em-callout__border-color--none {
+	.wsu-c-em-callout__content-inner {
+		border-bottom: 7px solid transparent;
+	}
+}
+
+
+.wsu-c-em-callout--overlay {
+
+	@include content-styles;
+
+	@include image-frame;
+
+	&.wsu-c-em-callout__image-size--large {
+
+		.wsu-c-image-frame{
+			width: 50%;
+			flex-shrink: 0;
+			flex-grow: 0;
+		}
+
+		.wsu-c-image-frame__image-wrapper {
+			height: 690px;
+			padding-top: 0;
+			margin-right: -40%;
+		}
+
+		.wsu-c-em-callout__content {
+			padding-top: 80px;
+			padding-bottom: 80px;
+		}
+
+		&.wsu-c-em-callout__layout--image-right {
+			.wsu-c-image-frame__image-wrapper {
+				margin-right: 0;
+				margin-left: -40%;
+			}
+		}
+
+	}
+
+	&.wsu-c-em-callout__image-size--medium-large {
+
+		.wsu-c-image-frame{
+			width: 50%;
+			flex-shrink: 0;
+			flex-grow: 0;
+		}
+
+		.wsu-c-image-frame__image-wrapper {
+			height: 550px;
+			padding-top: 0;
+			margin-right: -40%;
+		}
+
+		.wsu-c-em-callout__content {
+			padding-top: 80px;
+			padding-bottom: 80px;
+		}
+
+		&.wsu-c-em-callout__layout--image-right {
+			.wsu-c-image-frame__image-wrapper {
+				margin-right: 0;
+				margin-left: -40%;
+			}
+		}
+	}
+
+	&.wsu-c-em-callout__image-size--medium {
+
+		.wsu-c-image-frame{
+			width: 40%;
+			flex-shrink: 0;
+			flex-grow: 0;
+		}
+
+		.wsu-c-image-frame__image-wrapper {
+			height: 400px;
+			padding-top: 0;
+			margin-right: -40%;
+		}
+
+		.wsu-c-em-callout__content {
+			padding-top: 60px;
+			padding-bottom: 60px;
+		}
+
+		&.wsu-c-em-callout__layout--image-right {
+			.wsu-c-image-frame__image-wrapper {
+				margin-right: 0;
+				margin-left: -40%;
+			}
+		}
+	}
+
+	&.wsu-c-em-callout__image-size--small {
+
+		.wsu-c-image-frame{
+			width: 205px;
+			flex-shrink: 0;
+			flex-grow: 0;
+		}
+
+		.wsu-c-image-frame__image-wrapper {
+			height: 192px;
+			padding-top: 0;
+			margin-right: -70px;
+		}
+
+		.wsu-c-em-callout__content {
+			padding-top: 30px;
+			padding-bottom: 30px;
+		}
+
+		&.wsu-c-em-callout__layout--image-right {
+			.wsu-c-image-frame__image-wrapper {
+				margin-right: 0;
+				margin-left: -70px;
+			}
+		}
+	}
+
+	.wsu-c-em-callout__content {
+		flex-grow: 1;
+	}
+
+	.wsu-c-em-callout__content-inner {
+		background-color: #fff;
+		position: relative;
+		z-index: 1;
+	}
+
+	&.wsu-c-em-callout__vertical-align {
+
+		&--bottom {
+			.wsu-c-em-callout__content {
+				justify-content: flex-end;
+				padding-top: 0;
+			}
+	
+		}
+	
+		&--top {
+			.wsu-c-em-callout__content {
+				justify-content: flex-start;
+				padding-bottom: 0;
+			}
+	
+		}
+	
+		&--center {
+			.wsu-c-em-callout__content {
+				justify-content: center;
+				padding-top: 0;
+				padding-bottom: 0;
+			}
+
+		}
+
+	}
+
+}

@@ -5,6 +5,20 @@ import React, { Component } from 'react';
 import empty from '../../storybook-components/field-checker';
 import {getUtilityClasses} from '@wsuwebteam/build-tools/js/helpers/utilityClasses';
 
+const ContentCalloutEyebrowTitle = ( props ) => {
+
+	if ( empty( props.eyebrowTitle) ) {
+		return null;
+	} 
+
+
+	return (
+		<div className="wsu-c-callout__eyebrow-title">
+			{props.eyebrowTitle}
+		</div>
+	)
+}
+
 const ContentCalloutLink = ( props ) => {
 
 	if ( props.link ) {
@@ -106,4 +120,10 @@ ContentCalloutDescription.defaultProps = {
 
 
 
-export { ContentCalloutImg, ContentCalloutVideo, ContentCalloutTitle, ContentCalloutDescription };
+export { 
+	ContentCalloutImg, 
+	ContentCalloutVideo, 
+	ContentCalloutTitle, 
+	ContentCalloutDescription,
+	ContentCalloutEyebrowTitle
+};
