@@ -23,3 +23,17 @@ All the components can easily be imported into your projects using the root of t
 - Variables: camelCase 
 - Class names: PascalCase
 - File names: kebab-case
+
+## CSS/SCSS 
+
+#### Naming Convention
+- Class names should follow the following schema wsu-placement-collection-name__subname--modifier
+-- placement (g-global, s-site, c-content)
+-- collection (optional). Omitted by default but in the case of a collection like EM it would be wsu-c-em-....
+-- name is the the name of the component
+-- subname is the part of the component that the class is being applied to. wsu-c-callout__title
+-- additional subnames should be avoided in favor of descriptive names separated by a hyphen (ie. __title-link instead of __title__link );
+
+#### Nesting
+- Classes should use nesting as little as possible with the following exceptions.
+-- General component styles should be nested under parent class to avoid creating style conflicts 

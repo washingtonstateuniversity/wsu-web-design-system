@@ -1,0 +1,68 @@
+@mixin image-frame( $width: 300px, $ratio: 100%) {
+
+	.wsu-c-image-frame {
+		width: $width;
+		flex-grow: 0;
+		flex-shrink: 0;
+	}
+
+	.wsu-c-image-frame__image-wrapper {
+		position: relative;
+		padding-top: $ratio;
+	}
+
+	.wsu-c-image-frame__image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+	}
+
+	.wsu-c-image-frame {
+	
+		&--portrait {
+
+			.wsu-c-image-frame__image-wrapper {
+				padding-top: 115%;
+			}
+
+		}
+
+		&--landscape {
+
+			.wsu-c-image-frame__image-wrapper {
+				padding-top: 65%;
+			}
+	
+		}
+
+		&--circle {
+			.wsu-c-image-frame__image-wrapper {
+				padding-top: 100%;
+				border-radius: 50%;
+				overflow: hidden;
+			}
+		}
+
+		&--square {
+
+			.wsu-c-image-frame__image-wrapper {
+				padding-top: 100%;
+			}
+
+		}
+
+		&--notched {
+			.wsu-c-image-frame__image {
+				clip-path: polygon(100% 0, 100% calc(100% - 45px), calc(100% - 45px) 100%, 0 100%, 0 0);
+			}
+		}
+
+	}
+
+
+}
