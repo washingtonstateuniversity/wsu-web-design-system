@@ -1,0 +1,54 @@
+@import '../../component-parts/mixins';
+
+.wsu-c-page-banner {
+
+	&--full-bleed {
+		margin-left: calc( ( ( 100vw - 100% ) / 2 ) * -1 );
+		margin-right: calc( ( ( 100vw - 100% ) / 2 ) * -1 );
+	}
+
+	@include image-frame( 100%, 400px);
+
+	&__image--xsmall {
+		.wsu-c-image-frame__image-wrapper {
+			padding-top: 60px;
+		}
+	}
+
+	&__image--small {
+		.wsu-c-image-frame__image-wrapper {
+			padding-top: 250px;
+		}
+	}
+
+	&__image--medium {
+		.wsu-c-image-frame__image-wrapper {
+			padding-top: 350px;
+		}
+	}
+
+	&__image--medium-large {
+		.wsu-c-image-frame__image-wrapper {
+			padding-top: 450px;
+		}
+	}
+
+	&__image--large {
+		.wsu-c-image-frame__image-wrapper {
+			padding-top: 650px;
+		}
+	}
+
+	&__image--xlarge {
+		.wsu-c-image-frame__image-wrapper {
+			padding-top: 750px;
+		}
+	}
+
+	&__image--full {
+		.wsu-c-image-frame__image-wrapper {
+			padding-top: 100vh;
+		}
+	}
+
+}
