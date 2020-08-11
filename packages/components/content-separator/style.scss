@@ -8,13 +8,13 @@
 	border: none;
 	margin: 0;
 
-	&--isHatched {
+	&.wsu-c-separator--isHatched {
 		@include pattern();
 		background-color: transparent;
 		height: 60px;
 	}
 
-	&--showMoreIndicator {
+	&.wsu-c-separator--showMoreIndicator {
 		position: relative;
 
 		&::after {
@@ -33,6 +33,7 @@
 		}
 	}
 }
+	
 
 @keyframes slide {
 	0% { 

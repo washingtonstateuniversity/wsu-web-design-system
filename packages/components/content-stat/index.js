@@ -11,8 +11,8 @@ class ContentStat extends Component {
 		const classes = classnames(
 			'wsu-c-stat__wrapper', 
 			{
-				'wsu-c-stat__wrapper--align-left': this.props.alignLeft,
-				'wsu-c-stat__wrapper--align-right': this.props.alignRight,
+				'wsu-c-stat__wrapper--align-left': this.props.alignment == 'align-left',
+				'wsu-c-stat__wrapper--align-right': this.props.alignment == 'align-right',
 				'wsu-c-stat__wrapper--is-dark': this.props.isDark,
 			}
 		)
@@ -21,7 +21,7 @@ class ContentStat extends Component {
 			<div className={classes}>
 				{this.props.label && <div className="wsu-c-stat__label">{this.props.label}</div>}
 				<CountUp end={this.props.value}  duration={this.props.duration} prefix={this.props.prefix && '<span class="wsu-c-stat__prefix">' + this.props.prefix + '</span>'} suffix={this.props.suffix && '<span class="wsu-c-stat__suffix">' + this.props.suffix + '</span>'} separator={this.props.separator} className="wsu-c-stat__value" />
-				{this.props.description && <p className="wsu-c-stat__description">{this.props.description}</p>}
+				{this.props.description && <div className="wsu-c-stat__description">{this.props.description}</div>}
 			</div>
 		);
 	}
@@ -35,8 +35,7 @@ ContentStat.propTypes = {
 	suffix: PropTypes.string,
 	separator: PropTypes.string,
 	duration: PropTypes.number,
-	alignLeft: PropTypes.bool,
-	alignRight: PropTypes.bool,
+	alignment: PropTypes.string,
 	isDark: PropTypes.bool,
 }
 
@@ -48,8 +47,7 @@ ContentStat.defaultProps = {
 	suffix: '',
 	separator: ',',
 	duration: 1.5,
-	alignLeft: false,
-	alignRight: false,
+	alignment: 'default',
 	isDark: false,
 }
 
