@@ -115,18 +115,32 @@
 	}
 
 	&--bleed-image {
-		margin-left: calc( ( (100vw - 100%) / 2 ) * -1 );
+
+		.wsu-c-image-frame{
+			margin-left: calc( ( (100vw - 100%) / 2 ) * -1 );
+		}
 	}
 
 	&__layout--image-right.wsu-c-em-callout--bleed-image {
-		margin-left: auto;
-		margin-right: calc( ( (100vw - 100%) / 2 ) * -1 );
+
+		.wsu-c-image-frame{
+			margin-left: auto;
+			margin-right: calc( ( (100vw - 100%) / 2 ) * -1 );
+		}
+		
 	}
 
 	&.wsu-c-em-callout__image-size--large {
 
 		.wsu-c-image-frame{
 			width: 50%;
+		}
+
+		&.wsu-c-em-callout--bleed-image {
+
+			.wsu-c-image-frame{
+				width: calc( ( (100vw - 100%) / 2 ) + 50% );
+			}
 		}
 
 	}
@@ -136,12 +150,26 @@
 		.wsu-c-image-frame{
 			width: 40%;
 		}
+
+		&.wsu-c-em-callout--bleed-image {
+
+			.wsu-c-image-frame{
+				width: calc( ( (100vw - 100%) / 2 ) + 40% );
+			}
+		}
 	}
 
 	&.wsu-c-em-callout__image-size--medium {
 
 		.wsu-c-image-frame{
-			width: 300;
+			width: 300px;
+		}
+
+		&.wsu-c-em-callout--bleed-image {
+
+			.wsu-c-image-frame{
+				width: calc( ( (100vw - 100%) / 2 ) + 300px );
+			}
 		}
 	}
 
@@ -149,6 +177,13 @@
 
 		.wsu-c-image-frame{
 			width: 200px;
+		}
+
+		&.wsu-c-em-callout--bleed-image {
+
+			.wsu-c-image-frame{
+				width: calc( ( (100vw - 100%) / 2 ) + 200px );
+			}
 		}
 	}
 }
@@ -198,6 +233,13 @@
 			}
 		}
 
+		&.wsu-c-em-callout--bleed-image {
+
+			.wsu-c-image-frame{
+				width: calc( ( (100vw - 100%) / 2 ) + 50% );
+			}
+		}
+
 	}
 
 	&.wsu-c-em-callout__image-size--medium-large {
@@ -223,6 +265,13 @@
 			.wsu-c-image-frame__image-wrapper {
 				margin-right: 0;
 				margin-left: -40%;
+			}
+		}
+
+		&.wsu-c-em-callout--bleed-image {
+
+			.wsu-c-image-frame{
+				width: calc( ( (100vw - 100%) / 2 ) + 50% );
 			}
 		}
 	}
@@ -252,6 +301,13 @@
 				margin-left: -40%;
 			}
 		}
+
+		&.wsu-c-em-callout--bleed-image {
+
+			.wsu-c-image-frame{
+				width: calc( ( (100vw - 100%) / 2 ) + 40% );
+			}
+		}
 	}
 
 	&.wsu-c-em-callout__image-size--small {
@@ -277,6 +333,13 @@
 			.wsu-c-image-frame__image-wrapper {
 				margin-right: 0;
 				margin-left: -70px;
+			}
+		}
+
+		&.wsu-c-em-callout--bleed-image {
+
+			.wsu-c-image-frame{
+				width: calc( ( (100vw - 100%) / 2 ) + 205px );
 			}
 		}
 	}
