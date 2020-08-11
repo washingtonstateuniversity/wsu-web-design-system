@@ -2,7 +2,7 @@
 
 .wsu-c-content hr,
 .wsu-c-separator {
-	background: color(gray, 10);
+	background-color: color(gray, 10);
 	width: 100%;
 	height: 1px;
 	border: none;
@@ -10,7 +10,7 @@
 
 	&--isHatched {
 		@include pattern();
-		background-color: red;
+		background-color: transparent;
 		height: 60px;
 	}
 
