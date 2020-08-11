@@ -19,6 +19,7 @@ import './style.scss';
 
 const EmContentCallout = ( props ) => { 
 
+	let baseClass = ( 'default' != props.style ) ? 'wsu-c-em-callout--' + props.style : 'wsu-c-em-callout';
 
 	let wrapperClasses = getUtilityClasses(
 		[
@@ -26,9 +27,10 @@ const EmContentCallout = ( props ) => {
 			{ key:'verticalAlign', prefix:'wsu-c-em-callout__vertical-align--' },
 			{ key:'imageSize', prefix:'wsu-c-em-callout__image-size--' },
 			{ key:'borderColor', prefix:'wsu-c-em-callout__border-color--' },
+			{ key:'bleedImage', prefix:'wsu-c-em-callout--', value:'bleed-image', isBool:true },
 		],
 		props,
-		'wsu-c-em-callout'
+		baseClass
 	)
 
 	if ( 'image-right' == props.layout ) {
@@ -98,6 +100,7 @@ EmContentCallout.propTypes = {
 	title: PropTypes.string,
 	titleSize: PropTypes.string,
 	imageSize: PropTypes.string,
+	style: PropTypes.string,
 	shape: PropTypes.string,
 	description: PropTypes.string,
 	tag: PropTypes.string,
@@ -119,6 +122,7 @@ EmContentCallout.defaultProps = {
 	eyebrowTitle:'',
 	title:'',
 	tag:'h3',
+	style: 'default',
 	description:'',
 	layout:'default',
 	verticalAlign:'default', 
@@ -127,6 +131,7 @@ EmContentCallout.defaultProps = {
 	buttonUrl: '',
 	titleSize:'default',
 	borderColor:'default',
+	bleedImage:false,
 }
 
 export default EmContentCallout;
