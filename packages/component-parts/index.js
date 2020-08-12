@@ -4,3 +4,4 @@ export { default as WrapperLink } from './wrapper-link';
 export { default as EyebrowHeader } from './eyebrow-header';
 export { default as Title } from './title';
 export { default as Caption } from './caption';
+export { default as Cite } from './cite';
