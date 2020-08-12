@@ -30,3 +30,5 @@ export { SiteFooterCondensed } from './site-footer';
 export { default as SiteHeader } from './site-header';
 export { default as SiteNavHorizontal } from './site-nav-horizontal';
 export { default as SiteNavVertical } from './site-nav-vertical';
+export { default as ContentPageBanner } from './content-page-banner';
+export { default as ContentBlockquote} from './content-blockquote';
