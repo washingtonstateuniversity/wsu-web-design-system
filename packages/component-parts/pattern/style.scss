@@ -2,6 +2,7 @@
 
 .wsu-c-pattern {
 	position: absolute;
+	z-index: 1;
 
 	&--angled-lines {
 		@include pattern('angled');
@@ -32,8 +33,9 @@
 		@include pattern('angled', 'crimson');
 		height: 60%;
 		width: 12%;
+		max-width: 50px;
 		top: 26px;
-		left: -6%;
+		left: -2.5%;
 	}
 
 	&--plus-crimson-top-right {
@@ -67,7 +69,7 @@
 		max-height: 35px;
 		width: 47%;
 		left: 0;
-		top: calc(100% - 7px);
+		top: 100%;
 	}
 
 	&--solid-crimson-top-right {
