@@ -22,14 +22,16 @@ export const Default = () => {
 
 	return(
 		<ComponentWrapper layout="content">
-			<ContentPageBanner
-				imageSrc='https://source.unsplash.com/collection/895539'
-				imageAlt={ text( 'imageAlt','Alt Text', optionsGroupID ) }
-				imageCaption={ text( 'imageCaption','Image Caption', optionsGroupID ) }
-				height={select( 'height',['default','xsmall','small','medium','medium-large','large','xlarge','full'],'default', optionsGroupID )}
-				isNotched={ boolean('isNotched', false, optionsGroupID ) }
-				isFullBleed={ boolean('isFullBleed', false, optionsGroupID ) }
-				/>
+			<ContentBlockquote
+				cite={text( 'cite','Lorem ipsum dolor sit amet', optionsGroupID )}
+				textSize={select( 'textSize',['default','xsmall','small','medium','medium-large','large'],'default', optionsGroupID )}
+				width={select( 'width',['default','small','medium','large','full'],'default', optionsGroupID )}
+				>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent suscipit congue lacinia. Nulla sed ex pellentesque, dignissim mi vel, interdum sapien. 
+				Morbi facilisis vel velit sit amet malesuada. Donec id pharetra diam. Ut egestas tellus non euismod varius. Donec eget augue est. 
+				Donec sapien justo, bibendum nec metus at, placerat aliquet sapien. Suspendisse interdum mi nibh, tincidunt egestas nisi auctor id.
+				 Nunc ante lectus, accumsan vitae volutpat in, varius vitae justo.
+			</ContentBlockquote>
 		</ComponentWrapper>
 	)
 }
