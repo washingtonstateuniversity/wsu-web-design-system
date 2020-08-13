@@ -1,6 +1,7 @@
 @mixin image-frame( $width: 300px, $ratio: 100%) {
 
 	.wsu-c-image-frame {
+		height: 100%;
 		width: $width;
 		flex-grow: 0;
 		flex-shrink: 0;
@@ -60,6 +61,11 @@
 		&--notched {
 			.wsu-c-image-frame__image {
 				clip-path: polygon(100% 0, 100% calc(100% - 45px), calc(100% - 45px) 100%, 0 100%, 0 0);
+			}
+		}
+		&--notched-xl {
+			.wsu-c-image-frame__image {
+				clip-path: polygon(100% 0, 100% calc(100% - 100px), calc(100% - 100px) 100%, 0 100%, 0 0);
 			}
 		}
 

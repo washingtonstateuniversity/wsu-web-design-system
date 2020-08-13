@@ -33,6 +33,8 @@ import '../../packages/components/content-page-banner/style.scss';
 // EM Components
 import '../../packages/em-components/em-content-callout/style.scss';
 import '../../packages/em-components/em-content-header/style.scss';
+import '../../packages/em-components/em-content-ordered-list/style.scss';
+import '../../packages/em-components/em-content-table/style.scss';
 
 // Component Parts
 import '../../packages/component-parts/pattern/style.scss';
