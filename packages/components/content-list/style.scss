@@ -5,7 +5,9 @@
  * Base Styles
  *
  */
-.wsu-c-list {
+.wsu-c-list,
+.wsu-c-content ul,
+.wsu-c-content ol {
 	margin: 0;
 	margin-left: $unit;
 	padding: 0;
@@ -13,14 +15,17 @@
 	list-style: none;
 }
 
-.wsu-c-list .wsu-c-list {
+.wsu-c-list .wsu-c-list,
+.wsu-c-content ul ul,
+.wsu-c-content ol ol {
 	padding-left: $unit-l;
 }
 
 
 // TODO: Use hollow circles on second-level + list items
 // TODO: Add options to reduce spacing on child list items
-.wsu-c-list-item {
+.wsu-c-list-item,
+.wsu-c-content li {
 	position: relative;
 
 	padding-left: $unit;
@@ -51,12 +56,14 @@
  * Ordered List Styles
  *
  */
-.wsu-c-list__ordered {
+.wsu-c-list__ordered,
+.wsu-c-content ol {
 	counter-reset: wsu-ordered-list;
 
 	@extend .wsu-c-list;
 
-	.wsu-c-list-item {
+	.wsu-c-list-item,
+	li {
 		position: relative;
 
 		padding-left: $unit;
@@ -84,7 +91,8 @@
 
 	/* Sub-ordered lists are letters
 	======================= */
-	& .wsu-c-list__ordered .wsu-c-list-item::before {
+	& .wsu-c-list__ordered .wsu-c-list-item::before,
+	& ol li::before {
 		content: counter(wsu-ordered-list, lower-alpha) ". ";
 	}
 }
