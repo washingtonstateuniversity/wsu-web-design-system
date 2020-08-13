@@ -18,11 +18,9 @@
 .wsu-c-list .wsu-c-list,
 .wsu-c-content ul ul,
 .wsu-c-content ol ol {
-	padding-left: $unit-l;
+	padding-left: $unit;
 }
 
-
-// TODO: Use hollow circles on second-level + list items
 // TODO: Add options to reduce spacing on child list items
 .wsu-c-list-item,
 .wsu-c-content li {
@@ -48,6 +46,14 @@
 
 		border-radius: 100%;
 		background-color: color(primary, light);
+	}
+
+	/* Sub-ordered lists are hollow circle
+	======================= */
+	& .wsu-c-list .wsu-c-list-item::before,
+	& ul li::before {
+		background-color: color(white, base);
+		border: 1px solid color(primary, light);
 	}
 }
 
