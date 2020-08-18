@@ -62,6 +62,6 @@ $margin-bottom-values: (
 	mb200: 200px,
 );
 
-@include generate-class-names($margin-values, 'margin');
-@include generate-class-names($margin-top-values, 'margin-top');
-@include generate-class-names($margin-bottom-values, 'margin-bottom');
+@include generate-class-names($margin-values, 'margin', $mobile: 0);
+@include generate-class-names($margin-top-values, 'margin-top', $mobile: 0);
+@include generate-class-names($margin-bottom-values, 'margin-bottom', $mobile: 0);

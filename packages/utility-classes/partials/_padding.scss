@@ -17,4 +17,4 @@ $values: (
 	p200: 200px,
 );
 
-@include generate-class-names($values, 'padding');
+@include generate-class-names($values, 'padding', $mobile: 0);

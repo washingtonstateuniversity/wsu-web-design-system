@@ -27,7 +27,7 @@
  * );
  */
 
-@mixin generate-class-names($values, $property-name: '', $prefix: '.wsu-u', $mobile: 0, $show-debug: false) {
+@mixin generate-class-names($values, $property-name: '', $prefix: '.wsu-u', $mobile: false, $show-debug: false) {
 
 	// Handle dynamic prop names
 	@if ($property-name == '') {
@@ -44,14 +44,23 @@
 				@debug 'Value is #{$value}.';
 				@debug '-- This ends #{$name}. --';
 			}
-			
-			#{$prefix}-#{$name} {
-				#{$property-name}: $mobile;
 
-				@include mq('small') { 
+			@if ($mobile != false) {
+
+				#{$prefix}-#{$name} {
+					#{$property-name}: $mobile;
+	
+					@include mq('small') { 
+						#{$property-name}: #{$value}; 
+					}
+				}
+			} @else {
+				#{$prefix}-#{$name} {
 					#{$property-name}: #{$value}; 
 				}
 			}
+			
+			
 		}
 	} @else {
 		// Handle individual prop name
@@ -64,12 +73,20 @@
 				@debug 'Value is #{$item}.';
 				@debug '-- This ends #{$name}. --';
 			}
-			
-			#{$prefix}-#{$name} {
-				#{$property-name}: $mobile;
 
-				@include mq('small') { 
-					#{$property-name}: #{$item}; 
+			@if ($mobile != false) {
+				
+				#{$prefix}-#{$name} {
+					#{$property-name}: $mobile;
+	
+					@include mq('small') { 
+						#{$property-name}: #{$item}; 
+					}
+				}
+			} @else {
+
+				#{$prefix}-#{$name} {
+					#{$property-name}: #{$item};
 				}
 			}
 		}
