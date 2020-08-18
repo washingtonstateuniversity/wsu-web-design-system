@@ -1,3 +1,6 @@
+@import '~@wsuwebteam/build-tools/scss/variables';
+@import '~@wsuwebteam/build-tools/scss/mixins/media-queries';
+
 /* 
  * Generates class names based on a sass map
  * 
@@ -14,13 +17,19 @@
  * );
  */
 
-@mixin generate-class-names($values, $prefix: '.wsu-u') {
-	@each $name, $value in $values {
-		$property-name: map-get(map-get($values, $name), 'property-name');
-		$value: map-get(map-get($values, $name), 'value');
+@mixin generate-class-names($values, $property-name: '', $prefix: '.wsu-u') {
+	@if ($property-name == '') {
+		@error 'You must include a property-name!';
+	}
 
+	@each $name, $value in $values {
 		#{$prefix}-#{$name} {
-			#{$property-name}: #{$value}; 
+
+			#{$property-name}: 0;
+
+			@include mq('small') { 
+				#{$property-name}: #{$value}; 
+			 }
 		}
 	}
 }
