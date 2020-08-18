@@ -1,0 +1,26 @@
+/* 
+ * Generates class names based on a sass map
+ * 
+ * @param $values Array of values to generate class names from
+ * @param $prefix Prefix to avoid colliding with other class names
+ * 
+ * Example: 
+ * $values: (
+ *		m0: ( // The class name value you want to create
+ *			property-name: $name, 
+ *			value: 0px,
+ *		),
+ *		... Add as many as you'd like ...
+ * );
+ */
+
+@mixin generate-class-names($values, $prefix: '.wsu-u') {
+	@each $name, $value in $values {
+		$property-name: map-get(map-get($values, $name), 'property-name');
+		$value: map-get(map-get($values, $name), 'value');
+
+		#{$prefix}-#{$name} {
+			#{$property-name}: #{$value}; 
+		}
+	}
+}

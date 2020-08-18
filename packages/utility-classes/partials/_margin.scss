@@ -1,0 +1,72 @@
+@import './functions';
+
+$property-name: 'margin';
+
+$margin-values: (
+	m0: ( 
+		property-name: $property-name, 
+		value: 0px,
+	),
+	m10: (
+		property-name: $property-name, 
+		value: 10px,
+	),
+	m20: (
+		property-name: $property-name, 
+		value: 20px,
+	),
+	m30: (
+		property-name: $property-name, 
+		value: 30px,
+	),
+	m40: (
+		property-name: $property-name, 
+		value: 40px,
+	),
+	m50: (
+		property-name: $property-name, 
+		value: 50px,
+	),
+	m60: (
+		property-name: $property-name, 
+		value: 60px,
+	),
+	m70: (
+		property-name: $property-name, 
+		value: 70px,
+	),
+	m80: (
+		property-name: $property-name, 
+		value: 80px,
+	),
+	m90: (
+		property-name: $property-name, 
+		value: 90px,
+	),
+	m100: (
+		property-name: $property-name, 
+		value: 100px,
+	),
+	m120: (
+		property-name: $property-name, 
+		value: 120px,
+	),
+	m140: (
+		property-name: $property-name, 
+		value: 140px,
+	),
+	m160: (
+		property-name: $property-name, 
+		value: 160px,
+	),
+	m180: (
+		property-name: $property-name, 
+		value: 180px,
+	),
+	m200: (
+		property-name: $property-name, 
+		value: 200px,
+	),
+);
+
+@include generate-class-names($margin-values);
