@@ -7,29 +7,39 @@
  * @param $values Array of values to generate class names from
  * @param $prefix Prefix to avoid colliding with other class names
  * 
- * Example: 
+ * Example with property-name: 
+ * $values: (
+ * 		className: value,
+ *		m0: 0px,
+ *		... Add as many as you'd like ...
+ * );
+ * 
+ * Example with dynamic property-names
  * $values: (
  *		m0: ( // The class name value you want to create
- *			property-name: $name, 
+ *			property-name: 'margin', 
  *			value: 0px,
  *		),
- *		... Add as many as you'd like ...
+ * 		... Add as many as you'd like ...
  * );
  */
 
-@mixin generate-class-names($values, $property-name: '', $prefix: '.wsu-u') {
-	@if ($property-name == '') {
-		@error 'You must include a property-name!';
-	}
+@mixin generate-class-names($values, $property-name: '', $prefix: '.wsu-u', $mobile: 0) {
 
 	@each $name, $value in $values {
+
+		@if ($property-name == '') {
+			$property-name: map-get(map-get($values, $name), 'property-name');
+			$value: map-get(map-get($values, $name), 'value');
+		}
+
 		#{$prefix}-#{$name} {
 
-			#{$property-name}: 0;
+			#{$property-name}: $mobile;
 
 			@include mq('small') { 
 				#{$property-name}: #{$value}; 
-			 }
+			}
 		}
 	}
 }
