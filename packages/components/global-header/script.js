@@ -1,18 +1,21 @@
-const toggleMoreMenu = (e) => {
+import wsu_wds from '@wsuwebteam/build-tools/js/wsu-bt-wds';
+import toggleMoreMenu from './component-parts/global-header-more-menu';
 
-	const moreMenu = e.currentTarget.nextSibling;
-	const moreBtnIcon = document.querySelector('.wsu-g-header__more-icon-link .wsu-icon');
+/* 
+ * Sets the event listener on the global header
+ */
+const globalHeaderWrapper = document.querySelector('.wsu-g-header__wrapper');
 
-	if (moreMenu.classList.contains('wsu-g-header__nav-list--open')) {
-		moreMenu.classList.remove('wsu-g-header__nav-list--open');
-		moreBtnIcon.classList.remove('wsu-i-x-close');
-		moreBtnIcon.classList.add('wsu-i-more');
-	} else {
-		moreMenu.classList.add('wsu-g-header__nav-list--open');
-		moreBtnIcon.classList.add('wsu-i-x-close');
-		moreBtnIcon.classList.remove('wsu-i-more');
-	}
+if (typeof globalHeaderWrapper != "undefined" && globalHeaderWrapper != null) {
+
+	/**
+	 *
+	 * Init JS
+	 *
+	 */
+	globalHeaderWrapper.classList.remove('wsu-u-no-js');
+
+	// Attach toggle to window
+	wsu_wds.toggleMoreMenu = toggleMoreMenu;
 
 }
-
-export default toggleMoreMenu;

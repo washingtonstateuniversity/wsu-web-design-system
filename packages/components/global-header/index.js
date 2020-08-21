@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import './style.scss';
-import toggleMoreMenu from './script';
+import toggleMoreMenu from './component-parts/global-header-more-menu';
 
 const GlobalHeader = ( props ) => {
 
@@ -37,14 +37,14 @@ const GlobalHeader = ( props ) => {
 					</ul>
 				</nav>
 				<div className="wsu-g-header__search-icon-container">
-					<a className="wsu-g-header__search-icon-link" href="https://search.wsu.edu/" aria-haspopup="true" aria-expanded="true">
+					<a className="wsu-g-header__search-icon-link" href="https://search.wsu.edu/">
 						<span className="wsu-icon wsu-i-search"></span>
 					</a>
 				</div>
 				<div className="wsu-g-header__menu-icon-container">
-					<a className="wsu-g-header__menu-icon-link" href="#">
+					<button className="wsu-g-header__menu-icon-link" onClick={{/* Add click event handler here */}}>
 						<span className="wsu-icon wsu-i-menu"></span>
-					</a>
+					</button>
 				</div>
 			</header>
 		</div>

@@ -214,17 +214,24 @@
 
 	color: color(gray, 75);
 
+	background: none;
+	border: none;
+
 	@include mq('small') {
 		display: none;
 	}
 
-	&:visited {
+	&:visited,
+	&:active {
 		color: color(gray, 75);
 	}
 
 	&:hover,
-	&:active {
-		color: color(primary, light);
+	&:focus {
+		color: color(primary, base);
+		cursor: pointer;
+		border: none;
+		outline: none;
 	}
 }
 
