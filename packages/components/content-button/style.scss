@@ -36,6 +36,14 @@
 		color: color(white, base );
 	}
 
+	.wsu-icon:first-child {
+		margin-right: 0.75em;
+	}
+
+	.wsu-icon:last-child {
+		margin-left: 0.75em;
+	}
+
 }
 
 .wsu-c-button a {

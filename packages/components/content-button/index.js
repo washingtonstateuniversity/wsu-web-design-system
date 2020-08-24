@@ -4,6 +4,10 @@ import PropTypes from 'prop-types';
 import {getMarginSpacingClasses} from '@wsuwebteam/build-tools/js/helpers/spacingUtilityClasses';
 import {getUtilityClasses} from '@wsuwebteam/build-tools/js/helpers/utilityClasses';
 
+import {
+	Icon
+} from '../index';
+
 import './style.scss';
 
 const ContentButton = ( props, ref ) => {
@@ -39,7 +43,11 @@ const ContentButton = ( props, ref ) => {
 	
 	return (
 		<div className={ wrapperClasses }>
-			<Tag onClick={props.onClick} className={ containerClasses }>{props.buttonText}</Tag>
+			<Tag onClick={props.onClick} className={ containerClasses }>
+				<Icon name={props.iconBefore} />
+				{props.buttonText}
+				<Icon name={props.iconAfter} />
+			</Tag>
 		</div>
 	);
 
@@ -55,6 +63,8 @@ ContentButton.propTypes = {
 	color: PropTypes.string,
 	tag: PropTypes.string,
 	onClick: PropTypes.func,
+	iconBefore:PropTypes.string,
+	iconAfter:PropTypes.string,
 }
 
 ContentButton.defaultProps = {
@@ -67,6 +77,8 @@ ContentButton.defaultProps = {
 	tag: 'default',
 	onClick: null,
 	buttonAlign: 'default',
+	iconBefore:'',
+	iconAfter:'',
 }
 
 export default ContentButton;
