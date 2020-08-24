@@ -10,6 +10,7 @@ import ComponentWrapper from '../../packages/storybook-components/content-wrappe
 import { Button } from '../../packages/components';
 
 const spacingOptions = ['default','none','xsmall','small','medium','medium-large','large','xlarge'];
+const iconOptions = ['','alarm', 'alert-notification', 'arrow-down-carrot', 'arrow-down', 'arrow-left-carrot', 'arrow-left', 'arrow-right-carrot', 'arrow-right', 'arrow-up-carrot', 'arrow-up', 'attachment', 'basket', 'bookmark', 'calendar', 'cart', 'check', 'collapse', 'comment', 'contrast', 'credit-card', 'cut', 'discussion', 'document', 'download', 'edit', 'email', 'expand', 'favorite', 'feedback', 'filter', 'flag', 'gallery', 'graph', 'home', 'info', 'key', 'light-bulb', 'link', 'location', 'map-location', 'map', 'menu', 'minus-circle', 'minus', 'mobile', 'monitor', 'more-vertical', 'more', 'next', 'pause', 'phone', 'photos', 'play-circle', 'play', 'plus', 'pluse-circle', 'previous', 'print', 'profile-circle', 'profile', 'rate', 'refresh', 'save', 'search', 'secure', 'send', 'settings', 'share', 'social-facebook', 'social-instagram', 'social-linkedin', 'social-twitter', 'social-youtube', 'stop-circle', 'stop', 'tag', 'tent', 'time', 'trash', 'upload', 'video-slideshow', 'warning-caution', 'warning-stop', 'x-close', 'zoom-in', 'zoom-out'];
 
 // Story Time
 export default {
@@ -19,6 +20,7 @@ export default {
 		withKnobs,
 	]
 };
+
 
 export const DefaultButton = () => {
 
@@ -35,6 +37,8 @@ export const DefaultButton = () => {
 				color={ select( 'color',['default','crimson','white'],'default', optionsGroupID )  }
 				size={ select( 'size',['default','small','medium','large'],'default', optionsGroupID )  }
 				buttonAlign={ select( 'buttonAlign',['left','rigt','center'],'default', optionsGroupID )  }
+				iconBefore={ select( 'iconBefore',iconOptions,'default', optionsGroupID )  }
+				iconAfter={ select( 'iconAfter',iconOptions,'default', optionsGroupID )  }
 			/>
 		</ComponentWrapper>
 	)

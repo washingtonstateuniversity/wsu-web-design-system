@@ -11,8 +11,6 @@ const Title = ( props ) => {
 		return null;
 	}
 
-	let prefix = ( props.prefix ) ? props.prefix : 'wsu-c-title';
-
 	let Tag = props.tag;
 
 	let wrapperClasses = getUtilityClasses(
@@ -20,7 +18,7 @@ const Title = ( props ) => {
 			{ key:'titleSize', prefix:'wsu-c-title--' },
 		],
 		props,
-		prefix
+		props.className
 	)
 
 	return (
@@ -37,7 +35,7 @@ const Title = ( props ) => {
 Title.defaultProps = {
 	tag: 'h2',
 	link:'',
-	prefix:'',
+	className:'wsu-c-title',
 	titleSize:'default'
 }
 

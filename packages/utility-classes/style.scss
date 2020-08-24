@@ -1,0 +1,20 @@
+// Dependencies
+@import './partials/functions';
+
+// Partials
+@import './partials/margin';
+@import './partials/padding';
+
+// Misc Utilities
+$misc-values: (
+	dn: (
+		property-name: 'display',
+		value: 'none'
+	),
+	tac: (
+		property-name: 'text-align',
+		value: 'center'
+	)
+);
+
+@include generate-class-names($misc-values);

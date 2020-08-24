@@ -81,6 +81,7 @@
 ======================= */
 .wsu-g-header__nav {
 	margin-left: auto;
+	position: relative;
 
 	@include mq('medium') {
 		flex: 1 1 auto;
@@ -90,13 +91,38 @@
 }
 
 .wsu-g-header__nav-list {
+	position: absolute;
+	top: 100%;
+	right: 0;
 	display: none;
+	width: 160px;
+	border-radius: $wsu-bt-base-border-radius-size;
+	border: 1px solid color(gray, 5);
 
 	margin: 0;
+	padding: $unit-2xs 0;
+	margin-top: $unit;
+
+	background-color: color(gray, 0);
 
 	@include mq('medium') {
 		display: flex;
 		justify-content: flex-end;
+
+		position: relative;
+		width: auto;
+		background-color: none;
+		border: none;
+		margin-top: 0;
+		padding: 0;
+	}
+
+	&--open {
+		display: block;
+
+		@include mq('medium') {
+			display: flex;
+		}
 	}
 }
 
@@ -117,7 +143,11 @@
 	color: color(gray, 75);
 
 	@include font-size(0.75rem, 400);
-	@include border-bottom-hover(100%);
+	@include border-bottom-hover(75%);
+
+	@include mq('medium') {
+		@include border-bottom-hover(100%);
+	}
 
 	&:visited {
 		color: color(gray, 70);
@@ -131,20 +161,26 @@
 
 	transition: color timing();
 	text-decoration: none;
+	background: none;
 
 	color: color(gray, 75);
+	border: none;
 
 	@include mq('medium') {
 		display: none;
 	}
 
-	&:visited {
+	&:visited,
+	&:active {
 		color: color(gray, 75);
 	}
 
 	&:hover,
-	&:active {
-		color: color(primary, light);
+	&:focus {
+		color: color(primary, base);
+		cursor: pointer;
+		border: none;
+		outline: none;
 	}
 }
 
@@ -178,17 +214,24 @@
 
 	color: color(gray, 75);
 
+	background: none;
+	border: none;
+
 	@include mq('small') {
 		display: none;
 	}
 
-	&:visited {
+	&:visited,
+	&:active {
 		color: color(gray, 75);
 	}
 
 	&:hover,
-	&:active {
-		color: color(primary, light);
+	&:focus {
+		color: color(primary, base);
+		cursor: pointer;
+		border: none;
+		outline: none;
 	}
 }
 

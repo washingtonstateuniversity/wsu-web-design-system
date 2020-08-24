@@ -40,6 +40,9 @@ import '../../packages/em-components/em-content-table/style.scss';
 // Component Parts
 import '../../packages/component-parts/pattern/style.scss';
 
-
 // Javascripts
 import '../../packages/components/site-nav-vertical/script.js';
+import '../../packages/components/global-header/script.js';
+
+// Utilities
+import '../../packages/utility-classes/style.scss';

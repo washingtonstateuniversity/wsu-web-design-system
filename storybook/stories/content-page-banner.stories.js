@@ -23,12 +23,16 @@ export const Default = () => {
 	return(
 		<ComponentWrapper layout="content">
 			<ContentPageBanner
+				title='Lorum Ipsum'
+				eyebrowHeader='consectetur adipiscing elit'
 				imageSrc='https://source.unsplash.com/collection/895539'
 				imageAlt={ text( 'imageAlt','Alt Text', optionsGroupID ) }
 				imageCaption={ text( 'imageCaption','Image Caption', optionsGroupID ) }
 				height={select( 'height',['default','xsmall','small','medium','medium-large','large','xlarge','full'],'default', optionsGroupID )}
 				isNotched={ boolean('isNotched', false, optionsGroupID ) }
 				isFullBleed={ boolean('isFullBleed', false, optionsGroupID ) }
+				textAlign={ select( 'textAlign',['left','right','center'],'default', optionsGroupID )  }
+				overlay={ select( 'overlay',['gray','black','crimson','none'],'default', optionsGroupID )  }
 				/>
 		</ComponentWrapper>
 	)

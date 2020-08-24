@@ -8,10 +8,8 @@ const EyebrowHeader = ( props ) => {
 		return null;
 	}
 
-	let prefix = ( props.prefix ) ? props.prefix : 'wsu-c-eyebrow-header';
-
 	return (
-		<div className={prefix}>
+		<div className={props.className}>
 			{props.children}
 		</div>
 	);
@@ -20,7 +18,7 @@ const EyebrowHeader = ( props ) => {
 
 
 EyebrowHeader.defaultProps = {
-	prefix:'',
+	className:'wsu-c-eyebrow-header',
 }
 
 export default EyebrowHeader;

@@ -15,6 +15,8 @@ import './style.scss';
 
 const ContentPageBanner = ( props, ref ) => {
 
+	let defaultOverlayClass = ( '' != props.title && 'default' == props.overlay ) ? 'wsu-c-page-banner__overlay--gray' : false;
+
 
 	let wrapperClasses = getUtilityClasses(
 		[
@@ -23,7 +25,9 @@ const ContentPageBanner = ( props, ref ) => {
 			{ key:'marginLeft', classSlug:'margin-left' },
 			{ key:'marginRight', classSlug:'margin-right' },
 			{ key:'height', prefix:'wsu-c-page-banner__image--' },
+			{ key:'overlay', prefix:'wsu-c-page-banner__overlay--', defaultClass: defaultOverlayClass },
 			{ key:'isFullBleed', prefix:'wsu-c-page-banner--', isBool:true, value:'full-bleed' },
+			{ key:'textAlign', classSlug:'textalign' },
 		],
 		props,
 		['wsu-c-page-banner']
@@ -37,6 +41,10 @@ const ContentPageBanner = ( props, ref ) => {
 				imageCaption={props.imageCaption}
 				isNotched={props.isNotched}
 				/>
+			<div className="wsu-c-page-banner__container">
+				<EyebrowHeader className='wsu-c-page-banner__eyebrow-header'>{props.eyebrowHeader}</EyebrowHeader>
+				<Title className='wsu-c-page-banner__title'>{props.title}</Title>
+			</div>
 		</div>
 	);
 
@@ -51,16 +59,23 @@ ContentPageBanner.propTypes = {
 	height: PropTypes.string,
 	isFullBleed:PropTypes.bool,
 	isNotched:PropTypes.bool,
+	textAlign: PropTypes.string,
+	title: PropTypes.string,
+	EyebrowHeader: PropTypes.string,
 }
 
 ContentPageBanner.defaultProps = {
 	imageSrc:'',
 	imageAlt:'',
+	title: '',
+	EyebrowHeader:'',
 	imageCaption:'',
 	backgroundColor:'default',
 	height:'default',
 	isFullBleed:false,
 	isNotched:false,
+	textAlign:'default',
+	overlay:'default',
 }
 
 export default ContentPageBanner;
