@@ -1,54 +1,104 @@
 @import '../../component-parts/mixins';
+@import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
 
 .wsu-c-page-banner {
+
+	position: relative;
+	font-family: "Montserrat", sans-serif;
 
 	&--full-bleed {
 		margin-left: calc( ( ( 100vw - 100% ) / 2 ) * -1 );
 		margin-right: calc( ( ( 100vw - 100% ) / 2 ) * -1 );
 	}
 
-	@include image-frame( 100%, 400px);
+	@include image-frame( 100%, 400px, 1);
 
-	&__image--xsmall {
-		.wsu-c-image-frame__image-wrapper {
-			padding-top: 60px;
+	$image-sizes: (
+		"xsmall": 60px, 
+		"small": 250px, 
+		"medium": 350px,
+		"medium-large": 450px,
+		"large": 650px,
+		"xlarge": 750px,
+		"full": 100vh,
+	);
+
+	@each $name, $size in $image-sizes {
+		&__image--#{$name} {
+
+			.wsu-c-page-banner__container {
+				min-height: $size;
+			}
 		}
 	}
 
-	&__image--small {
-		.wsu-c-image-frame__image-wrapper {
-			padding-top: 250px;
-		}
+	&__container {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 100%;
+		min-height: 400px;
+		box-sizing: border-box;
+		padding: 2rem 6rem 0;
+		z-index: 1;
 	}
 
-	&__image--medium {
-		.wsu-c-image-frame__image-wrapper {
-			padding-top: 350px;
-		}
+	&__eyebrow-header {
+		color: #fff;
+		font-family: "Montserrat", sans-serif;
+		text-transform: uppercase;
+		font-size: 1.2rem;
+		font-weight: 600;
+		margin-bottom: 0.5em;
+		text-shadow: 0px 0px 4px rgba(0, 0, 0, 1);
 	}
 
-	&__image--medium-large {
-		.wsu-c-image-frame__image-wrapper {
-			padding-top: 450px;
-		}
+	&__title {
+		color: #fff;
+		font-family: "Montserrat", sans-serif;
+		font-size: 5rem;
+		font-weight: 800;
+		margin-top: 0;
+		margin-bottom: 2rem;
+		line-height: 1.2;
+		text-shadow: 0px 0px 4px rgba(0, 0, 0, 1);
 	}
 
-	&__image--large {
-		.wsu-c-image-frame__image-wrapper {
-			padding-top: 650px;
-		}
+	&::after {
+		content: "";
+		display: none;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0; 
 	}
 
-	&__image--xlarge {
-		.wsu-c-image-frame__image-wrapper {
-			padding-top: 750px;
-		}
-	}
+	&__overlay {
 
-	&__image--full {
-		.wsu-c-image-frame__image-wrapper {
-			padding-top: 100vh;
+		&--gray {
+			&::after {
+				display: block;
+				background-color: #262626;
+				opacity: 0.8;
+			}
 		}
+
+		&--black {
+			&::after {
+				display: block;
+				background-color: #000;
+				opacity: 0.8;
+			}
+		}
+
+		&--none {
+			&::after {
+				display: none;
+			}
+		}
+
 	}
 
 }
