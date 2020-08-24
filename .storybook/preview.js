@@ -35,7 +35,15 @@ addParameters({
 });
 
 // Add HTML output Panel
-addDecorator(withHTML);
+addDecorator(
+	withHTML({
+		prettier: {
+			tabWidth: 4,
+			useTabs: true,
+			htmlWhitespaceSensitivity: 'ignore',
+		}
+	})
+);
 
 // Add Console to Actions Panel
 setConsoleOptions({

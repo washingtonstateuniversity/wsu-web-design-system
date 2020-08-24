@@ -1,0 +1,55 @@
+@import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
+@import '~@wsuwebteam/wsu-icons/dist/wsu-icons.bundle.css';
+
+.wsu-c-em-heading {
+	font-family: $wsu-bt-primary-font-family;
+	color: #262626;
+	margin-top: 0;
+	margin-bottom: 0.5em;
+	line-height: 1.3;
+}
+
+
+h1 {
+	&.wsu-c-em-heading {
+		font-size: 3rem;
+		font-weight: 800;
+
+		&--hero {
+			font-size: 4.5rem;
+			font-weight: 800;
+			color: color(primary,light);
+			margin-top: 0;
+			margin-bottom: 0.5em;
+			line-height: 1.3;
+		}
+	}
+}
+
+h2 {
+	&.wsu-c-em-heading {
+		font-size: 2.25rem;
+		font-weight: 700; 
+	}
+}
+
+h3 {
+	&.wsu-c-em-heading {
+		font-size: 1.5rem;
+		font-weight: 600; 
+	}
+}
+
+h4 {
+	&.wsu-c-em-heading {
+		font-size: 1.125rem;
+		font-weight: 600; 
+	}
+}
+
+h5 {
+	&.wsu-c-em-heading {
+		font-size: 1.1rem;
+		font-weight: 600; 
+	}
+}

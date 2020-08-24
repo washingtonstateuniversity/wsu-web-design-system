@@ -33,22 +33,22 @@ class ContentHero extends Component {
 			</div> 
 		);
 	}
+}
 
-	static defaultProps = {
-		title: '',
-		titleTag: 'div',
-		subtitle: '',
-		caption: '', 
-		buttonText: '',
-		buttonUrl: '',
-		imageCaption: '',
-		imageCaptionUrl: '',
-		style: 'default',
-		verticalSpacing: 'default',
-		marginBefore: 'default',
-		marginAfter: 'default',
-		className:''
-	}
+ContentHero.defaultProps = {
+	title: '',
+	titleTag: 'div',
+	subtitle: '',
+	caption: '', 
+	buttonText: '',
+	buttonUrl: '',
+	imageCaption: '',
+	imageCaptionUrl: '',
+	style: 'default',
+	verticalSpacing: 'default',
+	marginBefore: 'default',
+	marginAfter: 'default',
+	className:''
 }
 
 export default ContentHero;

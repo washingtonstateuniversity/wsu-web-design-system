@@ -9,6 +9,11 @@ import './style.scss';
 // Component Starts
 class Icon extends Component {
 	render() {
+
+		if ( '' == this.props.name ) {
+			return null;
+		}
+		
 		return (
 			<i className={'wsu-icon wsu-i-' + this.props.name}></i>
 		);
@@ -20,7 +25,7 @@ Icon.propTypes = {
 };
 
 Icon.defaultProps = {
-	name: 'alarm'
+	name: ''
 };
 
 class IconCheatsheet extends Component {

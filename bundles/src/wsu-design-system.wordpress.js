@@ -1,1 +1,1 @@
-import '../../platforms/wordpress/wordpress-styles.scss';
+import '../../platforms/wordpress/wordpress.scss';

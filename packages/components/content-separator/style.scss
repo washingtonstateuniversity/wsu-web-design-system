@@ -2,19 +2,19 @@
 
 .wsu-c-content hr,
 .wsu-c-separator {
-	background: color(gray, 10);
+	background-color: color(gray, 10);
 	width: 100%;
 	height: 1px;
 	border: none;
 	margin: 0;
 
-	&--isHatched {
+	&.wsu-c-separator--isHatched {
 		@include pattern();
-		background-color: red;
+		background-color: transparent;
 		height: 60px;
 	}
 
-	&--showMoreIndicator {
+	&.wsu-c-separator--showMoreIndicator {
 		position: relative;
 
 		&::after {
@@ -32,7 +32,14 @@
 			z-index: z('content');
 		}
 	}
+
+	&.wsu-c-separator--isFullBleed {
+		margin-left: calc((100vw - 100%)/2*-1);
+		margin-right: calc((100vw - 100%)/2*-1);
+		width: calc((140vw - 100%) + 50%);
+	}
 }
+	
 
 @keyframes slide {
 	0% { 

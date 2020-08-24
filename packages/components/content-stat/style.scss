@@ -16,11 +16,10 @@
 .wsu-c-stat__label {
 	text-transform: uppercase;
 	font-size: .8em;
-	background: color(primary, light);
-	color: color(white, base);
-
+	background: color(gray, 5);
 	font-weight: 600;
 	padding: .4em 1.6em;
+	border-bottom: 3px solid color(primary, light);
 }
 
 .wsu-c-stat__value {

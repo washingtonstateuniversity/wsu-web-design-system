@@ -13,8 +13,10 @@ module.exports = env => {
 		context: __dirname,
 		entry: {
 			'bundles/dist/wsu-design-system': './bundles/src/wsu-design-system.js',
+			'bundles/dist/wsu-design-system.components': './bundles/src/wsu-design-system.components.js',
 			'bundles/dist/wsu-design-system.content': './bundles/src/wsu-design-system.content.js',
 			'bundles/dist/platforms/wsu-design-system.wordpress': './bundles/src/wsu-design-system.wordpress.js',
+			'bundles/dist/platforms/wsu-design-system.wordpress.admin': './bundles/src/wsu-design-system.wordpress.admin.js',
 			'bundles/dist/platforms/wsu-design-system.wordpress.gutenberg': './bundles/src/wsu-design-system.wordpress.gutenberg.js',
 			'bundles/dist/platforms/wsu-design-system.wordpress.gravity-forms': './bundles/src/wsu-design-system.wordpress.gravity-forms.js',
 			'bundles/dist/platforms/wsu-design-system.umbraco': './bundles/src/wsu-design-system.umbraco.js'

@@ -93,12 +93,14 @@ body {
 	padding-left: space( 'content' );
 	flex-grow: 1;
 
-	@include mq('tablet') {
+	@media screen and (max-width:1360px) {
 		max-width: calc( 100vw - 260px );
 	}
-	@include mq('tablet','max') {
-		width: 100%;
+
+	@include mq('tablet', 'max') {
+		max-width: none;
 	}
+
 
 	&--sidebar-right {
 		display: flex;
