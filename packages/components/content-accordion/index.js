@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import './style.scss';
 
@@ -23,10 +24,10 @@ class ContentAccordion extends Component {
 			</div>
 		);
 	}
+}
 
-	static defaultProps = {
-		title: '',
-	}
+ContentAccordion.defaultProps = {
+	title: '',
 }
 
 export default ContentAccordion;
