@@ -1,7 +1,7 @@
 # Components
 
 ## Using Components
-All the components can easily be imported into your projects using the root of the components folder as an entry point. For example: `import { Heading, P, Button } from '../../packages/components';`.
+All the components can easily be imported into your projects using the root of the components folder as an entry point. For example: `import { wsuHeading, wsuP, wsuButton } from '../../packages/components';`.
 
 ## File Structure
 
