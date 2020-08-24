@@ -1,0 +1,94 @@
+@import '~@wsuwebteam/build-tools/scss/variables';
+@import '~@wsuwebteam/build-tools/scss/mixins/media-queries';
+
+/* 
+ * Generates class names based on a sass map
+ * 
+ * @param $values Array of values to generate class names from
+ * @param $property-name Accepts a static property-name when creating classes of same type
+ * @param $prefix Prefix to avoid colliding with other class names
+ * @param $mobile Accepts a value to set what the value does on mobile
+ * @param $show-debug True/False value to show debug information in console
+ * 
+ * Example with property-name: 
+ * $values: (
+ * 		className: value,
+ *		m0: 0px,
+ *		... Add as many as you'd like ...
+ * );
+ * 
+ * Example with dynamic property-names
+ * $values: (
+ *		m0: ( // The class name value you want to create
+ *			property-name: 'margin', 
+ *			value: 0px,
+ *		),
+ * 		... Add as many as you'd like ...
+ * );
+ */
+
+@mixin generate-class-names($values, $property-name: '', $prefix: '.wsu-u', $mobile: false, $show-debug: false) {
+
+	// Handle dynamic prop names
+	@if ($property-name == '') {
+
+		@each $name, $item in $values {
+
+			$property-name: map-get($item, 'property-name');
+			$value: map-get($item, 'value');
+
+			@if ($show-debug == true) {
+				@debug '-- This starts #{$name}. --';
+				@debug 'This is the item #{$item}.';
+				@debug 'Property-name is #{$property-name}.';
+				@debug 'Value is #{$value}.';
+				@debug '-- This ends #{$name}. --';
+			}
+
+			@if ($mobile != false) {
+
+				#{$prefix}-#{$name} {
+					#{$property-name}: $mobile;
+	
+					@include mq('small') { 
+						#{$property-name}: #{$value}; 
+					}
+				}
+			} @else {
+				#{$prefix}-#{$name} {
+					#{$property-name}: #{$value}; 
+				}
+			}
+			
+			
+		}
+	} @else {
+		// Handle individual prop name
+		@each $name, $item in $values {
+
+			@if ($show-debug == true) {
+				@debug '-- This starts #{$name}. --';
+				@debug 'This is the item #{$item}.';
+				@debug 'Property-name is #{$property-name}.';
+				@debug 'Value is #{$item}.';
+				@debug '-- This ends #{$name}. --';
+			}
+
+			@if ($mobile != false) {
+				
+				#{$prefix}-#{$name} {
+					#{$property-name}: $mobile;
+	
+					@include mq('small') { 
+						#{$property-name}: #{$item}; 
+					}
+				}
+			} @else {
+
+				#{$prefix}-#{$name} {
+					#{$property-name}: #{$item};
+				}
+			}
+		}
+	}
+}
