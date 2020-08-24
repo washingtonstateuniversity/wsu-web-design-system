@@ -1,0 +1,7 @@
+{
+  "name": "@wsuwebteam/favicon",
+  "version": "1.0.0",
+  "description": "Assets for implementing the WSU favicon in a project.",
+  "author": "WSU University Communications",
+  "license": "GPL-2.0"
+}
