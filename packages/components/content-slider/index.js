@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 // Component Deps
 import Swiper from 'swiper';
-import 'swiper/css/swiper.css';
+import 'swiper/src/swiper.scss';
 import './style.scss';
 import { Repeater } from '@wsuwebteam/build-tools/js/wsu-bt-helpers';
 
