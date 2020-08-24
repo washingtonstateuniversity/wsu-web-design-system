@@ -1,1 +1,1 @@
-import * as Components from '../../packages/components';
+export * as Components from '../../packages/components';
