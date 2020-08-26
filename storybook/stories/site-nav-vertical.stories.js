@@ -8,7 +8,7 @@ import { previewGroupID, optionsGroupID } from '@wsuwebteam/build-tools/js/helpe
 import ComponentWrapper from '../../packages/storybook-components/content-wrapper';
 
 // Component Deps
-import { SiteNavVertical } from '../../packages/components';
+import { WsuSiteNavVertical } from '../../packages/components';
 
 // Story Time
 export default {
@@ -22,6 +22,6 @@ export default {
 export const Default = () => {
 
 	return (
-		<SiteNavVertical />
+		<WsuSiteNavVertical />
 	)
 }

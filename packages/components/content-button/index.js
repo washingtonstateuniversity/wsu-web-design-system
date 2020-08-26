@@ -5,7 +5,7 @@ import {getMarginSpacingClasses} from '@wsuwebteam/build-tools/js/helpers/spacin
 import {getUtilityClasses} from '@wsuwebteam/build-tools/js/helpers/utilityClasses';
 
 import {
-	Icon
+	WsuIcon
 } from '../index';
 
 import './style.scss';
@@ -44,9 +44,9 @@ const ContentButton = ( props, ref ) => {
 	return (
 		<div className={ wrapperClasses }>
 			<Tag onClick={props.onClick} className={ containerClasses }>
-				<Icon name={props.iconBefore} />
+				<WsuIcon name={props.iconBefore} />
 				{props.buttonText}
-				<Icon name={props.iconAfter} />
+				<WsuIcon name={props.iconAfter} />
 			</Tag>
 		</div>
 	);

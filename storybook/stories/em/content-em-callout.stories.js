@@ -4,10 +4,10 @@ import { withKnobs, text, boolean, number, select } from "@storybook/addon-knobs
 import { previewGroupID, optionsGroupID } from '@wsuwebteam/build-tools/js/helpers/storybook';
 
 // Storybook Imports
-import ComponentWrapper from '../../../packages/storybook-components/content-wrapper/index'
+import ComponentWrapper from '../../../packages/storybook-components/content-wrapper';
 
 // Component Imports
-import { EmContentCallout } from '../../../packages/em-components/index.js';
+import { EmContentCallout } from '../../../packages/em-components';
 
 const spacingOptions = ['default','none','xsmall','small','medium','medium-large','large','xlarge'];
 

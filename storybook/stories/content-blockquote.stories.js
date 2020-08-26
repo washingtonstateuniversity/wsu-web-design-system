@@ -7,7 +7,7 @@ import { previewGroupID, optionsGroupID } from '@wsuwebteam/build-tools/js/helpe
 import ComponentWrapper from '../../packages/storybook-components/content-wrapper';
 
 // Component Imports
-import { ContentBlockquote } from '../../packages/components';
+import { WsuBlockquote } from '../../packages/components';
 
 // Story Time
 export default {
@@ -22,7 +22,7 @@ export const Default = () => {
 
 	return(
 		<ComponentWrapper layout="content">
-			<ContentBlockquote
+			<WsuBlockquote
 				cite={text( 'cite','Lorem ipsum dolor sit amet', optionsGroupID )}
 				textSize={select( 'textSize',['default','xsmall','small','medium','medium-large','large'],'default', optionsGroupID )}
 				width={select( 'width',['default','small','medium','large','full'],'default', optionsGroupID )}
@@ -31,7 +31,7 @@ export const Default = () => {
 				Morbi facilisis vel velit sit amet malesuada. Donec id pharetra diam. Ut egestas tellus non euismod varius. Donec eget augue est. 
 				Donec sapien justo, bibendum nec metus at, placerat aliquet sapien. Suspendisse interdum mi nibh, tincidunt egestas nisi auctor id.
 				 Nunc ante lectus, accumsan vitae volutpat in, varius vitae justo.
-			</ContentBlockquote>
+			</WsuBlockquote>
 		</ComponentWrapper>
 	)
 }

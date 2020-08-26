@@ -7,7 +7,7 @@ import { previewGroupID, optionsGroupID } from '@wsuwebteam/build-tools/js/helpe
 import ComponentWrapper from '../../packages/storybook-components/content-wrapper';
 
 // Component Imports
-import { Article } from '../../packages/components';
+import { WsuArticle } from '../../packages/components';
 
 // Story Time
 export default {
@@ -23,7 +23,7 @@ export const DefaultArticle = () => {
 	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : ''; 
 	return (
 		<ComponentWrapper layout="content" className={classes}>
-			<Article/>
+			<WsuArticle />
 		</ComponentWrapper>
 	)
 }
