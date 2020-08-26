@@ -6,7 +6,7 @@ import { previewGroupID, optionsGroupID } from '@wsuwebteam/build-tools/js/helpe
 // Storybook Imports
 import ComponentWrapper from '../../packages/storybook-components/content-wrapper';
 
-import { SiteHeader } from '../../packages/components';
+import { WsuSiteHeader } from '../../packages/components';
 
 // Story Time
 export default {
@@ -15,7 +15,7 @@ export default {
 		withA11y,
 		withKnobs
 	],
-	component: SiteHeader
+	component: WsuSiteHeader
 };
 
 export const DefaultHeader = () => {
@@ -23,7 +23,7 @@ export const DefaultHeader = () => {
 	return (
 		<ComponentWrapper layout="full">
 
-			<SiteHeader />
+			<WsuSiteHeader />
 			
 		</ComponentWrapper>
 	)
@@ -34,7 +34,7 @@ export const DarkHeader = () => {
 	return (
 		<ComponentWrapper layout="full">
 
-			<SiteHeader isDark/>
+			<WsuSiteHeader isDark/>
 			
 		</ComponentWrapper>
 	)

@@ -7,7 +7,7 @@ import { previewGroupID, optionsGroupID } from '@wsuwebteam/build-tools/js/helpe
 import ComponentWrapper from '../../packages/storybook-components/content-wrapper';
 
 // Component Imports
-import { ContentPageBanner } from '../../packages/components';
+import { WsuPageBanner } from '../../packages/components';
 
 // Story Time
 export default {
@@ -22,7 +22,7 @@ export const Default = () => {
 
 	return(
 		<ComponentWrapper layout="content">
-			<ContentPageBanner
+			<WsuPageBanner
 				title='Lorum Ipsum'
 				eyebrowHeader='consectetur adipiscing elit'
 				imageSrc='https://source.unsplash.com/collection/895539'
@@ -33,7 +33,7 @@ export const Default = () => {
 				isFullBleed={ boolean('isFullBleed', false, optionsGroupID ) }
 				textAlign={ select( 'textAlign',['left','right','center'],'default', optionsGroupID )  }
 				overlay={ select( 'overlay',['gray','black','crimson','none'],'default', optionsGroupID )  }
-				/>
+			/>
 		</ComponentWrapper>
 	)
 }

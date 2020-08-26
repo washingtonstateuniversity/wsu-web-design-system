@@ -5,8 +5,8 @@ import { withKnobs, text, boolean, number, select } from "@storybook/addon-knobs
 // Storybook Imports
 import ComponentWrapper from '../../packages/storybook-components/content-wrapper';
 
-import {ContentColumnWrapper,ContentColumn} from '../../packages/components/content-column/index';
-import P from '../../packages/components/content-paragraph/index';
+import { WsuColumnWrapper, WsuColumn } from '../../packages/components';
+import { WsuP } from '../../packages/components';
 
 // Story Time
 export default {
@@ -26,7 +26,7 @@ const columnLayouts = ['single','halves','sidebar-right','sidebar-left','thirds'
 const Paragraph = ( props ) => {
 
 	return (
-		<P>
+		<WsuP>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
 			varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
 			platea dictumst. Suspendisse blandit, leo ac lacinia viverra, magna massa ornare nulla, eu rutrum 
@@ -35,7 +35,7 @@ const Paragraph = ( props ) => {
 			suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
 			arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
 			eleifend et suscipit vel, faucibus vitae lorem.
-		</P>
+		</WsuP>
 	)
 
 }
@@ -57,7 +57,7 @@ export const DefaultColumn = () => {
 	if ( 'halves' === layout ) {
 
 		return ( 
-			<ContentColumnWrapper
+			<WsuColumnWrapper
 				layout={layout} 
 				backgroundColor={ bgColor } 
 				marginBefore={wrapperMarginBefore}
@@ -65,23 +65,23 @@ export const DefaultColumn = () => {
 				paddingBefore={wrapperPaddingBefore}
 				paddingAfter={wrapperPaddingAfter}
 				>
-				<ContentColumn
+				<WsuColumn
 					backgroundColor={ columnBgColor } 
 					marginBefore={marginBefore}
 					marginAfter={marginAfter}
 					paddingBefore={paddingBefore}
 					paddingAfter={paddingAfter}
 					><Paragraph />
-				</ContentColumn>
-				<ContentColumn>
+				</WsuColumn>
+				<WsuColumn>
 					<Paragraph />
-				</ContentColumn>
-			</ContentColumnWrapper>
+				</WsuColumn>
+			</WsuColumnWrapper>
 		)
 
 	} else if ( 'sidebar-right' === layout ) {
 		return ( 
-			<ContentColumnWrapper
+			<WsuColumnWrapper
 				layout={layout}
 				backgroundColor={ bgColor } 
 				marginBefore={wrapperMarginBefore}
@@ -89,22 +89,22 @@ export const DefaultColumn = () => {
 				paddingBefore={wrapperPaddingBefore}
 				paddingAfter={wrapperPaddingAfter}
 				>
-				<ContentColumn>
+				<WsuColumn>
 					<Paragraph />
-				</ContentColumn>
-				<ContentColumn
+				</WsuColumn>
+				<WsuColumn
 					backgroundColor={ columnBgColor } 
 					marginBefore={marginBefore}
 					marginAfter={marginAfter}
 					paddingBefore={paddingBefore}
 					paddingAfter={paddingAfter}
 					><Paragraph />
-				</ContentColumn>
-			</ContentColumnWrapper>
+				</WsuColumn>
+			</WsuColumnWrapper>
 		)
 	} else if ( 'sidebar-left' === layout ) {
 		return ( 
-			<ContentColumnWrapper
+			<WsuColumnWrapper
 				layout={layout}
 				backgroundColor={ bgColor } 
 				marginBefore={wrapperMarginBefore}
@@ -112,22 +112,22 @@ export const DefaultColumn = () => {
 				paddingBefore={wrapperPaddingBefore}
 				paddingAfter={wrapperPaddingAfter}
 				>
-					<ContentColumn
+					<WsuColumn
 					backgroundColor={ columnBgColor } 
 					marginBefore={marginBefore}
 					marginAfter={marginAfter}
 					paddingBefore={paddingBefore}
 					paddingAfter={paddingAfter}
 					><Paragraph />
-				</ContentColumn>
-				<ContentColumn>
+				</WsuColumn>
+				<WsuColumn>
 					<Paragraph />
-				</ContentColumn>
-			</ContentColumnWrapper>
+				</WsuColumn>
+			</WsuColumnWrapper>
 		)
 	} else if ( 'thirds' === layout ) {
 		return ( 
-			<ContentColumnWrapper
+			<WsuColumnWrapper
 				layout={layout}
 				backgroundColor={ bgColor } 
 				marginBefore={wrapperMarginBefore}
@@ -135,25 +135,25 @@ export const DefaultColumn = () => {
 				paddingBefore={wrapperPaddingBefore}
 				paddingAfter={wrapperPaddingAfter}
 				>
-				<ContentColumn
+				<WsuColumn
 					backgroundColor={ columnBgColor } 
 					marginBefore={marginBefore}
 					marginAfter={marginAfter}
 					paddingBefore={paddingBefore}
 					paddingAfter={paddingAfter}
 					><Paragraph />
-				</ContentColumn>
-				<ContentColumn>
+				</WsuColumn>
+				<WsuColumn>
 					<Paragraph />
-				</ContentColumn>
-				<ContentColumn>
+				</WsuColumn>
+				<WsuColumn>
 					<Paragraph />
-				</ContentColumn>
-			</ContentColumnWrapper>
+				</WsuColumn>
+			</WsuColumnWrapper>
 		)
 	} else if ( 'quarters' === layout ) {
 		return ( 
-			<ContentColumnWrapper
+			<WsuColumnWrapper
 				layout={layout}
 				backgroundColor={ bgColor } 
 				marginBefore={wrapperMarginBefore}
@@ -161,28 +161,28 @@ export const DefaultColumn = () => {
 				paddingBefore={wrapperPaddingBefore}
 				paddingAfter={wrapperPaddingAfter}
 				>
-				<ContentColumn
+				<WsuColumn
 					backgroundColor={ columnBgColor } 
 					marginBefore={marginBefore}
 					marginAfter={marginAfter}
 					paddingBefore={paddingBefore}
 					paddingAfter={paddingAfter}
 					><Paragraph />
-				</ContentColumn>
-				<ContentColumn>
+				</WsuColumn>
+				<WsuColumn>
 					<Paragraph />
-				</ContentColumn>
-				<ContentColumn>
+				</WsuColumn>
+				<WsuColumn>
 					<Paragraph />
-				</ContentColumn>
-				<ContentColumn>
+				</WsuColumn>
+				<WsuColumn>
 					<Paragraph />
-				</ContentColumn>
-			</ContentColumnWrapper>
+				</WsuColumn>
+			</WsuColumnWrapper>
 		)
 	} else {
 		return ( 
-			<ContentColumnWrapper
+			<WsuColumnWrapper
 				layout="single"
 				backgroundColor={ bgColor } 
 				marginBefore={wrapperMarginBefore}
@@ -190,15 +190,15 @@ export const DefaultColumn = () => {
 				paddingBefore={wrapperPaddingBefore}
 				paddingAfter={wrapperPaddingAfter}
 				>
-				<ContentColumn
+				<WsuColumn
 					backgroundColor={ columnBgColor } 
 					marginBefore={marginBefore}
 					marginAfter={marginAfter}
 					paddingBefore={paddingBefore}
 					paddingAfter={paddingAfter}
 					><Paragraph />
-				</ContentColumn>
-			</ContentColumnWrapper>
+				</WsuColumn>
+			</WsuColumnWrapper>
 		)
 	}
 }
@@ -219,7 +219,7 @@ export const Columns = () => {
 
 	return(
 		<ComponentWrapper layout="full" className="wsu-c-content">
-			<ContentColumnWrapper 
+			<WsuColumnWrapper 
 				layout={'single'} 
 				backgroundColor={ bgColor } 
 				marginBefore={wrapperMarginBefore}
@@ -227,7 +227,7 @@ export const Columns = () => {
 				paddingBefore={wrapperPaddingBefore}
 				paddingAfter={wrapperPaddingAfter}
 				>
-				<ContentColumn
+				<WsuColumn
 					backgroundColor={ columnBgColor } 
 					marginBefore={marginBefore}
 					marginAfter={marginAfter}
@@ -244,16 +244,16 @@ export const Columns = () => {
 						arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
 						eleifend et suscipit vel, faucibus vitae lorem.
 					</P>
-				</ContentColumn>
-			</ContentColumnWrapper>
-			<ContentColumnWrapper 
+				</WsuColumn>
+			</WsuColumnWrapper>
+			<WsuColumnWrapper 
 				layout={'halves'} 
 				marginBefore={wrapperMarginBefore}
 				marginAfter={wrapperMarginAfter}
 				paddingBefore={wrapperPaddingBefore}
 				paddingAfter={wrapperPaddingAfter}
 				>
-				<ContentColumn
+				<WsuColumn
 					marginBefore={marginBefore}
 					marginAfter={marginAfter}
 					paddingBefore={paddingBefore}
@@ -267,8 +267,8 @@ export const Columns = () => {
 						suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
 						arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
 						eleifend et suscipit vel, faucibus vitae lorem.</P>
-				</ContentColumn>
-				<ContentColumn
+				</WsuColumn>
+				<WsuColumn
 					backgroundColor={ columnBgColor } 
 					marginBefore={marginBefore}
 					marginAfter={marginAfter}
@@ -283,9 +283,9 @@ export const Columns = () => {
 						suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
 						arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
 						eleifend et suscipit vel, faucibus vitae lorem.</P>
-				</ContentColumn>
-			</ContentColumnWrapper>
-			<ContentColumnWrapper 
+				</WsuColumn>
+			</WsuColumnWrapper>
+			<WsuColumnWrapper 
 				layout={'halves'}
 				backgroundColor={ bgColor } 
 				marginBefore={wrapperMarginBefore}
@@ -293,7 +293,7 @@ export const Columns = () => {
 				paddingBefore={wrapperPaddingBefore}
 				paddingAfter={wrapperPaddingAfter}
 				>
-				<ContentColumn
+				<WsuColumn
 					backgroundColor={ columnBgColor } 
 					marginBefore={marginBefore}
 					marginAfter={marginAfter}
@@ -308,8 +308,8 @@ export const Columns = () => {
 						suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
 						arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
 						eleifend et suscipit vel, faucibus vitae lorem.</P>
-				</ContentColumn>
-				<ContentColumn
+				</WsuColumn>
+				<WsuColumn
 					marginBefore={marginBefore}
 					marginAfter={marginAfter}
 					paddingBefore={paddingBefore}
@@ -323,16 +323,16 @@ export const Columns = () => {
 						suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
 						arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
 						eleifend et suscipit vel, faucibus vitae lorem.</P>
-				</ContentColumn>
-			</ContentColumnWrapper>
-			<ContentColumnWrapper 
+				</WsuColumn>
+			</WsuColumnWrapper>
+			<WsuColumnWrapper 
 				layout={'sidebar-left'} 
 				marginBefore={wrapperMarginBefore}
 				marginAfter={wrapperMarginAfter}
 				paddingBefore={wrapperPaddingBefore}
 				paddingAfter={wrapperPaddingAfter}
 				>
-				<ContentColumn
+				<WsuColumn
 					backgroundColor={ columnBgColor } 
 					marginBefore={marginBefore}
 					marginAfter={marginAfter}
@@ -347,8 +347,8 @@ export const Columns = () => {
 						suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
 						arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
 						eleifend et suscipit vel, faucibus vitae lorem.</P>
-				</ContentColumn>
-				<ContentColumn
+				</WsuColumn>
+				<WsuColumn
 					marginBefore={marginBefore}
 					marginAfter={marginAfter}
 					paddingBefore={paddingBefore}
@@ -362,9 +362,9 @@ export const Columns = () => {
 						suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
 						arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
 						eleifend et suscipit vel, faucibus vitae lorem.</P>
-				</ContentColumn>
-			</ContentColumnWrapper>
-			<ContentColumnWrapper 
+				</WsuColumn>
+			</WsuColumnWrapper>
+			<WsuColumnWrapper 
 				layout={'sidebar-right'} 
 				backgroundColor={ bgColor } 
 				marginBefore={wrapperMarginBefore}
@@ -372,7 +372,7 @@ export const Columns = () => {
 				paddingBefore={wrapperPaddingBefore}
 				paddingAfter={wrapperPaddingAfter}
 				>
-				<ContentColumn
+				<WsuColumn
 					marginBefore={marginBefore}
 					marginAfter={marginAfter}
 					paddingBefore={paddingBefore}
@@ -386,8 +386,8 @@ export const Columns = () => {
 						suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
 						arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
 						eleifend et suscipit vel, faucibus vitae lorem.</P>
-				</ContentColumn>
-				<ContentColumn
+				</WsuColumn>
+				<WsuColumn
 					backgroundColor={ columnBgColor } 
 					marginBefore={marginBefore}
 					marginAfter={marginAfter}
@@ -402,9 +402,9 @@ export const Columns = () => {
 						suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
 						arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
 						eleifend et suscipit vel, faucibus vitae lorem.</P>
-				</ContentColumn>
-			</ContentColumnWrapper>
-			<ContentColumnWrapper 
+				</WsuColumn>
+			</WsuColumnWrapper>
+			<WsuColumnWrapper 
 				layout={'thirds'}
 				backgroundColor={ bgColor } 
 				marginBefore={wrapperMarginBefore}
@@ -412,7 +412,7 @@ export const Columns = () => {
 				paddingBefore={wrapperPaddingBefore}
 				paddingAfter={wrapperPaddingAfter}
 				>
-				<ContentColumn
+				<WsuColumn
 					backgroundColor={ columnBgColor } 
 					marginBefore={marginBefore}
 					marginAfter={marginAfter}
@@ -427,8 +427,8 @@ export const Columns = () => {
 						suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
 						arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
 						eleifend et suscipit vel, faucibus vitae lorem.</P>
-				</ContentColumn>
-				<ContentColumn
+				</WsuColumn>
+				<WsuColumn
 					marginBefore={marginBefore}
 					marginAfter={marginAfter}
 					paddingBefore={paddingBefore}
@@ -442,8 +442,8 @@ export const Columns = () => {
 						suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
 						arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
 						eleifend et suscipit vel, faucibus vitae lorem.</P>
-				</ContentColumn>
-				<ContentColumn
+				</WsuColumn>
+				<WsuColumn
 					backgroundColor={ columnBgColor } 
 					marginBefore={marginBefore}
 					marginAfter={marginAfter}
@@ -458,16 +458,16 @@ export const Columns = () => {
 						suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
 						arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
 						eleifend et suscipit vel, faucibus vitae lorem.</P>
-				</ContentColumn>
-			</ContentColumnWrapper>
-			<ContentColumnWrapper 
+				</WsuColumn>
+			</WsuColumnWrapper>
+			<WsuColumnWrapper 
 				layout={'quarters'} 
 				marginBefore={wrapperMarginBefore}
 				marginAfter={wrapperMarginAfter}
 				paddingBefore={wrapperPaddingBefore}
 				paddingAfter={wrapperPaddingAfter}
 				>
-				<ContentColumn
+				<WsuColumn
 					backgroundColor={ columnBgColor } 
 					marginBefore={marginBefore}
 					marginAfter={marginAfter}
@@ -482,8 +482,8 @@ export const Columns = () => {
 						suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
 						arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
 						eleifend et suscipit vel, faucibus vitae lorem.</P>
-				</ContentColumn>
-				<ContentColumn
+				</WsuColumn>
+				<WsuColumn
 					marginBefore={marginBefore}
 					marginAfter={marginAfter}
 					paddingBefore={paddingBefore}
@@ -497,8 +497,8 @@ export const Columns = () => {
 						suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
 						arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
 						eleifend et suscipit vel, faucibus vitae lorem.</P>
-				</ContentColumn>
-				<ContentColumn
+				</WsuColumn>
+				<WsuColumn
 					backgroundColor={ columnBgColor } 
 					marginBefore={marginBefore}
 					marginAfter={marginAfter}
@@ -513,8 +513,8 @@ export const Columns = () => {
 						suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
 						arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
 						eleifend et suscipit vel, faucibus vitae lorem.</P>
-				</ContentColumn>
-				<ContentColumn
+				</WsuColumn>
+				<WsuColumn
 					marginBefore={marginBefore}
 					marginAfter={marginAfter}
 					paddingBefore={paddingBefore}
@@ -528,8 +528,8 @@ export const Columns = () => {
 						suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
 						arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
 						eleifend et suscipit vel, faucibus vitae lorem.</P>
-				</ContentColumn>
-			</ContentColumnWrapper>
+				</WsuColumn>
+			</WsuColumnWrapper>
 		</ComponentWrapper>
 	);
 }
