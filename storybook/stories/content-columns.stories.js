@@ -234,7 +234,7 @@ export const Columns = () => {
 					paddingBefore={paddingBefore}
 					paddingAfter={paddingAfter}
 					>
-					<P>
+					<WsuP>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
 						varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
 						platea dictumst. Suspendisse blandit, leo ac lacinia viverra, magna massa ornare nulla, eu rutrum 
@@ -243,7 +243,7 @@ export const Columns = () => {
 						suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
 						arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
 						eleifend et suscipit vel, faucibus vitae lorem.
-					</P>
+					</WsuP>
 				</WsuColumn>
 			</WsuColumnWrapper>
 			<WsuColumnWrapper 
@@ -259,14 +259,14 @@ export const Columns = () => {
 					paddingBefore={paddingBefore}
 					paddingAfter={paddingAfter}
 					>
-					<P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
+					<WsuP>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
 						varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
 						platea dictumst. Suspendisse blandit, leo ac lacinia viverra, magna massa ornare nulla, eu rutrum 
 						purus nunc at odio. Phasellus aliquam leo sed vulputate facilisis. Phasellus turpis dui, euismod ultrices 
 						rutrum et, ultrices ut quam. Sed euismod tincidunt eros eu venenatis. Nunc accumsan, felis ac cursus 
 						suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
 						arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
-						eleifend et suscipit vel, faucibus vitae lorem.</P>
+						eleifend et suscipit vel, faucibus vitae lorem.</WsuP>
 				</WsuColumn>
 				<WsuColumn
 					backgroundColor={ columnBgColor } 
@@ -275,14 +275,14 @@ export const Columns = () => {
 					paddingBefore={paddingBefore}
 					paddingAfter={paddingAfter}
 					>
-					<P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
+					<WsuP>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
 						varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
 						platea dictumst. Suspendisse blandit, leo ac lacinia viverra, magna massa ornare nulla, eu rutrum 
 						purus nunc at odio. Phasellus aliquam leo sed vulputate facilisis. Phasellus turpis dui, euismod ultrices 
 						rutrum et, ultrices ut quam. Sed euismod tincidunt eros eu venenatis. Nunc accumsan, felis ac cursus 
 						suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
 						arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
-						eleifend et suscipit vel, faucibus vitae lorem.</P>
+						eleifend et suscipit vel, faucibus vitae lorem.</WsuP>
 				</WsuColumn>
 			</WsuColumnWrapper>
 			<WsuColumnWrapper 
@@ -300,14 +300,14 @@ export const Columns = () => {
 					paddingBefore={paddingBefore}
 					paddingAfter={paddingAfter}
 					>
-					<P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
+					<WsuP>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
 						varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
 						platea dictumst. Suspendisse blandit, leo ac lacinia viverra, magna massa ornare nulla, eu rutrum 
 						purus nunc at odio. Phasellus aliquam leo sed vulputate facilisis. Phasellus turpis dui, euismod ultrices 
 						rutrum et, ultrices ut quam. Sed euismod tincidunt eros eu venenatis. Nunc accumsan, felis ac cursus 
 						suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
 						arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
-						eleifend et suscipit vel, faucibus vitae lorem.</P>
+						eleifend et suscipit vel, faucibus vitae lorem.</WsuP>
 				</WsuColumn>
 				<WsuColumn
 					marginBefore={marginBefore}
@@ -315,14 +315,14 @@ export const Columns = () => {
 					paddingBefore={paddingBefore}
 					paddingAfter={paddingAfter}
 					>
-					<P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
+					<WsuP>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
 						varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
 						platea dictumst. Suspendisse blandit, leo ac lacinia viverra, magna massa ornare nulla, eu rutrum 
 						purus nunc at odio. Phasellus aliquam leo sed vulputate facilisis. Phasellus turpis dui, euismod ultrices 
 						rutrum et, ultrices ut quam. Sed euismod tincidunt eros eu venenatis. Nunc accumsan, felis ac cursus 
 						suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
 						arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
-						eleifend et suscipit vel, faucibus vitae lorem.</P>
+						eleifend et suscipit vel, faucibus vitae lorem.</WsuP>
 				</WsuColumn>
 			</WsuColumnWrapper>
 			<WsuColumnWrapper 
@@ -339,14 +339,14 @@ export const Columns = () => {
 					paddingBefore={paddingBefore}
 					paddingAfter={paddingAfter}
 					>
-					<P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
+					<WsuP>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
 						varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
 						platea dictumst. Suspendisse blandit, leo ac lacinia viverra, magna massa ornare nulla, eu rutrum 
 						purus nunc at odio. Phasellus aliquam leo sed vulputate facilisis. Phasellus turpis dui, euismod ultrices 
 						rutrum et, ultrices ut quam. Sed euismod tincidunt eros eu venenatis. Nunc accumsan, felis ac cursus 
 						suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
 						arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
-						eleifend et suscipit vel, faucibus vitae lorem.</P>
+						eleifend et suscipit vel, faucibus vitae lorem.</WsuP>
 				</WsuColumn>
 				<WsuColumn
 					marginBefore={marginBefore}
@@ -354,14 +354,14 @@ export const Columns = () => {
 					paddingBefore={paddingBefore}
 					paddingAfter={paddingAfter}
 					>
-					<P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
+					<WsuP>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
 						varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
 						platea dictumst. Suspendisse blandit, leo ac lacinia viverra, magna massa ornare nulla, eu rutrum 
 						purus nunc at odio. Phasellus aliquam leo sed vulputate facilisis. Phasellus turpis dui, euismod ultrices 
 						rutrum et, ultrices ut quam. Sed euismod tincidunt eros eu venenatis. Nunc accumsan, felis ac cursus 
 						suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
 						arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
-						eleifend et suscipit vel, faucibus vitae lorem.</P>
+						eleifend et suscipit vel, faucibus vitae lorem.</WsuP>
 				</WsuColumn>
 			</WsuColumnWrapper>
 			<WsuColumnWrapper 
@@ -378,14 +378,14 @@ export const Columns = () => {
 					paddingBefore={paddingBefore}
 					paddingAfter={paddingAfter}
 					>
-					<P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
+					<WsuP>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
 						varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
 						platea dictumst. Suspendisse blandit, leo ac lacinia viverra, magna massa ornare nulla, eu rutrum 
 						purus nunc at odio. Phasellus aliquam leo sed vulputate facilisis. Phasellus turpis dui, euismod ultrices 
 						rutrum et, ultrices ut quam. Sed euismod tincidunt eros eu venenatis. Nunc accumsan, felis ac cursus 
 						suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
 						arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
-						eleifend et suscipit vel, faucibus vitae lorem.</P>
+						eleifend et suscipit vel, faucibus vitae lorem.</WsuP>
 				</WsuColumn>
 				<WsuColumn
 					backgroundColor={ columnBgColor } 
@@ -394,14 +394,14 @@ export const Columns = () => {
 					paddingBefore={paddingBefore}
 					paddingAfter={paddingAfter}
 					>
-					<P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
+					<WsuP>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
 						varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
 						platea dictumst. Suspendisse blandit, leo ac lacinia viverra, magna massa ornare nulla, eu rutrum 
 						purus nunc at odio. Phasellus aliquam leo sed vulputate facilisis. Phasellus turpis dui, euismod ultrices 
 						rutrum et, ultrices ut quam. Sed euismod tincidunt eros eu venenatis. Nunc accumsan, felis ac cursus 
 						suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
 						arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
-						eleifend et suscipit vel, faucibus vitae lorem.</P>
+						eleifend et suscipit vel, faucibus vitae lorem.</WsuP>
 				</WsuColumn>
 			</WsuColumnWrapper>
 			<WsuColumnWrapper 
@@ -419,14 +419,14 @@ export const Columns = () => {
 					paddingBefore={paddingBefore}
 					paddingAfter={paddingAfter}
 					>
-					<P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
+					<WsuP>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
 						varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
 						platea dictumst. Suspendisse blandit, leo ac lacinia viverra, magna massa ornare nulla, eu rutrum 
 						purus nunc at odio. Phasellus aliquam leo sed vulputate facilisis. Phasellus turpis dui, euismod ultrices 
 						rutrum et, ultrices ut quam. Sed euismod tincidunt eros eu venenatis. Nunc accumsan, felis ac cursus 
 						suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
 						arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
-						eleifend et suscipit vel, faucibus vitae lorem.</P>
+						eleifend et suscipit vel, faucibus vitae lorem.</WsuP>
 				</WsuColumn>
 				<WsuColumn
 					marginBefore={marginBefore}
@@ -434,14 +434,14 @@ export const Columns = () => {
 					paddingBefore={paddingBefore}
 					paddingAfter={paddingAfter}
 					>
-					<P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
+					<WsuP>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
 						varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
 						platea dictumst. Suspendisse blandit, leo ac lacinia viverra, magna massa ornare nulla, eu rutrum 
 						purus nunc at odio. Phasellus aliquam leo sed vulputate facilisis. Phasellus turpis dui, euismod ultrices 
 						rutrum et, ultrices ut quam. Sed euismod tincidunt eros eu venenatis. Nunc accumsan, felis ac cursus 
 						suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
 						arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
-						eleifend et suscipit vel, faucibus vitae lorem.</P>
+						eleifend et suscipit vel, faucibus vitae lorem.</WsuP>
 				</WsuColumn>
 				<WsuColumn
 					backgroundColor={ columnBgColor } 
@@ -450,14 +450,14 @@ export const Columns = () => {
 					paddingBefore={paddingBefore}
 					paddingAfter={paddingAfter}
 					>
-					<P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
+					<WsuP>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
 						varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
 						platea dictumst. Suspendisse blandit, leo ac lacinia viverra, magna massa ornare nulla, eu rutrum 
 						purus nunc at odio. Phasellus aliquam leo sed vulputate facilisis. Phasellus turpis dui, euismod ultrices 
 						rutrum et, ultrices ut quam. Sed euismod tincidunt eros eu venenatis. Nunc accumsan, felis ac cursus 
 						suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
 						arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
-						eleifend et suscipit vel, faucibus vitae lorem.</P>
+						eleifend et suscipit vel, faucibus vitae lorem.</WsuP>
 				</WsuColumn>
 			</WsuColumnWrapper>
 			<WsuColumnWrapper 
@@ -474,14 +474,14 @@ export const Columns = () => {
 					paddingBefore={paddingBefore}
 					paddingAfter={paddingAfter}
 					>
-					<P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
+					<WsuP>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
 						varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
 						platea dictumst. Suspendisse blandit, leo ac lacinia viverra, magna massa ornare nulla, eu rutrum 
 						purus nunc at odio. Phasellus aliquam leo sed vulputate facilisis. Phasellus turpis dui, euismod ultrices 
 						rutrum et, ultrices ut quam. Sed euismod tincidunt eros eu venenatis. Nunc accumsan, felis ac cursus 
 						suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
 						arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
-						eleifend et suscipit vel, faucibus vitae lorem.</P>
+						eleifend et suscipit vel, faucibus vitae lorem.</WsuP>
 				</WsuColumn>
 				<WsuColumn
 					marginBefore={marginBefore}
@@ -489,14 +489,14 @@ export const Columns = () => {
 					paddingBefore={paddingBefore}
 					paddingAfter={paddingAfter}
 					>
-					<P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
+					<WsuP>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
 						varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
 						platea dictumst. Suspendisse blandit, leo ac lacinia viverra, magna massa ornare nulla, eu rutrum 
 						purus nunc at odio. Phasellus aliquam leo sed vulputate facilisis. Phasellus turpis dui, euismod ultrices 
 						rutrum et, ultrices ut quam. Sed euismod tincidunt eros eu venenatis. Nunc accumsan, felis ac cursus 
 						suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
 						arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
-						eleifend et suscipit vel, faucibus vitae lorem.</P>
+						eleifend et suscipit vel, faucibus vitae lorem.</WsuP>
 				</WsuColumn>
 				<WsuColumn
 					backgroundColor={ columnBgColor } 
@@ -505,14 +505,14 @@ export const Columns = () => {
 					paddingBefore={paddingBefore}
 					paddingAfter={paddingAfter}
 					>
-					<P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
+					<WsuP>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
 						varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
 						platea dictumst. Suspendisse blandit, leo ac lacinia viverra, magna massa ornare nulla, eu rutrum 
 						purus nunc at odio. Phasellus aliquam leo sed vulputate facilisis. Phasellus turpis dui, euismod ultrices 
 						rutrum et, ultrices ut quam. Sed euismod tincidunt eros eu venenatis. Nunc accumsan, felis ac cursus 
 						suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
 						arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
-						eleifend et suscipit vel, faucibus vitae lorem.</P>
+						eleifend et suscipit vel, faucibus vitae lorem.</WsuP>
 				</WsuColumn>
 				<WsuColumn
 					marginBefore={marginBefore}
@@ -520,14 +520,14 @@ export const Columns = () => {
 					paddingBefore={paddingBefore}
 					paddingAfter={paddingAfter}
 					>
-					<P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
+					<WsuP>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
 						varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
 						platea dictumst. Suspendisse blandit, leo ac lacinia viverra, magna massa ornare nulla, eu rutrum 
 						purus nunc at odio. Phasellus aliquam leo sed vulputate facilisis. Phasellus turpis dui, euismod ultrices 
 						rutrum et, ultrices ut quam. Sed euismod tincidunt eros eu venenatis. Nunc accumsan, felis ac cursus 
 						suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
 						arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
-						eleifend et suscipit vel, faucibus vitae lorem.</P>
+						eleifend et suscipit vel, faucibus vitae lorem.</WsuP>
 				</WsuColumn>
 			</WsuColumnWrapper>
 		</ComponentWrapper>

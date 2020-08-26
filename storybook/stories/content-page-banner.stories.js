@@ -11,7 +11,7 @@ import { WsuPageBanner } from '../../packages/components';
 
 // Story Time
 export default {
-	title: 'Components/Content/PageBanner',
+	title: 'Components/Content/Page Banner',
 	decorators: [
 		withA11y,
 		withKnobs
