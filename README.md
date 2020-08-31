@@ -20,7 +20,7 @@
 |                       | Site Nav Horizontal    | 60%             | [Issue #17](https://github.com/washingtonstateuniversity/wsu-web-design-system/issues/17) | [Demo](https://washingtonstateuniversity.github.io/wsu-web-design-system/components/dist/site-nav-horizontal/site-nav-horizontal.html)        |
 |                       | Site Nav Vertical      | 75%             | [Issue #16](https://github.com/washingtonstateuniversity/wsu-web-design-system/issues/16) | [Demo](https://washingtonstateuniversity.github.io/wsu-web-design-system/components/dist/site-nav-vertical/site-nav-vertical.html)            |
 
-[View a comprehensive list of available components here](https://washingtonstateuniversity.github.io/wsu-web-design-system/components/)
+[View Storybook Here](https://washingtonstateuniversity.github.io/wsu-web-design-system/storybook/public/)
 
 ## Usage
 The current development branch of the design system is 1.x.

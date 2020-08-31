@@ -4,35 +4,45 @@
  *
  */
 
-/* Global components */
-import '../../components/src/global-footer/build';
-import '../../components/src/global-header/build';
-import '../../components/src/global-colors/build';
+import '../../packages/components/content-link/style.scss';
+import '../../packages/components/site-nav-horizontal/style.scss';
+import '../../packages/components/site-nav-vertical/style.scss';
+import '../../packages/components/site-header/style.scss';
+import '../../packages/components/content-article/style.scss';
+import '../../packages/components/content-form/style.scss';
+import '../../packages/components/content-list/style.scss';
+import '../../packages/components/containers/style.scss';
+import '../../packages/components/content-paragraph/style.scss';
+import '../../packages/components/content-column/style.scss';
+import '../../packages/components/content-heading/style.scss';
+import '../../packages/components/content-hero/style.scss';
+import '../../packages/components/content-button/style.scss';
+import '../../packages/components/content-card/style.scss';
+import '../../packages/components/global-header/style.scss';
+import '../../packages/components/global-footer/style.scss';
+import '../../packages/components/site-footer/style.scss';
+import '../../packages/components/content-callout/style.scss';
+import '../../packages/components/content-accordion/style.scss';
+import '../../packages/components/content-icon/style.scss';
+import '../../packages/components/content-modal/style.scss';
+import '../../packages/components/content-slider/style.scss';
+import '../../packages/components/content-stat/style.scss';
+import '../../packages/components/content-separator/style.scss';
+import '../../packages/components/content-page-banner/style.scss';
+import '../../packages/components/content-blockquote/style.scss';
 
-import '../../packages/components/containers/component.scss';
+// EM Components
+import '../../packages/em-components/em-content-callout/style.scss';
+import '../../packages/em-components/em-content-header/style.scss';
+import '../../packages/em-components/em-content-ordered-list/style.scss';
+import '../../packages/em-components/em-content-table/style.scss';
 
-/* Site components */
-import '../../components/src/site-footer/build';
-import '../../components/src/site-footer-condensed/build';
-import '../../components/src/site-nav-horizontal/build';
-import '../../components/src/site-nav-vertical/build';
-import '../../components/src/site-header/build';
+// Component Parts
+import '../../packages/component-parts/pattern/style.scss';
 
-/* Content components */
-import '../../components/src/content-article-copy/build';
-import '../../components/src/content-article-header/build';
-import '../../components/src/content-article-footer/build';
-import '../../components/src/content-button/build';
-import '../../components/src/content-card/build';
-import '../../components/src/content-form/build';
-import '../../components/src/content-hero/build';
-import '../../components/src/content-link/build';
-import '../../components/src/content-list/build';
+// Javascripts
+import '../../packages/components/site-nav-vertical/script.js';
+import '../../packages/components/global-header/script.js';
 
-import '../../packages/components/content-paragraph/component.scss';
-import '../../packages/components/content-column/component.scss';
-import '../../packages/components/content-heading/component.scss';
-
-
-
-
+// Utilities
+import '../../packages/utility-classes/style.scss';

@@ -1,0 +1,247 @@
+@import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
+
+.wsu-g-header__wrapper {
+	position: fixed;
+	z-index: z('modal');
+	top: 0;
+
+	width: 100%;
+
+	transition: top timing();
+}
+
+.wsu-g-header {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+
+	padding-right: $unit-xs;
+
+	border-top: 5px solid color(primary, base);
+	border-bottom: 1px solid color(gray, 5);
+	background-color: color(gray, 0);
+}
+
+/* Logo
+======================= */
+.wsu-g-header__logo-link {
+	display: flex;
+	align-items: center;
+
+	text-decoration: none;
+
+	color: color(gray, 75);
+
+	@include font-size(0.75rem, 500);
+	@include mq('small') {
+		flex: 1 1 0;
+
+		padding-right: $unit-xl;
+	}
+
+	&:hover .wsu-g-header__logo-svg {
+		width: 42px;
+		height: 42px;
+	}
+
+	&:visited {
+		color: color(gray, 75);
+	}
+}
+
+.wsu-g-header__logo-icon {
+	position: relative;
+	z-index: z('header');
+
+	justify-content: center;
+
+	background-color: color(primary, light);
+
+	@include is-icon--boxed($icon-size: 34px, $icon-y-offset: -2px);
+	@include mq('xsmall') {
+		margin-right: $unit-xl;
+	}
+}
+
+.wsu-g-header__logo-svg {
+	fill: color(white, base);
+}
+
+.wsu-g-header__logo-text {
+	display: none;
+
+	text-transform: uppercase;
+
+	@include mq('xsmall') {
+		display: block;
+	}
+}
+
+/* Navigation
+======================= */
+.wsu-g-header__nav {
+	margin-left: auto;
+	position: relative;
+
+	@include mq('medium') {
+		flex: 1 1 auto;
+
+		margin-left: initial;
+	}
+}
+
+.wsu-g-header__nav-list {
+	position: absolute;
+	top: 100%;
+	right: 0;
+	display: none;
+	width: 160px;
+	border-radius: $wsu-bt-base-border-radius-size;
+	border: 1px solid color(gray, 5);
+
+	margin: 0;
+	padding: $unit-2xs 0;
+	margin-top: $unit;
+
+	background-color: color(gray, 0);
+
+	@include mq('medium') {
+		display: flex;
+		justify-content: flex-end;
+
+		position: relative;
+		width: auto;
+		background-color: none;
+		border: none;
+		margin-top: 0;
+		padding: 0;
+	}
+
+	&--open {
+		display: block;
+
+		@include mq('medium') {
+			display: flex;
+		}
+	}
+}
+
+.wsu-g-header__nav-item {
+	list-style: none;
+}
+
+.wsu-g-header__nav-link {
+	position: relative;
+
+	display: block;
+
+	margin: 0 $unit-xs;
+	padding: $unit-xs 0;
+
+	text-decoration: none;
+
+	color: color(gray, 75);
+
+	@include font-size(0.75rem, 400);
+	@include border-bottom-hover(75%);
+
+	@include mq('medium') {
+		@include border-bottom-hover(100%);
+	}
+
+	&:visited {
+		color: color(gray, 70);
+	}
+}
+
+/* More links
+======================= */
+.wsu-g-header__more-icon-link {
+	padding: $unit-s;
+
+	transition: color timing();
+	text-decoration: none;
+	background: none;
+
+	color: color(gray, 75);
+	border: none;
+
+	@include mq('medium') {
+		display: none;
+	}
+
+	&:visited,
+	&:active {
+		color: color(gray, 75);
+	}
+
+	&:hover,
+	&:focus {
+		color: color(primary, base);
+		cursor: pointer;
+		border: none;
+		outline: none;
+	}
+}
+
+/* Search icon
+======================= */
+.wsu-g-header__search-icon-link {
+	padding: $unit-s;
+
+	transition: color timing();
+	text-decoration: none;
+
+	color: color(gray, 75);
+
+	&:visited {
+		color: color(gray, 75);
+	}
+
+	&:hover,
+	&:active {
+		color: color(primary, light);
+	}
+}
+
+/* Menu icon
+======================= */
+.wsu-g-header__menu-icon-link {
+	padding: $unit-s;
+
+	transition: color timing();
+	text-decoration: none;
+
+	color: color(gray, 75);
+
+	background: none;
+	border: none;
+
+	@include mq('small') {
+		display: none;
+	}
+
+	&:visited,
+	&:active {
+		color: color(gray, 75);
+	}
+
+	&:hover,
+	&:focus {
+		color: color(primary, base);
+		cursor: pointer;
+		border: none;
+		outline: none;
+	}
+}
+
+/* Vertical nav is open
+======================= */
+
+body.wsu-s-nav-vertical__nav--is-open .wsu-g-header__wrapper {
+	top: 0;
+}
+
+body.wsu-g-header--is-hidden .wsu-g-header__wrapper {
+	top: -65px;
+}

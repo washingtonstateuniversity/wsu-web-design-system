@@ -1,0 +1,281 @@
+@import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
+@import '~@wsuwebteam/wsu-icons/dist/wsu-icons.bundle.css';
+
+@mixin default-heading-link {
+	a {
+		transition: 300ms ease all;
+		text-decoration: none;
+
+		color: inherit; 
+		border-bottom-width: 0;
+		border-bottom-style: solid;
+		border-bottom-color: color(primary, light);
+
+		&::after {
+			font-family: "wsu-icons";
+
+			left: calc(100% + 5px);
+
+			display: inline-block;
+
+			padding-left: 5px;
+
+			content: "\F126";
+			transition: 300ms ease all;
+			transform: scale(.85);
+			text-decoration: none;
+
+			@include font-size(16px);
+		}
+
+		// Handles hover, focus state
+		&:hover,
+		&:focus {
+			color: inherit;
+			border-bottom-width: 3px;
+			outline: none;
+
+		}
+
+		&:visited {
+			@extend a;
+		}
+
+		&:focus {
+			text-decoration: none;
+			outline: 1px solid color(primary, light);
+		}
+	}
+}
+
+.wsu-c-heading,
+.wsu-c-content h1:not([class^="wsu-c"]):not([class*=" wsu-c"]),
+.wsu-c-content h2:not([class^="wsu-c"]):not([class*=" wsu-c"]),
+.wsu-c-content h3:not([class^="wsu-c"]):not([class*=" wsu-c"]),
+.wsu-c-content h4:not([class^="wsu-c"]):not([class*=" wsu-c"]),
+.wsu-c-content h5:not([class^="wsu-c"]):not([class*=" wsu-c"]),
+.wsu-c-content h6:not([class^="wsu-c"]):not([class*=" wsu-c"]) {
+	font-family: $wsu-bt-primary-font-family;
+	margin-top: 0;
+	margin-bottom: 0.5em;
+	color: color(gray, 85);
+
+	@include default-heading-link;
+
+	& + p {
+		margin-top: 0;
+	}
+}
+
+h1.wsu-c-heading,
+.wsu-c-content h1:not([class^="wsu-c"]):not([class*=" wsu-c"]) {
+	font-size: 3rem;
+	font-weight: $wsu-bt-font-extra-bold;
+	line-height: 1.25em;
+
+	position: relative;
+	padding-bottom: 0.3em;
+	margin-bottom: 0.75em;
+
+	@include mq('medium','max') {
+		font-size: 2.5rem;
+	}
+	@include mq('small','max') {
+		font-size: 2rem;
+	}
+
+	&::after {
+		position: absolute;
+		bottom: -4px;
+		left: 0;
+
+		display: block;
+
+		width: 2.25em;
+   		height: 0.075em;
+
+		content: "";
+
+		background-color: color('primary','light');
+	}
+
+}
+
+h2.wsu-c-heading,
+.wsu-c-content h2:not([class^="wsu-c"]):not([class*=" wsu-c"]) {
+	font-size: 2.1rem;
+	font-weight: $wsu-bt-font-bold;
+	line-height: 1.3em;
+
+	@include mq('medium','max') {
+		font-size: 1.75rem;
+	}
+}
+
+h3.wsu-c-heading,
+.wsu-c-content h3:not([class^="wsu-c"]):not([class*=" wsu-c"]) {
+	font-size: 1.8rem;
+	font-weight: $wsu-bt-font-semi-bold;
+	line-height: 1.35em;
+
+	@include mq('medium','max') {
+		font-size: 1.5rem;
+	}
+}
+
+h4.wsu-c-heading,
+.wsu-c-content h4:not([class^="wsu-c"]):not([class*=" wsu-c"]) {
+	font-size: 1.5rem;
+	font-weight: $wsu-bt-font-semi-bold;
+	line-height: 1.4em;
+
+	@include mq('medium','max') {
+		font-size: 1.25rem;
+	}
+}
+
+h5.wsu-c-heading,
+.wsu-c-content h5:not([class^="wsu-c"]):not([class*=" wsu-c"]) {
+	font-size: 1.25rem;
+	font-weight: $wsu-bt-font-semi-bold;
+	line-height: 1.5em;
+
+	@include mq('medium','max') {
+		font-size: 1.1rem;
+	}
+}
+
+h6.wsu-c-heading,
+.wsu-c-content h6:not([class^="wsu-c"]):not([class*=" wsu-c"]) {
+	font-size: 1rem;
+	font-weight: $wsu-bt-font-semi-bold;
+	line-height: 1.5em;
+
+}
+
+.wsu-c-heading--callout,
+h1.wsu-c-heading--callout,
+h2.wsu-c-heading--callout,
+h3.wsu-c-heading--callout,
+h4.wsu-c-heading--callout,
+h5.wsu-c-heading--callout,
+h6.wsu-c-heading--callout {
+	font-family: $wsu-bt-primary-font-family;
+	text-align: center;
+	margin-top: 2.5rem;
+	margin-bottom: 1em;
+	margin-left: auto;
+	margin-right: auto;
+
+	@include default-heading-link;
+
+	& + p {
+		margin-top: 0;
+	}
+
+	&::after {
+		position: relative;
+		margin-top: 0.75em;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		width: 1em;
+		height: 0.25em;
+
+		content: "";
+
+		background-color: color('primary','light');
+	}
+}
+
+h1.wsu-c-heading--callout::after {
+    width: 1.5em;
+	height: 0.15em;
+	margin-top: 0.6em;
+}
+
+h2.wsu-c-heading--callout {
+    font-weight: 600;
+}
+
+.wsu-c-heading {
+
+	&--xnarrow {
+		max-width: 400px;
+	}
+
+	&--narrow {
+		max-width: 600px;
+	}
+
+	&--medium {
+		max-width: 850px;
+	}
+
+	&--wide {
+		max-width: 1100px;
+	}
+
+	&--full {
+		max-width: auto;
+	}
+}
+
+.wsu-c-heading--em {
+	font-family: $wsu-bt-primary-font-family;
+	color: #262626;
+	margin-top: 0;
+	margin-bottom: 0.5em;
+	line-height: 1.3;
+}
+
+
+h1 {
+	&.wsu-c-heading--em {
+		font-size: 3rem;
+		font-weight: 800;
+
+		&-hero {
+			font-size: 4.5rem;
+			font-weight: 800;
+			color: color(primary,light);
+			margin-top: 0;
+			margin-bottom: 0.5em;
+			line-height: 1.3;
+		}
+	}
+}
+
+h2 {
+	&.wsu-c-heading--em {
+		font-size: 2.25rem;
+		font-weight: 700; 
+	}
+}
+
+h3 {
+	&.wsu-c-heading--em {
+		font-size: 1.5rem;
+		font-weight: 600; 
+	}
+}
+
+h4 {
+	&.wsu-c-heading--em {
+		font-size: 1.125rem;
+		font-weight: 600; 
+	}
+}
+
+h5 {
+	&.wsu-c-heading--em {
+		font-size: 1.1rem;
+		font-weight: 600; 
+	}
+}
+
+
+
+
+
+

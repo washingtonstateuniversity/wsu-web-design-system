@@ -1,0 +1,60 @@
+@import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
+
+.wsu-c-content hr,
+.wsu-c-separator {
+	background-color: color(gray, 10);
+	width: 100%;
+	height: 1px;
+	border: none;
+	margin: 0;
+
+	&.wsu-c-separator--isHatched {
+		@include pattern();
+		background-color: transparent;
+		height: 60px;
+	}
+
+	&.wsu-c-separator--showMoreIndicator {
+		position: relative;
+
+		&::after {
+			content: "";
+			height: 200px;
+			width: 1px;
+			background-color: color(primary, base);
+			position: absolute;
+			left: 50%;
+			top: 0%;
+			transform: translate(-50%, -50%);
+
+			animation: slide 5s ease-in-out;
+			animation-iteration-count: infinite;
+			z-index: z('content');
+		}
+	}
+
+	&.wsu-c-separator--isFullBleed {
+		margin-left: calc((100vw - 100%)/2*-1);
+		margin-right: calc((100vw - 100%)/2*-1);
+		width: calc((140vw - 100%) + 50%);
+	}
+}
+	
+
+@keyframes slide {
+	0% { 
+		top: 0;
+	}
+
+	33% {
+		top: 100%;
+	}
+
+	66% {
+		top: 100%;
+	}
+
+	100% {
+		top: 0%;
+	}
+}

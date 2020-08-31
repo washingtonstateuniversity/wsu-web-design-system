@@ -1,0 +1,74 @@
+.wsu-storybook-component {
+
+	&__wrapper {
+
+		&--centered {
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	
+		&--content {
+			padding-right: .75rem;
+			padding-left: .75rem;
+		}
+	}
+
+	&__start,
+	&__end {
+		width: 50px;
+		text-align: center;
+		margin: 0 auto;
+		padding: 4px 0;
+	}
+
+	&__start {
+		border-bottom: 1px dashed #ccc;
+	}
+
+	&__end {
+		border-top: 1px dashed #ccc;
+	}
+
+}
+
+[class^="wsu-storybook-component__wrapper--"],
+[class*=" wsu-storybook-component__wrapper--"] {
+
+	&.wsu-u-width {
+		
+		&--narrow {
+			max-width: 750px;
+			margin-left: auto;
+			margin-right: auto;
+
+			@media screen and (max-width:850px) {
+				margin-left: 50px;
+				margin-right: 50px;
+			}
+		}
+
+		&--wide {
+			max-width: 1200px;
+			margin-left: auto;
+			margin-right: auto;
+
+			@media screen and (max-width:1300px) {
+				margin-left: 50px;
+				margin-right: 50px;
+			}
+		}
+
+		&--xwide {
+			max-width: 1400px;
+			margin-left: auto;
+			margin-right: auto;
+
+			@media screen and (max-width:1500px) {
+				margin-left: 50px;
+				margin-right: 50px;
+			}
+		}
+	}
+}
