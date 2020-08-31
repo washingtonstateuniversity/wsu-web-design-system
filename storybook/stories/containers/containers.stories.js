@@ -3,7 +3,7 @@ import { withA11y } from '@storybook/addon-a11y';
 import { withKnobs, text, boolean, number, select } from "@storybook/addon-knobs";
 
 // Storybook Imports
-import { GlobalContainer, SiteContainer, ContentContainer } from '../../../packages/components/containers/index';
+import { GlobalContainer, SiteContainer, ContentContainer } from '../../../packages/components/containers';
 
 import './style.scss';
 

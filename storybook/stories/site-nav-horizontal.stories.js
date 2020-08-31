@@ -8,7 +8,7 @@ import { previewGroupID, optionsGroupID } from '@wsuwebteam/build-tools/js/helpe
 import ComponentWrapper from '../../packages/storybook-components/content-wrapper';
 
 // Component Deps
-import { SiteNavHorizontal } from '../../packages/components';
+import { WsuSiteNavHorizontal } from '../../packages/components';
 
 // Story Time
 export default {
@@ -22,6 +22,6 @@ export default {
 export const Default = () => {
 
 	return (
-		<SiteNavHorizontal />
+		<WsuSiteNavHorizontal />
 	)
 }

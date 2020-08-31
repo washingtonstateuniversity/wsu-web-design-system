@@ -8,7 +8,7 @@ import { previewGroupID, optionsGroupID } from '@wsuwebteam/build-tools/js/helpe
 import ComponentWrapper from '../../packages/storybook-components/content-wrapper';
 
 // Component Deps
-import { SiteFooter, SiteFooterCondensed } from '../../packages/components';
+import { WsuSiteFooter, WsuSiteFooterCondensed } from '../../packages/components';
 
 // Story Time
 export default {
@@ -22,13 +22,13 @@ export default {
 export const DefaultFooter = () => {
 
 	return (
-		<SiteFooter />
+		<WsuSiteFooter />
 	)
 }
 
 export const CondensedFooter = () => {
 
 	return (
-		<SiteFooterCondensed />
+		<WsuSiteFooterCondensed />
 	)
 }

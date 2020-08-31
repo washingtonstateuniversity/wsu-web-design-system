@@ -5,7 +5,7 @@ import { previewGroupID, optionsGroupID } from '@wsuwebteam/build-tools/js/helpe
 
 // Storybook Imports
 import ComponentWrapper from '../../../packages/storybook-components/content-wrapper/';
-import { Heading } from '../../../packages/components';
+import { WsuHeading } from '../../../packages/components';
 import './global-typography.scss';
 
 // Story Time
@@ -22,13 +22,13 @@ export const AllFonts = () => {
 	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : ''; 
 	return (
 		<ComponentWrapper layout="content" className={classes}>
-			<Heading>Typography</Heading>
-			<Heading tag="h1">h1 Montserrat ExtraBold 48px</Heading>
-			<Heading tag="h2">h2 Montserrat Bold 36px </Heading>
-			<Heading tag="h3">h3 Montserrat SemiBold 24px</Heading>
-			<Heading tag="h4">h4 Montserrat SemiBold 18px</Heading>
+			<WsuHeading>Typography</WsuHeading>
+			<WsuHeading tag="h1">h1 Montserrat ExtraBold 48px</WsuHeading>
+			<WsuHeading tag="h2">h2 Montserrat Bold 36px </WsuHeading>
+			<WsuHeading tag="h3">h3 Montserrat SemiBold 24px</WsuHeading>
+			<WsuHeading tag="h4">h4 Montserrat SemiBold 18px</WsuHeading>
 
-			<Heading tag="h2">Font Weights</Heading>
+			<WsuHeading tag="h2">Font Weights</WsuHeading>
 			<table>
 				<tr>
 					<th>Example Text</th>

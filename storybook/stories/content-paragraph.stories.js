@@ -5,7 +5,7 @@ import { withKnobs, text, boolean, number, select } from "@storybook/addon-knobs
 // Storybook Imports
 import ComponentWrapper from '../../packages/storybook-components/content-wrapper';
 
-import P from '../../packages/components/content-paragraph/index';
+import { WsuP } from '../../packages/components';
 
 // Story Time
 export default {
@@ -27,7 +27,7 @@ export const DefaultParagraph = () => {
 
 	return(
 		<ComponentWrapper layout="content" className="wsu-c-content" showEnds={boolean('Show Spacing', false, contentGroupID )}>
-			<P width={ widthOption  } >
+			<WsuP width={ widthOption  } >
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
 				varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
 				platea dictumst. Suspendisse blandit, leo ac lacinia viverra, magna massa ornare nulla, eu rutrum 
@@ -36,7 +36,7 @@ export const DefaultParagraph = () => {
 				suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
 				arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
 				eleifend et suscipit vel, faucibus vitae lorem.
-			</P>
+			</WsuP>
 		</ComponentWrapper>
 	)
 }
@@ -47,7 +47,7 @@ export const ParagraphGroups = () => {
 
 	return(
 		<ComponentWrapper layout="content" className="wsu-c-content">
-			<P width={ widthOption  } >
+			<WsuP width={ widthOption  } >
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
 				varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
 				platea dictumst. Suspendisse blandit, leo ac lacinia viverra, magna massa ornare nulla, eu rutrum 
@@ -56,8 +56,8 @@ export const ParagraphGroups = () => {
 				suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
 				arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
 				eleifend et suscipit vel, faucibus vitae lorem.
-			</P>
-			<P width={ widthOption  } >
+			</WsuP>
+			<WsuP width={ widthOption  } >
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
 				varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
 				platea dictumst. Suspendisse blandit, leo ac lacinia viverra, magna massa ornare nulla, eu rutrum 
@@ -66,8 +66,8 @@ export const ParagraphGroups = () => {
 				suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
 				arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
 				eleifend et suscipit vel, faucibus vitae lorem.
-			</P>
-			<P width={ widthOption  } >
+			</WsuP>
+			<WsuP width={ widthOption  } >
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
 				varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
 				platea dictumst. Suspendisse blandit, leo ac lacinia viverra, magna massa ornare nulla, eu rutrum 
@@ -76,7 +76,7 @@ export const ParagraphGroups = () => {
 				suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
 				arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
 				eleifend et suscipit vel, faucibus vitae lorem.
-			</P>
+			</WsuP>
 		</ComponentWrapper>
 	)
 }

@@ -7,7 +7,7 @@ import { previewGroupID, optionsGroupID } from '@wsuwebteam/build-tools/js/helpe
 import ComponentWrapper from '../../packages/storybook-components/content-wrapper/index'
 
 // Component Imports
-import ContentCallout from '../../packages/components/content-callout/index';
+import { WsuCallout } from '../../packages/components';
 
 const spacingOptions = ['default','none','xsmall','small','medium','medium-large','large','xlarge'];
 
@@ -25,7 +25,7 @@ export const DefaultCallout = () => {
 	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : ''; 
 	return (
 		<ComponentWrapper layout="content" className={classes}>
-			<ContentCallout
+			<WsuCallout
 				imageSrc='https://source.unsplash.com/collection/895539'
 				imageAlt={ text( 'imageAlt','Alt Text', optionsGroupID ) }
 				eyebrowTitle={text( 'eyebrowTitle','', optionsGroupID )}
@@ -43,7 +43,7 @@ export const DefaultCallout = () => {
 				buttonText={ text( 'buttonText','Learn More', optionsGroupID ) }
 				buttonUrl={ text( 'buttonUrl','#', optionsGroupID ) }
 				videoSrc={text( 'videoSrc','', optionsGroupID )}
-				/>
+			/>
 		</ComponentWrapper>
 	)
 }
@@ -53,7 +53,7 @@ export const CalloutList = () => {
 	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : ''; 
 	return (
 		<ComponentWrapper layout="content" className={classes}>
-			<ContentCallout
+			<WsuCallout
 				imageSrc='https://source.unsplash.com/collection/895539'
 				imageAlt={ text( 'imageAlt','Alt Text', optionsGroupID ) }
 				title='Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
@@ -67,8 +67,8 @@ export const CalloutList = () => {
 				isNotched={ boolean('isNotched', false, optionsGroupID ) }
 				buttonText={ text( 'buttonText','Learn More', optionsGroupID ) }
 				buttonUrl={ text( 'buttonUrl','#', optionsGroupID ) }
-				/>
-			<ContentCallout
+			/>
+			<WsuCallout
 				imageSrc='https://source.unsplash.com/collection/895539'
 				imageAlt={ text( 'imageAlt','Alt Text', optionsGroupID ) }
 				title='Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
@@ -82,8 +82,8 @@ export const CalloutList = () => {
 				isNotched={ boolean('isNotched', false, optionsGroupID ) }
 				buttonText={ text( 'buttonText','Learn More', optionsGroupID ) }
 				buttonUrl={ text( 'buttonUrl','#', optionsGroupID ) }
-				/>
-			<ContentCallout
+			/>
+			<WsuCallout
 				imageSrc='https://source.unsplash.com/collection/895539'
 				imageAlt={ text( 'imageAlt','Alt Text', optionsGroupID ) }
 				title='Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
@@ -97,7 +97,7 @@ export const CalloutList = () => {
 				isNotched={ boolean('isNotched', false, optionsGroupID ) }
 				buttonText={ text( 'buttonText','Learn More', optionsGroupID ) }
 				buttonUrl={ text( 'buttonUrl','#', optionsGroupID ) }
-				/>
+			/>
 		</ComponentWrapper>
 	)
 }
