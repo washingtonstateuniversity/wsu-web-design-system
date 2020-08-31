@@ -5,7 +5,7 @@ import { previewGroupID, optionsGroupID } from '@wsuwebteam/build-tools/js/helpe
 
 // Storybook Imports
 import ComponentWrapper from '../../packages/storybook-components/content-wrapper';
-import ContentCard from '../../packages/components/content-card/index';
+import { WsuCard } from '../../packages/components';
 
 // Story Time
 export default {
@@ -14,13 +14,13 @@ export default {
 		withA11y,
 		withKnobs
 	],
-	component: ContentCard
+	component: WsuCard
 };
 
 export const defaultCard = () => {
 	return(
 		<ComponentWrapper layout="content">
-			<ContentCard 
+			<WsuCard 
 				title={text('title', 'Pellentesque Habitant', previewGroupID)}
 				description={text('description', 'Morbi tristique senectus et netus et malesuada.', previewGroupID)}
 				addressLine1={text('addressLine1', '12345 Etiam rutrum lectus', previewGroupID)}
@@ -66,7 +66,7 @@ export const defaultCard = () => {
 export const personCard = () => {
 	return(
 		<ComponentWrapper layout="content">
-			<ContentCard 
+			<WsuCard 
 				title={text('title', 'Pellentesque Habitant', previewGroupID)}
 				description={text('description', 'Morbi tristique senectus et netus et malesuada.', previewGroupID)}
 				addressLine1={text('addressLine1', '12345 Etiam rutrum lectus', previewGroupID)}
@@ -83,7 +83,7 @@ export const personCard = () => {
 export const newsCard = () => {
 	return(
 		<ComponentWrapper layout="content">
-			<ContentCard 
+			<WsuCard 
 				title={'Sed bibendum efficitur tellus non tristique'}
 				description={'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam rutrum lectus in metus pulvinar, quis gravida nulla pellentesque. Praesent dignissim et mi nec faucibus. Ut luctus, justo blandit suscipit placerat, purus velit ornare leo, ac lobortis nisi arcu consectetur erat. Integer in sapien augue. '}
 				image={{'src': 'https://source.unsplash.com/collection/895539', 'alt': 'alt text for image'}}

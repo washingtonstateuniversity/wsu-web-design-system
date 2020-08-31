@@ -8,10 +8,12 @@ import { previewGroupID, optionsGroupID } from '@wsuwebteam/build-tools/js/helpe
 import ComponentWrapper from '../../packages/storybook-components/content-wrapper';
 
 // Component Deps
-import GlobalHeader from '../../packages/components/global-header';
-import GlobalFooter from '../../packages/components/global-footer';
-import SiteFooter from '../../packages/components/site-footer';
-import ContentHero from '../../packages/components/content-hero';
+import {
+	WsuGlobalHeader,
+	WsuGlobalFooter,
+	WsuSiteFooter,
+	WsuHero
+} from '../../packages/components';
 
 // Story Time
 export default {
@@ -26,10 +28,10 @@ export const homepage = () => {
 
 	return (
 		<>
-			<GlobalHeader />
-			<ContentHero />
-			<SiteFooter />
-			<GlobalFooter />
+			<WsuGlobalHeader />
+			<WsuHero />
+			<WsuSiteFooter />
+			<WsuGlobalFooter />
 		</>
 	)
 }

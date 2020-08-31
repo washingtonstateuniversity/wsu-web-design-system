@@ -7,7 +7,7 @@ import { previewGroupID, optionsGroupID } from '@wsuwebteam/build-tools/js/helpe
 // Storybook Imports
 import ComponentWrapper from '../../packages/storybook-components/content-wrapper';
 
-import { ListCheatsheet } from '../../packages/components';
+import { WsuListCheatsheet } from '../../packages/components';
 
 // Story Time
 export default {
@@ -23,7 +23,7 @@ export const DefaultList = () => {
 	return (
 		<ComponentWrapper layout="content" className={'wsu-c-content'}>
 
-			<ListCheatsheet />
+			<WsuListCheatsheet />
 			
 		</ComponentWrapper>
 	)

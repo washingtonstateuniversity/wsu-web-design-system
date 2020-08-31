@@ -7,7 +7,7 @@ import { previewGroupID, optionsGroupID } from '@wsuwebteam/build-tools/js/helpe
 import ComponentWrapper from '../../packages/storybook-components/content-wrapper';
 
 // Component Imports
-import { Hr, Separator } from '../../packages/components';
+import { WsuHr, WsuSeparator } from '../../packages/components';
 
 // Story Time
 export default {
@@ -16,7 +16,7 @@ export default {
 		withA11y,
 		withKnobs
 	],
-	component: Hr
+	component: WsuHr
 };
 
 export const DefaultSeparator = () => {
@@ -25,7 +25,7 @@ export const DefaultSeparator = () => {
 
 	return(
 		<ComponentWrapper layout="centered" className={classes}>
-			<Hr />
+			<WsuHr />
 		</ComponentWrapper>
 	)
 }
@@ -36,7 +36,7 @@ export const EMSeparator = () => {
 
 	return(
 		<ComponentWrapper layout="centered" className={classes}>
-			<Hr isHatched showMoreIndicator/>
+			<WsuHr isHatched showMoreIndicator/>
 		</ComponentWrapper>
 	)
 }

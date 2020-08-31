@@ -8,7 +8,7 @@ import { previewGroupID, optionsGroupID } from '@wsuwebteam/build-tools/js/helpe
 import ComponentWrapper from '../../packages/storybook-components/content-wrapper';
 
 // Component Deps
-import ContentSlider from '../../packages/components/content-slider/index';
+import { WsuSlider } from '../../packages/components';
 
 // Story Time
 export default {
@@ -23,7 +23,7 @@ export const DefaultSlider = () => {
 
 	return (
 		<ComponentWrapper layout="content">
-			<ContentSlider
+			<WsuSlider
 			slideTitle={
 				text( 
 					'Heading Text',

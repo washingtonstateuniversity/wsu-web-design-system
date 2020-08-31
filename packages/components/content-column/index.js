@@ -1,5 +1,6 @@
 // External Deps
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import './style.scss';
 
@@ -48,10 +49,12 @@ class ContentColumnWrapper extends Component {
 		);
 	}
 
-	static defaultProps = {
-		layout: 'default',
-		backgroundColor: '',
-	}
+
+}
+
+ContentColumnWrapper.defaultProps = {
+	layout: 'default',
+	backgroundColor: '',
 }
 
 class ContentColumn extends Component {
@@ -94,14 +97,14 @@ class ContentColumn extends Component {
 			</div>
 		);
 	}
+}
 
-	static defaultProps = {
-		backgroundColor: '',
-		marginBefore: '',
-		marginAfter: '',
-		paddingBefore: '',
-		paddingAfter: '',
-	}
+ContentColumn.defaultProps = {
+	backgroundColor: '',
+	marginBefore: '',
+	marginAfter: '',
+	paddingBefore: '',
+	paddingAfter: '',
 }
 
 export { 
