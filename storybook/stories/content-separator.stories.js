@@ -30,7 +30,18 @@ export const DefaultSeparator = () => {
 	)
 }
 
-export const EMSeparator = () => {
+export const CrimsonSeparator = () => {
+
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : ''; 
+
+	return(
+		<ComponentWrapper layout="content" className={classes}>
+			<WsuHr style="crimson" />
+		</ComponentWrapper>
+	)
+}
+
+/*export const EMSeparator = () => {
 
 	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : ''; 
 
@@ -39,4 +50,4 @@ export const EMSeparator = () => {
 			<WsuHr isHatched showMoreIndicator/>
 		</ComponentWrapper>
 	)
-}
+}*/
