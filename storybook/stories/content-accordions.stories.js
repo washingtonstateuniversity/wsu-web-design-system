@@ -19,6 +19,8 @@ export default {
 	]
 };
 
+import '../../packages/components/content-accordion/script';
+
 const contentGroupID = 'Preview';
 const optionsGroupID = 'Options';
 
