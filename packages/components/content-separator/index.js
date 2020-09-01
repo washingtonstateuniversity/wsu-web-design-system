@@ -5,8 +5,10 @@ import './style.scss';
 
 const ContentSeparator = ( props ) => {
 
+	let baseClass = ( 'default' != props.style ) ? 'wsu-c-separator--'+props.style : 'wsu-c-separator';
+
 	const classes = classnames(
-		'wsu-c-separator', 
+		baseClass, 
 		{
 			'wsu-c-separator--isHatched': props.isHatched,
 			'wsu-c-separator--showMoreIndicator': props.showMoreIndicator,
@@ -16,6 +18,10 @@ const ContentSeparator = ( props ) => {
 	return (
 		<hr className={classes} />
 	)
+}
+
+ContentSeparator.defaultProps = {
+	style: 'default',
 }
 
 export default ContentSeparator;
