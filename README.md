@@ -1,7 +1,7 @@
 # WSU Web Design System
 
-## Components
-
+<!-- ## Components -->
+<!-- 
 | :mag:	                | Component              | Progress        | Tracking                     | Demo                                                                                                                                          |
 |-----------------------|------------------------|-----------------|------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
 |                       | Columns                | 60%             | [Issue #77](https://github.com/washingtonstateuniversity/wsu-web-design-system/issues/77) | [Demo](https://washingtonstateuniversity.github.io/wsu-web-design-system/components/dist/columns/columns.html)                                |
@@ -18,7 +18,7 @@
 |                       | Site Footer            | 80%             | [Issue #3](https://github.com/washingtonstateuniversity/wsu-web-design-system/issues/3) | [Demo](https://washingtonstateuniversity.github.io/wsu-web-design-system/components/dist/site-footer/site-footer.html)                        |
 |                       | Site Header            | 90%             | [Issue #26](https://github.com/washingtonstateuniversity/wsu-web-design-system/issues/26) | [Demo](https://washingtonstateuniversity.github.io/wsu-web-design-system/components/dist/site-header/site-header.html)                        |
 |                       | Site Nav Horizontal    | 60%             | [Issue #17](https://github.com/washingtonstateuniversity/wsu-web-design-system/issues/17) | [Demo](https://washingtonstateuniversity.github.io/wsu-web-design-system/components/dist/site-nav-horizontal/site-nav-horizontal.html)        |
-|                       | Site Nav Vertical      | 75%             | [Issue #16](https://github.com/washingtonstateuniversity/wsu-web-design-system/issues/16) | [Demo](https://washingtonstateuniversity.github.io/wsu-web-design-system/components/dist/site-nav-vertical/site-nav-vertical.html)            |
+|                       | Site Nav Vertical      | 75%             | [Issue #16](https://github.com/washingtonstateuniversity/wsu-web-design-system/issues/16) | [Demo](https://washingtonstateuniversity.github.io/wsu-web-design-system/components/dist/site-nav-vertical/site-nav-vertical.html)            | -->
 
 [View Storybook Here](https://washingtonstateuniversity.github.io/wsu-web-design-system/storybook/public/)
 
