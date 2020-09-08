@@ -1,17 +1,18 @@
 @import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
 
-.wsu-c-content hr,
+.wsu-c-content hr:not([class^="wsu-c"]):not([class*=" wsu-c"]),
 .wsu-c-separator {
 	background-color: color(gray, 10);
 	width: 100%;
-	height: 1px;
-	border: none;
-	margin: 0;
+	height: 5px;
+    border: none;
+    margin: 3em 0;
 
 	&.wsu-c-separator--isHatched {
 		@include pattern();
 		background-color: transparent;
 		height: 60px;
+		margin: 0 0;
 	}
 
 	&.wsu-c-separator--showMoreIndicator {
@@ -37,6 +38,19 @@
 		margin-left: calc((100vw - 100%)/2*-1);
 		margin-right: calc((100vw - 100%)/2*-1);
 		width: calc((140vw - 100%) + 50%);
+	}
+
+	
+}
+
+.wsu-c-separator {
+	&--crimson {
+		background-color: color(primary, base);
+		width: 100%;
+		height: 4px;
+		border: none;
+		margin: 3em 0;
+		max-width: 75px;
 	}
 }
 	

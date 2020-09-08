@@ -10,6 +10,10 @@
 	&--is-dark {
 		background-color: color(gray, 80);
 		color: color(white, base);
+
+		.wsu-c-stat__label {
+			background-color: color(gray, 65);
+		}
 	}
 }
 

@@ -43,6 +43,7 @@ import '../../packages/component-parts/pattern/style.scss';
 // Javascripts
 import '../../packages/components/site-nav-vertical/script.js';
 import '../../packages/components/global-header/script.js';
+import '../../packages/components/content-accordion/script.js';
 
 // Utilities
 import '../../packages/utility-classes/style.scss';

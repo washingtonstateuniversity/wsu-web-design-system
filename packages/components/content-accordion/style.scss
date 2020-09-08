@@ -2,24 +2,18 @@
 @import '~@wsuwebteam/wsu-icons/dist/wsu-icons.bundle.css';
 
 .wsu-c-accordion {
-	margin-top: 1.5rem;
 	border-bottom: 1px solid #E5E5E5;
+	margin-bottom: 2em;
 
 	& + .wsu-c-accordion {
-		margin-top: 0;
+		margin-top: -2em;
 	}
 
 	&:last-child {
 		margin-bottom: 2.1em;
 	}
-
-	.wsu-c-accordion__title,
-	h1.wsu-c-accordion__title,
-	h2.wsu-c-accordion__title, 
-	h3.wsu-c-accordion__title, 
-	h4.wsu-c-accordion__title, 
-	h5.wsu-c-accordion__title, 
-	h6.wsu-c-accordion__title {
+ 
+	&__title {
 		position: relative;
 		text-transform: inherit;
 		font-weight: 100;
@@ -32,7 +26,8 @@
 		transition: 250ms ease-in-out all;
 		line-height: 1.3em;
 		padding-right: 3em;
-		padding-left:0.3em;
+		padding-left:0.4em;
+		
 
 		&:focus,
 		&:hover {
@@ -40,9 +35,7 @@
 		}
 
 		&:focus {
-			border: 1px solid color(gray,80);
-			border-top: 1px solid color(gray,80);
-			border-bottom: 1px solid color(gray,80);
+			outline: 1px solid color(gray,50);
 		} 
 
 		&::after {
@@ -56,9 +49,26 @@
 		}
 	}
 
-	.wsu-c-accordion__content {
-		height: 0;
+	&--open .wsu-c-accordion__title {
+		background-color: whitesmoke;
+	}
+
+	&__content {
+		max-height: 0;
 		overflow: hidden;
+		transition: max-height 0.2s ease-out;
+	}
+
+	&__content-inner {
+		padding-top: 1.5em;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		box-sizing: border-box;
+	}
+
+	&.wsu-c-accordion--open:not(.wsu-wsu-c-accordion--animated) .wsu-c-accordion__content {
+		max-height: none !important;
+		overflow: auto !important;
 	}
 
 	&--active {

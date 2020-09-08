@@ -68,8 +68,8 @@
 
 	@extend .wsu-c-list;
 
-	.wsu-c-list-item,
-	li {
+	.wsu-c-ordered__list-item,
+	& li {
 		position: relative;
 
 		padding-left: $unit;
@@ -92,6 +92,7 @@
 
 			color: color(primary, light);
 			background-color: unset;
+			border: none;
 		}
 	}
 
