@@ -21,43 +21,11 @@ export const defaultCard = () => {
 	return(
 		<ComponentWrapper layout="content">
 			<WsuCard 
-				title={text('title', 'Pellentesque Habitant', previewGroupID)}
-				description={text('description', 'Morbi tristique senectus et netus et malesuada.', previewGroupID)}
-				addressLine1={text('addressLine1', '12345 Etiam rutrum lectus', previewGroupID)}
-				addressLine2={text('addressLine2', 'Pullman, WA 99163', previewGroupID)}
-				phoneNumber={text('phoneNumber', '123-456-7890', previewGroupID)}
-				email={text('email', 'info@wsu.edu', previewGroupID)}
-				website={text('website', 'https://wsu.edu/', previewGroupID)}
+				title={text('title', 'Title', previewGroupID)}
+				subtitle={text('subtitle', 'Subtitle', previewGroupID)}
+				positionTitle={text('positionTitle', 'Position Title', previewGroupID)}
+				description={text('description', 'Description Morbi tristique senectus et netus et malesuada.', previewGroupID)}
 				image={{'src': 'https://source.unsplash.com/collection/895539', 'alt': 'alt text for image'}}
-				categories={[
-					{
-						'name': 'Sed category',
-						'url': '#' 
-					},
-					{
-						'name': 'Sed category',
-						'url': '#' 
-					}
-				]}
-				tags={[
-					{
-						'name': 'Fames',
-						'url': '#'
-					},
-					{
-						'name': 'Tristique',
-						'url': '#'
-					},
-					{
-						'name': 'Malesuada',
-						'url': '#'
-					}
-				]}
-				author={{
-					'name': 'John Doe', 
-					'url': 'https//wsu.edu'
-				}}
-				date={'7/17/2020'}
 			/>
 		</ComponentWrapper>
 	)

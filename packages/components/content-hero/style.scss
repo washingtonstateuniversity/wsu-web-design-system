@@ -15,6 +15,7 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	font-family: $wsu-bt-primary-font-family;
 
 	&--no-overlay {
 		@extend .wsu-c-hero__container;

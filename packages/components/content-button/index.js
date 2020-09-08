@@ -63,8 +63,10 @@ ContentButton.propTypes = {
 	color: PropTypes.string,
 	tag: PropTypes.string,
 	onClick: PropTypes.func,
-	iconBefore:PropTypes.string,
-	iconAfter:PropTypes.string,
+	iconBefore: PropTypes.string,
+	iconAfter: PropTypes.string,
+	ariaLabel: PropTypes.string,
+	ariaLabeledBy: PropTypes.string,
 }
 
 ContentButton.defaultProps = {
@@ -77,8 +79,10 @@ ContentButton.defaultProps = {
 	tag: 'default',
 	onClick: null,
 	buttonAlign: 'default',
-	iconBefore:'',
-	iconAfter:'',
+	iconBefore: '',
+	iconAfter: '',
+	ariaLabel: '',
+	ariaLabeledBy: '',
 }
 
 export default ContentButton;
