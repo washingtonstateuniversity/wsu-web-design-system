@@ -1,5 +1,6 @@
 // External Deps
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import { getVerticalSpacingClasses, getMarginSpacingClasses } from '@wsuwebteam/build-tools/js/helpers/spacingUtilityClasses';
 
@@ -17,9 +18,8 @@ class ContentHero extends Component {
 		let containerClasses     = containerBaseClasses.concat( getVerticalSpacingClasses( this.props ) );
 
 		return (
-
 			<div className={ wrapperClasses.join(' ') }>
-				<div className={ containerClasses.join(' ') } style={{ backgroundImage: 'url(https://source.unsplash.com/random)' }}>
+				<div className={ containerClasses.join(' ') } style={{ backgroundImage: `url(${this.props.backgroundImage})` }}>
 					<div className="wsu-c-hero__content">
 						{this.props.title && <TitleTag className="wsu-c-hero__title">{this.props.title}</TitleTag>}
 						{this.props.subtitle && <div className="wsu-c-hero__subtitle">{this.props.subtitle}</div>}
@@ -35,6 +35,23 @@ class ContentHero extends Component {
 	}
 }
 
+ContentHero.propTypes = {
+	title: PropTypes.string,
+	titleTag: PropTypes.string,
+	subtitle: PropTypes.string,
+	caption: PropTypes.string,
+	buttonText: PropTypes.string,
+	buttonUrl: PropTypes.string,
+	imageCaption: PropTypes.string,
+	imageCaptionUrl: PropTypes.string,
+	style: PropTypes.string,
+	verticalSpacing: PropTypes.string,
+	marginBefore: PropTypes.string,
+	marginAfter: PropTypes.string,
+	className: PropTypes.string,
+	backgroundImage: PropTypes.string
+}
+
 ContentHero.defaultProps = {
 	title: '',
 	titleTag: 'div',
@@ -48,7 +65,8 @@ ContentHero.defaultProps = {
 	verticalSpacing: 'default',
 	marginBefore: 'default',
 	marginAfter: 'default',
-	className:''
+	className: '',
+	backgroundImage: 'https://s3.wp.wsu.edu/uploads/sites/2438/2020/08/Coug-Logo-on-Chinook-crop_8520.jpg',
 }
 
 export default ContentHero;
