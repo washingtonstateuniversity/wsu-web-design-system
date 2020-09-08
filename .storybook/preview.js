@@ -1,9 +1,9 @@
 import { addDecorator } from '@storybook/react';
 import { addParameters } from '@storybook/client-api';
 import { withHTML } from '@whitespace/storybook-addon-html/react';
-import '@storybook/addon-console';
-import { setConsoleOptions } from '@storybook/addon-console';
-import { withConsole } from '@storybook/addon-console';
+// import '@storybook/addon-console';
+// import { setConsoleOptions } from '@storybook/addon-console';
+// import { withConsole } from '@storybook/addon-console';
 
 // Add Custom viewports
 const customViewports = {
@@ -46,11 +46,11 @@ addDecorator(
 );
 
 // Add Console to Actions Panel
-setConsoleOptions({
-	panelExclude: [],
-});
+// setConsoleOptions({
+// 	panelExclude: [],
+// });
 
-addDecorator((storyFn, context) => withConsole()(storyFn)(context));
+// addDecorator((storyFn, context) => withConsole()(storyFn)(context));
 
 // Sort stories
 addParameters({

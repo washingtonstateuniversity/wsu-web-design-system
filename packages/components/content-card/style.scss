@@ -43,6 +43,7 @@
 ======================= */
 .wsu-c-card__wrapper {
 	display: flex;
+	font-family: $wsu-bt-primary-font-family;
 }
 
 .wsu-c-card__container {
@@ -197,6 +198,15 @@
 
 	@include font-size(14px, 500);
 }
+
+.wsu-c-card__subtitle {
+	padding: 0 $unit;
+}
+
+.wsu-c-card__position-title {
+	padding: 0 $unit;
+}
+
 
 .wsu-c-card__description {
 	font-style: italic;

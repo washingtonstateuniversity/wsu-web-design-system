@@ -43,7 +43,7 @@ const ContentPageBanner = ( props, ref ) => {
 				/>
 			<div className="wsu-c-page-banner__container">
 				<EyebrowHeader className='wsu-c-page-banner__eyebrow-header'>{props.eyebrowHeader}</EyebrowHeader>
-				<Title className='wsu-c-page-banner__title'>{props.title}</Title>
+				<Title tag={props.titleTag} className='wsu-c-page-banner__title'>{props.title}</Title>
 			</div>
 		</div>
 	);
@@ -62,6 +62,7 @@ ContentPageBanner.propTypes = {
 	textAlign: PropTypes.string,
 	title: PropTypes.string,
 	EyebrowHeader: PropTypes.string,
+	titleTag: PropTypes.string,
 }
 
 ContentPageBanner.defaultProps = {
@@ -76,6 +77,7 @@ ContentPageBanner.defaultProps = {
 	isNotched:false,
 	textAlign:'default',
 	overlay:'default',
+	titleTag: 'h2'
 }
 
 export default ContentPageBanner;
