@@ -47,22 +47,23 @@ const ContentCallout = ( props ) => {
 					<div className="wsu-c-callout__content-inner">
 						<ContentCalloutEyebrowTitle
 							eyebrowTitle={props.eyebrowTitle}
-						 	/>
+						/>
 						<ContentCalloutTitle
 							title={props.title}
 							tag={props.tag}
 							link={props.link}
-							/>
+						/>
 						<ContentCalloutDescription
 							description={props.description}
-							/>
+						/>
+						{props.children}
 						<ContentButton
 							buttonUrl={props.buttonUrl}
 							buttonText={props.buttonText} 
 							size='small'
 							color='white'
 							shape='round'
-							/>
+						/>
 					</div>
 				</div>
 			</div>
@@ -94,23 +95,23 @@ ContentCallout.propTypes = {
 }
 
 ContentCallout.defaultProps = {
-	style:'default',
-	imageSrc:'',
-	imageAlt:'',
-	imageSize:'default',
-	shape:'default',
-	link:'',
-	eyebrowTitle:'',
-	title:'',
-	tag:'h3',
-	description:'',
-	layout:'default',
-	verticalAlign:'default', 
-	isNotched:false,
+	style: 'default',
+	imageSrc: '',
+	imageAlt: '',
+	imageSize: 'default',
+	shape: 'default',
+	link: '',
+	eyebrowTitle: '',
+	title: '',
+	tag: 'h3',
+	description: '',
+	layout: 'default',
+	verticalAlign: 'default', 
+	isNotched: false,
 	buttonText: '',
-	buttonUrl: '',
-	videoSrc:'',
-	titleSize:'default',
+	buttonUrl:  '',
+	videoSrc: '',
+	titleSize: 'default',
 }
 
 export default ContentCallout;

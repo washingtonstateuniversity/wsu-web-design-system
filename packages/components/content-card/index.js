@@ -5,18 +5,20 @@ import PropTypes from 'prop-types';
 // Component Deps
 import './style.scss';
 
-import ContentCardPhoto from './component-parts/content-card-photo.js';
-import ContentCardTitle from './component-parts/content-card-title.js';
-import ContentCardDescription from './component-parts/content-card-description.js';
-import ContentCardAddress from './component-parts/content-card-address.js';
-import ContentCardPhoneNumber from './component-parts/content-card-phone.js';
-import ContentCardEmail from './component-parts/content-card-email.js';
-import ContentCardWebsite from './component-parts/content-card-website.js';
-import { 
-	ContentCardFooter,
-	ContentCardFooterTaxonomies,
-	ContentCardFooterByline
-} from './component-parts/content-card-footer';
+import {
+	CardPhoto,
+	CardTitle,
+	CardSubtitle,
+	CardPositionTitle,
+	CardDescription,
+	CardAddress,
+	CardPhoneNumber,
+	CardEmail,
+	CardWebsite,
+	CardFooter,
+	CardFooterTaxonomies,
+	CardFooterByline
+} from './component-parts';
 
 // Component Starts
 class ContentCard extends Component {
@@ -27,27 +29,31 @@ class ContentCard extends Component {
 				<div className="wsu-c-card__container">
 					<div className="wsu-c-card__content">
 
-						<ContentCardPhoto src={this.props.image.src} alt={this.props.image.alt} />
+						<CardPhoto src={this.props.image.src} alt={this.props.image.alt} />
 
-						<ContentCardTitle title={this.props.title} />
+						<CardTitle title={this.props.title} />
 
-						<ContentCardDescription description={this.props.description} />
+						<CardSubtitle subtitle={this.props.subtitle} />
 
-						<ContentCardAddress addressLine1={this.props.addressLine1} addressLine2={this.props.addressLine2} />
+						<CardPositionTitle positionTitle={this.props.positionTitle} />
 
-						<ContentCardPhoneNumber phoneNumber={this.props.phoneNumber} />
+						<CardDescription description={this.props.description} />
 
-						<ContentCardEmail email={this.props.email} />
+						<CardAddress addressLine1={this.props.addressLine1} addressLine2={this.props.addressLine2} />
 
-						<ContentCardWebsite website={this.props.website} />
+						<CardPhoneNumber phoneNumber={this.props.phoneNumber} />
 
-						<ContentCardFooter>
+						<CardEmail email={this.props.email} />
 
-							<ContentCardFooterTaxonomies categories={this.props.categories} tags={this.props.tags} />
+						<CardWebsite website={this.props.website} />
 
-							<ContentCardFooterByline author={this.props.author} date={this.props.date} />
+						<CardFooter>
 
-						</ContentCardFooter>
+							<CardFooterTaxonomies categories={this.props.categories} tags={this.props.tags} />
+
+							<CardFooterByline author={this.props.author} date={this.props.date} />
+
+						</CardFooter>
 						
 					</div>
 				</div>
@@ -81,6 +87,8 @@ ContentCard.propTypes = {
 		url: PropTypes.string,
 		alt: PropTypes.string
 	}),
+	subtitle: PropTypes.string,
+	positionTitle: PropTypes.string
 }
 
 ContentCard.defaultProps = {
@@ -95,7 +103,9 @@ ContentCard.defaultProps = {
 	categories: [],
 	date: '',
 	author: {},
-	image: {}
+	image: {},
+	subtitle: '',
+	positionTitle: '',
 }
 
 export default ContentCard;
