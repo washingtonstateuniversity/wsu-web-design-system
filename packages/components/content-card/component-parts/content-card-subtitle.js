@@ -9,7 +9,7 @@ class ContentCardSubtitle extends Component {
 		}
 		
 		return (
-			<div class="wsu-c-card__subtitle">{this.props.subtitle}</div>
+			<div className="wsu-c-card__subtitle">{this.props.subtitle}</div>
 		)
 	}
 }

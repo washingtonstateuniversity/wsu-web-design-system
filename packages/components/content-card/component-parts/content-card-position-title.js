@@ -9,7 +9,7 @@ class ContentCardPositionTitle extends Component {
 		}
 		
 		return (
-			<div class="wsu-c-card__position-title">{this.props.positionTitle}</div>
+			<div className="wsu-c-card__position-title">{this.props.positionTitle}</div>
 		)
 	}
 }

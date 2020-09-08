@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
+import ContentIcon from '../../content-icon';
 import ContentLink from '../../content-link';
-import Icon from '../../content-icon';
+
 import empty from '../../../storybook-components/field-checker';
 
 class ContentCardFooter extends Component {
@@ -44,8 +45,8 @@ class ContentCardFooterTaxonomies extends Component {
 				</p> }
 
 				{ !empty(this.props.tags) && <p className="wsu-c-card__tags">
-					<span className="wsu-c-card__tags-label"><Icon iconName='tag' /></span>
-					{/* TODO: This currently displays all tags, this might be an issue if a post/item has a ton of tags. We need to add some sort of mechanism to cap tags at a certain point and display the "more" ellipsis icon instead */}
+					<span className="wsu-c-card__tags-label"><ContentIcon name='tag' /></span>
+					{/* TODO: This currently displays all tags, this might be an issue if a post/item has a ton of tags. We need to add some sort of mechanism to cap tags at a certain point and display the "more" ellipsis ContentIcon instead */}
 					{
 						this.props.tags.map( (tag, i) => {
 							let isLast = ((this.props.tags.length - 1) == i) ? true : false;
@@ -67,7 +68,7 @@ class ContentCardFooterByline extends Component {
 		return (
 			<div className="wsu-c-card__byline-container">
 				{this.props.date && <p className="wsu-c-card__byline-meta">
-					<Icon iconName='calendar' /> Published on {this.props.date}
+					<ContentIcon name='calendar' /> Published on {this.props.date}
 				</p>}
 				{!empty(this.props.author) && <p className="wsu-c-card__author">
 					By <ContentLink isSecondary rel="author" href={this.props.author.url}>{this.props.author.name}</ContentLink>

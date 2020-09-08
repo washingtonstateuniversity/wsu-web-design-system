@@ -13,7 +13,7 @@ class ContentHero extends Component {
 
 		let TitleTag             = ( 'default' != this.props.titleTag ) ? this.props.titleTag : 'div';
 		let containerBaseClasses = ['wsu-c-hero__container'];
-		let wrapperBaseClasses   = ['wsu-c-hero__wrapper','wsu-u-no-js','wsu-c-full-width',this.props.className];
+		let wrapperBaseClasses   = ['wsu-c-hero__wrapper', 'wsu-u-no-js', 'wsu-c-full-width', this.props.className];
 		let wrapperClasses       = wrapperBaseClasses.concat( getMarginSpacingClasses( this.props ) ); // leaving empty for now
 		let containerClasses     = containerBaseClasses.concat( getVerticalSpacingClasses( this.props ) );
 

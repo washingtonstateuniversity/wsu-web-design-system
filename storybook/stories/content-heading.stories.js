@@ -90,7 +90,7 @@ export const Default = () => {
 	)
 }
 
-export const Defaults = () => {
+export const allHeadings = () => {
 
 	let headingLength = select( 'Heading Length', headingLengthOptions,'short', contentGroupID );
 	let style         = select( 'style', headingStyleOptions, 'default', optionsGroupID );
@@ -108,7 +108,7 @@ export const Defaults = () => {
 	)
 };
 
-export const Callout = () => {
+export const calloutHeadings = () => {
 
 	let headingLength = select( 'Heading Length', headingLengthOptions,'short', contentGroupID );
 	let width         = select( 'width', headingWidthOptions, 'full', optionsGroupID );
@@ -121,24 +121,6 @@ export const Callout = () => {
 			<WsuHeading tag="h4" style={'callout'} width={width} >Heading Level 4 {getHeadingLength( headingLength ) }</WsuHeading>
 			<WsuHeading tag="h5" style={'callout'} width={width} >Heading Level 5 {getHeadingLength( headingLength ) }</WsuHeading>
 			<WsuHeading tag="h6" style={'callout'} width={width} >Heading Level 6 {getHeadingLength( headingLength ) }</WsuHeading>
-		</ComponentWrapper>
-	)
-};
-
-export const Em = () => {
-
-	let headingLength = select( 'Heading Length', headingLengthOptions,'short', contentGroupID );
-	let width         = select( 'width', headingWidthOptions, 'full', optionsGroupID );
-
-	return(
-		<ComponentWrapper layout="content" className="wsu-c-content">
-			<WsuHeading tag="h1" style={'em-hero'} width={width} >HERO - Heading Level 1 {getHeadingLength( headingLength ) }</WsuHeading>
-			<WsuHeading tag="h1" style={'em'} width={width} >Heading Level 1 {getHeadingLength( headingLength ) }</WsuHeading>
-			<WsuHeading tag="h2" style={'em'} width={width} >Heading Level 2 {getHeadingLength( headingLength ) }</WsuHeading>
-			<WsuHeading tag="h3" style={'em'} width={width} >Heading Level 3 {getHeadingLength( headingLength ) }</WsuHeading>
-			<WsuHeading tag="h4" style={'em'} width={width} >Heading Level 4 {getHeadingLength( headingLength ) }</WsuHeading>
-			<WsuHeading tag="h5" style={'em'} width={width} >Heading Level 5 {getHeadingLength( headingLength ) }</WsuHeading>
-			<WsuHeading tag="h6" style={'em'} width={width} >Heading Level 6 {getHeadingLength( headingLength ) }</WsuHeading>
 		</ComponentWrapper>
 	)
 };

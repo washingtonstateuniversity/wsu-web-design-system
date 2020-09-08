@@ -21,7 +21,7 @@ export default {
 export const DefaultList = () => {
 
 	return (
-		<ComponentWrapper layout="content" className={'wsu-c-content'}>
+		<ComponentWrapper layout="content" className={''}>
 
 			<WsuListCheatsheet />
 			
