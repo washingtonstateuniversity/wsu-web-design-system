@@ -61,7 +61,6 @@ ContentStat.defaultProps = {
 	duration: 1.5,
 	alignment: 'default',
 	isDark: false,
-	prefersReducedMotion: false
 }
 
 export default ContentStat;
