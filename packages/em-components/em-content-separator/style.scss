@@ -1,0 +1,74 @@
+@import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
+
+.wsu-c-em-content hr:not([class^="wsu-c-em"]):not([class*=" wsu-c-em"]),
+.wsu-c-em-separator {
+	background-color: color(gray, 10);
+	width: 100%;
+	height: 5px;
+    border: none;
+    margin: 3em 0;
+
+	&.wsu-c-em-separator--isHatched {
+		@include pattern();
+		background-color: transparent;
+		height: 60px;
+		margin: 0 0;
+	}
+
+	&.wsu-c-em-separator--showMoreIndicator {
+		position: relative;
+
+		&::after {
+			content: "";
+			height: 200px;
+			width: 1px;
+			background-color: color(primary, base);
+			position: absolute;
+			left: 50%;
+			top: 0%;
+			transform: translate(-50%, -50%);
+
+			animation: slide 5s ease-in-out;
+			animation-iteration-count: infinite;
+			z-index: z('content');
+		}
+	}
+
+	&.wsu-c-em-separator--isFullBleed {
+		margin-left: calc((100vw - 100%)/2*-1);
+		margin-right: calc((100vw - 100%)/2*-1);
+		width: calc((140vw - 100%) + 50%);
+	}
+
+	
+}
+
+.wsu-c-em-separator {
+	&--crimson {
+		background-color: color(primary, base);
+		width: 100%;
+		height: 4px;
+		border: none;
+		margin: 3em 0;
+		max-width: 75px;
+	}
+}
+	
+
+@keyframes slide {
+	0% { 
+		top: 0;
+	}
+
+	33% {
+		top: 100%;
+	}
+
+	66% {
+		top: 100%;
+	}
+
+	100% {
+		top: 0%;
+	}
+}
