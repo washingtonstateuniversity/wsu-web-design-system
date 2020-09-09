@@ -14,7 +14,7 @@ class ContentCardPhoto extends Component {
 		return (
 			<div className="wsu-c-card__photo-frame">
 				<div className="wsu-c-card__photo-wrapper">
-					<img className="wsu-c-card__photo" src={this.props.src} alt={this.props.alt} data-object-fit="" />
+					<img className="wsu-c-card__photo" src={this.props.src} alt={this.props.alt} data-object-fit="" style={{objectPosition: (this.props.imgFocalPoint.x * 100) + '% ' + (this.props.imgFocalPoint.y * 100) + '%'}}/>
 				</div>
 			</div>
 		);
