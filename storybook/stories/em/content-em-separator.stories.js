@@ -4,39 +4,27 @@ import { withKnobs, text, boolean, number, select } from "@storybook/addon-knobs
 import { previewGroupID, optionsGroupID } from '@wsuwebteam/build-tools/js/helpers/storybook';
 
 // Storybook Imports
-import ComponentWrapper from '../../packages/storybook-components/content-wrapper';
+import ComponentWrapper from '../../../packages/storybook-components/content-wrapper';
 
 // Component Imports
-import { WsuHr, WsuSeparator } from '../../packages/components';
+import { EmHr } from '../../../packages/em-components';
 
 // Story Time
 export default {
-	title: 'Components/Content/Separator',
+	title: 'EM/Components/Separator',
 	decorators: [
 		withA11y,
-		withKnobs
-	],
-	component: WsuHr
+		withKnobs,
+	]
 };
 
-export const DefaultSeparator = () => {
+export const EMSeparator = () => {
 
 	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : ''; 
 
 	return(
 		<ComponentWrapper layout="centered" className={classes}>
-			<WsuHr />
-		</ComponentWrapper>
-	)
-}
-
-export const CrimsonSeparator = () => {
-
-	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : ''; 
-
-	return(
-		<ComponentWrapper layout="content" className={classes}>
-			<WsuHr style="crimson" />
+			<EmHr isHatched showMoreIndicator/>
 		</ComponentWrapper>
 	)
 }

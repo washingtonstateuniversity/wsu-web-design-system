@@ -17,13 +17,25 @@ class ContentStat extends Component {
 			}
 		)
 
-		return (
-			<div className={classes}>
-				{this.props.label && <div className="wsu-c-stat__label">{this.props.label}</div>}
-				<CountUp end={this.props.value}  duration={this.props.duration} prefix={this.props.prefix && '<span className="wsu-c-stat__prefix">' + this.props.prefix + '</span>'} suffix={this.props.suffix && '<span className="wsu-c-stat__suffix">' + this.props.suffix + '</span>'} separator={this.props.separator} className="wsu-c-stat__value" />
-				{this.props.description && <div className="wsu-c-stat__description">{this.props.description}</div>}
-			</div>
-		);
+		let prefersReducedMotion = matchMedia('(prefers-reduced-motion)').matches;
+
+		if (prefersReducedMotion) {
+			return (
+				<div className={classes}>
+					{this.props.label && <div className="wsu-c-stat__label">{this.props.label}</div>}
+					<CountUp start={this.props.value} end={this.props.value} duration={this.props.duration} prefix={this.props.prefix && '<span class="wsu-c-stat__prefix">' + this.props.prefix + '</span>'} suffix={this.props.suffix && '<span class="wsu-c-stat__suffix">' + this.props.suffix + '</span>'} separator={this.props.separator} className="wsu-c-stat__value" />
+					{this.props.description && <div className="wsu-c-stat__description">{this.props.description}</div>}
+				</div>
+			)
+		} else {
+			return (
+				<div className={classes}>
+					{this.props.label && <div className="wsu-c-stat__label">{this.props.label}</div>}
+					<CountUp end={this.props.value} duration={this.props.duration} prefix={this.props.prefix && '<span class="wsu-c-stat__prefix">' + this.props.prefix + '</span>'} suffix={this.props.suffix && '<span class="wsu-c-stat__suffix">' + this.props.suffix + '</span>'} separator={this.props.separator} className="wsu-c-stat__value" />
+					{this.props.description && <div className="wsu-c-stat__description">{this.props.description}</div>}
+				</div>
+			)
+		}
 	}
 }
 
@@ -36,7 +48,7 @@ ContentStat.propTypes = {
 	separator: PropTypes.string,
 	duration: PropTypes.number,
 	alignment: PropTypes.string,
-	isDark: PropTypes.bool,
+	isDark: PropTypes.bool
 }
 
 ContentStat.defaultProps = {
@@ -49,6 +61,7 @@ ContentStat.defaultProps = {
 	duration: 1.5,
 	alignment: 'default',
 	isDark: false,
+	prefersReducedMotion: false
 }
 
 export default ContentStat;
