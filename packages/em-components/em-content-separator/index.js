@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 import './style.scss';
@@ -20,8 +21,16 @@ const ContentSeparator = ( props ) => {
 	)
 }
 
+ContentSeparator.propTypes = {
+	style: PropTypes.string,
+	isHatched: PropTypes.bool,
+	showMoreIndicator: PropTypes.bool,
+}
+
 ContentSeparator.defaultProps = {
 	style: 'default',
+	isHatched: 'true',
+	showMoreIndicator: 'false',
 }
 
 export default ContentSeparator;

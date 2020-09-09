@@ -40,14 +40,3 @@ export const CrimsonSeparator = () => {
 		</ComponentWrapper>
 	)
 }
-
-/*export const EMSeparator = () => {
-
-	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : ''; 
-
-	return(
-		<ComponentWrapper layout="centered" className={classes}>
-			<WsuHr isHatched showMoreIndicator/>
-		</ComponentWrapper>
-	)
-}*/

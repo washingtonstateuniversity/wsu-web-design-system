@@ -31,6 +31,8 @@
 			animation: slide 5s ease-in-out;
 			animation-iteration-count: infinite;
 			z-index: z('content');
+
+			@include prefers-reduced-motion();
 		}
 	}
 
@@ -53,7 +55,6 @@
 		max-width: 75px;
 	}
 }
-	
 
 @keyframes slide {
 	0% { 
