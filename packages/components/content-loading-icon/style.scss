@@ -1,44 +1,9 @@
 @import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
 
-.wsu-c-loading-icon {
-
-	svg {
-		overflow: visible;
-	}
-
-	& path {
-		transform-origin: center;
-	}
-
-	.wsu-c-butch {
-		&__hair {
-			animation: loadingIcon 500ms infinite alternate-reverse;
-		}
-		&__face {
-			animation: loadingIcon 500ms infinite alternate-reverse;
-			animation-delay: 100ms;
-		}
-		&__jaw {
-			animation: loadingIcon 500ms infinite alternate-reverse;
-			animation-delay: 200ms;
-		}
-		&__chest {
-			animation: loadingIcon 500ms infinite alternate-reverse;
-			animation-delay: 300ms;
-		}
-	}
+.wsu-c-loading-icon,
+.wsu-c-loading-icon--2 {
+	margin: 100px;
 }
 
-@keyframes loadingIcon {
-	0% {
-		transform: scale(1);
-		opacity: 0.9;
-		fill: color(primary, light);
-	}
-
-	100% {
-		transform: scale(1.1);
-		opacity: 1;
-		fill: color(primary, base);
-	}
-}
+@import './partials/option1';
+@import './partials/option2';
