@@ -29,7 +29,7 @@ class ContentCard extends Component {
 				<div className="wsu-c-card__container">
 					<div className="wsu-c-card__content">
 
-						<CardPhoto src={this.props.image.src} alt={this.props.image.alt} />
+						<CardPhoto src={this.props.image.src} alt={this.props.image.alt} imgFocalPoint={this.props.imgFocalPoint} />
 
 						<CardTitle title={this.props.title} />
 
@@ -88,7 +88,11 @@ ContentCard.propTypes = {
 		alt: PropTypes.string
 	}),
 	subtitle: PropTypes.string,
-	positionTitle: PropTypes.string
+	positionTitle: PropTypes.string,
+	imgFocalPoint: PropTypes.shape({
+		x: PropTypes.number,
+		y: PropTypes.number
+	})
 }
 
 ContentCard.defaultProps = {
@@ -106,6 +110,10 @@ ContentCard.defaultProps = {
 	image: {},
 	subtitle: '',
 	positionTitle: '',
+	imgFocalPoint: {
+		x: 0.5,
+		y: 0.5
+	}
 }
 
 export default ContentCard;

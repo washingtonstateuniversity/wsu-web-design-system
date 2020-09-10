@@ -20,6 +20,7 @@ export { default as WsuIcon } from './content-icon';
 export { IconCheatsheet as WsuIconCheatsheet } from './content-icon';
 export { default as WsuLink } from './content-link';
 export { default as WsuList } from './content-list';
+export { default as WsuLoadingIcon } from './content-loading-icon';
 export { ContentListCheatsheet as WsuListCheatsheet } from './content-list';
 export { default as WsuModal } from './content-modal';
 export { default as WsuP } from './content-paragraph';
