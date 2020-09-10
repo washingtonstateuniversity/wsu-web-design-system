@@ -1,0 +1,42 @@
+.wsu-c-loading-icon--1 {
+	svg {
+		overflow: visible;
+	}
+
+	& path {
+		transform-origin: center;
+		fill: color(primary, base);
+	}
+
+	.wsu-c-butch {
+		&__hair {
+			animation: loadingIcon 500ms infinite alternate-reverse;
+		}
+		&__face {
+			animation: loadingIcon 500ms infinite alternate-reverse;
+			animation-delay: 100ms;
+		}
+		&__jaw {
+			animation: loadingIcon 500ms infinite alternate-reverse;
+			animation-delay: 200ms;
+		}
+		&__chest {
+			animation: loadingIcon 500ms infinite alternate-reverse;
+			animation-delay: 300ms;
+		}
+	}
+}
+
+@keyframes loadingIcon {
+	0% {
+		transform: scale(1);
+		opacity: 0.9;
+		fill: color(primary, light);
+	}
+
+	100% {
+		transform: scale(1.1);
+		opacity: 1;
+		fill: color(primary, base);
+	}
+}
