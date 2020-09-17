@@ -1,4 +1,15 @@
 .wsu-c-loading-icon--2 {
+	position: relative;
+
+	&::after {
+		content: 'Option 2';
+		position: absolute;
+		bottom: -40px;
+		left: 50%;
+		font-size: 10px;
+		transform: translateX(-50%);
+	}
+
 	svg {
 		overflow: visible;
 	}
