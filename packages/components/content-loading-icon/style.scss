@@ -1,9 +1,11 @@
 @import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
 
-.wsu-c-loading-icon,
-.wsu-c-loading-icon--2 {
+.wsu-c-loading-icon--1,
+.wsu-c-loading-icon--2,
+.wsu-c-loading-icon--3 {
 	margin: 100px;
 }
 
 @import './partials/option1';
 @import './partials/option2';
+@import './partials/option3';
