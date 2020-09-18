@@ -21,4 +21,4 @@ export default {
 	]
 };
 
-export const default = () => <ComponentWrapper layout="centered" ><WsuLoadingIcon /></ComponentWrapper>;
+export const defaultIcon = () => <ComponentWrapper layout="centered" ><WsuLoadingIcon /></ComponentWrapper>;

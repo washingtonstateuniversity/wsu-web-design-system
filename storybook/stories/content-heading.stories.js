@@ -71,7 +71,7 @@ const getHeadingLength = ( headingLength ) => {
 
 }
 
-export const Default = () => {
+export const defaultHeading = () => {
 
 	let applyContentClass = boolean('Apply wsu-c-content class', false, contentGroupID );
 
