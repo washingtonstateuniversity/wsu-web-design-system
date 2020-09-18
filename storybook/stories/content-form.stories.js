@@ -10,6 +10,9 @@ import { WsuForm, WsuFormCheatsheet } from '../../packages/components';
 // Story Time
 export default {
 	title: 'Components/Content/Form',
+	parameters: {
+		status: 'Stable, Needs Deployment' // In Development | Needs Feedback | Stable | Needs Deployment
+	},
 	decorators: [
 		withA11y,
 		withKnobs

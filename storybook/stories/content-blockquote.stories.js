@@ -12,6 +12,9 @@ import { WsuBlockquote } from '../../packages/components';
 // Story Time
 export default {
 	title: 'Components/Content/Blockquote',
+	parameters: {
+		status: 'Needs Feedback' // In Development | Needs Feedback | Stable | Needs Deployment
+	},
 	decorators: [
 		withA11y,
 		withKnobs

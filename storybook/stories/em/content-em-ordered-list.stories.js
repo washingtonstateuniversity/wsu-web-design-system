@@ -12,6 +12,9 @@ import { EmOrderedList } from '../../../packages/em-components';
 // Story Time
 export default {
 	title: 'EM/Components/Ordered List',
+	parameters: {
+		status: 'Stable' // In Development | Needs Feedback | Stable | Needs Deployment
+	},
 	decorators: [
 		withA11y,
 		withKnobs,

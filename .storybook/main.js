@@ -11,6 +11,7 @@ module.exports = {
 		'@whitespace/storybook-addon-html/register',
 		'@storybook/addon-docs',
 		'./packages/addon-feedback/register',
+		'@etchteam/storybook-addon-status/register'
 	],
 	webpackFinal: async (config, { configType }) => {
 		// `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'

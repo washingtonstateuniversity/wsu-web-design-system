@@ -10,6 +10,9 @@ import { WsuCard } from '../../packages/components';
 // Story Time
 export default {
 	title: 'Components/Content/Card',
+	parameters: {
+		status: 'Stable' // In Development | Needs Feedback | Stable | Needs Deployment
+	},
 	decorators: [
 		withA11y,
 		withKnobs

@@ -13,6 +13,9 @@ import { WsuSiteNavVertical } from '../../packages/components';
 // Story Time
 export default {
 	title: 'Components/Site/Navigation/Vertical',
+	parameters: {
+		status: 'In Development' // In Development | Needs Feedback | Stable | Needs Deployment
+	},
 	decorators: [
 		withA11y,
 		withKnobs
