@@ -12,6 +12,9 @@ import { WsuListCheatsheet } from '../../packages/components';
 // Story Time
 export default {
 	title: 'Components/Content/List',
+	parameters: {
+		status: 'Stable' // In Development | Needs Feedback | Stable | Needs Deployment
+	},
 	decorators: [
 		withA11y,
 		withKnobs

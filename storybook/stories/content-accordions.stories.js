@@ -13,6 +13,9 @@ import {
 // Story Time
 export default {
 	title: 'Components/Content/Accordion',
+	parameters: {
+		status: 'Needs Feedback' // In Development | Needs Feedback | Stable | Needs Deployment
+	},
 	decorators: [
 		withA11y,
 		withKnobs

@@ -32,6 +32,12 @@ const customViewports = {
 
 addParameters({
 	viewport: { viewports: customViewports },
+	statuses: {
+		'In Development': '#346050',
+		'Needs Feedback': '#851922',
+		'Stable': '#524535',
+		'Needs Deployment': '#D2741B'
+	},
 });
 
 // Add HTML output Panel

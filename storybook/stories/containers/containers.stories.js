@@ -10,6 +10,9 @@ import './style.scss';
 // Story Time
 export default {
 	title: 'Components/Global/Containers',
+	parameters: {
+		status: 'Stable' // In Development | Needs Feedback | Stable | Needs Deployment
+	},
 	decorators: [
 		withA11y,
 		withKnobs

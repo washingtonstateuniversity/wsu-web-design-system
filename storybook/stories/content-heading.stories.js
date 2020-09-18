@@ -13,6 +13,9 @@ import ComponentWrapper from '../../packages/storybook-components/content-wrappe
 // Story Time
 export default {
 	title: 'Components/Content/Heading',
+	parameters: {
+		status: 'Stable' // In Development | Needs Feedback | Stable | Needs Deployment
+	},
 	decorators: [
 		withA11y,
 		withKnobs

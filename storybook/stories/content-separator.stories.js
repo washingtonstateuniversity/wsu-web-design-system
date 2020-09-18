@@ -12,6 +12,9 @@ import { WsuHr, WsuSeparator } from '../../packages/components';
 // Story Time
 export default {
 	title: 'Components/Content/Separator',
+	parameters: {
+		status: 'Stable' // In Development | Needs Feedback | Stable | Needs Deployment
+	},
 	decorators: [
 		withA11y,
 		withKnobs
