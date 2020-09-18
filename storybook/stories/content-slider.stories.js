@@ -13,6 +13,9 @@ import { WsuSlider } from '../../packages/components';
 // Story Time
 export default {
 	title: 'Components/Content/Slider',
+	parameters: {
+		status: 'In Development' // In Development | Needs Feedback | Stable | Needs Deployment
+	},
 	decorators: [
 		withA11y,
 		withKnobs

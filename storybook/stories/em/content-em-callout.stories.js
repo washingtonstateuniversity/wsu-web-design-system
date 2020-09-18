@@ -14,6 +14,9 @@ const spacingOptions = ['default','none','xsmall','small','medium','medium-large
 // Story Time
 export default {
 	title: 'EM/Components/Callout',
+	parameters: {
+		status: 'Stable' // In Development | Needs Feedback | Stable | Needs Deployment
+	},
 	decorators: [
 		withA11y,
 		withKnobs,

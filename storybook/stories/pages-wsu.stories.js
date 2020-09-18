@@ -18,6 +18,9 @@ import {
 // Story Time
 export default {
 	title: 'Pages/WSU',
+	parameters: {
+		status: 'In Development' // In Development | Needs Feedback | Stable | Needs Deployment
+	},
 	decorators: [
 		withA11y,
 		withKnobs

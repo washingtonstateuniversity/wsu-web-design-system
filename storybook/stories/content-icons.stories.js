@@ -4,15 +4,21 @@ import { withA11y } from '@storybook/addon-a11y';
 import { withKnobs, text, boolean, number, select } from "@storybook/addon-knobs";
 
 // Component Deps
-import { WsuIcon, WsuIconCheatsheet } from '../../packages/components';
+import { 
+	WsuIcon,
+	WsuIconCheatsheet,
+	WsuLoadingIcon 
+} from '../../packages/components';
 
 // Storybook Imports
 import ComponentWrapper from '../../packages/storybook-components/content-wrapper';
 
-
 // Story Time
 export default {
 	title: 'Components/Content/Icons',
+	parameters: {
+		status: 'Stable' // In Development | Needs Feedback | Stable | Needs Deployment
+	},
 	decorators: [
 		withA11y,
 		withKnobs
@@ -24,3 +30,5 @@ const iconOptions = ['alarm', 'alert-notification', 'arrow-down-carrot', 'arrow-
 export const defaultIcon = () => <ComponentWrapper layout="centered" ><WsuIcon name={select('Icon', iconOptions, 'alarm', 'Preview')}/></ComponentWrapper>;
 
 export const iconCheatsheet = () => <WsuIconCheatsheet />;
+
+export const loadingIcon = () => <ComponentWrapper layout="centered" ><WsuLoadingIcon /></ComponentWrapper>;
