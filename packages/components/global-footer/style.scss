@@ -2,24 +2,43 @@
 
 .wsu-g-footer-wrapper {
 	background-color: color(gray, 80);
+	width: 100%;
 }
 
 .wsu-g-footer {
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
+	flex-direction: column;
+	text-align: center;
+
+	@include mq('small') {
+		flex-direction: row;
+		text-align: initial;
+	}
 }
 
 .wsu-g-footer__copyright {
 	padding: $unit;
-
+	padding-top: $unit-2xs;
+	width: 100%;
 	color: color(gray, 0);
 
 	@include font-size(14px);
+
+	@include mq('small') {
+		width: initial;
+		padding-top: $unit;
+	}
 }
 
 .wsu-g-footer__nav {
-	margin-right: $unit;
+	order: -1;
+
+	@include mq('small') {
+		margin-right: $unit;
+		order: initial;
+	}
 }
 
 .wsu-g-footer__nav-list {
@@ -29,6 +48,7 @@
 	padding: 0;
 
 	list-style: none;
+	width: 100%;
 }
 
 .wsu-g-footer__nav-item {
@@ -59,18 +79,21 @@
 	display: flex;
 	align-items: center;
 
-	margin-right: $unit;
-	margin-left: $unit;
-	padding: $unit 0;
+	padding: $unit $unit-xs;
 
 	text-decoration: none;
 
 	@include border-bottom-hover($top-percentage: 92%, $width: 100%);
-	@include font-size(14px);
+	@include font-size(13px);
 
 	&:link,
 	&:visited {
 		color: color(gray, 0);
+	}
+
+	@include mq('small') {
+		@include font-size(14px);
+		padding: $unit $unit-s;
 	}
 }
 
