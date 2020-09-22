@@ -84,19 +84,29 @@
 	&--warning,
 	&--error {
 		margin-top: $unit-3xl;
-		padding: $unit 4em $unit 10em;
+		padding: 4em $unit $unit-xs;
 		box-sizing: border-box;
 		position: relative;
+
+		@include mq('small') {
+			padding: $unit 4em $unit 10em;
+		}
 
 		&:after {
 			content: "";
 			position: absolute;
-			left: 42.5px;
-			top: 50%;
+			left: 1em;
+			top: 2em;
 			transform: translateY(-50%);
 			font-family: 'wsu-icons';
-			font-size: 80px;
+			font-size: 20px;
 			color: rgba(0, 0, 0, 0.2);
+
+			@include mq('small') {
+				top: 50%;
+				left: 42.5px;
+				font-size: 80px;
+			}
 		}
 	}
 
