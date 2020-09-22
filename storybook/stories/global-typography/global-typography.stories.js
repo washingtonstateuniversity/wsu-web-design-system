@@ -12,7 +12,7 @@ import './global-typography.scss';
 export default {
 	title: 'Elements/Typography',
 	parameters: {
-		status: 'Stable' // In Development | Needs Feedback | Stable | Needs Deployment
+		status: 'Stable' // In Development | Needs Feedback | Stable | Needs Deployment | Has Known Issues
 	},
 	decorators: [
 		withA11y,

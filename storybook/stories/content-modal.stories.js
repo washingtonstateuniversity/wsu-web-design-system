@@ -13,7 +13,7 @@ import { WsuButton, WsuModal, WsuP } from '../../packages/components';
 export default {
 	title: 'Components/Content/Modal',
 	parameters: {
-		status: 'Stable' // In Development | Needs Feedback | Stable | Needs Deployment
+		status: 'Stable' // In Development | Needs Feedback | Stable | Needs Deployment | Has Known Issues
 	},
 	decorators: [
 		withA11y,

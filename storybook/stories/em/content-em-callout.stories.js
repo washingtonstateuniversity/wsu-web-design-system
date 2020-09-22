@@ -15,7 +15,7 @@ const spacingOptions = ['default','none','xsmall','small','medium','medium-large
 export default {
 	title: 'EM/Components/Callout',
 	parameters: {
-		status: 'Stable' // In Development | Needs Feedback | Stable | Needs Deployment
+		status: 'Stable' // In Development | Needs Feedback | Stable | Needs Deployment | Has Known Issues
 	},
 	decorators: [
 		withA11y,

@@ -13,7 +13,7 @@ import { ImageFrame, Pattern } from '../../../packages/component-parts';
 export default {
 	title: 'EM/Components/Patterns',
 	parameters: {
-		status: 'Stable' // In Development | Needs Feedback | Stable | Needs Deployment
+		status: 'Stable' // In Development | Needs Feedback | Stable | Needs Deployment | Has Known Issues
 	},
 	decorators: [
 		withA11y,

@@ -14,7 +14,7 @@ import { WsuSiteFooter, WsuSiteFooterCondensed } from '../../packages/components
 export default {
 	title: 'Components/Site/Footer',
 	parameters: {
-		status: 'In Development' // In Development | Needs Feedback | Stable | Needs Deployment
+		status: 'In Development' // In Development | Needs Feedback | Stable | Needs Deployment | Has Known Issues
 	},
 	decorators: [
 		withA11y,

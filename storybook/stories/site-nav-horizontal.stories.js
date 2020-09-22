@@ -14,7 +14,7 @@ import { WsuSiteNavHorizontal } from '../../packages/components';
 export default {
 	title: 'Components/Site/Navigation/Horizontal',
 	parameters: {
-		status: 'In Development' // In Development | Needs Feedback | Stable | Needs Deployment
+		status: 'Has Known Issues' // In Development | Needs Feedback | Stable | Needs Deployment | Has Known Issues
 	},
 	decorators: [
 		withA11y,

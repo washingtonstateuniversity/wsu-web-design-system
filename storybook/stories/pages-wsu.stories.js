@@ -19,7 +19,7 @@ import {
 export default {
 	title: 'Pages/WSU',
 	parameters: {
-		status: 'In Development' // In Development | Needs Feedback | Stable | Needs Deployment
+		status: 'In Development' // In Development | Needs Feedback | Stable | Needs Deployment | Has Known Issues
 	},
 	decorators: [
 		withA11y,
