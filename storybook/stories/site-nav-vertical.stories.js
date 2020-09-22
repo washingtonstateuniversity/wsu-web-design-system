@@ -25,6 +25,12 @@ export default {
 export const Default = () => {
 
 	return (
-		<WsuSiteNavVertical />
+		<>
+			<WsuSiteNavVertical />
+
+			<ComponentWrapper layout="content" type="notice">
+				<p>Currently looking into moving to the split-button navigation pattern. We <strong>do not</strong> recommend implementing in custom projects until the next iteration is available.</p>
+			</ComponentWrapper>
+		</>
 	)
 }
