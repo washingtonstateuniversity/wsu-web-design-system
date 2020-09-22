@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
+import { prefersReducedMotion } from '@wsuwebteam/build-tools/js/helpers/prefersReducedMotion';
 import CountUp from 'react-countup';
-
 import './style.scss';
 
 class ContentStat extends Component {
@@ -16,8 +16,6 @@ class ContentStat extends Component {
 				'wsu-c-stat__wrapper--is-dark': this.props.isDark,
 			}
 		)
-
-		let prefersReducedMotion = matchMedia('(prefers-reduced-motion)').matches;
 
 		if (prefersReducedMotion) {
 			return (
