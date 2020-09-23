@@ -11,7 +11,7 @@ import { WsuForm, WsuFormCheatsheet } from '../../packages/components';
 export default {
 	title: 'Components/Content/Form',
 	parameters: {
-		status: 'Stable, Needs Deployment' // In Development | Needs Feedback | Stable | Needs Deployment | Has Known Issues
+		status: 'Has Known Issues' // In Development | Needs Feedback | Stable | Needs Deployment | Has Known Issues
 	},
 	decorators: [
 		withA11y,
