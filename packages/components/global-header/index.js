@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
-
-import './style.scss';
+import wsu_wds from '@wsuwebteam/build-tools/js/wsu-bt-wds';
+import empty from '../../storybook-components/field-checker';
 import toggleMoreMenu from './component-parts/global-header-more-menu';
+import './style.scss';
+
+const displayMenuIcon = (!empty(wsu_wds.vertical_nav)) ? true : false;
 
 const GlobalHeader = ( props ) => {
 
@@ -41,11 +44,12 @@ const GlobalHeader = ( props ) => {
 						<span className="wsu-icon wsu-i-search"></span>
 					</a>
 				</div>
+				{displayMenuIcon && 
 				<div className="wsu-g-header__menu-icon-container">
-					<button className="wsu-g-header__menu-icon-link" onClick={{/* Add click event handler here */}}>
+					<button className="wsu-g-header__menu-icon-link" onClick={() => { wsu_wds.vertical_nav.toggle_panel() }}>
 						<span className="wsu-icon wsu-i-menu"></span>
 					</button>
-				</div>
+				</div>}
 			</header>
 		</div>
 	);
@@ -53,7 +57,7 @@ const GlobalHeader = ( props ) => {
 }
 
 GlobalHeader.defaultProps = {
-    showSearch: true,
+	showSearch: true,
 }
 
 

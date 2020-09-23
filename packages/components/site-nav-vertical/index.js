@@ -181,14 +181,14 @@ class SiteNavVertical extends Component {
 						</li>
 					</ul>
 				</nav>
-				<a className="wsu-s-nav-vertical__menu-icon-link" href="#" aria-haspopup="true" aria-expanded="true">
+				<button className="wsu-s-nav-vertical__menu-icon-link" aria-haspopup="true" aria-expanded="true">
 					<div className="wsu-s-nav-vertical__menu-icon-container">
 						<div className="wsu-s-nav-vertical__menu-icon-bar"></div>
 						<div className="wsu-s-nav-vertical__menu-icon-bar"></div>
 						<div className="wsu-s-nav-vertical__menu-icon-bar"></div>
 					</div>
 					<span className="wsu-s-nav-vertical__menu-label"></span>
-				</a>
+				</button>
 			</div>
 		);
 	}
