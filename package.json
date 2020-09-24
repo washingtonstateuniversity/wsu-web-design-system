@@ -53,6 +53,7 @@
   },
   "scripts": {
     "start": "npm run storybook",
+    "start:bundles": "webpack-dev-server --env.NODE_ENV=development --config bundles.config.js --watch",
     "build": "npm run clean && npm run build:bundles && npm run build:storybook",
     "build:bundles": "webpack --env.NODE_ENV=production --config bundles.config.js",
     "build:storybook": "build-storybook -o ./storybook/public",

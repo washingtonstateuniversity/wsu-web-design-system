@@ -31,6 +31,7 @@ module.exports = env => {
 			contentBase: path.join(__dirname),
 			overlay: true,
 			quiet: true
+			port: 9000
 		},
 		module: {
 			rules: [
