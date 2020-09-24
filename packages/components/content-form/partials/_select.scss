@@ -1,8 +1,9 @@
 /* Select Styles
 ======================= */
 select,
-.gform_wrapper.gf_browser_chrome select {
+.gform_wrapper select {
 	padding: $unit $unit;
+	width: 100%;
 
 	&:focus {
 		@include elevate(2);
@@ -13,4 +14,8 @@ select,
 	&::input-placeholder {
 		color: color(gray, 60);
 	}
+}
+
+.gform_wrapper select {
+	width: inherit;
 }

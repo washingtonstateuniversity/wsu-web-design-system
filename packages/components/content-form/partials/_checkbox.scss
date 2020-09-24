@@ -58,12 +58,12 @@
 
 // /* Namespaced 
 .wsu-c-form__field-container--checkbox {
-	margin: $unit 0;
-
 	.wsu-c-form__input-item {
 		@include checkbox_input_container_styles;
-
+		
+		input[type="checkbox"],
 		.wsu-c-form__input {
+			width: initial;
 			@include checkbox_input_styles;
 		}
 	}

@@ -30,7 +30,7 @@ module.exports = env => {
 			writeToDisk: true,
 			contentBase: path.join(__dirname),
 			overlay: true,
-			quiet: true
+			quiet: true,
 			port: 9000
 		},
 		module: {

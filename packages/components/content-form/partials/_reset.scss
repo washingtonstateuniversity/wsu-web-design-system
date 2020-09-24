@@ -3,16 +3,17 @@ input,
 optgroup,
 select,
 textarea {
-	font-family: inherit;
-	font-size: inherit;
-	line-height: inherit;
-
-	margin: 0;
-
-	transition: border timing();
+	@include font-size(14px);
 
 	border: 1px solid color(gray, 20);
 	border-radius: $wsu-bt-base-border-radius-size;
 
-	@include font-size(14px);
+	margin: 0;
+	box-sizing: border-box;
+	
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+
+	transition: border timing();
 }
