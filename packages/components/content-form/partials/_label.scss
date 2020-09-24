@@ -1,0 +1,10 @@
+/* Label Styles
+======================= */
+label,
+.gform_wrapper label.gfield_label {
+	display: inline-block;
+
+	margin: $unit $unit $unit-2xs;
+
+	@include font-size(14px);
+}

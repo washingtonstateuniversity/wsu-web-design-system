@@ -1,0 +1,21 @@
+
+/* Checkbox styles
+======================= */
+input[type="checkbox"] {
+	width: initial;
+
+	&:focus {
+		box-shadow: 
+			2px 2px 0px color(primary, light), 
+			-2px -2px 0px color(primary, light),
+			2px -2px 0px color(primary, light),
+			-2px 2px 0px color(primary, light)
+	}
+
+	& + label {
+		margin-top: $unit-2xs;
+		margin-left: $unit-2xs;
+	}
+}
+
+.gform_wrapper ul.gfield_checkbox {}
