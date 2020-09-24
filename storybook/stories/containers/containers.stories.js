@@ -11,7 +11,7 @@ import './style.scss';
 export default {
 	title: 'Components/Global/Containers',
 	parameters: {
-		status: 'Stable' // In Development | Needs Feedback | Stable | Needs Deployment
+		status: 'Stable' // In Development | Needs Feedback | Stable | Needs Deployment | Has Known Issues
 	},
 	decorators: [
 		withA11y,
@@ -32,13 +32,15 @@ export const Default = () => {
 
 
 	return(
-		<GlobalContainer>
-			<SiteContainer>
-				<ContentContainer>
+		<div className="wsu-g-container-component">
+			<GlobalContainer>
+				<SiteContainer>
+					<ContentContainer>
 
-				</ContentContainer>
-			</SiteContainer>
-		</GlobalContainer>
+					</ContentContainer>
+				</SiteContainer>
+			</GlobalContainer>
+		</div>
 	)
 }
 
@@ -46,18 +48,20 @@ export const Components = () => {
 
 
 	return(
-		<GlobalContainer>
-			<ComponentPlaceholder title="Global Header" />
-			<ComponentPlaceholder title="Site Nav Vertical" />
-			<SiteContainer>
-				<ComponentPlaceholder title="Site Header" />
-				<ComponentPlaceholder title="Site Nav Horizontal" />
-				<ContentContainer>
-				<ComponentPlaceholder title="All Content Components" />
-				</ContentContainer>
-				<ComponentPlaceholder title="Site Footer" />
-			</SiteContainer>
-			<ComponentPlaceholder title="Global Footer" />
-		</GlobalContainer>
+		<div className="wsu-g-container-component">
+			<GlobalContainer>
+				<ComponentPlaceholder title="Global Header" />
+				<ComponentPlaceholder title="Site Nav Vertical" />
+				<SiteContainer>
+					<ComponentPlaceholder title="Site Header" />
+					<ComponentPlaceholder title="Site Nav Horizontal" />
+					<ContentContainer>
+					<ComponentPlaceholder title="All Content Components" />
+					</ContentContainer>
+					<ComponentPlaceholder title="Site Footer" />
+					<ComponentPlaceholder title="Global Footer" />
+				</SiteContainer>
+			</GlobalContainer>
+		</div>
 	)
 }

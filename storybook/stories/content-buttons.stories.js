@@ -16,7 +16,7 @@ const iconOptions = ['','alarm', 'alert-notification', 'arrow-down-carrot', 'arr
 export default {
 	title: 'Components/Content/Button',
 	parameters: {
-		status: 'Stable' // In Development | Needs Feedback | Stable | Needs Deployment
+		status: 'Stable' // In Development | Needs Feedback | Stable | Needs Deployment | Has Known Issues
 	},
 	decorators: [
 		withA11y,

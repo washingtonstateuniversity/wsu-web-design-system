@@ -1,0 +1,65 @@
+/* Radio styles
+======================= */
+.gform_wrapper ul.gfield_radio,
+.wsu-c-form__field-container--radio {
+
+	li,
+	.wsu-c-form__input-item {
+		display: flex;
+		align-items: center;
+		padding: 0;
+		padding-bottom: $unit-s;
+
+		&:last-child {
+			padding-bottom: 0;
+		}
+
+		input[type="radio"] {
+			position: relative;
+			border: 1px solid color(gray, 20);
+			border-radius: 20px;
+			margin: 0;
+			background-color: color(white, base);
+			height: 22px !important;
+			width: 22px !important;
+			padding: 0;
+			font-size: 20px;
+			appearance: none;
+
+			&:checked {
+				background-color: color(primary, light);
+				border-color: transparent;
+				border-width: 2px;
+
+				&::after {
+					height: 8px;
+					width: 8px;
+				}
+			}
+
+			&::after {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				content: '';
+				transform: translate(-50%, -50%);
+				display: block;
+				border-radius: 100%;
+				background-color: color(white, base);
+				height: 0px;
+				width: 0px;
+				transition: 120ms ease all;
+			}
+
+			&:hover,
+			&:focus {
+				cursor: pointer;
+				border-color: color(gray, 80);
+			}
+
+			&:focus {
+				@include elevate(2);
+			}
+		}
+	}
+}
