@@ -9,6 +9,7 @@ label,
 	@include font-size(14px, 400);
 }
 
+// /* Radio / Checkbox label
 .gform_wrapper ul.gfield_radio li input[type="radio"],
 .gform_wrapper ul.gfield_checkbox li input[type="checkbox"] {
 	& + label {
@@ -19,4 +20,10 @@ label,
 	&:checked + label {
 		font-weight: 400;
 	}
+}
+
+// /* Consent label
+.ginput_container.ginput_container_consent label {
+	margin: 0;
+	margin-left: $unit-xs;
 }
