@@ -6,5 +6,17 @@ label,
 
 	margin: $unit $unit $unit-2xs;
 
-	@include font-size(14px);
+	@include font-size(14px, 400);
+}
+
+.gform_wrapper ul.gfield_radio li input[type="radio"],
+.gform_wrapper ul.gfield_checkbox li input[type="checkbox"] {
+	& + label {
+		margin: 0;
+		margin-left: $unit-xs;
+	}
+
+	&:checked + label {
+		font-weight: 400;
+	}
 }

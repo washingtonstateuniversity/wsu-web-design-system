@@ -1,21 +1,61 @@
-
 /* Checkbox styles
 ======================= */
-input[type="checkbox"] {
-	width: initial;
+.gform_wrapper ul.gfield_checkbox,
+.wsu-c-form__field-container--checkbox {
+	margin: $unit 0;
 
-	&:focus {
-		box-shadow: 
-			2px 2px 0px color(primary, light), 
-			-2px -2px 0px color(primary, light),
-			2px -2px 0px color(primary, light),
-			-2px 2px 0px color(primary, light)
-	}
+	li,
+	.wsu-c-form__input-item {
+		display: flex;
+		align-items: center;
+		padding: 0;
+		padding-bottom: $unit-s;
 
-	& + label {
-		margin-top: $unit-2xs;
-		margin-left: $unit-2xs;
+		input[type="checkbox"],
+		.wsu-c-form__input {
+			position: relative;
+			display: block;
+			border: 1px solid color(gray, 20);
+			border-radius: $wsu-bt-base-border-radius-size;
+			margin: 0;
+			padding: 0;
+			background-color: color(white, base);
+			height: 22px !important;
+			width: 22px !important;
+			transition: background-color timing('eagle'), border-color timing('eagle');
+			appearance: none;
+
+			&::before {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				content: "\F110";
+				transform: translate(-50%, -50%);
+				font-family: "wsu-icons";
+				font-size: 0;
+				color: color(white, base);
+				transition: font-size timing('eagle', 'ease');
+			}
+
+			&:checked {
+				background-color: color(primary, light);
+				border-color: transparent;
+				border-width: 2px;
+			
+				&::before {
+					font-size: 10px;
+				}
+			}
+
+			&:hover,
+			&:focus {
+				cursor: pointer;
+				border-color: color(gray, 80);
+			}
+
+			&:focus {
+				@include elevate(2);
+			}
+		}
 	}
 }
-
-.gform_wrapper ul.gfield_checkbox {}
