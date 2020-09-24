@@ -13,7 +13,7 @@ import { WsuListCheatsheet } from '../../packages/components';
 export default {
 	title: 'Components/Content/List',
 	parameters: {
-		status: 'Stable' // In Development | Needs Feedback | Stable | Needs Deployment
+		status: 'Stable' // In Development | Needs Feedback | Stable | Needs Deployment | Has Known Issues
 	},
 	decorators: [
 		withA11y,

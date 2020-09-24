@@ -14,7 +14,7 @@ import {
 export default {
 	title: 'Components/Content/Accordion',
 	parameters: {
-		status: 'Needs Feedback' // In Development | Needs Feedback | Stable | Needs Deployment
+		status: 'Needs Feedback' // In Development | Needs Feedback | Stable | Needs Deployment | Has Known Issues
 	},
 	decorators: [
 		withA11y,

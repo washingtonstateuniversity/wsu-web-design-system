@@ -1,3 +1,5 @@
+@import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
+
 .wsu-storybook-component {
 
 	&__wrapper {
@@ -71,6 +73,67 @@
 				margin-left: 50px;
 				margin-right: 50px;
 			}
+		}
+	}
+}
+
+// Types
+.wsu-storybook-component__wrapper {
+
+	&--notice,
+	&--warning,
+	&--error {
+		margin-top: $unit-3xl;
+		padding: 4em $unit $unit-xs;
+		box-sizing: border-box;
+		position: relative;
+
+		@include mq('small') {
+			padding: $unit 4em $unit 10em;
+		}
+
+		&:after {
+			content: "";
+			position: absolute;
+			left: 1em;
+			top: 2em;
+			transform: translateY(-50%);
+			font-family: 'wsu-icons';
+			font-size: 20px;
+			color: rgba(0, 0, 0, 0.2);
+
+			@include mq('small') {
+				top: 50%;
+				left: 42.5px;
+				font-size: 80px;
+			}
+		}
+	}
+
+	&--notice {
+		background: color(gray, 5);
+		border: 1px solid color(gray, 10);
+
+		&:after {
+			content: "\F123";
+		}
+	}
+
+	&--warning {
+		background: #ffb99d;
+		border: 1px solid color(gray, 10);
+
+		&:after {
+			content: "\F152";
+		}
+	}
+
+	&--error {
+		background: #f18b8b;
+		border: 1px solid color(gray, 10);
+
+		&:after {
+			content: "\F153";
 		}
 	}
 }

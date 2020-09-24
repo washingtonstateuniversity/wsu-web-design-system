@@ -5,7 +5,10 @@ import './style.scss';
 
 const ComponentWrapper = ( props ) => {
 
-	let classes = ['wsu-storybook-component__wrapper--' + props.layout ];
+	let classes = [
+		'wsu-storybook-component__wrapper--' + props.layout,
+		'wsu-storybook-component__wrapper--' + props.type,
+	];
 
 	if ( props.className ) {
 
@@ -29,6 +32,7 @@ ComponentWrapper.propTypes = {
 	className: PropTypes.string,
 	width: PropTypes.string,
 	showEnds: PropTypes.bool,
+	type: PropTypes.oneOf(['default', 'notice', 'warning', 'error']),
 }
 
 ComponentWrapper.defaultProps = {
@@ -36,6 +40,7 @@ ComponentWrapper.defaultProps = {
 	className: '',
 	width: 'full',
 	showEnds: false,
+	type: 'default'
 }
 
 export default ComponentWrapper;

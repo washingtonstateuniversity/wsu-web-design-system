@@ -36,7 +36,8 @@ addParameters({
 		'In Development': '#346050',
 		'Needs Feedback': '#851922',
 		'Stable': '#524535',
-		'Needs Deployment': '#D2741B'
+		'Needs Deployment': '#D2741B',
+		'Has Known Issues': '#de0000'
 	},
 });
 

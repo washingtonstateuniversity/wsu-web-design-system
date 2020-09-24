@@ -82,6 +82,7 @@
 	text-decoration: none;
 
 	border-right: 1px solid color(gray, 5);
+	border-left: none;
 	background-color: color(white, base);
 
 	@include mq('small', 'max') {

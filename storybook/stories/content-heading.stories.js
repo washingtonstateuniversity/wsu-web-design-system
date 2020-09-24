@@ -14,7 +14,7 @@ import ComponentWrapper from '../../packages/storybook-components/content-wrappe
 export default {
 	title: 'Components/Content/Heading',
 	parameters: {
-		status: 'Stable' // In Development | Needs Feedback | Stable | Needs Deployment
+		status: 'Stable' // In Development | Needs Feedback | Stable | Needs Deployment | Has Known Issues
 	},
 	decorators: [
 		withA11y,
