@@ -1,7 +1,6 @@
-/* Select Styles
+/* Styles
 ======================= */
-select,
-.gform_wrapper select {
+@mixin wsu-c-form__select {
 	padding: $unit $unit;
 	width: 100%;
 
@@ -16,6 +15,10 @@ select,
 	}
 }
 
-.gform_wrapper select {
-	width: inherit;
+/* Selectors
+======================= */
+.wsu-c-content select,
+select.wsu-c-form__select {
+	@include wsu-c-form__input;
+	@include wsu-c-form__select;
 }

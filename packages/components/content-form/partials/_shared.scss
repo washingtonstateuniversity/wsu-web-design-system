@@ -1,0 +1,39 @@
+/* Reset Mixin
+======================= */
+@mixin wsu-c-form__reset {
+	@include font-size(14px);
+
+	border: 1px solid color(gray, 20);
+	border-radius: $wsu-bt-base-border-radius-size;
+
+	margin: 0;
+	box-sizing: border-box;
+	
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+
+	transition: border timing();
+}
+
+/* Container styles
+======================= */
+@mixin wsu-c-form__container--item {
+	// Add styles here
+}
+
+.wsu-c-form__container--item {
+	@include wsu-c-form__container--item;
+}
+
+@mixin wsu-c-form__container--input-item {
+	display: flex;
+	align-items: center;
+	padding: 0;
+	margin-bottom: $unit-s;
+}
+
+.wsu-c-form__container--input-item {
+	@include wsu-c-form__container--input-item;
+}
+

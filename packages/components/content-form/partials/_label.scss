@@ -1,7 +1,6 @@
-/* Label Styles
+/* Styles
 ======================= */
-label,
-.gform_wrapper label.gfield_label {
+@mixin wsu-c-form__label {
 	@include font-size(14px, 400);
 
 	display: inline-block;
@@ -12,11 +11,19 @@ label,
 	cursor: pointer;
 }
 
-// /* Radio / Checkbox label
-input[type="radio"],
-input[type="checkbox"],
-.gform_wrapper ul.gfield_radio li input[type="radio"],
-.gform_wrapper ul.gfield_checkbox li input[type="checkbox"] {
+/* Selectors
+======================= */
+.wsu-c-content label,
+.wsu-c-form__label {
+	@include wsu-c-form__label;
+}
+
+/* Overrides
+======================= */
+.wsu-c-content input[type="radio"],
+.wsu-c-content input[type="checkbox"],
+.wsu-c-form__checkbox,
+.wsu-c-form__radio {
 	& + label {
 		margin: 0;
 		margin-left: $unit-xs;
@@ -25,10 +32,4 @@ input[type="checkbox"],
 	&:checked + label {
 		font-weight: 400;
 	}
-}
-
-// /* Consent label
-.ginput_container.ginput_container_consent label {
-	margin: 0;
-	margin-left: $unit-xs;
 }

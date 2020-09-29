@@ -1,8 +1,14 @@
 @import '../../content-button/style.scss';
 
-.gform_wrapper .gform_footer input.button,
-.gform_wrapper .gform_footer input[type=submit],
-.gform_wrapper .gform_page_footer input.button,
-.gform_wrapper .gform_page_footer input[type=submit] {
+/* Styles
+======================= */
+@mixin wsu-c-form__button {
+// Add styles here
+}
+
+/* Selectors
+======================= */
+.wsu-c-content button {
 	@extend .wsu-c-button;
+	@include wsu-c-form__button();
 }

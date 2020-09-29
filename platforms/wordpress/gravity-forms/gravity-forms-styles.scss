@@ -1,2 +1,59 @@
+@import '../../../packages/components/content-form/style.scss';
+
 /* Gravity Forms admin override styles go here
 ============================================== */
+.gform_wrapper {
+
+	// Select
+	select {
+		@include wsu-c-form__select;
+		width: initial;
+	}
+
+	// Radio
+	ul.gfield_radio li {
+		@include wsu-c-form__container--input-item;
+
+		input[type="radio"] {
+			@include wsu-c-form__radio;
+		}
+	}
+
+	// Checkboxes
+	ul.gfield_checkbox {
+		margin: $unit 0;
+
+		li {
+			@include wsu-c-form__container--input-item;
+			
+			input[type="checkbox"] {
+				@include form__checkbox;
+			}
+		}
+	}
+
+	// Label
+	label.gfield_label {
+		@include wsu-c-form__label;
+	}
+
+	ul.gfield_radio li input[type="radio"],
+	ul.gfield_checkbox li input[type="checkbox"] {
+		& + label {
+			margin: 0;
+			margin-left: $unit-xs;
+		}
+
+		&:checked + label {
+			font-weight: 400;
+		}
+	}
+
+	// Footer
+	.gform_footer input.button,
+	.gform_footer input[type=submit],
+	.gform_page_footer input.button,
+	.gform_page_footer input[type=submit] {
+		@extend .wsu-c-button;
+	}
+}

@@ -14,6 +14,7 @@ export { ContentColumn as WsuColumn } from './content-column';
 export { ContentColumnWrapper as WsuColumnWrapper } from './content-column';
 export { default as WsuForm } from './content-form';
 export { ContentFormCheatsheet as WsuFormCheatsheet } from './content-form';
+export { ContentFormCheatsheetInherited as WsuFormCheatsheetInherited } from './content-form';
 export { default as WsuHeading } from './content-heading';
 export { default as WsuHero } from './content-hero';
 export { default as WsuIcon } from './content-icon';
