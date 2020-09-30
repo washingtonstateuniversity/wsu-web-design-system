@@ -1,107 +1,111 @@
 @import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
 
-.wsu-g-container {
-	position: relative;
-	padding-left: 14px;
-	padding-right: 14px;
-	padding-bottom: 14px;
-	flex-direction: column;
+.storybook-containers-demo {
 
-	&::before {
-		content: "";
-		display: block;
-		position: absolute;
-		top: 14px;
-		bottom: 14px;
-		left: 14px;
-		right: 14px;
-		border: 1px dashed #ccc;
+	.wsu-g-container {
+		position: relative;
+		padding-left: 14px;
+		padding-right: 14px;
+		padding-bottom: 14px;
+		flex-direction: column;
+
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 14px;
+			bottom: 14px;
+			left: 14px;
+			right: 14px;
+			border: 1px dashed #ccc;
+		}
+
+		&::after {
+			content: ".wsu-g-container";
+			display: block;
+			position: absolute;
+			top: 4px;
+			left: 28px;
+			background: color(gray,5);
+			height: 28px;
+			line-height: 28px;
+			font-size: 10px;
+			padding: 0 14px;
+			border-left: 5px solid color(gray,80);
+			font-weight: 600;
+		}
 	}
 
-	&::after {
-		content: ".wsu-g-container";
-		display: block;
-		position: absolute;
-		top: 4px;
-		left: 28px;
-		background: color(gray,5);
-		height: 28px;
-		line-height: 28px;
-		font-size: 10px;
-		padding: 0 14px;
-		border-left: 5px solid color(gray,80);
+	.wsu-s-container {
+		position: relative;
+		padding: 35px 14px 14px;
+		flex-grow: 1;
+
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 14px;
+			bottom: 14px;
+			left: 14px;
+			right: 14px;
+			border: 1px dashed #ccc;
+		}
+
+		&::after {
+			content: ".wsu-s-container";
+			display: block;
+			position: absolute;
+			top: 4px;
+			left: 28px;
+			background: color(gray,5);
+			height: 28px;
+			line-height: 28px;
+			font-size: 10px;
+			padding: 0 14px;
+			border-left: 5px solid color(gray,80);
+			font-weight: 600;
+		}
+	}
+
+	.wsu-c-container {
+		position: relative;
+
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 14px;
+			bottom: 14px;
+			left: 14px;
+			right: 14px;
+			border: 1px dashed #ccc;
+		}
+
+		&::after {
+			content: ".wsu-c-container .wsu-c-content";
+			display: block;
+			position: absolute;
+			top: 4px;
+			left: 28px;
+			background: color(gray,5);
+			height: 28px;
+			line-height: 28px;
+			font-size: 10px;
+			padding: 0 14px;
+			border-left: 5px solid color(gray,80);
+			font-weight: 600;
+		}
+	}
+
+	.storybook-component-placeholder {
+		margin: 14px;
+		background: color( gray, 5 );
+		border-left: 5px solid color(primary,light);
+		padding: 1rem 1rem;
+		font-size: 0.7rem;
+		text-transform: uppercase;
 		font-weight: 600;
 	}
-}
 
-.wsu-s-container {
-	position: relative;
-	padding: 35px 14px 14px;
-	flex-grow: 1;
-
-	&::before {
-		content: "";
-		display: block;
-		position: absolute;
-		top: 14px;
-		bottom: 14px;
-		left: 14px;
-		right: 14px;
-		border: 1px dashed #ccc;
-	}
-
-	&::after {
-		content: ".wsu-s-container";
-		display: block;
-		position: absolute;
-		top: 4px;
-		left: 28px;
-		background: color(gray,5);
-		height: 28px;
-		line-height: 28px;
-		font-size: 10px;
-		padding: 0 14px;
-		border-left: 5px solid color(gray,80);
-		font-weight: 600;
-	}
-}
-
-.wsu-c-container {
-	position: relative;
-
-	&::before {
-		content: "";
-		display: block;
-		position: absolute;
-		top: 14px;
-		bottom: 14px;
-		left: 14px;
-		right: 14px;
-		border: 1px dashed #ccc;
-	}
-
-	&::after {
-		content: ".wsu-c-container .wsu-c-content";
-		display: block;
-		position: absolute;
-		top: 4px;
-		left: 28px;
-		background: color(gray,5);
-		height: 28px;
-		line-height: 28px;
-		font-size: 10px;
-		padding: 0 14px;
-		border-left: 5px solid color(gray,80);
-		font-weight: 600;
-	}
-}
-
-.storybook-component-placeholder {
-	margin: 14px;
-	background: color( gray, 5 );
-	border-left: 5px solid color(primary,light);
-	padding: 1rem 1rem;
-	font-size: 0.7rem;
-	text-transform: uppercase;
-	font-weight: 600;
 }

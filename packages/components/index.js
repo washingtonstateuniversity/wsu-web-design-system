@@ -37,3 +37,7 @@ export { default as WsuSiteNavHorizontal } from './site-nav-horizontal';
 export { default as WsuSiteNavVertical } from './site-nav-vertical';
 export { default as WsuPageBanner } from './content-page-banner';
 export { default as WsuBlockquote} from './content-blockquote';
+export { default as WsuSiteNavVerticalSplit} from './site-nav-vertical-split';
+export { GlobalContainer as WsuGlobalContainer } from './containers';
+export { SiteContainer as WsuSiteContainer } from './containers';
+export { ContentContainer as WsuContentContainer } from './containers';

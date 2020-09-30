@@ -32,13 +32,15 @@ export const Default = () => {
 
 
 	return(
-		<GlobalContainer>
-			<SiteContainer>
-				<ContentContainer>
+		<div className="storybook-containers-demo">
+			<GlobalContainer>
+				<SiteContainer>
+					<ContentContainer>
 
-				</ContentContainer>
-			</SiteContainer>
-		</GlobalContainer>
+					</ContentContainer>
+				</SiteContainer>
+			</GlobalContainer>
+		</div>
 	)
 }
 
@@ -46,18 +48,20 @@ export const Components = () => {
 
 
 	return(
-		<GlobalContainer>
-			<ComponentPlaceholder title="Global Header" />
-			<ComponentPlaceholder title="Site Nav Vertical" />
-			<SiteContainer>
-				<ComponentPlaceholder title="Site Header" />
-				<ComponentPlaceholder title="Site Nav Horizontal" />
-				<ContentContainer>
-				<ComponentPlaceholder title="All Content Components" />
-				</ContentContainer>
-				<ComponentPlaceholder title="Site Footer" />
-			</SiteContainer>
-			<ComponentPlaceholder title="Global Footer" />
-		</GlobalContainer>
+		<div className="storybook-containers-demo">
+			<GlobalContainer>
+				<ComponentPlaceholder title="Global Header" />
+				<ComponentPlaceholder title="Site Nav Vertical" />
+				<SiteContainer>
+					<ComponentPlaceholder title="Site Header" />
+					<ComponentPlaceholder title="Site Nav Horizontal" />
+					<ContentContainer>
+					<ComponentPlaceholder title="All Content Components" />
+					</ContentContainer>
+					<ComponentPlaceholder title="Site Footer" />
+				</SiteContainer>
+				<ComponentPlaceholder title="Global Footer" />
+			</GlobalContainer>
+		</div>
 	)
 }
