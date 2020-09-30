@@ -1,0 +1,52 @@
+@import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
+@import '../../packages/components/content-table/partials/mixins';
+
+.wsu-c-content {
+
+	.tablepress {
+		@include wsu-c-table;
+		width: 100% !important;
+
+		// Caption
+		caption {
+			@include wsu-c-table__caption;
+		}
+	
+		// Table Content
+		td,
+		th {
+			@include wsu-c-table__cell;
+		}
+	
+		th {
+			@include wsu-c-table__th;
+		}
+	
+		td {
+			@include wsu-c-table__td;
+		}
+	
+		// Header / Footer
+		thead th,
+		thead td,
+		tfoot th,
+		tfoot td {
+			@include wsu-c-table__thead-tfoot;
+			background-color: color(white, base);
+		}
+	
+		thead th,
+		thead td {
+			@include wsu-c-table__thead;
+
+			&:hover {
+				background-color: color(gray, 45);
+			}
+		}
+	
+		tfoot th,
+		tfoot td {
+			@include wsu-c-table__tfoot;
+		}
+	}
+}

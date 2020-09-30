@@ -1,0 +1,46 @@
+/* Mixin styles 
+======================= */
+@mixin wsu-c-table {
+	border-spacing: 0;
+	width: 100%;
+	margin: $unit-3xl 0;
+}
+
+@mixin wsu-c-table__caption {
+	@include font-size(12px);
+	padding: $unit-xs;
+	caption-side: bottom;
+}
+
+@mixin wsu-c-table__caption--top {
+	caption-side: top;
+}
+
+@mixin wsu-c-table__cell {
+	text-align: left;
+	padding: calc(#{$unit-xs} + 2px) $unit-xs #{$unit-xs};
+	margin: 0;
+	line-height: 1;
+}
+
+@mixin wsu-c-table__th {
+	@include font-size(16px, 600);
+}
+
+@mixin wsu-c-table__td {
+	// Add styles here
+}
+
+@mixin wsu-c-table__thead-tfoot {
+	@include font-size(12px, 700);
+}
+
+@mixin wsu-c-table__thead {
+	border-top: 2px solid color(primary, base);
+	border-bottom: 1px solid color(gray, 10);@include font-size(12px, 700);
+}
+
+@mixin wsu-c-table__tfoot {
+	border-top: 1px solid color(gray, 10);
+	border-bottom: 2px solid color(primary, base);
+}

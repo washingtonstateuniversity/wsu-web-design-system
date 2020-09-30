@@ -69,7 +69,7 @@ export const DefaultTable = () => {
 				<WsuCaption>Estimated yearly costs for two semesters at WSU.</WsuCaption>
 				<WsuThead>
 					<WsuTr>
-						<WsuTd></WsuTd>
+						<WsuTh scope="col">Expense</WsuTh>
 						<WsuTh scope="col">WA Resident</WsuTh>
 						<WsuTh scope="col">Non-WA Resident</WsuTh>
 						<WsuTh scope="col">WUE Recipient</WsuTh>
@@ -109,7 +109,7 @@ export const DefaultTable = () => {
 				</WsuTbody>
 				<WsuTfoot>
 					<WsuTr>
-						<WsuTd></WsuTd>
+						<WsuTh scope="col">Expense</WsuTh>
 						<WsuTh scope="col">WA Resident</WsuTh>
 						<WsuTh scope="col">Non-WA Resident</WsuTh>
 						<WsuTh scope="col">WUE Recipient</WsuTh>
@@ -128,7 +128,7 @@ export const spacingCompressed = () => {
 				<WsuCaption>Estimated yearly costs for two semesters at WSU.</WsuCaption>
 				<WsuThead>
 					<WsuTr>
-						<WsuTd></WsuTd>
+						<WsuTh scope="col">Expense</WsuTh>
 						<WsuTh scope="col">WA Resident</WsuTh>
 						<WsuTh scope="col">Non-WA Resident</WsuTh>
 						<WsuTh scope="col">WUE Recipient</WsuTh>
@@ -168,7 +168,7 @@ export const spacingCompressed = () => {
 				</WsuTbody>
 				<WsuTfoot>
 					<WsuTr>
-						<WsuTd></WsuTd>
+						<WsuTh scope="col">Expense</WsuTh>
 						<WsuTh scope="col">WA Resident</WsuTh>
 						<WsuTh scope="col">Non-WA Resident</WsuTh>
 						<WsuTh scope="col">WUE Recipient</WsuTh>
@@ -187,7 +187,7 @@ export const spacingExpanded = () => {
 				<WsuCaption>Estimated yearly costs for two semesters at WSU.</WsuCaption>
 				<WsuThead>
 					<WsuTr>
-						<WsuTd></WsuTd>
+						<WsuTh scope="col">Expense</WsuTh>
 						<WsuTh scope="col">WA Resident</WsuTh>
 						<WsuTh scope="col">Non-WA Resident</WsuTh>
 						<WsuTh scope="col">WUE Recipient</WsuTh>
@@ -227,7 +227,7 @@ export const spacingExpanded = () => {
 				</WsuTbody>
 				<WsuTfoot>
 					<WsuTr>
-						<WsuTd></WsuTd>
+						<WsuTh scope="col">Expense</WsuTh>
 						<WsuTh scope="col">WA Resident</WsuTh>
 						<WsuTh scope="col">Non-WA Resident</WsuTh>
 						<WsuTh scope="col">WUE Recipient</WsuTh>
@@ -246,7 +246,7 @@ export const stripedTable = () => {
 				<WsuCaption>Estimated yearly costs for two semesters at WSU.</WsuCaption>
 				<WsuThead>
 					<WsuTr>
-						<WsuTd></WsuTd>
+						<WsuTh scope="col">Expense</WsuTh>
 						<WsuTh scope="col">WA Resident</WsuTh>
 						<WsuTh scope="col">Non-WA Resident</WsuTh>
 						<WsuTh scope="col">WUE Recipient</WsuTh>
@@ -286,7 +286,7 @@ export const stripedTable = () => {
 				</WsuTbody>
 				<WsuTfoot>
 					<WsuTr>
-						<WsuTd></WsuTd>
+						<WsuTh scope="col">Expense</WsuTh>
 						<WsuTh scope="col">WA Resident</WsuTh>
 						<WsuTh scope="col">Non-WA Resident</WsuTh>
 						<WsuTh scope="col">WUE Recipient</WsuTh>

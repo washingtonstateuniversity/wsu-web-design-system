@@ -1,32 +1,32 @@
+
+/* Selectors 
+======================= */
 .wsu-c-table {
-	border-spacing: 0;
-	width: 100%;
-	margin: $unit-3xl 0;
+	@include wsu-c-table;
 
 	// Caption
 	caption {
-		@include font-size(12px);
-		padding: $unit-xs;
-		caption-side: bottom;
+		@include wsu-c-table__caption
 	}
 
 	&--caption-top {
 		caption {
-			caption-side: top;
+			@include wsu-c-table__caption--top;
 		}
 	}
 
 	// Table Content
 	td,
 	th {
-		text-align: left;
-		padding: calc(#{$unit-xs} + 2px) $unit-xs #{$unit-xs};
-		margin: 0;
-		line-height: 1;
+		@include wsu-c-table__cell;
 	}
 
 	th {
-		@include font-size(16px, 600);
+		@include wsu-c-table__th;
+	}
+
+	td {
+		@include wsu-c-table__td;
 	}
 
 	// Header / Footer
@@ -34,18 +34,16 @@
 	thead td,
 	tfoot th,
 	tfoot td {
-		@include font-size(12px, 700);
+		@include wsu-c-table__thead-tfoot;
 	}
 
 	thead th,
 	thead td {
-		border-top: 2px solid color(primary, base);
-		border-bottom: 1px solid color(gray, 10);
+		@include wsu-c-table__thead;
 	}
 
 	tfoot th,
 	tfoot td {
-		border-top: 1px solid color(gray, 10);
-		border-bottom: 2px solid color(primary, base);
+		@include wsu-c-table__tfoot;
 	}
 }
