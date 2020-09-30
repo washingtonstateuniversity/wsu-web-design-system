@@ -13,7 +13,7 @@ import ComponentWrapper from '../../packages/storybook-components/content-wrappe
 export default {
 	title: 'Components/Content/Loading Icon',
 	parameters: {
-		status: 'Needs Feedback' // In Development | Needs Feedback | Stable | Needs Deployment
+		status: 'Needs Feedback' // In Development | Needs Feedback | Stable | Needs Deployment | Has Known Issues
 	},
 	decorators: [
 		withA11y,

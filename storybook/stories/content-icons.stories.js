@@ -17,7 +17,7 @@ import ComponentWrapper from '../../packages/storybook-components/content-wrappe
 export default {
 	title: 'Components/Content/Icons',
 	parameters: {
-		status: 'Stable' // In Development | Needs Feedback | Stable | Needs Deployment
+		status: 'Stable' // In Development | Needs Feedback | Stable | Needs Deployment | Has Known Issues
 	},
 	decorators: [
 		withA11y,
@@ -30,5 +30,3 @@ const iconOptions = ['alarm', 'alert-notification', 'arrow-down-carrot', 'arrow-
 export const defaultIcon = () => <ComponentWrapper layout="centered" ><WsuIcon name={select('Icon', iconOptions, 'alarm', 'Preview')}/></ComponentWrapper>;
 
 export const iconCheatsheet = () => <WsuIconCheatsheet />;
-
-export const loadingIcon = () => <ComponentWrapper layout="centered" ><WsuLoadingIcon /></ComponentWrapper>;

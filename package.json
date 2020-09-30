@@ -24,6 +24,7 @@
     "@storybook/addons": "^5.3.19",
     "@storybook/html": "^5.3.19",
     "@storybook/react": "^5.3.19",
+    "@storybook/storybook-deployer": "^2.8.6",
     "@whitespace/storybook-addon-html": "^1.2.1",
     "@wsuwebteam/build-tools": "^1.7.0",
     "@wsuwebteam/wsu-icons": "latest",
@@ -53,11 +54,13 @@
   },
   "scripts": {
     "start": "npm run storybook",
+    "start:bundles": "webpack-dev-server --env.NODE_ENV=development --config bundles.config.js --watch",
     "build": "npm run clean && npm run build:bundles && npm run build:storybook",
     "build:bundles": "webpack --env.NODE_ENV=production --config bundles.config.js",
     "build:storybook": "build-storybook -o ./storybook/public",
     "clean": "rimraf ./bundles/dist && rimraf ./storybook/public",
-    "storybook": "start-storybook -p 6006"
+    "storybook": "start-storybook -p 6006",
+    "deploy-storybook": "storybook-to-aws-s3 --bucket-path=storybook-internal.web.wsu.edu"
   },
   "repository": {
     "type": "git",

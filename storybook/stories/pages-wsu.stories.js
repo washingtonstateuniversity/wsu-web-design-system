@@ -10,6 +10,7 @@ import ComponentWrapper from '../../packages/storybook-components/content-wrappe
 // Component Deps
 import {
 	WsuGlobalHeader,
+	WsuSiteNavVertical,
 	WsuGlobalFooter,
 	WsuSiteFooter,
 	WsuHero
@@ -17,9 +18,9 @@ import {
 
 // Story Time
 export default {
-	title: 'Pages/WSU',
+	title: 'Pages/Landing Pages',
 	parameters: {
-		status: 'In Development' // In Development | Needs Feedback | Stable | Needs Deployment
+		status: 'In Development' // In Development | Needs Feedback | Stable | Needs Deployment | Has Known Issues
 	},
 	decorators: [
 		withA11y,
@@ -27,14 +28,21 @@ export default {
 	]
 };
 
-export const homepage = () => {
+export const defaultHome = () => {
 
 	return (
-		<>
+		<div className="wsu-g-container">
 			<WsuGlobalHeader />
-			<WsuHero />
-			<WsuSiteFooter />
-			<WsuGlobalFooter />
-		</>
+			<WsuSiteNavVertical />
+
+			<div className="wsu-s-container">
+				<div className="wsu-c-container wsu-c-content">
+					<WsuHero title="Odio et purus metus placerat neque." subtitle="Consectetur adipiscing elit donec fringilla" buttonText="Lorem Ipsum" imageCaption="By consectetur adipiscing elit donec fringilla" />
+				</div>
+				<WsuSiteFooter />
+				<WsuGlobalFooter />
+			</div>
+
+		</div>
 	)
 }

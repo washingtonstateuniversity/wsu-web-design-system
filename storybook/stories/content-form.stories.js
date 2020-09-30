@@ -11,7 +11,7 @@ import { WsuForm, WsuFormCheatsheet } from '../../packages/components';
 export default {
 	title: 'Components/Content/Form',
 	parameters: {
-		status: 'Stable, Needs Deployment' // In Development | Needs Feedback | Stable | Needs Deployment
+		status: 'Has Known Issues' // In Development | Needs Feedback | Stable | Needs Deployment | Has Known Issues
 	},
 	decorators: [
 		withA11y,
@@ -21,14 +21,17 @@ export default {
 
 export const DefaultForm = () => {
 
-	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : ''; 
+	let classes = ( boolean('Apply wsu-c-content class', true, previewGroupID ) ) ? ['wsu-c-content'] : ''; 
 
 	return (
-		<ComponentWrapper layout="content">
+		<>
+			<ComponentWrapper layout="content"  className={classes}>
+				<WsuFormCheatsheet />
+			</ComponentWrapper>
 
-			{/* <WsuForm /> */}
-			<WsuFormCheatsheet />
-
-		</ComponentWrapper>
+			<ComponentWrapper layout="content" type="notice">
+				<p>At this time, all form styles are inherited based on the `wsu-c-content` wrapper class. If this class is not present your form styles will not inherit correctly.</p>
+			</ComponentWrapper>
+		</>
 	)
 }

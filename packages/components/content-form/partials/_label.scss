@@ -1,0 +1,34 @@
+/* Label Styles
+======================= */
+label,
+.gform_wrapper label.gfield_label {
+	@include font-size(14px, 400);
+
+	display: inline-block;
+
+	margin: $unit $unit $unit-2xs;
+	width: 100%;
+
+	cursor: pointer;
+}
+
+// /* Radio / Checkbox label
+input[type="radio"],
+input[type="checkbox"],
+.gform_wrapper ul.gfield_radio li input[type="radio"],
+.gform_wrapper ul.gfield_checkbox li input[type="checkbox"] {
+	& + label {
+		margin: 0;
+		margin-left: $unit-xs;
+	}
+
+	&:checked + label {
+		font-weight: 400;
+	}
+}
+
+// /* Consent label
+.ginput_container.ginput_container_consent label {
+	margin: 0;
+	margin-left: $unit-xs;
+}

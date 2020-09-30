@@ -11,7 +11,7 @@ import './style.scss';
 export default {
 	title: 'Components/Global/Containers',
 	parameters: {
-		status: 'Stable' // In Development | Needs Feedback | Stable | Needs Deployment
+		status: 'Stable' // In Development | Needs Feedback | Stable | Needs Deployment | Has Known Issues
 	},
 	decorators: [
 		withA11y,
@@ -32,7 +32,7 @@ export const Default = () => {
 
 
 	return(
-		<div className="storybook-containers-demo">
+		<div className="wsu-g-container-component">
 			<GlobalContainer>
 				<SiteContainer>
 					<ContentContainer>
@@ -48,7 +48,7 @@ export const Components = () => {
 
 
 	return(
-		<div className="storybook-containers-demo">
+		<div className="wsu-g-container-component">
 			<GlobalContainer>
 				<ComponentPlaceholder title="Global Header" />
 				<ComponentPlaceholder title="Site Nav Vertical" />
@@ -59,8 +59,8 @@ export const Components = () => {
 					<ComponentPlaceholder title="All Content Components" />
 					</ContentContainer>
 					<ComponentPlaceholder title="Site Footer" />
+					<ComponentPlaceholder title="Global Footer" />
 				</SiteContainer>
-				<ComponentPlaceholder title="Global Footer" />
 			</GlobalContainer>
 		</div>
 	)
