@@ -12,6 +12,9 @@ import Stat from '../../packages/components/content-stat';
 // Story Time
 export default {
 	title: 'Components/Content/Stat',
+	parameters: {
+		status: 'Needs Feedback' // In Development | Needs Feedback | Stable | Needs Deployment | Has Known Issues
+	},
 	decorators: [
 		withA11y,
 		withKnobs,

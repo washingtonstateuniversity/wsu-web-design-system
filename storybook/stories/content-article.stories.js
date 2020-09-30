@@ -12,6 +12,9 @@ import { WsuArticle } from '../../packages/components';
 // Story Time
 export default {
 	title: 'Components/Content/Article',
+	parameters: {
+		status: 'In Development' // In Development | Needs Feedback | Stable | Needs Deployment | Has Known Issues
+	},
 	decorators: [
 		withA11y,
 		withKnobs,

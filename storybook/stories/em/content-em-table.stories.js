@@ -12,6 +12,9 @@ import { EmContentTable } from '../../../packages/em-components';
 // Story Time
 export default {
 	title: 'EM/Components/Table',
+	parameters: {
+		status: 'Stable' // In Development | Needs Feedback | Stable | Needs Deployment | Has Known Issues
+	},
 	decorators: [
 		withA11y,
 		withKnobs,

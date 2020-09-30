@@ -12,6 +12,9 @@ import { WsuPageBanner } from '../../packages/components';
 // Story Time
 export default {
 	title: 'Components/Content/Page Banner',
+	parameters: {
+		status: 'Needs Feedback' // In Development | Needs Feedback | Stable | Needs Deployment | Has Known Issues
+	},
 	decorators: [
 		withA11y,
 		withKnobs

@@ -1,0 +1,57 @@
+.wsu-c-loading-icon--2 {
+	position: relative;
+
+	&::after {
+		content: 'Option 2';
+		position: absolute;
+		bottom: -40px;
+		left: 50%;
+		font-size: 10px;
+		transform: translateX(-50%);
+	}
+
+	svg {
+		overflow: visible;
+	}
+
+	& path {
+		transform-origin: center;
+		fill: white;
+		stroke-width: 4px;
+		stroke: color(primary, base);
+		animation-timing-function: (0.75, 0, 0.25, 1);
+	}
+
+	.wsu-c-butch {
+		&__hair {
+			animation: loadingIcon2 4s infinite;
+		}
+		&__face {
+			animation: loadingIcon2 4s infinite;
+			animation-delay: 400ms;
+		}
+		&__jaw {
+			animation: loadingIcon2 4s infinite;
+			animation-delay: 600ms;
+		}
+		&__chest {
+			animation: loadingIcon2 4s infinite;
+			animation-delay: 800ms;
+		}
+	}
+}
+
+@keyframes loadingIcon2 {
+	0% {
+		stroke: color(primary, base);
+	}
+
+	50% {
+		stroke: transparent;
+		fill: color(primary, base);
+	}
+
+	100% {
+		stroke: color(primary, base);
+	}
+}

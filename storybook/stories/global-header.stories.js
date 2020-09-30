@@ -13,6 +13,9 @@ import { WsuGlobalHeader } from '../../packages/components';
 // Story Time
 export default {
 	title: 'Components/Global/Header',
+	parameters: {
+		status: 'In Development' // In Development | Needs Feedback | Stable | Needs Deployment | Has Known Issues
+	},
 	decorators: [
 		withA11y,
 		withKnobs

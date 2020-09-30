@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 import './style.scss';
+import { WsuLink } from '../';
 
 const SiteFooter = ( props ) => {
 
@@ -88,10 +89,7 @@ const SiteFooter = ( props ) => {
 				</nav>
 				<div className="wsu-s-footer__contact-container">
 					<p className="wsu-s-footer__contact-info">
-						<span className="wsu-s-footer__contact-name">Lorem ipsum dolor sit amet</span>, 
-						<span className="wsu-s-footer__contact-address">PO Box 123456,</span> 
-						<span className="wsu-s-footer__contact-phone"><a href="tel:#" className="wsu-s-footer__contact-phone__link">P 509-123-4567</a></span> 
-						<span className="wsu-s-footer__contact-fax"><a href="tel:#" className="wsu-s-footer__contact-fax__link">F 509-123-4567</a></span> 
+						<span className="wsu-s-footer__contact-name">Lorem ipsum dolor sit amet</span>, <span className="wsu-s-footer__contact-address">PO Box 123456,</span> <span className="wsu-s-footer__contact-phone"><WsuLink isSecondary href="tel:509-123-4567" className="wsu-s-footer__contact-phone__link">P 509-123-4567</WsuLink></span>, <span className="wsu-s-footer__contact-fax"><WsuLink isSecondary  href="tel:509-123-4567">F 509-123-4567</WsuLink></span>
 					</p>
 					<ul className="wsu-s-footer__social-list">
 						<li className="wsu-s-footer__social-list-item">
@@ -139,10 +137,7 @@ const SiteFooterCondensed = ( props ) => {
 			<footer className="wsu-s-footer__container">
 				<div className="wsu-s-footer__contact-container">
 					<p className="wsu-s-footer__contact-info">
-						<span className="wsu-s-footer__contact-name">Lorem ipsum dolor sit amet</span>, 
-						<span className="wsu-s-footer__contact-address">PO Box 123456,</span> 
-						<span className="wsu-s-footer__contact-phone"><a href="tel:#" className="wsu-s-footer__contact-phone__link">P 509-123-4567</a></span> 
-						<span className="wsu-s-footer__contact-fax"><a href="tel:#" className="wsu-s-footer__contact-fax__link">F 509-123-4567</a></span> 
+						<span className="wsu-s-footer__contact-name">Lorem ipsum dolor sit amet</span>, <span className="wsu-s-footer__contact-address">PO Box 123456,</span> <span className="wsu-s-footer__contact-phone"><WsuLink isSecondary href="tel:509-123-4567" className="wsu-s-footer__contact-phone__link">P 509-123-4567</WsuLink></span>, <span className="wsu-s-footer__contact-fax"><WsuLink isSecondary  href="tel:509-123-4567">F 509-123-4567</WsuLink></span>
 					</p>
 					<ul className="wsu-s-footer__social-list">
 						<li className="wsu-s-footer__social-list-item">

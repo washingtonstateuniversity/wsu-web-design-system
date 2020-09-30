@@ -12,6 +12,9 @@ import { WsuHr, WsuSeparator } from '../../packages/components';
 // Story Time
 export default {
 	title: 'Components/Content/Separator',
+	parameters: {
+		status: 'Stable' // In Development | Needs Feedback | Stable | Needs Deployment | Has Known Issues
+	},
 	decorators: [
 		withA11y,
 		withKnobs
@@ -40,14 +43,3 @@ export const CrimsonSeparator = () => {
 		</ComponentWrapper>
 	)
 }
-
-/*export const EMSeparator = () => {
-
-	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : ''; 
-
-	return(
-		<ComponentWrapper layout="centered" className={classes}>
-			<WsuHr isHatched showMoreIndicator/>
-		</ComponentWrapper>
-	)
-}*/

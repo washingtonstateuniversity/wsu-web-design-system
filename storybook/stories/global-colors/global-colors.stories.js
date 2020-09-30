@@ -10,6 +10,9 @@ import './global-colors.scss';
 // Story Time
 export default {
 	title: 'Elements/Color',
+	parameters: {
+		status: 'Stable' // In Development | Needs Feedback | Stable | Needs Deployment | Has Known Issues
+	},
 	decorators: [
 		withA11y,
 		withKnobs,
