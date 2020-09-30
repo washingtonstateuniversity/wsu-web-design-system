@@ -10,6 +10,9 @@
 	margin-left: space_content( $wsu-bt-nav-vertical-width-collapse );
 }
 
+$nav-width: 260px;
+$nav-width-closed: 65px;
+
 body {
 	overflow-x: hidden;
 }
@@ -206,5 +209,18 @@ body {
 
 	}
 
+}
+
+
+.wsu-s-nav-vertical-split { 
+	
+	&__wrapper ~ .wsu-s-container {
+		margin-left: $nav-width;
+		transition: margin-left 300ms ease-in;
+	}
+
+	&--closed ~ .wsu-s-container {
+		margin-left: $nav-width-closed;
+	}
 }
 
