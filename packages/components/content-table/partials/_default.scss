@@ -1,0 +1,51 @@
+.wsu-c-table {
+	border-spacing: 0;
+	width: 100%;
+	margin: $unit-3xl 0;
+
+	// Caption
+	caption {
+		@include font-size(12px);
+		padding: $unit-xs;
+		caption-side: bottom;
+	}
+
+	&--caption-top {
+		caption {
+			caption-side: top;
+		}
+	}
+
+	// Table Content
+	td,
+	th {
+		text-align: left;
+		padding: calc(#{$unit-xs} + 2px) $unit-xs #{$unit-xs};
+		margin: 0;
+		line-height: 1;
+	}
+
+	th {
+		@include font-size(16px, 600);
+	}
+
+	// Header / Footer
+	thead th,
+	thead td,
+	tfoot th,
+	tfoot td {
+		@include font-size(12px, 700);
+	}
+
+	thead th,
+	thead td {
+		border-top: 2px solid color(primary, base);
+		border-bottom: 1px solid color(gray, 10);
+	}
+
+	tfoot th,
+	tfoot td {
+		border-top: 1px solid color(gray, 10);
+		border-bottom: 2px solid color(primary, base);
+	}
+}

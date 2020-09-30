@@ -1,16 +1,16 @@
 @import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
 
-table {
+table.font-weights {
 	width: 100%;
 	text-align: left;
-}
 
-th {
-	border-bottom: 2px solid color(primary, light);
-}
-
-th, td {
-	padding: 1em 0;
+	th {
+		border-bottom: 2px solid color(primary, light);
+	}
+	
+	th, td {
+		padding: 1em 0;
+	}
 }
 
 .font-weight--black {

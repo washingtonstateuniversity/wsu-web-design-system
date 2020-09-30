@@ -32,7 +32,7 @@ export const AllFonts = () => {
 			<WsuHeading tag="h4">h4 Montserrat SemiBold 18px</WsuHeading>
 
 			<WsuHeading tag="h2">Font Weights</WsuHeading>
-			<table>
+			<table className="font-weights">
 				<tr>
 					<th>Example Text</th>
 					<th>Font Weight Value</th>

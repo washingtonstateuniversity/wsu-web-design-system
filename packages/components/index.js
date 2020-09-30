@@ -29,6 +29,7 @@ export { default as WsuHr } from './content-separator';
 export { default as WsuSeparator } from './content-separator';
 export { default as WsuSlider } from './content-slider';
 export { default as WsuStat } from './content-stat';
+export * from './content-table';
 export { default as WsuGlobalFooter } from './global-footer';
 export { default as WsuGlobalHeader } from './global-header';
 export { default as WsuSiteFooter } from './site-footer';
