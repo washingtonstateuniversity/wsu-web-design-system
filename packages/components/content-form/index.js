@@ -13,7 +13,7 @@ const ContentFormCheatsheet = () => {
 			<form action="#" className="wsu-c-form__container">
 				<div className="wsu-c-form__container--item">
 					<label className="wsu-c-form__label" id="companyNameLabel" htmlFor="companyName">Company Name</label>
-					<input className="wsu-c-form__input" type="text" name="companyName" id="companyName" aria-labelledby="companyNameLabel" placeholder="Type something..." />
+					<input className="wsu-c-form__input" type="text" name="companyName" id="companyName" aria-labelledby="companyNameLabel" placeholder="Type something..." required />
 				</div>
 
 				<div className="wsu-c-form__container--item">

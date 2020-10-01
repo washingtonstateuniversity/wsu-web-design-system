@@ -17,7 +17,8 @@ module.exports = env => {
 			'bundles/dist/wsu-design-system.content': './bundles/src/wsu-design-system.content.js',
 			'bundles/dist/platforms/wsu-design-system.wordpress': './bundles/src/wsu-design-system.wordpress.js',
 			'bundles/dist/platforms/wsu-design-system.wordpress.admin': './bundles/src/wsu-design-system.wordpress.admin.js',
-			'bundles/dist/platforms/wsu-design-system.wordpress.gravity-forms': './bundles/src/wsu-design-system.wordpress.gravity-forms.js',
+			'bundles/dist/platforms/wsu-design-system.wordpress.gravityforms': './bundles/src/wsu-design-system.wordpress.gravityforms.js',
+			'bundles/dist/platforms/wsu-design-system.wordpress.tablepress': './bundles/src/wsu-design-system.wordpress.tablepress.js',
 			'bundles/dist/platforms/wsu-design-system.umbraco': './bundles/src/wsu-design-system.umbraco.js'
 		},
 		output: {
@@ -30,7 +31,7 @@ module.exports = env => {
 			writeToDisk: true,
 			contentBase: path.join(__dirname),
 			overlay: true,
-			quiet: true,
+			quiet: false,
 			port: 9000
 		},
 		module: {
@@ -105,10 +106,14 @@ module.exports = env => {
 				filenames: [
 					'bundles/dist/platforms/wsu-design-system.wordpress.bundle.dist.js',
 					'bundles/dist/platforms/wsu-design-system.wordpress.bundle.dist.js.map',
+					'bundles/dist/platforms/wsu-design-system.wordpress.admin.bundle.dist.js',
+					'bundles/dist/platforms/wsu-design-system.wordpress.admin.bundle.dist.js.map',
 					'bundles/dist/platforms/wsu-design-system.wordpress.gutenberg.bundle.dist.js',
 					'bundles/dist/platforms/wsu-design-system.wordpress.gutenberg.bundle.dist.js.map',
-					'bundles/dist/platforms/wsu-design-system.wordpress.gravity-forms.bundle.dist.js',
-					'bundles/dist/platforms/wsu-design-system.wordpress.gravity-forms.bundle.dist.js.map',
+					'bundles/dist/platforms/wsu-design-system.wordpress.gravityforms.bundle.dist.js',
+					'bundles/dist/platforms/wsu-design-system.wordpress.gravityforms.bundle.dist.js.map',
+					'bundles/dist/platforms/wsu-design-system.wordpress.tablepress.bundle.dist.js',
+					'bundles/dist/platforms/wsu-design-system.wordpress.tablepress.bundle.dist.js.map',
 					'bundles/dist/platforms/wsu-design-system.umbraco.bundle.dist.js',
 					'bundles/dist/platforms/wsu-design-system.umbraco.bundle.dist.js.map'
 				]

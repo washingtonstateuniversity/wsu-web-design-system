@@ -37,3 +37,13 @@
 	@include wsu-c-form__container--input-item;
 }
 
+/* Required field
+======================= */
+input[required] {
+	border-left-width: 2px;
+	border-left-color: color(primary, base);
+
+	&:focus {
+		border-left-color: color(primary, base);
+	}
+}
