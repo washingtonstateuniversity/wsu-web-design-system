@@ -1,10 +1,17 @@
-/* Fieldset Styles
+/* Fieldset selectors 
 ======================= */
-fieldset {
-	margin: $unit-l 0 0;
-	padding: 0 $unit-xl $unit-xl;
-
+.wsu-c-content fieldset,
+.wsu-c-form__fieldset {
 	border: 1px solid color(gray, 20);
+	border-radius: $wsu-bt-base-border-radius-size;
+	margin: $unit 0 $unit-2xs;
 
-	@include font-size(14px);
+	legend,
+	.wsu-c-form__legend {
+		@include wsu-c-form__label;
+
+		display: inline;
+		width: initial;
+		padding: 0 $unit-2xs;
+	}
 }

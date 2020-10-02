@@ -21,7 +21,8 @@ export default {
 	decorators: [
 		withA11y,
 		withKnobs,
-	]
+	],
+	component: WsuButton
 };
  
 
