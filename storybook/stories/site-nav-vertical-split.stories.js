@@ -44,7 +44,6 @@ const navMenu = {
 					label:'Child Nav Item',
 					classList: '',
 					children:[],
-					isCurrent: true,
 				},
 				{ 
 					label:'Child Nav Item',
@@ -68,7 +67,39 @@ const navMenu = {
 		{ 
 			label:'Nav Item',
 			classList: '',
-			children:[]
+			children:[
+				{ 
+					label:'Child Nav Item',
+					classList: '',
+					children:[]
+				},
+				{ 
+					label:'Child Nav Item',
+					classList: '',
+					children:[],
+				},
+				{ 
+					label:'Child Nav Item',
+					classList: '',
+					children:[
+						{ 
+							label:'Child Nav Item',
+							classList: '',
+							children:[]
+						},
+						{ 
+							label:'Child Nav Item',
+							classList: '',
+							children:[],
+						},
+						{ 
+							label:'Child Nav Item',
+							classList: '',
+							children:[]
+						}
+					]
+				}
+			]
 		},
 		{ 
 			label:'Nav Item',
