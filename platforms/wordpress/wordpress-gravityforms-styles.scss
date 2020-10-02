@@ -16,13 +16,15 @@
 ============================================== */
 .gform_wrapper {
 
-	// Select
+	/* Select 
+	======================= */
 	select {
 		@include wsu-c-form__select;
 		width: initial;
 	}
 
-	// Radio
+	/* Radio
+	======================= */
 	ul.gfield_radio li {
 		@include wsu-c-form__container--input-item;
 
@@ -31,7 +33,8 @@
 		}
 	}
 
-	// Checkboxes
+	/* Checkboxes
+	======================= */
 	ul.gfield_checkbox {
 		margin: $unit 0;
 
@@ -44,8 +47,10 @@
 		}
 	}
 
-	// Label
-	label.gfield_label {
+	/* Label 
+	======================= */
+	label.gfield_label,
+	legend.gfield_label {
 		@include wsu-c-form__label;
 	}
 
@@ -61,7 +66,115 @@
 		}
 	}
 
-	// Footer
+	/* Input 
+	======================= */
+	input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
+		@include wsu-c-form__input;
+	}
+
+	input[type="radio"] + input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
+		margin-left: $unit-xs;
+	}
+
+	/* Select
+	======================= */
+	select {
+		@include wsu-c-form__input;
+		@include wsu-c-form__select;
+	}
+
+	/* Browser styles 
+	======================= */
+	&.gf_browser_chrome {
+		select {
+			padding: $unit;
+		}
+		
+		.gfield_checkbox li input,
+		.gfield_checkbox li input[type=checkbox],
+		.gfield_radio li input[type=radio] {
+			margin-top: 0;
+		}
+	}
+
+	/* Time 
+	======================= */
+	.gfield_time_hour i {
+		position: absolute;
+		right: -7px;
+		top: 39px;
+	}
+
+	.gfield_time_hour,
+	.gfield_time_minute,
+	.gfield_time_ampm {
+		position: relative;
+		
+		input {
+			padding: 0 12px !important;
+		}
+
+		label {
+			text-align: left !important;
+		}
+
+		.gfield_time_ampm_shim {
+			height: 34px;
+		}
+
+		select {
+			padding: 6px 5px;
+			min-height: inherit;
+		}
+	}
+
+	/* Complex 
+	======================= */
+	.field_sublabel_above .ginput_complex.ginput_container label,
+	.field_sublabel_below .ginput_complex.ginput_container label {
+		white-space: normal;
+		letter-spacing: inherit;
+	}
+
+	/* Sub labels 
+	======================= */
+	.field_sublabel_above .ginput_complex.ginput_container label,
+	.field_sublabel_above div[class*=gfield_date_].ginput_container label,
+	.field_sublabel_above div[class*=gfield_time_].ginput_container label,
+	.field_sublabel_below .ginput_complex.ginput_container label,
+	.field_sublabel_below div[class*=gfield_date_].ginput_container label,
+	.field_sublabel_below div[class*=gfield_time_].ginput_container label {
+		margin-bottom: $unit-2xs;
+		margin-top: $unit;
+	}
+
+	/* Links 
+	======================= */
+	a {
+		border-bottom: none !important;
+
+		&:hover,
+		&:focus {
+			border-bottom: none !important;
+		}
+	}
+
+	/* Consent 
+	======================= */
+	.gfield_consent_description {
+		padding: $unit !important;
+	}
+
+	.ginput_container_consent {
+		display: flex;
+
+		& .gfield_consent_label {
+			margin-left: $unit-xs;
+		}
+	}
+
+	/* Footer
+	======================= */
 	.gform_footer input.button,
 	.gform_footer input[type=submit],
 	.gform_page_footer input.button,

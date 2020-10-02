@@ -1,0 +1,17 @@
+/* Fieldset selectors 
+======================= */
+.wsu-c-content fieldset,
+.wsu-c-form__fieldset {
+	border: 1px solid color(gray, 20);
+	border-radius: $wsu-bt-base-border-radius-size;
+	margin: $unit 0 $unit-2xs;
+
+	legend,
+	.wsu-c-form__legend {
+		@include wsu-c-form__label;
+
+		display: inline;
+		width: initial;
+		padding: 0 $unit-2xs;
+	}
+}

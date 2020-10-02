@@ -54,56 +54,60 @@ const ContentFormCheatsheet = () => {
 					</select>
 				</div>
 
-				<label className="wsu-c-form__label">City Radio</label>
-				<div className="wsu-c-form__container--item">
-					<div className="wsu-c-form__container--input-item">
-						<input type="radio" id="pullmanRadio" name="city" value="pullmanRadio" className="wsu-c-form__radio"/>
-						<label className="wsu-c-form__label" htmlFor="pullmanRadio">Pullman</label>
-					</div>
+				<fieldset className="wsu-c-form__fieldset">
+					<legend className="wsu-c-form__legend">City Radio</legend>
+					<div className="wsu-c-form__container--item">
+						<div className="wsu-c-form__container--input-item">
+							<input type="radio" id="pullmanRadio" name="city" value="pullmanRadio" className="wsu-c-form__radio"/>
+							<label className="wsu-c-form__label" htmlFor="pullmanRadio">Pullman</label>
+						</div>
 
-					<div className="wsu-c-form__container--input-item">
-						<input type="radio" id="spokaneRadio" name="city" value="spokaneRadio" className="wsu-c-form__radio"/>
-						<label className="wsu-c-form__label" htmlFor="spokaneRadio">Spokane</label>
-					</div>
+						<div className="wsu-c-form__container--input-item">
+							<input type="radio" id="spokaneRadio" name="city" value="spokaneRadio" className="wsu-c-form__radio"/>
+							<label className="wsu-c-form__label" htmlFor="spokaneRadio">Spokane</label>
+						</div>
 
-					<div className="wsu-c-form__container--input-item">
-						<input type="radio" id="tricitiesRadio" name="city" value="tricitiesRadio" className="wsu-c-form__radio"/>
-						<label className="wsu-c-form__label" htmlFor="tricitiesRadio">Tri-Cities</label>
+						<div className="wsu-c-form__container--input-item">
+							<input type="radio" id="tricitiesRadio" name="city" value="tricitiesRadio" className="wsu-c-form__radio"/>
+							<label className="wsu-c-form__label" htmlFor="tricitiesRadio">Tri-Cities</label>
+						</div>
 					</div>
-				</div>
+				</fieldset>
 
-				<label className="wsu-c-form__label">City Checkbox</label>
-				<div className="wsu-c-form__container--item">
-					<div className="wsu-c-form__container--input-item">
-						<input type="checkbox" class="wsu-c-form__checkbox" id="moscowCheckbox" name="moscowCheckbox" />
-						<label className="wsu-c-form__label" htmlFor="moscowCheckbox">Moscow</label>
-					</div>
+				<fieldset className="wsu-c-form__fieldset">
+					<legend className="wsu-c-form__legend">City Checkbox</legend>
+					<div className="wsu-c-form__container--item">
+						<div className="wsu-c-form__container--input-item">
+							<input type="checkbox" class="wsu-c-form__checkbox" id="moscowCheckbox" name="moscowCheckbox" />
+							<label className="wsu-c-form__label" htmlFor="moscowCheckbox">Moscow</label>
+						</div>
 
-					<div className="wsu-c-form__container--input-item">
-						<input type="checkbox" class="wsu-c-form__checkbox" id="pullmanCheckbox" name="pullmanCheckbox" />
-						<label className="wsu-c-form__label" htmlFor="pullmanCheckbox">Pullman</label>
-					</div>
+						<div className="wsu-c-form__container--input-item">
+							<input type="checkbox" class="wsu-c-form__checkbox" id="pullmanCheckbox" name="pullmanCheckbox" />
+							<label className="wsu-c-form__label" htmlFor="pullmanCheckbox">Pullman</label>
+						</div>
 
-					<div className="wsu-c-form__container--input-item">
-						<input type="checkbox" class="wsu-c-form__checkbox" id="colfaxCheckbox" name="colfaxCheckbox" />
-						<label className="wsu-c-form__label" htmlFor="colfaxCheckbox">Colfax</label>
-					</div>
+						<div className="wsu-c-form__container--input-item">
+							<input type="checkbox" class="wsu-c-form__checkbox" id="colfaxCheckbox" name="colfaxCheckbox" />
+							<label className="wsu-c-form__label" htmlFor="colfaxCheckbox">Colfax</label>
+						</div>
 
-					<div className="wsu-c-form__container--input-item">
-						<input type="checkbox" class="wsu-c-form__checkbox" id="albionCheckbox" name="albionCheckbox" />
-						<label className="wsu-c-form__label" htmlFor="albionCheckbox">Albion</label>
-					</div>
+						<div className="wsu-c-form__container--input-item">
+							<input type="checkbox" class="wsu-c-form__checkbox" id="albionCheckbox" name="albionCheckbox" />
+							<label className="wsu-c-form__label" htmlFor="albionCheckbox">Albion</label>
+						</div>
 
-					<div className="wsu-c-form__container--input-item">
-						<input type="checkbox" class="wsu-c-form__checkbox" id="clarkstonCheckbox" name="clarkstonCheckbox" />
-						<label className="wsu-c-form__label" htmlFor="clarkstonCheckbox">Clarkston</label>
-					</div>
+						<div className="wsu-c-form__container--input-item">
+							<input type="checkbox" class="wsu-c-form__checkbox" id="clarkstonCheckbox" name="clarkstonCheckbox" />
+							<label className="wsu-c-form__label" htmlFor="clarkstonCheckbox">Clarkston</label>
+						</div>
 
-					<div className="wsu-c-form__container--input-item">
-						<input type="checkbox" class="wsu-c-form__checkbox" id="uniontownCheckbox" name="uniontownCheckbox" />
-						<label className="wsu-c-form__label" htmlFor="uniontownCheckbox">Uniontown</label>
+						<div className="wsu-c-form__container--input-item">
+							<input type="checkbox" class="wsu-c-form__checkbox" id="uniontownCheckbox" name="uniontownCheckbox" />
+							<label className="wsu-c-form__label" htmlFor="uniontownCheckbox">Uniontown</label>
+						</div>
 					</div>
-				</div>
+				</fieldset>
 
 				<button class="wsu-c-button" type="submit">Submit</button>
 			</form>
@@ -158,56 +162,60 @@ const ContentFormCheatsheetInherited = () => {
 					</select>
 				</div>
 
-				<label>City Radio</label>
-				<div className="wsu-c-form__container--item">
-					<div className="wsu-c-form__container--input-item">
-						<input type="radio" id="pullmanRadio" name="city" value="pullmanRadio"/>
-						<label htmlFor="pullmanRadio">Pullman</label>
-					</div>
+				<fieldset>
+					<legend>City Radio</legend>
+					<div className="wsu-c-form__container--item">
+						<div className="wsu-c-form__container--input-item">
+							<input type="radio" id="pullmanRadio" name="city" value="pullmanRadio"/>
+							<label htmlFor="pullmanRadio">Pullman</label>
+						</div>
 
-					<div className="wsu-c-form__container--input-item">
-						<input type="radio" id="spokaneRadio" name="city" value="spokaneRadio"/>
-						<label htmlFor="spokaneRadio">Spokane</label>
-					</div>
+						<div className="wsu-c-form__container--input-item">
+							<input type="radio" id="spokaneRadio" name="city" value="spokaneRadio"/>
+							<label htmlFor="spokaneRadio">Spokane</label>
+						</div>
 
-					<div className="wsu-c-form__container--input-item">
-						<input type="radio" id="tricitiesRadio" name="city" value="tricitiesRadio"/>
-						<label htmlFor="tricitiesRadio">Tri-Cities</label>
+						<div className="wsu-c-form__container--input-item">
+							<input type="radio" id="tricitiesRadio" name="city" value="tricitiesRadio"/>
+							<label htmlFor="tricitiesRadio">Tri-Cities</label>
+						</div>
 					</div>
-				</div>
+				</fieldset>
 
-				<label>City Checkbox</label>
-				<div className="wsu-c-form__container--item">
-					<div className="wsu-c-form__container--input-item">
-						<input type="checkbox" id="moscowCheckbox" name="moscowCheckbox" />
-						<label htmlFor="moscowCheckbox">Moscow</label>
-					</div>
+				<fieldset>
+					<legend>City Checkbox</legend>
+					<div className="wsu-c-form__container--item">
+						<div className="wsu-c-form__container--input-item">
+							<input type="checkbox" id="moscowCheckbox" name="moscowCheckbox" />
+							<label htmlFor="moscowCheckbox">Moscow</label>
+						</div>
 
-					<div className="wsu-c-form__container--input-item">
-						<input type="checkbox" id="pullmanCheckbox" name="pullmanCheckbox" />
-						<label htmlFor="pullmanCheckbox">Pullman</label>
-					</div>
+						<div className="wsu-c-form__container--input-item">
+							<input type="checkbox" id="pullmanCheckbox" name="pullmanCheckbox" />
+							<label htmlFor="pullmanCheckbox">Pullman</label>
+						</div>
 
-					<div className="wsu-c-form__container--input-item">
-						<input type="checkbox" id="colfaxCheckbox" name="colfaxCheckbox" />
-						<label htmlFor="colfaxCheckbox">Colfax</label>
-					</div>
+						<div className="wsu-c-form__container--input-item">
+							<input type="checkbox" id="colfaxCheckbox" name="colfaxCheckbox" />
+							<label htmlFor="colfaxCheckbox">Colfax</label>
+						</div>
 
-					<div className="wsu-c-form__container--input-item">
-						<input type="checkbox" id="albionCheckbox" name="albionCheckbox" />
-						<label htmlFor="albionCheckbox">Albion</label>
-					</div>
+						<div className="wsu-c-form__container--input-item">
+							<input type="checkbox" id="albionCheckbox" name="albionCheckbox" />
+							<label htmlFor="albionCheckbox">Albion</label>
+						</div>
 
-					<div className="wsu-c-form__container--input-item">
-						<input type="checkbox" id="clarkstonCheckbox" name="clarkstonCheckbox" />
-						<label htmlFor="clarkstonCheckbox">Clarkston</label>
-					</div>
+						<div className="wsu-c-form__container--input-item">
+							<input type="checkbox" id="clarkstonCheckbox" name="clarkstonCheckbox" />
+							<label htmlFor="clarkstonCheckbox">Clarkston</label>
+						</div>
 
-					<div className="wsu-c-form__container--input-item">
-						<input type="checkbox" id="uniontownCheckbox" name="uniontownCheckbox" />
-						<label htmlFor="uniontownCheckbox">Uniontown</label>
+						<div className="wsu-c-form__container--input-item">
+							<input type="checkbox" id="uniontownCheckbox" name="uniontownCheckbox" />
+							<label htmlFor="uniontownCheckbox">Uniontown</label>
+						</div>
 					</div>
-				</div>
+				</fieldset>
 
 				<button type="submit">Submit</button>
 			</form>

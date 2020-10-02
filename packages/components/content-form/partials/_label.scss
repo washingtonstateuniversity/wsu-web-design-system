@@ -1,16 +1,3 @@
-/* Styles
-======================= */
-@mixin wsu-c-form__label {
-	@include font-size(14px, 400);
-
-	display: inline-block;
-
-	margin: $unit $unit $unit-2xs;
-	width: 100%;
-
-	cursor: pointer;
-}
-
 /* Selectors
 ======================= */
 .wsu-c-content label,
@@ -25,8 +12,8 @@
 .wsu-c-form__checkbox,
 .wsu-c-form__radio {
 	& + label {
-		margin: 0;
-		margin-left: $unit-xs;
+		margin: 0 0 0 $unit-xs;
+		font-weight: 400;
 	}
 
 	&:checked + label {
