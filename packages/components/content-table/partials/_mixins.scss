@@ -21,6 +21,11 @@
 	padding: calc(#{$unit-xs} + 2px) $unit-xs #{$unit-xs};
 	margin: 0;
 	line-height: 1;
+	border-bottom: 1px solid color(gray, 10);
+}
+
+@mixin wsu-c-table__last-content-row {
+	border-bottom: none;
 }
 
 @mixin wsu-c-table__th {
@@ -37,7 +42,8 @@
 
 @mixin wsu-c-table__thead {
 	border-top: 2px solid color(primary, base);
-	border-bottom: 1px solid color(gray, 10);@include font-size(12px, 700);
+	border-bottom: 1px solid color(gray, 10);
+	@include font-size(12px, 700);
 }
 
 @mixin wsu-c-table__tfoot {

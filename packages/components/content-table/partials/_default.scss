@@ -29,6 +29,11 @@
 		@include wsu-c-table__td;
 	}
 
+	tbody tr:last-child td,
+	tbody tr:last-child th {
+		@include wsu-c-table__last-content-row;
+	}
+
 	// Header / Footer
 	thead th,
 	thead td,

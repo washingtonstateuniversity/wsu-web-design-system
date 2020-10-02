@@ -14,7 +14,7 @@
 	
 		// Table Content
 		.row-hover tr:hover td  {
-			background-color: #FAE6EA;
+			background-color: color(gray, 10);
 		}
 
 		td,
@@ -28,6 +28,15 @@
 	
 		td {
 			@include wsu-c-table__td;
+		}
+
+		.odd td {
+			background: color(gray, 5);
+		}
+
+		tbody tr:last-child td,
+		tbody tr:last-child th {
+			@include wsu-c-table__last-content-row;
 		}
 	
 		// Header / Footer
@@ -44,7 +53,7 @@
 			@include wsu-c-table__thead;
 
 			&:hover {
-				background-color: color(gray, 20);
+				background-color: color(gray, 10);
 			}
 		}
 	
@@ -53,8 +62,10 @@
 			@include wsu-c-table__tfoot;
 		}
 
+		
+
 	}
-	
+
 	// Table
 	.dataTables_wrapper {
 		position: relative;
