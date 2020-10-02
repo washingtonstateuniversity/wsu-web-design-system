@@ -1,0 +1,54 @@
+
+/* Selectors 
+======================= */
+.wsu-c-table {
+	@include wsu-c-table;
+
+	// Caption
+	caption {
+		@include wsu-c-table__caption
+	}
+
+	&--captionTop {
+		caption {
+			@include wsu-c-table__caption--top;
+		}
+	}
+
+	// Table Content
+	td,
+	th {
+		@include wsu-c-table__cell;
+	}
+
+	th {
+		@include wsu-c-table__th;
+	}
+
+	td {
+		@include wsu-c-table__td;
+	}
+
+	tbody tr:last-child td,
+	tbody tr:last-child th {
+		@include wsu-c-table__last-content-row;
+	}
+
+	// Header / Footer
+	thead th,
+	thead td,
+	tfoot th,
+	tfoot td {
+		@include wsu-c-table__thead-tfoot;
+	}
+
+	thead th,
+	thead td {
+		@include wsu-c-table__thead;
+	}
+
+	tfoot th,
+	tfoot td {
+		@include wsu-c-table__tfoot;
+	}
+}

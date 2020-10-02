@@ -215,6 +215,14 @@ $nav-width: 260px;
 		}
 	}
 
+	&__menu-item--current-parent {
+
+		.#{$class-base}__menu-item-link {
+			font-weight: 600;
+		}
+
+	}
+
 	&__menu-toggle {
 		position: absolute;
 		top: 0;
@@ -237,10 +245,19 @@ $nav-width: 260px;
 
 		&::after {
 			content: "\F103";
+			display: block;
 			font-family: wsu-icons !important;
 			font-size: 0.8rem;
 			font-weight: 500;
 			color: color( gray, 50 );
+			transform: rotate( 0deg);
+			transition: transform 200ms ease-in;
+		}
+	}
+
+	&__menu-item-wrapper[aria-expanded="true"] > .#{$class-base}__menu-item {
+		.#{$class-base}__menu-toggle::after {
+			transform: rotate( 180deg);
 		}
 	}
 
@@ -280,10 +297,18 @@ $nav-width: 260px;
 		overflow: hidden;
 		background-color: color( gray, 5 );
 
+		.#{$class-base}__menu-item-wrapper[aria-expanded="true"] {
+
+			& > .#{$class-base}__menu-item  .#{$class-base}__menu-item-link {
+				font-weight: 600;
+			}
+
+		}
+
 		.#{$class-base}__menu-item-link {
 			font-size: .85rem;
 			font-weight: 400;
-			padding-left: 40px;
+			padding-left: 35px;
 		}
 
 		.#{$class-base}__menu-item--current {
@@ -295,7 +320,14 @@ $nav-width: 260px;
 
 	}
 
-	
+	/** Second level menu style */
+	&__menu .#{$class-base}__menu .#{$class-base}__menu {
+
+		.#{$class-base}__menu-item-link {
+			padding-left: 50px;
+		}
+
+	}
 
 }
 

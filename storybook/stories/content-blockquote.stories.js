@@ -19,6 +19,7 @@ export default {
 		withA11y,
 		withKnobs
 	],
+	component: WsuBlockquote
 };
 
 export const Default = () => {

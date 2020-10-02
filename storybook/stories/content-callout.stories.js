@@ -20,7 +20,8 @@ export default {
 	decorators: [
 		withA11y,
 		withKnobs,
-	]
+	],
+	component: WsuCallout
 };
 
 export const DefaultCallout = () => {

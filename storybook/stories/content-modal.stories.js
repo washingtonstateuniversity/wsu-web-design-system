@@ -18,7 +18,8 @@ export default {
 	decorators: [
 		withA11y,
 		withKnobs,
-	]
+	],
+	component: WsuModal
 };
 
 export const DefaultModal = () => {

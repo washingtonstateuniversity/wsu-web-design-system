@@ -16,7 +16,8 @@ export default {
 	decorators: [
 		withA11y,
 		withKnobs
-	]
+	],
+	component: WsuHero
 };
 
 export const DefaultBanner = () => {

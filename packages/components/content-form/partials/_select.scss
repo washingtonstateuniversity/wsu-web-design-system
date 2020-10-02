@@ -1,21 +1,7 @@
-/* Select Styles
+/* Selectors
 ======================= */
-select,
-.gform_wrapper select {
-	padding: $unit $unit;
-	width: 100%;
-
-	&:focus {
-		@include elevate(2);
-		outline: none;
-		border-color: color(gray, 40);
-	}
-
-	&::input-placeholder {
-		color: color(gray, 60);
-	}
-}
-
-.gform_wrapper select {
-	width: inherit;
+.wsu-c-content select,
+select.wsu-c-form__select {
+	@include wsu-c-form__input;
+	@include wsu-c-form__select;
 }

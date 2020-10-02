@@ -19,7 +19,8 @@ export default {
 	decorators: [
 		withA11y,
 		withKnobs
-	]
+	],
+	component: WsuAccordion
 };
 
 import '../../packages/components/content-accordion/script';
