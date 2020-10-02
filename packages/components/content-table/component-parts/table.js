@@ -2,21 +2,25 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
+import {getUtilityClasses} from '@wsuwebteam/build-tools/js/helpers/utilityClasses';
+
 class ContentTable extends Component {
 	render() {
 
-		const classes = classnames(
-			'wsu-c-table', 
-			{
-				'wsu-c-table--caption-top': this.props.captionTop,
-				'wsu-c-table--striped': this.props.striped,
-				'wsu-c-table--spacingIsCompressed': this.props.spacingIsCompressed,
-				'wsu-c-table--spacingIsExpanded': this.props.spacingIsExpanded,
-			}
+		let containerClasses = getUtilityClasses(
+			[
+				{ key: 'captionTop', prefix:'wsu-c-table--', isBool: true, value: 'captionTop' },
+				{ key: 'striped', prefix:'wsu-c-table--', isBool: true, value: 'striped' },
+				{ key: 'borders', prefix: 'wsu-c-table--', isBool: true, value: 'borders' },
+				{ key: 'spacing', prefix: 'wsu-c-table--' },
+				{ key: 'alignment', prefix: 'wsu-c-table--' },
+			],
+			this.props,
+			['wsu-c-table']
 		)
 
 		return (
-			<table className={classes}>
+			<table className={containerClasses}>
 				{this.props.children}
 			</table>
 		)
@@ -26,15 +30,17 @@ class ContentTable extends Component {
 ContentTable.propTypes = {
 	captionTop: PropTypes.bool,
 	striped: PropTypes.bool,
-	spacingIsCompressed: PropTypes.bool,
-	spacingIsExpanded: PropTypes.bool,
+	borders: PropTypes.bool,
+	spacing: PropTypes.oneOf(['', 'spacingCompressed', 'spacingExpanded']),
+	alignment: PropTypes.oneOf(['', 'alignLeft', 'alignCenter', 'alignRight'])
 }
 
 ContentTable.defaultProps = {
 	captionTop: false,
 	striped: false,
-	spacingIsCompressed: false,
-	spacingIsExpanded: false,
+	borders: false,
+	spacing: '',
+	alignment: '',
 }
 
 export default ContentTable;

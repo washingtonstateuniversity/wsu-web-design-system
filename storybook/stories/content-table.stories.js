@@ -54,6 +54,7 @@ export default {
 		withA11y,
 		withKnobs
 	],
+	component: WsuTable
 };
 
 export const DefaultTable = () => {
@@ -61,129 +62,12 @@ export const DefaultTable = () => {
 	return (
 		<ComponentWrapper layout="content">
 			<WsuTable 
-				spacingIsCompressed={boolean('Spacing - Compressed', false, optionsGroupID)}
-				spacingIsExpanded={boolean('Spacing - Expanded', false, optionsGroupID)}
-				striped={boolean('Different background on even rows', false, optionsGroupID)}
-				captionTop={boolean('Display caption top', false, optionsGroupID)}
+				striped={boolean('Zebra Stripe', false, optionsGroupID)}
+				captionTop={boolean('Caption Top', false, optionsGroupID)}
+				borders={boolean('Add Borders', false, optionsGroupID)}
+				spacing={select('Cell Spacing', { Default: '', Compressed: 'spacingCompressed', Expanded: 'spacingExpanded' }, '', optionsGroupID)}
+				alignment={select('Align text', { Default: '', Left: 'alignLeft', Center: 'alignCenter', Right: 'alignRight' }, '', optionsGroupID)}
 			>
-				<WsuCaption>Estimated yearly costs for two semesters at WSU.</WsuCaption>
-				<WsuThead>
-					<WsuTr>
-						<WsuTh scope="col">Expense</WsuTh>
-						<WsuTh scope="col">WA Resident</WsuTh>
-						<WsuTh scope="col">Non-WA Resident</WsuTh>
-						<WsuTh scope="col">WUE Recipient</WsuTh>
-					</WsuTr>
-				</WsuThead>
-				<WsuTbody>
-					<WsuTr>
-						<WsuTh scope="row">Tuition</WsuTh>
-						<WsuTd>$10,760</WsuTd>
-						<WsuTd>$25,702</WsuTd>
-						<WsuTd>$14,702</WsuTd>
-					</WsuTr>
-					<WsuTr>
-						<WsuTh scope="row">Dining</WsuTh>
-						<WsuTd>$4,300</WsuTd>
-						<WsuTd>$1,200</WsuTd>
-						<WsuTd>$2,000</WsuTd>
-					</WsuTr>
-					<WsuTr>
-						<WsuTh scope="row">Housing</WsuTh>
-						<WsuTd>$6,822</WsuTd>
-						<WsuTd>$6,999</WsuTd>
-						<WsuTd>$6</WsuTd>
-					</WsuTr>
-					<WsuTr>
-						<WsuTh scope="row">Fees</WsuTh>
-						<WsuTd>$6,822</WsuTd>
-						<WsuTd>$39</WsuTd>
-						<WsuTd>$10,000</WsuTd>
-					</WsuTr>
-					<WsuTr>
-						<WsuTh scope="row">Books</WsuTh>
-						<WsuTd>$6,822</WsuTd>
-						<WsuTd>$5,003</WsuTd>
-						<WsuTd>$1,230</WsuTd>
-					</WsuTr>
-				</WsuTbody>
-				<WsuTfoot>
-					<WsuTr>
-						<WsuTh scope="col">Expense</WsuTh>
-						<WsuTh scope="col">WA Resident</WsuTh>
-						<WsuTh scope="col">Non-WA Resident</WsuTh>
-						<WsuTh scope="col">WUE Recipient</WsuTh>
-					</WsuTr>
-				</WsuTfoot>
-			</WsuTable>
-		</ComponentWrapper>
-	)
-}
-
-export const spacingCompressed = () => {
-
-	return (
-		<ComponentWrapper layout="content">
-			<WsuTable spacingIsCompressed>
-				<WsuCaption>Estimated yearly costs for two semesters at WSU.</WsuCaption>
-				<WsuThead>
-					<WsuTr>
-						<WsuTh scope="col">Expense</WsuTh>
-						<WsuTh scope="col">WA Resident</WsuTh>
-						<WsuTh scope="col">Non-WA Resident</WsuTh>
-						<WsuTh scope="col">WUE Recipient</WsuTh>
-					</WsuTr>
-				</WsuThead>
-				<WsuTbody>
-					<WsuTr>
-						<WsuTh scope="row">Tuition</WsuTh>
-						<WsuTd>$10,760</WsuTd>
-						<WsuTd>$25,702</WsuTd>
-						<WsuTd>$14,702</WsuTd>
-					</WsuTr>
-					<WsuTr>
-						<WsuTh scope="row">Dining</WsuTh>
-						<WsuTd>$4,300</WsuTd>
-						<WsuTd>$1,200</WsuTd>
-						<WsuTd>$2,000</WsuTd>
-					</WsuTr>
-					<WsuTr>
-						<WsuTh scope="row">Housing</WsuTh>
-						<WsuTd>$6,822</WsuTd>
-						<WsuTd>$6,999</WsuTd>
-						<WsuTd>$6</WsuTd>
-					</WsuTr>
-					<WsuTr>
-						<WsuTh scope="row">Fees</WsuTh>
-						<WsuTd>$6,822</WsuTd>
-						<WsuTd>$39</WsuTd>
-						<WsuTd>$10,000</WsuTd>
-					</WsuTr>
-					<WsuTr>
-						<WsuTh scope="row">Books</WsuTh>
-						<WsuTd>$6,822</WsuTd>
-						<WsuTd>$5,003</WsuTd>
-						<WsuTd>$1,230</WsuTd>
-					</WsuTr>
-				</WsuTbody>
-				<WsuTfoot>
-					<WsuTr>
-						<WsuTh scope="col">Expense</WsuTh>
-						<WsuTh scope="col">WA Resident</WsuTh>
-						<WsuTh scope="col">Non-WA Resident</WsuTh>
-						<WsuTh scope="col">WUE Recipient</WsuTh>
-					</WsuTr>
-				</WsuTfoot>
-			</WsuTable>
-		</ComponentWrapper>
-	)
-}
-
-export const spacingExpanded = () => {
-
-	return (
-		<ComponentWrapper layout="content">
-			<WsuTable spacingIsExpanded>
 				<WsuCaption>Estimated yearly costs for two semesters at WSU.</WsuCaption>
 				<WsuThead>
 					<WsuTr>
@@ -243,6 +127,65 @@ export const stripedTable = () => {
 	return (
 		<ComponentWrapper layout="content">
 			<WsuTable striped>
+				<WsuCaption>Estimated yearly costs for two semesters at WSU.</WsuCaption>
+				<WsuThead>
+					<WsuTr>
+						<WsuTh scope="col">Expense</WsuTh>
+						<WsuTh scope="col">WA Resident</WsuTh>
+						<WsuTh scope="col">Non-WA Resident</WsuTh>
+						<WsuTh scope="col">WUE Recipient</WsuTh>
+					</WsuTr>
+				</WsuThead>
+				<WsuTbody>
+					<WsuTr>
+						<WsuTh scope="row">Tuition</WsuTh>
+						<WsuTd>$10,760</WsuTd>
+						<WsuTd>$25,702</WsuTd>
+						<WsuTd>$14,702</WsuTd>
+					</WsuTr>
+					<WsuTr>
+						<WsuTh scope="row">Dining</WsuTh>
+						<WsuTd>$4,300</WsuTd>
+						<WsuTd>$1,200</WsuTd>
+						<WsuTd>$2,000</WsuTd>
+					</WsuTr>
+					<WsuTr>
+						<WsuTh scope="row">Housing</WsuTh>
+						<WsuTd>$6,822</WsuTd>
+						<WsuTd>$6,999</WsuTd>
+						<WsuTd>$6</WsuTd>
+					</WsuTr>
+					<WsuTr>
+						<WsuTh scope="row">Fees</WsuTh>
+						<WsuTd>$6,822</WsuTd>
+						<WsuTd>$39</WsuTd>
+						<WsuTd>$10,000</WsuTd>
+					</WsuTr>
+					<WsuTr>
+						<WsuTh scope="row">Books</WsuTh>
+						<WsuTd>$6,822</WsuTd>
+						<WsuTd>$5,003</WsuTd>
+						<WsuTd>$1,230</WsuTd>
+					</WsuTr>
+				</WsuTbody>
+				<WsuTfoot>
+					<WsuTr>
+						<WsuTh scope="col">Expense</WsuTh>
+						<WsuTh scope="col">WA Resident</WsuTh>
+						<WsuTh scope="col">Non-WA Resident</WsuTh>
+						<WsuTh scope="col">WUE Recipient</WsuTh>
+					</WsuTr>
+				</WsuTfoot>
+			</WsuTable>
+		</ComponentWrapper>
+	)
+}
+
+export const borderedTable = () => {
+
+	return (
+		<ComponentWrapper layout="content">
+			<WsuTable borders>
 				<WsuCaption>Estimated yearly costs for two semesters at WSU.</WsuCaption>
 				<WsuThead>
 					<WsuTr>
