@@ -1,16 +1,7 @@
 @import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
 
 // Reset form elements for a consistent editing experience
-@import '../../packages/components/content-form/partials/shared';
-
-// Form component part styles
-@import '../../packages/components/content-form/partials/buttons';
-@import '../../packages/components/content-form/partials/checkbox';
-@import '../../packages/components/content-form/partials/input';
-@import '../../packages/components/content-form/partials/label';
-@import '../../packages/components/content-form/partials/radio';
-@import '../../packages/components/content-form/partials/select';
-@import '../../packages/components/content-form/partials/textarea';
+@import '../../packages/components/content-form/style.scss';
 
 /* Gravity Forms admin override styles go here
 ============================================== */
