@@ -1,0 +1,139 @@
+@import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
+@import '../../packages/components/content-table/partials/mixins';
+
+.wsu-c-content {
+
+	.tablepress {
+		@include wsu-c-table;
+		width: 100% !important;
+
+		// Caption
+		caption {
+			@include wsu-c-table__caption;
+		}
+	
+		// Table Content
+		.row-hover tr:hover td  {
+			background-color: color(gray, 10);
+		}
+
+		td,
+		th {
+			@include wsu-c-table__cell;
+		}
+	
+		th {
+			@include wsu-c-table__th;
+		}
+	
+		td {
+			@include wsu-c-table__td;
+		}
+
+		.odd td {
+			background: color(gray, 5);
+		}
+
+		tbody tr:last-child td,
+		tbody tr:last-child th {
+			@include wsu-c-table__last-content-row;
+		}
+	
+		// Header / Footer
+		thead th,
+		thead td,
+		tfoot th,
+		tfoot td {
+			@include wsu-c-table__thead-tfoot;
+			background-color: color(white, base);
+		}
+	
+		thead th,
+		thead td {
+			@include wsu-c-table__thead;
+
+			&:hover {
+				background-color: color(gray, 10);
+			}
+		}
+	
+		tfoot th,
+		tfoot td {
+			@include wsu-c-table__tfoot;
+		}
+
+		
+
+	}
+
+	// Table
+	.dataTables_wrapper {
+		position: relative;
+	}
+
+	.dataTables_info {
+		@include font-size(12px);
+	}
+
+	.dataTables_paginate {
+		position: absolute;
+		top: calc(100% - 20px);
+		right: 0;
+	}
+
+	.paginate_button.disabled {
+		border-bottom-color: color(gray, 45) !important;
+		border-bottom-width: 1px !important;
+
+		&:hover,
+		&:focus {
+			cursor: not-allowed;
+		}
+
+		&::after,
+		&::before {
+			color: color(gray, 45);
+		}
+	}
+
+	.paginate_button.disabled:after,
+	.paginate_button.disabled:before {
+		color: color(gray, 45);
+	}
+
+	.paginate_button.disabled:hover {
+		&::after,
+		&::before {
+			color: color(gray, 45) !important;
+		}
+	}
+
+	.paginate_button:after, 
+	.paginate_button:before {
+		color: color(primary, base);
+	}
+
+	.paging_simple {
+		
+		.paginate_button.next:hover:after, 
+		.paginate_button.previous:hover:before {
+			color: color(primary, light);
+		}
+
+		.paginate_button.next:after, 
+		.paginate_button.previous:before {
+			text-shadow: none;
+			top: 3px;
+		}
+	}
+
+	.tablepress-table-description {
+		display: block;
+	}
+
+	// Filter
+	input,
+	select {
+		padding: $unit-2xs $unit;
+	}
+}
