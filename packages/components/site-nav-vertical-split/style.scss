@@ -9,7 +9,6 @@ $class-base:'wsu-s-nav-vertical-split';
 $menu-font: 'Montserrat', sans-serif;
 $nav-width: 260px;
 
-
 @keyframes slideInFromLeft {
 	0% {
 	  transform: translateX(-100%);
@@ -154,8 +153,6 @@ $nav-width: 260px;
 		margin: 0;
 		padding: 0;
 		line-height: 1;
-		border-bottom: 1px solid color( gray, 10 );
-
 
 		.#{$class-base}__menu-item-wrapper {
 			animation-name: none;
@@ -173,6 +170,14 @@ $nav-width: 260px;
 			visibility: hidden;
 			transition: max-height 300ms ease-out, visibility 0ms linear 1s;
 		}
+
+		/*&:first-child {
+			margin-top: 1rem;
+		}
+
+		&:last-child {
+			margin-bottom: 1rem;
+		}*/
 	}
 
 	&__menu-item {
@@ -188,7 +193,7 @@ $nav-width: 260px;
 		z-index: 1;
 		
 		margin: 0;
-		padding: 12px 40px 12px 20px;
+		padding: 12px 45px 12px 20px;
 		box-sizing: border-box;
 
 		font-family: $menu-font;
@@ -197,12 +202,27 @@ $nav-width: 260px;
 		font-weight: 600;
 		text-decoration: none;
 
-		border-left: 5px solid transparent;
+		&::after {
+			content:"";
+			display: block;
+			height: 0;
+			position: absolute;
+			bottom: 5px;
+			width: auto;
+			left: 20px;
+			right: 45px;
+			background-color: color( gray, 40);
+			transition: height 200ms ease-in;
+			overflow: hidden;
+		}
 
 		&:hover {
-			border-left: 5px solid color(gray, 30);
 			outline: none;
-			background-color: color(gray, 5);
+
+			&::after {
+				background-color: color( gray, 40);
+				height: 2px;
+			}
 		}
 
 	}
@@ -211,7 +231,6 @@ $nav-width: 260px;
 		
 		.#{$class-base}__menu-item-link {
 			border-color: color(primary,light);
-			background-color: color(gray, 5);
 		}
 	}
 
@@ -235,12 +254,15 @@ $nav-width: 260px;
 		border: none;
 		cursor: pointer;
 		outline: none;
-		border-left: 1px solid color( gray, 10 );
 		background-color: #fff;
 
 		&:hover,
 		&:focus {
-			background-color: color(gray,10);
+			background-color: color( gray, 40);
+
+			&::after {
+				color: #fff;
+			}
 		}
 
 		&::after {
@@ -249,15 +271,21 @@ $nav-width: 260px;
 			font-family: wsu-icons !important;
 			font-size: 0.8rem;
 			font-weight: 500;
-			color: color( gray, 50 );
+			color: color( gray, 60 );
 			transform: rotate( 0deg);
 			transition: transform 200ms ease-in;
 		}
+
 	}
 
 	&__menu-item-wrapper[aria-expanded="true"] > .#{$class-base}__menu-item {
-		.#{$class-base}__menu-toggle::after {
-			transform: rotate( 180deg);
+		.#{$class-base}__menu-toggle {
+			background-color: color( gray, 40);
+
+			&::after {
+				transform: rotate( 180deg);
+				color: #fff;
+			}
 		}
 	}
 
@@ -295,36 +323,79 @@ $nav-width: 260px;
 	&__menu .#{$class-base}__menu {
 
 		overflow: hidden;
-		background-color: color( gray, 5 );
+		background-color: color( gray, 40 );
 
-		.#{$class-base}__menu-item-wrapper[aria-expanded="true"] {
+		.#{$class-base} {
 
-			& > .#{$class-base}__menu-item  .#{$class-base}__menu-item-link {
-				font-weight: 600;
+			&__menu-item-wrapper[aria-expanded="true"] {
+
+				& > .#{$class-base}__menu-item  .#{$class-base}__menu-item-link {
+					font-weight: 600;
+				}
+	
 			}
 
-		}
+			&__menu-toggle {
 
-		.#{$class-base}__menu-item-link {
-			font-size: .85rem;
-			font-weight: 400;
-			padding-left: 35px;
-		}
+				background-color: color( gray, 40 );
 
-		.#{$class-base}__menu-item--current {
+				&::after {
+					color: #fff;
+				}
+				
 
-			.#{$class-base}__menu-item-link {
-				font-weight: 600;
+				&:hover {
+					background-color: color( gray, 10 );
+
+					&::after {
+						color: color( gray, 75 );
+					}
+				}
+
+			}
+
+			&__menu-item-link {
+				font-size: .85rem;
+				font-weight: 500;
+				padding-left: 35px;
+				color: #fff;
+
+				&::after {
+					background-color: color( gray, 10);
+				}
+			}
+
+			&__menu-item--current {
+
+				.#{$class-base}__menu-item-link {
+					font-weight: 600;
+				}
+			}
+
+			&__menu-item-wrapper[aria-expanded="true"] > .#{$class-base}__menu-item .#{$class-base}__menu-toggle {
+				background-color: color( gray, 10 );
+
+				&::after {
+					color: color( gray, 75 );
+				}
+
 			}
 		}
 
 	}
 
-	/** Second level menu style */
+	/** third level menu style */
 	&__menu .#{$class-base}__menu .#{$class-base}__menu {
 
-		.#{$class-base}__menu-item-link {
-			padding-left: 50px;
+		background-color: color( gray, 10 );
+
+		.#{$class-base} {
+
+			&__menu-item-link {
+				padding-left: 50px;
+				color: color( gray, 75 );
+			}
+
 		}
 
 	}
