@@ -4,6 +4,10 @@ import { withKnobs, text, boolean, number, select } from "@storybook/addon-knobs
 
 // Storybook Imports
 import { GlobalContainer, SiteContainer, ContentContainer } from '../../../packages/components/containers';
+import ComponentWrapper from '../../../packages/storybook-components/content-wrapper';
+import { WsuHeading, WsuList } from '../../../packages/components';
+
+
 
 import './style.scss';
 
@@ -36,7 +40,17 @@ export const Default = () => {
 			<GlobalContainer>
 				<SiteContainer>
 					<ContentContainer>
-
+						<ComponentWrapper layout="content">
+							<WsuHeading tag="h3">WSU Content Inheritance Class</WsuHeading>
+							<p>At this time, the following html elements can inherit from the <code>.wsu-c-content</code> wrapper class:</p>
+							<ul>
+								<li>Headings</li>
+								<li>Paragraphs</li>
+								<li>Links</li>
+								<li>Lists</li>
+								<li>Forms</li>
+							</ul>
+						</ComponentWrapper>
 					</ContentContainer>
 				</SiteContainer>
 			</GlobalContainer>
@@ -56,7 +70,7 @@ export const Components = () => {
 					<ComponentPlaceholder title="Site Header" />
 					<ComponentPlaceholder title="Site Nav Horizontal" />
 					<ContentContainer>
-					<ComponentPlaceholder title="All Content Components" />
+						<ComponentPlaceholder title="All Content Components" />
 					</ContentContainer>
 					<ComponentPlaceholder title="Site Footer" />
 					<ComponentPlaceholder title="Global Footer" />

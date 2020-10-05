@@ -407,3 +407,11 @@
 		position: relative;
 	}
 }
+
+.wsu-s-nav-vertical__menu-icon-link[aria-expanded="false"] ~ .wsu-s-nav-vertical__nav-container {
+	display: none !important;
+}
+
+.wsu-s-nav-vertical__nav-item.fadeOutLeft {
+	display: none !important;
+}

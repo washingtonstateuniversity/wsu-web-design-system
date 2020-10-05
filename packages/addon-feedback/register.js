@@ -29,7 +29,7 @@ const MyPanel = (props) => {
 			}} 
 			target="_blank"
 		>
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M16 5a1 1 0 0 0-1-1h-3V1a1 1 0 0 0-1-1H1a1 1 0 0 0-1 1v7.143a1 1 0 0 0 1 1h3v3a1 1 0 0 0 1 1h6.73l2.563 2.564A1 1 0 0 0 15 16a1 1 0 0 0 .923-.618A1 1 0 0 0 16 15V5zm-3.475 6.22a1 1 0 0 0-.382-.077H6V6h8v6.586l-1.15-1.15a1 1 0 0 0-.326-.217zM2 7.143V2h8v2H5a1 1 0 0 0-1 1v2.143H2z" fill="currentColor"/></svg>
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M16 5a1 1 0 0 0-1-1h-3V1a1 1 0 0 0-1-1H1a1 1 0 0 0-1 1v7.143a1 1 0 0 0 1 1h3v3a1 1 0 0 0 1 1h6.73l2.563 2.564A1 1 0 0 0 15 16a1 1 0 0 0 .923-.618A1 1 0 0 0 16 15V5zm-3.475 6.22a1 1 0 0 0-.382-.077H6V6h8v6.586l-1.15-1.15a1 1 0 0 0-.326-.217zM2 7.143V2h8v2H5a1 1 0 0 0-1 1v2.143H2z" fill="currentColor"/></svg> <span style={{opacity: "0"}}>Feedback</span>
 		</a>
 	);
 }
