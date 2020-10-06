@@ -19,6 +19,7 @@ export default {
 		withA11y,
 		withKnobs
 	],
+	component: WsuPageBanner
 };
 
 export const Default = () => {

@@ -1,17 +1,16 @@
+
 @import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
 
-/* Set baseline styles for forms
- * This assumes you're unable to make any markup changes
-======================= */
-.wsu-c-content {
-	
-	@import './partials/reset';
-	@import './partials/input';
-	@import './partials/checkbox';
-	@import './partials/fieldset';
-	@import './partials/label';
-	@import './partials/radio';
-	@import './partials/select';
-	@import './partials/buttons';
+// Reset form elements for a consistent editing experience
+@import './partials/mixins';
+@import './partials/shared';
 
-}
+// Form component part styles
+@import './partials/buttons';
+@import './partials/checkbox';
+@import './partials/fieldset';
+@import './partials/input';
+@import './partials/label';
+@import './partials/radio';
+@import './partials/select';
+@import './partials/textarea';
