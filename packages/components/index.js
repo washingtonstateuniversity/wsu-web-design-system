@@ -10,6 +10,7 @@ export { default as WsuArticle } from './content-article';
 export { default as WsuButton } from './content-button';
 export { default as WsuCallout } from './content-callout';
 export { default as WsuCard } from './content-card';
+export { default as WsuCode } from './content-code';
 export { ContentColumn as WsuColumn } from './content-column';
 export { ContentColumnWrapper as WsuColumnWrapper } from './content-column';
 export { default as WsuForm } from './content-form';
