@@ -26,6 +26,7 @@ export { default as WsuLoadingIcon } from './content-loading-icon';
 export { ContentListCheatsheet as WsuListCheatsheet } from './content-list';
 export { default as WsuModal } from './content-modal';
 export { default as WsuP } from './content-paragraph';
+export { default as WsuPre } from './content-pre';
 export { default as WsuHr } from './content-separator';
 export { default as WsuSeparator } from './content-separator';
 export { default as WsuSlider } from './content-slider';
