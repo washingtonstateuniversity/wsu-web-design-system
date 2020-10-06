@@ -2,6 +2,7 @@
 /* Selectors 
 ======================= */
 .wsu-c-table {
+	@include font();
 	@include wsu-c-table;
 
 	// Caption

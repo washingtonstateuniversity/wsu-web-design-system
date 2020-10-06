@@ -1,6 +1,8 @@
 @import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
 
 .wsu-c-article-header {
+	@include font();
+	
 	margin-bottom: space( 'component' );
 
 	&__meta {

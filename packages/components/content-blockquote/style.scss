@@ -2,6 +2,8 @@
 
 .wsu-c-content blockquote,
 .wsu-c-blockquote {
+	@include font();
+	
 	position: relative;
 	padding-top: 2.1em;
 	margin: 0 3em 2em;
