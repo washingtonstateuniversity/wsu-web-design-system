@@ -1,6 +1,8 @@
 @import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
 
 .wsu-g-header__wrapper {
+	@include font();
+	
 	position: fixed;
 	z-index: z('modal');
 	top: 0;
@@ -180,7 +182,6 @@
 		color: color(primary, base);
 		cursor: pointer;
 		border: none;
-		outline: none;
 	}
 }
 
@@ -231,7 +232,6 @@
 		color: color(primary, base);
 		cursor: pointer;
 		border: none;
-		outline: none;
 	}
 }
 

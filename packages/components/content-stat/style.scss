@@ -1,6 +1,8 @@
 @import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
 
 .wsu-c-stat__wrapper {
+	@include font();
+	
 	display: flex;
 	flex-direction: column;
 	align-items: center;

@@ -5,8 +5,7 @@
 /* Nav wrapper
 ======================= */
 
-$class-base:'wsu-s-nav-vertical-split';
-$menu-font: 'Montserrat', sans-serif;
+$class-base: 'wsu-s-nav-vertical-split';
 $nav-width: 260px;
 
 
@@ -31,8 +30,7 @@ $nav-width: 260px;
  
 
 .#{$class-base} {
-
-	font-family: $menu-font;
+	@include font();
 	
 
 	position: fixed;
@@ -191,7 +189,6 @@ $nav-width: 260px;
 		padding: 12px 40px 12px 20px;
 		box-sizing: border-box;
 
-		font-family: $menu-font;
 		font-size: 0.9rem;
 		color: color(gray, 75);
 		font-weight: 600;
