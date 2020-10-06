@@ -3,6 +3,8 @@
 /* Start Base Styles
 ======================= */
 .wsu-s-footer__wrapper {
+	@include font();
+	
 	position: relative;
 
 	min-height: 165px;

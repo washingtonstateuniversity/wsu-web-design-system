@@ -73,17 +73,15 @@
 }
 
 .wsu-c-callout {
+	@include font();
 
 	margin-bottom: 2em;
-	font-family: "Montserrat", sans-serif;
 
 	@media screen and (max-width: 600px) {
 		@include layout-vertical;
 	}
 
 	.wsu-c-callout {
-
-		font-family: "Montserrat", sans-serif;
 
 		&__container {
 			display: flex;

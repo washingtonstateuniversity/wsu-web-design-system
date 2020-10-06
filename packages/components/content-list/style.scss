@@ -8,6 +8,8 @@
 .wsu-c-list,
 .wsu-c-content ul,
 .wsu-c-content ol {
+	@include font();
+	
 	margin: 0;
 	margin-left: $unit;
 	padding: 0;

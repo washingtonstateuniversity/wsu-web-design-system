@@ -8,6 +8,7 @@
 .wsu-c-content button,
 .wsu-c-content .wsu-c-button,
 .wsu-c-button {
+	@include font();
 
 	display: inline-block;
 
