@@ -3,6 +3,8 @@
 /* Start Base Styles
 ======================= */
 .wsu-s-header__wrapper {
+	@include font();
+	
 	display: flex;
 	align-items: flex-end;
 

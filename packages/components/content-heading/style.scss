@@ -55,7 +55,8 @@
 .wsu-c-content h4:not([class^="wsu-c"]):not([class*=" wsu-c"]),
 .wsu-c-content h5:not([class^="wsu-c"]):not([class*=" wsu-c"]),
 .wsu-c-content h6:not([class^="wsu-c"]):not([class*=" wsu-c"]) {
-	font-family: $wsu-bt-primary-font-family;
+	@include font();
+	
 	margin-top: 0;
 	margin-bottom: 0.5em;
 	color: color(gray, 85);

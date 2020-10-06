@@ -4,6 +4,8 @@
 /* Start Base Styles
 ======================= */
 .wsu-s-nav-horizontal__wrapper {
+	@include font();
+	
 	position: relative;
 	z-index: z('header');
 

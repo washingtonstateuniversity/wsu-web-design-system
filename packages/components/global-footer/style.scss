@@ -1,6 +1,7 @@
 @import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
 
 .wsu-g-footer-wrapper {
+	@include font();
 	background-color: color(gray, 80);
 	width: 100%;
 }

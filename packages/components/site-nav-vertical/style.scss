@@ -5,6 +5,8 @@
 /* Nav wrapper
 ======================= */
 .wsu-s-nav-vertical__wrapper {
+	@include font();
+	
 	height: 100%;
 
 	& ~ [class*="wsu-s-container"] {
