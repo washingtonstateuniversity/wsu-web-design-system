@@ -55,11 +55,9 @@
 	@include wsu-c-title-size; 
 }
 
-
 .wsu-c-em-callout {
-
+	@include font;
 	@include image-frame;
-
 	@include content-styles;
 
 	&__container {

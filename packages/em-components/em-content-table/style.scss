@@ -10,6 +10,11 @@
 	border-collapse: collapse;
 }
 
+.wsu-c-em-table table td,
+.wsu-c-em-table table th {
+	@include font;
+}
+
 .wsu-c-em-table tr th {
 	text-transform: uppercase;
 	font-weight: 600;

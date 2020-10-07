@@ -2,11 +2,11 @@
 /* Selectors 
 ======================= */
 .wsu-c-table {
-	@include font();
 	@include wsu-c-table;
 
 	// Caption
 	caption {
+		@include font();
 		@include wsu-c-table__caption
 	}
 
@@ -19,6 +19,7 @@
 	// Table Content
 	td,
 	th {
+		@include font();
 		@include wsu-c-table__cell;
 	}
 
