@@ -38,6 +38,8 @@
 }
 
 .wsu-c-em-table table + figcaption {
+	@include font;
+	
 	margin-top: .6em;
 	font-style: italic;
 }

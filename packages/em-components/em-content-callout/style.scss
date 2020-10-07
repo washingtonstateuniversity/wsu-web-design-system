@@ -5,6 +5,8 @@
 @mixin content-styles {
 
 	.wsu-c-title {
+		@include font;
+		
 		font-size: 1.2rem;
 		font-weight: 600;
 		line-height: 1.35em;
@@ -105,6 +107,8 @@
 		text-align: right;
 
 		.wsu-c-wrapper-link {
+			@include font;
+			
 			text-decoration: none;
 			color: #262626;
 			transition: 300ms ease all;
