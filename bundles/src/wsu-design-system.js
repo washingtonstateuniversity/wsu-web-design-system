@@ -24,6 +24,7 @@ import '../../packages/components/site-footer/style.scss';
 import '../../packages/components/content-callout/style.scss';
 import '../../packages/components/content-accordion/style.scss';
 import '../../packages/components/content-icon/style.scss';
+import '../../packages/components/content-image/style.scss';
 import '../../packages/components/content-modal/style.scss';
 import '../../packages/components/content-slider/style.scss';
 import '../../packages/components/content-stat/style.scss';

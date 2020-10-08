@@ -5,6 +5,8 @@
 @mixin content-styles {
 
 	.wsu-c-title {
+		@include font;
+
 		font-size: 1.2rem;
 		font-weight: 600;
 		line-height: 1.35em;
@@ -41,6 +43,7 @@
 	}
 
 	.wsu-c-eyebrow-header {
+		@include font;
 		font-size: 0.875rem;
 		text-transform: uppercase;
 		font-weight: 600;
@@ -55,11 +58,9 @@
 	@include wsu-c-title-size; 
 }
 
-
 .wsu-c-em-callout {
-
+	@include font;
 	@include image-frame;
-
 	@include content-styles;
 
 	&__container {
@@ -107,6 +108,8 @@
 		text-align: right;
 
 		.wsu-c-wrapper-link {
+			@include font;
+			
 			text-decoration: none;
 			color: #262626;
 			transition: 300ms ease all;
