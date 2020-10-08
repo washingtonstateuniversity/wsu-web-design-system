@@ -4,7 +4,7 @@ import { withKnobs, text, boolean, number, select } from "@storybook/addon-knobs
 
 // Storybook Imports
 import { GlobalContainer, SiteContainer, ContentContainer } from '../../../packages/components/containers';
-import ComponentWrapper from '../../../packages/storybook-components/content-wrapper';
+import ComponentWrapper from '../../../packages/component-parts/content-wrapper';
 import { WsuHeading, WsuList } from '../../../packages/components';
 
 

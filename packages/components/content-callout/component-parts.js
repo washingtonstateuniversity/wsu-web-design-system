@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 
 // Component Deps
-import empty from '../../storybook-components/field-checker';
+import { empty } from '@wsuwebteam/build-tools/js/helpers';
 import {getUtilityClasses} from '@wsuwebteam/build-tools/js/helpers/utilityClasses';
 
 const ContentCalloutEyebrowTitle = ( props ) => {
