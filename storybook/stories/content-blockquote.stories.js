@@ -28,6 +28,10 @@ export const Default = () => {
 		<ComponentWrapper layout="content">
 			<WsuBlockquote
 				cite={text( 'cite','Lorem ipsum dolor sit amet', optionsGroupID )}
+				citeUrl={text( 'citeUrl','https://wsu.edu', optionsGroupID )}
+				name={text( 'name','Lorem ipsum', optionsGroupID )}
+				title={text( 'title','Consectetur adipiscing elit', optionsGroupID )}
+				citeAlign={ select( 'citeAlign',['default','center','right'],'default', optionsGroupID )  }
 				textSize={select( 'textSize',['default','xsmall','small','medium','medium-large','large'],'default', optionsGroupID )}
 				width={select( 'width',['default','small','medium','large','full'],'default', optionsGroupID )}
 				>

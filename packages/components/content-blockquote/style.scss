@@ -21,20 +21,57 @@
 		left: 0;
 	}
 
-	cite {
-		display: block;
-		font-size: 0.8em;
-		font-style: normal;
-		font-weight: 500;
+	&__footer {
+		margin-top: 2em;
+		margin-left: 2em;
+		margin-right: 2em;
+		font-size: 0.8rem;
 		position: relative;
-		margin-top: 0.65em;
+		display: flex;
+		flex-direction: column;
+		
 
-		&::before {
-			content: '\2014';
-			display: inline-block;
-			top: 0;
-			left: 0;
-			margin-right: 0.3em;
+		&--align-center {
+			justify-content: center;
+			align-items: center;
+		}
+
+		&--align-right {
+			justify-content: flex-end;
+			align-items: flex-end;
+		}
+
+		& > :first-child {
+
+			&::before {
+				content: '\2014';
+				display: inline-block;
+				top: 0;
+				left: 0;
+				margin-right: 0.3em;
+				position: absolute;
+				font-weight: 500;
+				top: 0;
+				left: -1.5em;
+			}
+
+		}
+
+		&-name {
+			display: block;
+			font-weight: 600;
+			position: relative;
+		}
+
+		&-title {
+			display: block;
+			font-size: 0.9em;
+			position: relative;
+		}
+
+		&-cite {
+			display: block;
+			position: relative;
 		}
 	}
 
