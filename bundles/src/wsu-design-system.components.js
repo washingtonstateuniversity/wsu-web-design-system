@@ -3,4 +3,4 @@ import * as Components from '../../packages/components';
 import * as EmComponents from '../../packages/em-components';
 
 wsu_wds.components = Components;
-wsu_wds.em.components = EmComponents;
+wsu_wds.emComponents = EmComponents
