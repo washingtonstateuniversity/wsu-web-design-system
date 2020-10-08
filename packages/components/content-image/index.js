@@ -8,10 +8,14 @@ class ContentImage extends Component {
 	render() {
 
 		let containerClasses = getUtilityClasses(
-			[{}],
+			[
+				{ key: 'alignment', prefix: 'wsu-c-image--' },
+			],
 			this.props,
 			['wsu-c-image']
 		)
+
+		console.log(this.props.alignment)
 
 		return (
 			<img src={this.props.src} alt={this.props.alt} className={containerClasses} />
@@ -24,11 +28,14 @@ ContentImage.propTypes = {
 	src: PropTypes.string,
 	/** Specifies an alternate text for an image. */
 	alt: PropTypes.string,
+	/** Specifies how the image aligns within its frame (left, center, right). */
+	alignment: PropTypes.oneOf(['left', 'center', 'right']),
 }
 
 ContentImage.defaultProps = {
 	src: 'https://s3.wp.wsu.edu/uploads/sites/2438/2020/08/Coug-Logo-on-Chinook-crop_8520.jpg',
-	alt: 'Photo of the Chinook building on the WSU Pullman Campus in Pullman, Washington.'
+	alt: 'Photo of the Chinook building on the WSU Pullman Campus in Pullman, Washington.',
+	alignment: ''
 }
 
 export default ContentImage;

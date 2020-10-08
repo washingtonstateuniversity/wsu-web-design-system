@@ -1,5 +1,5 @@
 import React from 'react';
-import empty from '../../storybook-components/field-checker';
+import { empty } from '@wsuwebteam/build-tools/js/helpers';
 
 
 const Cite = ( props ) => {

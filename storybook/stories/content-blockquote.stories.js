@@ -4,7 +4,7 @@ import { withKnobs, text, boolean, number, select } from "@storybook/addon-knobs
 import { previewGroupID, optionsGroupID } from '@wsuwebteam/build-tools/js/helpers/storybook';
 
 // Storybook Imports
-import ComponentWrapper from '../../packages/storybook-components/content-wrapper';
+import ComponentWrapper from '../../packages/component-parts/content-wrapper';
 
 // Component Imports
 import { WsuBlockquote } from '../../packages/components';
@@ -28,6 +28,10 @@ export const Default = () => {
 		<ComponentWrapper layout="content">
 			<WsuBlockquote
 				cite={text( 'cite','Lorem ipsum dolor sit amet', optionsGroupID )}
+				citeUrl={text( 'citeUrl','https://wsu.edu', optionsGroupID )}
+				name={text( 'name','Lorem ipsum', optionsGroupID )}
+				title={text( 'title','Consectetur adipiscing elit', optionsGroupID )}
+				citeAlign={ select( 'citeAlign',['default','center','right'],'default', optionsGroupID )  }
 				textSize={select( 'textSize',['default','xsmall','small','medium','medium-large','large'],'default', optionsGroupID )}
 				width={select( 'width',['default','small','medium','large','full'],'default', optionsGroupID )}
 				>

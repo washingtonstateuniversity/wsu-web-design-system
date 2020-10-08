@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import ContentLink from '../../content-link';
 import Icon from '../../content-icon';
-import empty from '../../../storybook-components/field-checker';
+import { empty } from '@wsuwebteam/build-tools/js/helpers';
 
 class ContentCardFooter extends Component {
 	render() {

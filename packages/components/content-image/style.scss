@@ -1,6 +1,23 @@
 
 @import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
 
+.wsu-c-image-container {
+	max-width: 100%;
+	
+	&--center {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	&--right {
+		margin-left: auto;
+	}
+
+	&--left {
+		margin-right: auto;
+	}
+}
+
 .wsu-c-content img,
 .wsu-c-image {
 	width: 100%;
