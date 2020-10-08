@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import empty from '../../../storybook-components/field-checker';
+import { empty } from '@wsuwebteam/build-tools/js/helpers';
 
 class ContentCardSubtitle extends Component {
 	render() {

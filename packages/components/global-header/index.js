@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import wsu_wds from '@wsuwebteam/build-tools/js/wsu-bt-wds';
-import empty from '../../storybook-components/field-checker';
+import { empty } from '@wsuwebteam/build-tools/js/helpers';
 import toggleMoreMenu from './component-parts/global-header-more-menu';
 import './style.scss';
 
+console.log(empty);
 const displayMenuIcon = (!empty(wsu_wds.vertical_nav)) ? true : false;
 
 const GlobalHeader = ( props ) => {

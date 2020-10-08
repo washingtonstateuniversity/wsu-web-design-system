@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import './style.scss';
 
+// For use as a storybook component only!
 const ComponentWrapper = ( props ) => {
 
 	let classes = [
