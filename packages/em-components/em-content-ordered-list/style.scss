@@ -2,6 +2,8 @@
 
 .wsu-c-em-content-ordered-list,
 .wsu-c-content ol.wsu-c-em-content-ordered-list {
+	@include font;
+	
 	list-style: none;
 	margin-bottom: 2rem;
 	

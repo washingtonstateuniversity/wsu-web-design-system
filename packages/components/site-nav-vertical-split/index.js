@@ -18,6 +18,7 @@ class SiteNavVerticalSplit extends Component {
 
 		return (
 			<div className="wsu-s-nav-vertical-split__wrapper">
+				<div className="wsu-s-nav-vertical-split__overlay  wsu-s-nav-vertical--close"></div>
 				<div className="wsu-s-nav-vertical-split__menu-bar-wrapper">
 					<button className="wsu-s-nav-vertical-split__menu-bar wsu-s-nav-vertical--open" aria-label="Open Menu">
 						<span class="wsu-s-nav-vertical-split__menu-bar-icon-container">
