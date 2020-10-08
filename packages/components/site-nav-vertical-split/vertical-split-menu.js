@@ -9,6 +9,7 @@ class VerticalSplitMenu {
 		this.menuItemWrapperClass = 'wsu-s-nav-vertical-split__menu-item-wrapper';
 		this.openNavClass = 'wsu-s-nav-vertical--open';
 		this.closeNavClass = 'wsu-s-nav-vertical--close';
+		this.toggleNavClass = 'wsu-s-nav-vertical--toggle';
 		this.startClosedClass = 'wsu-s-nav-vertical-split--start-closed';
 		this.closedClass = 'wsu-s-nav-vertical-split--closed';
 		this.navOpenClass = 'wsu-s-nav-vertical-split--open';
@@ -31,15 +32,34 @@ class VerticalSplitMenu {
 
 		if ( nav ) {
 
+			// Check if contains start closed or if the window is tablet width
 			if ( nav.classList.contains( this.startClosedClass ) ) {
 
 				nav.classList.remove( this.startClosedClass );
 
 				this.closeNav( nav );
 
-			} 
+			}
+
+			this.shouldBeOpen( nav );
 
 		}
+	}
+
+	shouldBeOpen( nav = false ) {
+
+		nav = ( ! nav ) ? this.getNav() : nav;
+
+		if ( nav ) {
+
+			if (  1260 > window.innerWidth ) {
+
+
+				this.closeNav( nav );
+
+			} 
+		}
+
 	}
 
 	bindEvents() {
@@ -50,11 +70,31 @@ class VerticalSplitMenu {
 			false
 		);
 
+		window.addEventListener(
+			'resize', 
+			this.resizeEvent.bind( this ),
+			false
+		);
+
 	}
 
-	clickEvent( event ) {
+	resizeEvent( event ) {
 
-		console.log( event );
+		try {
+
+			this.shouldBeOpen();
+
+		} catch(err) {
+
+			console.log( event );
+			console.log(err);
+
+		}
+
+	}
+
+
+	clickEvent( event ) {
 
 		try {
 
@@ -73,6 +113,10 @@ class VerticalSplitMenu {
 
 				let menuItem = event.target.parentElement;
 				this.toggleMenu( menuItem );
+
+			} else if ( this.isChildOfClass( this.toggleNavClass, event.target ) ) {
+
+				this.toggleNav();
 
 			}
 
