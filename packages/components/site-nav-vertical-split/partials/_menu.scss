@@ -3,8 +3,6 @@
 
 .#{$class-base} {
 
-	font-family: $menu-font;
-
 	position: fixed;
 	top: 0;
 	bottom: 0;
@@ -25,6 +23,10 @@
 	transition: transform 300ms ease-in;
 	transform: translateX(0);
 	background-color: #fff;
+
+	&__wrapper {
+		@include font();
+	}
 
 	&__close-footer-wrapper,
 	&__close-wrapper {
