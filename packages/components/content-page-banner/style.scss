@@ -2,9 +2,9 @@
 @import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
 
 .wsu-c-page-banner {
+	@include font();
 
 	position: relative;
-	font-family: "Montserrat", sans-serif;
 
 	&--full-bleed {
 		margin-left: calc( ( ( 100vw - 100% ) / 2 ) * -1 );

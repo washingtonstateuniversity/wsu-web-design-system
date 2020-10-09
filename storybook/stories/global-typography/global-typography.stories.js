@@ -4,7 +4,8 @@ import { withKnobs, text, boolean, number, select } from "@storybook/addon-knobs
 import { previewGroupID, optionsGroupID } from '@wsuwebteam/build-tools/js/helpers/storybook';
 
 // Storybook Imports
-import ComponentWrapper from '../../../packages/storybook-components/content-wrapper/';
+import ComponentWrapper from '../../../packages/component-parts/content-wrapper';
+
 import { WsuHeading } from '../../../packages/components';
 import './global-typography.scss';
 
@@ -32,7 +33,7 @@ export const AllFonts = () => {
 			<WsuHeading tag="h4">h4 Montserrat SemiBold 18px</WsuHeading>
 
 			<WsuHeading tag="h2">Font Weights</WsuHeading>
-			<table>
+			<table className="font-weights">
 				<tr>
 					<th>Example Text</th>
 					<th>Font Weight Value</th>

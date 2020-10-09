@@ -5,7 +5,7 @@ import { previewGroupID, optionsGroupID } from '@wsuwebteam/build-tools/js/helpe
 
 
 // Storybook Imports
-import ComponentWrapper from '../../packages/storybook-components/content-wrapper';
+import ComponentWrapper from '../../packages/component-parts/content-wrapper';
 
 import { WsuListCheatsheet } from '../../packages/components';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import {getUtilityClasses} from '@wsuwebteam/build-tools/js/helpers/utilityClasses';
-import empty from '../../storybook-components/field-checker';
+import { empty } from '@wsuwebteam/build-tools/js/helpers';
 
 const EyebrowHeader = ( props ) => {
 

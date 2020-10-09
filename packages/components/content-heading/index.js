@@ -8,7 +8,6 @@ import './style.scss';
 
 class ContentHeading extends Component {
 
-	
 	render() {
 
 		let Tag     = this.props.tag;

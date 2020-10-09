@@ -4,7 +4,7 @@ import { withKnobs, text, boolean, number, select } from "@storybook/addon-knobs
 import { previewGroupID, optionsGroupID } from '@wsuwebteam/build-tools/js/helpers/storybook';
 
 // Storybook Imports
-import ComponentWrapper from '../../packages/storybook-components/content-wrapper/index'
+import ComponentWrapper from '../../packages/component-parts/content-wrapper';
 
 // Component Imports
 import { WsuCallout } from '../../packages/components';
@@ -20,7 +20,8 @@ export default {
 	decorators: [
 		withA11y,
 		withKnobs,
-	]
+	],
+	component: WsuCallout
 };
 
 export const DefaultCallout = () => {

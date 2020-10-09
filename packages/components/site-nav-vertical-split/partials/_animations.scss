@@ -1,0 +1,47 @@
+@import './variables';
+@import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
+
+@keyframes slideInFromLeft {
+	0% {
+	  transform: translateX(-100%);
+	}
+	100% {
+	  transform: translateX(0);
+	}
+}
+
+@keyframes slideInFromLeftAfter {
+	0% {
+	  transform: translateX(-100%);
+	}
+	100% {
+	  transform: translateX(0);
+	}
+}
+
+.#{$class-base} {
+
+	&__wrapper:not( .#{$class-base}--start-closed ) {
+		.#{$class-base}__menu-item-wrapper {
+			animation-name: slideInFromLeft;
+			animation-duration: 300ms;
+			animation-fill-mode: both;
+		}
+	}
+
+	&__wrapper.#{$class-base}--open {
+		.#{$class-base}__menu-item-wrapper {
+			animation-name: slideInFromLeftAfter;
+			animation-duration: 300ms;
+			animation-fill-mode: both;
+		}
+	}
+
+}
+
+
+@for $i from 1 through 30 {
+	.#{$class-base}__menu-item-wrapper:nth-child( #{$i} ) {
+		animation-delay: #{( ( ( 200 * $i ) - ( 100 * $i ) ) ) }ms;
+	}
+}

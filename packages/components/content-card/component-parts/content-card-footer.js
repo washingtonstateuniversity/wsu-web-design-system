@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 
-import ContentIcon from '../../content-icon';
-import ContentLink from '../../content-link';
+import { 
+	WsuIcon,
+	WsuLink
+} from '../../';
 
-import empty from '../../../storybook-components/field-checker';
+import { empty } from '@wsuwebteam/build-tools/js/helpers';
 
 class ContentCardFooter extends Component {
 	render() {
@@ -39,19 +41,19 @@ class ContentCardFooterTaxonomies extends Component {
 						this.props.categories.map( (category, i) => {
 							let isLast = ((this.props.categories.length - 1) == i) ? true : false;
 
-							return <ContentLink url={category.url} isSecondary isList={true} isLast={isLast}>{category.name}</ContentLink>;
+							return <WsuLink url={category.url} isSecondary isList={true} isLast={isLast}>{category.name}</WsuLink>;
 						})
 					}
 				</p> }
 
 				{ !empty(this.props.tags) && <p className="wsu-c-card__tags">
-					<span className="wsu-c-card__tags-label"><ContentIcon name='tag' /></span>
-					{/* TODO: This currently displays all tags, this might be an issue if a post/item has a ton of tags. We need to add some sort of mechanism to cap tags at a certain point and display the "more" ellipsis ContentIcon instead */}
+					<span className="wsu-c-card__tags-label"><WsuIcon name='tag' /></span>
+					{/* TODO: This currently displays all tags, this might be an issue if a post/item has a ton of tags. We need to add some sort of mechanism to cap tags at a certain point and display the "more" ellipsis WsuIcon instead */}
 					{
 						this.props.tags.map( (tag, i) => {
 							let isLast = ((this.props.tags.length - 1) == i) ? true : false;
 
-							return <ContentLink url={tag.url} isSecondary isList={true} isLast={isLast}>{tag.name}</ContentLink>;
+							return <WsuLink url={tag.url} isSecondary isList={true} isLast={isLast}>{tag.name}</WsuLink>;
 						})
 					}
 				</p> }
@@ -68,10 +70,10 @@ class ContentCardFooterByline extends Component {
 		return (
 			<div className="wsu-c-card__byline-container">
 				{this.props.date && <p className="wsu-c-card__byline-meta">
-					<ContentIcon name='calendar' /> Published on {this.props.date}
+					<WsuIcon name='calendar' /> Published on {this.props.date}
 				</p>}
 				{!empty(this.props.author) && <p className="wsu-c-card__author">
-					By <ContentLink isSecondary rel="author" href={this.props.author.url}>{this.props.author.name}</ContentLink>
+					By <WsuLink isSecondary rel="author" href={this.props.author.url}>{this.props.author.name}</WsuLink>
 				</p>}
 			</div>
 		)

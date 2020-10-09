@@ -2,6 +2,8 @@
 @import '~@wsuwebteam/wsu-icons/dist/wsu-icons.bundle.css';
 
 .wsu-c-accordion {
+	@include font();
+	
 	border-bottom: 1px solid #E5E5E5;
 	margin-bottom: 2em;
 

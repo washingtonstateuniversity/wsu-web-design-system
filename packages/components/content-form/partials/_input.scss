@@ -1,25 +1,6 @@
-input,
-textarea,
-.gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
-	padding: $unit $unit;
-	width: 100%;
-
-	color: color(gray, 100);
-
-	@include elevate(0);
-
-	&:focus {
-		border-color: color(gray, 40);
-		outline: none;
-
-		@include elevate(2);
-	}
-
-	&::input-placeholder {
-		color: color(gray, 60);
-	}
-}
-
-.gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
-	width: inherit;
+/* Selectors
+======================= */
+.wsu-c-content input,
+.wsu-c-form__input {
+	@include wsu-c-form__input;
 }

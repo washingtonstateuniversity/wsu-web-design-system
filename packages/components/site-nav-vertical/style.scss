@@ -5,6 +5,8 @@
 /* Nav wrapper
 ======================= */
 .wsu-s-nav-vertical__wrapper {
+	@include font();
+	
 	height: 100%;
 
 	& ~ [class*="wsu-s-container"] {
@@ -406,4 +408,12 @@
 	.wsu-s-nav-vertical__nav-container {
 		position: relative;
 	}
+}
+
+.wsu-s-nav-vertical__menu-icon-link[aria-expanded="false"] ~ .wsu-s-nav-vertical__nav-container {
+	display: none !important;
+}
+
+.wsu-s-nav-vertical__nav-item.fadeOutLeft {
+	display: none !important;
 }

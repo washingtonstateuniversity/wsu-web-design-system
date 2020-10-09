@@ -3,7 +3,7 @@ import { withA11y } from '@storybook/addon-a11y';
 import { withKnobs, text, boolean, number, select } from "@storybook/addon-knobs";
 
 // Storybook Imports
-import ComponentWrapper from '../../packages/storybook-components/content-wrapper';
+import ComponentWrapper from '../../packages/component-parts/content-wrapper';
 
 import {
 	WsuAccordion,
@@ -19,7 +19,8 @@ export default {
 	decorators: [
 		withA11y,
 		withKnobs
-	]
+	],
+	component: WsuAccordion
 };
 
 import '../../packages/components/content-accordion/script';

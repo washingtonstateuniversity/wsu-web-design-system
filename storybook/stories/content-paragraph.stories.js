@@ -3,7 +3,7 @@ import { withA11y } from '@storybook/addon-a11y';
 import { withKnobs, text, boolean, number, select } from "@storybook/addon-knobs";
 
 // Storybook Imports
-import ComponentWrapper from '../../packages/storybook-components/content-wrapper';
+import ComponentWrapper from '../../packages/component-parts/content-wrapper';
 
 import { WsuP } from '../../packages/components';
 
@@ -16,7 +16,8 @@ export default {
 	decorators: [
 		withA11y,
 		withKnobs
-	]
+	],
+	component: WsuP
 };
 
 const widthOptions = ['default','full','wide','medium','narrow','xnarrow'];
@@ -30,7 +31,7 @@ export const DefaultParagraph = () => {
 
 	return(
 		<ComponentWrapper layout="content" className="wsu-c-content" showEnds={boolean('Show Spacing', false, contentGroupID )}>
-			<WsuP width={ widthOption  } >
+			<WsuP width={ widthOption } >
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
 				varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
 				platea dictumst. Suspendisse blandit, leo ac lacinia viverra, magna massa ornare nulla, eu rutrum 
@@ -50,7 +51,7 @@ export const ParagraphGroups = () => {
 
 	return(
 		<ComponentWrapper layout="content" className="wsu-c-content">
-			<WsuP width={ widthOption  } >
+			<WsuP width={ widthOption } >
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
 				varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
 				platea dictumst. Suspendisse blandit, leo ac lacinia viverra, magna massa ornare nulla, eu rutrum 
@@ -60,7 +61,7 @@ export const ParagraphGroups = () => {
 				arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
 				eleifend et suscipit vel, faucibus vitae lorem.
 			</WsuP>
-			<WsuP width={ widthOption  } >
+			<WsuP width={ widthOption } >
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
 				varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
 				platea dictumst. Suspendisse blandit, leo ac lacinia viverra, magna massa ornare nulla, eu rutrum 
@@ -70,7 +71,7 @@ export const ParagraphGroups = () => {
 				arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
 				eleifend et suscipit vel, faucibus vitae lorem.
 			</WsuP>
-			<WsuP width={ widthOption  } >
+			<WsuP width={ widthOption } >
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
 				varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
 				platea dictumst. Suspendisse blandit, leo ac lacinia viverra, magna massa ornare nulla, eu rutrum 

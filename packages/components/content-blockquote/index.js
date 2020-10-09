@@ -7,7 +7,11 @@ import {
 	Cite,
 } from '../../component-parts/index';
 
+import ContentBlockquoteFooter from './component-parts';
+
 import './style.scss';
+
+
 
 const ContentBlockquote = ( props, ref ) => {
 
@@ -24,11 +28,25 @@ const ContentBlockquote = ( props, ref ) => {
 		props,
 		['wsu-c-blockquote']
 	)
+
+	let footerClasses = getUtilityClasses(
+		[
+			{ key:'citeAlign', prefix:'wsu-c-blockquote__footer--align-' },
+		],
+		props,
+		['wsu-c-blockquote__footer']
+	)
 	
 	return (
 		<blockquote className={wrapperClasses}>
 			{props.children}
-			<Cite cite={props.cite} />
+			<ContentBlockquoteFooter 
+				name={props.name} 
+				title={props.title} 
+				cite={props.cite} 
+				citeUrl={props.citeUrl}
+				className={footerClasses}
+				/>
 		</blockquote>
 	)
 
@@ -45,6 +63,11 @@ ContentBlockquote.defaultProps = {
 	textSize: 'default',
 	width: 'default',
 	cite: '',
+	name: '',
+	title: '',
+	cite: '',
+	citeUrl: '',
+	citeAlign: 'default',
 }
 
 export default ContentBlockquote;

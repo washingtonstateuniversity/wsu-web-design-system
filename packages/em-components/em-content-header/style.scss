@@ -2,7 +2,7 @@
 @import '~@wsuwebteam/wsu-icons/dist/wsu-icons.bundle.css';
 
 .wsu-c-em-heading {
-	font-family: $wsu-bt-primary-font-family;
+	@include font;
 	color: #262626;
 	margin-top: 0;
 	margin-bottom: 0.5em;
@@ -15,6 +15,7 @@ h1 {
 		font-weight: 800;
 
 		&--hero {
+			@include font;
 			font-size: 4.5rem;
 			font-weight: 800;
 			color: color(primary,light);
