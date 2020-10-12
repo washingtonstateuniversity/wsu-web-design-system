@@ -4,8 +4,6 @@ import { empty } from '@wsuwebteam/build-tools/js/helpers';
 
 const WrapperLink = ( props ) => {
 
-	console.log( props );
-
 	if ( ! props.href ) {
 
 		if ( props.hideEmpty ) {
