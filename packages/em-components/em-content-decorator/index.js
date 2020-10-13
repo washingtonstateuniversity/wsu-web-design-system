@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
+import {getUtilityClasses} from '@wsuwebteam/build-tools/js/helpers/utilityClasses';
+
 import './style.scss';
 
 const ContentDecorator = ( props ) => {
@@ -51,11 +53,21 @@ const ContentDecorator = ( props ) => {
 		'wsu-watermark-vertical-crimson',
 	]
 
+	let wrapperClasses = getUtilityClasses(
+		[
+			{ key:'hideOnMobile', prefix:'wsu-c-em-decorator--', isBool:true, value:'hide-on-mobile' },
+			{ key:'hideOnTablet', prefix:'wsu-c-em-decorator--', isBool:true, value:'hide-on-tablet' },
+			{ key:'hideOnDesktop', prefix:'wsu-c-em-decorator--', isBool:true, value:'hide-on-desktop' },
+		],
+		props,
+		['wsu-c-em-decorator--' + props.type ]
+	)
+
 	if ( baseDecorators.includes( props.type ) ) {
 
 		return (
 			<span 
-				className={'wsu-c-em-decorator--' + props.type }
+				className={wrapperClasses}
 				style={ decoratorStyle }
 				>
 				{ true == textDecorators.includes( props.type ) && props.text }
@@ -66,7 +78,7 @@ const ContentDecorator = ( props ) => {
 
 		return (
 			<span 
-				className={'wsu-c-em-decorator--' + props.type }
+				className={wrapperClasses}
 				style={ decoratorStyle }
 				>
 				<svg role="img" aria-labelledby="wsuLogoTitle wsuLogoDesc" className="wsu-g-header__logo-svg" enableBackground="new 0 0 70.2 69.6" version="1.1" viewBox="0 0 70.2 69.6" xmlSpace="preserve" xmlns="http://www.w3.org/2000/svg">
@@ -80,7 +92,7 @@ const ContentDecorator = ( props ) => {
 
 		return (
 			<span 
-				className={'wsu-c-em-decorator--' + props.type }
+				className={wrapperClasses}
 				style={ decoratorStyle }
 				>
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 579.216 843.63">
@@ -119,6 +131,9 @@ ContentDecorator.propTypes = {
 	height         :PropTypes.string,
 	text           :PropTypes.string,
 	fontSize       :PropTypes.string,
+	hideOnDesktop  :PropTypes.bool,
+	hideOnTablet   :PropTypes.bool,
+	hideOnMobile   :PropTypes.bool,
 }
 
 ContentDecorator.defaultProps = {
@@ -131,6 +146,9 @@ ContentDecorator.defaultProps = {
 	height         :'auto',
 	text           :'',
 	fontSize       :'1%',
+	hideOnDesktop  :false,
+	hideOnTablet   :false,
+	hideOnMobile   :false,
 }
 
 export default ContentDecorator;

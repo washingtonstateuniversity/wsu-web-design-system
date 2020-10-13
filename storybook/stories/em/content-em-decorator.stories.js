@@ -54,6 +54,9 @@ export const EMDecorator = () => {
 				height = { text( 'height','30px', optionsGroupID ) }
 				text = { text( 'text','LORUM IPSUM', optionsGroupID ) }
 				fontSize={ text( 'fontSize','', optionsGroupID ) }
+				hideOnMobile={ boolean('hideOnMobile', false, optionsGroupID ) }
+				hideOnTablet={ boolean('hideOnTablet', false, optionsGroupID ) }
+				hideOnDesktop={ boolean('hideOnDesktop', false, optionsGroupID ) }
 			/>
 		</div>
 	)
