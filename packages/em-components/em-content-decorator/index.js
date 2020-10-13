@@ -145,7 +145,7 @@ ContentDecorator.defaultProps = {
 	width          :'auto',
 	height         :'auto',
 	text           :'',
-	fontSize       :'1%',
+	fontSize       :'',
 	hideOnDesktop  :false,
 	hideOnTablet   :false,
 	hideOnMobile   :false,
