@@ -5,6 +5,8 @@
 	display: block;
 }
 
+$base_class_dec : '.wsu-c-em-decorator';
+
 .wsu-c-has-decorators {
 	position: relative;
 
@@ -162,6 +164,58 @@
 
 		path {
 			stroke: color( primary, base );
+		}
+
+	}
+
+	&--hide-on-mobile {
+
+		@include mq('mobile', 'max') {
+			display: none;
+		}
+
+		&:not( #{$base_class_dec}--hide-on-tablet) {
+			@include mq('tablet', 'min') {
+				display: block;
+			}
+
+		}
+
+	}
+
+	&--hide-on-tablet {
+
+		&:not( #{$base_class_dec}--hide-on-mobile) {
+			@include mq('tablet', 'min') {
+				display: block;
+			}
+
+		}
+
+		@include mq('tablet', 'max') {
+			display: none;
+		}
+
+	}
+
+	&--hide-on-desktop {
+
+		@include mq('tablet', 'min') {
+			display: none;
+		}
+
+		&:not( #{$base_class_dec}--hide-on-tablet) {
+			@include mq('tablet', 'max') {
+				display: block;
+			}
+
+		}
+
+		&:not( #{$base_class_dec}--hide-on-mobile) {
+			@include mq('mobile', 'max') {
+				display: block;
+			}
+
 		}
 
 	}
