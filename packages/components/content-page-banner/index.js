@@ -40,7 +40,7 @@ const ContentPageBanner = ( props, ref ) => {
 				imageAlt={props.imageAlt}
 				imageCaption={props.imageCaption}
 				isNotched={props.isNotched}
-				/>
+			/>
 			<div className="wsu-c-page-banner__container">
 				<EyebrowHeader className='wsu-c-page-banner__eyebrow-header'>{props.eyebrowHeader}</EyebrowHeader>
 				<Title tag={props.titleTag} className='wsu-c-page-banner__title'>{props.title}</Title>

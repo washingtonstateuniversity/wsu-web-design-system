@@ -1,5 +1,15 @@
 @import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
 
+.wsu-c-em-hero__wrapper {
+	margin-left: calc( ( ( 100vw - 100% ) / 2 ) * -1);
+	margin-right: calc( ( ( 100vw - 100% ) / 2 ) * -1);
+}
+
+#editor .wsu-c-em-hero__wrapper {
+	margin-left: calc( ( ( 100vw - 100% - 456px ) / 2 ) * -1);
+	margin-right: calc( ( ( 100vw - 100% - 456px ) / 2 ) * -1);
+}
+
 .wsu-c-em-hero__container,
 #editor .wsu-c-em-hero__container {
 	@include font();
@@ -10,12 +20,12 @@
 	flex-direction: column;
 	justify-content: center;
 
-	padding: 75px 75px;
+	padding: 75px 7vw;
 
 	background-color: color(gray, 90);
 	background-position: 50% 50%;  background-size: cover;
 	background-repeat: no-repeat;
-	min-height: 650px;
+	min-height: 938px;
 	box-sizing: border-box;
 
 	&::after {
