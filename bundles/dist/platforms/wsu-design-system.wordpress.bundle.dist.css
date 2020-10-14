@@ -1,2 +1,11 @@
-.admin-bar .wsu-g-header__wrapper{top:32px}@media screen and (max-width:782px){.admin-bar .wsu-g-header__wrapper{top:46px}}
-/*# sourceMappingURL=wsu-design-system.wordpress.bundle.dist.css.map */
+/* WordPress frontend styles go here
+==================================== */
+.admin-bar .wsu-g-header__wrapper {
+  top: 32px; }
+
+@media screen and (max-width: 782px) {
+  .admin-bar .wsu-g-header__wrapper {
+    top: 46px; } }
+
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9wbGF0Zm9ybXMvd29yZHByZXNzL3dvcmRwcmVzcy5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0FBQ0E7QUFDQTtBQUNBLFlBQVk7O0FBRVo7QUFDQTtBQUNBLGNBQWMsRUFBRSIsImZpbGUiOiJidW5kbGVzL2Rpc3QvcGxhdGZvcm1zL3dzdS1kZXNpZ24tc3lzdGVtLndvcmRwcmVzcy5idW5kbGUuZGlzdC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBXb3JkUHJlc3MgZnJvbnRlbmQgc3R5bGVzIGdvIGhlcmVcclxuPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09ICovXG4uYWRtaW4tYmFyIC53c3UtZy1oZWFkZXJfX3dyYXBwZXIge1xuICB0b3A6IDMycHg7IH1cblxuQG1lZGlhIHNjcmVlbiBhbmQgKG1heC13aWR0aDogNzgycHgpIHtcbiAgLmFkbWluLWJhciAud3N1LWctaGVhZGVyX193cmFwcGVyIHtcbiAgICB0b3A6IDQ2cHg7IH0gfVxuIl0sInNvdXJjZVJvb3QiOiIifQ==*/
