@@ -1,0 +1,46 @@
+@import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
+
+.wsu-c-typewriter-text {
+
+	&--is-outlined {
+		color: transparent;
+		-webkit-text-stroke-width: 1px;
+		-webkit-text-stroke-color: color(white, base);
+	}
+
+	.typed-cursor {
+		opacity: 1;
+		animation: typedjsBlink 0.7s infinite;
+		-webkit-animation: typedjsBlink 0.7s infinite;
+		animation: typedjsBlink 0.7s infinite;
+	}
+
+	.typed-fade-out {
+		opacity: 0;
+		transition: opacity .25s;
+		-webkit-animation: 0;
+		animation: 0;
+	}
+}
+
+@keyframes typedjsBlink{
+	50% {
+		opacity: 0.0;
+	}
+}
+
+@-webkit-keyframes typedjsBlink{
+	0% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0.0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+
+}
+

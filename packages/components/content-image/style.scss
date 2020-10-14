@@ -5,8 +5,8 @@
 	max-width: 100%;
 	
 	&--center {
-		margin-left: auto;
 		margin-right: auto;
+		margin-left: auto;
 	}
 
 	&--right {
@@ -20,6 +20,6 @@
 
 .wsu-c-content img,
 .wsu-c-image {
-	width: 100%;
 	height: auto;
+	width: 100%;
 }

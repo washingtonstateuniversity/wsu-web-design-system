@@ -13,7 +13,8 @@ const ContentSeparator = ( props ) => {
 		{
 			'wsu-c-em-separator--isHatched': props.isHatched,
 			'wsu-c-em-separator--showMoreIndicator': props.showMoreIndicator,
-		}
+		},
+		props.className
 	)
 
 	return (

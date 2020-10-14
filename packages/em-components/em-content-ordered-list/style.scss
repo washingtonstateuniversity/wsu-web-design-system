@@ -38,4 +38,25 @@
 			align-items: center;
 		}
 	}
+
+	/* Create start resets 
+	======================= */
+	@for $i from 1 through 99 {
+		&[start="#{$i}"] li::before {
+			content: counter(wsu-em-ordered-list);
+			counter-reset: wsu-em-ordered-list #{$i};
+		}
+	}
+
+	&--bolder * {
+		font-weight: 700;
+		font-size: 18px;
+	}
+
+	&--collapse-vertical-spacing {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
 }
+
+
