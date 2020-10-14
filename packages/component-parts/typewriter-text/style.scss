@@ -19,11 +19,11 @@
 
 		&::after {
 			content: "";
-			width: 1px;
+			width: 3px;
 			height: 80px;
 			display: inline-block;
 			background-color: white;
-			transform: skew(-10deg);
+			transform: skew(-11deg);
 		}
 	}
 
