@@ -29,17 +29,23 @@ export default {
 
 export const DefaultButton = () => {
 
-	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : ''; 
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+
+	let style = select( 'style',['default','primary','secondary','link'],'default', optionsGroupID );
+
+	let color = ( 'secondary' === style ) ? 'white' : 'default';
+
 	return (
 		<ComponentWrapper layout="centered" className={classes}>
 			<WsuButton
+				style={style}
 				tag={ select( 'tag',['default','a','button','div'],'default', optionsGroupID )  }
 				buttonText={ text( 'buttonText','Lorem Ipsum', optionsGroupID ) }
 				buttonUrl={ text( 'buttonUrl','#', optionsGroupID ) }
 				marginBefore={ select( 'marginBefore',spacingOptions,'default', optionsGroupID )  }
 				marginAfter={ select( 'marginAfter',spacingOptions,'default', optionsGroupID )  }
 				shape={ select( 'shape',['default','square','round'],'default', optionsGroupID )  }
-				color={ select( 'color',['default','crimson','white'],'default', optionsGroupID )  }
+				color={color}
 				size={ select( 'size',['default','small','medium','large'],'default', optionsGroupID )  }
 				buttonAlign={ select( 'buttonAlign',['left','rigt','center'],'default', optionsGroupID )  }
 				iconBefore={ select( 'iconBefore',iconOptions,'default', optionsGroupID )  }

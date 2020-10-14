@@ -7,6 +7,7 @@
 .wsu-c-button a,
 .wsu-c-content button,
 .wsu-c-content .wsu-c-button,
+.wsu-c-button--primary,
 .wsu-c-button {
 	@include font();
 
@@ -82,5 +83,71 @@
 .wsu-c-content .wsu-c-button--round,
 .wsu-c-button--round {
 	border-radius: 25px;
+}
+
+
+.wsu-c-button--secondary {
+	@include font-base( 'primary', 1rem, 600 );
+
+	background-color: color( white, base );
+	color: color(gray,60);
+	border: 1px solid color(gray,30);
+
+	display: inline-block;
+
+	border-radius: 8px;
+
+	padding: 1em 3em;
+
+	transition: box-shadow timing(cougar, standard);
+	text-decoration: none;
+
+	cursor: pointer;
+
+	&:hover {
+		color: color(primary, light );
+		background-color: color( white, base );
+		border: 1px solid color(primary, light );
+		box-shadow: 0 5px 18px rgba(0, 0, 0, 0.4);
+	}
+
+	&:visited {
+		color: color(gray,60);
+	}
+
+}
+
+.wsu-c-button--link {
+	@include font-base( 'primary', 1rem, 600 );
+	border: none;
+	background-color: transparent;
+	transition: border-bottom-width 100ms ease-in;
+
+	cursor: pointer;
+
+	&::after {
+		font-family: wsu-icons !important;
+		content: "\F108";
+		display: inline;
+		margin-left: 0.5em;
+		color: color(primary, base);
+		vertical-align: middle;
+		font-size: 0.9em;
+	}
+
+	&:hover {
+		color: color(primary, base);
+		border-bottom-width: .1.5em;
+		border-bottom-style: solid;
+		border-bottom-color: color(primary, light);
+	}
+
+	&.wsu-c-button--small {
+		font-size: 0.85rem;
+	}
+
+	&.wsu-c-button--large {
+		font-size: 1.5rem;
+	}
 }
 
