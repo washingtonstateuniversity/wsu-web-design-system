@@ -1,13 +1,18 @@
 @import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
 
 .wsu-c-em-hero__wrapper {
-	margin-left: calc( ( ( 100vw - 100% ) / 2 ) * -1);
+	position: relative;
 	margin-right: calc( ( ( 100vw - 100% ) / 2 ) * -1);
+	margin-left: calc( ( ( 100vw - 100% ) / 2 ) * -1);
+
+	.wsu-c-em-decorator {
+		z-index: z('contentbackground') + 1;
+	}
 }
 
 #editor .wsu-c-em-hero__wrapper {
-	margin-left: calc( ( ( 100vw - 100% - 456px ) / 2 ) * -1);
 	margin-right: calc( ( ( 100vw - 100% - 456px ) / 2 ) * -1);
+	margin-left: calc( ( ( 100vw - 100% - 456px ) / 2 ) * -1);
 }
 
 .wsu-c-em-hero__container,
@@ -23,7 +28,8 @@
 	padding: 75px 7vw;
 
 	background-color: color(gray, 90);
-	background-position: 50% 50%;  background-size: cover;
+	background-position: 50% 50%;  
+	background-size: cover;
 	background-repeat: no-repeat;
 	min-height: 938px;
 	box-sizing: border-box;
@@ -35,14 +41,14 @@
 		left: 0;
 
 		content: "";
-		opacity: 60%;
+		opacity: 0.6;
+
+		mix-blend-mode: darken;
 
 		background: linear-gradient(15deg, color(primary, base), rgba(color(primary, base), 0));
 		height: 100%;
 
 		width: 100%;
-
-		mix-blend-mode: darken;
 	}
 
 	&::before {
@@ -52,7 +58,7 @@
 		left: 0;
 
 		content: "";
-		opacity: 60%;
+		opacity: 0.6;
 
 		background: linear-gradient(45deg, color(primary, base), color(primary, light));
 		height: 100%;
@@ -81,8 +87,8 @@
 	color: color(white, base);
 
 	.wsu-c-typewriter-text {
-		font-size: 150%;
 		font-style: italic;
+		font-size: 150%;
 	}
 
 	.third-line {
@@ -91,6 +97,6 @@
 }
 
 .wsu-c-em-hero__description {
-	color: color(white, base);
 	max-width: 800px;
+	color: color(white, base);
 }
