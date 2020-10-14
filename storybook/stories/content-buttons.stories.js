@@ -45,7 +45,7 @@ export const DefaultButton = () => {
 				marginBefore={ select( 'marginBefore',spacingOptions,'default', optionsGroupID )  }
 				marginAfter={ select( 'marginAfter',spacingOptions,'default', optionsGroupID )  }
 				shape={ select( 'shape',['default','square','round'],'default', optionsGroupID )  }
-				color={color}
+				color={select( 'color',['default','crimson','white'],'default', optionsGroupID )}
 				size={ select( 'size',['default','small','medium','large'],'default', optionsGroupID )  }
 				buttonAlign={ select( 'buttonAlign',['left','rigt','center'],'default', optionsGroupID )  }
 				iconBefore={ select( 'iconBefore',iconOptions,'default', optionsGroupID )  }
