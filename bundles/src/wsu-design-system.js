@@ -40,6 +40,7 @@ import '../../packages/em-components/em-content-ordered-list/style.scss';
 import '../../packages/em-components/em-content-table/style.scss';
 import '../../packages/em-components/em-content-hero/style.scss';
 import '../../packages/em-components/em-content-separator/style.scss';
+import '../../packages/em-components/em-content-decorator/style.scss';
 
 // Component Parts
 import '../../packages/component-parts/pattern/style.scss';

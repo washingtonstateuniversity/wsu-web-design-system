@@ -4,4 +4,5 @@ export { default as EmHero } from './em-content-hero';
 export { default as EmSeparator } from './em-content-separator'; 
 export { default as EmHr } from './em-content-separator'; 
 export { default as EmContentTable } from './em-content-table'; 
-export { default as EmOrderedList } from './em-content-ordered-list'; 
+export { default as EmOrderedList } from './em-content-ordered-list';
+export { default as EmContentDecorator } from './em-content-decorator'; 
