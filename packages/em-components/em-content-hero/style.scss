@@ -5,6 +5,8 @@
 	margin-right: calc( ( ( 100vw - 100% ) / 2 ) * -1);
 	margin-left: calc( ( ( 100vw - 100% ) / 2 ) * -1);
 
+	clip-path: polygon(100% 0, 100% calc(100% - 100px), calc(100% - 100px) 100%, 0 100%, 0 0);
+
 	.wsu-c-em-decorator {
 		z-index: z('contentbackground') + 1;
 	}
