@@ -15,8 +15,6 @@ class ContentImage extends Component {
 			['wsu-c-image']
 		)
 
-		console.log(this.props.alignment)
-
 		return (
 			<img src={this.props.src} alt={this.props.alt} className={containerClasses} />
 		)

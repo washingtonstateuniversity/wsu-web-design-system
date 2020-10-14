@@ -16,6 +16,7 @@ import {
 	WsuTh,
 	WsuThead,
 	WsuTr,
+	WsuLink
 } from '../../packages/components';
 
 // Story Time
@@ -100,7 +101,7 @@ export const DefaultTable = () => {
 						<WsuTh scope="row">Fees</WsuTh>
 						<WsuTd>$6,822</WsuTd>
 						<WsuTd>$39</WsuTd>
-						<WsuTd>$10,000</WsuTd>
+						<WsuTd><WsuLink href="#">$10,000</WsuLink></WsuTd>
 					</WsuTr>
 					<WsuTr>
 						<WsuTh scope="row">Books</WsuTh>
