@@ -11,6 +11,10 @@ import {
 import './style.scss';
 
 const ContentButton = ( props, ref ) => {
+
+	console.log( props.style );
+
+	let styleClass = ( 'default' === props.style  ) ? 'wsu-c-button' : 'wsu-c-button--' + props.style;
 	
 
 	if ( ! props.buttonText ) {
@@ -26,7 +30,7 @@ const ContentButton = ( props, ref ) => {
 			{ key:'shape', prefix:'wsu-c-button--' },
 		],
 		props,
-		['wsu-c-button']
+		[ styleClass ]
 	)
 
 	let wrapperClasses = getUtilityClasses(
@@ -55,6 +59,7 @@ const ContentButton = ( props, ref ) => {
 
 
 ContentButton.propTypes = {
+	style: PropTypes.string,
 	buttonText: PropTypes.string,
 	buttonUrl: PropTypes.string,
 	size: PropTypes.string,
@@ -70,6 +75,7 @@ ContentButton.propTypes = {
 }
 
 ContentButton.defaultProps = {
+	style: 'default',
 	buttonText: '',
 	buttonUrl: '',
 	size: 'default',
