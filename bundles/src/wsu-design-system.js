@@ -13,6 +13,7 @@ import '../../packages/components/site-nav-horizontal/style.scss';
 import '../../packages/components/site-nav-vertical/style.scss';
 import '../../packages/components/site-header/style.scss';
 import '../../packages/components/content-article/style.scss';
+import '../../packages/components/content-article-header/style.scss';
 import '../../packages/components/content-form/style.scss';
 import '../../packages/components/content-list/style.scss';
 import '../../packages/components/containers/style.scss';
