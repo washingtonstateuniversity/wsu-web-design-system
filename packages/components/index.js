@@ -7,6 +7,7 @@
 
 export { default as WsuAccordion } from './content-accordion';
 export { default as WsuArticle } from './content-article';
+export { default as WsuArticleHeader } from './content-article-header';
 export { default as WsuButton } from './content-button';
 export { default as WsuCallout } from './content-callout';
 export { default as WsuCard } from './content-card';
