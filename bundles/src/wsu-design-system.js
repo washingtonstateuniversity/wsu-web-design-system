@@ -4,6 +4,10 @@
  *
  */
 
+// Component Parts
+import '../../packages/component-parts/content-meta-author/style.scss';
+import '../../packages/component-parts/content-meta-date/style.scss';
+
 import '../../packages/components/content-link/style.scss';
 import '../../packages/components/site-nav-horizontal/style.scss';
 import '../../packages/components/site-nav-vertical/style.scss';

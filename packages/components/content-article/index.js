@@ -11,11 +11,10 @@ import './style.scss';
 
 const ContentArticle = ( props, ref ) => {
 	return(
-		<>
-			<ArticleHeader></ArticleHeader>
-			<ArticleCopy></ArticleCopy>
+		<article className="wsu-c-article">
+			{props.children}
 			<ArticleFooter></ArticleFooter>
-		</>
+		</article>
 	)
 }
 
