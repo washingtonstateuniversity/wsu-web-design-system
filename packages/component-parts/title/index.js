@@ -1,9 +1,9 @@
 import React from 'react';
-import {getUtilityClasses} from '@wsuwebteam/build-tools/js/helpers/utilityClasses';
+import PropTypes from 'prop-types';
+
+import { getUtilityClasses } from '@wsuwebteam/build-tools/js/helpers/utilityClasses';
 import { empty } from '@wsuwebteam/build-tools/js/helpers';
-import {
-	WrapperLink 
-} from '../index';
+import { WrapperLink } from '../index';
 
 const Title = ( props ) => {
 
@@ -22,7 +22,7 @@ const Title = ( props ) => {
 	)
 
 	return (
-		<Tag className={ wrapperClasses } >
+		<Tag className={ wrapperClasses } ariaLabel={ props.ariaLabel }>
 			<WrapperLink href={ props.link }>
 				{ props.children }
 			</WrapperLink>
@@ -31,12 +31,20 @@ const Title = ( props ) => {
 
 }
 
+Title.propTypes = {
+	tag: PropTypes.string,
+	link: PropTypes.string,
+	className: PropTypes.string,
+	titleSize: PropTypes.string,
+	ariaLabel: PropTypes.string
+}
 
 Title.defaultProps = {
 	tag: 'h2',
-	link:'',
-	className:'wsu-c-title',
-	titleSize:'default'
+	link: '',
+	className: 'wsu-c-title',
+	titleSize: 'default',
+	ariaLabel: ''
 }
 
 export default Title;

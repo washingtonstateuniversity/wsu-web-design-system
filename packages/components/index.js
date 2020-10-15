@@ -21,7 +21,7 @@ export { default as WsuHero } from './content-hero';
 export { default as WsuIcon } from './content-icon';
 export { IconCheatsheet as WsuIconCheatsheet } from './content-icon';
 export { default as WsuImg } from './content-image';
-export { default as WsuImage} from './content-image';
+export { default as WsuImage } from './content-image';
 export { default as WsuLink } from './content-link';
 export { default as WsuList } from './content-list';
 export { default as WsuLoadingIcon } from './content-loading-icon';
