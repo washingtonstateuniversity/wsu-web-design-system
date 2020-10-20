@@ -5,7 +5,7 @@ import classnames from 'classnames';
 
 // Component Deps
 import './style.scss';
-import Icon from '../content-icon';
+import {WsuIcon} from '../';
 
 // Component Starts
 class ContentModal extends Component {
@@ -43,7 +43,7 @@ class ContentModal extends Component {
 					aria-modal="true"
 					className={classes}
 				>
-						<button className="wsu-c-modal__close-button" onClick={this.props.closeModal}>Close <Icon name="x-close" /></button>
+						<button className="wsu-c-modal__close-button" onClick={this.props.closeModal}>Close <WsuIcon name="x-close" /></button>
 						{this.props.children}
 				</div>
 				<div className="wsu-c-modal__overlay" onClick={this.props.closeModal}></div>

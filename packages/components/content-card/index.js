@@ -6,87 +6,48 @@ import PropTypes from 'prop-types';
 import './style.scss';
 
 import {
-	CardPhoto,
-	CardTitle,
-	CardSubtitle,
-	CardPositionTitle,
-	CardDescription,
-	CardAddress,
-	CardPhoneNumber,
-	CardEmail,
-	CardWebsite,
-	CardFooter,
-	CardFooterTaxonomies,
-	CardFooterByline
-} from './component-parts';
+	NewsCard
+} from './component-styles';
+
+
 
 // Component Starts
-class ContentCard extends Component {
-	render() {
+const ContentCard = ( props ) => {
 
-		return (
-			<div className="wsu-c-card__wrapper">
-				<div className="wsu-c-card__container">
-					<div className="wsu-c-card__content">
+	switch ( props.style ) {
 
-						<CardPhoto src={this.props.image.src} alt={this.props.image.alt} imgFocalPoint={this.props.imgFocalPoint} />
-
-						<CardTitle title={this.props.title} />
-
-						<CardSubtitle subtitle={this.props.subtitle} />
-
-						<CardPositionTitle positionTitle={this.props.positionTitle} />
-
-						<CardDescription description={this.props.description} />
-
-						<CardAddress addressLine1={this.props.addressLine1} addressLine2={this.props.addressLine2} />
-
-						<CardPhoneNumber phoneNumber={this.props.phoneNumber} />
-
-						<CardEmail email={this.props.email} />
-
-						<CardWebsite website={this.props.website} />
-
-						<CardFooter>
-
-							<CardFooterTaxonomies categories={this.props.categories} tags={this.props.tags} />
-
-							<CardFooterByline author={this.props.author} date={this.props.date} />
-
-						</CardFooter>
-						
-					</div>
-				</div>
-			</div>
-		);
+		case 'news':
+			return <NewsCard {...props} />
+			
 	}
+
 }
 
 ContentCard.propTypes = {
+	style: PropTypes.string,
+	className: PropTypes.string,
 	title: PropTypes.string,
+	titleTag: PropTypes.string,
+	link: PropTypes.string,
 	description: PropTypes.string,
 	addressLine1: PropTypes.string,
 	addressLine2: PropTypes.string,
 	phoneNumber: PropTypes.string,
 	email: PropTypes.string,
 	website: PropTypes.string,
-	tags: PropTypes.shape({
+	tags: PropTypes.arrayOf( PropTypes.shape({
 		name: PropTypes.string,
 		url: PropTypes.string
-	}),
-	categories: PropTypes.shape({
+	} ) ),
+	categories: PropTypes.arrayOf( PropTypes.shape({
 		name: PropTypes.string,
 		url: PropTypes.string
-	}),
+	} ) ),
 	date: PropTypes.string,
-	author: PropTypes.shape({
-		name: PropTypes.string,
-		url: PropTypes.string
-	}),
-	image: PropTypes.shape({
-		url: PropTypes.string,
-		alt: PropTypes.string
-	}),
+	authorName: PropTypes.string,
+	authorLink: PropTypes.string,
+	imageSrc: PropTypes.string,
+	imageAlt: PropTypes.string,
 	subtitle: PropTypes.string,
 	positionTitle: PropTypes.string,
 	imgFocalPoint: PropTypes.shape({
@@ -96,7 +57,11 @@ ContentCard.propTypes = {
 }
 
 ContentCard.defaultProps = {
+	style: 'default',
+	className: '',
 	title: '',
+	titleTag: 'h3',
+	link: '',
 	description: '',
 	addressLine1: '',
 	addressLine2: '',
@@ -106,8 +71,9 @@ ContentCard.defaultProps = {
 	tags: [],
 	categories: [],
 	date: '',
-	author: {},
-	image: {},
+	authorName: '',
+	imageSrc: '',
+	imageAlt: '',
 	subtitle: '',
 	positionTitle: '',
 	imgFocalPoint: {
