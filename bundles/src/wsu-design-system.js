@@ -38,6 +38,7 @@ import '../../packages/components/content-page-banner/style.scss';
 import '../../packages/components/content-blockquote/style.scss';
 import '../../packages/components/site-nav-vertical-split/style.scss';
 import '../../packages/components/content-news/style.scss';
+import '../../packages/components/content-figure/style.scss';
 
 // EM Components
 import '../../packages/em-components/em-content-callout/style.scss';

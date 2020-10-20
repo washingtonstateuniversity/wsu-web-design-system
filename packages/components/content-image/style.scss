@@ -18,8 +18,12 @@
 	}
 }
 
-.wsu-c-content img,
 .wsu-c-image {
 	height: auto;
 	width: 100%;
+}
+
+.wsu-c-content img:not([class^="wsu-c-"]):not([class*=" wsu-c-"]) {
+	max-width: 100%;
+	height: auto;
 }
