@@ -1,20 +1,29 @@
 import React, { Component } from 'react';
 import { empty } from '@wsuwebteam/build-tools/js/helpers';
 
-class ContentCardTitle extends Component {
-	render() {
+import { 
+	WsuIcon,
+	WsuLink
+} from '../../'
 
-		if (empty(this.props.title)) {
-			return null;
-		}
+const ContentCardTitle = (props) => {
 
-		return (
-			// TODO: heading level needs to be variable
-			<h3 className="wsu-c-card__heading">{this.props.title}</h3>
-		);
-
+	if (empty(props.title)) {
 		return null;
 	}
+
+	let Tag = props.titleTag;
+
+	return (
+		// TODO: heading level needs to be variable
+		<Tag className="wsu-c-card__heading"><WsuLink href={props.link} className="wsu-c-card__heading-link">{props.title}</WsuLink></Tag>
+	);
+
+}
+
+ContentCardTitle.defaultProps = {
+	title: '',
+	titleTag: 'h3',
 }
 
 export default ContentCardTitle;
