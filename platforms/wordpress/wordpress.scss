@@ -10,3 +10,32 @@
 		top: 46px;
 	}
 }
+
+.has-text-align-center {
+	text-align: center;
+}
+
+.has-text-align-left {
+	text-align: left;
+}
+
+.has-text-align-right {
+	text-align: right;
+}
+
+.alignleft {
+	float: left;
+	margin-right: 2em;
+	margin-left: 0;
+}
+
+.alignright {
+	float: right;
+	margin-left: 12em;
+	margin-right: 0;
+}
+
+.aligncenter {
+	margin-left: auto;
+	margin-right: auto;
+}
