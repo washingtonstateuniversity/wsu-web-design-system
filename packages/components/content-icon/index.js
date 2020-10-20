@@ -7,17 +7,16 @@ import '@wsuwebteam/wsu-icons';
 import './style.scss';
 
 // Component Starts
-class Icon extends Component {
-	render() {
+const Icon = ( props ) => {
 
-		if ( '' == this.props.name ) {
-			return null;
-		}
-		
-		return (
-			<i className={'wsu-icon wsu-i-' + this.props.name}></i>
-		);
+	if ( '' == this.props.name ) {
+		return null;
 	}
+	
+	return (
+		<i className={'wsu-icon wsu-i-' + this.props.name}></i>
+	);
+
 }
 
 Icon.propTypes = {
@@ -724,5 +723,4 @@ class IconCheatsheet extends Component {
 	}
 }
 
-export default Icon;
-export { IconCheatsheet };
+export { Icon, IconCheatsheet };
