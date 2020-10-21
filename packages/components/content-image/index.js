@@ -16,7 +16,7 @@ class ContentImage extends Component {
 		)
 
 		return (
-			<img src={this.props.src} alt={this.props.alt} className={containerClasses} />
+			<img width={this.props.width} src={this.props.src} alt={this.props.alt} className={containerClasses} />
 		)
 	}
 }
@@ -28,12 +28,14 @@ ContentImage.propTypes = {
 	alt: PropTypes.string,
 	/** Specifies how the image aligns within its frame (left, center, right). */
 	alignment: PropTypes.oneOf(['left', 'center', 'right']),
+	width: PropTypes.string
 }
 
 ContentImage.defaultProps = {
 	src: 'https://s3.wp.wsu.edu/uploads/sites/2438/2020/08/Coug-Logo-on-Chinook-crop_8520.jpg',
 	alt: 'Photo of the Chinook building on the WSU Pullman Campus in Pullman, Washington.',
-	alignment: ''
+	alignment: '',
+	width: '100%'
 }
 
 export default ContentImage;

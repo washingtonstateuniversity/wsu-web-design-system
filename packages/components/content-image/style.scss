@@ -1,25 +1,54 @@
 
 @import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
 
-.wsu-c-image-container {
-	max-width: 100%;
-	
-	&--center {
+.wsu-c-image__wrapper {
+	margin-bottom: $unit;
+
+	img {
+		display: block;
+	}
+
+	&.wsu-c-image-width--25 img {
+		width: 25%;
+		height: auto;
+	}
+
+	&.wsu-c-image-width--33.33 img {
+		width: 33.33%;
+		height: auto;
+	}
+
+	&.wsu-c-image-width--50 img {
+		width: 50%;
+		height: auto;
+	}
+
+	&.wsu-c-image-width--66.66 img {
+		width: 66.66%;
+		height: auto;
+	}
+
+	&.wsu-c-image-width--75 img {
+		width: 75%;
+		height: auto;
+	}
+
+	&.wsu-c-image-width--100 img {
+		width: 100%;
+		height: auto;
+	}
+
+	// Alignment
+	&--center img {
 		margin-right: auto;
 		margin-left: auto;
 	}
 
-	&--right {
+	&--right img {
 		margin-left: auto;
 	}
 
-	&--left {
+	&--left img {
 		margin-right: auto;
 	}
-}
-
-.wsu-c-content img,
-.wsu-c-image {
-	height: auto;
-	width: 100%;
 }
