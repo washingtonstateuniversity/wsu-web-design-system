@@ -7,9 +7,11 @@
 
 export { default as WsuAccordion } from './content-accordion';
 export { default as WsuArticle } from './content-article';
+export { default as WsuArticleHeader } from './content-article-header';
 export { default as WsuButton } from './content-button';
 export { default as WsuCallout } from './content-callout';
 export { default as WsuCard } from './content-card';
+export { default as WsuNews } from './content-news';
 export { default as WsuCode } from './content-code';
 export { ContentColumn as WsuColumn } from './content-column';
 export { ContentColumnWrapper as WsuColumnWrapper } from './content-column';
@@ -18,7 +20,7 @@ export { ContentFormCheatsheet as WsuFormCheatsheet } from './content-form';
 export { ContentFormCheatsheetInherited as WsuFormCheatsheetInherited } from './content-form';
 export { default as WsuHeading } from './content-heading';
 export { default as WsuHero } from './content-hero';
-export { default as WsuIcon } from './content-icon';
+export { Icon as WsuIcon } from './content-icon';
 export { IconCheatsheet as WsuIconCheatsheet } from './content-icon';
 export { default as WsuImg } from './content-image';
 export { default as WsuImage } from './content-image';

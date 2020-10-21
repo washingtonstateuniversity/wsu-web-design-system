@@ -75,9 +75,9 @@ const EmContentCallout = ( props ) => {
 						/>
 					<div className="wsu-c-em-callout__content">
 						<div className="wsu-c-em-callout__content-inner">
-							<EyebrowHeader >Lorem ipsum dolor sit amet</EyebrowHeader>
-							<Title link={ props.link } titleSize={props.titleSize}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Title>
-							<Caption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dapibus varius nunc, ac tincidunt nulla iaculis dictum. Cras eget lectus vehicula nisi vehicula viverra quis a sem. Vestibulum tincidunt quis dui vitae porttitor. Ut volutpat sem quis elit pellentesque gravida. Vivamus vehicula orci non turpis vehicula ultrices. </Caption>
+							<EyebrowHeader >{props.eyebrowTitle}</EyebrowHeader>
+							<Title link={ props.link } titleSize={props.titleSize}>{props.title}</Title>
+							<Caption>{props.description}</Caption>
 							<div className="wsu-c-em-callout__link-wrapper">
 								<WrapperLink href={props.buttonUrl} hideEmpty={true} >{ props.buttonText }</WrapperLink>
 							</div>

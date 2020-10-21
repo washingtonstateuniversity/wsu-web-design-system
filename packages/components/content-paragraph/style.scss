@@ -6,7 +6,7 @@
 }
 
 .wsu-c-paragraph,
-.wsu-c-content p {
+.wsu-c-content p:not([class^="wsu-c-"]):not([class*=" wsu-c-"]) {
 	@include font();
 
 	margin-top: 0;
