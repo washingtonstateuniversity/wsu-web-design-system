@@ -11,6 +11,19 @@
 
 	margin-top: 0;
 	margin-bottom: 2em;
+
+	&.wsu-c-paragraph--lead {
+		font-size: 20px;
+		line-height: 2;
+	}
+	
+	&.has-text-align-center {
+		text-align: center;
+	}
+
+	&.wsu-c-paragraph--fine-print {
+		font-size: 14px;
+	}
 }
 
 .wsu-c-paragraph {
