@@ -10,7 +10,7 @@ const ContentCardWrapper = ( props ) => {
 			{ key:'className', prefix: '' },
 		],
 		props,
-		['wsu-c-card']
+		['wsu-c-card__wrapper']
 	)
 
 	
