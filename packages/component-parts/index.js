@@ -6,3 +6,5 @@ export { default as Title } from './title';
 export { default as Caption } from './caption';
 export { default as Cite } from './cite';
 export { default as TypewriterText } from './typewriter-text';
+export { default as ContentMetaAuthor } from './content-meta-author';
+export { default as ContentMetaPublishDate} from './content-meta-publish-date';

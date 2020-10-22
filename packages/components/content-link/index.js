@@ -10,8 +10,8 @@ import './style.scss';
 class ContentLink extends Component {
 	render() {
 
-		const classes = classnames(
-			'wsu-c-link', 
+		let classes = classnames(
+			this.props.className, 
 			{
 				'wsu-c-link--is-secondary': this.props.isSecondary,
 				'wsu-c-link--motion': this.props.isAnimated,
@@ -73,7 +73,7 @@ ContentLink.propTypes = {
 
 ContentLink.defaultProps = {
 	href: '',
-	classNames: '',
+	className: 'wsu-c-link',
 	target: '_self',
 	isSecondary: false,
 	isAnimated: false,
