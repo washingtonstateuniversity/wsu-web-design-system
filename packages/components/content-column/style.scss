@@ -20,6 +20,8 @@ $column-spacing: (
 	padding-left: 2.5rem;
 }
 
+/* Legacy Code - use inline style now
+======================================== */
 .wsu-u {
 	@each $space, $value in $column-spacing {
 
@@ -41,31 +43,16 @@ $column-spacing: (
 	}
 }
 
+/* End | Legacy Code - use inline style now
+======================================== */
+
 .wsu-c-column__wrapper {
 	display: flex;
 	flex-wrap: wrap;
+	width: 100%;
 
 	margin-right: auto;
 	margin-left: auto;
-
-	&[class*="wsu-u-background-"]  {
-
-		margin-top: 1.5rem;
-		padding-top: 1rem;
-
-		& + .wsu-c-column__wrapper .wsu-c-column {
-			padding-top: 1rem;
-		}
-
-		& + .wsu-c-column__wrapper[class*="wsu-u-background-"] {
-			margin-top: 0;
-		}
-
-		.wsu-c-column {
-			/*padding-top: 1rem;
-			padding-bottom: 1rem;*/ 
-		}
-	}
 
 }
 
