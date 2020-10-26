@@ -17,13 +17,6 @@ const legacySpacingMap = {
 	'xlarge': '6rem',
 }
 
-const backgroundColorSpacing = {
-	'marginTop':'1.5em',
-	'marginBottom':'1.5em',
-	'paddingBottom':'1.5em',
-	'paddingTop':'1.5em',
-}
-
 
 const ContentColumnWrapper = ( props ) => {
 
@@ -34,24 +27,12 @@ const ContentColumnWrapper = ( props ) => {
 			{ key:'marginAfter', property:'marginBottom', legacyMap: legacySpacingMap },
 			{ key:'paddingAfter', property:'paddingBottom', legacyMap: legacySpacingMap },
 			{ key:'paddingBefore', property:'paddingTop', legacyMap: legacySpacingMap },
-			{ key:'marginTop', property:'marginTop'},
-			{ key:'marginBottom', property:'marginBottom'},
-			{ key:'paddingBottom', property:'paddingBottom' },
-			{ key:'paddingTop', property:'paddingTop'},
+			{ key:'marginTop'},
+			{ key:'marginBottom'},
+			{ key:'paddingBottom'},
+			{ key:'paddingTop'},
 		]
 	);
-
-	if ( '' != props.backgroundColor && 'default' != props.backgroundColor ) {
-
-		inlineStyle = setInlineStyleDefaults( inlineStyle, {
-			'marginTop':'1.5em',
-			'marginBottom':'1.5em',
-			'paddingBottom':'1.5em',
-			'paddingTop':'1.5em',
-		}); 
-
-	}
-
 
 	let wrapperClasses = getUtilityClasses(
 		[

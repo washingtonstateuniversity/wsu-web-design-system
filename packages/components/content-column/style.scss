@@ -226,6 +226,9 @@ $column-spacing: (
 
 	&[class*="wsu-u-background-"]  {
 		padding-bottom: 1rem;
+		padding-top: 1em;
+		margin-bottom: 1em;
+		margin-top: 1em;
 	}
 
 	@for $i from 1 through $grid-columns {
