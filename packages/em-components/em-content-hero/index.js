@@ -26,8 +26,9 @@ class EmContentHero extends Component {
 			<div className={ wrapperClasses }>
 				<div className="wsu-c-em-hero__container" style={{ backgroundImage: `url(${this.props.backgroundImageUrl})` }}>
 					<div className="wsu-c-em-hero__content">
-						{this.props.title && <Title className="wsu-c-em-hero__title" ariaLabel={this.props.titleAriaLabel}>Become a <TypewriterText strings={["Web Designer", "Civil Engineer", "#FutureCoug"]} isOutlined /> <span className="third-line">today!</span></Title>}
+						{this.props.title && <Title className="wsu-c-em-hero__title" ariaLabel={this.props.titleAriaLabel}>{this.props.title}</Title>}
 						{this.props.description && <div className="wsu-c-em-hero__description">{this.props.description}</div>}
+						{this.props.children}
 					</div>
 				</div>
 			</div> 
