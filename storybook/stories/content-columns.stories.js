@@ -46,16 +46,16 @@ const Paragraph = ( props ) => {
 export const DefaultColumn = () => {
 	let layout               = select( 'layout', columnLayouts, 'single', 'Columns Wrapper' );
 	let bgColor              = select( 'backgroundColor', bgColorOptions, '', 'Columns Wrapper' );
-	let wrapperMarginBefore  = text( 'marginBefore', '', 'Columns Wrapper' );
-	let wrapperMarginAfter   = text( 'marginAfter', '', 'Columns Wrapper' );
-	let wrapperPaddingBefore = text( 'PaddingBefore', '', 'Columns Wrapper' );
-	let wrapperPaddingAfter  = text( 'PaddingAfter', '', 'Columns Wrapper' );
+	let wrapperMarginBefore  = text( 'marginTop', '', 'Columns Wrapper' );
+	let wrapperMarginAfter   = text( 'marginBottom', '', 'Columns Wrapper' );
+	let wrapperPaddingBefore = text( 'PaddingTop', '', 'Columns Wrapper' );
+	let wrapperPaddingAfter  = text( 'PaddingBottom', '', 'Columns Wrapper' );
 
 	let columnBgColor = select( 'backgroundColor', bgColorOptions, '', 'Column Options' );
-	let marginBefore  = text( 'marginBefore', '', 'Column Options' );
-	let marginAfter   = text( 'marginAfter ', '', 'Column Options' );
-	let paddingBefore = text( 'paddingBefore', '', 'Column Options' );
-	let paddingAfter  = text( 'paddingAfter', '', 'Column Options' );
+	let marginBefore  = text( 'marginTop', '', 'Column Options' );
+	let marginAfter   = text( 'marginBottom ', '', 'Column Options' );
+	let paddingBefore = text( 'paddingBottom', '', 'Column Options' );
+	let paddingAfter  = text( 'paddingTop', '', 'Column Options' );
 
 	if ( 'halves' === layout ) {
 
