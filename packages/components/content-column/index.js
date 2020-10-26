@@ -38,6 +38,8 @@ const ContentColumnWrapper = ( props ) => {
 		[
 			{ key:'backgroundColor', classSlug:'background' },
 			{ key:'layout', prefix:'wsu-c-columns--' },
+			{ key:'bleedLeft', prefix:'wsu-c-columns--', isBool:true, value:'bleed-left' },
+			{ key:'bleedRight', prefix:'wsu-c-columns--', isBool:true, value:'bleed-right' },
 		],
 		props,
 		['wsu-c-column__wrapper']
@@ -94,6 +96,8 @@ const ContentColumn = ( props ) =>  {
 		[
 			{ key:'backgroundColor', classSlug:'background' },
 			{ key:'layout', prefix:'wsu-c-columns--' },
+			{ key:'bleedLeft', prefix:'wsu-c-column--', isBool:true, value:'bleed-left' },
+			{ key:'bleedRight', prefix:'wsu-c-column--', isBool:true, value:'bleed-right' },
 		],
 		props,
 		['wsu-c-column']

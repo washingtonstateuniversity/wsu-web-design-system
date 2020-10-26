@@ -5,7 +5,7 @@ import { withKnobs, text, boolean, number, select } from "@storybook/addon-knobs
 // Storybook Imports
 import ComponentWrapper from '../../packages/component-parts/content-wrapper';
 
-import { WsuColumnWrapper, WsuColumn } from '../../packages/components';
+import { WsuColumnWrapper, WsuColumn, WsuContentContainer } from '../../packages/components';
 import { WsuP } from '../../packages/components';
 
 // Story Time
@@ -206,7 +206,7 @@ export const DefaultColumn = () => {
 	}
 }
 
-export const Columns = () => {
+export const ColumnBleed = () => {
 
 	let bgColor              = select( 'backgroundColor', bgColorOptions, '', 'Columns Wrapper' );
 	let wrapperMarginBefore  = select( 'marginBefore', spacingOptions, 'default', 'Columns Wrapper' );
@@ -220,10 +220,10 @@ export const Columns = () => {
 	let paddingBefore = select( 'paddingBefore', spacingOptions, 'default', 'Column Options' );
 	let paddingAfter  = select( 'paddingAfter', spacingOptions, 'default', 'Column Options' );
 
-	return(
-		<ComponentWrapper layout="full" className="wsu-c-content">
-			<WsuColumnWrapper 
-				layout={'single'} 
+	return (
+		<WsuContentContainer>
+			<WsuColumnWrapper
+				layout='halves'
 				backgroundColor={ bgColor } 
 				marginBefore={wrapperMarginBefore}
 				marginAfter={wrapperMarginAfter}
@@ -236,60 +236,17 @@ export const Columns = () => {
 					marginAfter={marginAfter}
 					paddingBefore={paddingBefore}
 					paddingAfter={paddingAfter}
-					>
-					<WsuP>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
-						varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
-						platea dictumst. Suspendisse blandit, leo ac lacinia viverra, magna massa ornare nulla, eu rutrum 
-						purus nunc at odio. Phasellus aliquam leo sed vulputate facilisis. Phasellus turpis dui, euismod ultrices 
-						rutrum et, ultrices ut quam. Sed euismod tincidunt eros eu venenatis. Nunc accumsan, felis ac cursus 
-						suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
-						arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
-						eleifend et suscipit vel, faucibus vitae lorem.
-					</WsuP>
-				</WsuColumn>
-			</WsuColumnWrapper>
-			<WsuColumnWrapper 
-				layout={'halves'} 
-				marginBefore={wrapperMarginBefore}
-				marginAfter={wrapperMarginAfter}
-				paddingBefore={wrapperPaddingBefore}
-				paddingAfter={wrapperPaddingAfter}
-				>
-				<WsuColumn
-					marginBefore={marginBefore}
-					marginAfter={marginAfter}
-					paddingBefore={paddingBefore}
-					paddingAfter={paddingAfter}
-					>
-					<WsuP>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
-						varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
-						platea dictumst. Suspendisse blandit, leo ac lacinia viverra, magna massa ornare nulla, eu rutrum 
-						purus nunc at odio. Phasellus aliquam leo sed vulputate facilisis. Phasellus turpis dui, euismod ultrices 
-						rutrum et, ultrices ut quam. Sed euismod tincidunt eros eu venenatis. Nunc accumsan, felis ac cursus 
-						suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
-						arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
-						eleifend et suscipit vel, faucibus vitae lorem.</WsuP>
+					bleedLeft={true}
+					><Paragraph />
 				</WsuColumn>
 				<WsuColumn
-					backgroundColor={ columnBgColor } 
-					marginBefore={marginBefore}
-					marginAfter={marginAfter}
-					paddingBefore={paddingBefore}
-					paddingAfter={paddingAfter}
+					bleedRight={true}
 					>
-					<WsuP>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
-						varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
-						platea dictumst. Suspendisse blandit, leo ac lacinia viverra, magna massa ornare nulla, eu rutrum 
-						purus nunc at odio. Phasellus aliquam leo sed vulputate facilisis. Phasellus turpis dui, euismod ultrices 
-						rutrum et, ultrices ut quam. Sed euismod tincidunt eros eu venenatis. Nunc accumsan, felis ac cursus 
-						suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
-						arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
-						eleifend et suscipit vel, faucibus vitae lorem.</WsuP>
+					<Paragraph />
 				</WsuColumn>
 			</WsuColumnWrapper>
-			<WsuColumnWrapper 
-				layout={'halves'}
+			<WsuColumnWrapper
+				layout="single"
 				backgroundColor={ bgColor } 
 				marginBefore={wrapperMarginBefore}
 				marginAfter={wrapperMarginAfter}
@@ -302,237 +259,11 @@ export const Columns = () => {
 					marginAfter={marginAfter}
 					paddingBefore={paddingBefore}
 					paddingAfter={paddingAfter}
-					>
-					<WsuP>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
-						varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
-						platea dictumst. Suspendisse blandit, leo ac lacinia viverra, magna massa ornare nulla, eu rutrum 
-						purus nunc at odio. Phasellus aliquam leo sed vulputate facilisis. Phasellus turpis dui, euismod ultrices 
-						rutrum et, ultrices ut quam. Sed euismod tincidunt eros eu venenatis. Nunc accumsan, felis ac cursus 
-						suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
-						arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
-						eleifend et suscipit vel, faucibus vitae lorem.</WsuP>
-				</WsuColumn>
-				<WsuColumn
-					marginBefore={marginBefore}
-					marginAfter={marginAfter}
-					paddingBefore={paddingBefore}
-					paddingAfter={paddingAfter}
-					>
-					<WsuP>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
-						varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
-						platea dictumst. Suspendisse blandit, leo ac lacinia viverra, magna massa ornare nulla, eu rutrum 
-						purus nunc at odio. Phasellus aliquam leo sed vulputate facilisis. Phasellus turpis dui, euismod ultrices 
-						rutrum et, ultrices ut quam. Sed euismod tincidunt eros eu venenatis. Nunc accumsan, felis ac cursus 
-						suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
-						arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
-						eleifend et suscipit vel, faucibus vitae lorem.</WsuP>
+					bleedLeft={true}
+					bleedRight={true}
+					><Paragraph />
 				</WsuColumn>
 			</WsuColumnWrapper>
-			<WsuColumnWrapper 
-				layout={'sidebar-left'} 
-				marginBefore={wrapperMarginBefore}
-				marginAfter={wrapperMarginAfter}
-				paddingBefore={wrapperPaddingBefore}
-				paddingAfter={wrapperPaddingAfter}
-				>
-				<WsuColumn
-					backgroundColor={ columnBgColor } 
-					marginBefore={marginBefore}
-					marginAfter={marginAfter}
-					paddingBefore={paddingBefore}
-					paddingAfter={paddingAfter}
-					>
-					<WsuP>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
-						varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
-						platea dictumst. Suspendisse blandit, leo ac lacinia viverra, magna massa ornare nulla, eu rutrum 
-						purus nunc at odio. Phasellus aliquam leo sed vulputate facilisis. Phasellus turpis dui, euismod ultrices 
-						rutrum et, ultrices ut quam. Sed euismod tincidunt eros eu venenatis. Nunc accumsan, felis ac cursus 
-						suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
-						arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
-						eleifend et suscipit vel, faucibus vitae lorem.</WsuP>
-				</WsuColumn>
-				<WsuColumn
-					marginBefore={marginBefore}
-					marginAfter={marginAfter}
-					paddingBefore={paddingBefore}
-					paddingAfter={paddingAfter}
-					>
-					<WsuP>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
-						varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
-						platea dictumst. Suspendisse blandit, leo ac lacinia viverra, magna massa ornare nulla, eu rutrum 
-						purus nunc at odio. Phasellus aliquam leo sed vulputate facilisis. Phasellus turpis dui, euismod ultrices 
-						rutrum et, ultrices ut quam. Sed euismod tincidunt eros eu venenatis. Nunc accumsan, felis ac cursus 
-						suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
-						arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
-						eleifend et suscipit vel, faucibus vitae lorem.</WsuP>
-				</WsuColumn>
-			</WsuColumnWrapper>
-			<WsuColumnWrapper 
-				layout={'sidebar-right'} 
-				backgroundColor={ bgColor } 
-				marginBefore={wrapperMarginBefore}
-				marginAfter={wrapperMarginAfter}
-				paddingBefore={wrapperPaddingBefore}
-				paddingAfter={wrapperPaddingAfter}
-				>
-				<WsuColumn
-					marginBefore={marginBefore}
-					marginAfter={marginAfter}
-					paddingBefore={paddingBefore}
-					paddingAfter={paddingAfter}
-					>
-					<WsuP>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
-						varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
-						platea dictumst. Suspendisse blandit, leo ac lacinia viverra, magna massa ornare nulla, eu rutrum 
-						purus nunc at odio. Phasellus aliquam leo sed vulputate facilisis. Phasellus turpis dui, euismod ultrices 
-						rutrum et, ultrices ut quam. Sed euismod tincidunt eros eu venenatis. Nunc accumsan, felis ac cursus 
-						suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
-						arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
-						eleifend et suscipit vel, faucibus vitae lorem.</WsuP>
-				</WsuColumn>
-				<WsuColumn
-					backgroundColor={ columnBgColor } 
-					marginBefore={marginBefore}
-					marginAfter={marginAfter}
-					paddingBefore={paddingBefore}
-					paddingAfter={paddingAfter}
-					>
-					<WsuP>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
-						varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
-						platea dictumst. Suspendisse blandit, leo ac lacinia viverra, magna massa ornare nulla, eu rutrum 
-						purus nunc at odio. Phasellus aliquam leo sed vulputate facilisis. Phasellus turpis dui, euismod ultrices 
-						rutrum et, ultrices ut quam. Sed euismod tincidunt eros eu venenatis. Nunc accumsan, felis ac cursus 
-						suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
-						arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
-						eleifend et suscipit vel, faucibus vitae lorem.</WsuP>
-				</WsuColumn>
-			</WsuColumnWrapper>
-			<WsuColumnWrapper 
-				layout={'thirds'}
-				backgroundColor={ bgColor } 
-				marginBefore={wrapperMarginBefore}
-				marginAfter={wrapperMarginAfter}
-				paddingBefore={wrapperPaddingBefore}
-				paddingAfter={wrapperPaddingAfter}
-				>
-				<WsuColumn
-					backgroundColor={ columnBgColor } 
-					marginBefore={marginBefore}
-					marginAfter={marginAfter}
-					paddingBefore={paddingBefore}
-					paddingAfter={paddingAfter}
-					>
-					<WsuP>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
-						varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
-						platea dictumst. Suspendisse blandit, leo ac lacinia viverra, magna massa ornare nulla, eu rutrum 
-						purus nunc at odio. Phasellus aliquam leo sed vulputate facilisis. Phasellus turpis dui, euismod ultrices 
-						rutrum et, ultrices ut quam. Sed euismod tincidunt eros eu venenatis. Nunc accumsan, felis ac cursus 
-						suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
-						arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
-						eleifend et suscipit vel, faucibus vitae lorem.</WsuP>
-				</WsuColumn>
-				<WsuColumn
-					marginBefore={marginBefore}
-					marginAfter={marginAfter}
-					paddingBefore={paddingBefore}
-					paddingAfter={paddingAfter}
-					>
-					<WsuP>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
-						varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
-						platea dictumst. Suspendisse blandit, leo ac lacinia viverra, magna massa ornare nulla, eu rutrum 
-						purus nunc at odio. Phasellus aliquam leo sed vulputate facilisis. Phasellus turpis dui, euismod ultrices 
-						rutrum et, ultrices ut quam. Sed euismod tincidunt eros eu venenatis. Nunc accumsan, felis ac cursus 
-						suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
-						arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
-						eleifend et suscipit vel, faucibus vitae lorem.</WsuP>
-				</WsuColumn>
-				<WsuColumn
-					backgroundColor={ columnBgColor } 
-					marginBefore={marginBefore}
-					marginAfter={marginAfter}
-					paddingBefore={paddingBefore}
-					paddingAfter={paddingAfter}
-					>
-					<WsuP>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
-						varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
-						platea dictumst. Suspendisse blandit, leo ac lacinia viverra, magna massa ornare nulla, eu rutrum 
-						purus nunc at odio. Phasellus aliquam leo sed vulputate facilisis. Phasellus turpis dui, euismod ultrices 
-						rutrum et, ultrices ut quam. Sed euismod tincidunt eros eu venenatis. Nunc accumsan, felis ac cursus 
-						suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
-						arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
-						eleifend et suscipit vel, faucibus vitae lorem.</WsuP>
-				</WsuColumn>
-			</WsuColumnWrapper>
-			<WsuColumnWrapper 
-				layout={'quarters'} 
-				marginBefore={wrapperMarginBefore}
-				marginAfter={wrapperMarginAfter}
-				paddingBefore={wrapperPaddingBefore}
-				paddingAfter={wrapperPaddingAfter}
-				>
-				<WsuColumn
-					backgroundColor={ columnBgColor } 
-					marginBefore={marginBefore}
-					marginAfter={marginAfter}
-					paddingBefore={paddingBefore}
-					paddingAfter={paddingAfter}
-					>
-					<WsuP>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
-						varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
-						platea dictumst. Suspendisse blandit, leo ac lacinia viverra, magna massa ornare nulla, eu rutrum 
-						purus nunc at odio. Phasellus aliquam leo sed vulputate facilisis. Phasellus turpis dui, euismod ultrices 
-						rutrum et, ultrices ut quam. Sed euismod tincidunt eros eu venenatis. Nunc accumsan, felis ac cursus 
-						suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
-						arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
-						eleifend et suscipit vel, faucibus vitae lorem.</WsuP>
-				</WsuColumn>
-				<WsuColumn
-					marginBefore={marginBefore}
-					marginAfter={marginAfter}
-					paddingBefore={paddingBefore}
-					paddingAfter={paddingAfter}
-					>
-					<WsuP>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
-						varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
-						platea dictumst. Suspendisse blandit, leo ac lacinia viverra, magna massa ornare nulla, eu rutrum 
-						purus nunc at odio. Phasellus aliquam leo sed vulputate facilisis. Phasellus turpis dui, euismod ultrices 
-						rutrum et, ultrices ut quam. Sed euismod tincidunt eros eu venenatis. Nunc accumsan, felis ac cursus 
-						suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
-						arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
-						eleifend et suscipit vel, faucibus vitae lorem.</WsuP>
-				</WsuColumn>
-				<WsuColumn
-					backgroundColor={ columnBgColor } 
-					marginBefore={marginBefore}
-					marginAfter={marginAfter}
-					paddingBefore={paddingBefore}
-					paddingAfter={paddingAfter}
-					>
-					<WsuP>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
-						varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
-						platea dictumst. Suspendisse blandit, leo ac lacinia viverra, magna massa ornare nulla, eu rutrum 
-						purus nunc at odio. Phasellus aliquam leo sed vulputate facilisis. Phasellus turpis dui, euismod ultrices 
-						rutrum et, ultrices ut quam. Sed euismod tincidunt eros eu venenatis. Nunc accumsan, felis ac cursus 
-						suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
-						arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
-						eleifend et suscipit vel, faucibus vitae lorem.</WsuP>
-				</WsuColumn>
-				<WsuColumn
-					marginBefore={marginBefore}
-					marginAfter={marginAfter}
-					paddingBefore={paddingBefore}
-					paddingAfter={paddingAfter}
-					>
-					<WsuP>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
-						varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 
-						platea dictumst. Suspendisse blandit, leo ac lacinia viverra, magna massa ornare nulla, eu rutrum 
-						purus nunc at odio. Phasellus aliquam leo sed vulputate facilisis. Phasellus turpis dui, euismod ultrices 
-						rutrum et, ultrices ut quam. Sed euismod tincidunt eros eu venenatis. Nunc accumsan, felis ac cursus 
-						suscipit, tortor erat scelerisque libero, vitae luctus ex lacus sed felis. Vestibulum vitae sollicitudin 
-						arcu, ultrices porttitor purus. Suspendisse ullamcorper massa a nisl egestas bibendum. Ut felis sem, 
-						eleifend et suscipit vel, faucibus vitae lorem.</WsuP>
-				</WsuColumn>
-			</WsuColumnWrapper>
-		</ComponentWrapper>
+		</WsuContentContainer>
 	);
 }

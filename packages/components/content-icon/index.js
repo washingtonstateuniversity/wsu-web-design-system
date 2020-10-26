@@ -9,12 +9,12 @@ import './style.scss';
 // Component Starts
 const Icon = ( props ) => {
 
-	if ( '' == this.props.name ) {
+	if ( '' == props.name ) {
 		return null;
 	}
 	
 	return (
-		<i className={'wsu-icon wsu-i-' + this.props.name}></i>
+		<i className={'wsu-icon wsu-i-' + props.name}></i>
 	);
 
 }
