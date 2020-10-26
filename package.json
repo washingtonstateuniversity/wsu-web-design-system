@@ -11,10 +11,10 @@
     "typed.js": "^2.0.11"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.0",
-    "@babel/polyfill": "^7.11.5",
-    "@babel/preset-env": "^7.12.0",
-    "@etchteam/storybook-addon-status": "^2.0.0",
+    "@babel/core": "^7.12.3",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    "@etchteam/storybook-addon-status": "^2.1.0",
     "@storybook/addon-a11y": "^5.3.21",
     "@storybook/addon-actions": "^5.3.21",
     "@storybook/addon-console": "^1.2.2",
@@ -27,7 +27,7 @@
     "@storybook/react": "^5.3.21",
     "@storybook/storybook-deployer": "^2.8.6",
     "@whitespace/storybook-addon-html": "^1.2.4",
-    "@wsuwebteam/build-tools": "^1.8.9",
+    "@wsuwebteam/build-tools": "^1.9.1",
     "@wsuwebteam/wsu-icons": "latest",
     "autoprefixer": "^9.8.6",
     "babel-loader": "^8.1.0",

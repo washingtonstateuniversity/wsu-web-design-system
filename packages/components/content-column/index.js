@@ -1,53 +1,53 @@
 // External Deps
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import {getUtilityClasses} from '@wsuwebteam/build-tools/js/helpers/utilityClasses';
+import {getInlineStyle, setInlineStyleDefaults } from '@wsuwebteam/build-tools/js/helpers/inline-style';
 
 import './style.scss';
 
-class ContentColumnWrapper extends Component {
 
-	getWrapperClasses() {
+const legacySpacingMap = {
+	'none': '0',
+	'xsmall': '0.5rem',
+	'small': '1rem',
+	'medium': '2rem',
+	'medium-large': '3rem',
+	'large': '4rem',
+	'xlarge': '6rem',
+}
 
-		let classes = ['wsu-c-column__wrapper'];
 
-		if ( this.props.layout && 'default' !== this.props.layout ) {
-			classes.push( 'wsu-c-columns--' + this.props.layout );
-		}
+const ContentColumnWrapper = ( props ) => {
 
-		if ( this.props.backgroundColor && 'default' !== this.props.backgroundColor ) {
-			classes.push( 'wsu-u-background--' + this.props.backgroundColor );
-		}
+	let inlineStyle = getInlineStyle(
+		props,
+		[
+			{ key:'marginBefore', property:'marginTop', legacyMap: legacySpacingMap },
+			{ key:'marginAfter', property:'marginBottom', legacyMap: legacySpacingMap },
+			{ key:'paddingAfter', property:'paddingBottom', legacyMap: legacySpacingMap },
+			{ key:'paddingBefore', property:'paddingTop', legacyMap: legacySpacingMap },
+			{ key:'marginTop'},
+			{ key:'marginBottom'},
+			{ key:'paddingBottom'},
+			{ key:'paddingTop'},
+		]
+	);
 
-		if ( this.props.marginBefore && 'default' !== this.props.marginBefore ) {
-			classes.push( 'wsu-u-margin-before-' + this.props.marginBefore );
-		}
+	let wrapperClasses = getUtilityClasses(
+		[
+			{ key:'backgroundColor', classSlug:'background' },
+			{ key:'layout', prefix:'wsu-c-columns--' },
+		],
+		props,
+		['wsu-c-column__wrapper']
+	)
 
-		if ( this.props.marginAfter && 'default' !== this.props.marginAfter ) {
-			classes.push( 'wsu-u-margin-after-' + this.props.marginAfter );
-		}
-
-		if ( this.props.paddingAfter && 'default' !== this.props.paddingAfter ) {
-			classes.push( 'wsu-u-padding-after-' + this.props.paddingAfter );
-		}
-
-		if ( this.props.paddingBefore && 'default' !== this.props.paddingBefore ) {
-			classes.push( 'wsu-u-padding-before-' + this.props.paddingBefore );
-		}
-
-		return classes;
-
-	}
-
-	render() {
-
-		let classes = this.getWrapperClasses();
-
-		return (
-			<div className={ classes.join(' ') }>
-				{this.props.children}
-			</div>
-		);
-	}
+	return (
+		<div className={ wrapperClasses } style={inlineStyle}>
+			{props.children}
+		</div>
+	);
 
 
 }
@@ -55,52 +55,62 @@ class ContentColumnWrapper extends Component {
 ContentColumnWrapper.defaultProps = {
 	layout: 'default',
 	backgroundColor: '',
+	backgroundImageSrc:'',
+	backgroundImageAlt:'',
+	useCustomSpacing: false,
+	marginBefore: '',
+	marginAfter: '',
+	paddingBefore: '',
+	paddingAfter: '',
 }
 
-class ContentColumn extends Component {
+const ContentColumn = ( props ) =>  {
 
-	getWrapperClasses() {
+	let inlineStyle = getInlineStyle(
+		props,
+		[
+			{ key:'marginBefore', property:'marginTop', legacyMap: legacySpacingMap },
+			{ key:'marginAfter', property:'marginBottom', legacyMap: legacySpacingMap },
+			{ key:'paddingAfter', property:'paddingBottom', legacyMap: legacySpacingMap },
+			{ key:'paddingBefore', property:'paddingTop', legacyMap: legacySpacingMap },
+			{ key:'marginTop', property:'marginTop'},
+			{ key:'marginBottom', property:'marginBottom'},
+			{ key:'paddingBottom', property:'paddingBottom' },
+			{ key:'paddingTop', property:'paddingTop'},
+		]
+	)
 
-		let classes = ['wsu-c-column'];
+	if ( '' != props.backgroundColor && 'default' != props.backgroundColor ) {
 
-		if ( this.props.backgroundColor && 'default' !== this.props.backgroundColor ) {
-			classes.push( 'wsu-u-background--' + this.props.backgroundColor );
-		}
-
-		if ( this.props.marginBefore && 'default' !== this.props.marginBefore ) {
-			classes.push( 'wsu-u-margin-before--' + this.props.marginBefore );
-		}
-
-		if ( this.props.marginAfter && 'default' !== this.props.marginAfter ) {
-			classes.push( 'wsu-u-margin-after--' + this.props.marginAfter );
-		}
-
-		if ( this.props.paddingAfter && 'default' !== this.props.paddingAfter ) {
-			classes.push( 'wsu-u-padding-after--' + this.props.paddingAfter );
-		}
-
-		if ( this.props.paddingBefore && 'default' !== this.props.paddingBefore ) {
-			classes.push( 'wsu-u-padding-before--' + this.props.paddingBefore );
-		}
-
-		return classes;
+		inlineStyle = setInlineStyleDefaults( inlineStyle, {
+			'paddingBottom':'1.5em',
+			'paddingTop':'1.5em',
+		}); 
 
 	}
 
-	render() {
 
-		let classes = this.getWrapperClasses();
+	let wrapperClasses = getUtilityClasses(
+		[
+			{ key:'backgroundColor', classSlug:'background' },
+			{ key:'layout', prefix:'wsu-c-columns--' },
+		],
+		props,
+		['wsu-c-column']
+	)
 
-		return (
-			<div className={ classes.join(' ') }>
-				{this.props.children}
-			</div>
-		);
-	}
+
+	return (
+		<div className={ wrapperClasses } style={inlineStyle}>
+			{props.children}
+		</div>
+	);
 }
 
 ContentColumn.defaultProps = {
 	backgroundColor: '',
+	backgroundImageSrc:'',
+	backgroundImageAlt:'',
 	marginBefore: '',
 	marginAfter: '',
 	paddingBefore: '',
