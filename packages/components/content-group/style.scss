@@ -1,0 +1,19 @@
+.wsu-c-group {
+	.wsu-c-container {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+}
+
+.wsu-c-group:not(.wsu-u-bleed--full) {
+	margin-left: -2.25rem;
+	margin-right: -2.25rem;
+}
+
+.wsu-c-group__content:not(.wsu-c-container) {
+
+	.wsu-c-column__wrapper {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}

@@ -1,0 +1,18 @@
+/* Bleed and full width utility classes
+======================================= */
+
+.wsu-u-bleed--full {
+
+	@media screen and ( min-width: 1200px ) {
+		margin-left: calc( ( 100vw - 100% ) / -2 );
+		margin-right: calc( ( 100vw - 100% ) / -2 );
+	}
+}
+
+.wsu-c-content .wsu-u-bleed--full {
+
+	@media screen and ( max-width: 1200px ) {
+		margin-left: -2.25rem;
+		margin-right: -2.25rem;
+	}
+}
