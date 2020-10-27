@@ -85,6 +85,7 @@ body {
 }
 
 .wsu-c-container {
+	font-family: $wsu-bt-primary-font-family;
 	box-sizing: border-box;
 	width: 100%;
 	max-width: 1200px;
@@ -141,8 +142,6 @@ body {
 	.wsu-c-column__wrapper {
 		margin-right: calc( #{space( 'content' )} * -1 );
 		margin-left: calc( #{space( 'content' )} * -1 );
-		padding-right: 0.75rem;
-		padding-left: 0.75rem;
 	}
 
 	.wsu-c-full-width--wrapper {
