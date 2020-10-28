@@ -17,6 +17,7 @@ class EmContentHero extends Component {
 				{ key: 'marginAfter', classSlug: 'margin-after' },
 				{ key: 'paddingBefore', classSlug: 'padding-before' },
 				{ key: 'paddingAfter', classSlug: 'padding-after' },
+				{ key: 'style', classSlug: 'hero__wrapper', 'prefix': 'wsu-c-em-'},
 			],
 			this.props,
 			'wsu-c-em-hero__wrapper'
@@ -41,7 +42,8 @@ EmContentHero.propTypes = {
 	titleTag: PropTypes.string,
 	titleAriaLabel: PropTypes.string,
 	description: PropTypes.string,
-	backgroundImageUrl: PropTypes.string
+	backgroundImageUrl: PropTypes.string,
+	style: PropTypes.string
 }
 
 EmContentHero.defaultProps = {
@@ -50,6 +52,7 @@ EmContentHero.defaultProps = {
 	titleAriaLabel: '',
 	description: '', 
 	backgroundImageUrl: 'https://s3.wp.wsu.edu/uploads/sites/2438/2020/08/Coug-Logo-on-Chinook-crop_8520.jpg',
+	style: 'default'
 }
 
 export default EmContentHero;
