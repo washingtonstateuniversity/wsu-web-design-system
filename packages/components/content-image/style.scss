@@ -3,6 +3,7 @@
 
 .wsu-c-image__wrapper {
 	margin-bottom: $unit;
+	position: relative;
 
 	img {
 		display: block;
@@ -61,4 +62,18 @@
 .wsu-c-content img:not([class^="wsu-c-"]):not([class*=" wsu-c-"]) {
 	max-width: 100%;
 	height: auto;
+}
+
+/* EM Notch Modifiers 
+======================= */
+.wsu-m-image--notched-sm img {
+	clip-path: polygon(100% 0, 100% calc(100% - 25px), calc(100% - 25px) 100%, 0 100%, 0 0);
+}
+
+.wsu-m-image--notched-md img {
+	clip-path: polygon(100% 0, 100% calc(100% - 45px), calc(100% - 45px) 100%, 0 100%, 0 0);
+}
+
+.wsu-m-image--notched-lg img {
+	clip-path: polygon(100% 0, 100% calc(100% - 100px), calc(100% - 100px) 100%, 0 100%, 0 0);
 }
