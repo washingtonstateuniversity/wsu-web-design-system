@@ -1,0 +1,27 @@
+.wsu-c-em-hero__wrapper.wsu-c-em-hero__wrapper--boxed-background {
+	clip-path: none;
+
+	.wsu-c-em-hero__container {
+		&::before,
+		&::after {
+			display: none;
+		}
+	}
+
+	.wsu-c-em-hero__content {
+		background: color(white, base);
+		max-width: 800px;
+		padding: 80px;
+
+		clip-path: polygon(100% 0, 100% calc(100% - 80px), calc(100% - 80px) 100%, 0 100%, 0 0);
+	}
+
+	.wsu-c-em-hero__title, 
+	#editor .wsu-c-em-hero__title {
+		color: color(primary, light) !important;
+	}
+
+	.wsu-c-em-hero__description {
+		color: initial;
+	}
+}
