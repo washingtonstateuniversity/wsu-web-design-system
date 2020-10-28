@@ -119,6 +119,7 @@ ContentColumn.defaultProps = {
 	marginAfter: '',
 	paddingBefore: '',
 	paddingAfter: '',
+	inlineStyle: {}
 }
 
 export { 
