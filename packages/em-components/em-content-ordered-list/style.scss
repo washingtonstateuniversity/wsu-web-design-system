@@ -48,7 +48,8 @@
 		}
 	}
 
-	&--bolder * {
+	&--bolder *,
+	&--labelled * {
 		font-weight: 700;
 		font-size: 18px;
 	}
@@ -57,6 +58,51 @@
 		margin-top: 0;
 		margin-bottom: 0;
 	}
+
+	/* Create Labeled List Items 
+	======================= */
+
+	$labels: (
+		1: "One",
+		2: "Two",
+		3: "Three",
+		4: "Four",
+		5: "Five",
+		6: "Six",
+		7: "Seven",
+		8: "Eight",
+		9: "Nine",
+		10: "Ten",
+		11: "Eleven",
+		12: "Twelve",
+	);
+
+	&.wsu-c-em-content-ordered-list--labelled {
+		position: relative;
+		margin-top: 60px !important;
+
+		&::before {
+			content: "";
+			font-weight: 900;
+			color: transparent;
+			-webkit-text-stroke-width: 1px;
+			-webkit-text-stroke-color: #dcdcdc;
+			
+			position: absolute;
+			left: -90px;
+			top: 30%;
+			transform: translatey(-50%);
+			
+			font-style: italic;
+			font-size: 100px;
+			z-index: -1;
+			text-transform: uppercase;
+		}
+	}
+
+	@each $key, $name in $labels {
+		&.wsu-c-em-content-ordered-list--labelled[start="#{$key}"]::before {
+			content: "#{$name}";
+		}
+	}
 }
-
-
