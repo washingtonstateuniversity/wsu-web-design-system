@@ -1,0 +1,60 @@
+@import '~@wsuwebteam/build-tools/scss/mixins/_color.scss';
+
+
+/* Font Sizes
+============================= */
+
+.wsu-u-font-size--xsmall {
+	font-size: 0.7em;
+	line-height: 1.4
+}
+
+.wsu-u-font-size--small {
+	font-size: 0.8em;
+	line-height: 1.4
+}
+
+.wsu-u-font-size--medium {
+	font-size: 1em;
+}
+
+.wsu-u-font-size--medium-large {
+	font-size: 1.25em;
+}
+
+.wsu-u-font-size--large {
+	font-size: 1.5em;
+}
+
+.wsu-u-font-size--extra-large {
+	font-size: 2.1em;
+}
+
+/* Font Weight
+============================= */
+.wsu-u-font-weight--light {
+	font-weight: 400;
+}
+
+.wsu-u-font-weight--normal {
+	font-weight: 500;
+}
+
+.wsu-u-font-weight--semi-bold {
+	font-weight: 600;
+}
+
+.wsu-u-font-weight--bold {
+	font-weight: 700;
+}
+
+.wsu-u-font-weight--extra-bold {
+	font-weight: 800;
+}
+
+/* Strong
+============================= */
+.wsu-u-bold--crimson {
+	font-weight: inherit;
+	color: color( primary, light );
+}

@@ -1,0 +1,30 @@
+@import '~@wsuwebteam/build-tools/scss/variables';
+@import '~@wsuwebteam/build-tools/scss/mixins/color';
+
+.wsu-u-background--gray-5 {
+	background: color( gray, 5 );
+}
+
+.wsu-u-background--gray-10 {
+	background: color( gray, 10 );
+}
+
+.wsu-u-background--gray-80 {
+	background: color( gray, 80 );
+	color: #fff;
+}
+
+.wsu-u-background--gray-85 {
+	background: color( gray, 85 );
+	color: #fff;
+}
+
+.wsu-u-background--gray-90 {
+	background: color( gray, 90 );
+	color: #fff;
+}
+
+.wsu-u-background--gray-95 {
+	background: color( gray, 95 );
+	color: #fff;
+}
