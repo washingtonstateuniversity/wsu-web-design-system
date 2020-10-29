@@ -1,11 +1,14 @@
 .wsu-c-group {
+	margin-left: auto;
+	margin-right: auto;
+
 	.wsu-c-container {
 		padding-top: 0;
 		padding-bottom: 0;
 	}
 }
 
-.wsu-c-group:not(.wsu-u-bleed--full) {
+.wsu-c-group:not(.wsu-u-bleed--full):not(.wsu-u-has-max-width) {
 	margin-left: -2.25rem;
 	margin-right: -2.25rem;
 }

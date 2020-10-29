@@ -12,6 +12,7 @@
 	
 	margin: 0;
 	margin-left: $unit;
+	margin-bottom: 1.5em;
 	padding: 0;
 
 	list-style: none;
@@ -30,7 +31,9 @@
 
 	padding-left: $unit;
 
-	@include font-size(16px, 300, 2.1);
+	@include font-size(16px, 300, 1.6);
+
+	margin-bottom: 0.75em;
 
 	&::before {
 		position: absolute;

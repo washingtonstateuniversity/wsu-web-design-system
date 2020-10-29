@@ -223,7 +223,7 @@ $column-spacing: (
 				width: 100%;
 			}
 
-			& > .wsu-m-column--bleed-left {
+			&.wsu-m-column--bleed-left {
 				margin-left: calc( (100vw - 100% ) / -2 );
 				width: auto;
 				flex-wrap: nowrap;
@@ -246,18 +246,18 @@ $column-spacing: (
 			@include mq('small', 'max' ) {
 				width: 100%;
 			}
-		}
 
-		& > .wsu-m-column--bleed-right {
-			margin-right: calc( (100vw - 100% ) / -2 );
-			width: auto;
-			flex-wrap: nowrap;
-			flex-shrink: 1;
-			flex-grow: 1;
-
-			@include mq('tablet', 'max' ) {
-				margin-left: 0;
-				margin-right: 0;
+			&.wsu-m-column--bleed-right {
+				margin-right: calc( (100vw - 100% ) / -2 );
+				width: auto;
+				flex-wrap: nowrap;
+				flex-shrink: 1;
+				flex-grow: 1;
+	
+				@include mq('tablet', 'max' ) {
+					margin-left: 0;
+					margin-right: 0;
+				}
 			}
 		}
 
