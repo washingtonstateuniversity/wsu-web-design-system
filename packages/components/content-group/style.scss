@@ -1,6 +1,7 @@
 .wsu-c-group {
 	margin-left: auto;
 	margin-right: auto;
+	border-radius: 2px;
 
 	.wsu-c-container {
 		padding-top: 0;
@@ -8,15 +9,17 @@
 	}
 }
 
-.wsu-c-group:not(.wsu-u-bleed--full):not(.wsu-u-has-max-width) {
+.wsu-c-group[class*=" wsu-u-background--"]:not(.wsu-u-bleed--full) {
+	padding-left: 1.5em;
+	padding-right: 1.5em;
+	padding-top: 1.5em;
+	padding-bottom: 0.5em;
+}
+
+.wsu-c-container > .wsu-c-group[class*=" wsu-u-background--"]:not(.wsu-u-bleed--full):not(.wsu-u-has-max-width) {
 	margin-left: -2.25rem;
 	margin-right: -2.25rem;
+	padding-left: 2.25rem;
+	padding-right: 2.25rem;
 }
 
-.wsu-c-group__content:not(.wsu-c-container) {
-
-	.wsu-c-column__wrapper {
-		margin-left: 0;
-		margin-right: 0;
-	}
-}

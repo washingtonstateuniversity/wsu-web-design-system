@@ -5,51 +5,57 @@
 ============================= */
 
 .wsu-u-font-size--xsmall {
-	font-size: 0.7em;
+	font-size: 0.7em !important;
 	line-height: 1.4
 }
 
 .wsu-u-font-size--small {
-	font-size: 0.8em;
+	font-size: 0.8em !important;
 	line-height: 1.4
 }
 
 .wsu-u-font-size--medium {
-	font-size: 1em;
+	font-size: 1.15em !important;
 }
 
 .wsu-u-font-size--medium-large {
-	font-size: 1.25em;
+	font-size: 1.25em !important;
 }
 
 .wsu-u-font-size--large {
-	font-size: 1.5em;
+	font-size: 1.5em !important;
 }
 
 .wsu-u-font-size--extra-large {
-	font-size: 2.1em;
+	font-size: 2.1em !important;
 }
 
 /* Font Weight
 ============================= */
 .wsu-u-font-weight--light {
-	font-weight: 400;
+	font-weight: 400 !important;
 }
 
 .wsu-u-font-weight--normal {
-	font-weight: 500;
+	font-weight: 500 !important;
 }
 
 .wsu-u-font-weight--semi-bold {
-	font-weight: 600;
+	font-weight: 600 !important;
 }
 
 .wsu-u-font-weight--bold {
-	font-weight: 700;
+	font-weight: 700 !important;
 }
 
 .wsu-u-font-weight--extra-bold {
-	font-weight: 800;
+	font-weight: 800 !important;
+}
+
+/* Font Case
+============================= */
+.wsu-u-text-uppercase {
+	text-transform: uppercase !important;
 }
 
 /* Strong
