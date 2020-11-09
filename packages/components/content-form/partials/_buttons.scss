@@ -1,8 +1,0 @@
-@import '../../content-button/style.scss';
-
-/* Selectors
-======================= */
-.wsu-c-content button {
-	@extend .wsu-c-button;
-	@include wsu-c-form__button();
-}

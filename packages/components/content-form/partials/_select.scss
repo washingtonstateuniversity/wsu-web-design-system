@@ -1,7 +1,0 @@
-/* Selectors
-======================= */
-.wsu-c-content select,
-select.wsu-c-form__select {
-	@include wsu-c-form__input;
-	@include wsu-c-form__select;
-}
