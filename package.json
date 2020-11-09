@@ -61,7 +61,8 @@
     "build:storybook": "build-storybook -o ./storybook/public",
     "clean": "rimraf ./bundles/dist && rimraf ./storybook/public",
     "storybook": "start-storybook -p 6006",
-    "deploy-storybook": "storybook-to-aws-s3 --bucket-path=storybook-internal.web.wsu.edu"
+    "deploy:storybook": "storybook-to-aws-s3 --bucket-path=storybook.web.wsu.edu",
+    "deploy:storybook-internal": "storybook-to-aws-s3 --bucket-path=storybook-internal.web.wsu.edu"
   },
   "repository": {
     "type": "git",
