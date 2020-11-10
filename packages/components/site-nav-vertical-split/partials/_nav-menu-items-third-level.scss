@@ -1,0 +1,15 @@
+.wsu-s-nav-vertical-split__menu .wsu-s-nav-vertical-split__menu .wsu-s-nav-vertical-split__menu {
+	
+	border-left: none;
+
+	.wsu-s-nav-vertical-split__menu-item {
+
+		&-wrapper:last-child {
+		}
+
+		&-link {
+			padding-left: 3rem;
+		}
+
+	}
+}

@@ -1,143 +1,132 @@
-@import './variables';
 @import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
+@import '../../../../assets/src/scss/all_the_things';
 
-.#{$class-base} {
+.wsu-s-nav-vertical-split__menu-bar {
 
-	&__menu-bar {
+	position: fixed;
+	width: $wds-menu-width-closed;
+	top: 0;
+	bottom: 0;
+	left: calc( #{$wds-menu-width-closed} * -1);
+	border: none;
+	background-color: #fff;
+	outline: 0;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	z-index: 10100;
 
-		position: fixed;
-		top: 0;
-		bottom: 0;
-		transform: translateX(-#{$nav-width});
-		z-index: 3;
+	&__icon {
 
-		width: $nav-width;
 		display: block;
-		overflow: hidden;
-		opacity: 0;
-
-		transition: opacity 300ms ease-in, width 300ms ease-in, transform 100ms ease-in 500ms;
+		margin-left: auto;
+		margin-right: auto;
+		height: 20px;
+		width: 20px;
+		position: relative;
 		
-		background-color: #fff;
-		border-left: none;
-		border-right: 1px solid color(gray,10);
-		border-top: none;
-		border-bottom: none;
-		outline: 0;
-		cursor: pointer;
+		&-bar {
 
-		@include mq('mobile', 'max') {
+			display: block;
+			width: 20px;
+			height: 3px;
+			position: absolute;
+			right: 0;
 
-			display: none;
+			background-color: color( gray, 75 );
+			border-radius: 2px;
 			
+			transition: transform 150ms ease-in, top 150ms ease-in, right 150ms ease-in, width 150ms ease-in, height 150ms ease-in, bottom 150ms ease-in;
+
+			&:nth-child(2) {
+				top: 0;
+			}
+
+			&:nth-child(2) {
+				top: 50%;
+				transform: translateY(-2px);
+			}
+
+			&:nth-child(3) {
+				width: 14px;
+				bottom: 0;
+				right: 6px;
+			}
 		}
 
-
 	}
 
-	&__menu-bar-icon-container {
-		display: block;
-		position: relative;
-	
-		width: 20px;
-		height: 18px;
-		margin: 0 auto;
-	}
-	
-	&__menu-icon-bar {
-		display: block;
-		position: absolute;
-	
-		width: 100%;
-		height: 3px;
-	
-		transition: all timing(cougar, easy-does-it);
-		animation-direction: alternate-reverse;
-	
-		border-radius: 2px;
-		background-color: color(gray, 70);
-	}
-
-	&__menu-icon-bar:nth-child(1) {
-		top: 30%;
-		right: 0;
-
-		width: 60%;
-
-		transform: rotate(45deg);
-	}
-
-	&__menu-icon-bar:nth-child(2) {
-		top: 50%;
-		width: 100%;
-		transform: translateY(1px);
-	}
-
-	&__menu-icon-bar:nth-child(3) {
-		top: 72%;
-		right: 0;
-
-		width: 60%;
-
-		transform: rotate(-45deg);
-	}
-
-	&__menu-bar-label::after {
-		content:"Open";
-		display: block;
-		margin-top: 1em;
+	&__label {
+		margin-top: 4px;
+		font-size: 0.6rem;
+		font-weight: 500;
 		text-transform: uppercase;
-		color: color(gray,40);
-		font-weight: 400;
-		font-size: 0.7rem;
+		text-align: center;
+		display: block;
+		width: 100%;
+		color: color( gray, 30 );
+
+		&::before {
+			content: "Menu";
+		}
+	}
+
+	&__overlay {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: auto;
+		width: auto;
+		display: block;
+	}
+
+	/* Hover Effects
+	============================= */
+	&:hover {
+
+		background-color: #F8F8F8;
+
+		.wsu-s-nav-vertical-split__menu-bar {
+
+			&__icon {
+			
+				&-bar {
+
+					&:nth-child(1) {
+						transform: rotate( 45deg ) ;
+						width: 12px;
+						top: 5px;
+						height: 2px;
+						right: -3px;
+					}
+		
+					&:nth-child(3) {
+						transform: rotate( -45deg ) ;
+						width: 12px;
+						height: 2px;
+						bottom: 5px;
+						right: -3px;
+					}
+				}
+
+			}
+
+			&__label {
+		
+				&::before {
+					content: "Open";
+				}
+			}
+
+		}
+
 	}
 
 }
 
-.#{$class-base}--closed {
-
-	.#{$class-base} {
-
-		&__menu-bar {
-			width: $nav-width-closed;
-			transform: translateX(0);
-			transition: transform 200ms ease-in;
-			opacity: 1;
-			outline: 1;
-
-			&:not(:hover) {
-
-				.#{$class-base}__menu-item-wrapper {
-					animation: none !important;
-				}
-		
-				.#{$class-base}__menu-icon-bar:nth-child(1) {
-					top: 0%;
-					right: 0;
-					width: 100%;
-
-					transform: rotate(0deg);
-				}
-				
-				.#{$class-base}__menu-icon-bar:nth-child(2) {
-					top: 50%;
-				}
-				
-				.#{$class-base}__menu-icon-bar:nth-child(3) {
-					top: 100%;
-					right: 40%;
-				
-					transform: rotate(0deg);
-				}
-
-				.#{$class-base}__menu-bar-label::after {
-					content:"Menu";
-				}
-
-			}
-		}
-
-		
-	}
-
+.wsu-s-nav-vertical--closed .wsu-s-nav-vertical-split__menu-bar {
+	left: 0;
 }
