@@ -26,25 +26,31 @@ const navMenu = {
 		{ 
 			label:'Home',
 			classList: '',
+			url: '#link',
+			isCurrent: true,
 			children:[]
 		},
 		{ 
 			label:'Nav Item',
 			classList: '',
+			url: '#link',
 			children:[
 				{ 
 					label:'Child Nav Item',
 					classList: '',
+					url: '#link',
 					children:[]
 				},
 				{ 
 					label:'Child Nav Item',
 					classList: '',
+					url: '#link',
 					children:[],
 				},
 				{ 
 					label:'Child Nav Item',
 					classList: '',
+					url: '#link',
 					children:[]
 				}
 			
@@ -53,45 +59,53 @@ const navMenu = {
 		{ 
 			label:'Nav Item Current',
 			classList: '',
-			isCurrent: true,
+			url: '#link',
 			children:[]
 		},
 		{ 
 			label:'Nav Item',
 			classList: '',
+			url: '#link',
 			children:[]
 		},
 		{ 
 			label:'Nav Item',
 			classList: '',
+			url: '#link',
 			children:[
 				{ 
 					label:'Child Nav Item',
 					classList: '',
+					url: '#link',
 					children:[]
 				},
 				{ 
 					label:'Child Nav Item',
 					classList: '',
+					url: '#link',
 					children:[],
 				},
 				{ 
 					label:'Child Nav Item',
 					classList: '',
+					url: '#link',
 					children:[
 						{ 
 							label:'Child Nav Item',
 							classList: '',
+							url: '#link',
 							children:[]
 						},
 						{ 
 							label:'Child Nav Item',
 							classList: '',
+							url: '#link',
 							children:[],
 						},
 						{ 
 							label:'Child Nav Item',
 							classList: '',
+							url: '#link',
 							children:[]
 						}
 					]
@@ -101,6 +115,110 @@ const navMenu = {
 		{ 
 			label:'Nav Item',
 			classList: '',
+			url: '#link',
+			children:[]
+		}
+	]
+}
+
+const navMenuCategories = {
+	label:'',
+	classList: '',
+	url: '#link',
+	children: [
+		{ 
+			label:'Home',
+			classList: '',
+			url: '#link',
+			children:[]
+		},
+		{ 
+			label:'Nav Item Category',
+			classList: '',
+			url: '#',
+			children:[
+				{ 
+					label:'Child Nav Item',
+					classList: '',
+					url: '#link',
+					children:[]
+				},
+				{ 
+					label:'Child Nav Item',
+					classList: '',
+					url: '#link',
+					children:[],
+				},
+				{ 
+					label:'Child Nav Item',
+					classList: '',
+					url: '#link',
+					children:[]
+				}
+			
+			]
+		},
+		{ 
+			label:'Nav Item Current',
+			classList: '',
+			url: '#link',
+			children:[]
+		},
+		{ 
+			label:'Nav Item',
+			classList: '',
+			url: '#link',
+			isCurrent: true,
+			children:[]
+		},
+		{ 
+			label:'Nav Item Category',
+			classList: '',
+			url: '#',
+			children:[
+				{ 
+					label:'Child Nav Item',
+					classList: '',
+					url: '#link',
+					children:[]
+				},
+				{ 
+					label:'Child Nav Item',
+					classList: '',
+					url: '#link',
+					children:[],
+				},
+				{ 
+					label:'Nav Item Category',
+					classList: '',
+					url: '#',
+					children:[
+						{ 
+							label:'Child Nav Item',
+							classList: '',
+							url: '#link',
+							children:[]
+						},
+						{ 
+							label:'Child Nav Item',
+							classList: '',
+							url: '#link',
+							children:[],
+						},
+						{ 
+							label:'Child Nav Item',
+							classList: '',
+							url: '#link',
+							children:[]
+						}
+					]
+				}
+			]
+		},
+		{ 
+			label:'Nav Item',
+			classList: '',
+			url: '#link',
 			children:[]
 		}
 	]
@@ -110,5 +228,12 @@ export const Default = () => {
 
 	return (
 		<WsuSiteNavVerticalSplit menu={navMenu} />
+	)
+}
+
+export const WithCategories = () => {
+
+	return (
+		<WsuSiteNavVerticalSplit menu={navMenuCategories} />
 	)
 }

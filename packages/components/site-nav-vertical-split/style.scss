@@ -1,4 +1,5 @@
 @import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
+@import '../../../assets/src/scss/all_the_things';
 @import '~@wsuwebteam/build-tools/scss/animate.css/animate.min.css';
 @import url('https://cdn.web.wsu.edu/designsystem/1.x/wsu-icons/dist/wsu-icons.bundle.css');
 
@@ -8,14 +9,16 @@
 $class-base: 'wsu-s-nav-vertical-split';
 $nav-width: 260px;
 
+.wsu-s-nav-vertical-split {
 
+	&__wrapper {
+		@include font();
+	}
+}
 
 @import './partials/menu-bar';
-@import './partials/menu';
-@import './partials/menu-items';
-@import './partials/menu-items-second-level';
-@import './partials/menu-items-third-level';
-@import './partials/animations';
-@import './partials/component-interactions';
-@import './partials/overlay';
+@import './partials/nav-panel';
+@import './partials/nav-menu-items-first-level';
+@import './partials/nav-menu-items-second-level';
+@import './partials/nav-menu-items-third-level';
 
