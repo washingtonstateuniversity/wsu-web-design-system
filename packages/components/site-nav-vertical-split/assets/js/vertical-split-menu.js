@@ -12,6 +12,8 @@ class VerticalSplitMenu {
 		this.menuItemsOpenClass      = nav.hasOwnProperty('menuItemsOpenClass') ? nav.menuItemsOpenClass : false;
 		this.menuOpenTimer           = false;
 		this.navTimer                = false;
+		this.animationDuration       = nav.hasOwnProperty('animationDuration') ? nav.animationDuration : 300;
+		this.animationTimer          = false;
 		this.navCloseClass           = nav.hasOwnProperty('navCloseClass') ? nav.navCloseClass : false;
 		this.navOpenClass            = nav.hasOwnProperty('navOpenClass') ? nav.navOpenClass : false;
 		this.navClosedClass          = nav.hasOwnProperty('navClosedClass') ? nav.navClosedClass : false;
@@ -65,7 +67,7 @@ class VerticalSplitMenu {
 
 				if ( menuLink && menuLink.hasAttribute('href') && '#' ==  menuLink.getAttribute('href') ) {
 
-					menuItem.classList.add('wsu-u-is-category');
+					menuItem.classList.add('wsu-s-nav-vertical-split__menu-item--is-category');
 
 					menuLink.addEventListener( 'click', event => {
 						
@@ -106,25 +108,27 @@ class VerticalSplitMenu {
 		
 	}
 
-	toggleMenu( menuItem ) {
+	toggleMenu( menuItem, action = false ) {
 
 		let menuItemWrapper = menuItem.parentElement;
 		let expanded = menuItemWrapper.getAttribute('aria-expanded');
 		let menuItemButton = menuItem.querySelector( this.menuItemsToggleSelector );
 
-		if ( 'false' == expanded ) {
-
+		if ( 'false' == expanded && 'close' != action ) {
+			this.closeSiblingMenus( menuItemWrapper );
 			menuItemWrapper.classList.add( this.menuItemsOpenClass );
 			menuItemWrapper.setAttribute( 'aria-expanded', 'true' );
 			menuItemButton.setAttribute( 'aria-label', 'Close Submenu' );
 
 		} else {
 			menuItemWrapper.setAttribute( 'aria-expanded', 'false' );
+			clearTimeout( this.menuOpenTimer );
 			this.menuOpenTimer = setTimeout( () => { menuItemWrapper.classList.remove( this.menuItemsOpenClass ); }, 300 );
 			menuItemButton.setAttribute( 'aria-label', 'Open Submenu' );
 		}
 
 	}
+
 
 	toggleCategory( event, menuItem ) {
 
@@ -136,13 +140,77 @@ class VerticalSplitMenu {
 
 	closeNav() {
 
+		this.navWrapper.classList.add( 'wsu-a-animated' );
 		this.navWrapper.classList.add( this.navClosedClass );
-
+		this.navWrapper.classList.remove( this.navOpenedClass );
+		clearTimeout( this.animationTimer );
+		this.animationTimer = setTimeout( () => { this.navWrapper.classList.remove( 'wsu-a-animated' );  }, this.animationDuration );
 	}
 
 	openNav() {
+		this.navWrapper.classList.add( 'wsu-a-animated' );
 		this.navWrapper.classList.remove( this.navClosedClass );
-		this.navWrapper.classList.add( this.navOpennedClass );
+		this.navWrapper.classList.add( this.navOpenedClass );
+		clearTimeout( this.animationTimer );
+		this.animationTimer = setTimeout( () => { this.navWrapper.classList.remove( 'wsu-a-animated' );  }, this.animationDuration );
+	}
+
+
+	closeSiblingMenus( menuItemWrapper ) {
+
+		let siblings = [];
+
+		let i = 0;
+
+		let nextSibling = menuItemWrapper.nextElementSibling;
+		let prevSibling = menuItemWrapper.previousElementSibling;
+
+		while( nextSibling && i < 200 ) {
+
+			if ( nextSibling.hasAttribute('aria-expanded') && 'true' == nextSibling.getAttribute('aria-expanded') ) {
+
+				siblings.push( nextSibling );
+
+			}
+
+			nextSibling = nextSibling.nextElementSibling;
+
+			i++;
+
+		}
+
+		i = 0;
+
+		while( prevSibling && i < 200 ) {
+
+			if ( prevSibling.hasAttribute('aria-expanded') && 'true' == prevSibling.getAttribute('aria-expanded') ) {
+
+				console.log( prevSibling );
+
+				siblings.push( prevSibling );
+
+			}
+
+			prevSibling = prevSibling.previousElementSibling;
+
+			i++;
+
+		}
+
+		console.log( siblings );
+
+		siblings.forEach( menuItemWrapper => { 
+
+			let menuItem = menuItemWrapper.querySelector( this.menuItemsSelector );
+
+			if ( menuItem ) {
+
+				this.toggleMenu( menuItem, 'close' );
+
+			}
+
+		} );
+
 	}
 
 	

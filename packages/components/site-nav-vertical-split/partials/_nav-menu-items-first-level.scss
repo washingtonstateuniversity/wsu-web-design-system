@@ -4,6 +4,11 @@
 	list-style-type: none;
 	transition: max-height 300ms ease-out;
 	overflow: hidden;
+	position: relative;
+
+	&::before {
+		transition: opacity 300ms ease-in;
+	}
 
 	.wsu-s-nav-vertical-split__menu-item {
 
@@ -24,6 +29,24 @@
 			z-index: 10001;
 		}
 
+		&:not(.wsu-s-nav-vertical-split__menu-item--is-category) {
+
+			&::after {
+				content: "";
+				width: auto;
+				bottom: 0;
+				left: 0;
+				right: 50px;
+				background-color: color( gray, 15 );
+				height: 1px;
+				display: block;
+				position: absolute;
+				opacity: 0;
+				transition: opacity 300ms ease-in;
+				z-index: 10001;
+			}
+		}
+
 		&-link {
 			font-size: 0.875rem;
 			text-decoration: none !important;
@@ -40,30 +63,15 @@
 			&::after {
 				content: "";
 				width: 5px;
-				top: 1px;
+				top: 0px;
 				left: 0;
-				bottom: 1px;
+				bottom: 0px;
 				background-color: color( gray, 30 );
 				height: auto;
 				display: block;
 				position: absolute;
 				opacity: 0;
-				transition: opacity 100ms ease-in;
 			}
-
-			&::before {
-				content: "";
-				width: 100%;
-				bottom: 0;
-				left: 0;
-				background-color: color( gray, 15 );
-				height: 1px;
-				display: block;
-				position: absolute;
-				opacity: 0;
-				z-index: 10001;
-			}
-
 
 			&:focus,
 			&:hover {
@@ -76,17 +84,63 @@
 
 			}
 		}
+
+	}
+
+	&-toggle {
+		flex-grow: 0;
+		flex-shrink: 0;
+		background: transparent;
+		border-right: none;
+		border-top: none;
+		border-left: none;
+		border-bottom: none;
+		outline: none;
+		width: 50px;
+		text-align: center;
+		position: relative;
+		cursor: pointer;
+	
+		&::before {
+			content: "";
+				width: 100%;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				background-color: color( gray, 15 );
+				height: auto;
+				width: 1px;
+				display: block;
+				position: absolute;
+				opacity: 0;
+				transition: opacity 300ms ease-in;
+		}
+	
+		&::after {
+			content:"\F103";
+			display: inline-block;
+			font-family: 'wsu-icons';
+			font-size: 0.6rem;
+			font-weight: 800;
+			color: color( gray, 30 );
+			transition: transform 100ms ease-out;
+		}
+	
+		&:focus,
+		&:hover {
+			background-color: color( gray, 0 );
+			
+	
+			&::after {
+				color: color( primary, light );
+			}
+		}
 	}
 }
 
+/* Add home icon
+================================= */
 .wsu-s-nav-vertical-split > .wsu-s-nav-vertical-split__menu > .wsu-s-nav-vertical-split__menu-item-wrapper:first-child {
-
-	&.wsu-s-nav-vertical-split__menu-item--current .wsu-s-nav-vertical-split__menu-item-link {
-
-		&::before {
-			color: color(primary, light);
-		}
-	}
 
 	.wsu-s-nav-vertical-split__menu-item-link {
 	
@@ -143,60 +197,10 @@
 	}
 }
 
-/* Menu toggle button
-======================================= */
-.wsu-s-nav-vertical-split__menu-toggle {
-	flex-grow: 0;
-	flex-shrink: 0;
-	background: transparent;
-	border-right: none;
-	border-top: none;
-	border-bottom: none;
-	border-left: #fff;
-	outline: none;
-	width: 50px;
-	text-align: center;
-	position: relative;
-	cursor: pointer;
-
-	&::before {
-		content: "";
-			width: 100%;
-			top: 0;
-			left: 0;
-			bottom: 0;
-			background-color: color( gray, 15 );
-			height: auto;
-			width: 1px;
-			display: block;
-			position: absolute;
-			opacity: 0;
-			transition: opacity 300ms ease-in;
-	}
-
-	&::after {
-		content:"\F103";
-		display: inline-block;
-		font-family: 'wsu-icons';
-		font-size: 0.6rem;
-		font-weight: 800;
-		color: color( gray, 30 );
-		transition: transform 100ms ease-out;
-	}
-
-	&:focus,
-	&:hover {
-		background-color: color( gray, 0 );
-		
-
-		&::after {
-			color: color( primary, light );
-		}
-	}
-}
 
 /* On hover into menu 
 ======================================= */
+.wsu-s-nav-vertical-split:focus-within,
 .wsu-s-nav-vertical-split:hover {
 
 	.wsu-s-nav-vertical-split__menu-item {
@@ -205,28 +209,22 @@
 			opacity: 1;
 		}
 
-		&-wrapper {
+		
 
-			&[aria-expanded="false"] {
+		&-wrapper[aria-expanded="true"] {
 
-				& .wsu-s-nav-vertical-split__menu-item-link {
-					
-				}
+			&.wsu-s-nav-vertical-split__menu-item--has-children {
 
-			}
+				.wsu-s-nav-vertical-split__menu-item {
 
-			&[aria-expanded="true"] {
-
-				& .wsu-s-nav-vertical-split__menu-item-link {
-					
-					&::before {
-						/*opacity: 1; */
+					&::after {
+						opacity: 1;
 					}
 
 				}
 
 			}
-			
+
 		}
 
 	}
@@ -238,14 +236,28 @@
 		}
 	}
 
-	/*.wsu-u-is-category .wsu-s-nav-vertical-split__menu-toggle {
-		
-		&::before {
-			opacity: 0;
-		}
-	}*/
-
 }
+
+/* Menu item is category
+======================================= */
+.wsu-s-nav-vertical-split__menu-item-link[href="#"] {
+
+	& +  .wsu-s-nav-vertical-split__menu-toggle {
+	
+		&::before {
+			display: none;
+		}
+
+	}
+}
+
+.wsu-s-nav-vertical-split__menu-item-link[href="#"]:focus +  .wsu-s-nav-vertical-split__menu-toggle, 
+.wsu-s-nav-vertical-split__menu-item-link[href="#"]:hover +  .wsu-s-nav-vertical-split__menu-toggle {
+
+	background-color: color( gray, 0 );
+	
+}
+
 
 /* Menu item states 
 ======================================= */
@@ -264,6 +276,10 @@
 					width: 5px;
 					background-color: color( primary, light );
 					opacity: 1;
+				}
+
+				&::before {
+					color: color(primary, light) !important;
 				}
 
 			}

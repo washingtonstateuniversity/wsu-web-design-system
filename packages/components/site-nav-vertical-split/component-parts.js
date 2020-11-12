@@ -13,9 +13,12 @@ const NavItem = ( props ) => {
 		navItemClassArray.push( 'wsu-s-nav-vertical-split__menu-item--current-parent' );
 	}
 
-	let navItemClasses = navItemClassArray.join(' ');
 
 	if ( navItem.children.length ) {
+
+		navItemClassArray.push( 'wsu-s-nav-vertical-split__menu-item--has-children' );
+
+		let navItemClasses = navItemClassArray.join(' ');
 
 		return (
 			<li className={ navItemClasses } role="menuitem" aria-expanded="false" aria-haspopup="true">
@@ -28,6 +31,8 @@ const NavItem = ( props ) => {
 		)
 
 	} else {
+
+		let navItemClasses = navItemClassArray.join(' ');
 
 		return (
 			<li  className={ navItemClasses }>

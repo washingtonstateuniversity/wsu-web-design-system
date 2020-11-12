@@ -10,8 +10,8 @@
 	border-right: 1px solid color( gray, 10 );
 	overflow-y: auto;
 	overflow-x: hidden;
-	z-index: 10000;
-	transition: left 200ms ease-in;
+	z-index: 449;
+	transition: left 200ms ease-out;
 	display: flex;
 	flex-direction: column;
 
@@ -43,6 +43,14 @@
 			color: color( gray, 75 );
 			font-size: 1rem;
 			margin-left: 0.25rem;
+			transition: opacity 100ms ease-out;
+		}
+
+		&:focus,
+		&:hover {
+			&::after {
+				opacity: 0.5;
+			}
 		}
 	}
 
@@ -51,6 +59,16 @@
 	}
 }
 
-.wsu-s-nav-vertical--closed .wsu-s-nav-vertical-split {
-	left: calc( ( #{$wds-menu-width-open} - #{$wds-menu-width-closed} ) * -1 );
+
+/* Closed Menu
+==================================== */
+.wsu-s-nav-vertical--closed {
+
+	.wsu-s-nav-vertical-split > * {
+		display: none;
+	} 
+
+	.wsu-s-nav-vertical-split {
+		left: calc( ( #{$wds-menu-width-open} - #{$wds-menu-width-closed} ) * -1 );
+	}
 }
