@@ -1,0 +1,26 @@
+@import './variables';
+
+@mixin font( $family: 'primary', $font-size: false, $font-weight: false, $color: color(gray, 85), $line-height: false ) {
+
+	@if ( $family == 'secondary' ) {
+		font-family: $wds_font_family_secondary;
+	} @else {
+		font-family: $wds_font_family_primary;
+	}
+	@if ( $font-size != false ) {
+		font-size: $font-size;
+	}
+	@if ( $font-weight != false ) {
+		font-weight: $font-weight;
+	}
+	@if ( $line-height != false ) {
+		line-height: $line-height;
+	}
+	@if ( $color != false ) {
+		color: $color;
+	}
+
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+
+}

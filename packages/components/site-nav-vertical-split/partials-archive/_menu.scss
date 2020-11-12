@@ -1,0 +1,72 @@
+@import './variables';
+@import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
+
+.#{$class-base} {
+
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 7000;
+
+	display: flex;
+	width: 260px;
+	height: auto;
+	padding: 0.5em 0;
+	
+	overflow-x: hidden;
+	overflow-y: auto;
+
+	border-right: 1px solid color( gray, 10 );
+	
+	flex-direction: column;
+	transition: transform 300ms ease-in;
+	transform: translateX(0);
+	background-color: #fff;
+
+	&__wrapper {
+		@include font();
+	}
+
+	&__close-footer-wrapper,
+	&__close-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		padding: 1rem 0.5rem;
+	}
+
+	&__close-button {
+		background-color: transparent;
+		border: 0;
+		outline: 0;
+		font-size: 0.5rem;
+		text-transform: uppercase;
+		color: color( gray, 40 );
+		font-weight: 600;
+		cursor: pointer;
+
+		&::after {
+			content: "\F154";
+			font-family: wsu-icons !important;
+			font-size: 0.95rem;
+			font-weight: 400;
+			color: color( gray, 80 );
+			display: inline-block;
+			vertical-align: middle;
+			margin-left: 0.2em;
+		}
+	}
+
+}
+
+.#{$class-base}--closed {
+
+	.#{$class-base} {
+
+		/** Handle nav animation in */
+		transform: translateX(-100%);
+		
+	}
+
+}

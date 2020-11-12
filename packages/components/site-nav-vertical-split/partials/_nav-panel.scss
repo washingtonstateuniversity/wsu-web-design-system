@@ -1,0 +1,74 @@
+@import '../../../../assets/src/scss/all_the_things';
+@import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
+
+.wsu-s-nav-vertical-split {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: $wds-menu-width-open;
+	border-right: 1px solid color( gray, 10 );
+	overflow-y: auto;
+	overflow-x: hidden;
+	z-index: 449;
+	transition: left 200ms ease-out;
+	display: flex;
+	flex-direction: column;
+
+	&__close-wrapper {
+		text-align: right;
+		margin-bottom: 0.5rem;
+	}
+
+	&__close-button {
+		background: transparent;
+		border: none;
+		outline: none;
+		font-size: 0.6rem;
+		font-weight: 500;
+		text-transform: uppercase;
+		color: color( gray, 30 );
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		cursor: pointer;
+		flex-grow: 0;
+
+		&::after {
+			content:"\F154";
+			display: inline-block;
+			font-family: 'wsu-icons';
+			vertical-align: middle;
+			color: color( gray, 75 );
+			font-size: 1rem;
+			margin-left: 0.25rem;
+			transition: opacity 100ms ease-out;
+		}
+
+		&:focus,
+		&:hover {
+			&::after {
+				opacity: 0.5;
+			}
+		}
+	}
+
+	.wsu-s-nav-vertical-split__menu {
+		flex-grow: 1;
+	}
+}
+
+
+/* Closed Menu
+==================================== */
+.wsu-s-nav-vertical--closed {
+
+	.wsu-s-nav-vertical-split > * {
+		display: none;
+	} 
+
+	.wsu-s-nav-vertical-split {
+		left: calc( ( #{$wds-menu-width-open} - #{$wds-menu-width-closed} ) * -1 );
+	}
+}

@@ -1,0 +1,57 @@
+.wsu-s-nav-vertical-split__menu .wsu-s-nav-vertical-split__menu {
+	
+	border-left: 5px solid color( primary, light );
+	overflow: hidden;
+	position: relative;
+
+	.wsu-s-nav-vertical-split__menu-item {
+
+		&::before {
+			display: none;
+		}
+
+		&::after {
+			display: none;
+		}
+
+		&-wrapper {
+			display: none;
+		}
+
+		&-link {
+			font-size: 0.75rem;
+			color: color(gray, 55 );
+			font-weight: 500;
+			padding-top: 0.75rem;
+			padding-bottom: 0.75rem;
+			padding-left: 2rem;
+			border-bottom: 1px solid #fff !important;
+
+			&:focus,
+			&:hover {
+				color: color( primary, light );
+			}
+
+			&::before {
+				display: none;
+			}
+		}
+
+	}
+
+	.wsu-s-nav-vertical-split__menu-toggle {
+
+		&::before {
+			content: "";
+				display: none;
+		}
+	}
+}
+
+.wsu-s-nav-vertical-split__menu--open > .wsu-s-nav-vertical-split__menu {
+
+	& > .wsu-s-nav-vertical-split__menu-item-wrapper {
+		display: block;
+	}
+	
+}
