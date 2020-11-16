@@ -19,6 +19,12 @@
 		.wsu-c-news__item {
 			width: calc( 50% - 2em ); 
 		}
+
+		@media screen and (max-width: 700px) {
+			.wsu-c-news__item {
+				width: calc( 100% - 2em );
+			}
+		}
 	}
 
 	&--per-row-3 {
@@ -27,6 +33,18 @@
 		.wsu-c-news__item {
 			width: calc( 33.33% - 2em );
 		}
+
+		@media screen and (max-width: 800px) {
+			.wsu-c-news__item {
+				width: calc( 50% - 2em );
+			}
+		}
+
+		@media screen and (max-width: 550px) {
+			.wsu-c-news__item {
+				width: calc( 100% - 2em );
+			}
+		}
 	}
 
 	&--per-row-4 {
@@ -34,6 +52,24 @@
 
 		.wsu-c-news__item {
 			width: calc( 25% - 2em );
+		}
+
+		@media screen and (max-width: 800px) {
+			.wsu-c-news__item {
+				width: calc( 50% - 2em );
+			}
+		}
+
+		@media screen and (max-width: 1000px) {
+			.wsu-c-news__item {
+				width: calc( 33.33% - 2em );
+			}
+		}
+
+		@media screen and (max-width: 550px) {
+			.wsu-c-news__item {
+				width: calc( 100% - 2em );
+			}
 		}
 	}
 
