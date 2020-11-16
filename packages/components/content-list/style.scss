@@ -1,83 +1,88 @@
 @import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
 
-/**
- *
- * Base Styles
- *
- */
-.wsu-c-list,
-.wsu-c-content ul,
-.wsu-c-content ol {
-	@include font();
-	
+$list-indent: 1.3em;
+$list-item-padding: 0.75em;
+$bullet-size: 0.375em;
+
+/* Common list styling
+ ================================= */
+ .wsu-c-list,
+ .wsu-c-content ol:not([class^="wsu-c-"]):not([class*=" wsu-c-"]),
+ .wsu-c-content ul:not([class^="wsu-c-"]):not([class*=" wsu-c-"]) {
+
+	font-family: $wsu-bt-primary-font-family;
+	line-height: 1.5;
 	margin: 0;
-	margin-left: $unit;
+	margin-left: $list-indent;
+	padding-left: $list-indent;
 	margin-bottom: 1.5em;
-	padding: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-right: 0;
 
 	list-style: none;
-}
 
-.wsu-c-list .wsu-c-list,
-.wsu-c-content ul ul,
-.wsu-c-content ol ol {
-	padding-left: $unit;
-}
-
-// TODO: Add options to reduce spacing on child list items
-.wsu-c-list-item,
-.wsu-c-content li {
-	position: relative;
-
-	padding-left: $unit;
-
-	@include font-size(16px, 300, 1.6);
-
-	margin-bottom: 0.75em;
-
-	&::before {
-		position: absolute;
-		top: .8em;
-		left: 0;
-
-		display: inline-block;
-
-		width: 6px;
-		height: 6px;
-		margin-right: $unit-xs;
-
-		content: " ";
-		vertical-align: middle;
-
-		border-radius: 100%;
-		background-color: color(primary, light);
+	.wsu-c-list,
+	ul,
+	ol {
+		margin-top: 0.75em;
+		padding-left: $list-indent;
+		margin-left: $list-indent;
+		margin-bottom: 1em;
 	}
 
-	/* Sub-ordered lists are hollow circle
-	======================= */
-	& .wsu-c-list .wsu-c-list-item::before,
-	& ul li::before {
-		background-color: color(white, base);
-		border: 1px solid color(primary, light);
-	}
-}
+	li {
+		font-family: $wsu-bt-primary-font-family;
 
-/**
- *
- * Ordered List Styles
- *
- */
-.wsu-c-list__ordered,
-.wsu-c-content ol {
+		position: relative;
+		margin-bottom: 0.75em;
+	}
+
+ }
+
+
+ /* Unordered list styling
+ ================================= */
+ ul.wsu-c-list,
+ .wsu-c-content ul:not([class^="wsu-c-"]):not([class*=" wsu-c-"]) {
+
+	& > li {
+	
+		&::before {
+			content: "";
+			display: inline-block;
+	
+			width: $bullet-size;
+			height: $bullet-size;
+	
+			border-radius: 50%;
+	
+			background-color: color(primary, light);
+			position: absolute;
+			left: -1.2em;
+			top: 0.5em;
+			
+		}
+	
+		/* Sub-ordered lists are hollow circle
+		======================= */
+		ul > li::before {
+			background-color: color(white, base);
+			border: 1px solid color(primary, light);
+		}
+	}
+
+ }
+
+
+/* Ordered list styling
+================================= */
+ol.wsu-c-list,
+.wsu-c-content ol:not([class^="wsu-c-"]):not([class*=" wsu-c-"]) {
+
 	counter-reset: wsu-ordered-list;
 
-	@extend .wsu-c-list;
-
-	.wsu-c-ordered__list-item,
-	& li {
-		position: relative;
-
-		padding-left: $unit;
+	& > li {
 
 		counter-increment: wsu-ordered-list;
 
@@ -86,9 +91,8 @@
 
 			position: absolute;
 			top: 0;
-			left: -15px;
+			left: -1.5em;
 
-			width: $unit-l;
 			height: auto;
 			margin-right: 0;
 
@@ -103,9 +107,45 @@
 
 	/* Sub-ordered lists are letters
 	======================= */
-	& .wsu-c-list__ordered .wsu-c-list-item::before,
-	& ol li::before {
+	ol > li::before {
 		content: counter(wsu-ordered-list, lower-alpha) ". ";
+	}
+
+}
+
+/* Modifiers
+================================= */
+.wsu-m-list {
+
+	&--separated {
+
+		li {
+
+			border-bottom: 1px solid color( gray, 30 );
+
+			padding-bottom: 0.8em;
+			padding-top: 0.8em;
+			margin-bottom: 0 !important;
+
+			&:last-child {
+				border-bottom: none;
+			}
+
+			&::before {
+				display: none;
+			}
+		}
+
+		ol,
+		ul {
+			margin-bottom: 0 !important;
+		}
+	}
+
+	&--no-indent {
+
+		margin-left: 0 !important;
+		padding-left: 0 !important;
 	}
 }
 
