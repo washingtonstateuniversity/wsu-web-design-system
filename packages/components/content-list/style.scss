@@ -113,6 +113,13 @@ ol.wsu-c-list,
 
 }
 
+@for $i from 1 through 100 {
+	ol.wsu-c-list[start="#{$i}"],
+	.wsu-c-content ol[start="#{$i}"]:not([class^="wsu-c-"]):not([class*=" wsu-c-"]) {
+	  counter-reset: wsu-ordered-list $i ;
+	}
+}
+
 /* Modifiers
 ================================= */
 .wsu-m-list {
@@ -121,24 +128,34 @@ ol.wsu-c-list,
 
 		li {
 
-			border-bottom: 1px solid color( gray, 30 );
+			border-top: 1px solid color( gray, 20 );
 
-			padding-bottom: 0.8em;
-			padding-top: 0.8em;
+			padding-bottom: 1.1em;
+			padding-top: 1.1em;
 			margin-bottom: 0 !important;
 
 			&:last-child {
-				border-bottom: none;
+				border-bottom: 1px solid color( gray, 20 );
 			}
 
 			&::before {
-				display: none;
+				display: none !important;
 			}
 		}
 
 		ol,
 		ul {
+
 			margin-bottom: 0 !important;
+
+			li:last-child {
+				padding-bottom: 0;
+			}
+
+		}
+
+		li:last-child {
+			border-bottom: none;
 		}
 	}
 
