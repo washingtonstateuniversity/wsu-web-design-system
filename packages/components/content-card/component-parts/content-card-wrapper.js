@@ -15,10 +15,10 @@ const ContentCardWrapper = ( props ) => {
 
 	
 	return (
-		<div className={wrapperClasses} >
+		<div className={wrapperClasses}>
 			<div className="wsu-c-card__container">
 				<div className="wsu-c-card__content">
-					{props.children}					
+					{props.children}
 				</div>
 			</div>
 		</div>

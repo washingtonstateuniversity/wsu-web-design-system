@@ -1,12 +1,7 @@
 import React, { Component } from 'react';
 import { empty } from '@wsuwebteam/build-tools/js/helpers';
 
-import { 
-	WsuIcon,
-	WsuLink
-} from '../../'
-
-const ContentCardTitle = (props) => {
+const ContentCardTitle = ( props ) => {
 
 	if (empty(props.title)) {
 		return null;
@@ -15,8 +10,9 @@ const ContentCardTitle = (props) => {
 	let Tag = props.titleTag;
 
 	return (
-		// TODO: heading level needs to be variable
-		<Tag className="wsu-c-card__heading"><WsuLink href={props.link} className="wsu-c-card__heading-link">{props.title}</WsuLink></Tag>
+		<Tag className="wsu-c-card__heading">
+			{props.title}
+		</Tag>
 	);
 
 }

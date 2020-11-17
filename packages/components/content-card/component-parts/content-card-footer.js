@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { 
 	WsuIcon,
 	WsuLink
-} from '../../'
+} from '../..'
 
 import { empty } from '@wsuwebteam/build-tools/js/helpers';
 

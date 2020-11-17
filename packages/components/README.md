@@ -13,6 +13,7 @@ All the components can easily be imported into your projects using the root of t
         |-- _[style-name.scss] | Alternate style partials.
       |-- component-parts | Optional. Use if component is too overly complex to address in a single root index.js file.
         |-- [component-name]-[component-part].js
+      |-- templates | Optional. Use if component has distinct templates and each item shouldn't be treated as a discrete component.
       |-- index.js | Component
       |-- style.scss | Component style or imported list of component styles from partials directory 
 </pre>

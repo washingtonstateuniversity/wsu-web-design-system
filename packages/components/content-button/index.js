@@ -12,10 +12,7 @@ import './style.scss';
 
 const ContentButton = ( props, ref ) => {
 
-	console.log( props.style );
-
 	let styleClass = ( 'default' === props.style  ) ? 'wsu-c-button' : 'wsu-c-button--' + props.style;
-	
 
 	if ( ! props.buttonText ) {
 		return null;
