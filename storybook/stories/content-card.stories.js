@@ -27,7 +27,7 @@ export const defaultCard = () => {
 				title={text('title', 'Title', previewGroupID)}
 				subtitle={text('subtitle', 'Subtitle', previewGroupID)}
 				positionTitle={text('positionTitle', 'Position Title', previewGroupID)}
-				description={text('description', 'Description Morbi tristique senectus et netus et malesuada.', previewGroupID)}
+				caption={text('caption', 'Description Morbi tristique senectus et netus et malesuada.', previewGroupID)}
 				image={{'src': 'https://source.unsplash.com/collection/895539', 'alt': 'alt text for image'}}
 			/>
 		</ComponentWrapper>
@@ -39,13 +39,14 @@ export const personCard = () => {
 		<ComponentWrapper layout="content">
 			<WsuCard 
 				title={text('title', 'Pellentesque Habitant', previewGroupID)}
-				description={text('description', 'Morbi tristique senectus et netus et malesuada.', previewGroupID)}
+				caption={text('caption', 'Morbi tristique senectus et netus et malesuada.', previewGroupID)}
 				addressLine1={text('addressLine1', '12345 Etiam rutrum lectus', previewGroupID)}
 				addressLine2={text('addressLine2', 'Pullman, WA 99163', previewGroupID)}
 				phoneNumber={text('phoneNumber', '123-456-7890', previewGroupID)}
 				email={text('email', 'info@wsu.edu', previewGroupID)}
 				website={text('website', 'https://wsu.edu/', previewGroupID)}
 				image={{'src': 'https://source.unsplash.com/collection/895539', 'alt': 'alt text for image'}}
+				style={'person'}
 			/>
 		</ComponentWrapper>
 	)
@@ -56,7 +57,7 @@ export const newsCard = () => {
 		<ComponentWrapper layout="content">
 			<WsuCard 
 				title={'Sed bibendum efficitur tellus non tristique'}
-				description={'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam rutrum lectus in metus pulvinar, quis gravida nulla pellentesque. Praesent dignissim et mi nec faucibus. Ut luctus, justo blandit suscipit placerat, purus velit ornare leo, ac lobortis nisi arcu consectetur erat. Integer in sapien augue. '}
+				caption={'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam rutrum lectus in metus pulvinar, quis gravida nulla pellentesque. Praesent dignissim et mi nec faucibus. Ut luctus, justo blandit suscipit placerat, purus velit ornare leo, ac lobortis nisi arcu consectetur erat. Integer in sapien augue. '}
 				image={{'src': 'https://source.unsplash.com/collection/895539', 'alt': 'alt text for image'}}
 				categories={[
 					{
@@ -87,6 +88,7 @@ export const newsCard = () => {
 					'url': 'https//wsu.edu'
 				}}
 				date={'7/17/2020'}
+				style={'news'}
 			/>
 		</ComponentWrapper>
 	)
