@@ -16,8 +16,10 @@ class VerticalSplitMenu {
 		this.animationTimer          = false;
 		this.navCloseClass           = nav.hasOwnProperty('navCloseClass') ? nav.navCloseClass : false;
 		this.navOpenClass            = nav.hasOwnProperty('navOpenClass') ? nav.navOpenClass : false;
+		this.navToggleClass          = nav.hasOwnProperty('navToggleClass') ? nav.navToggleClass : false;
 		this.navClosedClass          = nav.hasOwnProperty('navClosedClass') ? nav.navClosedClass : false;
-		this.navOpenedClass         = nav.hasOwnProperty('navOpenedClass') ? nav.navOpenedClass : false;
+		this.navOpenedClass          = nav.hasOwnProperty('navOpenedClass') ? nav.navOpenedClass : false;
+		this.autoCloseAt             = nav.hasOwnProperty('autoCloseAt ') ? nav.autoCloseAt : 1259;
 	}
 
 	initNav() {
@@ -26,6 +28,8 @@ class VerticalSplitMenu {
 
 			this.navWrapper = this.navWrapperSelector ? document.querySelector( this.navWrapperSelector ) : false;
 			this.nav = this.navSelector ? this.navWrapper.querySelector( this.navSelector ) : false;
+
+			this.checkShouldClose();
 
 			if ( this.navWrapper ) {
 
@@ -84,19 +88,48 @@ class VerticalSplitMenu {
 
 	}
 
+
+	checkShouldClose() {
+		
+		let windowWidth = window.innerWidth;
+
+		if ( windowWidth < ( this.autoCloseAt + 30 ) ) {
+
+			this.closeNav();
+
+		}
+	}
+
 	bindGlobalClickEvents( event ) {
 
 		try {
 
+
 			// Open nav
-			if ( event.target.classList.contains( this.navCloseClass ) ) {
+			if ( this.hasClass( event.target, this.navCloseClass ) ) {
 
 				this.closeNav();
 				
-			} else if ( event.target.classList.contains( this.navOpenClass ) ) {
+			} else if ( this.hasClass( event.target, this.navOpenClass ) ) {
 
 				this.openNav();
 				
+			} else if ( this.hasClass( event.target, this.navToggleClass ) ) {
+
+				if ( this.navWrapper.classList.contains( this.navClosedClass ) ) {
+
+					this.openNav();
+
+				} else if ( this.navWrapper.classList.contains( this.navOpenedClass ) ) {
+
+					this.closeNav();
+
+				} else {
+
+					this.openNav();
+
+				}
+
 			}
 
 		} catch(err) {
@@ -115,7 +148,7 @@ class VerticalSplitMenu {
 		let menuItemButton = menuItem.querySelector( this.menuItemsToggleSelector );
 
 		if ( 'false' == expanded && 'close' != action ) {
-			this.closeSiblingMenus( menuItemWrapper );
+			//this.closeSiblingMenus( menuItemWrapper );
 			menuItemWrapper.classList.add( this.menuItemsOpenClass );
 			menuItemWrapper.setAttribute( 'aria-expanded', 'true' );
 			menuItemButton.setAttribute( 'aria-label', 'Close Submenu' );
@@ -140,6 +173,7 @@ class VerticalSplitMenu {
 
 	closeNav() {
 
+		this.isOpen = false;
 		this.navWrapper.classList.add( 'wsu-a-animated' );
 		this.navWrapper.classList.add( this.navClosedClass );
 		this.navWrapper.classList.remove( this.navOpenedClass );
@@ -148,6 +182,7 @@ class VerticalSplitMenu {
 	}
 
 	openNav() {
+		this.isOpen = true;
 		this.navWrapper.classList.add( 'wsu-a-animated' );
 		this.navWrapper.classList.remove( this.navClosedClass );
 		this.navWrapper.classList.add( this.navOpenedClass );
@@ -156,7 +191,7 @@ class VerticalSplitMenu {
 	}
 
 
-	closeSiblingMenus( menuItemWrapper ) {
+	/*closeSiblingMenus( menuItemWrapper ) {
 
 		let siblings = [];
 
@@ -210,6 +245,29 @@ class VerticalSplitMenu {
 			}
 
 		} );
+
+	} */
+
+
+	hasClass( element, className ) {
+
+		if ( ! element || ! className ) {
+
+			return false;
+
+		}
+
+		if ( element.classList.contains( className ) ) {
+
+			return true;
+
+		} else if ( element.parentElement && element.parentElement.classList.contains( className ) ) {
+
+			return true;
+
+		}
+
+		return false;
 
 	}
 

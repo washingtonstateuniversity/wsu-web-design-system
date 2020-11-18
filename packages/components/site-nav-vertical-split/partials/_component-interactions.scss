@@ -1,0 +1,69 @@
+@import './variables';
+@import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
+
+.wsu-g-header__wrapper ~ .wsu-s-nav-vertical-split__wrapper .wsu-s-nav-vertical-split {
+	top: 65px;
+}
+
+.admin-bar .wsu-g-header__wrapper ~ .wsu-s-nav-vertical-split__wrapper .wsu-s-nav-vertical-split {
+	top: calc( 65px + 32px );
+}
+
+
+/* Open Nav
+================================= */
+.wsu-s-nav-vertical-split__wrapper ~ .wsu-s-container {
+
+	/* Desktop / Default
+	================================= */
+	transform: translateX( 0 );
+	margin-left: $wds-menu-width-open;
+	transition: margin-left 200ms ease-out, transform 200ms ease-out;
+
+	/* Tablet
+	================================= */
+	@include mq('tablet', 'max') {
+
+		transform: translateX( calc( #{$wds-menu-width-open} - #{$wds-menu-width-closed} ) );
+		margin-left: $wds-menu-width-closed;
+
+	}
+
+	/* Mobile
+	================================= */
+	@include mq('mobile', 'max') {
+
+		transform: translateX( 0 );
+		margin-left: 0;
+
+	}
+	
+}
+
+/* Closed Nav
+================================= */
+.wsu-s-nav-vertical-split--closed ~ .wsu-s-container, /* legacy */
+.wsu-s-nav-vertical--closed ~ .wsu-s-container{
+
+	/* Desktop / Default
+	================================= */
+	margin-left: $wds-menu-width-closed;
+
+	/* Tablet
+	================================= */
+	@include mq('tablet', 'max') {
+
+		transform: translateX( 0 );
+
+	}
+
+	/* Mobile
+	================================= */
+	@include mq('mobile', 'max') {
+
+		transform: translateX( 0 );
+		margin-left: 0;
+
+	}
+
+}

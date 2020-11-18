@@ -28,6 +28,7 @@ class SiteNavVerticalSplit extends Component {
 				menuItemsOpenClass: 'wsu-s-nav-vertical-split__menu--open',
 				navCloseClass: 'wsu-s-nav-vertical--close',
 				navOpenClass: 'wsu-s-nav-vertical--open',
+				navToggleClass: 'wsu-s-nav-vertical--toggle',
 				navClosedClass: 'wsu-s-nav-vertical--closed',
 				navOpenedClass: 'wsu-s-nav-vertical--opened', 
 			}

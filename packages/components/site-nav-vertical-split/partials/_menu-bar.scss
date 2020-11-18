@@ -15,10 +15,11 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	z-index: 499;
+	z-index: 999;
 	opacity: 0;
 	transition: opacity 100ms ease-in , left 100ms ease-in 200ms, transform 100ms ease-out;
 
+	&-icon-container,  /* Legacy */
 	&__icon {
 
 		display: block;
@@ -27,36 +28,36 @@
 		height: 20px;
 		width: 20px;
 		position: relative;
+
+	}
+	& .wsu-s-nav-vertical-split__menu-icon-bar, /* Legacy */
+	&__icon-bar {
+
+		display: block;
+		width: 20px;
+		height: 3px;
+		position: absolute;
+		right: 0;
+
+		background-color: color( gray, 75 );
+		border-radius: 2px;
 		
-		&-bar {
+		transition: transform 150ms ease-in, top 150ms ease-in, right 150ms ease-in, width 150ms ease-in, height 150ms ease-in, bottom 150ms ease-in,
 
-			display: block;
-			width: 20px;
-			height: 3px;
-			position: absolute;
-			right: 0;
-
-			background-color: color( gray, 75 );
-			border-radius: 2px;
-			
-			transition: transform 150ms ease-in, top 150ms ease-in, right 150ms ease-in, width 150ms ease-in, height 150ms ease-in, bottom 150ms ease-in,
-
-			&:nth-child(2) {
-				top: 0;
-			}
-
-			&:nth-child(2) {
-				top: 50%;
-				transform: translateY(-2px);
-			}
-
-			&:nth-child(3) {
-				width: 14px;
-				bottom: 0;
-				right: 6px;
-			}
+		&:nth-child(2) {
+			top: 0;
 		}
 
+		&:nth-child(2) {
+			top: 50%;
+			transform: translateY(-2px);
+		}
+
+		&:nth-child(3) {
+			width: 14px;
+			bottom: 0;
+			right: 6px;
+		}
 	}
 
 	&__label {
@@ -153,4 +154,11 @@
 		transition: transform 100ms ease-out;
 	} 
 
+}
+
+.wsu-s-nav-vertical-split__menu-bar {
+	
+	@include mq('mobile', 'max') {
+		display: none !important;
+	}
 }

@@ -1,5 +1,6 @@
 @import '../../../../assets/src/scss/all_the_things';
 @import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
+@import './variables';
 
 .wsu-s-nav-vertical-split {
 	position: fixed;
@@ -10,10 +11,18 @@
 	border-right: 1px solid color( gray, 10 );
 	overflow-y: auto;
 	overflow-x: hidden;
-	z-index: 449;
-	transition: left 200ms ease-out;
+	z-index: 998;
+	transition: left 200ms ease-out, transform 200ms ease-out;
 	display: flex;
 	flex-direction: column;
+	background-color: #fff;
+
+	/* Mobile
+	=============== */
+	@include mq('mobile', 'max') {
+		width: $wds-vertical-nav-width-open-mobile;
+		transform: translateX( -$wds-vertical-nav-width-open-mobile );
+	}
 
 	&__close-wrapper {
 		text-align: right;
@@ -70,5 +79,15 @@
 
 	.wsu-s-nav-vertical-split {
 		left: calc( ( #{$wds-menu-width-open} - #{$wds-menu-width-closed} ) * -1 );
+	}
+}
+
+
+/* Open Menu
+==================================== */
+.wsu-s-nav-vertical--opened .wsu-s-nav-vertical-split {
+
+	@include mq('mobile', 'max') {
+		transform: translateX( 0 );
 	}
 }

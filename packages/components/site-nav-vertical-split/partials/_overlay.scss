@@ -1,0 +1,58 @@
+@import './variables';
+@import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
+
+.wsu-s-nav-vertical-split__overlay {
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		z-index: 998;
+		background-color: rgba(0,0,0,0.7);
+		filter: blur(4px);
+		transition: opacity 300ms ease-in;
+		opacity: 0;
+		cursor: pointer;
+		display: none;
+
+	@include mq('tablet', 'max') {
+		display: block;
+		opacity: 1;
+	}
+
+	@include mq('mobile', 'max') {
+		display: none;
+	}
+}
+
+.wsu-s-nav-vertical-split__wrapper {
+
+	&.wsu-s-nav-vertical--opened {
+
+		.wsu-s-nav-vertical-split__overlay {
+
+			@include mq('tablet', 'max') {
+
+				display: block;
+				opacity: 1;
+
+			}
+
+		}
+	}
+
+	&.wsu-s-nav-vertical--closed:not(.wsu-a-animated)  {
+
+		.wsu-s-nav-vertical-split__overlay {
+
+			@include mq('tablet', 'max') {
+
+				display: none;
+				opacity: 0;
+
+			}
+
+		}
+	}
+}
+

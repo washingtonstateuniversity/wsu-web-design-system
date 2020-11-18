@@ -55,6 +55,7 @@
 			padding-top: 0.7rem;
 			padding-bottom: 0.7rem;
 			padding-left: 1.5rem;
+			padding-right: 0.5rem;
 			flex-grow: 1;
 			flex-shrink: 1;
 			position: relative;
@@ -213,6 +214,16 @@
 
 		&-wrapper[aria-expanded="true"] {
 
+			& .wsu-s-nav-vertical-split__menu-item .wsu-s-nav-vertical-split__menu-toggle {
+
+				border-bottom: 1px solid color( gray, 10 );
+
+				&::before {
+					opacity: 1;
+				}
+
+			}
+
 			&.wsu-s-nav-vertical-split__menu-item--has-children {
 
 				.wsu-s-nav-vertical-split__menu-item {
@@ -230,6 +241,7 @@
 	}
 
 	.wsu-s-nav-vertical-split__menu-toggle {
+
 		
 		&::before {
 			opacity: 1;
@@ -309,29 +321,74 @@
 	}
 }
 
-.wsu-s-nav-vertical-split {
+.wsu-s-nav-vertical-split__wrapper {
 
-	&__wrapper:not( .wsu-s-nav-vertical-split--start-closed ) {
-		.wsu-s-nav-vertical-split__menu-item-wrapper {
+	&:not( .wsu-s-nav-vertical-split--start-closed ) {
+		.wsu-s-nav-vertical-split > .wsu-s-nav-vertical-split__menu > .wsu-s-nav-vertical-split__menu-item-wrapper {
 			animation-name: slideInFromLeft;
 			animation-duration: 300ms;
 			animation-fill-mode: both;
 		}
 	}
+}
 
-	&__wrapper.wsu-s-nav-vertical-split--open {
-		.wsu-s-nav-vertical-split__menu-item-wrapper {
-			animation-name: slideInFromLeftAfter;
-			animation-duration: 300ms;
-			animation-fill-mode: both;
-		}
-	}
-
+.wsu-s-nav-vertical-split > .wsu-s-nav-vertical-split__menu > .wsu-s-nav-vertical-split__menu-item-wrapper {
+	animation-name: slideInFromLeftAfter;
+	animation-duration: 300ms;
+	animation-fill-mode: both;
 }
 
 
 @for $i from 1 through 30 {
-	.wsu-s-nav-vertical-split__menu-item-wrapper:nth-child( #{$i} ) {
+	.wsu-s-nav-vertical-split > .wsu-s-nav-vertical-split__menu > .wsu-s-nav-vertical-split__menu-item-wrapper:nth-child( #{$i} ) {
 		animation-delay: #{ ( 200 + ( 50 * $i ) - ( 50 * ( $i / 30 ) ) ) }ms;
 	}
+}
+
+/* Mobile 
+==================================================*/
+.wsu-s-nav-vertical-split {
+
+	@include mq('mobile', 'max') {
+
+		.wsu-s-nav-vertical-split__menu-item {
+
+			&::before {
+				opacity: 1;
+			}
+	
+			&-wrapper[aria-expanded="true"] {
+	
+				&.wsu-s-nav-vertical-split__menu-item--has-children {
+	
+					.wsu-s-nav-vertical-split__menu-item {
+	
+						&::after {
+							opacity: 1;
+						}
+	
+					}
+	
+				}
+	
+			}
+	
+		}
+
+		.wsu-s-nav-vertical-split__menu-item-link {
+			padding-top: 1.5rem;
+			padding-bottom: 1.5rem;
+		}
+	
+		.wsu-s-nav-vertical-split__menu-toggle {
+
+			width: 80px;
+			
+			&::before {
+				opacity: 1;
+			}
+		}
+
+	}
+
 }
