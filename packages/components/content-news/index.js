@@ -31,13 +31,10 @@ const ContentNews = ( props, ref ) => {
 		baseClasses
 	)
 
-	
 	return (
 		<div className={ wrapperClasses }>
 			{props.children}
 			{props.newsItems.map( ( newsItem, index ) => {
-
-				console.log( newsItem );
 				
 				switch ( props.style ) {
 

@@ -54,15 +54,15 @@
 			width: calc( 25% - 2em );
 		}
 
-		@media screen and (max-width: 800px) {
-			.wsu-c-news__item {
-				width: calc( 50% - 2em );
-			}
-		}
-
 		@media screen and (max-width: 1000px) {
 			.wsu-c-news__item {
 				width: calc( 33.33% - 2em );
+			}
+		}
+
+		@media screen and (max-width: 800px) {
+			.wsu-c-news__item {
+				width: calc( 50% - 2em );
 			}
 		}
 
