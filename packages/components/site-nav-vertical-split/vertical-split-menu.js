@@ -13,6 +13,7 @@ class VerticalSplitMenu {
 		this.startClosedClass = 'wsu-s-nav-vertical-split--start-closed';
 		this.closedClass = 'wsu-s-nav-vertical-split--closed';
 		this.navOpenClass = 'wsu-s-nav-vertical-split--open';
+		this.animatedTimer = false;
 
 		this.bindEvents();
 
@@ -179,10 +180,17 @@ class VerticalSplitMenu {
 
 	closeNav( nav = false ) {
 
+
 		nav = ( ! nav ) ? this.getNav() : nav;
+
+		nav.classList.add( 'wsu-a-animated' );
 
 		nav.classList.add( this.closedClass );
 		nav.classList.remove( this.navOpenClass );
+
+		clearTimeout(this.animatedTimer);
+
+		this.animatedTimer = setTimeout( () => { nav.classList.remove( 'wsu-a-animated' ); }, 300 );
 
 	}
 
@@ -190,8 +198,14 @@ class VerticalSplitMenu {
 
 		nav = ( ! nav ) ? this.getNav() : nav;
 
+		nav.classList.add( 'wsu-a-animated' );
+
 		nav.classList.remove( this.closedClass );
 		nav.classList.add( this.navOpenClass );
+
+		clearTimeout(this.animatedTimer);
+
+		this.animatedTimer = setTimeout( () => { nav.classList.remove( 'wsu-a-animated' ); }, 300 );
 
 	}
 
