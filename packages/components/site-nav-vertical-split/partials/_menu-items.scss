@@ -145,3 +145,7 @@
 	}
 
 }
+
+.wsu-s-nav-vertical-split__wrapper.wsu-s-nav-vertical-split--closed:not(.wsu-a-animated) .wsu-s-nav-vertical-split__menu-item-wrapper {
+	display: none;
+}
