@@ -26,6 +26,10 @@
 		outline: 0;
 		cursor: pointer;
 
+		&:focus {
+			outline: 1px solid #000;
+		}
+
 		@include mq('mobile', 'max') {
 
 			display: none;
