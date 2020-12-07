@@ -12,6 +12,10 @@
 .wsu-u-background--gray-80 {
 	background: color( gray, 80 );
 	color: #fff;
+
+	& * {
+		color: white !important;
+	}
 }
 
 .wsu-u-background--gray-85 {

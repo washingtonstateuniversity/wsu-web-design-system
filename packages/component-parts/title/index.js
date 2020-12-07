@@ -21,8 +21,10 @@ const Title = ( props ) => {
 		props.className
 	)
 
+	const ariaLabel = empty ( props.ariaLabel ) ? props.children : props.ariaLabel;
+
 	return (
-		<Tag className={ wrapperClasses } ariaLabel={ props.ariaLabel }>
+		<Tag className={ wrapperClasses } aria-label={ ariaLabel }>
 			<WrapperLink href={ props.link }>
 				{ props.children }
 			</WrapperLink>

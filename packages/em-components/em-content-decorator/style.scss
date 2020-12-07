@@ -58,6 +58,16 @@ $base_class_dec : '.wsu-c-em-decorator';
 		@include decoratorBase();
 	}
 
+	&--triangle-gray {
+		@include pattern('triangle');
+		@include decoratorBase();
+	}
+
+	&--triangle-white {
+		@include pattern('triangle', 'white');
+		@include decoratorBase();
+	}
+
 	&--text-white {
 		@include decoratorBase();
 		color: #fff;
@@ -164,6 +174,17 @@ $base_class_dec : '.wsu-c-em-decorator';
 
 		path {
 			stroke: color( primary, base );
+		}
+
+	}
+
+	&--wsu-watermark-vertical-gray {
+
+		@include decoratorBase();
+
+		path {
+			stroke: transparent;
+			fill: color(gray, 80);
 		}
 
 	}
