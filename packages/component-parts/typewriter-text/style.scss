@@ -11,8 +11,6 @@
 	.typed-cursor {
 		opacity: 1;
 		animation: typedjsBlink 0.7s infinite;
-		-webkit-animation: typedjsBlink 0.7s infinite;
-		animation: typedjsBlink 0.7s infinite;
 		color: transparent;
 		-webkit-text-stroke: 0;
 		margin-left: -10px;
@@ -20,10 +18,10 @@
 		&::after {
 			content: "";
 			width: 3px;
-			height: 80px;
+			height: 1em;
 			display: inline-block;
-			background-color: white;
-			transform: skew(-11deg);
+			background-color: black;
+			transform: skew(-11deg) translateX(.5em);
 		}
 	}
 
@@ -35,24 +33,8 @@
 	}
 }
 
-@keyframes typedjsBlink{
+@keyframes typedjsBlink {
 	50% {
 		opacity: 0.0;
 	}
 }
-
-@-webkit-keyframes typedjsBlink{
-	0% {
-		opacity: 1;
-	}
-
-	50% {
-		opacity: 0.0;
-	}
-
-	100% {
-		opacity: 1;
-	}
-
-}
-
