@@ -24,8 +24,11 @@ export default {
 
 export const Default = () => {
 
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+    let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
+
 	return(
-		<ComponentWrapper layout="content">
+		<ComponentWrapper layout={layout} className={classes}>
 			<WsuBlockquote
 				cite={text( 'cite','Lorem ipsum dolor sit amet', optionsGroupID )}
 				citeUrl={text( 'citeUrl','https://wsu.edu', optionsGroupID )}

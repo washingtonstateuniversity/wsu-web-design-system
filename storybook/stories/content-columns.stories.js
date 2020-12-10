@@ -4,7 +4,7 @@ import { withKnobs, text, boolean, number, select } from "@storybook/addon-knobs
 
 // Storybook Imports
 import ComponentWrapper from '../../packages/component-parts/content-wrapper';
-
+import { previewGroupID, optionsGroupID } from '@wsuwebteam/build-tools/js/helpers/storybook';
 import { WsuColumnWrapper, WsuColumn, WsuContentContainer } from '../../packages/components';
 import { WsuP } from '../../packages/components';
 
@@ -20,8 +20,6 @@ export default {
 	]
 };
 
-const contentGroupID = 'Preview';
-const optionsGroupID = 'Options';
 const bgColorOptions = ['default','gray-0','gray-5','gray-10','gray-90','gray-95'];
 const spacingOptions = ['default','none','xsmall','small','medium','medium-large','large','xlarge'];
 const columnLayouts = ['single','halves','sidebar-right','sidebar-left','thirds','quarters'];
@@ -220,8 +218,11 @@ export const ColumnBleed = () => {
 	let paddingBefore = select( 'paddingBefore', spacingOptions, 'default', 'Column Options' );
 	let paddingAfter  = select( 'paddingAfter', spacingOptions, 'default', 'Column Options' );
 
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+    let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
+
 	return (
-		<WsuContentContainer>
+		<WsuContentContainer layout={layout} className={classes}>
 			<WsuColumnWrapper
 				layout='halves'
 				backgroundColor={ bgColor } 

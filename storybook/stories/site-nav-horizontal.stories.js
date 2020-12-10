@@ -24,15 +24,18 @@ export default {
 
 export const Default = () => {
 
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+    let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
+
 	return (
 		<>
 			<WsuSiteNavHorizontal />
 
-			<ComponentWrapper layout="content" type="notice">
+			<ComponentWrapper layout={layout} className={classes} type="notice">
 				<p>Site Nav Horizontal does not support submenus. Site Nav Horizontal follows the <WsuLink href="https://css-tricks.com/the-priority-navigation-pattern/">Priority+ Navigation Pattern</WsuLink> which encourages using many top-level pages instead of a few pages with many nested child pages. While this can be good for handling more top-level pages or a "flat" page hierarchy, we still don't recommend going over 8-10 pages. Anything over that most likely will justify using a more structured navigation approach for which a vertical and/or mega menu would be more appropriate.</p>
 			</ComponentWrapper>
 
-			<ComponentWrapper layout="content" type="warning">
+			<ComponentWrapper layout={layout} className={classes} type="warning">
 				<p>Site Nav Horizontal currently has issues some known issues related to how it performs when being resized. From what we can tell, it works fine as long as the browser isn't being drastically resized, very quickly, but we will be looking into a solution for this issue in the future.</p>
 			</ComponentWrapper>
 		</>

@@ -21,8 +21,12 @@ export default {
 };
 
 export const defaultCard = () => {
+
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+    let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
+
 	return(
-		<ComponentWrapper layout="content">
+		<ComponentWrapper layout={layout} className={classes}>
 			<WsuCard 
 				title={text('title', 'Title', previewGroupID)}
 				subtitle={text('subtitle', 'Subtitle', previewGroupID)}
@@ -36,8 +40,12 @@ export const defaultCard = () => {
 }
 
 export const personCard = () => {
+	
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+    let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
+
 	return(
-		<ComponentWrapper layout="content">
+		<ComponentWrapper layout={layout} className={classes}>
 			<WsuCard 
 				title={text('title', 'Butch Cougar', previewGroupID)}
 				subtitle={text('subtitle', 'Mascot', previewGroupID)}
@@ -56,8 +64,12 @@ export const personCard = () => {
 }
 
 export const newsCard = () => {
+
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+    let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
+
 	return(
-		<ComponentWrapper layout="content">
+		<ComponentWrapper layout={layout} className={classes}>
 			<WsuCard 
 				title={'Sed bibendum efficitur tellus non tristique'}
 				caption={'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam rutrum lectus in metus pulvinar, quis gravida nulla pellentesque. Praesent dignissim et mi nec faucibus. Ut luctus, justo blandit suscipit placerat, purus velit ornare leo, ac lobortis nisi arcu consectetur erat. Integer in sapien augue. '}

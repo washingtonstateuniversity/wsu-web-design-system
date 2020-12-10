@@ -27,9 +27,10 @@ export default {
 export const Default = () => {
 
 	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
-
+	let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
+	
 	return (
-		<ComponentWrapper className={classes}>
+		<ComponentWrapper layou={layout} className={classes}>
 			<WsuTypewriter
 				beforeText={ text( 'beforeText','Lorem Ipsum', optionsGroupID ) }
 				text={ text( 'text','Dolor', optionsGroupID ) }

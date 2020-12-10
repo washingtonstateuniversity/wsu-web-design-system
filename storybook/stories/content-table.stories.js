@@ -60,8 +60,11 @@ export default {
 
 export const DefaultTable = () => {
 
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+    let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
+
 	return (
-		<ComponentWrapper layout="content">
+		<ComponentWrapper layout={layout} className={classes}>
 			<WsuTable 
 				striped={boolean('Zebra Stripe', false, optionsGroupID)}
 				captionTop={boolean('Caption Top', false, optionsGroupID)}
@@ -125,8 +128,11 @@ export const DefaultTable = () => {
 
 export const stripedTable = () => {
 
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+    let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
+
 	return (
-		<ComponentWrapper layout="content">
+		<ComponentWrapper layout={layout} className={classes}>
 			<WsuTable striped>
 				<WsuCaption>Estimated yearly costs for two semesters at WSU.</WsuCaption>
 				<WsuThead>
@@ -184,8 +190,11 @@ export const stripedTable = () => {
 
 export const borderedTable = () => {
 
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+    let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
+
 	return (
-		<ComponentWrapper layout="content">
+		<ComponentWrapper layout={layout} className={classes}>
 			<WsuTable borders>
 				<WsuCaption>Estimated yearly costs for two semesters at WSU.</WsuCaption>
 				<WsuThead>

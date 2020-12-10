@@ -48,8 +48,11 @@ export default {
 
 export const DefaultForm = () => {
 
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+    let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
+
 	return (
-		<ComponentWrapper layout="content">
+		<ComponentWrapper layout={layout} className={classes}>
 			{/* Hey Friend, this component currently only offers CSS. No React components have been created at this time. Sorry! If you're looking for HTML markup, go the HTML tab in the addons sidebar. If you already have the WDS included in your application, you can just apply these class names and everything should work. */}
 			<WsuFormCheatsheet />
 		</ComponentWrapper>
@@ -58,8 +61,11 @@ export const DefaultForm = () => {
 
 export const inheritedStyles = () => {
 
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+    let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
+
 	return (
-		<ComponentWrapper layout="content"  className="wsu-c-content">
+		<ComponentWrapper layout={layout}  className={classes}>
 			{/* Hey Friend, this component currently only offers CSS. No React components have been created at this time. Sorry! If you're looking for HTML markup, go the HTML tab in the addons sidebar. If you already have the WDS included in your application, you can just apply these class names and everything should work. */}
 			<WsuFormCheatsheetInherited />
 		</ComponentWrapper>

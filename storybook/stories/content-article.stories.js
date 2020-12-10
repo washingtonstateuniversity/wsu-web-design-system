@@ -26,9 +26,11 @@ export default {
 
 export const DefaultArticle = () => {
 
-	let classes = ( boolean('Apply wsu-c-content class', true, previewGroupID ) ) ? ['wsu-c-content'] : ''; 
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+    let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
+
 	return (
-		<ComponentWrapper layout="content" className={classes}>
+		<ComponentWrapper layout={layout} className={classes}>
 			<WsuArticle >
 				<WsuArticleHeader
 					title={ text( 'title','Lorem ipsum dolor sit amet', optionsGroupID ) }
@@ -67,10 +69,11 @@ export const DefaultArticle = () => {
 
 export const ArticleHeader = () => {
 
-	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : ''; 
-
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+	let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
+	
 	return (
-		<ComponentWrapper layout="content" className={classes}>
+		<ComponentWrapper layout={layout} className={classes}>
 			<WsuArticleHeader
 				title={ text( 'title','Lorem ipsum dolor sit amet', optionsGroupID ) }
 				subtitle={ text( 'subtitle','Suspendisse suscipit leo lobortis vehicula vestibulum', optionsGroupID ) }

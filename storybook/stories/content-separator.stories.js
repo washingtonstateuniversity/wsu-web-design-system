@@ -24,10 +24,11 @@ export default {
 
 export const DefaultSeparator = () => {
 
-	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : ''; 
-
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+	let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
+	
 	return(
-		<ComponentWrapper layout="centered" className={classes}>
+		<ComponentWrapper layout={layout} className={classes}>
 			<WsuHr />
 		</ComponentWrapper>
 	)
@@ -35,10 +36,11 @@ export const DefaultSeparator = () => {
 
 export const CrimsonSeparator = () => {
 
-	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : ''; 
-
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+	let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
+	
 	return(
-		<ComponentWrapper layout="content" className={classes}>
+		<ComponentWrapper layout={layout} className={classes}>
 			<WsuHr style="crimson" />
 		</ComponentWrapper>
 	)

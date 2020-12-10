@@ -24,9 +24,11 @@ export default {
 
 export const DefaultStat = () => {
 
-	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : ''; 
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+	let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
+	
 	return (
-		<ComponentWrapper layout="content" className={classes}>
+		<ComponentWrapper layout={layout} className={classes}>
 			<Stat value={100000} prefix="$" suffix="+" label="Total Money Saved" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit"/>
 			<Stat value={21022} label="Total Students" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit" alignLeft/>
 			<Stat value={200} label="Total Degrees" suffix="+" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit" alignRight/>
@@ -36,9 +38,11 @@ export const DefaultStat = () => {
 
 export const DarkStat = () => {
 
-	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : ''; 
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+	let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
+	
 	return (
-		<ComponentWrapper layout="content" className={classes}>
+		<ComponentWrapper layout={layout} className={classes}>
 			<Stat isDark value={100000} prefix="$" suffix="+" label="Total Money Saved" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit"/>
 			<Stat isDark value={21022} label="Total Students" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit" alignLeft/>
 			<Stat isDark value={200} label="Total Degrees" suffix="+" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit" alignRight/>

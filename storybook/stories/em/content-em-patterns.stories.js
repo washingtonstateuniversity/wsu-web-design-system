@@ -23,9 +23,12 @@ export default {
 
 export const Default = () => {
 
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+    let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
+
 	return (
 
-		<ComponentWrapper layout="content">
+		<ComponentWrapper layout={layout} className={classes}>
 			<div style={{maxWidth: "500px", margin: "auto", position: "relative"}}>
 				<ImageFrame imageSrc="https://source.unsplash.com/collection/895539" /> 
 				<Pattern name="solid-crimson-top-right" />

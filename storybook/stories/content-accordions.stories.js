@@ -4,6 +4,7 @@ import { withKnobs, text, boolean, number, select } from "@storybook/addon-knobs
 
 // Storybook Imports
 import ComponentWrapper from '../../packages/component-parts/content-wrapper';
+import { previewGroupID, optionsGroupID } from '@wsuwebteam/build-tools/js/helpers/storybook';
 
 import {
 	WsuAccordion,
@@ -25,16 +26,14 @@ export default {
 
 import '../../packages/components/content-accordion/script';
 
-const contentGroupID = 'Preview';
-const optionsGroupID = 'Options';
 
 export const Accordion = () => {
 
-
-	let classes = ( boolean('Apply wsu-c-content class', false, contentGroupID ) ) ? ['wsu-c-content'] : '';
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+	let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
 
 	return(
-		<ComponentWrapper layout="content" className={classes}>
+		<ComponentWrapper layout={layout} className={classes}>
 			<WsuAccordion
 				title="Accordion Title Goes Here"
 			>
@@ -47,10 +46,11 @@ export const Accordion = () => {
 export const AccordionGroup = () => {
 
 
-	let classes = ( boolean('Apply wsu-c-content class', false, contentGroupID ) ) ? ['wsu-c-content'] : '';
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+	let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
 
 	return(
-		<ComponentWrapper layout="content" className={classes}>
+		<ComponentWrapper layout={layout} className={classes}>
 			<WsuAccordion
 				title="Accordion Title Goes Here"
 			>

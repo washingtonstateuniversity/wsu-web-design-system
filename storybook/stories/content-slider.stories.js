@@ -25,8 +25,11 @@ export default {
 
 export const DefaultSlider = () => {
 
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+    let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
+
 	return (
-		<ComponentWrapper layout="content">
+		<ComponentWrapper layout={layout} className={classes}>
 			<WsuSlider
 				slideTitle={
 					text( 

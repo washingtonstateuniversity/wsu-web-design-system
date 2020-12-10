@@ -25,9 +25,11 @@ export default {
 
 export const Default = () => {
 
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+    let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
 
 	return (
-		<ComponentWrapper layout="content" className='wsu-c-content'>
+		<ComponentWrapper layout={layout} className={classes}>
 			<EmContentCallout
 				imageSrc='https://source.unsplash.com/collection/895539'
 				imageAlt={ text( 'imageAlt','Alt Text', optionsGroupID ) }

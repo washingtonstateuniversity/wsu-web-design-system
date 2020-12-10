@@ -72,9 +72,11 @@ const getHeadingLength = ( headingLength ) => {
 
 export const Default = () => {
 
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+    let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
 
 	return (
-		<ComponentWrapper layout="content" className='wsu-c-content'>
+		<ComponentWrapper layout={layout} className={classes}>
 			<EmContentHeader 
 				style={select( 'style',['default','hero'],'default', optionsGroupID )}
 			>
@@ -88,9 +90,11 @@ export const allHeadings = () => {
 
 let headingLength = select( 'Heading Length', headingLengthOptions,'short', previewGroupID );
 let width         = select( 'width', headingWidthOptions, 'full', optionsGroupID );
+let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+    let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
 
 return(
-	<ComponentWrapper layout="content" className="wsu-c-content">
+	<ComponentWrapper layout={layout} className={classes}>
 		<EmContentHeader tag="h1" style={'hero'} width={width} >HERO - Heading Level 1 {getHeadingLength( headingLength ) }</EmContentHeader>
 		<EmContentHeader tag="h1" style={'em'} width={width} >Heading Level 1 {getHeadingLength( headingLength ) }</EmContentHeader>
 		<EmContentHeader tag="h2" style={'em'} width={width} >Heading Level 2 {getHeadingLength( headingLength ) }</EmContentHeader>

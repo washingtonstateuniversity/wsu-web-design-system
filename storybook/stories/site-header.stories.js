@@ -23,8 +23,11 @@ export default {
 
 export const DefaultHeader = () => {
 
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+    let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
+
 	return (
-		<ComponentWrapper layout="full">
+		<ComponentWrapper layout={layout} className={classes}>
 
 			<WsuSiteHeader />
 			
@@ -34,8 +37,11 @@ export const DefaultHeader = () => {
 
 export const DarkHeader = () => {
 
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+    let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
+
 	return (
-		<ComponentWrapper layout="full">
+		<ComponentWrapper layout={layout} className={classes}>
 
 			<WsuSiteHeader isDark/>
 			
