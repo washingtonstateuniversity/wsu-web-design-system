@@ -31,7 +31,7 @@ export const DefaultTiles = () => {
 		<ComponentWrapper layout={ layout } className={ classes }>
 			<WsuTiles 
 				overlayColor={ select( 'overlayColor', ['default', 'crimson'], 'default', optionsGroupID )  }
-				featuredTileLocation={ select( 'featuredTileLocation', ['default', 'right', 'center'], 'default', optionsGroupID )  }
+				tileLayout={ select( 'tileLayout', ['default', 'right', 'center'], 'default', optionsGroupID )  }
 			/>
 		</ComponentWrapper>
 	)

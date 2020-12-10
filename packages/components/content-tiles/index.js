@@ -14,12 +14,9 @@ import './style.scss';
 
 const ContentTiles = ( props, ref ) => {
 
-	console.log(props);
-
-	
 	let wrapperClasses = getUtilityClasses(
 		[
-			{ key: 'featuredTileLocation', prefix: 'wsu-c-', classSlug: 'tiles' },
+			{ key: 'tileLayout', prefix: 'wsu-c-', classSlug: 'tiles' },
 		],
 		props,
 		['wsu-c-tiles']
@@ -45,8 +42,9 @@ const ContentTiles = ( props, ref ) => {
 					}}
 				>
 					<div className={ tileContentClasses }>
-						<div className="wsu-c-tile__heading">Butch Cougar <WsuIcon name="link" /></div>
-						<div className="wsu-c-tile__caption">Senior | Chemical Engineering | Edgewood, WA</div>
+						<div className="wsu-c-tile__heading">Santa Claus <WsuIcon name="link" /></div>
+						<div className="wsu-c-tile__caption">North Pole</div>
+						{/* Add full caption on hover */}
 					</div>
 				</div>
 			</Repeater>
