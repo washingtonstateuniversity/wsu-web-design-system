@@ -1,0 +1,97 @@
+@import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
+
+.wsu-c-tiles {
+	@include font();
+
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto;
+	grid-template-areas: 
+		"featured normal"
+		"featured normal";
+
+	&--right {
+		grid-template-areas: 
+			"normal featured"
+			"normal featured";
+	}
+
+	&--center {
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-areas: 
+			"x featured y"
+			"x featured y";
+	}
+}
+
+.wsu-c-tile {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+	overflow: hidden;
+	position: relative;
+
+	&:first-child {
+		grid-area: featured;
+	}
+
+	&:after {
+		content: "";
+		width: 100%;
+		height: 100%;
+		background: rgba(color(primary, base), 0.8);
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0;
+
+		transition: timing('husky') opacity;
+		z-index: z('contentbackground');
+	}
+
+	&:hover,
+	&:focus {
+		cursor: pointer;
+		text-decoration: none;
+
+		&:after {
+			opacity: 1;
+		}
+	}
+}
+
+.wsu-c-tile__content {
+	position: relative;
+	z-index: z('content');
+	padding: 200px $unit-2xl $unit-2xl;
+	background: linear-gradient(rgba(color(black, base), 0), rgba(color(black, base), 0.9));
+
+	&--crimson {
+		background: linear-gradient(rgba(color(primary, light), 0), rgba(color(primary, light), 0.9) 100%);
+	}
+}
+
+.wsu-c-tile__heading,
+.wsu-c-tile__caption {
+	color: color(white, base);
+}
+
+.wsu-c-tile__heading {
+	@include font-size(2em, 900, 1.2);
+
+	.wsu-icon {
+		font-size: .6em;
+
+		&:before {
+			vertical-align: inherit;
+		}
+	}
+}
+
+.wsu-c-tile__caption {
+	@include font-size(1.2em, 400, 1.2);
+}
