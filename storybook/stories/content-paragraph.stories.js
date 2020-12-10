@@ -31,7 +31,7 @@ export const DefaultParagraph = () => {
 	let widthOption = select('width', widthOptions, 'full', optionsGroupID );
 
 	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
-    let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
+	let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
 
 	return(
 		<ComponentWrapper layout={layout} className={classes} showEnds={boolean('Show Spacing', false, previewGroupID )}>
@@ -54,7 +54,7 @@ export const ParagraphGroups = () => {
 	let widthOption = select('width', widthOptions, 'full', optionsGroupID );
 
 	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
-    let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
+	let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
 
 	return(
 		<ComponentWrapper layout={layout} className={classes}>

@@ -73,7 +73,7 @@ const getHeadingLength = ( headingLength ) => {
 export const Default = () => {
 
 	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
-    let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
+	let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
 
 	return (
 		<ComponentWrapper layout={layout} className={classes}>
@@ -88,10 +88,10 @@ export const Default = () => {
 
 export const allHeadings = () => {
 
-let headingLength = select( 'Heading Length', headingLengthOptions,'short', previewGroupID );
-let width         = select( 'width', headingWidthOptions, 'full', optionsGroupID );
-let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
-    let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
+	let headingLength = select( 'Heading Length', headingLengthOptions,'short', previewGroupID );
+	let width         = select( 'width', headingWidthOptions, 'full', optionsGroupID );
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+	let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
 
 return(
 	<ComponentWrapper layout={layout} className={classes}>

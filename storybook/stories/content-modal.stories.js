@@ -57,7 +57,7 @@ export const DefaultModal = () => {
 export const fullScreenModal = () => {
 
 	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
-    let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
+	let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
 	const openModal = () => setOpen( true );
 	const closeModal = () => setOpen( false );
 	

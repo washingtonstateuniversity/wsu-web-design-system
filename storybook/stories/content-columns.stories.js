@@ -219,7 +219,7 @@ export const ColumnBleed = () => {
 	let paddingAfter  = select( 'paddingAfter', spacingOptions, 'default', 'Column Options' );
 
 	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
-    let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
+	let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
 
 	return (
 		<WsuContentContainer layout={layout} className={classes}>
