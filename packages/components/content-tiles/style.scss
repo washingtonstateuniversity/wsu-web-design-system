@@ -2,61 +2,72 @@
 
 .wsu-c-tiles {
 	@include font();
-
-	width: 100%;
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: repeat(auto-fit, minmax(45ch, 1fr));
 	grid-template-rows: auto;
-	grid-template-areas: 
-		"featured normal"
-		"featured normal";
+	width: 100%;
 
-	&--right {
-		grid-template-areas: 
-			"normal featured"
-			"normal featured";
-	}
-
-	&--center {
-		grid-template-columns: 1fr 1fr 1fr;
-		grid-template-areas: 
-			"x featured y"
-			"x featured y";
+	@include mq('medium-large') {
+		&--left,
+		&--center,
+		&--right {
+			& .wsu-c-tile:first-child {
+				grid-area: featured;
+			}
+		}
+	
+		&--left {
+			grid-template-columns: 1fr 1fr;
+			grid-template-areas: 
+				"featured normal"
+				"featured normal";
+		}
+	
+		&--right {
+			grid-template-columns: 1fr 1fr;
+			grid-template-areas: 
+				"normal featured"
+				"normal featured";
+		}
+	
+		&--center {
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-areas: 
+				"x featured y"
+				"x featured y";
+		}
 	}
 }
 
 .wsu-c-tile {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
-	background-repeat: no-repeat;
-	background-size: cover;
 	background-position: 50% 50%;
+	background-size: cover;
+	background-repeat: no-repeat;
 	overflow: hidden;
-	position: relative;
-
-	&:first-child {
-		grid-area: featured;
-	}
+	text-decoration: none;
 
 	&:after {
-		content: "";
-		width: 100%;
-		height: 100%;
-		background: rgba(color(primary, base), 0.8);
+		z-index: z('contentbackground');
 		position: absolute;
 		top: 0;
 		left: 0;
+		content: "";
 		opacity: 0;
+		background: rgba(color(primary, base), 0.8);
+		height: 100%;
+		width: 100%;
 
 		transition: timing('husky') opacity;
-		z-index: z('contentbackground');
 	}
 
 	&:hover,
 	&:focus {
-		cursor: pointer;
 		text-decoration: none;
+		cursor: pointer;
 
 		&:after {
 			opacity: 1;
@@ -65,9 +76,9 @@
 }
 
 .wsu-c-tile__content {
-	position: relative;
 	z-index: z('content');
-	padding: 200px $unit-2xl $unit-2xl;
+	position: relative;
+	padding: 35% $unit-2xl $unit-2xl;
 	background: linear-gradient(rgba(color(black, base), 0), rgba(color(black, base), 0.9));
 
 	&--crimson {
