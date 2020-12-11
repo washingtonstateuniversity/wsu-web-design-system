@@ -32,7 +32,7 @@ const iconOptions = ['alarm', 'alert-notification', 'arrow-down-carrot', 'arrow-
 export const defaultIcon = () => {
 
 	let classes = (boolean('Apply wsu-c-content class', false, previewGroupID)) ? ['wsu-c-content'] : '';
-	let layout = (select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID));
+	let layout = (select('Wrapper Layout', ['full', 'content', 'centered'], 'centered', previewGroupID));
 
 	return (
 		<ComponentWrapper layout={layout} className={classes}>

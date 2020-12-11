@@ -23,8 +23,10 @@ export default {
 };
 
 export const DefaultModal = () => {
+	
+	const [isOpen, setOpen] = useState(false);
 
-	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+	let classes = ( boolean('Apply wsu-c-content class', true, previewGroupID ) ) ? ['wsu-c-content'] : '';
 	let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
 	
 	const openModal = () => setOpen( true );
@@ -42,7 +44,7 @@ export const DefaultModal = () => {
 			<WsuModal 
 				name="uniquestring" 
 				ariaLabel="This is a aria label for the modal"
-				isOpen={false}
+				isOpen={isOpen}
 				isFullScreen={boolean("isFullScreen", false, optionsGroupID)}
 				isNotched={boolean("isNotched", false, optionsGroupID)}
 				closeModal={closeModal}
@@ -56,8 +58,11 @@ export const DefaultModal = () => {
 
 export const fullScreenModal = () => {
 
-	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+	const [isOpen, setOpen] = useState(false);
+
+	let classes = ( boolean('Apply wsu-c-content class', true, previewGroupID ) ) ? ['wsu-c-content'] : '';
 	let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
+
 	const openModal = () => setOpen( true );
 	const closeModal = () => setOpen( false );
 	
@@ -73,7 +78,7 @@ export const fullScreenModal = () => {
 			<WsuModal 
 				name="uniquestring" 
 				ariaLabel="This is a aria label for the modal"
-				isOpen={false}
+				isOpen={isOpen}
 				isFullScreen={boolean("isFullScreen", true, optionsGroupID)}
 				isNotched={boolean("isNotched", false, optionsGroupID)}
 				closeModal={closeModal}

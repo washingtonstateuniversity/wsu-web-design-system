@@ -26,7 +26,7 @@ export default {
 
 export const DefaultArticle = () => {
 
-	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+	let classes = ( boolean('Apply wsu-c-content class', true, previewGroupID ) ) ? ['wsu-c-content'] : '';
 	let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
 
 	return (

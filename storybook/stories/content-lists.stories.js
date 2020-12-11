@@ -25,7 +25,7 @@ export default {
 
 export const UnorderedList = () => {
 
-	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+	let classes = ( boolean('Apply wsu-c-content class', true, previewGroupID ) ) ? ['wsu-c-content'] : '';
 	let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
 
 	return (
@@ -57,7 +57,7 @@ export const UnorderedList = () => {
 
 export const OrderedList = () => {
 
-	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+	let classes = ( boolean('Apply wsu-c-content class', true, previewGroupID ) ) ? ['wsu-c-content'] : '';
 	let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
 
 	return (
@@ -89,7 +89,7 @@ export const OrderedList = () => {
 
 export const SeparatedListStyle = () => {
 
-	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+	let classes = ( boolean('Apply wsu-c-content class', true, previewGroupID ) ) ? ['wsu-c-content'] : '';
 	let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
 
 	return (

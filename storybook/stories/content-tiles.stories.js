@@ -13,7 +13,7 @@ import { WsuTiles } from '../../packages/components';
 export default {
 	title: 'Components/Content/Tiles',
 	parameters: {
-		status: 'In Development' // In Development | Needs Feedback | Stable | Needs Deployment | Has Known Issues
+		status: 'Needs Feedback' // In Development | Needs Feedback | Stable | Needs Deployment | Has Known Issues
 	},
 	decorators: [
 		withA11y,

@@ -24,7 +24,7 @@ export default {
 export const DefaultBanner = () => {
 
 	let classes = (boolean('Apply wsu-c-content class', false, previewGroupID)) ? ['wsu-c-content'] : '';
-	let layout = (select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID));
+	let layout = (select('Wrapper Layout', ['full', 'content', 'centered'], 'full', previewGroupID));
 
 	return (
 		<ComponentWrapper layout={layout} className={classes}>
