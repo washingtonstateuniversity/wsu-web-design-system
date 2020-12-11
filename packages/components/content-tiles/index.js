@@ -32,9 +32,10 @@ const ContentTiles = ( props, ref ) => {
 
 	return (
 		<div className={ wrapperClasses }>
-			<Repeater numTimes={5}>
-				<div 
+			<Repeater numTimes={8}>
+				<a 
 					className="wsu-c-tile"
+					href="#"
 					style={{
 						backgroundImage: "url('https://source.unsplash.com/collection/9042806')",
 						backgroundPositionX: '50%',
@@ -46,7 +47,7 @@ const ContentTiles = ( props, ref ) => {
 						<div className="wsu-c-tile__caption">North Pole</div>
 						{/* Add full caption on hover */}
 					</div>
-				</div>
+				</a>
 			</Repeater>
 		</div>
 	);
