@@ -42,7 +42,7 @@ const Paragraph = ( props ) => {
 }
 
 export const DefaultColumn = () => {
-	let layout               = select( 'layout', columnLayouts, 'single', 'Columns Wrapper' );
+	let columnLayout         = select( 'layout', columnLayouts, 'single', 'Columns Wrapper' );
 	let bgColor              = select( 'backgroundColor', bgColorOptions, '', 'Columns Wrapper' );
 	let wrapperMarginBefore  = text( 'marginTop', '', 'Columns Wrapper' );
 	let wrapperMarginAfter   = text( 'marginBottom', '', 'Columns Wrapper' );
@@ -55,81 +55,91 @@ export const DefaultColumn = () => {
 	let paddingBefore = text( 'paddingBottom', '', 'Column Options' );
 	let paddingAfter  = text( 'paddingTop', '', 'Column Options' );
 
-	if ( 'halves' === layout ) {
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+	let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
+
+	if ( 'halves' === columnLayout ) {
 
 		return ( 
-			<WsuColumnWrapper
-				layout={layout} 
-				backgroundColor={ bgColor } 
-				marginBefore={wrapperMarginBefore}
-				marginAfter={wrapperMarginAfter}
-				paddingBefore={wrapperPaddingBefore}
-				paddingAfter={wrapperPaddingAfter}
-				>
-				<WsuColumn
-					backgroundColor={ columnBgColor } 
-					marginBefore={marginBefore}
-					marginAfter={marginAfter}
-					paddingBefore={paddingBefore}
-					paddingAfter={paddingAfter}
-					><Paragraph />
-				</WsuColumn>
-				<WsuColumn>
-					<Paragraph />
-				</WsuColumn>
-			</WsuColumnWrapper>
-		)
-
-	} else if ( 'sidebar-right' === layout ) {
-		return ( 
-			<WsuColumnWrapper
-				layout={layout}
-				backgroundColor={ bgColor } 
-				marginBefore={wrapperMarginBefore}
-				marginAfter={wrapperMarginAfter}
-				paddingBefore={wrapperPaddingBefore}
-				paddingAfter={wrapperPaddingAfter}
-				>
-				<WsuColumn>
-					<Paragraph />
-				</WsuColumn>
-				<WsuColumn
-					backgroundColor={ columnBgColor } 
-					marginBefore={marginBefore}
-					marginAfter={marginAfter}
-					paddingBefore={paddingBefore}
-					paddingAfter={paddingAfter}
-					><Paragraph />
-				</WsuColumn>
-			</WsuColumnWrapper>
-		)
-	} else if ( 'sidebar-left' === layout ) {
-		return ( 
-			<WsuColumnWrapper
-				layout={layout}
-				backgroundColor={ bgColor } 
-				marginBefore={wrapperMarginBefore}
-				marginAfter={wrapperMarginAfter}
-				paddingBefore={wrapperPaddingBefore}
-				paddingAfter={wrapperPaddingAfter}
-				>
+			<ComponentWrapper layout={layout} className={classes}>
+				<WsuColumnWrapper
+					layout={columnLayout} 
+					backgroundColor={ bgColor } 
+					marginBefore={wrapperMarginBefore}
+					marginAfter={wrapperMarginAfter}
+					paddingBefore={wrapperPaddingBefore}
+					paddingAfter={wrapperPaddingAfter}
+					>
 					<WsuColumn
-					backgroundColor={ columnBgColor } 
-					marginBefore={marginBefore}
-					marginAfter={marginAfter}
-					paddingBefore={paddingBefore}
-					paddingAfter={paddingAfter}
-					><Paragraph />
-				</WsuColumn>
-				<WsuColumn>
-					<Paragraph />
-				</WsuColumn>
-			</WsuColumnWrapper>
+						backgroundColor={ columnBgColor } 
+						marginBefore={marginBefore}
+						marginAfter={marginAfter}
+						paddingBefore={paddingBefore}
+						paddingAfter={paddingAfter}
+						><Paragraph />
+					</WsuColumn>
+					<WsuColumn>
+						<Paragraph />
+					</WsuColumn>
+				</WsuColumnWrapper>
+			</ComponentWrapper>
 		)
-	} else if ( 'thirds' === layout ) {
+
+	} else if ( 'sidebar-right' === columnLayout ) {
 		return ( 
+			<ComponentWrapper layout={layout} className={classes}>
+				<WsuColumnWrapper
+					layout={columnLayout}
+					backgroundColor={ bgColor } 
+					marginBefore={wrapperMarginBefore}
+					marginAfter={wrapperMarginAfter}
+					paddingBefore={wrapperPaddingBefore}
+					paddingAfter={wrapperPaddingAfter}
+					>
+					<WsuColumn>
+						<Paragraph />
+					</WsuColumn>
+					<WsuColumn
+						backgroundColor={ columnBgColor } 
+						marginBefore={marginBefore}
+						marginAfter={marginAfter}
+						paddingBefore={paddingBefore}
+						paddingAfter={paddingAfter}
+						><Paragraph />
+					</WsuColumn>
+				</WsuColumnWrapper>
+			</ComponentWrapper>
+		)
+	} else if ( 'sidebar-left' === columnLayout ) {
+		return ( 
+			<ComponentWrapper layout={layout} className={classes}>
+				<WsuColumnWrapper
+					layout={columnLayout}
+					backgroundColor={ bgColor } 
+					marginBefore={wrapperMarginBefore}
+					marginAfter={wrapperMarginAfter}
+					paddingBefore={wrapperPaddingBefore}
+					paddingAfter={wrapperPaddingAfter}
+					>
+						<WsuColumn
+						backgroundColor={ columnBgColor } 
+						marginBefore={marginBefore}
+						marginAfter={marginAfter}
+						paddingBefore={paddingBefore}
+						paddingAfter={paddingAfter}
+						><Paragraph />
+					</WsuColumn>
+					<WsuColumn>
+						<Paragraph />
+					</WsuColumn>
+				</WsuColumnWrapper>
+			</ComponentWrapper>
+		)
+	} else if ( 'thirds' === columnLayout ) {
+		return ( 
+			<ComponentWrapper layout={layout} className={classes}>
 			<WsuColumnWrapper
-				layout={layout}
+				layout={columnLayout}
 				backgroundColor={ bgColor } 
 				marginBefore={wrapperMarginBefore}
 				marginAfter={wrapperMarginAfter}
@@ -151,11 +161,13 @@ export const DefaultColumn = () => {
 					<Paragraph />
 				</WsuColumn>
 			</WsuColumnWrapper>
+			</ComponentWrapper>
 		)
-	} else if ( 'quarters' === layout ) {
+	} else if ( 'quarters' === columnLayout ) {
 		return ( 
+			<ComponentWrapper layout={layout} className={classes}>
 			<WsuColumnWrapper
-				layout={layout}
+				layout={columnLayout}
 				backgroundColor={ bgColor } 
 				marginBefore={wrapperMarginBefore}
 				marginAfter={wrapperMarginAfter}
@@ -180,9 +192,11 @@ export const DefaultColumn = () => {
 					<Paragraph />
 				</WsuColumn>
 			</WsuColumnWrapper>
+			</ComponentWrapper>
 		)
 	} else {
 		return ( 
+			<ComponentWrapper layout={layout} className={classes}>
 			<WsuColumnWrapper
 				layout="single"
 				backgroundColor={ bgColor } 
@@ -200,6 +214,7 @@ export const DefaultColumn = () => {
 					><Paragraph />
 				</WsuColumn>
 			</WsuColumnWrapper>
+			</ComponentWrapper>
 		)
 	}
 }
@@ -222,49 +237,51 @@ export const ColumnBleed = () => {
 	let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
 
 	return (
-		<WsuContentContainer layout={layout} className={classes}>
-			<WsuColumnWrapper
-				layout='halves'
-				backgroundColor={ bgColor } 
-				marginBefore={wrapperMarginBefore}
-				marginAfter={wrapperMarginAfter}
-				paddingBefore={wrapperPaddingBefore}
-				paddingAfter={wrapperPaddingAfter}
-				>
-				<WsuColumn
-					backgroundColor={ columnBgColor } 
-					marginBefore={marginBefore}
-					marginAfter={marginAfter}
-					paddingBefore={paddingBefore}
-					paddingAfter={paddingAfter}
-					bleedLeft={true}
-					><Paragraph />
-				</WsuColumn>
-				<WsuColumn
-					bleedRight={true}
+		<ComponentWrapper layout={layout} className={classes}>
+			<WsuContentContainer>
+				<WsuColumnWrapper
+					layout='halves'
+					backgroundColor={ bgColor } 
+					marginBefore={wrapperMarginBefore}
+					marginAfter={wrapperMarginAfter}
+					paddingBefore={wrapperPaddingBefore}
+					paddingAfter={wrapperPaddingAfter}
 					>
-					<Paragraph />
-				</WsuColumn>
-			</WsuColumnWrapper>
-			<WsuColumnWrapper
-				layout="single"
-				backgroundColor={ bgColor } 
-				marginBefore={wrapperMarginBefore}
-				marginAfter={wrapperMarginAfter}
-				paddingBefore={wrapperPaddingBefore}
-				paddingAfter={wrapperPaddingAfter}
-				>
-				<WsuColumn
-					backgroundColor={ columnBgColor } 
-					marginBefore={marginBefore}
-					marginAfter={marginAfter}
-					paddingBefore={paddingBefore}
-					paddingAfter={paddingAfter}
-					bleedLeft={true}
-					bleedRight={true}
-					><Paragraph />
-				</WsuColumn>
-			</WsuColumnWrapper>
-		</WsuContentContainer>
+					<WsuColumn
+						backgroundColor={ columnBgColor } 
+						marginBefore={marginBefore}
+						marginAfter={marginAfter}
+						paddingBefore={paddingBefore}
+						paddingAfter={paddingAfter}
+						bleedLeft={true}
+						><Paragraph />
+					</WsuColumn>
+					<WsuColumn
+						bleedRight={true}
+						>
+						<Paragraph />
+					</WsuColumn>
+				</WsuColumnWrapper>
+				<WsuColumnWrapper
+					layout="single"
+					backgroundColor={ bgColor } 
+					marginBefore={wrapperMarginBefore}
+					marginAfter={wrapperMarginAfter}
+					paddingBefore={wrapperPaddingBefore}
+					paddingAfter={wrapperPaddingAfter}
+					>
+					<WsuColumn
+						backgroundColor={ columnBgColor } 
+						marginBefore={marginBefore}
+						marginAfter={marginAfter}
+						paddingBefore={paddingBefore}
+						paddingAfter={paddingAfter}
+						bleedLeft={true}
+						bleedRight={true}
+						><Paragraph />
+					</WsuColumn>
+				</WsuColumnWrapper>
+			</WsuContentContainer>
+		</ComponentWrapper>
 	);
 }

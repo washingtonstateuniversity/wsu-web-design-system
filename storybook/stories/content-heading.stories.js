@@ -71,7 +71,7 @@ const getHeadingLength = ( headingLength ) => {
 
 export const defaultHeading = () => {
 
-	let applyContentClass = boolean('Apply wsu-c-content class', false, contentGroupID );
+	let applyContentClass = boolean('Apply wsu-c-content class', false, previewGroupID );
 
 	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
 	let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
@@ -86,7 +86,7 @@ export const defaultHeading = () => {
 				width={ select('width', ['default','full','wide','medium','narrow','xnarrow'], 'default', optionsGroupID )  }
 				textAlign={ select('textAlign', ['default','left','center','right'], 'default', optionsGroupID )  }
 			>
-				Heading Text {getHeadingLength( select('Heading Length', headingLengthOptions,'short', contentGroupID ) )}
+				Heading Text {getHeadingLength( select('Heading Length', headingLengthOptions,'short', previewGroupID ) )}
 			</WsuHeading>
 		</ComponentWrapper>
 	)
@@ -94,7 +94,7 @@ export const defaultHeading = () => {
 
 export const allHeadings = () => {
 
-	let headingLength = select( 'Heading Length', headingLengthOptions,'short', contentGroupID );
+	let headingLength = select( 'Heading Length', headingLengthOptions,'short', previewGroupID );
 	let style         = select( 'style', headingStyleOptions, 'default', optionsGroupID );
 	let width         = select( 'width', headingWidthOptions, 'full', optionsGroupID );
 
@@ -115,7 +115,7 @@ export const allHeadings = () => {
 
 export const calloutHeadings = () => {
 
-	let headingLength = select( 'Heading Length', headingLengthOptions,'short', contentGroupID );
+	let headingLength = select( 'Heading Length', headingLengthOptions,'short', previewGroupID );
 	let width         = select( 'width', headingWidthOptions, 'full', optionsGroupID );
 
 	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
@@ -135,7 +135,7 @@ export const calloutHeadings = () => {
 
 export const WithParagraphs = () => {
 
-	let headingLength = select('Heading Length', headingLengthOptions,'short', contentGroupID );
+	let headingLength = select('Heading Length', headingLengthOptions,'short', previewGroupID );
 	let style         = select( 'style', headingStyleOptions, 'default', optionsGroupID );
 	let width         = select( 'width', headingWidthOptions, 'full', optionsGroupID );
 

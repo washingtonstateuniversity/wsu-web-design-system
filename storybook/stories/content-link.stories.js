@@ -93,6 +93,9 @@ export const Animated = () => {
 }
 
 export const HighlyAccessible = () => {
+
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+	let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
 	
 	return (
 		<ComponentWrapper layout={layout} className={classes}>

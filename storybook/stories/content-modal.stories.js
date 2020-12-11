@@ -42,7 +42,7 @@ export const DefaultModal = () => {
 			<WsuModal 
 				name="uniquestring" 
 				ariaLabel="This is a aria label for the modal"
-				isOpen={isOpen}
+				isOpen={false}
 				isFullScreen={boolean("isFullScreen", false, optionsGroupID)}
 				isNotched={boolean("isNotched", false, optionsGroupID)}
 				closeModal={closeModal}
@@ -73,7 +73,7 @@ export const fullScreenModal = () => {
 			<WsuModal 
 				name="uniquestring" 
 				ariaLabel="This is a aria label for the modal"
-				isOpen={isOpen}
+				isOpen={false}
 				isFullScreen={boolean("isFullScreen", true, optionsGroupID)}
 				isNotched={boolean("isNotched", false, optionsGroupID)}
 				closeModal={closeModal}
