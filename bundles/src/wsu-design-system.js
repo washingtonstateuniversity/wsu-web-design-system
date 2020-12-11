@@ -33,6 +33,8 @@ import '../../packages/components/content-image/style.scss';
 import '../../packages/components/content-modal/style.scss';
 import '../../packages/components/content-slider/style.scss';
 import '../../packages/components/content-stat/style.scss';
+import '../../packages/components/content-table/style.scss';
+import '../../packages/components/content-tiles/style.scss';
 import '../../packages/components/content-separator/style.scss';
 import '../../packages/components/content-page-banner/style.scss';
 import '../../packages/components/content-blockquote/style.scss';
