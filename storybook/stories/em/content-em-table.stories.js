@@ -23,8 +23,11 @@ export default {
 
 export const Default = () => {
 
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+	let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
+
 	return (
-		<ComponentWrapper layout="content" className="wsu-c-content">
+		<ComponentWrapper layout={layout} className={classes}>
 			<div style={{maxWidth: "588px"}}>
 				<EmContentTable />
 			</div>

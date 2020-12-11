@@ -1,0 +1,108 @@
+@import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
+
+.wsu-c-tiles {
+	@include font();
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(45ch, 1fr));
+	grid-template-rows: auto;
+	width: 100%;
+
+	@include mq('medium-large') {
+		&--left,
+		&--center,
+		&--right {
+			& .wsu-c-tile:first-child {
+				grid-area: featured;
+			}
+		}
+	
+		&--left {
+			grid-template-columns: 1fr 1fr;
+			grid-template-areas: 
+				"featured normal"
+				"featured normal";
+		}
+	
+		&--right {
+			grid-template-columns: 1fr 1fr;
+			grid-template-areas: 
+				"normal featured"
+				"normal featured";
+		}
+	
+		&--center {
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-areas: 
+				"x featured y"
+				"x featured y";
+		}
+	}
+}
+
+.wsu-c-tile {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	background-position: 50% 50%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	text-decoration: none;
+
+	&:after {
+		z-index: z('contentbackground');
+		position: absolute;
+		top: 0;
+		left: 0;
+		content: "";
+		opacity: 0;
+		background: rgba(color(primary, base), 0.8);
+		height: 100%;
+		width: 100%;
+
+		transition: timing('husky') opacity;
+	}
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		cursor: pointer;
+
+		&:after {
+			opacity: 1;
+		}
+	}
+}
+
+.wsu-c-tile__content {
+	z-index: z('content');
+	position: relative;
+	padding: 35% $unit-2xl $unit-2xl;
+	background: linear-gradient(rgba(color(black, base), 0), rgba(color(black, base), 0.9));
+
+	&--crimson {
+		background: linear-gradient(rgba(color(primary, light), 0), rgba(color(primary, light), 0.9) 100%);
+	}
+}
+
+.wsu-c-tile__heading,
+.wsu-c-tile__caption {
+	color: color(white, base);
+}
+
+.wsu-c-tile__heading {
+	@include font-size(2em, 900, 1.2);
+
+	.wsu-icon {
+		font-size: .6em;
+
+		&:before {
+			vertical-align: inherit;
+		}
+	}
+}
+
+.wsu-c-tile__caption {
+	@include font-size(1.2em, 400, 1.2);
+}

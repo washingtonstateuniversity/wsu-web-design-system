@@ -22,3 +22,5 @@ import '../../packages/components/content-paragraph/style.scss';
 import '../../packages/components/content-separator/style.scss';
 import '../../packages/components/content-slider/style.scss';
 import '../../packages/components/content-stat/style.scss';
+import '../../packages/components/content-table/style.scss';
+import '../../packages/components/content-tiles/style.scss';

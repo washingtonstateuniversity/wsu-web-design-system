@@ -23,9 +23,11 @@ export default {
 
 export const AllFonts = () => {
 
-	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : ''; 
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+	let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
+
 	return (
-		<ComponentWrapper layout="content" className={classes}>
+		<ComponentWrapper layout={layout} className={classes}>
 			<WsuHeading>Typography</WsuHeading>
 			<WsuHeading tag="h1">h1 Montserrat ExtraBold 48px</WsuHeading>
 			<WsuHeading tag="h2">h2 Montserrat Bold 36px </WsuHeading>

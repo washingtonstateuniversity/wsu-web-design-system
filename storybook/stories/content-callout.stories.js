@@ -26,9 +26,11 @@ export default {
 
 export const DefaultCallout = () => {
 
-	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : ''; 
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+	let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
+
 	return (
-		<ComponentWrapper layout="content" className={classes}>
+		<ComponentWrapper layout={layout} className={classes}>
 			<WsuCallout
 				imageSrc='https://source.unsplash.com/collection/895539'
 				imageAlt={ text( 'imageAlt','Alt Text', optionsGroupID ) }
@@ -54,9 +56,11 @@ export const DefaultCallout = () => {
 
 export const CalloutList = () => {
 
-	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : ''; 
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+	let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
+
 	return (
-		<ComponentWrapper layout="content" className={classes}>
+		<ComponentWrapper layout={layout} className={classes}>
 			<WsuCallout
 				imageSrc='https://source.unsplash.com/collection/895539'
 				imageAlt={ text( 'imageAlt','Alt Text', optionsGroupID ) }

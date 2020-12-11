@@ -28,8 +28,11 @@ export default {
 
 export const DefaultLink = () => {
 
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+	let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
+
 	return (
-		<ComponentWrapper layout="content" className={'wsu-c-content'}>
+		<ComponentWrapper layout={layout} className={classes}>
 
 			<WsuHeading tag="h2" link="#">Content Link Default Style Headlines</WsuHeading>
 
@@ -51,9 +54,12 @@ export const DefaultLink = () => {
 }
 
 export const Secondary = () => {
+	
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+	let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
 
 	return (
-		<ComponentWrapper layout="content" className={'wsu-c-content'}>
+		<ComponentWrapper layout={layout} className={classes}>
 			<WsuP>
 				<strong>Content Link <code>isSecondary</code> for limited use, primarily in lists of tags or categories.</strong>
 			</WsuP>
@@ -63,9 +69,12 @@ export const Secondary = () => {
 }
 
 export const Animated = () => {
+
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+	let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
 	
 	return (
-		<ComponentWrapper layout="content" className={'wsu-c-content'}>
+		<ComponentWrapper layout={layout} className={classes}>
 
 			<WsuP>
 				<strong>Content Link <code>isAnimated</code> style in paragraphs.</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
@@ -84,9 +93,12 @@ export const Animated = () => {
 }
 
 export const HighlyAccessible = () => {
+
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+	let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
 	
 	return (
-		<ComponentWrapper layout="content" className={'wsu-c-content'}>
+		<ComponentWrapper layout={layout} className={classes}>
 
 			<WsuP>
 				<strong>Content Link <code>isHighlyAccessible</code> style in paragraphs.</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 

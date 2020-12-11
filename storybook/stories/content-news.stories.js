@@ -54,8 +54,11 @@ export const DefaultNews = () => {
 	let count = text( 'count', '6', previewGroupID );
 	let style = select( 'style',['default','card'],'default', optionsGroupID );
 
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+	let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
+
 	return(
-		<ComponentWrapper layout="full">
+		<ComponentWrapper layout={layout} className={classes}>
 			<WsuNews
 				newsItems={ getNewsItems( count ) }
 				style={style}
