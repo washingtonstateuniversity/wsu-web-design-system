@@ -7,7 +7,7 @@
 
 .wsu-c-paragraph,
 .wsu-c-content p:not([class^="wsu-c-"]):not([class*=" wsu-c-"]) {
-	font-family: $wsu-bt-primary-font-family;
+	@include font();
 
 	margin-top: 0;
 	margin-bottom: 2em;

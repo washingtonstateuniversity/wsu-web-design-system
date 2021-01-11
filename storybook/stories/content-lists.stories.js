@@ -25,8 +25,11 @@ export default {
 
 export const UnorderedList = () => {
 
+	let classes = ( boolean('Apply wsu-c-content class', true, previewGroupID ) ) ? ['wsu-c-content'] : '';
+	let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
+
 	return (
-		<ComponentWrapper layout="content" className="wsu-c-content">
+		<ComponentWrapper layout={layout} className={classes}>
 
 			<h1>Unordered List Styles</h1>
 			<ul>
@@ -54,8 +57,11 @@ export const UnorderedList = () => {
 
 export const OrderedList = () => {
 
+	let classes = ( boolean('Apply wsu-c-content class', true, previewGroupID ) ) ? ['wsu-c-content'] : '';
+	let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
+
 	return (
-		<ComponentWrapper layout="content" className="wsu-c-content">
+		<ComponentWrapper layout={layout} className={classes}>
 
 			<h1>Ordered List Styles</h1>
 			<ol>
@@ -83,8 +89,11 @@ export const OrderedList = () => {
 
 export const SeparatedListStyle = () => {
 
+	let classes = ( boolean('Apply wsu-c-content class', true, previewGroupID ) ) ? ['wsu-c-content'] : '';
+	let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
+
 	return (
-		<ComponentWrapper layout="content" className="wsu-c-content">
+		<ComponentWrapper layout={layout} className={classes}>
 
 			<h1>Ordered List Styles</h1>
 			<ol className="wsu-m-list--separated">

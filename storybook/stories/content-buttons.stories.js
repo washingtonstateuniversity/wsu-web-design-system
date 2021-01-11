@@ -30,13 +30,14 @@ export default {
 export const DefaultButton = () => {
 
 	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+	let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'centered', previewGroupID ) );
 
 	let style = select( 'style',['default','primary','secondary','link'],'default', optionsGroupID );
 
 	let color = ( 'secondary' === style ) ? 'white' : 'default';
 
 	return (
-		<ComponentWrapper layout="centered" className={classes}>
+		<ComponentWrapper layout={layout} className={classes}>
 			<WsuButton
 				style={style}
 				tag={ select( 'tag',['default','a','button','div'],'default', optionsGroupID )  }

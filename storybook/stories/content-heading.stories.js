@@ -9,6 +9,7 @@ import {
 
 // Storybook Imports
 import ComponentWrapper from '../../packages/component-parts/content-wrapper';
+import { previewGroupID, optionsGroupID } from '@wsuwebteam/build-tools/js/helpers/storybook';
 
 // Story Time
 export default {
@@ -22,9 +23,6 @@ export default {
 	],
 	component: WsuHeading
 };
-
-const contentGroupID = 'Preview';
-const optionsGroupID = 'Options';
 
 const headingTagOptions = {
 	h1:'h1',
@@ -73,12 +71,13 @@ const getHeadingLength = ( headingLength ) => {
 
 export const defaultHeading = () => {
 
-	let applyContentClass = boolean('Apply wsu-c-content class', false, contentGroupID );
+	let applyContentClass = boolean('Apply wsu-c-content class', false, previewGroupID );
 
-	let classes = ( boolean('Apply wsu-c-content class', false, contentGroupID ) ) ? ['wsu-c-content'] : false;
-
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+	let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
+	
 	return(
-		<ComponentWrapper layout="centered" className={ classes }>
+		<ComponentWrapper layout={layout} className={ classes }>
 			<WsuHeading 
 				tag={ select('tag', headingTagOptions, 'h1', optionsGroupID ) }
 				name={ text( 'name','', optionsGroupID ) }
@@ -87,7 +86,7 @@ export const defaultHeading = () => {
 				width={ select('width', ['default','full','wide','medium','narrow','xnarrow'], 'default', optionsGroupID )  }
 				textAlign={ select('textAlign', ['default','left','center','right'], 'default', optionsGroupID )  }
 			>
-				Heading Text {getHeadingLength( select('Heading Length', headingLengthOptions,'short', contentGroupID ) )}
+				Heading Text {getHeadingLength( select('Heading Length', headingLengthOptions,'short', previewGroupID ) )}
 			</WsuHeading>
 		</ComponentWrapper>
 	)
@@ -95,12 +94,15 @@ export const defaultHeading = () => {
 
 export const allHeadings = () => {
 
-	let headingLength = select( 'Heading Length', headingLengthOptions,'short', contentGroupID );
+	let headingLength = select( 'Heading Length', headingLengthOptions,'short', previewGroupID );
 	let style         = select( 'style', headingStyleOptions, 'default', optionsGroupID );
 	let width         = select( 'width', headingWidthOptions, 'full', optionsGroupID );
 
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+	let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
+
 	return(
-		<ComponentWrapper layout="content" className="wsu-c-content">
+		<ComponentWrapper layout={layout} className={classes}>
 			<WsuHeading tag="h1" style={style} width={width} >Heading Level 1 {getHeadingLength( headingLength ) }</WsuHeading>
 			<WsuHeading tag="h2" style={style} width={width} >Heading Level 2 {getHeadingLength( headingLength ) }</WsuHeading>
 			<WsuHeading tag="h3" style={style} width={width} >Heading Level 3 {getHeadingLength( headingLength ) }</WsuHeading>
@@ -113,11 +115,14 @@ export const allHeadings = () => {
 
 export const calloutHeadings = () => {
 
-	let headingLength = select( 'Heading Length', headingLengthOptions,'short', contentGroupID );
+	let headingLength = select( 'Heading Length', headingLengthOptions,'short', previewGroupID );
 	let width         = select( 'width', headingWidthOptions, 'full', optionsGroupID );
 
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+	let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
+
 	return(
-		<ComponentWrapper layout="content" className="wsu-c-content">
+		<ComponentWrapper layout={layout} className={classes}>
 			<WsuHeading tag="h1" style={'callout'} width={width} >Heading Level 1 {getHeadingLength( headingLength ) }</WsuHeading>
 			<WsuHeading tag="h2" style={'callout'} width={width} >Heading Level 2 {getHeadingLength( headingLength ) }</WsuHeading>
 			<WsuHeading tag="h3" style={'callout'} width={width} >Heading Level 3 {getHeadingLength( headingLength ) }</WsuHeading>
@@ -130,12 +135,15 @@ export const calloutHeadings = () => {
 
 export const WithParagraphs = () => {
 
-	let headingLength = select('Heading Length', headingLengthOptions,'short', contentGroupID );
+	let headingLength = select('Heading Length', headingLengthOptions,'short', previewGroupID );
 	let style         = select( 'style', headingStyleOptions, 'default', optionsGroupID );
 	let width         = select( 'width', headingWidthOptions, 'full', optionsGroupID );
 
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+	let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
+
 	return(
-		<ComponentWrapper width="narrow">
+		<ComponentWrapper layout={layout} className={classes} width="narrow">
 			<WsuHeading tag="h1" width={width} style={style}>Heading Level 1 {getHeadingLength( headingLength ) }</WsuHeading>
 			<WsuP>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lacinia turpis. Nam commodo elit eget 
 				varius ultricies. Nunc bibendum in libero nec egestas. In egestas sodales semper. In hac habitasse 

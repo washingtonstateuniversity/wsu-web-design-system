@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-
-import {getMarginSpacingClasses} from '@wsuwebteam/build-tools/js/helpers/spacingUtilityClasses';
-import {getUtilityClasses} from '@wsuwebteam/build-tools/js/helpers/utilityClasses';
+import { 
+	Repeater,
+	getUtilityClasses,
+	getMarginSpacingClasses
+} from '@wsuwebteam/build-tools/js/helpers';
 
 import {
 	WsuIcon
@@ -10,52 +12,50 @@ import {
 
 import './style.scss';
 
-const ContentButton = ( props, ref ) => {
-
-	let styleClass = ( 'default' === props.style  ) ? 'wsu-c-button' : 'wsu-c-button--' + props.style;
-
-	if ( ! props.buttonText ) {
-		return null;
-	}
-
-	let Tag = ('default' == props.tag ) ? 'a' : props.tag;
-
-	let containerClasses = getUtilityClasses(
-		[
-			{ key:'color', prefix:'wsu-c-button--' },
-			{ key:'size', prefix:'wsu-c-button--' },
-			{ key:'shape', prefix:'wsu-c-button--' },
-		],
-		props,
-		[ styleClass ]
-	)
+const ContentTiles = ( props, ref ) => {
 
 	let wrapperClasses = getUtilityClasses(
 		[
-			{ key:'marginBefore', classSlug:'margin-before' },
-			{ key:'marginAfter', classSlug:'margin-after' },
-			{ key:'marginLeft', classSlug:'margin-left' },
-			{ key:'marginRight', classSlug:'margin-right' },
-			{ key:'buttonAlign', classSlug:'textalign' },
+			{ key: 'tileLayout', prefix: 'wsu-c-', classSlug: 'tiles' },
 		],
 		props,
-		['wsu-c-button__wrapper']
-	)
-	
+		['wsu-c-tiles']
+	);
+
+	let tileContentClasses = getUtilityClasses(
+		[
+			{ key: 'overlayColor', prefix: 'wsu-c-tile__', classSlug: 'content' },
+		],
+		props,
+		['wsu-c-tile__content']
+	);
+
 	return (
 		<div className={ wrapperClasses }>
-			<Tag onClick={props.onClick} className={ containerClasses }>
-				<WsuIcon name={props.iconBefore} />
-				{props.buttonText}
-				<WsuIcon name={props.iconAfter} />
-			</Tag>
+			<Repeater numTimes={8}>
+				<a 
+					className="wsu-c-tile"
+					href="#"
+					style={{
+						backgroundImage: "url('https://source.unsplash.com/collection/9042806')",
+						backgroundPositionX: '50%',
+						backgroundPositionY: '50%',
+					}}
+				>
+					<div className={ tileContentClasses }>
+						<div className="wsu-c-tile__heading">Santa Claus <WsuIcon name="link" /></div>
+						<div className="wsu-c-tile__caption">North Pole</div>
+						{/* Add full caption on hover */}
+					</div>
+				</a>
+			</Repeater>
 		</div>
 	);
 
 }
 
 
-ContentButton.propTypes = {
+ContentTiles.propTypes = {
 	/** Controls the overall aesthetic of the button */
 	style: PropTypes.string,
 	/** Text that displays on the button */
@@ -84,7 +84,7 @@ ContentButton.propTypes = {
 	ariaLabeledBy: PropTypes.string,
 }
 
-ContentButton.defaultProps = {
+ContentTiles.defaultProps = {
 	style: 'default',
 	buttonText: '',
 	buttonUrl: '',
@@ -101,4 +101,4 @@ ContentButton.defaultProps = {
 	ariaLabeledBy: '',
 }
 
-export default ContentButton;
+export default ContentTiles;

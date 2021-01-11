@@ -8,6 +8,8 @@ import { WsuLoadingIcon } from '../../packages/components';
 
 // Storybook Imports
 import ComponentWrapper from '../../packages/component-parts/content-wrapper';
+import { previewGroupID, optionsGroupID } from '@wsuwebteam/build-tools/js/helpers/storybook';
+
 
 // Story Time
 export default {
@@ -21,4 +23,12 @@ export default {
 	]
 };
 
-export const defaultIcon = () => <ComponentWrapper layout="centered" ><WsuLoadingIcon /></ComponentWrapper>;
+export const defaultIcon = () => {
+
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+	let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'centered', previewGroupID ) );
+
+	return(
+		<ComponentWrapper layout={layout} className={classes} ><WsuLoadingIcon /></ComponentWrapper>
+	)
+}

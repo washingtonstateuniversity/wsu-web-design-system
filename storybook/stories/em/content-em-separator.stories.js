@@ -23,10 +23,11 @@ export default {
 
 export const EMSeparator = () => {
 
-	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : ''; 
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+	let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
 
 	return(
-		<ComponentWrapper layout="centered" className={classes}>
+		<ComponentWrapper layout={layout} className={classes}>
 			<EmHr isHatched showMoreIndicator/>
 		</ComponentWrapper>
 	)

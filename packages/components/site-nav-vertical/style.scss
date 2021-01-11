@@ -108,6 +108,7 @@
 /* == Start ==============
  * Menu Icon to Arrow Animation
 ========================== */
+.wsu-s-nav-vertical__menu-icon-link:focus,
 .wsu-s-nav-vertical__menu-icon-link:hover {
 	& > .wsu-s-nav-vertical__menu-icon-container {
 		& .wsu-s-nav-vertical__menu-icon-bar:nth-child(1) {
