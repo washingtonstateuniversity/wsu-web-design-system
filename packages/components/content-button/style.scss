@@ -28,6 +28,7 @@
 
 	cursor: pointer;
 
+	&:focus,
 	&:hover {
 		color: color(white, base);
 		background-color: color(primary, base);
@@ -59,6 +60,7 @@
 	color: color(gray,60);
 	border: 1px solid color(gray,30);
 
+	&:focus,
 	&:hover {
 		color: color(primary, light );
 		background-color: color( white, base );
@@ -104,6 +106,7 @@
 
 	cursor: pointer;
 
+	&:focus,
 	&:hover {
 		color: color(primary, light );
 		background-color: color( white, base );
@@ -135,6 +138,7 @@
 		font-size: 0.9em;
 	}
 
+	&:focus,
 	&:hover {
 		color: color(primary, base);
 		border-bottom-width: .1.5em;
