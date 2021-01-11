@@ -93,8 +93,7 @@ module.exports = env => {
 						output: {
 							comments: false
 						}
-					},
-					sourceMap: true
+					}
 				})
 			]
 		},

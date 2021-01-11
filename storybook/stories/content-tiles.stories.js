@@ -4,33 +4,35 @@ import { withKnobs, text, boolean, number, select } from "@storybook/addon-knobs
 import { previewGroupID, optionsGroupID } from '@wsuwebteam/build-tools/js/helpers/storybook';
 
 // Storybook Imports
-import ComponentWrapper from '../../../packages/component-parts/content-wrapper';
+import ComponentWrapper from '../../packages/component-parts/content-wrapper';
 
 // Component Imports
-import { EmOrderedList } from '../../../packages/em-components';
+import { WsuTiles } from '../../packages/components';
 
 // Story Time
 export default {
-	title: 'EM/Components/Ordered List',
+	title: 'Components/Content/Tiles',
 	parameters: {
-		status: 'Stable' // In Development | Needs Feedback | Stable | Needs Deployment | Has Known Issues
+		status: 'Needs Feedback' // In Development | Needs Feedback | Stable | Needs Deployment | Has Known Issues
 	},
 	decorators: [
 		withA11y,
 		withKnobs,
-	]
+	],
+	component: WsuTiles
 };
 
-export const Default = () => {
+export const DefaultTiles = () => {
 
 	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
 	let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
 
 	return (
-		<ComponentWrapper layout={layout} className={classes}>
-			<div style={{ maxWidth: "588px" }}>
-				<EmOrderedList />
-			</div>
+		<ComponentWrapper layout={ layout } className={ classes }>
+			<WsuTiles 
+				overlayColor={ select( 'overlayColor', ['default', 'crimson'], 'default', optionsGroupID )  }
+				tileLayout={ select( 'tileLayout', ['default', 'left', 'right', 'center'], 'default', optionsGroupID )  }
+			/>
 		</ComponentWrapper>
 	)
 }

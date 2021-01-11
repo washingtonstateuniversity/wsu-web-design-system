@@ -1,0 +1,18 @@
+@import '~@wsuwebteam/build-tools/scss/all-the-things.scss';
+
+.wsu-c-typewriter {
+	@include font();
+}
+
+.wsu-c-typewriter_before-text {
+	display: inline;
+}
+
+.wsu-c-typewriter_text {
+	display: block;
+	color: color(primary, light);
+}
+
+.wsu-c-typewriter_after-text {
+	display: inline;
+}

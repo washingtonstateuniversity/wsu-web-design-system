@@ -4,33 +4,38 @@ import { withKnobs, text, boolean, number, select } from "@storybook/addon-knobs
 import { previewGroupID, optionsGroupID } from '@wsuwebteam/build-tools/js/helpers/storybook';
 
 // Storybook Imports
-import ComponentWrapper from '../../../packages/component-parts/content-wrapper';
+import ComponentWrapper from '../../packages/component-parts/content-wrapper';
 
 // Component Imports
-import { EmOrderedList } from '../../../packages/em-components';
+import { WsuTypewriter } from '../../packages/components';
 
 // Story Time
 export default {
-	title: 'EM/Components/Ordered List',
+	title: 'Components/Content/Typewriter Heading',
 	parameters: {
-		status: 'Stable' // In Development | Needs Feedback | Stable | Needs Deployment | Has Known Issues
+		status: 'In Development' // In Development | Needs Feedback | Stable | Needs Deployment | Has Known Issues
 	},
 	decorators: [
 		withA11y,
 		withKnobs,
-	]
+	],
+	component: WsuTypewriter
 };
+ 
+
 
 export const Default = () => {
 
 	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
 	let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
-
+	
 	return (
-		<ComponentWrapper layout={layout} className={classes}>
-			<div style={{ maxWidth: "588px" }}>
-				<EmOrderedList />
-			</div>
+		<ComponentWrapper layou={layout} className={classes}>
+			<WsuTypewriter
+				beforeText={ text( 'beforeText','Lorem Ipsum', optionsGroupID ) }
+				text={ text( 'text','Dolor', optionsGroupID ) }
+				afterText={ text( 'afterText','Sit Amet', optionsGroupID ) }
+			/>
 		</ComponentWrapper>
 	)
 }

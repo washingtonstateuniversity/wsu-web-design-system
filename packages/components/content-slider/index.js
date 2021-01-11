@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import Swiper from 'swiper';
 import 'swiper/src/swiper.scss';
 import './style.scss';
-import { Repeater } from '@wsuwebteam/build-tools/js/wsu-bt-helpers';
+import { Repeater } from '@wsuwebteam/build-tools/js/helpers';
 
 class ContentSlider extends Component {
 	componentDidMount() {

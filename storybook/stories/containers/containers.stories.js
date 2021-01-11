@@ -6,8 +6,7 @@ import { withKnobs, text, boolean, number, select } from "@storybook/addon-knobs
 import { GlobalContainer, SiteContainer, ContentContainer } from '../../../packages/components/containers';
 import ComponentWrapper from '../../../packages/component-parts/content-wrapper';
 import { WsuHeading, WsuList } from '../../../packages/components';
-
-
+import { previewGroupID, optionsGroupID } from '@wsuwebteam/build-tools/js/helpers/storybook';
 
 import './style.scss';
 
@@ -23,9 +22,6 @@ export default {
 	]
 };
 
-const contentGroupID = 'Preview';
-const optionsGroupID = 'Options';
-
 const ComponentPlaceholder = ( props ) => {
 
 	return <div className="storybook-component-placeholder"><span>{props.title}</span></div>
@@ -34,13 +30,15 @@ const ComponentPlaceholder = ( props ) => {
 
 export const Default = () => {
 
+	let classes = ( boolean('Apply wsu-c-content class', false, previewGroupID ) ) ? ['wsu-c-content'] : '';
+	let layout = ( select('Wrapper Layout', ['full', 'content', 'centered'], 'content', previewGroupID ) );
 
 	return(
 		<div className="wsu-g-container-component">
 			<GlobalContainer>
 				<SiteContainer>
 					<ContentContainer>
-						<ComponentWrapper layout="content">
+						<ComponentWrapper layout={layout} className={classes}>
 							<WsuHeading tag="h3">WSU Content Inheritance Class</WsuHeading>
 							<p>At this time, the following html elements can inherit from the <code>.wsu-c-content</code> wrapper class:</p>
 							<ul>
