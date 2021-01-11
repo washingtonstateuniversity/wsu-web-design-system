@@ -36,7 +36,7 @@
 			margin-bottom: 0;
 
 			& > .#{$class-base}__menu {
-				max-height: 500px;
+				max-height: 1000px;
 				display:block;
 				visibility: visible;
 				transition: max-height 300ms ease-in;
