@@ -77,6 +77,12 @@ class VerticalSplitMenu {
 			false
 		);
 
+		document.addEventListener(
+			'keydown', 
+			this.keydownEvent.bind( this ),
+			false
+		);
+
 	}
 
 	resizeEvent( event ) {
@@ -128,7 +134,27 @@ class VerticalSplitMenu {
 
 		}
 
-	} 
+	}
+
+	keydownEvent( event ) {
+
+		try {
+
+			let key = e.keyCode || e.charCode;
+
+			if ( 27 == key && event.target.closest( '.wsu-s-nav-vertical-split' ) ) {
+
+				this.closeNav();
+			}
+
+		} catch(err) {
+
+			console.log( event );
+			console.log(err);
+
+		}
+
+	}
 
 
 
