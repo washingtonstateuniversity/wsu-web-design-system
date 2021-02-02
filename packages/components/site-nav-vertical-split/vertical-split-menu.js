@@ -156,7 +156,25 @@ class VerticalSplitMenu {
 
 	}
 
+	keydownEvent( event ) {
 
+		try {
+
+			let key = event.keyCode || event.charCode;
+
+			if ( 27 == key && event.target.closest( '.wsu-s-nav-vertical-split' ) ) {
+
+				this.closeNav();
+			}
+
+		} catch(err) {
+
+			console.log( event );
+			console.log(err);
+
+		}
+
+	}
 
 	toggleMenu( menuItem ) {
 
