@@ -188,3 +188,20 @@
 	margin-top: calc( #{space( 'content-top')} * -1 );
 	padding-bottom: space( 'content-top');
 }
+
+.wsu-s-nav-vertical-split__wrapper + .wsu-s-container .wsu-c-hero__wrapper.wsu-c-full-width {
+	margin-left: calc(((100vw - 260px ) - 100%  ) / -2 );
+	margin-right: calc(((100vw - 260px ) - 100%  ) / -2 );
+}
+
+.wsu-s-nav-vertical-split__wrapper.wsu-s-nav-vertical-split--closed + .wsu-s-container .wsu-c-hero__wrapper.wsu-c-full-width {
+	margin-left: calc(((100vw - 60px ) - 100%  ) / -2 );
+	margin-right: calc(((100vw - 60px ) - 100%  ) / -2 );
+}
+
+@media only screen and (max-width: 1259px) {
+	.wsu-s-nav-vertical-split__wrapper + .wsu-s-container .wsu-c-hero__wrapper.wsu-c-full-width {
+		margin-left: -2.5rem;
+		margin-right: -2.5rem;
+	}
+}
