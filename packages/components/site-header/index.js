@@ -16,7 +16,7 @@ const SiteHeader = (props) => {
 		<section className={classes}>
 			<header className="wsu-s-header__container">
 				<h1 className="wsu-s-header__title"><a href="#">Sports Management</a></h1>
-				<h2 className="wsu-s-header__subtitle">College of Education</h2>
+				<h2 className="wsu-s-header__subtitle"><a href="#">College of Education</a></h2>
 			</header>
 		</section>
 	)
